@@ -1,0 +1,2871 @@
+{
+ "version": 2,
+ "sprache": "de",
+ "hinweis": "Die richtige Antwort steht immer an erster Stelle (correct: 0). Die App mischt die Antworten beim Anzeigen. who_am_i: Hinweise in 'hints'. estimate: 'tolerance' = Abstand, der noch als richtig zählt. order: 'years' optional.",
+ "kategorien": {
+  "shonen": "Shōnen-Klassiker",
+  "shojo": "Shōjo & Romance",
+  "filme": "Studio-Filme",
+  "manga": "Manga & Mangaka",
+  "neu": "Neue Serien",
+  "kultur": "Begriffe & Kultur"
+ },
+ "schwierigkeiten": {
+  "1": "Einsteiger",
+  "2": "Fan",
+  "3": "Otaku"
+ },
+ "fragen": [
+  {
+   "id": "e-001",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Strohhut-Pirat mit dem Gummikörper?",
+   "answers": [
+    "Monkey D. Ruffy",
+    "Lorenor Zorro",
+    "Portgas D. Ace",
+    "Shanks"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-002",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was ist Naruto Uzumakis großes Ziel?",
+   "answers": [
+    "Hokage seines Dorfes werden",
+    "Der stärkste Samurai Japans werden",
+    "Pokémon-Meister werden",
+    "Ein Shinigami werden"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-003",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Ashs gelbes Elektro-Pokémon?",
+   "answers": [
+    "Pikachu",
+    "Evoli",
+    "Raichu",
+    "Pichu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-004",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie viele Dragonballs muss man sammeln, um den Drachen Shenlong zu rufen?",
+   "answers": [
+    "Sieben",
+    "Fünf",
+    "Neun",
+    "Zwölf"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-005",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welcher Oberschüler wird in „Detektiv Conan“ durch ein Gift in einen Grundschüler verwandelt?",
+   "answers": [
+    "Shinichi Kudo",
+    "Kogoro Mori",
+    "Heiji Hattori",
+    "Kaito Kid"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-006",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was passiert in „Death Note“ mit einem Menschen, dessen Name in das Notizbuch geschrieben wird?",
+   "answers": [
+    "Er stirbt",
+    "Er verliert sein Gedächtnis",
+    "Er wird unsichtbar",
+    "Er wird selbst zum Shinigami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-007",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was schützt die Menschen in „Attack on Titan“ vor den Titanen?",
+   "answers": [
+    "Riesige Mauern",
+    "Ein magischer Schutzschild",
+    "Ein breiter Ozean",
+    "Unterirdische Städte"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-008",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Als Kind hat Son-Goku in „Dragon Ball“ einen Affenschwanz.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-009",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🏴‍☠️👒🍖",
+   "answers": [
+    "One Piece",
+    "Naruto",
+    "Bleach",
+    "Fairy Tail"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-010",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Womit tragen die Figuren in „Yu-Gi-Oh!“ ihre Duelle aus?",
+   "answers": [
+    "Mit Sammelkarten",
+    "Mit Kreiseln",
+    "Mit Robotern",
+    "Mit Murmeln"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-068",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Naruto Uzumaki",
+    "Sasuke Uchiha",
+    "Monkey D. Ruffy",
+    "Son-Goku"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin ein Ninja.",
+    "In mir ist ein Fuchsgeist versiegelt.",
+    "Am liebsten esse ich Ramen."
+   ]
+  },
+  {
+   "id": "e-069",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? ⚡🐭🧢",
+   "answers": [
+    "Pokémon",
+    "Digimon",
+    "Yu-Gi-Oh!",
+    "Dragon Ball"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-011",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Als welche Kriegerin kämpft Bunny Tsukino?",
+   "answers": [
+    "Sailor Moon",
+    "Sailor Venus",
+    "Sailor Mars",
+    "Sailor Jupiter"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-012",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt die sprechende schwarze Katze an Bunnys Seite?",
+   "answers": [
+    "Luna",
+    "Artemis",
+    "Kero",
+    "Jiji"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-013",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was muss Sakura in „Cardcaptor Sakura“ wieder einfangen?",
+   "answers": [
+    "Die Clow-Karten",
+    "Verlorene Sterne",
+    "Entflohene Geister",
+    "Magische Edelsteine"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-014",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "In was verwandeln sich Mitglieder der Familie Soma in „Fruits Basket“, wenn sie von jemandem des anderen Geschlechts umarmt werden?",
+   "answers": [
+    "In Tiere des chinesischen Tierkreises",
+    "In Kinder",
+    "In Statuen aus Stein",
+    "In Schmetterlinge"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-015",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "true_false",
+   "question": "In „Ouran High School Host Club“ gibt sich Haruhi Fujioka als Junge aus.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-048",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "true_false",
+   "question": "Bunnys bekannter Spruch als Sailor Moon lautet: „Im Namen des Mondes werde ich dich bestrafen!“",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-049",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🌙👧✨🐈‍⬛",
+   "answers": [
+    "Sailor Moon",
+    "Cardcaptor Sakura",
+    "Fruits Basket",
+    "Ouran High School Host Club"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-050",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Mädchen in „Fruits Basket“, das bei der Familie Soma einzieht?",
+   "answers": [
+    "Tohru Honda",
+    "Saki Hanajima",
+    "Arisa Uotani",
+    "Kisa Soma"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-051",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "true_false",
+   "question": "Sakura benutzt in „Cardcaptor Sakura“ einen magischen Stab, um die Karten zu versiegeln.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-052",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Bunny Tsukino",
+    "Rei Hino",
+    "Sakura Kinomoto",
+    "Tohru Honda"
+   ],
+   "correct": 0,
+   "hints": [
+    "Meine blonden Haare trage ich in zwei Knoten mit langen Zöpfen.",
+    "Ich esse gern und komme oft zu spät zur Schule.",
+    "Mit einer magischen Brosche verwandle ich mich in eine Kriegerin."
+   ]
+  },
+  {
+   "id": "e-016",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welches Studio hat „Chihiros Reise ins Zauberland“ gemacht?",
+   "answers": [
+    "Studio Ghibli",
+    "Toei Animation",
+    "Kyoto Animation",
+    "Madhouse"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-017",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Film wartet ein großes, flauschiges Waldwesen im Regen an einer Bushaltestelle?",
+   "answers": [
+    "Mein Nachbar Totoro",
+    "Prinzessin Mononoke",
+    "Ponyo",
+    "Das wandelnde Schloss"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-018",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Womit fliegt die junge Hexe Kiki in „Kikis kleiner Lieferservice“?",
+   "answers": [
+    "Mit einem Besen",
+    "Mit einem fliegenden Teppich",
+    "Mit einem Drachen",
+    "Mit einem Fahrrad"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-019",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Was passiert mit Mitsuha und Taki in „Your Name.“?",
+   "answers": [
+    "Sie tauschen im Schlaf ihre Körper",
+    "Sie reisen gemeinsam zum Mond",
+    "Sie werden in Katzen verwandelt",
+    "Sie bleiben in einem Videospiel gefangen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-020",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "emoji",
+   "question": "Welcher Film ist gemeint? 👧🐷🛁👻",
+   "answers": [
+    "Chihiros Reise ins Zauberland",
+    "Prinzessin Mononoke",
+    "Das wandelnde Schloss",
+    "Ponyo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-053",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "true_false",
+   "question": "„Your Name.“ ist ein Film von Studio Ghibli.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-054",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "emoji",
+   "question": "Welcher Film ist gemeint? 🧹🐈‍⬛📦",
+   "answers": [
+    "Kikis kleiner Lieferservice",
+    "Das wandelnde Schloss",
+    "Mein Nachbar Totoro",
+    "Ponyo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-055",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "emoji",
+   "question": "Welcher Film ist gemeint? 🌊🐟👧",
+   "answers": [
+    "Ponyo",
+    "Your Name.",
+    "Prinzessin Mononoke",
+    "Suzume"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-056",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt die schwarze Katze in „Kikis kleiner Lieferservice“?",
+   "answers": [
+    "Jiji",
+    "Luna",
+    "Kero",
+    "Mauzi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-057",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "true_false",
+   "question": "In „Your Name.“ spielt ein Komet eine wichtige Rolle.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-058",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wer hält in „Das wandelnde Schloss“ das Schloss in Gang?",
+   "answers": [
+    "Der Feuerdämon Calcifer",
+    "Eine Dampfmaschine",
+    "Ein Windrad",
+    "Ein Zauberstab"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-021",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "In welche Richtung liest man einen japanischen Manga?",
+   "answers": [
+    "Von rechts nach links",
+    "Von links nach rechts",
+    "Von unten nach oben",
+    "Diagonal von links unten"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-022",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wie nennt man eine Person, die Manga zeichnet?",
+   "answers": [
+    "Mangaka",
+    "Otaku",
+    "Seiyū",
+    "Senpai"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-023",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wer hat „One Piece“ erschaffen?",
+   "answers": [
+    "Eiichirō Oda",
+    "Akira Toriyama",
+    "Masashi Kishimoto",
+    "Tite Kubo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-024",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wer hat „Dragon Ball“ erschaffen?",
+   "answers": [
+    "Akira Toriyama",
+    "Eiichirō Oda",
+    "Rumiko Takahashi",
+    "Hirohiko Araki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-025",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "true_false",
+   "question": "In Japan erscheinen die meisten Manga zuerst als fertige Bücher und erst danach in Magazinen.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-026",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "In welchem Magazin erscheinen Serien wie „One Piece“ in Japan zuerst?",
+   "answers": [
+    "Weekly Shōnen Jump",
+    "Manga Monthly Times",
+    "Otaku Weekly",
+    "Tokyo Comic Post"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-059",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "true_false",
+   "question": "Die meisten Manga werden komplett in Farbe gedruckt.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-060",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wer hat „Naruto“ gezeichnet?",
+   "answers": [
+    "Masashi Kishimoto",
+    "Tite Kubo",
+    "Hiro Mashima",
+    "Yoshihiro Togashi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-061",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "true_false",
+   "question": "Der Manga „One Piece“ startete in den 2000er-Jahren.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-062",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "emoji",
+   "question": "Welcher Manga ist gemeint? 📓✍️💀",
+   "answers": [
+    "Death Note",
+    "Bleach",
+    "Blue Lock",
+    "Fruits Basket"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-063",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Aus welchem Land stammen Manga ursprünglich?",
+   "answers": [
+    "Japan",
+    "China",
+    "Südkorea",
+    "Frankreich"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-064",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Eiichirō Oda",
+    "Akira Toriyama",
+    "Masashi Kishimoto",
+    "Tite Kubo"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin Mangaka.",
+    "Ich habe einen Jungen mit Strohhut erfunden.",
+    "Mein Manga gehört zu den meistverkauften der Welt."
+   ]
+  },
+  {
+   "id": "e-027",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer aus Tanjiros Familie wird in „Demon Slayer“ in einen Dämon verwandelt?",
+   "answers": [
+    "Seine Schwester Nezuko",
+    "Seine Mutter",
+    "Sein Großvater",
+    "Sein Freund Zenitsu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-028",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche besondere Fähigkeit hat Anya in „Spy x Family“?",
+   "answers": [
+    "Sie kann Gedanken lesen",
+    "Sie kann fliegen",
+    "Sie kann sich unsichtbar machen",
+    "Sie kann mit Tieren sprechen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-029",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was ist Yor in „Spy x Family“ heimlich von Beruf?",
+   "answers": [
+    "Auftragsmörderin",
+    "Spionin",
+    "Polizistin",
+    "Ärztin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-030",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welcher Held ist das große Vorbild von Izuku Midoriya in „My Hero Academia“?",
+   "answers": [
+    "All Might",
+    "Endeavor",
+    "Hawks",
+    "Eraser Head"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-031",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was ist das Besondere an Saitama aus „One Punch Man“?",
+   "answers": [
+    "Er besiegt jeden Gegner mit einem einzigen Schlag",
+    "Er kann die Zeit anhalten",
+    "Er kann sich in ein Monster verwandeln",
+    "Er kämpft nur mit einem Schwert"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-032",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was schluckt Yuji Itadori in „Jujutsu Kaisen“, das ihn mit dem Fluch Sukuna verbindet?",
+   "answers": [
+    "Einen Finger von Sukuna",
+    "Einen verfluchten Ring",
+    "Ein Auge von Sukuna",
+    "Einen magischen Kristall"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-033",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was für ein Wesen ist die Magierin Frieren?",
+   "answers": [
+    "Eine Elfe",
+    "Ein Dämon",
+    "Eine Zwergin",
+    "Ein Drache"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-034",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Denjis Kettensägen-Teufel in „Chainsaw Man“?",
+   "answers": [
+    "Pochita",
+    "Kon",
+    "Kero",
+    "Jiji"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-065",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🕵️‍♂️👧🥜🐶",
+   "answers": [
+    "Spy x Family",
+    "Detektiv Conan",
+    "Chainsaw Man",
+    "Jujutsu Kaisen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-066",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "In „Demon Slayer“ trägt Nezuko ein Bambusstück im Mund.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-067",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Anya Forger",
+    "Yor Forger",
+    "Nezuko Kamado",
+    "Frieren"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin ein kleines Mädchen.",
+    "Ich liebe Erdnüsse.",
+    "Ich kann Gedanken lesen."
+   ]
+  },
+  {
+   "id": "e-035",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Senpai“?",
+   "answers": [
+    "Eine ältere Person in Schule oder Beruf, zu der man aufschaut",
+    "Ein Lehrer",
+    "Ein jüngerer Mitschüler",
+    "Der beste Freund"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-036",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Onigiri?",
+   "answers": [
+    "Ein Reisbällchen, oft mit Seetang umwickelt",
+    "Eine Nudelsuppe",
+    "Eine Süßigkeit aus Bohnen",
+    "Eine gebratene Teigtasche"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-037",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie nennt man jemanden, der sich mit großer Leidenschaft für Anime und Manga begeistert?",
+   "answers": [
+    "Otaku",
+    "Samurai",
+    "Sensei",
+    "Ninja"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-038",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie heißt es, wenn man sich als Figur aus Anime, Manga oder Spielen verkleidet?",
+   "answers": [
+    "Cosplay",
+    "Karaoke",
+    "Origami",
+    "Ikebana"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-039",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Bentō?",
+   "answers": [
+    "Eine Mahlzeit zum Mitnehmen in einer Box",
+    "Ein traditionelles Halstuch",
+    "Eine Holzsandale",
+    "Ein kleiner Tempel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-040",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Welche Namensendung benutzt man in Japan oft liebevoll für Mädchen und kleine Kinder?",
+   "answers": [
+    "-chan",
+    "-sama",
+    "-dono",
+    "-sensei"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-041",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "true_false",
+   "question": "„Sensei“ ist eine respektvolle Anrede für Lehrerinnen und Lehrer.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-042",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Kawaii“?",
+   "answers": [
+    "Niedlich",
+    "Gefährlich",
+    "Lecker",
+    "Langweilig"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-043",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Arigatō“?",
+   "answers": [
+    "Danke",
+    "Hallo",
+    "Tschüss",
+    "Entschuldigung"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-044",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was sagt man in Japan vor dem Essen?",
+   "answers": [
+    "„Itadakimasu“",
+    "„Sayōnara“",
+    "„Konnichiwa“",
+    "„Moshi moshi“"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-045",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "true_false",
+   "question": "„Konnichiwa“ bedeutet „Gute Nacht“.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-046",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "emoji",
+   "question": "Was ist gemeint? 🎤🎶",
+   "answers": [
+    "Karaoke",
+    "Cosplay",
+    "Origami",
+    "Ikebana"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-047",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Baka“?",
+   "answers": [
+    "Dummkopf",
+    "Freund",
+    "Lehrer",
+    "Katze"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-001",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Mitglied der Strohhutbande kämpft mit drei Schwertern?",
+   "answers": [
+    "Lorenor Zorro",
+    "Sanji",
+    "Lysop",
+    "Brook"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-002",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was ist Ruffys großer Traum?",
+   "answers": [
+    "König der Piraten werden",
+    "Das All Blue finden",
+    "Eine Karte der ganzen Welt zeichnen",
+    "Admiral der Marine werden"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-003",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt der neunschwänzige Fuchs, der in Naruto versiegelt ist?",
+   "answers": [
+    "Kurama",
+    "Shukaku",
+    "Matatabi",
+    "Gyuki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-004",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist Narutos Rivale und bester Freund aus Team 7?",
+   "answers": [
+    "Sasuke Uchiha",
+    "Neji Hyuga",
+    "Shikamaru Nara",
+    "Rock Lee"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-005",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Verwandlung, bei der Son-Gokus Haare golden werden?",
+   "answers": [
+    "Super-Saiyajin",
+    "Kaioken",
+    "Fusion",
+    "Oozaru"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-006",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Shinigami, der sein Death Note in die Menschenwelt fallen lässt?",
+   "answers": [
+    "Ryuk",
+    "Rem",
+    "Sidoh",
+    "Gelus"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-007",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welcher Meisterdetektiv nimmt in „Death Note“ als Erster die Jagd auf Kira auf?",
+   "answers": [
+    "L",
+    "Near",
+    "Mello",
+    "Matsuda"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-008",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Worin wird in „Fullmetal Alchemist“ die Seele von Alphonse Elric gebunden?",
+   "answers": [
+    "In eine Ritterrüstung",
+    "In eine Puppe",
+    "In ein Schwert",
+    "In den Stein der Weisen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-009",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Gons bester Freund in „Hunter x Hunter“, der aus einer Familie von Auftragsmördern stammt?",
+   "answers": [
+    "Killua Zoldyck",
+    "Kurapika",
+    "Leorio",
+    "Hisoka"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-010",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "order",
+   "question": "Sortiere die Anime nach ihrem Erscheinungsjahr, den ältesten zuerst.",
+   "answers": [
+    "Dragon Ball",
+    "One Piece",
+    "Naruto",
+    "Attack on Titan"
+   ],
+   "years": [
+    1986,
+    1999,
+    2002,
+    2013
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-080",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Shoyo Hinata aus „Haikyu!!“ ist für einen Volleyballspieler eher klein.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-081",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "Wie viele Bände hat der Manga „Naruto“?",
+   "answers": [
+    "72"
+   ],
+   "correct": 0,
+   "answer": 72,
+   "min": 20,
+   "max": 120,
+   "tolerance": 3
+  },
+  {
+   "id": "f-011",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt Bunnys große Liebe, die als Tuxedo Mask auftritt?",
+   "answers": [
+    "Mamoru Chiba",
+    "Motoki Furuhata",
+    "Seiya Kou",
+    "Haruka Tenno"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-012",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Welche Sailor-Kriegerin ist besonders klug und kämpft mit Wasser und Eis?",
+   "answers": [
+    "Sailor Merkur",
+    "Sailor Mars",
+    "Sailor Jupiter",
+    "Sailor Venus"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-013",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "In welches Tier verwandelt sich Kyo Soma in „Fruits Basket“?",
+   "answers": [
+    "In eine Katze",
+    "In eine Ratte",
+    "In einen Hund",
+    "In einen Drachen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-014",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wo spielt „Kaguya-sama: Love is War“ hauptsächlich?",
+   "answers": [
+    "Im Schülerrat einer Eliteschule",
+    "In einem Krankenhaus",
+    "Auf einem Raumschiff",
+    "In einem Maid-Café"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-015",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt das kleine geflügelte Wesen, das Sakura in „Cardcaptor Sakura“ begleitet?",
+   "answers": [
+    "Kero",
+    "Luna",
+    "Mokona",
+    "Jiji"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-047",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt Sakuras beste Freundin, die ihr Kostüme näht und sie beim Kämpfen filmt?",
+   "answers": [
+    "Tomoyo Daidouji",
+    "Meiling Li",
+    "Rika Sasaki",
+    "Naoko Yanagisawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-048",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer sammelt in „Cardcaptor Sakura“ ebenfalls die Clow-Karten und ist zunächst Sakuras Rivale?",
+   "answers": [
+    "Syaoran Li",
+    "Yukito Tsukishiro",
+    "Touya Kinomoto",
+    "Eriol Hiiragizawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-049",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "true_false",
+   "question": "In „Nana“ heißen beide Hauptfiguren Nana.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-050",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Punkband, in der Nana Osaki singt?",
+   "answers": [
+    "Black Stones",
+    "Trapnest",
+    "Crimson Stones",
+    "Silver Moon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-051",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was wollen Kaguya und Miyuki in „Kaguya-sama: Love is War“ um jeden Preis vermeiden?",
+   "answers": [
+    "Als Erste ihre Liebe gestehen",
+    "Die Schule wechseln",
+    "Bei einer Prüfung durchfallen",
+    "Dass sich ihre Eltern kennenlernen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-052",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "order",
+   "question": "Sortiere diese Shōjo-Anime nach ihrem Start, den ältesten zuerst.",
+   "answers": [
+    "Sailor Moon",
+    "Cardcaptor Sakura",
+    "Fruits Basket",
+    "Kaguya-sama: Love is War"
+   ],
+   "correct": 0,
+   "years": [
+    1992,
+    1998,
+    2001,
+    2019
+   ]
+  },
+  {
+   "id": "f-053",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🍙🐱🐭",
+   "answers": [
+    "Fruits Basket",
+    "Ouran High School Host Club",
+    "Nana",
+    "Horimiya"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-054",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Miyuki Shirogane",
+    "Kaguya Shinomiya",
+    "Tamaki Suoh",
+    "Mamoru Chiba"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin Präsident des Schülerrats.",
+    "Ich komme aus einfachen Verhältnissen und lerne Tag und Nacht.",
+    "Ich will auf keinen Fall als Erster meine Liebe gestehen."
+   ]
+  },
+  {
+   "id": "f-055",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer ist der Präsident des Host Clubs in „Ouran High School Host Club“?",
+   "answers": [
+    "Tamaki Suoh",
+    "Kyoya Ootori",
+    "Hikaru Hitachiin",
+    "Takashi Morinozuka"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-016",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Regisseur hat Studio Ghibli mitgegründet?",
+   "answers": [
+    "Hayao Miyazaki",
+    "Makoto Shinkai",
+    "Mamoru Hosoda",
+    "Satoshi Kon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-017",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wer führte bei „Your Name.“ Regie?",
+   "answers": [
+    "Makoto Shinkai",
+    "Hayao Miyazaki",
+    "Mamoru Hosoda",
+    "Hideaki Anno"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-018",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Von welchen Tieren wird San in „Prinzessin Mononoke“ großgezogen?",
+   "answers": [
+    "Von Wölfen",
+    "Von Bären",
+    "Von Hirschen",
+    "Von Wildschweinen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-019",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wer verwandelt Sophie in „Das wandelnde Schloss“ in eine alte Frau?",
+   "answers": [
+    "Die Hexe aus dem Niemandsland",
+    "Hauro",
+    "Der Feuerdämon Calcifer",
+    "Madame Suliman"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-020",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Junge in „Chihiros Reise ins Zauberland“, der sich in einen Drachen verwandeln kann?",
+   "answers": [
+    "Haku",
+    "Ohngesicht",
+    "Kamaji",
+    "Bo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-021",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Was ist das Besondere an Shoko Nishimiya in „A Silent Voice“?",
+   "answers": [
+    "Sie ist gehörlos",
+    "Sie ist blind",
+    "Sie kann nicht laufen",
+    "Sie hat ihr Gedächtnis verloren"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-022",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "true_false",
+   "question": "„Prinzessin Mononoke“ hat einen Oscar als bester Animationsfilm gewonnen.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-023",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welcher Stadt spielt der Film „Akira“?",
+   "answers": [
+    "Neo-Tokyo",
+    "Neo-Osaka",
+    "Mega-Kyoto",
+    "Neu-Edo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-056",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "order",
+   "question": "Sortiere die Ghibli-Filme nach Erscheinungsjahr, den ältesten zuerst.",
+   "answers": [
+    "Mein Nachbar Totoro",
+    "Prinzessin Mononoke",
+    "Chihiros Reise ins Zauberland",
+    "Das wandelnde Schloss"
+   ],
+   "correct": 0,
+   "years": [
+    1988,
+    1997,
+    2001,
+    2004
+   ]
+  },
+  {
+   "id": "f-057",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Chihiro",
+    "Kiki",
+    "Sophie",
+    "Mei"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich arbeite in einem Badehaus für Geister.",
+    "Meine Eltern wurden in Schweine verwandelt.",
+    "Eine Hexe hat mir meinen Namen genommen."
+   ]
+  },
+  {
+   "id": "f-058",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißen die beiden Schwestern in „Mein Nachbar Totoro“?",
+   "answers": [
+    "Satsuki und Mei",
+    "Kiki und Ursula",
+    "Sophie und Lettie",
+    "Chihiro und Lin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-059",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Film von Makoto Shinkai erschien direkt nach „Your Name.“?",
+   "answers": [
+    "Weathering With You",
+    "Suzume",
+    "5 Centimeters per Second",
+    "The Garden of Words"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-060",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "true_false",
+   "question": "„Akira“ ist ein Film von Studio Ghibli.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-061",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "emoji",
+   "question": "Welcher Film ist gemeint? ☄️🔄👫",
+   "answers": [
+    "Your Name.",
+    "Suzume",
+    "A Silent Voice",
+    "Weathering With You"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-062",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt der junge Prinz in „Prinzessin Mononoke“, der von einem Dämon verflucht wird?",
+   "answers": [
+    "Ashitaka",
+    "Haku",
+    "Hauro",
+    "Pazu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-063",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Ghibli-Film dreht sich um eine fliegende Stadt?",
+   "answers": [
+    "Das Schloss im Himmel",
+    "Porco Rosso",
+    "Nausicaä aus dem Tal der Winde",
+    "Arrietty"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-024",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wer hat „Sailor Moon“ gezeichnet?",
+   "answers": [
+    "Naoko Takeuchi",
+    "Rumiko Takahashi",
+    "Ai Yazawa",
+    "Arina Tanemura"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-025",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Welcher Mangaka gilt als „Gott des Manga“ und schuf „Astro Boy“?",
+   "answers": [
+    "Osamu Tezuka",
+    "Leiji Matsumoto",
+    "Go Nagai",
+    "Shigeru Mizuki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-026",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Welche Serie stammt von Rumiko Takahashi?",
+   "answers": [
+    "Inu Yasha",
+    "Bleach",
+    "Death Note",
+    "Hunter x Hunter"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-027",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wie nennt man einen Sammelband, der mehrere Manga-Kapitel enthält?",
+   "answers": [
+    "Tankōbon",
+    "Dōjinshi",
+    "Omake",
+    "Yonkoma"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-028",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Was ist ein Dōjinshi?",
+   "answers": [
+    "Ein selbst veröffentlichter Manga, oft von Fans",
+    "Ein offizielles Artbook",
+    "Ein Manga für Kleinkinder",
+    "Ein japanisches Comic-Magazin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-064",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "true_false",
+   "question": "Akira Toriyama hat auch die Figuren für die Videospielreihe „Dragon Quest“ gestaltet.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-065",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wie heißen Comics aus Südkorea, die oft auf dem Handy gelesen werden?",
+   "answers": [
+    "Manhwa",
+    "Manhua",
+    "Fumetti",
+    "Bande dessinée"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-066",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wer hat „Bleach“ erschaffen?",
+   "answers": [
+    "Tite Kubo",
+    "Hiro Mashima",
+    "Eiichirō Oda",
+    "Kōhei Horikoshi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-067",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wer hat „Attack on Titan“ erschaffen?",
+   "answers": [
+    "Hajime Isayama",
+    "Tsugumi Ōba",
+    "Takeshi Obata",
+    "Yoshihiro Togashi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-068",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "true_false",
+   "question": "„Death Note“ entstand im Team: Takeshi Obata schrieb die Geschichte, Tsugumi Ōba zeichnete.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-069",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "order",
+   "question": "Sortiere die Manga nach ihrem Start, den ältesten zuerst.",
+   "answers": [
+    "Dragon Ball",
+    "Sailor Moon",
+    "One Piece",
+    "Naruto"
+   ],
+   "correct": 0,
+   "years": [
+    1984,
+    1991,
+    1997,
+    1999
+   ]
+  },
+  {
+   "id": "f-070",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Was ist ein „Yonkoma“?",
+   "answers": [
+    "Ein Comicstrip aus vier Bildern",
+    "Ein Manga mit nur einem Kapitel",
+    "Ein farbiger Sonderband",
+    "Ein Manga ganz ohne Text"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-071",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wie nennt man Comics aus China?",
+   "answers": [
+    "Manhua",
+    "Manhwa",
+    "Webtoon",
+    "Yonkoma"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-072",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "estimate",
+   "question": "Wie viele Bände hat der Manga „Death Note“?",
+   "answers": [
+    "12"
+   ],
+   "correct": 0,
+   "answer": 12,
+   "min": 1,
+   "max": 40,
+   "tolerance": 1
+  },
+  {
+   "id": "f-029",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Atemtechnik lernt Tanjiro in „Demon Slayer“ als Erstes?",
+   "answers": [
+    "Wasseratmung",
+    "Donneratmung",
+    "Bestienatmung",
+    "Flammenatmung"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-030",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Yujis Lehrer mit der Augenbinde in „Jujutsu Kaisen“?",
+   "answers": [
+    "Satoru Gojo",
+    "Kento Nanami",
+    "Suguru Geto",
+    "Masamichi Yaga"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-031",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie lautet Loid Forgers Deckname als Spion?",
+   "answers": [
+    "Twilight",
+    "Nightfall",
+    "Thorn Princess",
+    "Shadow"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-032",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer führte die Heldengruppe an, mit der Frieren den Dämonenkönig besiegte?",
+   "answers": [
+    "Himmel",
+    "Heiter",
+    "Eisen",
+    "Fern"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-033",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Als wessen Kind wird der Arzt Goro in „Oshi no Ko“ wiedergeboren?",
+   "answers": [
+    "Als Kind des Idols Ai Hoshino",
+    "Als Kind seines Chefarztes",
+    "Als Kind eines Filmregisseurs",
+    "Als Kind einer Mangaka"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-034",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Kraft, die All Might an Deku weitergibt?",
+   "answers": [
+    "One For All",
+    "All For One",
+    "Plus Ultra",
+    "Full Cowl"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-035",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Aus welchem Land stammt die Vorlage zu „Solo Leveling“?",
+   "answers": [
+    "Südkorea",
+    "Japan",
+    "China",
+    "Taiwan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-073",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie nennt man die stärksten Dämonenjäger in „Demon Slayer“?",
+   "answers": [
+    "Hashira",
+    "Shinigami",
+    "Kage",
+    "Yonkō"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-074",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Inosuke Hashibira",
+    "Zenitsu Agatsuma",
+    "Tanjiro Kamado",
+    "Kyojuro Rengoku"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich trage einen Wildschweinkopf als Maske.",
+    "Ich kämpfe mit zwei gezackten Schwertern.",
+    "Ich bin bei Wildschweinen aufgewachsen."
+   ]
+  },
+  {
+   "id": "f-075",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "order",
+   "question": "Sortiere diese neueren Anime nach ihrem Start, den ältesten zuerst.",
+   "answers": [
+    "One Punch Man",
+    "My Hero Academia",
+    "Demon Slayer",
+    "Spy x Family"
+   ],
+   "correct": 0,
+   "years": [
+    2015,
+    2016,
+    2019,
+    2022
+   ]
+  },
+  {
+   "id": "f-076",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Zenitsu Agatsuma kämpft am besten, wenn er schläft.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-077",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Frierens Schülerin, die mit ihr reist?",
+   "answers": [
+    "Fern",
+    "Stark",
+    "Übel",
+    "Aura"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-078",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🧝‍♀️💐⏳",
+   "answers": [
+    "Frieren",
+    "Spy x Family",
+    "Oshi no Ko",
+    "Mob Psycho 100"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-079",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Saitama aus „One Punch Man“ hat durch sein hartes Training alle Haare verloren.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-036",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Isekai“?",
+   "answers": [
+    "Geschichten, in denen Figuren in eine andere Welt gelangen",
+    "Geschichten über Schulsport",
+    "Geschichten über Riesenroboter",
+    "Geschichten aus dem alten Japan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-037",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was beschreibt der Begriff „Tsundere“?",
+   "answers": [
+    "Eine Figur, die nach außen schroff ist, aber insgeheim liebevoll",
+    "Eine Figur, die immer fröhlich ist",
+    "Eine Figur, die krankhaft eifersüchtig ist",
+    "Eine Figur, die sehr schüchtern ist"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-038",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Seiyū?",
+   "answers": [
+    "Ein Synchronsprecher",
+    "Ein Manga-Verleger",
+    "Ein Anime-Regisseur",
+    "Ein Cosplayer"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-039",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was beschreibt der Begriff „Yandere“?",
+   "answers": [
+    "Eine Figur, deren Liebe in gefährliche Besessenheit umschlägt",
+    "Eine Figur, die schroff ist, aber insgeheim liebevoll",
+    "Eine Figur, die sehr schüchtern ist",
+    "Eine Figur, die immer kühl und gefühllos wirkt"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-040",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was zeichnet einen „Mecha“-Anime aus?",
+   "answers": [
+    "Riesige Roboter, die von Menschen gesteuert werden",
+    "Geschichten aus dem Schulalltag",
+    "Mädchen mit magischen Kräften",
+    "Kochwettbewerbe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-041",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie nennt man Manga, die sich vor allem an erwachsene Männer richten?",
+   "answers": [
+    "Seinen",
+    "Josei",
+    "Kodomo",
+    "Shōjo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-042",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "true_false",
+   "question": "„Moshi moshi“ sagt man in Japan typischerweise am Telefon.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-043",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "emoji",
+   "question": "Welches Gericht ist gemeint? 🐙🔥⚪",
+   "answers": [
+    "Takoyaki",
+    "Ramen",
+    "Onigiri",
+    "Mochi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-044",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wofür steht die Abkürzung OVA?",
+   "answers": [
+    "Original Video Animation",
+    "Official Visual Art",
+    "Online Video Anime",
+    "Original Voice Actor"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-045",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "estimate",
+   "question": "Wie viele Silben hat ein klassisches japanisches Haiku?",
+   "answers": [
+    "17"
+   ],
+   "correct": 0,
+   "answer": 17,
+   "min": 5,
+   "max": 40,
+   "tolerance": 1
+  },
+  {
+   "id": "f-046",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "true_false",
+   "question": "Mit „-kun“ spricht man in Japan vor allem ältere, besonders respektierte Personen an.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-001",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie lautet der wahre Name von Ruffys Teufelsfrucht?",
+   "answers": [
+    "Hito Hito no Mi, Modell: Nika",
+    "Gomu Gomu no Mi, Modell: Joy Boy",
+    "Hito Hito no Mi, Modell: Daibutsu",
+    "Uo Uo no Mi, Modell: Seiryu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-002",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Narutos Vater?",
+   "answers": [
+    "Minato Namikaze",
+    "Jiraiya",
+    "Kakashi Hatake",
+    "Hiruzen Sarutobi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-003",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Heimatplanet der Saiyajins?",
+   "answers": [
+    "Vegeta",
+    "Namek",
+    "Yardrat",
+    "Tsufuru"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-004",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist in „Death Note“ der zweite Kira?",
+   "answers": [
+    "Misa Amane",
+    "Kiyomi Takada",
+    "Teru Mikami",
+    "Naomi Misora"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-005",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Lebensenergie, die in „Hunter x Hunter“ für besondere Fähigkeiten genutzt wird?",
+   "answers": [
+    "Nen",
+    "Chakra",
+    "Reiatsu",
+    "Haki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-006",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Grundprinzip gilt für die Alchemie in „Fullmetal Alchemist“?",
+   "answers": [
+    "Der äquivalente Tausch",
+    "Die ewige Wiederkehr",
+    "Das Gleichgewicht der Elemente",
+    "Die Macht des Mondes"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-007",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer verwandelt sich in „Attack on Titan“ in den Kolossalen Titanen, der zu Beginn die Mauer durchbricht?",
+   "answers": [
+    "Bertholdt Hoover",
+    "Reiner Braun",
+    "Annie Leonhart",
+    "Zeke Jäger"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-008",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Pokémon hat im Pokédex die Nummer 001?",
+   "answers": [
+    "Bisasam",
+    "Pikachu",
+    "Mew",
+    "Glumanda"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-049",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Tony Tony Chopper",
+    "Brook",
+    "Franky",
+    "Lysop"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin Schiffsarzt.",
+    "Eigentlich bin ich ein Rentier.",
+    "Durch eine Teufelsfrucht kann ich mich in einen Menschen verwandeln."
+   ]
+  },
+  {
+   "id": "o-050",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "order",
+   "question": "In welcher Reihenfolge lernt Ruffy diese späteren Crewmitglieder kennen?",
+   "answers": [
+    "Lorenor Zorro",
+    "Nami",
+    "Lysop",
+    "Sanji"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-009",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt Sailor Mars mit bürgerlichem Namen?",
+   "answers": [
+    "Rei Hino",
+    "Ami Mizuno",
+    "Makoto Kino",
+    "Minako Aino"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-010",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer hat „Fruits Basket“ gezeichnet?",
+   "answers": [
+    "Natsuki Takaya",
+    "Ai Yazawa",
+    "Arina Tanemura",
+    "Yuu Watase"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-011",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie viele Mitglieder hat der Host Club in „Ouran High School Host Club“, Haruhi mitgezählt?",
+   "answers": [
+    "Sieben",
+    "Fünf",
+    "Sechs",
+    "Acht"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-028",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißen die Zwillinge im Ouran Host Club?",
+   "answers": [
+    "Hikaru und Kaoru Hitachiin",
+    "Honey und Mori",
+    "Yuki und Kyo Soma",
+    "Touya und Yukito"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-029",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Welches Tier wurde in der Tierkreis-Legende aus „Fruits Basket“ von der Ratte ausgetrickst?",
+   "answers": [
+    "Die Katze",
+    "Der Hund",
+    "Der Fuchs",
+    "Der Hase"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-030",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "estimate",
+   "question": "In welchem Jahr startete die Anime-Serie „Sailor Moon“ in Japan?",
+   "answers": [
+    "1992"
+   ],
+   "correct": 0,
+   "answer": 1992,
+   "min": 1980,
+   "max": 2005,
+   "tolerance": 1
+  },
+  {
+   "id": "o-031",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "true_false",
+   "question": "Naoko Takeuchi („Sailor Moon“) ist mit Yoshihiro Togashi („Hunter x Hunter“) verheiratet.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-032",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Nana Osaki",
+    "Nana Komatsu",
+    "Reira Serizawa",
+    "Rei Hino"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich singe in einer Punkband.",
+    "Ich bin selbstbewusst, trage gern Schwarz und rauche.",
+    "In Tokio teile ich mir eine Wohnung mit einem Mädchen, das genauso heißt wie ich."
+   ]
+  },
+  {
+   "id": "o-033",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "estimate",
+   "question": "Wie viele Bände hat der Manga „Fruits Basket“?",
+   "answers": [
+    "23"
+   ],
+   "correct": 0,
+   "answer": 23,
+   "min": 5,
+   "max": 60,
+   "tolerance": 2
+  },
+  {
+   "id": "o-012",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Jahr wurde Studio Ghibli gegründet?",
+   "answers": [
+    "1985",
+    "1979",
+    "1988",
+    "1992"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-013",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wer hat den Manga „Akira“ geschaffen und den Film selbst inszeniert?",
+   "answers": [
+    "Katsuhiro Otomo",
+    "Masamune Shirow",
+    "Hideaki Anno",
+    "Satoshi Kon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-034",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "estimate",
+   "question": "In welchem Jahr kam „Chihiros Reise ins Zauberland“ in Japan in die Kinos?",
+   "answers": [
+    "2001"
+   ],
+   "correct": 0,
+   "answer": 2001,
+   "min": 1985,
+   "max": 2015,
+   "tolerance": 1
+  },
+  {
+   "id": "o-035",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Porco Rosso",
+    "Hauro",
+    "Ashitaka",
+    "Pazu"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin Pilot.",
+    "Ich fliege ein rotes Wasserflugzeug.",
+    "Ein Fluch hat mir das Gesicht eines Schweins gegeben."
+   ]
+  },
+  {
+   "id": "o-036",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Regisseur drehte „Perfect Blue“ und „Paprika“?",
+   "answers": [
+    "Satoshi Kon",
+    "Mamoru Oshii",
+    "Mamoru Hosoda",
+    "Isao Takahata"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-037",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "true_false",
+   "question": "„Die letzten Glühwürmchen“ wurde von Hayao Miyazaki gedreht.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-038",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "order",
+   "question": "Sortiere die Filme von Makoto Shinkai nach Erscheinungsjahr, den ältesten zuerst.",
+   "answers": [
+    "5 Centimeters per Second",
+    "Your Name.",
+    "Weathering With You",
+    "Suzume"
+   ],
+   "correct": 0,
+   "years": [
+    2007,
+    2016,
+    2019,
+    2022
+   ]
+  },
+  {
+   "id": "o-014",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "estimate",
+   "question": "In welchem Jahr erschien das erste Kapitel von „One Piece“?",
+   "answer": 1997,
+   "min": 1985,
+   "max": 2010,
+   "answers": [
+    "1997"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-015",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Welcher deutsche Verlag veröffentlicht den Manga „One Piece“?",
+   "answers": [
+    "Carlsen",
+    "Egmont",
+    "Tokyopop",
+    "Altraverse"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-039",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wer hat „JoJo’s Bizarre Adventure“ erschaffen?",
+   "answers": [
+    "Hirohiko Araki",
+    "Akira Toriyama",
+    "Kentarō Miura",
+    "Naoki Urasawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-040",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "estimate",
+   "question": "Wie viele Bände hat die ursprüngliche Mangareihe „Dragon Ball“?",
+   "answers": [
+    "42"
+   ],
+   "correct": 0,
+   "answer": 42,
+   "min": 10,
+   "max": 80,
+   "tolerance": 2
+  },
+  {
+   "id": "o-041",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Osamu Tezuka",
+    "Leiji Matsumoto",
+    "Go Nagai",
+    "Shigeru Mizuki"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich wurde 1928 geboren.",
+    "Ich habe Medizin studiert.",
+    "Ich habe „Astro Boy“ und „Kimba, der weiße Löwe“ erschaffen."
+   ]
+  },
+  {
+   "id": "o-042",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "true_false",
+   "question": "Das Magazin „Weekly Shōnen Jump“ erscheint im Verlag Kōdansha.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-043",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Welcher Manga erschien 1997 bei Carlsen als erster in Deutschland in japanischer Leserichtung?",
+   "answers": [
+    "Dragon Ball",
+    "One Piece",
+    "Sailor Moon",
+    "Akira"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-016",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie viele Finger von Sukuna gibt es in „Jujutsu Kaisen“ insgesamt?",
+   "answers": [
+    "20",
+    "10",
+    "12",
+    "33"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-017",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer hat „Chainsaw Man“ erschaffen?",
+   "answers": [
+    "Tatsuki Fujimoto",
+    "Gege Akutami",
+    "Koyoharu Gotōge",
+    "Yūki Tabata"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-018",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Anführer der Dämonen in „Demon Slayer“?",
+   "answers": [
+    "Muzan Kibutsuji",
+    "Akaza",
+    "Doma",
+    "Kokushibo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-019",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Fähigkeit hat der Hund Bond in „Spy x Family“?",
+   "answers": [
+    "Er kann in die Zukunft sehen",
+    "Er kann Gedanken lesen",
+    "Er kann sprechen",
+    "Er kann sich unsichtbar machen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-020",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie viele Jahre dauerte die Reise von Frierens Heldengruppe?",
+   "answers": [
+    "10 Jahre",
+    "50 Jahre",
+    "3 Jahre",
+    "100 Jahre"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-044",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "estimate",
+   "question": "In welchem Jahr startete der Anime „Demon Slayer“?",
+   "answers": [
+    "2019"
+   ],
+   "correct": 0,
+   "answer": 2019,
+   "min": 2005,
+   "max": 2025,
+   "tolerance": 1
+  },
+  {
+   "id": "o-045",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches Studio hat den Anime „Demon Slayer“ animiert?",
+   "answers": [
+    "ufotable",
+    "MAPPA",
+    "Wit Studio",
+    "Bones"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-046",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches Studio hat den Anime „Jujutsu Kaisen“ animiert?",
+   "answers": [
+    "MAPPA",
+    "ufotable",
+    "Kyoto Animation",
+    "Production I.G"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-047",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Ai Hoshino",
+    "Ruby Hoshino",
+    "Kana Arima",
+    "Akane Kurokawa"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich war ein gefeiertes Idol.",
+    "Ich habe heimlich Zwillinge bekommen.",
+    "Mein Vorname klingt wie das japanische Wort für „Liebe“."
+   ]
+  },
+  {
+   "id": "o-048",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Der Manga zu „Frieren“ erscheint im Magazin „Weekly Shōnen Sunday“.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-021",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein „Omake“?",
+   "answers": [
+    "Ein Bonusinhalt, etwa eine Extraseite oder kurze Zusatzszene",
+    "Ein Anime-Vorspann",
+    "Ein besonders seltener Manga",
+    "Ein Fan-Treffen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-022",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was meinen Anime-Fans mit „Sakuga“?",
+   "answers": [
+    "Besonders aufwendig animierte Szenen",
+    "Eine Pause zwischen zwei Staffeln",
+    "Den Abspann einer Folge",
+    "Eine Folge ohne Handlung"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-023",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Isekai“ wörtlich?",
+   "answers": [
+    "„Andere Welt“",
+    "„Neues Leben“",
+    "„Zweite Chance“",
+    "„Fremde Stadt“"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-024",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie nennt man Manga, die sich vor allem an erwachsene Frauen richten?",
+   "answers": [
+    "Josei",
+    "Seinen",
+    "Kodomo",
+    "Shōnen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-025",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "true_false",
+   "question": "In Japan bezeichnet das Wort „Anime“ jede Art von Zeichentrick, auch westliche Filme.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-026",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie heißt die riesige Messe für Dōjinshi in Tokio, die zweimal im Jahr stattfindet?",
+   "answers": [
+    "Comiket",
+    "AnimagiC",
+    "Japan Expo",
+    "Anime Expo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-027",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "estimate",
+   "question": "In welchem Jahr fand die erste Comiket statt?",
+   "answers": [
+    "1975"
+   ],
+   "correct": 0,
+   "answer": 1975,
+   "min": 1960,
+   "max": 2000,
+   "tolerance": 2
+  }
+ ]
+}
