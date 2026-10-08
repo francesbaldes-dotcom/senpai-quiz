@@ -313,6 +313,12 @@ function zeigeZeit(anteil, restMs) {
   balken.style.width = prozent(anteil);
   label.textContent = `${Math.ceil(restMs / 1000)} s`;
   timer.classList.toggle('knapp', restMs <= 5000);
+  const figur = document.getElementById('figur-bild');
+  const a = ui.runde?.aktuell;
+  if (figur && a) {
+    const ziel = `assets/stimmung/${frageStimmung(a, restMs)}.webp`;
+    if (!figur.getAttribute('src').endsWith(ziel)) figur.setAttribute('src', ziel);
+  }
 }
 
 function tick() {
@@ -608,8 +614,29 @@ function tabbar(aktiv) {
   </nav>`;
 }
 
-function maskottchen(klasse = '') {
-  return `<img class="maskottchen ${klasse}" src="assets/maskottchen.jpg" alt="">`;
+const STIMMUNGEN = ['entschlossen', 'jubelnd', 'traurig', 'panisch', 'nachdenklich', 'stolz', 'erledigt', 'schlafend'];
+
+function maskottchen(stimmung = 'entschlossen', id = '') {
+  return `<img class="maskottchen" ${id ? `id="${id}"` : ''} src="assets/stimmung/${stimmung}.webp" alt="">`;
+}
+
+// Stimmung des Maskottchens während einer Frage
+function frageStimmung(a, restMs) {
+  if (a.ergebnis) return a.ergebnis.korrekt ? 'jubelnd' : 'traurig';
+  if (restMs <= 5000) return 'panisch';
+  if (['who_am_i', 'estimate', 'order'].includes(a.frage.type)) return 'nachdenklich';
+  return 'entschlossen';
+}
+
+function ergebnisStimmung(e, aufgestiegen) {
+  const rekord = e.neuerRekord && e.richtig >= 10;
+  if (e.modus === 'survival') return rekord ? 'stolz' : 'erledigt';
+  if (e.modus === 'blitz') return rekord ? 'stolz' : e.richtig >= 5 ? 'jubelnd' : 'erledigt';
+  if (e.perfekt || aufgestiegen) return 'stolz';
+  const quote = e.gesamt ? e.richtig / e.gesamt : 0;
+  if (quote >= 0.7) return 'jubelnd';
+  if (quote >= 0.4) return 'entschlossen';
+  return 'traurig';
 }
 
 // ---------- Bildschirme ----------
@@ -631,7 +658,7 @@ function startScreen() {
       <div class="speedlines"></div>
       <div class="logo"><span class="senpai">SENPAI</span><span class="quiz">QUIZ</span></div>
       ${maskottchen()}
-      <div class="sprechblase">${erledigt ? 'Gut gemacht, Senpai!' : 'Bereit, Senpai?'}</div>
+      <div class="sprechblase">${erledigt ? 'Gut gemacht!' : 'Bereit, Senpai?'}</div>
     </div>
 
     <div class="tageskarte karte">
@@ -640,7 +667,9 @@ function startScreen() {
         <span class="display">${erledigt ? `Heute: ${profil.tagesquiz.richtig} / ${profil.tagesquiz.gesamt} richtig` : '5 Fragen, für alle gleich'}</span>
         <span class="streak">${ICON.flamme} ${streak === 1 ? '1 Tag' : `${streak} Tage`} in Folge${erledigt ? ' · morgen geht’s weiter' : ''}</span>
       </div>
-      <button class="rund-knopf" data-aktion="tagesquiz" aria-label="${erledigt ? 'Tagesquiz erledigt' : 'Tagesquiz starten'}" ${erledigt ? 'disabled' : ''}>${erledigt ? ICON.haken : ICON.play}</button>
+      ${erledigt
+        ? `<img class="tages-schlaf" src="assets/stimmung/schlafend.webp" alt="Tagesquiz erledigt">`
+        : `<button class="rund-knopf" data-aktion="tagesquiz" aria-label="Tagesquiz starten">${ICON.play}</button>`}
     </div>
 
     <button class="knopf knopf-rot" data-aktion="nav" data-ziel="kategorie">${ICON.play} Klassisch spielen</button>
@@ -842,7 +871,7 @@ function frageScreen() {
       ${!a.ergebnis && naechsterFaktor > 1 ? `<span class="combo">Combo ×${naechsterFaktor}</span>` : ''}
     </div>
     <div class="frage-zeile">
-      <div class="figur">${reaktion}${maskottchen()}</div>
+      <div class="figur">${reaktion}${maskottchen(frageStimmung(a, restMs), 'figur-bild')}</div>
       <div class="karte blase">${frageText(f, a)}</div>
     </div>
     ${antwortenBlock(a)}
@@ -868,7 +897,7 @@ function ergebnisScreen() {
     <div class="ergebnis-held karte">
       <div class="speedlines"></div>
       <div class="titel"><span>${titel}</span></div>
-      ${maskottchen()}
+      ${maskottchen(ergebnisStimmung(e, aufgestiegen))}
       <div class="wertung"><span>${wertung}</span></div>
     </div>
 
@@ -992,6 +1021,8 @@ async function init() {
     FRAGEN = daten.fragen;
     KATEGORIEN = daten.kategorien;
     SCHWIERIGKEIT = daten.schwierigkeiten;
+    // Stimmungsbilder vorladen, damit beim Wechsel nichts flackert
+    STIMMUNGEN.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });
     render();
   } catch (fehler) {
     app.innerHTML = '<p class="laden">Die Fragen konnten nicht geladen werden.</p>';
