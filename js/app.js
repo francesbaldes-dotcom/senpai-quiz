@@ -289,6 +289,14 @@ function streakRettbar() {
   return tage >= 2 && letzter === vorgestern() && profil.tagesquiz?.datum !== heute();
 }
 
+// Serie um heute verlängern: Tagesquiz gespielt oder Tagesziel im Dojo erreicht
+function serieHeute() {
+  const s = profil.streak;
+  if (s.letzter === heute()) return;
+  s.tage = s.letzter === gestern() ? s.tage + 1 : 1;
+  s.letzter = heute();
+}
+
 function aktuelleStreak() {
   const { tage, letzter } = profil.streak;
   return letzter === heute() || letzter === gestern() ? tage : 0;
@@ -749,11 +757,7 @@ function beendeRunde() {
     neuerRekord = r.richtig > 0;
   }
   if (r.modus === 'tages') {
-    const s = profil.streak;
-    if (s.letzter !== heute()) {
-      s.tage = s.letzter === gestern() ? s.tage + 1 : 1;
-      s.letzter = heute();
-    }
+    serieHeute();
     profil.tagesquiz = { datum: heute(), richtig: r.richtig, gesamt, verlauf: [...r.verlauf], punkte: r.punkte };
   }
   if (r.modus === 'klassisch' && r.opts.kategorie !== 'mix' && !profil.gespielteKategorien.includes(r.opts.kategorie)) {
@@ -1233,7 +1237,7 @@ function tabbar(aktiv) {
   </nav>`;
 }
 
-const STIMMUNGEN = ['entschlossen', 'jubelnd', 'traurig', 'panisch', 'nachdenklich', 'stolz', 'erledigt', 'schlafend', 'mentor', 'kaempferisch', 'siegreich', 'winkend', 'daumenhoch', 'lesend', 'ueberrascht', 'verlegen', 'herausfordernd', 'feiernd', 'cool'];
+const STIMMUNGEN = ['entschlossen', 'jubelnd', 'traurig', 'panisch', 'nachdenklich', 'stolz', 'erledigt', 'schlafend', 'mentor', 'kaempferisch', 'siegreich', 'winkend', 'daumenhoch', 'lesend', 'ueberrascht', 'verlegen', 'herausfordernd', 'feiernd', 'konfetti', 'cool'];
 
 function maskottchen(stimmung = 'entschlossen', id = '') {
   return `<img class="maskottchen" ${id ? `id="${id}"` : ''} src="assets/stimmung/${stimmung}.webp" alt="">`;
@@ -2500,7 +2504,7 @@ async function init() {
     profil.reise ||= { sterne: {}, durchgang: 1 };
     ui.durchgang = profil.reise.durchgang === 2 && zweiteReiseOffen() ? 2 : 1;
     uebernimmAlteKategorien();
-    dojoEinrichten({ profil: () => profil, speichern, render, esc, maskottchen, tabbar, frage, ICON, ui, onlineProfil: () => ui.online.profil });
+    dojoEinrichten({ profil: () => profil, speichern, render, esc, maskottchen, tabbar, frage, ICON, ui, onlineProfil: () => ui.online.profil, serie: serieHeute, streak: aktuelleStreak });
     // Stimmungsbilder vorladen, damit beim Wechsel nichts flackert
     STIMMUNGEN.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });
     // Einladungslink? (…?einladung=CODE)
