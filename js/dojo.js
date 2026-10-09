@@ -5,16 +5,31 @@
 // stehen in data/dojo.json. Das Dojo ist eine Kauf-Funktion: Die ersten
 // Lektionen sind frei, der Rest braucht Abo oder Einmalkauf (js/kauf.js).
 //
-// Lernen nach Leitner: Jede Karte hat ein Fach 0–5. Richtig → ein Fach höher,
-// falsch → zurück auf 0. Das Fach bestimmt den Abstand bis zur nächsten
-// Wiederholung (INTERVALLE in Tagen) und die Art der Abfrage: erst erkennen
-// (Mehrfachwahl), dann schreiben (Zeichen wählen), ab Fach 3 die Lesung tippen.
-// Ab Fach 3 „sitzt“ eine Karte und zählt für den Gürtel.
+// Wiederholung nach FSRS (Free Spaced Repetition Scheduler, wie in Anki ab 23.10):
+// Jede Karte trägt Stabilität s (Tage, bis die Erinnerung auf 90 % fällt) und
+// Schwierigkeit d (1–10). Richtig → s wächst abhängig von d und davon, wie
+// knapp die Erinnerung war; falsch → s schrumpft. Der nächste Termin ist
+// s Tage entfernt (Zielbehalt 90 %), leicht gestreut. Aus s wird die Stufe
+// f 0–5 (STUFEN) abgeleitet, die die Art der Abfrage bestimmt: erst erkennen
+// (Mehrfachwahl), dann schreiben oder zusammensetzen, ab Stufe 3 tippen.
+// Ab Stufe 3 „sitzt“ eine Karte und zählt für den Gürtel. Alte Leitner-Karten
+// (nur f und bis) werden beim nächsten Abruf in s und d überführt.
 
 import { ANGEBOTE, kaufen, kaufOffen, kaufMoeglich, kaeufeWiederherstellen } from './kauf.js';
 import * as online from './online.js';
 
-const INTERVALLE = [0, 1, 3, 7, 14, 30]; // Tage bis zur nächsten Wiederholung je Fach
+const INTERVALLE = [0, 1, 3, 7, 14, 30]; // Leitner-Abstände, nur noch zum Überführen alter Karten
+// FSRS-5-Standardgewichte (open-spaced-repetition), Bewertung: 1 = falsch (Again), 3 = richtig (Good)
+const W = [0.40255, 1.18385, 3.173, 15.69105, 7.1949, 0.5345, 1.4604, 0.0046, 1.54575, 0.1192, 1.01925, 1.9395, 0.11, 0.29605, 2.2698, 0.2315, 2.9898, 0.51655, 0.6621];
+const FSRS_FAKTOR = 19 / 81;
+const FSRS_ABFALL = -0.5;
+const ZIEL_BEHALT = 0.9;
+const STUFEN_AB = [0, 2, 4, 10, 30, 90]; // Stabilität in Tagen, ab der eine Karte Stufe 1–5 hat
+const PRUEFUNG_KARTEN = 10;
+const PRUEFUNG_HERZEN = 3;
+const XP_PRUEFUNG = 50;
+const KETTE_ZUEGE = 10;
+const XP_KETTE = 3;
 const SITZT_AB = 3; // ab diesem Fach zählt eine Karte als gelernt
 const MAX_WIEDERHOLUNG = 20; // Karten pro Wiederholungsrunde
 const XP_RICHTIG = 5;
@@ -37,7 +52,7 @@ export const STUFEN = [
 ];
 
 // Profil-Teil (profil.dojo). karten: { id: { f: Fach, bis: 'JJJJ-MM-TT' } }
-export const DOJO_PROFIL = { frei: null, karten: {}, lektionen: [], tage: {}, ziel: 10, fehler: { datum: null, ids: [] }, blitz: 0, wochen: {}, ligaOffen: 0 };
+export const DOJO_PROFIL = { frei: null, karten: {}, lektionen: [], tage: {}, ziel: 10, fehler: { datum: null, ids: [] }, blitz: 0, wochen: {}, ligaOffen: 0, pruefungen: [], kette: 0 };
 
 let DATEN = null; // data/dojo.json
 let KARTEN = {}; // id → Karte
@@ -50,6 +65,7 @@ const dui = {
   schritt: 0, // Index der Lernkarte
   runde: null, // laufende Abfrage
   blitz: null, // laufendes „Paare finden“
+  kette: null, // laufende Wortkette (Shiritori)
   ergebnis: null,
   zielErreicht: false, // Tagesziel in dieser Runde erreicht (für den Ergebnis-Bildschirm)
   liga: { stand: null, vorige: null, geladen: 0, laedt: false, fehler: '' }, // Wochenliga vom Server
@@ -96,6 +112,8 @@ export function dojoEinrichten(anbindung) {
   p.dojo.blitz ||= 0;
   p.dojo.wochen ||= {}; // Dojo-Punkte je ISO-Woche, lokal
   p.dojo.ligaOffen ||= 0; // noch nicht an den Server gemeldete Punkte
+  p.dojo.pruefungen ||= []; // bestandene Gürtelprüfungen (Gürtelnamen)
+  p.dojo.kette ||= 0; // Rekord der Wortkette
   stimmenLaden();
   document.getElementById('app').addEventListener('input', (e) => {
     if (e.target.id === 'dojo-eingabe') dui.eingabe = e.target.value;
@@ -116,6 +134,78 @@ function tagPlus(tage) {
   const d = new Date();
   d.setDate(d.getDate() + tage);
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+function tageZwischen(von, bis) {
+  return Math.round((new Date(bis) - new Date(von)) / 86400000);
+}
+
+// ---------- FSRS ----------
+
+function behalt(tage, s) {
+  return Math.pow(1 + (FSRS_FAKTOR * tage) / s, FSRS_ABFALL);
+}
+
+function klemme(x, min, max) {
+  return Math.min(max, Math.max(min, x));
+}
+
+function anfangsSchwierigkeit(g) {
+  return klemme(W[4] - Math.exp(W[5] * (g - 1)) + 1, 1, 10);
+}
+
+function neueSchwierigkeit(d, g) {
+  const delta = -W[6] * (g - 3);
+  const d1 = d + (delta * (10 - d)) / 9;
+  return klemme(W[7] * anfangsSchwierigkeit(4) + (1 - W[7]) * d1, 1, 10);
+}
+
+function stabilitaetNachErinnern(d, s, r) {
+  return s * (Math.exp(W[8]) * (11 - d) * Math.pow(s, -W[9]) * (Math.exp(W[10] * (1 - r)) - 1) + 1);
+}
+
+function stabilitaetNachVergessen(d, s, r) {
+  return Math.min(W[11] * Math.pow(d, -W[12]) * (Math.pow(s + 1, W[13]) - 1) * Math.exp(W[14] * (1 - r)), s);
+}
+
+// Abstand in Tagen, nach dem der Behalt auf ZIEL_BEHALT gefallen ist
+function fsrsAbstand(s) {
+  return Math.max(1, Math.round((s / FSRS_FAKTOR) * (Math.pow(ZIEL_BEHALT, 1 / FSRS_ABFALL) - 1)));
+}
+
+function stufeAus(s) {
+  let f = 0;
+  for (let i = 1; i < STUFEN_AB.length; i++) if (s >= STUFEN_AB[i]) f = i;
+  return f;
+}
+
+// Karte nach einer Antwort neu planen. Rückgabe: neuer Eintrag { f, bis, s, d, letzt }
+function planeKarte(alt, korrekt, tag = heute()) {
+  const g = korrekt ? 3 : 1;
+  let s;
+  let d;
+  if (!alt) {
+    s = W[g - 1];
+    d = anfangsSchwierigkeit(g);
+  } else {
+    // alte Leitner-Karte: Stabilität aus dem Fach schätzen
+    let s0 = alt.s ?? Math.max(W[0], INTERVALLE[Math.max(0, alt.f ?? 0)] || W[0]);
+    const d0 = alt.d ?? 5;
+    const vergangen = alt.letzt ? Math.max(0, tageZwischen(alt.letzt, tag)) : (alt.s == null ? 1 : 0);
+    if (vergangen < 1) {
+      s = s0 * Math.exp(W[17] * (g - 3 + W[18])); // Kurzzeit: gleicher Tag
+    } else {
+      const r = behalt(vergangen, s0);
+      s = korrekt ? stabilitaetNachErinnern(d0, s0, r) : stabilitaetNachVergessen(d0, s0, r);
+    }
+    d = neueSchwierigkeit(d0, g);
+  }
+  s = klemme(s, 0.1, 36500);
+  const abstand = korrekt ? fsrsAbstand(s) : 0;
+  // Streuung wie bei Anki: ab drei Tagen ±15 %, damit nicht alle Karten einer Lektion am selben Tag fällig werden
+  const streu = abstand >= 3 ? Math.round((Math.random() * 2 - 1) * abstand * 0.15) : 0;
+  // richtige Antworten stufen nie zurück (wichtig für übernommene Leitner-Karten)
+  return { f: korrekt ? Math.max(stufeAus(s), alt?.f ?? 0) : 0, bis: tagPlus(abstand + streu), s: Math.round(s * 100) / 100, d: Math.round(d * 100) / 100, letzt: tag };
 }
 
 function mischen(liste) {
@@ -224,12 +314,26 @@ function gesamtSitzt() {
   return Object.keys(KARTEN).filter((id) => sitzt(id)).length;
 }
 
+// Gürtel: Die Kartenzahl macht einen Gürtel erreichbar, getragen wird er erst nach der
+// bestandenen Gürtelprüfung (10 Karten, 3 Herzen). Weiß braucht keine Prüfung.
 function guertel(n = gesamtSitzt()) {
   const liste = DATEN.guertel;
-  let aktuell = liste[0];
-  for (const g of liste) if (n >= g.ab) aktuell = g;
-  const naechster = liste[liste.indexOf(aktuell) + 1] ?? null;
-  return { ...aktuell, naechster, n };
+  const bestanden = profil().dojo.pruefungen ?? [];
+  let erreichbar = 0;
+  for (let i = 0; i < liste.length; i++) if (n >= liste[i].ab) erreichbar = i;
+  let i = 0;
+  while (i < erreichbar && bestanden.includes(liste[i + 1].name)) i++;
+  const aktuell = liste[i];
+  const naechster = liste[i + 1] ?? null;
+  return { ...aktuell, naechster, n, pruefung: naechster && erreichbar > i ? naechster : null };
+}
+
+// Karten für die Gürtelprüfung: zufällig aus allen schon gelernten, bevorzugt die, die sitzen
+function pruefungsKarten() {
+  const gelernt = Object.keys(KARTEN).filter((id) => !KARTEN[id].nurLernen && lektionOffen(KARTEN[id].lektion) && fach(id) >= 0);
+  const sitzend = mischen(gelernt.filter((id) => sitzt(id)));
+  const rest = mischen(gelernt.filter((id) => !sitzt(id)));
+  return [...sitzend, ...rest].slice(0, PRUEFUNG_KARTEN);
 }
 
 const GUERTEL_BILD = { 'Weiß': 'weiss', 'Gelb': 'gelb', 'Orange': 'orange', 'Grün': 'gruen', 'Blau': 'blau', 'Braun': 'braun', 'Schwarz': 'schwarz' };
@@ -354,6 +458,10 @@ function starteRunde(art, ids, lektion = null) {
     ids.forEach((id) => aufgaben.push(baueAufgabe(id, aufgabenArt(id))));
   }
   dui.runde = { art, lektion, aufgaben, i: 0, richtig: 0, falsch: 0, xp: 0, gesehen: new Set(), guertelVorher: guertel().ab };
+  if (art === 'pruefung') {
+    dui.runde.herzen = PRUEFUNG_HERZEN;
+    dui.runde.guertelZiel = guertel().pruefung?.name ?? null;
+  }
   dui.eingabe = '';
   dui.zielErreicht = false;
   app.ui.screen = 'dojoAbfrage';
@@ -395,12 +503,9 @@ function werte(a, korrekt) {
   const p = profil();
   const karten = p.dojo.karten;
   const vorher = karten[a.id]?.f ?? -1;
-  const f = korrekt ? Math.min(INTERVALLE.length - 1, Math.max(0, vorher) + 1) : 0;
-  // Streuung (wie Anki): ab Fach 2 ±15 %, damit nicht alle Karten einer Lektion am selben Tag fällig werden
-  const tage = INTERVALLE[f];
-  const streu = f >= 2 ? Math.round((Math.random() * 2 - 1) * tage * 0.15) : 0;
-  karten[a.id] = { f, bis: tagPlus(tage + streu) };
-  a.ergebnis = { korrekt, fachVorher: vorher, fach: f };
+  const neu = planeKarte(karten[a.id], korrekt);
+  karten[a.id] = neu;
+  a.ergebnis = { korrekt, fachVorher: vorher, fach: neu.f };
   merkeFehler(a.id, korrekt, r.art === 'fehler');
   if (korrekt) {
     r.richtig++;
@@ -408,8 +513,10 @@ function werte(a, korrekt) {
     p.xp += XP_RICHTIG;
   } else {
     r.falsch++;
-    // falsche Karte noch einmal ans Ende der Runde, aber höchstens einmal
-    if (!r.gesehen.has(a.id)) {
+    if (r.herzen != null) {
+      r.herzen--; // Gürtelprüfung: Fehler kosten Herzen, keine Wiederholung in der Runde
+    } else if (!r.gesehen.has(a.id)) {
+      // falsche Karte noch einmal ans Ende der Runde, aber höchstens einmal
       r.gesehen.add(a.id);
       r.aufgaben.push(baueAufgabe(a.id, a.art === 'tippen' ? 'tippen' : 'lesen'));
     }
@@ -429,10 +536,19 @@ function beendeRunde() {
     r.xp += XP_LEKTION;
     lektionNeu = true;
   }
+  let bestanden = null;
+  if (r.art === 'pruefung') {
+    bestanden = r.herzen > 0 && r.i >= r.aufgaben.length;
+    if (bestanden && !p.dojo.pruefungen.includes(r.guertelZiel)) {
+      p.dojo.pruefungen.push(r.guertelZiel);
+      p.xp += XP_PRUEFUNG;
+      r.xp += XP_PRUEFUNG;
+    }
+  }
   ligaPunkte(r.xp);
   app.speichern();
   const g = guertel();
-  dui.ergebnis = { ...r, lektionNeu, guertel: g, aufgestiegen: g.ab > r.guertelVorher, zielErreicht: dui.zielErreicht };
+  dui.ergebnis = { ...r, lektionNeu, bestanden, guertel: g, aufgestiegen: g.ab > r.guertelVorher, zielErreicht: dui.zielErreicht };
   dui.runde = null;
   app.ui.screen = 'dojoErgebnis';
   app.render();
@@ -643,6 +759,121 @@ function beendeBlitz() {
   app.render();
 }
 
+// ---------- Wortkette (Shiritori) ----------
+
+const KLEIN_KANA = { 'ゃ': 'や', 'ゅ': 'ゆ', 'ょ': 'よ', 'っ': 'つ', 'ぁ': 'あ', 'ぃ': 'い', 'ぅ': 'う', 'ぇ': 'え', 'ぉ': 'お', 'ャ': 'ヤ', 'ュ': 'ユ', 'ョ': 'ヨ', 'ッ': 'ツ' };
+const TRUEBUNG = { 'が': 'か', 'ぎ': 'き', 'ぐ': 'く', 'げ': 'け', 'ご': 'こ', 'ざ': 'さ', 'じ': 'し', 'ず': 'す', 'ぜ': 'せ', 'ぞ': 'そ', 'だ': 'た', 'ぢ': 'ち', 'づ': 'つ', 'で': 'て', 'ど': 'と', 'ば': 'は', 'び': 'ひ', 'ぶ': 'ふ', 'べ': 'へ', 'ぼ': 'ほ', 'ぱ': 'は', 'ぴ': 'ひ', 'ぷ': 'ふ', 'ぺ': 'へ', 'ぽ': 'ほ' };
+
+// Katakana → Hiragana, damit ラーメン an ん oder ら anschließt
+function hiragana(z) {
+  const c = z.codePointAt(0);
+  return c >= 0x30a1 && c <= 0x30f6 ? String.fromCodePoint(c - 0x60) : z;
+}
+
+function silbeNormal(z) {
+  const h = hiragana(z);
+  const gross = KLEIN_KANA[h] ?? h;
+  return TRUEBUNG[gross] ?? gross;
+}
+
+// Anschluss-Silbe eines Worts: letztes Zeichen ohne Längsstrich, kleine Kana groß, ohne Trübung
+function endSilbe(ja) {
+  const z = Array.from(ja).filter((c) => c !== 'ー');
+  return z.length ? silbeNormal(z[z.length - 1]) : null;
+}
+
+function startSilbe(ja) {
+  return silbeNormal(Array.from(ja)[0]);
+}
+
+function ketteWoerter() {
+  return Object.values(KARTEN).filter((k) => k.typ === 'vokabel' && lektionOffen(k.lektion));
+}
+
+// Wörter, die an das Wort anschließen (ohne schon benutzte)
+function anschluss(k, benutzt) {
+  const e = endSilbe(k.ja);
+  if (!e || e === 'ん') return [];
+  return ketteWoerter().filter((x) => x.id !== k.id && !benutzt.has(x.id) && startSilbe(x.ja) === e);
+}
+
+function ketteStartwort(benutzt) {
+  const kandidaten = ketteWoerter().filter((k) => !benutzt.has(k.id) && anschluss(k, benutzt).length);
+  return mischen(kandidaten)[0] ?? null;
+}
+
+function starteKette() {
+  const kette = { zug: 0, richtig: 0, xp: 0, benutzt: new Set(), wort: null, optionen: null, loesung: 0, gewaehlt: null, ergebnis: null, neu: true, verlauf: [] };
+  dui.kette = kette;
+  dui.zielErreicht = false;
+  ketteNeuesWort(ketteStartwort(kette.benutzt), true);
+  app.ui.screen = 'dojoKette';
+  app.render();
+}
+
+function ketteNeuesWort(wort, neu) {
+  const kette = dui.kette;
+  kette.wort = wort;
+  kette.neu = neu;
+  kette.benutzt.add(wort.id);
+  kette.verlauf.push(wort.id);
+  const richtig = mischen(anschluss(wort, kette.benutzt))[0];
+  const e = endSilbe(wort.ja);
+  const falsch = mischen(ketteWoerter().filter((x) => x.id !== wort.id && startSilbe(x.ja) !== e && !kette.benutzt.has(x.id))).slice(0, 3);
+  const alle = mischen([richtig, ...falsch]);
+  kette.optionen = alle;
+  kette.loesung = alle.indexOf(richtig);
+  kette.gewaehlt = null;
+  kette.ergebnis = null;
+}
+
+function ketteWahl(i) {
+  const kette = dui.kette;
+  if (!kette || kette.ergebnis || !kette.optionen[i]) return;
+  const p = profil();
+  kette.gewaehlt = i;
+  const korrekt = i === kette.loesung;
+  kette.ergebnis = { korrekt };
+  kette.zug++;
+  if (korrekt) {
+    kette.richtig++;
+    kette.xp += XP_KETTE;
+    p.xp += XP_KETTE;
+  }
+  zaehleHeute(1);
+  app.speichern();
+  app.render();
+}
+
+function ketteWeiter() {
+  const kette = dui.kette;
+  if (!kette?.ergebnis) return;
+  if (kette.zug >= KETTE_ZUEGE) return beendeKette();
+  const naechstes = kette.optionen[kette.loesung];
+  if (anschluss(naechstes, new Set([...kette.benutzt, naechstes.id])).length) ketteNeuesWort(naechstes, false);
+  else {
+    kette.benutzt.add(naechstes.id);
+    const start = ketteStartwort(kette.benutzt);
+    if (!start) return beendeKette();
+    ketteNeuesWort(start, true);
+  }
+  app.render();
+}
+
+function beendeKette() {
+  const kette = dui.kette;
+  if (!kette) return;
+  const p = profil();
+  const rekord = kette.richtig > p.dojo.kette;
+  if (rekord) p.dojo.kette = kette.richtig;
+  ligaPunkte(kette.xp);
+  app.speichern();
+  dui.kette = null;
+  dui.ergebnis = { art: 'kette', punkte: kette.richtig, zuege: kette.zug, xp: kette.xp, rekord, richtig: kette.richtig, falsch: kette.zug - kette.richtig, zielErreicht: dui.zielErreicht, guertel: guertel(), aufgestiegen: false };
+  app.ui.screen = 'dojoErgebnis';
+  app.render();
+}
+
 // ---------- Aktionen ----------
 
 const aktionen = {
@@ -680,6 +911,21 @@ const aktionen = {
   dojoBlitz() {
     if (blitzPool().length < 4) return;
     starteBlitz();
+  },
+  dojoPruefung() {
+    const g = guertel();
+    const ids = pruefungsKarten();
+    if (!g.pruefung || ids.length < 5) return;
+    starteRunde('pruefung', ids);
+  },
+  dojoKette() {
+    starteKette();
+  },
+  dojoKetteWahl(d) {
+    ketteWahl(Number(d.i));
+  },
+  dojoKetteWeiter() {
+    ketteWeiter();
   },
   dojoBlitzWahl(d) {
     blitzWahl(d.seite, d.id);
@@ -740,6 +986,7 @@ const aktionen = {
     const r = dui.runde;
     const a = aktuelleAufgabe();
     if (!r || !a?.ergebnis) return;
+    if (r.herzen === 0) return beendeRunde(); // Prüfung nicht bestanden
     r.i++;
     dui.eingabe = '';
     if (r.i >= r.aufgaben.length) return beendeRunde();
@@ -762,6 +1009,7 @@ const aktionen = {
   dojoZurueck() {
     clearInterval(blitzUhr);
     dui.blitz = null;
+    dui.kette = null;
     dui.lektion = null;
     dui.runde = null;
     dui.ergebnis = null;
@@ -885,7 +1133,8 @@ function dojoScreen() {
       <div class="text">
         <span class="display">${g.n} ${g.n === 1 ? 'Karte sitzt' : 'Karten sitzen'}</span>
         <div class="balken"><span style="width:${Math.round(Math.min(1, bisNaechster) * 100)}%"></span></div>
-        <small>${g.naechster ? `Noch ${g.naechster.ab - g.n} bis zum ${app.esc(g.naechster.name)}en Gürtel` : 'Schwarzer Gürtel. Du bist der Senpai.'}</small>
+        <small>${g.pruefung ? `Genug Karten für ${app.esc(g.pruefung.name)}. Jetzt die Prüfung bestehen!` : g.naechster ? `Noch ${g.naechster.ab - g.n} bis zum ${app.esc(g.naechster.name)}en Gürtel` : 'Schwarzer Gürtel. Du bist der Senpai.'}</small>
+        ${g.pruefung ? `<button class="knopf knopf-rot knopf-klein" data-aktion="dojoPruefung">Gürtelprüfung: ${app.esc(g.pruefung.name)}</button>` : ''}
         ${frei ? `<span class="frei-zeile">${app.ICON.haken} ${app.esc(freiText())}</span>` : ''}
       </div>
     </div>
@@ -898,6 +1147,7 @@ function dojoScreen() {
     <div class="modi">
       <button class="knopf" data-aktion="dojoBlitz" ${blitzPool().length < 4 ? 'disabled' : ''}>${app.ICON.blitz}<span><b>Paare finden</b><small>60 Sekunden${profil().dojo.blitz ? ` · Rekord ${profil().dojo.blitz}` : ''}</small></span></button>
       <button class="knopf" data-aktion="dojoFehler" ${fehler.length ? '' : 'disabled'}>${app.ICON.nochmal}<span><b>Fehler üben</b><small>${fehler.length ? `${fehler.length} von heute` : 'heute keine'}</small></span></button>
+      <button class="knopf" data-aktion="dojoKette">${app.ICON.weiter}<span><b>Wortkette</b><small>Shiritori${profil().dojo.kette ? ` · Rekord ${profil().dojo.kette}` : ''}</small></span></button>
     </div>
 
     ${ligaKarte()}
@@ -990,7 +1240,7 @@ function dojoAbfrageScreen() {
   if (!r || !a) return dojoScreen();
   const k = a.karte;
   const vorne = a.art === 'lesen' || a.art === 'tippen';
-  const titel = r.art === 'lektion' ? r.lektion.titel : r.art === 'fehler' ? 'Fehler üben' : 'Wiederholen';
+  const titel = r.art === 'lektion' ? r.lektion.titel : r.art === 'fehler' ? 'Fehler üben' : r.art === 'pruefung' ? `Prüfung: ${r.guertelZiel}` : 'Wiederholen';
   return `<section class="screen dojo">
     <div class="kopfzeile">
       <button class="icon-knopf" data-aktion="dojoAbbrechen" aria-label="Abfrage beenden">${app.ICON.kreuz}</button>
@@ -998,7 +1248,7 @@ function dojoAbfrageScreen() {
         <span class="label">${app.esc(titel)} · ${r.i + 1} / ${r.aufgaben.length}</span>
         <div class="balken"><span style="width:${Math.round((r.i / r.aufgaben.length) * 100)}%"></span></div>
       </div>
-      <span class="tag">${app.ICON.haken} ${r.richtig}</span>
+      ${r.herzen != null ? `<span class="leben" aria-label="${r.herzen} Herzen">${Array.from({ length: PRUEFUNG_HERZEN }, (_, i) => app.ICON.herz(i < r.herzen)).join('')}</span>` : `<span class="tag">${app.ICON.haken} ${r.richtig}</span>`}
     </div>
 
     <div class="karte dojo-frage">
@@ -1066,13 +1316,44 @@ function ergebnisBanner(a) {
       ${e.korrekt && e.fach !== e.fachVorher ? `<span class="stufen-wechsel">${e.fachVorher >= 0 ? `${app.esc(STUFEN[e.fachVorher].name)} → ` : ''}<b>${app.esc(STUFEN[e.fach].name)}</b></span>` : ''}
       ${!e.korrekt || a.art === 'tippen' ? `<p class="merk">${app.esc(k.typ === 'kana' ? k.merk : k.hinweis)}</p>` : ''}
     </div>
-    <button class="knopf" id="dojo-weiter" data-aktion="dojoNaechste">Weiter</button>
+    <button class="knopf" id="dojo-weiter" data-aktion="dojoNaechste">${dui.runde?.herzen === 0 ? 'Ergebnis' : 'Weiter'}</button>
   </div>`;
 }
 
 function dojoErgebnisScreen() {
   const e = dui.ergebnis;
   if (!e) return dojoScreen();
+  if (e.art === 'kette') {
+    return `<section class="screen dojo">
+      <div class="karte dojo-ergebnis">
+        ${app.maskottchen(e.rekord && e.punkte > 0 ? 'feiernd' : e.punkte >= 7 ? 'daumenhoch' : 'verlegen')}
+        <h2>${e.punkte} von ${e.zuege} Gliedern</h2>
+        <p>${e.rekord && e.punkte > 0 ? 'Neuer Rekord in der Wortkette!' : `Rekord: ${profil().dojo.kette}`}</p>
+        <span class="xp">+${e.xp} XP</span>
+        ${e.zielErreicht ? `<p class="ziel-hinweis">${app.ICON.flamme} Tagesziel geschafft, deine Serie läuft weiter!</p>` : ''}
+      </div>
+      <div class="unten">
+        <button class="knopf knopf-rot" data-aktion="dojoKette">${app.ICON.nochmal} Noch eine Kette</button>
+        <button class="knopf" data-aktion="dojoZurueck">Zurück zum Dojo</button>
+      </div>
+    </section>`;
+  }
+  if (e.art === 'pruefung') {
+    return `<section class="screen dojo">
+      <div class="karte dojo-ergebnis">
+        ${e.bestanden ? guertelBild(e.guertel) : app.maskottchen('verlegen')}
+        <h2>${e.bestanden ? `${app.esc(e.guertelZiel)}er Gürtel!` : 'Nicht bestanden'}</h2>
+        <p>${e.bestanden ? 'Prüfung bestanden. Der Senpai verneigt sich.' : 'Alle drei Herzen verloren. Wiederhole die wackligen Karten und versuch es gleich noch einmal.'}</p>
+        <span class="xp">+${e.xp} XP</span>
+        ${e.bestanden ? guertelChip(e.guertel) : ''}
+        ${e.zielErreicht ? `<p class="ziel-hinweis">${app.ICON.flamme} Tagesziel geschafft, deine Serie läuft weiter!</p>` : ''}
+      </div>
+      <div class="unten">
+        ${e.bestanden ? '' : guertel().pruefung ? `<button class="knopf knopf-rot" data-aktion="dojoPruefung">${app.ICON.nochmal} Noch einmal</button>` : `<p class="kleingedruckt" style="margin:0;text-align:center">Durch die Fehler sitzen gerade zu wenige Karten für ${app.esc(e.guertelZiel)}. Wiederhole sie, dann steht die Prüfung wieder offen.</p>`}
+        <button class="knopf" data-aktion="dojoZurueck">Zurück zum Dojo</button>
+      </div>
+    </section>`;
+  }
   if (e.art === 'blitz') {
     return `<section class="screen dojo">
       <div class="karte dojo-ergebnis">
@@ -1163,8 +1444,44 @@ function dojoBlitzScreen() {
   </section>`;
 }
 
+function dojoKetteScreen() {
+  const k = dui.kette;
+  if (!k) return dojoScreen();
+  const w = k.wort;
+  const e = endSilbe(w.ja);
+  return `<section class="screen dojo">
+    <div class="kopfzeile">
+      <button class="icon-knopf" data-aktion="dojoZurueck" aria-label="Wortkette beenden">${app.ICON.kreuz}</button>
+      <div class="fortschritt">
+        <span class="label">Wortkette · Glied ${Math.min(KETTE_ZUEGE, k.zug + 1)} / ${KETTE_ZUEGE}</span>
+        <div class="balken"><span style="width:${Math.round((k.zug / KETTE_ZUEGE) * 100)}%"></span></div>
+      </div>
+      <span class="tag">${app.ICON.haken} ${k.richtig}</span>
+    </div>
+    <div class="karte dojo-frage kette-karte">
+      <span class="aufgabe">${k.neu ? 'Neue Kette' : 'Weiter in der Kette'}</span>
+      <span class="zeichen wort" lang="ja">${app.esc(w.ja)}</span>
+      <span class="romaji-klein">${app.esc(w.romaji)} · ${app.esc(w.de)}</span>
+      <span class="kette-frage">Welches Wort beginnt mit <b lang="ja">${app.esc(e)}</b>?</span>
+    </div>
+    <div class="antworten dojo-antworten gitter">${k.optionen.map((o, i) => {
+      let zustand = '';
+      if (k.ergebnis) zustand = i === k.loesung ? 'richtig' : i === k.gewaehlt ? 'falsch' : 'blass';
+      return `<button class="antwort ${zustand}" data-aktion="dojoKetteWahl" data-i="${i}" ${k.ergebnis ? 'disabled' : ''}><span class="buchstabe">${i + 1}</span><span class="text jp" lang="ja">${app.esc(o.ja)}</span></button>`;
+    }).join('')}</div>
+    <div class="unten">${k.ergebnis ? `<div class="banner ${k.ergebnis.korrekt ? 'gut' : 'schlecht'}">
+      <div class="text">
+        <span class="display">${k.ergebnis.korrekt ? 'Richtig!' : 'Nicht ganz.'}</span>
+        <span>${JP(k.optionen[k.loesung].ja)} · ${app.esc(k.optionen[k.loesung].romaji)} · ${app.esc(k.optionen[k.loesung].de)}</span>
+      </div>
+      <button class="knopf" data-aktion="dojoKetteWeiter">${k.zug >= KETTE_ZUEGE ? 'Ergebnis' : 'Weiter'}</button>
+    </div>` : ''}</div>
+  </section>`;
+}
+
 export const DOJO_SCREENS = {
   dojo: dojoScreen,
+  dojoKette: dojoKetteScreen,
   dojoBlitz: dojoBlitzScreen,
   dojoLernen: dojoLernenScreen,
   dojoAbfrage: dojoAbfrageScreen,

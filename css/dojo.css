@@ -223,3 +223,10 @@
 .liga-liste .name small { font-size: 11px; }
 .liga-liste .punkte { font-family: var(--display); font-size: 16px; }
 .liga-fuss { color: #4A463F; }
+
+/* Gürtelprüfung & Wortkette */
+.guertel-karte .knopf-klein { align-self: flex-start; margin-top: 4px; }
+.dojo .leben { display: flex; gap: 4px; flex-shrink: 0; }
+.kette-karte .kette-frage { margin-top: 6px; font-size: 16px; font-weight: 700; }
+.kette-karte .kette-frage b { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 24px; padding: 0 8px; border: 2px solid var(--ink); border-radius: 10px; background: var(--yellow); }
+.dojo .modi { grid-template-columns: repeat(2, minmax(0, 1fr)); }
