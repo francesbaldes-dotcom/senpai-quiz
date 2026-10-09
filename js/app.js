@@ -6,6 +6,7 @@ import { speicherBereit, ladeProfil, speichereProfil } from './speicher.js';
 import { kategorieIcon, abzeichenEmblem, rangEmblem, stationsKnoten, bossKnoten } from './grafik.js';
 import { tagesquizBild, bossBild, kannBildTeilen } from './teilen-bild.js';
 import { spielernameErlaubt, SPIELERNAME_VERBOTEN } from './spielername.js';
+import { ladeDojo, dojoEinrichten, dojoAktionen, dojoKarteStart, DOJO_SCREENS } from './dojo.js';
 
 const app = document.getElementById('app');
 
@@ -155,6 +156,8 @@ const PROFIL_START = {
   // Heldenreise: beste Sterne je Station, z. B. { 'k01-s1': 3 }; Zweite Reise mit Suffix @2.
   // durchgang = zuletzt gewählte Reise (1 oder 2)
   reise: { sterne: {}, durchgang: 1 },
+  // Senpai Dojo (Japanisch lernen): Freischaltung, Leitner-Fächer je Karte, fertige Lektionen; Startwerte in js/dojo.js
+  dojo: null,
 };
 
 let profil = structuredClone(PROFIL_START); // wird in init() aus dem Speicher geladen
@@ -1139,6 +1142,9 @@ const aktionen = {
   },
 };
 
+// Aktionen des Senpai Dojo (js/dojo.js), alle mit Vorsilbe „dojo“
+Object.assign(aktionen, dojoAktionen);
+
 app.addEventListener('click', (e) => {
   const el = e.target.closest('[data-aktion]');
   if (!el || el.disabled) return;
@@ -1283,6 +1289,7 @@ function startScreen() {
     <button class="leise-knopf begriffe-link" data-aktion="begriffe">Was heißt eigentlich „Senpai“?</button>
 
     ${reiseKarteStart()}
+    ${dojoKarteStart()}
 
     <div class="tageskarte karte">
       <div class="text">
@@ -2441,6 +2448,7 @@ const SCREENS = {
   duell: duellScreen,
   duellKategorie: duellKategorieScreen,
   einladung: einladungScreen,
+  ...DOJO_SCREENS,
 };
 
 let letzterScreen = null;
@@ -2481,7 +2489,7 @@ function uebernimmAlteKategorien() {
 
 async function init() {
   try {
-    const [antwort, reiseAntwort] = await Promise.all([fetch('data/fragen.json'), fetch('data/reise.json'), speicherBereit()]);
+    const [antwort, reiseAntwort] = await Promise.all([fetch('data/fragen.json'), fetch('data/reise.json'), speicherBereit(), ladeDojo()]);
     const daten = await antwort.json();
     FRAGEN = daten.fragen;
     KATEGORIEN = daten.kategorien;
@@ -2492,6 +2500,7 @@ async function init() {
     profil.reise ||= { sterne: {}, durchgang: 1 };
     ui.durchgang = profil.reise.durchgang === 2 && zweiteReiseOffen() ? 2 : 1;
     uebernimmAlteKategorien();
+    dojoEinrichten({ profil: () => profil, speichern, render, esc, maskottchen, tabbar, frage, ICON, ui, onlineProfil: () => ui.online.profil });
     // Stimmungsbilder vorladen, damit beim Wechsel nichts flackert
     STIMMUNGEN.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });
     // Einladungslink? (…?einladung=CODE)

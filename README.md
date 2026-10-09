@@ -23,6 +23,10 @@ In Claude Code startet `.claude/launch.json` denselben Server für die Browser-V
 | `js/app.js` | Spiellogik und alle Bildschirme |
 | `js/speicher.js` | Speichern des Profils: im Browser `localStorage`, in der Capacitor-App das Plugin Preferences (dieser native Pfad ist noch ungetestet, weil es noch kein Capacitor-Projekt gibt) |
 | `js/online.js` | Supabase-Client für Accounts und Duelle |
+| `js/dojo.js` | Senpai Dojo (Japanisch lernen): Übersicht, Lernkarten, Abfrage, Leitner-Wiederholung, Gürtel, Kaufbildschirm; Anbindung über `dojoEinrichten()` aus `app.js` |
+| `js/kauf.js` | In-App-Kauf fürs Dojo: im Browser eine Kauf-Attrappe, in der iPhone-App später RevenueCat/StoreKit |
+| `data/dojo.json` | Inhalte des Dojo: Hiragana und Katakana mit Eselsbrücken, Anime-Vokabeln, Gürtel-Stufen |
+| `css/dojo.css` | Gestaltung des Dojo |
 | `js/teilen-bild.js` | Teilen-Bild fürs Tagesquiz (PNG per Canvas, 1080 × 1350, App-Schriften und Maskottchen) |
 | `js/grafik.js` | Inline-SVG-Grafiken im Manga-Look: Kategorie-Icons (`kategorieIcon`), Abzeichen-Embleme (`abzeichenEmblem`), Rang-Embleme (`rangEmblem`) und Bausteine für die Heldenreise-Karte (`stationsKnoten`, `bossKnoten`). Eigene Symbole, keine Markenzeichen |
 | `vendor/` | Supabase-JS (2.45.4), lokal eingebunden |
@@ -67,6 +71,19 @@ Die richtige Antwort steht immer an erster Stelle (`"correct": 0`), die App misc
 - **Survival:** endlos, bis 3 Fehler gemacht sind
 - **Blitz:** 60 Sekunden, so viele Fragen wie möglich
 - **Heldenreise:** Story-Modus mit Karte, oberste Karte auf der Startseite. 5 Akte, 10 Kapitel, je 4 Stationen und ein Boss, insgesamt 50 Stationen, die sich der Reihe nach freischalten. Station: 5 Fragen, Boss: 7 (Endboss 10 mit 12 s), immer 3 Herzen; jeder Fehler kostet eins, bei 0 ist die Station gescheitert und sofort wiederholbar. Sterne = übrige Herzen, Wiederholen verbessert sie. Joker gibt es erst ab Kapitel 2 (50:50), 2.3 (+10 s) und 3 (Weiter), Bosse haben keine; die Zweite Chance per Video gilt überall außer beim Endboss. Erstes Bestehen: +50 XP, erster Boss-Sieg: +150 XP. Regeln, Kategorien und Stufen jeder Station stehen in `data/reise.json`, das Konzept in `heldenreise.md`. Abzeichen: Aufbruch, Schwellenhüter, Heimkehr, Sternenfänger. Der Senpai (Maskottchen) spricht auf jeder Stationskarte, Bosse haben einen Auftrittssatz, nach einem Boss-Sieg gibt es ein Senpai-Zitat und einen Teilen-Knopf. Titel „Reisender“ (ab Boss 4) und „Heimkehrer“ (nach dem Ende) erscheinen neben dem Rang auf der Startseite. Alle Texte stehen in `data/reise.json`. Jeder Akt hat einen **Geheimpfad** (eine Kategorie pur auf Otaku, 5 Fragen, 3 Herzen), der ab 80 % der Akt-Sterne aufgeht und beim ersten Bestehen 100 XP gibt. Nach dem Ende lässt sich auf der Karte die **Zweite Reise** wählen: alle Stationen auf Fan und Otaku mit nur zwei Herzen und eigenen Sternen. Abzeichen dafür: Pfadfinder, Zweite Reise.
+
+## Senpai Dojo (Japanisch lernen)
+
+Kauf-Funktion, eigene Karte auf der Startseite unter der Heldenreise. Inhalte in `data/dojo.json`, Logik in `js/dojo.js`, Gestaltung in `css/dojo.css`.
+
+- **Inhalt:** Hiragana und Katakana (je 46 Grundzeichen plus Trübungen, zusammen 143 Zeichen) mit einer Eselsbrücke pro Zeichen, dazu 150 Anime-Vokabeln in 15 Lektionen (Begrüßung, Anrede, Familie, Kampf, Gefühle, Essen, Zahlen, Anime-Sätze …). Karten-IDs: `h:か`, `k:カ`, `v:romaji`.
+- **Lernen:** Lektion = Lernkarten (Zeichen, Rōmaji, Bedeutung, Eselsbrücke, Anhören) und danach eine Abfrage, in der jede Karte erst erkannt (Mehrfachwahl) und dann geschrieben wird (Zeichen wählen). Falsche Karten kommen in derselben Runde noch einmal.
+- **Wiederholung nach Leitner:** Jede Karte hat ein Fach 0–5 (`profil.dojo.karten[id] = { f, bis }`). Richtig → Fach +1, falsch → Fach 0. Abstände: 0, 1, 3, 7, 14, 30 Tage. Ab Fach 2 wird geschrieben, ab Fach 3 die Lesung getippt (Rōmaji, Makrons und Doppelvokale sind egal, `si`/`ti`/`tu`/`hu` werden angenommen). Ab Fach 3 „sitzt“ eine Karte. Fällige Karten stehen auf der Startkarte und im Dojo unter „Wiederholen“ (höchstens 20 pro Runde, niedrigste Fächer zuerst).
+- **Hören:** Gibt es eine japanische Stimme (`speechSynthesis`, auf dem iPhone offline vorhanden), haben Lernkarten einen Anhören-Knopf, und etwa ein Drittel der Abfragen ab Fach 1 sind Hör-Aufgaben.
+- **Gürtel:** nach der Zahl sitzender Karten, Stufen in `dojo.json` (Weiß 0, Gelb 20, Orange 46, Grün 92, Blau 150, Braun 220, Schwarz alle). Aufstieg wird auf dem Ergebnis-Bildschirm gefeiert.
+- **XP:** 5 je richtiger Antwort, 25 beim ersten Abschluss einer Lektion; fließt in den normalen Rang.
+- **Kauf:** Gratis sind Hiragana Reihe A und die Vokabel-Lektion „Erste Worte“; alle anderen Lektionen zeigen ein Schloss und führen zum Kaufbildschirm. Zwei Angebote in `js/kauf.js`: Monatsabo (`de.senpaiquiz.dojo.monat`, 2,99 €) und Einmalkauf (`de.senpaiquiz.dojo.lebenslang`, 19,99 €). Im Browser läuft eine Attrappe („App Store · Platzhalter“), die nach 1,5 s einen Kaufen-Knopf freigibt; der Kauf landet in `profil.dojo.frei = { art, bis, seit }` (Abo-Attrappe: 30 Tage). In der iPhone-App muss hier Apples In-App-Kauf hinein, am einfachsten RevenueCat (`@revenuecat/purchases-capacitor`), das auch „Käufe wiederherstellen“ liefert. Preise und Produkt-IDs in App Store Connect anlegen, Abo-Hinweis in die Nutzungsbedingungen.
+- **Server:** Spalte `profile.dojo_bis` (Migration `dojo_freischaltung`) als zweite Quelle der Freischaltung; die App liest sie mit dem Profil. Geschrieben wird sie nicht aus der App, sondern später vom Store-Webhook (RevenueCat → Edge Function mit Service-Rolle). Da Accounts an das Gerät gebunden sind, geht der Lernfortschritt beim Löschen der App verloren; der Kauf lässt sich über Apple wiederherstellen.
 
 ## Belohnungswerbung
 

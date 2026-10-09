@@ -1,0 +1,159 @@
+/* ---------- Senpai Dojo (Japanisch lernen) ---------- */
+
+.dojokarte {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--blue);
+  color: var(--white);
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+.dojokarte:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
+.dojokarte .maskottchen { width: 76px; height: 76px; flex-shrink: 0; filter: drop-shadow(2px 2px 0 var(--ink)); }
+.dojokarte .text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.dojokarte .label { color: var(--yellow); }
+.dojokarte .display { font-size: 20px; line-height: 1.1; }
+.dojokarte small { font-size: 13px; font-weight: 700; line-height: 1.3; }
+.dojokarte .pfeil { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--white); color: var(--ink); border: 2px solid var(--ink); display: flex; align-items: center; justify-content: center; }
+.dojokarte .pfeil.schloss { background: var(--yellow); }
+
+.guertel-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px 3px 6px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--white);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.guertel-punkt { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--ink); flex-shrink: 0; }
+
+.guertel-karte { padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+.guertel-karte .maskottchen { width: 72px; height: 72px; flex-shrink: 0; }
+.guertel-karte .text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.guertel-karte .display { font-size: 20px; line-height: 1.1; }
+.guertel-karte small { font-size: 13px; font-weight: 700; }
+.guertel-karte .balken { height: 12px; }
+.guertel-karte .balken span { background: var(--blue); }
+
+.dojo-hinweis { padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; background: var(--yellow); }
+.dojo-hinweis p { margin: 0; font-weight: 700; line-height: 1.4; }
+
+.lektionen { display: flex; flex-direction: column; gap: 10px; }
+.lektion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 60px;
+  padding: 10px 14px;
+  border: 3px solid var(--ink);
+  border-radius: 16px;
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+.lektion:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
+.lektion .status {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  font-size: 16px;
+}
+.lektion .status.fertig { background: var(--green); color: var(--white); }
+.lektion .status.offen { background: var(--yellow); }
+.lektion .status.gesperrt { background: var(--muted); color: #6B665C; }
+.lektion.gesperrt { background: var(--paper); }
+.lektion.gesperrt b { color: #4A463F; }
+.lektion .text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.lektion b { font-size: 16px; }
+.lektion small { font-size: 12px; font-weight: 700; color: #4A463F; }
+.lektion .probe { font-size: 11px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }
+.lektion .rechts { flex-shrink: 0; display: flex; align-items: center; color: var(--ink); }
+
+.gruppe-kopf { display: flex; flex-direction: column; gap: 4px; }
+.gruppe-kopf h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 22px; line-height: 1.1; }
+.gruppe-kopf p { margin: 0; font-size: 14px; line-height: 1.4; }
+
+/* Lernkarte */
+.lernkarte { padding: 22px 18px 18px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.lernkarte .zeichen { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 96px; line-height: 1; font-weight: 700; }
+.lernkarte .zeichen.wort { font-size: 44px; line-height: 1.15; overflow-wrap: anywhere; }
+.lernkarte .romaji { font-family: var(--display); font-size: 28px; line-height: 1; }
+.lernkarte .bedeutung { font-size: 22px; font-weight: 900; line-height: 1.2; }
+.lernkarte .merk { margin: 0; padding: 12px 14px; border: 2px dashed var(--ink); border-radius: 14px; background: var(--paper); font-size: 15px; font-weight: 700; line-height: 1.4; }
+.lernkarte .schrift { font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: #4A463F; }
+.hoer-knopf { min-height: 44px; padding: 0 14px; font-size: 14px; font-weight: 900; box-shadow: 3px 3px 0 var(--ink); }
+.hoer-knopf.gross { min-height: 96px; width: 96px; border-radius: 50%; padding: 0; background: var(--yellow); }
+.hoer-knopf.gross svg { width: 44px; height: 44px; }
+
+/* Abfrage */
+.dojo-frage { padding: 20px 18px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.dojo-frage .aufgabe { font-size: 13px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: #4A463F; }
+.dojo-frage .zeichen { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 84px; line-height: 1; font-weight: 700; }
+.dojo-frage .zeichen.wort { font-size: 40px; line-height: 1.15; overflow-wrap: anywhere; }
+.dojo-frage .text { font-family: var(--display); font-size: 26px; line-height: 1.15; overflow-wrap: anywhere; }
+.dojo-antworten .antwort .text { font-size: 19px; }
+.dojo-antworten .antwort .text.jp { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 26px; font-weight: 700; }
+.dojo-antworten.gitter { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.dojo-antworten.gitter .antwort { justify-content: center; min-height: 84px; padding: 0 10px; }
+.dojo-antworten.gitter .antwort .buchstabe { display: none; }
+.tipp-form { display: flex; flex-direction: column; gap: 10px; }
+.tipp-form input { text-align: center; font-size: 22px; font-weight: 900; }
+.tipp-form input:disabled { background: var(--muted); }
+.banner .merk { position: relative; margin: 4px 0 0; font-size: 13px; font-weight: 700; line-height: 1.4; opacity: .95; }
+.banner .jp { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; }
+
+/* Kauf */
+.kauf-karte { padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+.kauf-karte .maskottchen { width: 110px; height: 110px; align-self: center; }
+.kauf-karte h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 24px; line-height: 1.15; text-align: center; }
+.kauf-karte ul { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 6px; font-weight: 700; line-height: 1.4; }
+.angebot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+.angebot:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
+.angebot.empfohlen { background: var(--yellow); }
+.angebot .text { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.angebot b { font-family: var(--display); font-weight: 400; font-size: 18px; }
+.angebot small { font-size: 12px; font-weight: 700; line-height: 1.35; }
+.angebot .preis { display: flex; flex-direction: column; align-items: flex-end; flex-shrink: 0; }
+.angebot .preis b { font-size: 22px; }
+.angebot .preis small { font-size: 11px; }
+.angebot .tipp { position: absolute; }
+.kauf-zeile { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-weight: 900; }
+.kauf .werbung-karte .balken span { background: var(--green); transition: width .1s linear; }
+.frei-zeile { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; }
+
+/* Ergebnis */
+.dojo-ergebnis { padding: 22px 18px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.dojo-ergebnis .maskottchen { width: 130px; height: 130px; }
+.dojo-ergebnis h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 26px; line-height: 1.1; }
+.dojo-ergebnis p { margin: 0; font-weight: 700; line-height: 1.4; }
+.dojo-ergebnis .xp { font-family: var(--display); font-size: 22px; color: var(--blue); }

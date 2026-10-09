@@ -1,0 +1,405 @@
+{
+  "hinweis": "Senpai Dojo: Kana mit Eselsbrücken und Anime-Vokabeln. Zeichen: [Zeichen, Rōmaji, Eselsbrücke]. Wörter: [Japanisch, Rōmaji, Deutsch, Hinweis]. Karten-IDs: h:ka (Hiragana), k:ka (Katakana), v:romaji (Vokabel).",
+  "guertel": [
+    { "name": "Weiß", "ab": 0, "farbe": "#FFFFFF" },
+    { "name": "Gelb", "ab": 20, "farbe": "#FFD23F" },
+    { "name": "Orange", "ab": 46, "farbe": "#FF8A3D" },
+    { "name": "Grün", "ab": 92, "farbe": "#177A41" },
+    { "name": "Blau", "ab": 150, "farbe": "#1F5FD1" },
+    { "name": "Braun", "ab": 220, "farbe": "#6B3E1E" },
+    { "name": "Schwarz", "ab": 292, "farbe": "#141414" }
+  ],
+  "gruppen": [
+    {
+      "id": "hiragana",
+      "titel": "Hiragana",
+      "text": "Die runde Silbenschrift für japanische Wörter. 46 Zeichen, jedes steht für eine Silbe.",
+      "senpai": "Hiragana zuerst! Damit liest du jeden Anime-Titel.",
+      "lektionen": [
+        { "id": "h1", "titel": "Reihe A", "frei": true, "zeichen": [
+          ["あ", "a", "Eine Antenne mit Schleife: a wie Antenne."],
+          ["い", "i", "Zwei Tropfen fallen nebeneinander: iii, ist das kalt."],
+          ["う", "u", "Ein U, das auf der Seite liegt und einen Hut trägt."],
+          ["え", "e", "Ein kleines e mit Strich obendrauf: e wie extra Strich."],
+          ["お", "o", "Ein Ball (o) mit einer Schleife daneben: o wie Orange."]
+        ]},
+        { "id": "h2", "titel": "Reihe KA", "zeichen": [
+          ["か", "ka", "Ein Karatekämpfer tritt zu: ka wie Karate."],
+          ["き", "ki", "Ein Schlüssel (englisch key): ki."],
+          ["く", "ku", "Ein Vogelschnabel von der Seite: Kuckuck."],
+          ["け", "ke", "Ein K mit einer Kerze davor: ke wie Kerze."],
+          ["こ", "ko", "Zwei Linien wie eine halbe Kokosnuss-Schale: ko wie Kokos."]
+        ]},
+        { "id": "h3", "titel": "Reihe SA", "zeichen": [
+          ["さ", "sa", "Ein Samurai mit Schwert über der Schulter: sa wie Samurai."],
+          ["し", "shi", "Ein Angelhaken, daran hängt ein Fisch: fi-shi."],
+          ["す", "su", "Ein Seil mit Schlaufe: su wie Superknoten."],
+          ["せ", "se", "Ein Sessel von der Seite: se wie Sessel."],
+          ["そ", "so", "Ein Zickzack-Blitz: SO ein Blitz!"]
+        ]},
+        { "id": "h4", "titel": "Reihe TA", "zeichen": [
+          ["た", "ta", "Sieht fast aus wie ein t und ein a nebeneinander: ta."],
+          ["ち", "chi", "Eine 5 mit Dach. Die 5 chillt unter dem Dach: chi."],
+          ["つ", "tsu", "Eine Welle: Tsunami, tsu."],
+          ["て", "te", "Ein Tisch mit nur einem Bein: te wie Tisch."],
+          ["と", "to", "Ein Zeh (englisch toe) mit einem Splitter: to."]
+        ]},
+        { "id": "h5", "titel": "Reihe NA", "zeichen": [
+          ["な", "na", "Eine Nonne kniet vor dem Kreuz: na wie Nonne."],
+          ["に", "ni", "Ein Knie von der Seite: ni wie Knie."],
+          ["ぬ", "nu", "Nudeln, aufgewickelt auf Stäbchen: nu wie Nudeln."],
+          ["ね", "ne", "Eine Katze mit eingerolltem Schwanz: neko, ne."],
+          ["の", "no", "Ein Verbotsschild: NO!"]
+        ]},
+        { "id": "h6", "titel": "Reihe HA", "zeichen": [
+          ["は", "ha", "Ein H und ein a nebeneinander: ha."],
+          ["ひ", "hi", "Ein Grinsen von der Seite: hihi."],
+          ["ふ", "fu", "Der Fuji mit Wolken drumherum: fu wie Fuji."],
+          ["へ", "he", "Ein flacher Hügel: he wie Hügel."],
+          ["ほ", "ho", "Wie は mit Hut. Der Weihnachtsmann trägt den Hut: ho ho ho."]
+        ]},
+        { "id": "h7", "titel": "Reihe MA", "zeichen": [
+          ["ま", "ma", "Eine Mama mit Dutt im Haar: ma."],
+          ["み", "mi", "Sieht aus wie die 21 mit einer Mini-Schleife: mi."],
+          ["む", "mu", "Eine Kuh mit Horn: muuu."],
+          ["め", "me", "Ein Knoten mit Pupille. Me heißt auf Japanisch Auge."],
+          ["も", "mo", "Ein Angelhaken mit zwei Ködern: Moment, der hat mehr Köder."]
+        ]},
+        { "id": "h8", "titel": "Reihe YA & RA", "zeichen": [
+          ["や", "ya", "Ein Yak mit Horn: ya."],
+          ["ゆ", "yu", "Ein U-Boot von der Seite: yu wie U-Boot."],
+          ["よ", "yo", "Ein Yo-Yo an der Schnur: yo."],
+          ["ら", "ra", "Ein Rapper mit schiefer Kappe: ra."],
+          ["り", "ri", "Ein Fluss (englisch river) zwischen zwei Ufern: ri."],
+          ["る", "ru", "Eine 3 mit Schlaufe am Ende: ru hat die Schlaufe, ろ nicht."],
+          ["れ", "re", "Ein Rennfahrer kniet am Start: re wie Rennen."],
+          ["ろ", "ro", "Eine 3 ohne Schlaufe: ro ist noch roh, ohne Knoten."]
+        ]},
+        { "id": "h9", "titel": "Reihe WA & N", "zeichen": [
+          ["わ", "wa", "Wie ね, aber ohne Katzenschwanz: wa, der Schwanz ist weg."],
+          ["を", "wo", "Ein Turner im Spagat: Wow! Wird nur als Partikel benutzt."],
+          ["ん", "n", "Ein kleines n in Schreibschrift. Die einzige Silbe ohne Vokal."]
+        ]},
+        { "id": "h10", "titel": "Trübung: GA, ZA", "zeichen": [
+          ["が", "ga", "か + zwei Striche (゛) wird zu ga."],
+          ["ぎ", "gi", "き + ゛ = gi."],
+          ["ぐ", "gu", "く + ゛ = gu."],
+          ["げ", "ge", "け + ゛ = ge."],
+          ["ご", "go", "こ + ゛ = go."],
+          ["ざ", "za", "さ + ゛ = za."],
+          ["じ", "ji", "し + ゛ = ji (wie dschi)."],
+          ["ず", "zu", "す + ゛ = zu."],
+          ["ぜ", "ze", "せ + ゛ = ze."],
+          ["ぞ", "zo", "そ + ゛ = zo."]
+        ]},
+        { "id": "h11", "titel": "Trübung: DA, BA, PA", "zeichen": [
+          ["だ", "da", "た + ゛ = da."],
+          ["ぢ", "ji", "ち + ゛ = ji, selten, klingt wie じ."],
+          ["づ", "zu", "つ + ゛ = zu, selten, klingt wie ず."],
+          ["で", "de", "て + ゛ = de."],
+          ["ど", "do", "と + ゛ = do."],
+          ["ば", "ba", "は + ゛ = ba."],
+          ["び", "bi", "ひ + ゛ = bi."],
+          ["ぶ", "bu", "ふ + ゛ = bu."],
+          ["べ", "be", "へ + ゛ = be."],
+          ["ぼ", "bo", "ほ + ゛ = bo."],
+          ["ぱ", "pa", "は + Kreis (゜) = pa. Der Kreis ist ein kleiner Pop."],
+          ["ぴ", "pi", "ひ + ゜ = pi."],
+          ["ぷ", "pu", "ふ + ゜ = pu."],
+          ["ぺ", "pe", "へ + ゜ = pe."],
+          ["ぽ", "po", "ほ + ゜ = po."]
+        ]}
+      ]
+    },
+    {
+      "id": "katakana",
+      "titel": "Katakana",
+      "text": "Die eckige Silbenschrift für Fremdwörter, Namen und Betonung. Dieselben 46 Silben wie Hiragana.",
+      "senpai": "Katakana steht auf jeder Speisekarte und in jedem Namen.",
+      "lektionen": [
+        { "id": "k1", "titel": "Reihe A", "zeichen": [
+          ["ア", "a", "Eine Axt mit Stiel: a wie Axt."],
+          ["イ", "i", "Ein Adler (englisch eagle) mit Schnabel: i."],
+          ["ウ", "u", "Wie das Hiragana う, nur eckig und mit Dach."],
+          ["エ", "e", "Ein Aufzug (englisch elevator) zwischen zwei Etagen: e."],
+          ["オ", "o", "Ein Mann, der einen Arm hebt und „oh!“ ruft."]
+        ]},
+        { "id": "k2", "titel": "Reihe KA", "zeichen": [
+          ["カ", "ka", "Fast wie か, nur ohne den Punkt: der Karatekämpfer ohne Gürtel."],
+          ["キ", "ki", "Wie き ohne Bogen: ein eckiger Schlüssel (key)."],
+          ["ク", "ku", "Ein Kuckuck, der um die Ecke schaut: ku."],
+          ["ケ", "ke", "Ein K, das zur Seite kippt: ke."],
+          ["コ", "ko", "Zwei Ecken wie ein offener Kasten: ko wie Kasten."]
+        ]},
+        { "id": "k3", "titel": "Reihe SA", "zeichen": [
+          ["サ", "sa", "Zwei Säulen mit Querbalken: sa wie Säule."],
+          ["シ", "shi", "Zwei flache Punkte und ein Strich von unten: ein lächelndes Gesicht, shi. Bei ツ stehen die Punkte senkrecht."],
+          ["ス", "su", "Ein Skispringer im Flug: su wie Supersprung."],
+          ["セ", "se", "Wie せ ohne Schnörkel: der eckige Sessel."],
+          ["ソ", "so", "Ein Punkt und ein Strich von oben: SO ein Nadelstich. Bei ン kommt der Strich von unten."]
+        ]},
+        { "id": "k4", "titel": "Reihe TA", "zeichen": [
+          ["タ", "ta", "Wie ク mit einem Strich in der Mitte: ta."],
+          ["チ", "chi", "Ein T mit Schwung: der Stab einer Cheerleaderin, chi."],
+          ["ツ", "tsu", "Zwei Tropfen fallen von oben, ein Strich kommt hoch: Tsunami. Bei シ liegen die Punkte flach."],
+          ["テ", "te", "Ein Telegrafenmast: te."],
+          ["ト", "to", "Ein Totempfahl mit einem Ast: to."]
+        ]},
+        { "id": "k5", "titel": "Reihe NA", "zeichen": [
+          ["ナ", "na", "Ein Nagel, der sich zur Seite neigt: na wie Nagel."],
+          ["ニ", "ni", "Zwei Striche. Die Zahl zwei heißt ni."],
+          ["ヌ", "nu", "Zwei gekreuzte Stäbchen mit Nudel: nu, eckig."],
+          ["ネ", "ne", "Ein kleines Nest auf einem Ast: ne."],
+          ["ノ", "no", "Ein einziger Strich. Mehr gibt es nicht: no."]
+        ]},
+        { "id": "k6", "titel": "Reihe HA", "zeichen": [
+          ["ハ", "ha", "Zwei lachende Striche: ha ha."],
+          ["ヒ", "hi", "Ein Schwerthieb nach oben: hi wie Hieb."],
+          ["フ", "fu", "Die Spitze des Fuji, eckig: fu."],
+          ["ヘ", "he", "Genau wie das Hiragana へ: ein Hügel."],
+          ["ホ", "ho", "Ein Kreuz mit zwei Stützen: ho wie Holzkreuz."]
+        ]},
+        { "id": "k7", "titel": "Reihe MA", "zeichen": [
+          ["マ", "ma", "Ein Mantelkragen von der Seite: ma wie Mantel."],
+          ["ミ", "mi", "Drei schräge Striche. Drei heißt mittsu: mi."],
+          ["ム", "mu", "Ein Zelt, in dem eine Kuh steht: muuu."],
+          ["メ", "me", "Zwei gekreuzte Striche, wie mit dem Messer markiert: me."],
+          ["モ", "mo", "Wie も, nur eckig: der Haken mit zwei Querstrichen."]
+        ]},
+        { "id": "k8", "titel": "Reihe YA & RA", "zeichen": [
+          ["ヤ", "ya", "Wie や ohne Schnörkel: der eckige Yak."],
+          ["ユ", "yu", "Ein eckiges u mit Sockel: yu wie U-Boot."],
+          ["ヨ", "yo", "Ein gespiegeltes E: Yo, das E schaut nach hinten."],
+          ["ラ", "ra", "Das erste Zeichen von ラーメン (Rāmen): ra."],
+          ["リ", "ri", "Fast wie り: zwei Striche, ein Fluss."],
+          ["ル", "ru", "Ein Mensch, der rennt (englisch run): ru."],
+          ["レ", "re", "Ein Regenrohr, unten abgeknickt: re."],
+          ["ロ", "ro", "Ein Rechteck wie ein Robotermund: ro."]
+        ]},
+        { "id": "k9", "titel": "Reihe WA & N", "zeichen": [
+          ["ワ", "wa", "Wie ウ ohne den Punkt oben: wa."],
+          ["ヲ", "wo", "Ein Haken mit Deckel. Kommt fast nur in alten Texten vor."],
+          ["ン", "n", "Ein Punkt und ein Strich von unten: n, wie ein Nicken. Bei ソ kommt der Strich von oben."],
+          ["ー", "ā", "Der Längsstrich: Er dehnt den Vokal davor, wie in ラーメン (rāmen). Wird nur erklärt, nicht abgefragt.", true]
+        ]},
+        { "id": "k10", "titel": "Trübung: GA, ZA", "zeichen": [
+          ["ガ", "ga", "カ + ゛ = ga."],
+          ["ギ", "gi", "キ + ゛ = gi."],
+          ["グ", "gu", "ク + ゛ = gu."],
+          ["ゲ", "ge", "ケ + ゛ = ge."],
+          ["ゴ", "go", "コ + ゛ = go."],
+          ["ザ", "za", "サ + ゛ = za."],
+          ["ジ", "ji", "シ + ゛ = ji."],
+          ["ズ", "zu", "ス + ゛ = zu."],
+          ["ゼ", "ze", "セ + ゛ = ze."],
+          ["ゾ", "zo", "ソ + ゛ = zo."]
+        ]},
+        { "id": "k11", "titel": "Trübung: DA, BA, PA", "zeichen": [
+          ["ダ", "da", "タ + ゛ = da."],
+          ["ヂ", "ji", "チ + ゛ = ji, selten."],
+          ["ヅ", "zu", "ツ + ゛ = zu, selten."],
+          ["デ", "de", "テ + ゛ = de."],
+          ["ド", "do", "ト + ゛ = do."],
+          ["バ", "ba", "ハ + ゛ = ba."],
+          ["ビ", "bi", "ヒ + ゛ = bi."],
+          ["ブ", "bu", "フ + ゛ = bu."],
+          ["ベ", "be", "ヘ + ゛ = be."],
+          ["ボ", "bo", "ホ + ゛ = bo."],
+          ["パ", "pa", "ハ + ゜ = pa."],
+          ["ピ", "pi", "ヒ + ゜ = pi."],
+          ["プ", "pu", "フ + ゜ = pu."],
+          ["ペ", "pe", "ヘ + ゜ = pe."],
+          ["ポ", "po", "ホ + ゜ = po."]
+        ]}
+      ]
+    },
+    {
+      "id": "vokabeln",
+      "titel": "Anime-Vokabeln",
+      "text": "Wörter, die du aus Anime schon hundertmal gehört hast. Jetzt lernst du, was sie heißen.",
+      "senpai": "Die kennst du schon vom Hören. Jetzt gehören sie dir.",
+      "lektionen": [
+        { "id": "v1", "titel": "Erste Worte", "frei": true, "woerter": [
+          ["こんにちは", "konnichiwa", "Guten Tag", "Der Standardgruß am Tag."],
+          ["ありがとう", "arigatō", "Danke", "Höflicher: arigatō gozaimasu."],
+          ["すみません", "sumimasen", "Entschuldigung", "Auch um jemanden anzusprechen, wie „Verzeihung“."],
+          ["はい", "hai", "Ja", "Heißt auch „verstanden“, nicht immer Zustimmung."],
+          ["いいえ", "iie", "Nein", "Klingt höflich; oft wird einfach ausgewichen."],
+          ["おはよう", "ohayō", "Guten Morgen", "Höflich: ohayō gozaimasu. In Clubs auch abends üblich."],
+          ["おやすみ", "oyasumi", "Gute Nacht", "Höflich: oyasumi nasai."],
+          ["さようなら", "sayōnara", "Auf Wiedersehen", "Klingt endgültig, unter Freunden sagt man ja ne."],
+          ["いただきます", "itadakimasu", "Guten Appetit", "Wörtlich „ich empfange“, vor jedem Essen."],
+          ["ごめん", "gomen", "Tut mir leid", "Höflich: gomen nasai. Sumimasen ist förmlicher."]
+        ]},
+        { "id": "v2", "titel": "Anrede & Anime-Begriffe", "woerter": [
+          ["せんぱい", "senpai", "Älterer Mitschüler, Mentor", "Jemand, der vor dir angefangen hat: Schule, Club, Firma."],
+          ["こうはい", "kōhai", "Jüngerer Mitschüler", "Das Gegenstück zum Senpai."],
+          ["せんせい", "sensei", "Lehrer, Meister", "Auch für Ärzte und Mangaka."],
+          ["さん", "-san", "Herr/Frau (Anhängsel)", "Neutral-höflich, an jeden Namen anhängbar."],
+          ["ちゃん", "-chan", "Kosename (Anhängsel)", "Für Kinder, Mädchen, enge Freundinnen."],
+          ["くん", "-kun", "Anhängsel für Jungen", "Auch für jüngere Kollegen."],
+          ["さま", "-sama", "Sehr respektvolle Anrede", "Für Götter, Kunden und Adlige."],
+          ["なかま", "nakama", "Gefährten, Crew", "Das One-Piece-Wort schlechthin."],
+          ["おたく", "otaku", "Fan, Nerd", "In Japan eher abwertend, im Westen stolz getragen."],
+          ["ばか", "baka", "Dummkopf", "Das meistgehörte Schimpfwort im Anime."]
+        ]},
+        { "id": "v3", "titel": "Familie & Leute", "woerter": [
+          ["おかあさん", "okāsan", "Mutter", "So spricht man die eigene oder fremde Mutter an."],
+          ["おとうさん", "otōsan", "Vater", "Kinder sagen auch papa."],
+          ["おにいちゃん", "onīchan", "Großer Bruder", "Vertraute Form von onīsan."],
+          ["おねえちゃん", "onēchan", "Große Schwester", "Vertraute Form von onēsan."],
+          ["いもうと", "imōto", "Kleine Schwester", "Für die eigene jüngere Schwester."],
+          ["おとうと", "otōto", "Kleiner Bruder", "Für den eigenen jüngeren Bruder."],
+          ["ともだち", "tomodachi", "Freund, Freundin", "Geschlechtsneutral."],
+          ["ひと", "hito", "Mensch, Person", "Auch in ano hito, „diese Person“."],
+          ["こども", "kodomo", "Kind", "Mehrzahl: kodomotachi."],
+          ["かぞく", "kazoku", "Familie", "Watashi no kazoku: meine Familie."]
+        ]},
+        { "id": "v4", "titel": "Kampf & Abenteuer", "woerter": [
+          ["たたかう", "tatakau", "kämpfen", "Tatakai ist der Kampf."],
+          ["ちから", "chikara", "Kraft", "Auch in Kraft-Ausrufen: chikara ga hoshii!"],
+          ["かたな", "katana", "Schwert", "Das japanische Langschwert."],
+          ["にんじゃ", "ninja", "Ninja", "Naruto lässt grüßen."],
+          ["さむらい", "samurai", "Samurai", "Krieger des alten Japan."],
+          ["ゆうしゃ", "yūsha", "Held, Heldin", "Das Wort aus jedem Isekai."],
+          ["まほう", "mahō", "Magie", "Mahō shōjo: magisches Mädchen."],
+          ["つよい", "tsuyoi", "stark", "Gegenteil: yowai."],
+          ["てき", "teki", "Feind, Gegner", "Auch im Sport."],
+          ["まもる", "mamoru", "beschützen", "„Ich beschütze dich“: mamoru!"]
+        ]},
+        { "id": "v5", "titel": "Gefühle", "woerter": [
+          ["うれしい", "ureshii", "froh, glücklich", "Spontane Freude."],
+          ["かなしい", "kanashii", "traurig", "Gegenteil von ureshii."],
+          ["こわい", "kowai", "unheimlich, Angst haben", "Nicht mit kawaii verwechseln!"],
+          ["すき", "suki", "mögen, gern haben", "Suki desu ist ein Liebesgeständnis."],
+          ["だいすき", "daisuki", "sehr mögen, lieben", "Dai heißt groß: große Zuneigung."],
+          ["きらい", "kirai", "nicht mögen, hassen", "Daikirai: hassen."],
+          ["たのしい", "tanoshii", "lustig, macht Spaß", "Tanoshikatta: das hat Spaß gemacht."],
+          ["さびしい", "sabishii", "einsam", "Auch samishii ausgesprochen."],
+          ["はずかしい", "hazukashii", "peinlich", "Mit rotem Kopf im Anime."],
+          ["おこる", "okoru", "wütend werden", "Okotta: ist wütend."]
+        ]},
+        { "id": "v6", "titel": "Essen", "woerter": [
+          ["ごはん", "gohan", "Reis, Essen", "Heißt beides: Reis und Mahlzeit."],
+          ["おにぎり", "onigiri", "Reisbällchen", "Das Maskottchen dieser App."],
+          ["ラーメン", "rāmen", "Ramen (Nudelsuppe)", "Katakana, weil ursprünglich aus China."],
+          ["すし", "sushi", "Sushi", "Mit o-: osushi, höflich."],
+          ["みず", "mizu", "Wasser", "Omizu kudasai: Wasser, bitte."],
+          ["おちゃ", "ocha", "Tee", "Meist grüner Tee."],
+          ["おいしい", "oishii", "lecker", "Umai ist die lässige Variante."],
+          ["たべもの", "tabemono", "Essen, Lebensmittel", "Von taberu, essen."],
+          ["にく", "niku", "Fleisch", "Yakiniku: gegrilltes Fleisch."],
+          ["さかな", "sakana", "Fisch", "Auch als Beilage zum Trinken."]
+        ]},
+        { "id": "v7", "titel": "Schule & Alltag", "woerter": [
+          ["がっこう", "gakkō", "Schule", "Der Schauplatz der meisten Anime."],
+          ["せいと", "seito", "Schüler, Schülerin", "Gakusei ist der Student."],
+          ["べんきょう", "benkyō", "Lernen, Studium", "Benkyō suru: lernen."],
+          ["しゅくだい", "shukudai", "Hausaufgaben", "Der ewige Feind."],
+          ["ぶかつ", "bukatsu", "Club-Aktivität", "Der Schulclub nach dem Unterricht."],
+          ["いえ", "ie", "Haus, Zuhause", "Uchi ist das eigene Zuhause."],
+          ["へや", "heya", "Zimmer", "Watashi no heya: mein Zimmer."],
+          ["ほん", "hon", "Buch", "Auch in Nihon, Japan: Ursprung der Sonne."],
+          ["でんわ", "denwa", "Telefon", "Denwa suru: anrufen."],
+          ["かばん", "kaban", "Tasche", "Die Schultasche heißt randoseru."]
+        ]},
+        { "id": "v8", "titel": "Zahlen 1 bis 10", "woerter": [
+          ["いち", "ichi", "eins", "Ichiban: Nummer eins, das Beste."],
+          ["に", "ni", "zwei", "Wie das Katakana ニ mit zwei Strichen."],
+          ["さん", "san", "drei", "Nicht mit der Anrede -san verwechseln."],
+          ["よん", "yon", "vier", "Auch shi, das klingt aber wie „Tod“ und wird gemieden."],
+          ["ご", "go", "fünf", "Go wie das Brettspiel."],
+          ["ろく", "roku", "sechs", "Rokudaime: der Sechste."],
+          ["なな", "nana", "sieben", "Auch shichi."],
+          ["はち", "hachi", "acht", "Hachikō, der treue Hund."],
+          ["きゅう", "kyū", "neun", "Auch ku."],
+          ["じゅう", "jū", "zehn", "Jūichi: elf (zehn-eins)."]
+        ]},
+        { "id": "v9", "titel": "Zeit", "woerter": [
+          ["いま", "ima", "jetzt", "Ima desu ka: jetzt?"],
+          ["きょう", "kyō", "heute", "Kyō wa: was heute betrifft."],
+          ["あした", "ashita", "morgen", "Mata ashita: bis morgen."],
+          ["きのう", "kinō", "gestern", "Nicht mit kyō verwechseln."],
+          ["あさ", "asa", "Morgen (Tageszeit)", "Asagohan: Frühstück."],
+          ["よる", "yoru", "Nacht", "Yoru ni: in der Nacht."],
+          ["まいにち", "mainichi", "jeden Tag", "Mai heißt jeder, nichi Tag."],
+          ["じかん", "jikan", "Zeit, Stunde", "Jikan ga nai: keine Zeit."],
+          ["まつ", "matsu", "warten", "Matte! heißt warte!"],
+          ["はやく", "hayaku", "schnell, beeil dich", "Der Klassiker vor dem Schulweg."]
+        ]},
+        { "id": "v10", "titel": "Sätze aus dem Anime", "woerter": [
+          ["がんばって", "ganbatte", "Gib dein Bestes!", "Ganbaru: sich anstrengen."],
+          ["だいじょうぶ", "daijōbu", "alles in Ordnung", "Frage und Antwort zugleich."],
+          ["やった", "yatta", "Geschafft! Juhu!", "Der Jubelruf."],
+          ["すごい", "sugoi", "wow, großartig", "Lässig: sugē."],
+          ["かわいい", "kawaii", "süß, niedlich", "Nicht mit kowai (unheimlich) verwechseln."],
+          ["しかたがない", "shikata ga nai", "Da kann man nichts machen", "Auch shō ga nai."],
+          ["いってきます", "ittekimasu", "Ich gehe los (und komme wieder)", "Beim Verlassen des Hauses."],
+          ["ただいま", "tadaima", "Ich bin wieder da", "Beim Heimkommen."],
+          ["おかえり", "okaeri", "Willkommen zurück", "Die Antwort auf tadaima."],
+          ["よかった", "yokatta", "Zum Glück! Gut so!", "Erleichterung."]
+        ]},
+        { "id": "v11", "titel": "Natur & Welt", "woerter": [
+          ["そら", "sora", "Himmel", "Auch ein beliebter Name."],
+          ["うみ", "umi", "Meer", "Grand Line nicht inbegriffen."],
+          ["やま", "yama", "Berg", "Fuji-san ist der Fuji-Berg."],
+          ["はな", "hana", "Blume", "Hana heißt auch Nase, Betonung entscheidet."],
+          ["さくら", "sakura", "Kirschblüte", "Hanami: das Kirschblütenfest."],
+          ["つき", "tsuki", "Mond", "Tsuki no hikari: Mondlicht."],
+          ["ほし", "hoshi", "Stern", "Hoshi ga kirei: die Sterne sind schön."],
+          ["ひ", "hi", "Sonne, Tag, Feuer", "Je nach Kanji Sonne (日) oder Feuer (火)."],
+          ["あめ", "ame", "Regen", "Mit anderer Betonung auch Bonbon."],
+          ["かぜ", "kaze", "Wind", "Kamikaze: Götterwind."]
+        ]},
+        { "id": "v12", "titel": "Verben", "woerter": [
+          ["いく", "iku", "gehen", "Ikuzo! heißt: Los geht’s!"],
+          ["くる", "kuru", "kommen", "Kite: komm her."],
+          ["みる", "miru", "sehen, schauen", "Mite: schau mal."],
+          ["たべる", "taberu", "essen", "Tabetai: ich will essen."],
+          ["のむ", "nomu", "trinken", "Nomimono: Getränk."],
+          ["はなす", "hanasu", "sprechen", "Hanashi: Geschichte, Gespräch."],
+          ["きく", "kiku", "hören, fragen", "Kiite: hör zu."],
+          ["わかる", "wakaru", "verstehen", "Wakatta: verstanden."],
+          ["しる", "shiru", "wissen, kennen", "Shiranai: weiß ich nicht."],
+          ["ある", "aru", "da sein, haben (Dinge)", "Für Lebewesen sagt man iru."]
+        ]},
+        { "id": "v13", "titel": "Eigenschaften", "woerter": [
+          ["おおきい", "ōkii", "groß", "Ōkii inu: großer Hund."],
+          ["ちいさい", "chiisai", "klein", "Chibi kommt von einem anderen Wort, passt aber."],
+          ["あたらしい", "atarashii", "neu", "Atarashii sekai: neue Welt."],
+          ["ふるい", "furui", "alt (Dinge)", "Für Menschen sagt man toshiyori."],
+          ["たかい", "takai", "hoch, teuer", "Beides zugleich."],
+          ["やすい", "yasui", "billig", "Nicht mit yasumi (Pause) verwechseln."],
+          ["はやい", "hayai", "schnell, früh", "Hayaku ist die Adverbform."],
+          ["おそい", "osoi", "langsam, spät", "Osoi yo: du bist spät dran."],
+          ["あつい", "atsui", "heiß", "Atsui!: heiß!"],
+          ["さむい", "samui", "kalt (Wetter)", "Kaltes Wasser ist tsumetai."]
+        ]},
+        { "id": "v14", "titel": "Ich, du, das", "woerter": [
+          ["わたし", "watashi", "ich (neutral)", "Höflich und für alle."],
+          ["ぼく", "boku", "ich (Junge, bescheiden)", "Typisch für sanfte Hauptfiguren."],
+          ["おれ", "ore", "ich (Mann, lässig)", "Typisch für Shōnen-Helden."],
+          ["あなた", "anata", "du, Sie", "Wird oft weggelassen, man nutzt den Namen."],
+          ["きみ", "kimi", "du (vertraut)", "Kimi no na wa: Dein Name."],
+          ["これ", "kore", "das hier", "Nah beim Sprecher."],
+          ["それ", "sore", "das da", "Nah beim Zuhörer."],
+          ["あれ", "are", "das dort", "Weit weg von beiden."],
+          ["なに", "nani", "was", "Nani?! ist der Meme-Klassiker."],
+          ["だれ", "dare", "wer", "Dare desu ka: wer ist das?"]
+        ]},
+        { "id": "v15", "titel": "Höflich & Herzlich", "woerter": [
+          ["どうぞ", "dōzo", "bitte (hier, nimm)", "Beim Anbieten."],
+          ["どうも", "dōmo", "danke, hallo (lässig)", "Dōmo arigatō: vielen Dank."],
+          ["おねがいします", "onegaishimasu", "bitte (ich bitte darum)", "Bei Bitten und Bestellungen."],
+          ["よろしく", "yoroshiku", "Freut mich, auf gute Zusammenarbeit", "Bei jeder Vorstellung."],
+          ["じゃね", "ja ne", "Bis dann", "Lässiger Abschied unter Freunden."],
+          ["またね", "mata ne", "Bis später", "Mata heißt wieder."],
+          ["いってらっしゃい", "itterasshai", "Komm gut wieder", "Antwort auf ittekimasu."],
+          ["おつかれさま", "otsukaresama", "Danke für die Mühe", "Nach Arbeit oder Training."],
+          ["おめでとう", "omedetō", "Glückwunsch", "Tanjōbi omedetō: alles Gute zum Geburtstag."],
+          ["きをつけて", "ki o tsukete", "Pass auf dich auf", "Beim Abschied."]
+        ]}
+      ]
+    }
+  ]
+}
