@@ -29,6 +29,7 @@ In Claude Code startet `.claude/launch.json` denselben Server für die Browser-V
 | `css/style.css` | Gestaltung (Manga-Look) |
 | `css/fonts.css`, `fonts/` | Dela Gothic One und Rubik, lokal eingebunden (SIL Open Font License) |
 | `assets/maskottchen.jpg` | Onigiri-Maskottchen (Higgsfield), Original mit 512 × 512 Pixeln |
+| `assets/maskottchen-2160.webp` | dasselbe Maskottchen („entschlossen“) in 2160 × 2160, per Higgsfield-Upscale aus `stimmung/entschlossen.webp`, Transparenz vom Original übernommen; Quelle für Icon und Splash |
 | `assets/icon-1024.png`, `icon-512.png`, `icon-180.png` | App-Icons, erzeugt mit `python3 scripts/app_icon.py` aus dem Maskottchen (rote Fläche, gelbe Scheibe); das 512er ist auf 256 Farben reduziert |
 | `assets/splash-2732.png`, `splash-2732-dark.png` | Startbildschirm der iPhone-App, hell und dunkel, Motiv mittig innerhalb von 1100 px (sichtbarer Streifen auf schmalen iPhones) |
 | `assets/favicon.ico`, `assets/favicon-32.png` | Favicons, aus `icon-1024.png` erzeugt (gleiches Skript) |

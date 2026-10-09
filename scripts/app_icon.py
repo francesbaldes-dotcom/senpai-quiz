@@ -83,8 +83,11 @@ def speedlines(bild: Image.Image, mitte, innen: int, aussen: int, farbe, alpha: 
 
 
 def maskottchen(name: str, hoehe: int) -> Image.Image:
-    """Freigestelltes Maskottchen auf Zielhöhe, auf den sichtbaren Bereich beschnitten."""
-    bild = Image.open(ASSETS / 'stimmung' / f'{name}.webp').convert('RGBA')
+    """Freigestelltes Maskottchen auf Zielhöhe, auf den sichtbaren Bereich beschnitten.
+    Für „entschlossen“ liegt eine 2160er-Fassung bereit (Higgsfield-Upscale, Alpha vom Original)."""
+    gross = ASSETS / 'maskottchen-2160.webp'
+    quelle = gross if name == 'entschlossen' and gross.exists() else ASSETS / 'stimmung' / f'{name}.webp'
+    bild = Image.open(quelle).convert('RGBA')
     bild = bild.crop(bild.getbbox())
     faktor = hoehe / bild.height
     return bild.resize((round(bild.width * faktor), hoehe), Image.LANCZOS)

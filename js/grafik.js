@@ -229,12 +229,15 @@ export const RANG_EMBLEM_NAMEN = Object.keys(RANG_EMBLEME);
 
 const STERN = 'M0-7l2.1 4.5 4.9.5-3.7 3.3 1 4.9L0 3.8l-4.3 2.4 1-4.9-3.7-3.3 4.9-.5z';
 
-// Stationsknoten 64×80: drei Sterne oben, darunter der Kreis.
+// Stationsknoten 64×80: bis zu drei Sterne oben, darunter der Kreis.
 // zustand: 'offen' (spielbar bzw. bestanden), 'gesperrt', 'aktuell' (nächste Station)
-export function stationsKnoten(sterne = 0, zustand = 'offen', breite = 64) {
+// max: wie viele Sterne es an dieser Station überhaupt gibt (2 in der Zweiten Reise), mittig gesetzt
+export function stationsKnoten(sterne = 0, zustand = 'offen', breite = 64, max = 3) {
   const gesperrt = zustand === 'gesperrt';
   const aktuell = zustand === 'aktuell';
-  const sterneSvg = [14, 32, 50].map((x, i) => `<path d="${STERN}" transform="translate(${x} 13) scale(1.15)" fill="${i < sterne ? YELLOW : gesperrt ? LIGHT : WHITE}" ${i < sterne ? '' : `stroke="${gesperrt ? '#B9B3A3' : INK}"`} stroke-width="2.4"/>`).join('');
+  const anzahl = Math.max(1, Math.min(3, max));
+  const positionen = anzahl === 3 ? [14, 32, 50] : anzahl === 2 ? [23, 41] : [32];
+  const sterneSvg = positionen.map((x, i) => `<path d="${STERN}" transform="translate(${x} 13) scale(1.15)" fill="${i < sterne ? YELLOW : gesperrt ? LIGHT : WHITE}" ${i < sterne ? '' : `stroke="${gesperrt ? '#B9B3A3' : INK}"`} stroke-width="2.4"/>`).join('');
   let innen = '';
   if (gesperrt) innen = `<rect x="23" y="49" width="18" height="13" rx="3" fill="${WHITE}" stroke-width="2.6"/><path d="M27 49v-4a5 5 0 0 1 10 0v4" stroke-width="2.6"/>`;
   else if (aktuell) innen = `<path d="M26 42v22l16-11z" fill="${YELLOW}" stroke="${INK}"/>`;
