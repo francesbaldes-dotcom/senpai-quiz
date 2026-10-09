@@ -20,6 +20,7 @@ In Claude Code startet `.claude/launch.json` denselben Server für die Browser-V
 |---|---|
 | `index.html` | Einstieg |
 | `js/app.js` | Spiellogik und alle Bildschirme |
+| `js/speicher.js` | Speichern des Profils: im Browser `localStorage`, in der Capacitor-App das Plugin Preferences (dieser native Pfad ist noch ungetestet, weil es noch kein Capacitor-Projekt gibt) |
 | `js/online.js` | Supabase-Client für Accounts und Duelle |
 | `vendor/` | Supabase-JS (2.45.4), lokal eingebunden |
 | `css/style.css` | Gestaltung (Manga-Look) |

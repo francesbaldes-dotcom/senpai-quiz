@@ -2,6 +2,7 @@
 
 import { belohnungsvideo, werbungOffen } from './werbung.js';
 import * as online from './online.js';
+import { speicherBereit, ladeProfil, speichereProfil } from './speicher.js';
 
 const app = document.getElementById('app');
 
@@ -10,7 +11,6 @@ const app = document.getElementById('app');
 const FRAGEZEIT = 15;
 const BLITZZEIT = 60;
 const RUNDENLAENGE = 10;
-const SPEICHER = 'senpai-quiz-v1';
 const VERSION = '0.1.0';
 const MELDE_GRUENDE = [
   ['antwort_falsch', 'Antwort ist falsch'],
@@ -109,7 +109,7 @@ const PROFIL_START = {
   gespielteKategorien: [],
 };
 
-let profil = ladeProfil();
+let profil = structuredClone(PROFIL_START); // wird in init() aus dem Speicher geladen
 
 const ui = {
   screen: 'start',
@@ -140,22 +140,8 @@ let timerId = null;
 
 // ---------- Hilfsfunktionen ----------
 
-function ladeProfil() {
-  const start = structuredClone(PROFIL_START);
-  try {
-    const gespeichert = JSON.parse(localStorage.getItem(SPEICHER));
-    return gespeichert ? { ...start, ...gespeichert } : start;
-  } catch {
-    return start;
-  }
-}
-
 function speichern() {
-  try {
-    localStorage.setItem(SPEICHER, JSON.stringify(profil));
-  } catch {
-    // Speichern nicht möglich (z. B. privates Fenster) – Spiel läuft trotzdem.
-  }
+  speichereProfil(profil);
 }
 
 function esc(text) {
@@ -1909,11 +1895,12 @@ function render() {
 
 async function init() {
   try {
-    const antwort = await fetch('data/fragen.json');
+    const [antwort] = await Promise.all([fetch('data/fragen.json'), speicherBereit()]);
     const daten = await antwort.json();
     FRAGEN = daten.fragen;
     KATEGORIEN = daten.kategorien;
     SCHWIERIGKEIT = daten.schwierigkeiten;
+    profil = ladeProfil(PROFIL_START);
     // Stimmungsbilder vorladen, damit beim Wechsel nichts flackert
     STIMMUNGEN.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });
     // Einladungslink? (…?einladung=CODE)
