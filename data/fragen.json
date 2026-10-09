@@ -13091,10 +13091,10 @@
    "type": "multiple_choice",
    "question": "Welchen Grad hat Satoru Gojo als Jujuzist?",
    "answers": [
-    "Sondergrad",
-    "Grad 1",
-    "Grad 2",
-    "Grad 4"
+    "Sonderrang (Special Grade)",
+    "Rang 1",
+    "Rang 2",
+    "Rang 4"
    ],
    "correct": 0
   },
@@ -13173,7 +13173,7 @@
    "difficulty": 3,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Welcher Teufelsjäger ist der Hai-Hybrid, der Chainsaw Man verehrt?",
+   "question": "Welcher Teufelsjäger ist der Hai-Dämon (Shark Fiend), der Chainsaw Man verehrt?",
    "answers": [
     "Beam",
     "Angel Devil",
@@ -13441,7 +13441,7 @@
    "type": "multiple_choice",
    "question": "Wer ist Noel Noa?",
    "answers": [
-    "Ein französischer Weltstar, der in Blue Lock trainiert",
+    "Ein französischer Weltstar, der in der Neo Egoist League die deutsche Mannschaft trainiert",
     "Isagis Vater",
     "Der Torwart Japans",
     "Ein Spielervermittler"
@@ -13651,7 +13651,7 @@
    "type": "multiple_choice",
    "question": "Auf welcher Insel wuchs Gon auf?",
    "answers": [
-    "Walfischinsel",
+    "Walinsel (Whale Island)",
     "Dawn Island",
     "Jeju",
     "Paradis"

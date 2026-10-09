@@ -428,7 +428,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-334` *Auswahl* – Welche Haarfarbe hat Emma?  
   **Orange** · Schwarz · Weiß · Blond
 - `e-335` *Auswahl* – Auf welcher Insel wuchs Gon auf?  
-  **Walfischinsel** · Dawn Island · Jeju · Paradis
+  **Walinsel (Whale Island)** · Dawn Island · Jeju · Paradis
 
 ### Klassiker & Kult
 
@@ -936,7 +936,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-386` *Auswahl* – Wer trainiert Karasuno, der Enkel des legendären Trainers Ukai?  
   **Keishin Ukai** · Ittetsu Takeda · Nekomata · Washijo
 - `f-387` *Auswahl* – Wer ist Noel Noa?  
-  **Ein französischer Weltstar, der in Blue Lock trainiert** · Isagis Vater · Der Torwart Japans · Ein Spielervermittler
+  **Ein französischer Weltstar, der in der Neo Egoist League die deutsche Mannschaft trainiert** · Isagis Vater · Der Torwart Japans · Ein Spielervermittler
 - `f-397` *Auswahl* – Was ist Uryu Ishida?  
   **Ein Quincy** · Ein Shinigami · Ein Hollow · Ein Fullbringer
 
@@ -1823,10 +1823,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-226` *Auswahl* – Wer ist der Oberste Mond 2 unter Muzans Dämonen?  
   **Doma** · Akaza · Gyutaro · Kokushibo
 - `o-227` *Auswahl* – Welchen Grad hat Satoru Gojo als Jujuzist?  
-  **Sondergrad** · Grad 1 · Grad 2 · Grad 4
+  **Sonderrang (Special Grade)** · Rang 1 · Rang 2 · Rang 4
 - `o-228` *Auswahl* – Wer ist Overhaul?  
   **Der Anführer der Yakuza-Gruppe Shie Hassaikai** · Ein Lehrer der U.A. High · All Mights Bruder · Ein Pro-Held der Nummer drei
-- `o-229` *Auswahl* – Welcher Teufelsjäger ist der Hai-Hybrid, der Chainsaw Man verehrt?  
+- `o-229` *Auswahl* – Welcher Teufelsjäger ist der Hai-Dämon (Shark Fiend), der Chainsaw Man verehrt?  
   **Beam** · Angel Devil · Galgali · Kobeni
 - `o-235` *Auswahl* – Wer zeichnet die Manga-Fassung von „One-Punch Man“?  
   **Yusuke Murata** · ONE · Boichi · Takehiko Inoue
