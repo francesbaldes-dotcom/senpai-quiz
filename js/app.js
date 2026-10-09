@@ -947,6 +947,7 @@ function startScreen() {
     <div class="held karte">
       <div class="speedlines"></div>
       <div class="logo"><span class="senpai">SENPAI</span><span class="quiz">QUIZ</span></div>
+      <span class="fragen-zahl">${zahl(FRAGEN.length)} verschiedene Fragen</span>
       ${maskottchen()}
       <div class="sprechblase">${erledigt ? 'Gut gemacht!' : 'Bereit, Senpai?'}</div>
     </div>
