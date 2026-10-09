@@ -831,6 +831,10 @@ const aktionen = {
 app.addEventListener('click', (e) => {
   const el = e.target.closest('[data-aktion]');
   if (!el || el.disabled) return;
+  // Formulare lösen ihre Aktion nur über submit aus. Sonst würde schon ein Tipp
+  // ins Eingabefeld die Aktion starten, neu rendern und auf dem iPhone die
+  // Tastatur verhindern.
+  if (el.tagName === 'FORM') return;
   aktionen[el.dataset.aktion]?.(el.dataset, e);
 });
 
