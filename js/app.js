@@ -117,6 +117,7 @@ const ui = {
   runde: null,
   ergebnis: null,
   melden: null, // offener „Frage melden“-Dialog: { grund, text, fehler, sendet }
+  dialog: null, // offene Rückfrage von frage(): { titel, text, ja, nein, gefaehrlich, stimmung, loese }
   hinweis: null, // Meldung nach dem Teilen: { text, fehler }
   online: {
     profil: undefined, // undefined = noch unbekannt, null = kein Account
@@ -582,6 +583,25 @@ async function mitPausierterUhr(aufgabe) {
   }
 }
 
+// Rückfrage als eigener Dialog statt der Browser-Rückfrage. Löst mit true (Ja)
+// oder false (Nein, Escape, Tipp auf den Hintergrund) auf. Ein laufender
+// Fragen-Timer läuft währenddessen weiter, das ist gewollt.
+function frage({ titel, text = '', ja = 'Ja', nein = 'Abbrechen', gefaehrlich = false, stimmung = 'nachdenklich' }) {
+  if (ui.dialog) return Promise.resolve(false);
+  return new Promise((loese) => {
+    ui.dialog = { titel, text, ja, nein, gefaehrlich, stimmung, loese };
+    render();
+  });
+}
+
+function schliesseDialog(antwort) {
+  const d = ui.dialog;
+  if (!d) return;
+  ui.dialog = null;
+  render();
+  d.loese(antwort);
+}
+
 // ---------- Aktionen ----------
 
 const aktionen = {
@@ -663,12 +683,26 @@ const aktionen = {
     }
     render();
   },
-  abbrechen() {
-    if (ui.runde?.modus === 'duell') {
-      if (!confirm('Runde abbrechen? Fragen ohne Antwort zählen als falsch.')) return;
-      return duellRundeFertig(ui.runde);
+  dialogJa() {
+    schliesseDialog(true);
+  },
+  dialogNein() {
+    schliesseDialog(false);
+  },
+  dialogHintergrund(d, e) {
+    // nur ein Tipp neben die Karte schließt den Dialog
+    if (e.target.classList.contains('dialog-hintergrund')) schliesseDialog(false);
+  },
+  async abbrechen() {
+    const r = ui.runde;
+    if (!r || ui.dialog) return;
+    if (r.modus === 'duell') {
+      const ok = await frage({ titel: 'Runde abbrechen?', text: 'Fragen ohne Antwort zählen als falsch.', ja: 'Abbrechen', nein: 'Weiterspielen', stimmung: 'panisch' });
+      if (!ok || ui.runde !== r) return;
+      return duellRundeFertig(r);
     }
-    if (!confirm('Runde wirklich beenden? Der Fortschritt dieser Runde geht verloren.')) return;
+    const ok = await frage({ titel: 'Runde beenden?', text: 'Der Fortschritt dieser Runde geht verloren.', ja: 'Beenden', nein: 'Weiterspielen', stimmung: 'panisch' });
+    if (!ok || ui.runde !== r) return;
     stoppeTimer();
     ui.melden = null;
     ui.runde = null;
@@ -799,8 +833,9 @@ const aktionen = {
     if (text) ui.hinweis = { text };
     render();
   },
-  zuruecksetzen() {
-    if (!confirm('Wirklich alle Punkte, Statistiken und Abzeichen löschen?')) return;
+  async zuruecksetzen() {
+    const ok = await frage({ titel: 'Fortschritt zurücksetzen?', text: 'Alle Punkte, Statistiken und Abzeichen werden gelöscht.', ja: 'Löschen', gefaehrlich: true });
+    if (!ok) return;
     profil = structuredClone(PROFIL_START);
     speichern();
     render();
@@ -810,7 +845,7 @@ const aktionen = {
 app.addEventListener('click', (e) => {
   const el = e.target.closest('[data-aktion]');
   if (!el || el.disabled) return;
-  aktionen[el.dataset.aktion]?.(el.dataset);
+  aktionen[el.dataset.aktion]?.(el.dataset, e);
 });
 
 app.addEventListener('submit', (e) => {
@@ -841,7 +876,15 @@ app.addEventListener('input', (e) => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if (ui.screen !== 'frage' || !ui.runde || werbungOffen()) return;
+  if (werbungOffen()) return;
+  if (ui.dialog) {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      aktionen.dialogNein();
+    }
+    return;
+  }
+  if (ui.screen !== 'frage' || !ui.runde) return;
   if (ui.melden) {
     if (e.key === 'Escape') aktionen.meldeAbbrechen();
     return;
@@ -1149,6 +1192,24 @@ function meldeDialog() {
   </div>`;
 }
 
+function frageDialog() {
+  const d = ui.dialog;
+  if (!d) return '';
+  return `<div class="dialog-hintergrund" data-aktion="dialogHintergrund">
+    <div class="karte dialog dialog-frage" role="dialog" aria-modal="true" aria-labelledby="dialog-titel" ${d.text ? 'aria-describedby="dialog-text"' : ''}>
+      <div class="dialog-kopf">
+        ${maskottchen(d.stimmung)}
+        <h2 id="dialog-titel">${esc(d.titel)}</h2>
+      </div>
+      ${d.text ? `<p id="dialog-text">${esc(d.text)}</p>` : ''}
+      <div class="zweier">
+        <button class="knopf" id="dialog-nein" data-aktion="dialogNein">${esc(d.nein)}</button>
+        <button class="knopf ${d.gefaehrlich ? 'knopf-rot' : ''}" data-aktion="dialogJa">${esc(d.ja)}</button>
+      </div>
+    </div>
+  </div>`;
+}
+
 function frageScreen() {
   const r = ui.runde;
   const a = r.aktuell;
@@ -1177,7 +1238,6 @@ function frageScreen() {
     </div>
     ${antwortenBlock(a)}
     <div class="unten">${unterBlock(r)}</div>
-    ${meldeDialog()}
   </section>`;
 }
 
@@ -1557,9 +1617,11 @@ Object.assign(aktionen, {
     if (runde) neueRunde('duell', { duellId: d.id, fragenIds: runde.fragen });
   },
   async aufgeben() {
-    if (!confirm('Willst du dieses Duell wirklich aufgeben? Dein Gegner gewinnt dann.')) return;
+    const duellId = ui.online.duellId;
+    const ok = await frage({ titel: 'Duell aufgeben?', text: 'Dein Gegner gewinnt dann.', ja: 'Aufgeben', gefaehrlich: true, stimmung: 'traurig' });
+    if (!ok || ui.online.duellId !== duellId) return;
     try {
-      await online.aufgeben(ui.online.duellId);
+      await online.aufgeben(duellId);
     } catch (fehler) {
       ui.online.fehler = fehler.message;
     }
@@ -1587,7 +1649,8 @@ Object.assign(aktionen, {
     aktionen.nav({ ziel: 'duelle' });
   },
   async kontoLoeschen() {
-    if (!confirm('Account wirklich löschen? Dein Spielername und alle deine Duelle werden endgültig gelöscht.')) return;
+    const ok = await frage({ titel: 'Account löschen?', text: 'Dein Spielername und alle deine Duelle werden endgültig gelöscht.', ja: 'Löschen', gefaehrlich: true, stimmung: 'traurig' });
+    if (!ok || !ui.online.profil) return;
     try {
       await online.kontoLoeschen();
       ui.online.profil = null;
@@ -1829,10 +1892,15 @@ const SCREENS = {
 let letzterScreen = null;
 
 function render() {
-  app.innerHTML = SCREENS[ui.screen]();
+  // Dialoge liegen als Overlay über dem Bildschirm
+  app.innerHTML = SCREENS[ui.screen]() + meldeDialog() + frageDialog();
   if (ui.screen !== letzterScreen) {
     window.scrollTo(0, 0);
     letzterScreen = ui.screen;
+  }
+  if (ui.dialog) {
+    const karte = app.querySelector('.dialog-frage');
+    if (!karte.contains(document.activeElement)) document.getElementById('dialog-nein').focus();
   }
   steuerePolling();
 }

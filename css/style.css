@@ -432,7 +432,7 @@ button { font: inherit; color: inherit; }
 .melde-link:hover, .melde-link:focus-visible { opacity: 1; }
 .melde-dank { position: relative; margin-top: 4px; font-size: 12px; font-weight: 700; opacity: .9; }
 
-/* ---------- Dialog (Frage melden) ---------- */
+/* ---------- Dialoge (Rückfragen, Frage melden) ---------- */
 
 .dialog-hintergrund {
   position: fixed;
@@ -469,6 +469,10 @@ button { font: inherit; color: inherit; }
 .melde-feld textarea:focus { outline: 3px solid var(--blue); outline-offset: 2px; }
 .melde-feld .zaehler { align-self: flex-end; font-size: 12px; color: #4A463F; }
 .dialog .fehler { font-size: 13px; }
+.dialog-frage { gap: 14px; }
+.dialog-kopf { display: flex; align-items: center; gap: 12px; }
+.dialog-kopf .maskottchen { width: 64px; height: 64px; flex-shrink: 0; }
+.dialog-frage p { margin: 0; font-size: 15px; font-weight: 700; line-height: 1.45; }
 
 .loesung { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; }
 .loesung ol { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 4px; font-weight: 900; }
