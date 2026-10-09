@@ -285,6 +285,8 @@ function datumDeutsch(iso) {
 
 // Adresse der App, z. B. für Einladungslinks und geteilte Ergebnisse
 function appLink() {
+  // In der Capacitor-App wäre location.origin „capacitor://localhost“; scripts/prepare-www.mjs setzt dort die Web-Adresse.
+  if (window.SENPAI_APP_URL) return window.SENPAI_APP_URL;
   return `${location.origin}${location.pathname}`;
 }
 

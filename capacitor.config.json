@@ -1,0 +1,12 @@
+{
+  "appId": "de.senpaiquiz.app",
+  "appName": "Senpai Quiz",
+  "webDir": "www",
+  "backgroundColor": "#FBF8F1",
+  "ios": {
+    "contentInset": "never",
+    "allowsLinkPreview": false,
+    "preferredContentMode": "mobile",
+    "backgroundColor": "#FBF8F1"
+  }
+}

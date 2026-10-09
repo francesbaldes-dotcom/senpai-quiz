@@ -1,2 +1,6 @@
 .DS_Store
 node_modules/
+
+# Node / Capacitor
+# www/ wird von "npm run www" aus den Web-Dateien im Repo-Stamm erzeugt
+www/

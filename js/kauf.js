@@ -19,7 +19,10 @@ const ATTRAPPE_DAUER = 1.5; // Sekunden „Verbindung zum Store“
 // Die Attrappe läuft nur bei lokaler Entwicklung. Auf der veröffentlichten
 // Web-Version (GitHub Pages) gibt es keinen Store, dort ist das Dojo nur
 // über die Probelektionen nutzbar; gekauft wird in der iPhone-App.
-const LOKAL = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+// Achtung: In der Capacitor-App heißt der Host ebenfalls „localhost“ (capacitor://localhost).
+// Dort darf die Attrappe nie laufen, sonst wäre das Dojo ohne Kauf offen.
+const NATIV = !!window.Capacitor?.isNativePlatform?.();
+const LOKAL = !NATIV && /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
 
 let offen = false;
 

@@ -1,0 +1,20 @@
+{
+  "name": "senpai-quiz",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Senpai Quiz – native iOS-App (Capacitor) um die Web-App im Repo-Stamm",
+  "scripts": {
+    "www": "node scripts/prepare-www.mjs",
+    "sync:ios": "npm run www && cap sync ios",
+    "open:ios": "cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/core": "^8.5.2",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/ios": "^8.5.2",
+    "@capacitor/preferences": "^8.0.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.2"
+  }
+}

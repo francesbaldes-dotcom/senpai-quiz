@@ -93,6 +93,22 @@ Kauf-Funktion, eigener Tab „Dojo“; auf der Startseite zeigt eine Kachel fäl
 - **Kauf:** Gratis sind Hiragana Reihe A und die Vokabel-Lektion „Erste Worte“; alle anderen Lektionen zeigen ein Schloss und führen zum Kaufbildschirm. Zwei Angebote in `js/kauf.js`: Monatsabo (`de.senpaiquiz.dojo.monat`, 2,99 €) und Einmalkauf (`de.senpaiquiz.dojo.lebenslang`, 19,99 €). Nur bei lokaler Entwicklung (localhost) läuft eine Attrappe („App Store · Platzhalter“), die nach 1,5 s einen Kaufen-Knopf freigibt; auf GitHub Pages sind die Angebote ausgegraut mit dem Hinweis, dass der Kauf nur in der iPhone-App geht. der Kauf landet in `profil.dojo.frei = { art, bis, seit }` (Abo-Attrappe: 30 Tage). In der iPhone-App muss hier Apples In-App-Kauf hinein, am einfachsten RevenueCat (`@revenuecat/purchases-capacitor`), das auch „Käufe wiederherstellen“ liefert. Preise und Produkt-IDs in App Store Connect anlegen. Abo-Regeln stehen in `nutzungsbedingungen.html` (Abschnitt 7, Anker `#dojo`, vom Kaufbildschirm verlinkt), die Datenverarbeitung in `datenschutz.html` (Abschnitt 9).
 - **Server:** Spalte `profile.dojo_bis` (Migration `dojo_freischaltung`) als zweite Quelle der Freischaltung; die App liest sie mit dem Profil. Geschrieben wird sie nicht aus der App, sondern später vom Store-Webhook (RevenueCat → Edge Function mit Service-Rolle). Da Accounts an das Gerät gebunden sind, geht der Lernfortschritt beim Löschen der App verloren; der Kauf lässt sich über Apple wiederherstellen.
 
+## iPhone-App (Capacitor)
+
+Der Ordner `ios/` enthält ein Xcode-Projekt, das die Web-App als native iOS-App verpackt (Capacitor 8 mit Swift Package Manager, kein CocoaPods). Die Web-Dateien bleiben im Repo-Stamm, GitHub Pages läuft weiter.
+
+Voraussetzungen: Mac mit Xcode, Node.js 20 oder neuer, für den Store eine Mitgliedschaft im Apple Developer Program.
+
+1. `npm install` – lädt Capacitor und die Plugins Preferences (Spielstand, sonst könnte iOS den WebView-Speicher löschen) und Haptics nach `node_modules/`.
+2. `npm run sync:ios` – kopiert die Web-Dateien nach `www/` (`scripts/prepare-www.mjs`), passt die Kopie an und überträgt sie ins Xcode-Projekt. Anpassungen: `window.SENPAI_APP_URL` auf die Web-Adresse, damit Teilen-Links nicht auf `capacitor://localhost` zeigen; Rechtstexte öffnen im selben Fenster (ihr Link „Zur App“ führt zurück); Prüfung, dass die Kauf-Attrappe in `js/kauf.js` nativ gesperrt ist. Nach jeder Änderung an den Web-Dateien wiederholen.
+3. `npm run open:ios` – öffnet das Projekt in Xcode. Unter „Signing & Capabilities“ das eigene Team wählen. Bundle-ID: `de.senpaiquiz.app` (änderbar in `capacitor.config.json` und in Xcode).
+4. Zum Testen ein iPhone anschließen oder einen Simulator wählen und auf „Run“ drücken.
+5. Für den Upload: Product → Archive, dann „Distribute App“ → App Store Connect.
+
+Eingerichtet: App-Icon 1024 px (`assets/icon-1024.png`), Startbildschirm hell und dunkel (`assets/splash-2732*.png`), nur Hochformat, Sprache Deutsch, Export-Compliance (keine eigene Verschlüsselung), Privacy-Manifest `ios/App/App/PrivacyInfo.xcprivacy` (UserDefaults-Zugriff des Preferences-Plugins, Grund CA92.1).
+
+Noch offen für den Store: In-App-Kauf des Dojos (RevenueCat, siehe „Senpai Dojo“), AdMob für die Belohnungsvideos, Push-Benachrichtigungen für Duelle, Store-Texte und Screenshots.
+
 ## Belohnungswerbung
 
 Werbevideos gibt es nur freiwillig gegen eine Belohnung (`js/werbung.js`). Im Browser läuft eine Attrappe mit 5-Sekunden-Countdown; in der iPhone-App kommt dort AdMob hinein (`@capacitor-community/admob`, wie bei Resist the Cute).
