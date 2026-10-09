@@ -1097,20 +1097,25 @@ export const dojoAktionen = aktionen;
 
 const JP = (text) => `<span class="jp">${app.esc(text)}</span>`;
 
-// Schmale Kachel auf der Startseite (führt zum Dojo-Tab)
-export function dojoKachelStart() {
+// Große Karte auf der Startseite (führt zum Dojo-Tab)
+export function dojoKarteStart() {
   if (!DATEN) return '';
   const frei = dojoFrei();
   const g = guertel();
   const faellig = faelligeKarten().length;
   let text;
-  if (!frei && !g.n && !Object.keys(profil().dojo.karten).length) text = 'Probe gratis';
-  else if (faellig) text = `${faellig} fällig`;
-  else if (heuteZahl() < profil().dojo.ziel) text = `Tagesziel ${heuteZahl()} / ${profil().dojo.ziel}`;
-  else text = 'Tagesziel geschafft';
-  return `<button class="fortschritt-kachel dojo" data-aktion="nav" data-ziel="dojo">
-    <span class="symbol">${frei ? app.ICON.torii : app.ICON.schloss}</span>
-    <span><b>Dojo</b><small>${app.esc(text)}</small></span>
+  if (!frei && !g.n && !Object.keys(profil().dojo.karten).length) text = 'Hiragana, Katakana, 150 Anime-Vokabeln. Probelektionen gratis.';
+  else if (faellig) text = `${faellig} ${faellig === 1 ? 'Karte' : 'Karten'} zum Wiederholen fällig`;
+  else if (heuteZahl() < profil().dojo.ziel) text = `Tagesziel ${heuteZahl()} / ${profil().dojo.ziel}${empfohleneLektion() ? ` · weiter mit ${empfohleneLektion().titel}` : ''}`;
+  else text = `Tagesziel geschafft · ${g.name}er Gürtel`;
+  return `<button class="karte startkarte dojo" data-aktion="nav" data-ziel="dojo">
+    ${guertelBild(g)}
+    <span class="text">
+      <span class="label">Senpai Dojo</span>
+      <span class="display">Japanisch lernen</span>
+      <small>${app.esc(text)}</small>
+    </span>
+    <span class="pfeil ${frei ? '' : 'schloss'}">${frei ? app.ICON.weiter : app.ICON.schloss}</span>
   </button>`;
 }
 

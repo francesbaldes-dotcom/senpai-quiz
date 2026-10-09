@@ -6,7 +6,7 @@ import { speicherBereit, ladeProfil, speichereProfil } from './speicher.js';
 import { kategorieIcon, abzeichenEmblem, rangEmblem, stationsKnoten, bossKnoten } from './grafik.js';
 import { tagesquizBild, bossBild, kannBildTeilen } from './teilen-bild.js';
 import { spielernameErlaubt, SPIELERNAME_VERBOTEN } from './spielername.js';
-import { ladeDojo, dojoEinrichten, dojoAktionen, dojoKachelStart, DOJO_SCREENS } from './dojo.js';
+import { ladeDojo, dojoEinrichten, dojoAktionen, dojoKarteStart, DOJO_SCREENS } from './dojo.js';
 
 const app = document.getElementById('app');
 
@@ -1356,14 +1356,12 @@ function startScreen() {
     </div>
     ${hinweisBlock()}
 
-    <div class="fortschritt-zeile">
-      ${reiseKachelStart()}
-      ${dojoKachelStart()}
-    </div>
-
     <button class="knopf knopf-rot" data-aktion="nav" data-ziel="kategorie">${ICON.play} Klassisch spielen</button>
 
-    <div class="modi">
+    ${dojoKarteStart()}
+    ${reiseKarteStart()}
+
+    <div class="modi modi-klein">
       <button class="knopf" data-aktion="modus" data-modus="survival">${ICON.herzRosa}<span><b>Survival</b><small>3 Leben${profil.highscore.survival ? ` · Rekord ${profil.highscore.survival}` : ''}</small></span></button>
       <button class="knopf" data-aktion="modus" data-modus="blitz">${ICON.blitz}<span><b>Blitz</b><small>60 Sekunden${profil.highscore.blitz ? ` · Rekord ${profil.highscore.blitz}` : ''}</small></span></button>
     </div>
@@ -1755,17 +1753,23 @@ function ergebnisScreen() {
 
 // ---------- Heldenreise: Karte und Stationskarte ----------
 
-// Schmale Kachel auf der Startseite (führt zum Reise-Tab)
-function reiseKachelStart() {
+// Große Karte auf der Startseite (führt zum Reise-Tab)
+function reiseKarteStart() {
   const stand = reiseStand();
   const n = stand.naechste;
   const zweite = stand.durchgang === 2;
   let text;
-  if (stand.fertig) text = zweite ? 'Beide Reisen geschafft' : 'Reise geschafft';
-  else text = `weiter bei ${n.boss ? `Boss ${n.kapitel.nr}` : n.nr}`;
-  return `<button class="fortschritt-kachel reise" data-aktion="nav" data-ziel="reise">
-    <span class="symbol">${ICON.fahne}</span>
-    <span><b>${zweite ? 'Zweite Reise' : 'Reise'}</b><small>${esc(text)}</small></span>
+  if (stand.fertig) text = zweite ? 'Beide Reisen geschafft. Du bist eine Legende.' : 'Geschafft! Restliche Sterne holen oder Zweite Reise starten.';
+  else if (stand.geschafft === 0) text = zweite ? 'Alles auf Fan und Otaku, nur zwei Herzen.' : '50 Stationen, 10 Bosse. Vom Neuling zur Legende.';
+  else text = `Weiter bei ${n.boss ? `Boss ${n.kapitel.nr}` : n.nr} · ${n.kapitel.titel}${stand.sterne ? ` · ${stand.sterne} / ${stand.sterneMax} ★` : ''}`;
+  return `<button class="karte startkarte reise" data-aktion="nav" data-ziel="reise">
+    <img src="assets/stimmung/${zweite ? 'kaempferisch' : 'mentor'}.webp" alt="" class="maskottchen">
+    <span class="text">
+      <span class="label">${zweite ? 'Zweite Reise' : 'Heldenreise'}</span>
+      <span class="display">${stand.geschafft === 0 ? (zweite ? 'Noch einmal, nur härter' : 'Dein Abenteuer beginnt') : `${stand.geschafft} von ${STATIONEN.length} Stationen`}</span>
+      <small>${esc(text)}</small>
+    </span>
+    <span class="pfeil">${ICON.weiter}</span>
   </button>`;
 }
 
