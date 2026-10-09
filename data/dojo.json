@@ -1,5 +1,5 @@
 {
-  "hinweis": "Senpai Dojo: Kana mit Eselsbrücken und Anime-Vokabeln. Zeichen: [Zeichen, Rōmaji, Eselsbrücke]. Wörter: [Japanisch, Rōmaji, Deutsch, Hinweis]. Karten-IDs: h:ka (Hiragana), k:ka (Katakana), v:romaji (Vokabel).",
+  "hinweis": "Senpai Dojo: Kana mit Eselsbrücken und Anime-Vokabeln. Zeichen: [Zeichen, Rōmaji, Eselsbrücke]. Wörter: [Japanisch, Rōmaji, Deutsch, Hinweis, optional Bildname in assets/dojo/]. Karten-IDs: h:ka (Hiragana), k:ka (Katakana), v:romaji (Vokabel).",
   "guertel": [
     { "name": "Weiß", "ab": 0, "farbe": "#FFFFFF" },
     { "name": "Gelb", "ab": 20, "farbe": "#FFD23F" },
@@ -250,19 +250,19 @@
           ["おねえちゃん", "onēchan", "Große Schwester", "Vertraute Form von onēsan."],
           ["いもうと", "imōto", "Kleine Schwester", "Für die eigene jüngere Schwester."],
           ["おとうと", "otōto", "Kleiner Bruder", "Für den eigenen jüngeren Bruder."],
-          ["ともだち", "tomodachi", "Freund, Freundin", "Geschlechtsneutral."],
+          ["ともだち", "tomodachi", "Freund, Freundin", "Geschlechtsneutral.", "tomodachi"],
           ["ひと", "hito", "Mensch, Person", "Auch in ano hito, „diese Person“."],
-          ["こども", "kodomo", "Kind", "Mehrzahl: kodomotachi."],
-          ["かぞく", "kazoku", "Familie", "Watashi no kazoku: meine Familie."]
+          ["こども", "kodomo", "Kind", "Mehrzahl: kodomotachi.", "kodomo"],
+          ["かぞく", "kazoku", "Familie", "Watashi no kazoku: meine Familie.", "kazoku"]
         ]},
         { "id": "v4", "titel": "Kampf & Abenteuer", "woerter": [
           ["たたかう", "tatakau", "kämpfen", "Tatakai ist der Kampf."],
           ["ちから", "chikara", "Kraft", "Auch in Kraft-Ausrufen: chikara ga hoshii!"],
-          ["かたな", "katana", "Schwert", "Das japanische Langschwert."],
-          ["にんじゃ", "ninja", "Ninja", "Naruto lässt grüßen."],
-          ["さむらい", "samurai", "Samurai", "Krieger des alten Japan."],
-          ["ゆうしゃ", "yūsha", "Held, Heldin", "Das Wort aus jedem Isekai."],
-          ["まほう", "mahō", "Magie", "Mahō shōjo: magisches Mädchen."],
+          ["かたな", "katana", "Schwert", "Das japanische Langschwert.", "katana"],
+          ["にんじゃ", "ninja", "Ninja", "Naruto lässt grüßen.", "ninja"],
+          ["さむらい", "samurai", "Samurai", "Krieger des alten Japan.", "samurai"],
+          ["ゆうしゃ", "yūsha", "Held, Heldin", "Das Wort aus jedem Isekai.", "yusha"],
+          ["まほう", "mahō", "Magie", "Mahō shōjo: magisches Mädchen.", "maho"],
           ["つよい", "tsuyoi", "stark", "Gegenteil: yowai."],
           ["てき", "teki", "Feind, Gegner", "Auch im Sport."],
           ["まもる", "mamoru", "beschützen", "„Ich beschütze dich“: mamoru!"]
@@ -280,28 +280,28 @@
           ["おこる", "okoru", "wütend werden", "Okotta: ist wütend."]
         ]},
         { "id": "v6", "titel": "Essen", "woerter": [
-          ["ごはん", "gohan", "Reis, Essen", "Heißt beides: Reis und Mahlzeit."],
-          ["おにぎり", "onigiri", "Reisbällchen", "Das Maskottchen dieser App."],
-          ["ラーメン", "rāmen", "Ramen (Nudelsuppe)", "Katakana, weil ursprünglich aus China."],
-          ["すし", "sushi", "Sushi", "Mit o-: osushi, höflich."],
-          ["みず", "mizu", "Wasser", "Omizu kudasai: Wasser, bitte."],
-          ["おちゃ", "ocha", "Tee", "Meist grüner Tee."],
+          ["ごはん", "gohan", "Reis, Essen", "Heißt beides: Reis und Mahlzeit.", "gohan"],
+          ["おにぎり", "onigiri", "Reisbällchen", "Das Maskottchen dieser App.", "onigiri"],
+          ["ラーメン", "rāmen", "Ramen (Nudelsuppe)", "Katakana, weil ursprünglich aus China.", "ramen"],
+          ["すし", "sushi", "Sushi", "Mit o-: osushi, höflich.", "sushi"],
+          ["みず", "mizu", "Wasser", "Omizu kudasai: Wasser, bitte.", "mizu"],
+          ["おちゃ", "ocha", "Tee", "Meist grüner Tee.", "ocha"],
           ["おいしい", "oishii", "lecker", "Umai ist die lässige Variante."],
           ["たべもの", "tabemono", "Essen, Lebensmittel", "Von taberu, essen."],
-          ["にく", "niku", "Fleisch", "Yakiniku: gegrilltes Fleisch."],
-          ["さかな", "sakana", "Fisch", "Auch als Beilage zum Trinken."]
+          ["にく", "niku", "Fleisch", "Yakiniku: gegrilltes Fleisch.", "niku"],
+          ["さかな", "sakana", "Fisch", "Auch als Beilage zum Trinken.", "sakana"]
         ]},
         { "id": "v7", "titel": "Schule & Alltag", "woerter": [
-          ["がっこう", "gakkō", "Schule", "Der Schauplatz der meisten Anime."],
+          ["がっこう", "gakkō", "Schule", "Der Schauplatz der meisten Anime.", "gakko"],
           ["せいと", "seito", "Schüler, Schülerin", "Gakusei ist der Student."],
           ["べんきょう", "benkyō", "Lernen, Studium", "Benkyō suru: lernen."],
           ["しゅくだい", "shukudai", "Hausaufgaben", "Der ewige Feind."],
           ["ぶかつ", "bukatsu", "Club-Aktivität", "Der Schulclub nach dem Unterricht."],
-          ["いえ", "ie", "Haus, Zuhause", "Uchi ist das eigene Zuhause."],
-          ["へや", "heya", "Zimmer", "Watashi no heya: mein Zimmer."],
-          ["ほん", "hon", "Buch", "Auch in Nihon, Japan: Ursprung der Sonne."],
-          ["でんわ", "denwa", "Telefon", "Denwa suru: anrufen."],
-          ["かばん", "kaban", "Tasche", "Die Schultasche heißt randoseru."]
+          ["いえ", "ie", "Haus, Zuhause", "Uchi ist das eigene Zuhause.", "ie"],
+          ["へや", "heya", "Zimmer", "Watashi no heya: mein Zimmer.", "heya"],
+          ["ほん", "hon", "Buch", "Auch in Nihon, Japan: Ursprung der Sonne.", "hon"],
+          ["でんわ", "denwa", "Telefon", "Denwa suru: anrufen.", "denwa"],
+          ["かばん", "kaban", "Tasche", "Die Schultasche heißt randoseru.", "kaban"]
         ]},
         { "id": "v8", "titel": "Zahlen 1 bis 10", "woerter": [
           ["いち", "ichi", "eins", "Ichiban: Nummer eins, das Beste."],
@@ -340,16 +340,16 @@
           ["よかった", "yokatta", "Zum Glück! Gut so!", "Erleichterung."]
         ]},
         { "id": "v11", "titel": "Natur & Welt", "woerter": [
-          ["そら", "sora", "Himmel", "Auch ein beliebter Name."],
-          ["うみ", "umi", "Meer", "Grand Line nicht inbegriffen."],
-          ["やま", "yama", "Berg", "Fuji-san ist der Fuji-Berg."],
-          ["はな", "hana", "Blume", "Hana heißt auch Nase, Betonung entscheidet."],
-          ["さくら", "sakura", "Kirschblüte", "Hanami: das Kirschblütenfest."],
-          ["つき", "tsuki", "Mond", "Tsuki no hikari: Mondlicht."],
-          ["ほし", "hoshi", "Stern", "Hoshi ga kirei: die Sterne sind schön."],
-          ["ひ", "hi", "Sonne, Tag, Feuer", "Je nach Kanji Sonne (日) oder Feuer (火)."],
-          ["あめ", "ame", "Regen", "Mit anderer Betonung auch Bonbon."],
-          ["かぜ", "kaze", "Wind", "Kamikaze: Götterwind."]
+          ["そら", "sora", "Himmel", "Auch ein beliebter Name.", "sora"],
+          ["うみ", "umi", "Meer", "Grand Line nicht inbegriffen.", "umi"],
+          ["やま", "yama", "Berg", "Fuji-san ist der Fuji-Berg.", "yama"],
+          ["はな", "hana", "Blume", "Hana heißt auch Nase, Betonung entscheidet.", "hana"],
+          ["さくら", "sakura", "Kirschblüte", "Hanami: das Kirschblütenfest.", "sakura"],
+          ["つき", "tsuki", "Mond", "Tsuki no hikari: Mondlicht.", "tsuki"],
+          ["ほし", "hoshi", "Stern", "Hoshi ga kirei: die Sterne sind schön.", "hoshi"],
+          ["ひ", "hi", "Sonne, Tag, Feuer", "Je nach Kanji Sonne (日) oder Feuer (火).", "hi"],
+          ["あめ", "ame", "Regen", "Mit anderer Betonung auch Bonbon.", "ame"],
+          ["かぜ", "kaze", "Wind", "Kamikaze: Götterwind.", "kaze"]
         ]},
         { "id": "v12", "titel": "Verben", "woerter": [
           ["いく", "iku", "gehen", "Ikuzo! heißt: Los geht’s!"],

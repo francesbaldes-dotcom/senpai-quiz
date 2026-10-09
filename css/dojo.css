@@ -91,7 +91,8 @@
 .gruppe-kopf p { margin: 0; font-size: 14px; line-height: 1.4; }
 
 /* Lernkarte */
-.lernkarte { padding: 22px 18px 18px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.lernkarte { position: relative; padding: 22px 18px 18px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.lernkarte > .maskottchen { position: absolute; left: 8px; top: 8px; width: 56px; height: 56px; }
 .lernkarte .zeichen { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 96px; line-height: 1; font-weight: 700; }
 .lernkarte .zeichen.wort { font-size: 44px; line-height: 1.15; overflow-wrap: anywhere; }
 .lernkarte .romaji { font-family: var(--display); font-size: 28px; line-height: 1; }
@@ -157,3 +158,51 @@
 .dojo-ergebnis h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 26px; line-height: 1.1; }
 .dojo-ergebnis p { margin: 0; font-weight: 700; line-height: 1.4; }
 .dojo-ergebnis .xp { font-family: var(--display); font-size: 22px; color: var(--blue); }
+
+/* Tagesziel */
+.tagesziel { padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+.tagesziel .oben { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.tagesziel .stand { display: inline-flex; align-items: center; gap: 4px; font-family: var(--display); font-size: 16px; }
+.tagesziel .balken { height: 12px; }
+.tagesziel .balken span { background: var(--red); }
+.tagesziel .unten-zeile { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.tagesziel small { font-size: 12px; font-weight: 700; line-height: 1.35; }
+.segmente.klein { flex-shrink: 0; box-shadow: 2px 2px 0 var(--ink); border-width: 2px; border-radius: 12px; }
+.segmente.klein button { height: 34px; min-width: 40px; font-size: 13px; border-right-width: 2px; }
+.ziel-hinweis { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 2px solid var(--ink); border-radius: 999px; background: var(--yellow); font-size: 13px; }
+
+/* Lernstufen */
+.stufen-leiste { display: flex; height: 6px; margin-top: 4px; border: 1.5px solid var(--ink); border-radius: 999px; overflow: hidden; background: var(--paper); }
+.stufen-leiste span { display: block; height: 100%; }
+.lernkarte .stufe { display: inline-block; padding: 1px 8px; border: 2px solid var(--ink); border-radius: 999px; background: var(--stufe); color: var(--white); text-shadow: 0 0 2px var(--ink); letter-spacing: .06em; }
+.probe.empfohlen { color: var(--red); }
+.stufen-wechsel { position: relative; font-size: 13px; font-weight: 700; opacity: .95; }
+
+/* Bilder */
+.vokabel-bild { width: 120px; height: 120px; object-fit: contain; }
+.vokabel-bild.gross { width: 160px; height: 160px; }
+
+/* Silben ordnen */
+.dojo-frage .romaji-klein { font-size: 14px; font-weight: 700; color: #4A463F; }
+.bauen { display: flex; flex-direction: column; gap: 12px; align-items: stretch; }
+.bau-feld { display: flex; justify-content: center; gap: 8px; min-height: 64px; padding: 8px; border: 3px dashed var(--ink); border-radius: 16px; background: var(--white); }
+.bau-feld .platz { width: 48px; height: 48px; border: 2px solid var(--line); border-radius: 12px; background: var(--paper); display: flex; align-items: center; justify-content: center; font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 26px; font-weight: 700; }
+.bau-feld .platz.voll { border-color: var(--ink); background: var(--white); }
+.bau-feld.richtig { border-style: solid; border-color: var(--green); }
+.bau-feld.richtig .platz.voll { background: var(--green); color: var(--white); border-color: var(--green); }
+.bau-feld.falsch { border-style: solid; border-color: var(--red); }
+.bau-feld.falsch .platz.voll { background: var(--red); color: var(--white); border-color: var(--red); }
+.kacheln { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.kachel { width: 60px; height: 60px; border: 3px solid var(--ink); border-radius: 14px; background: var(--white); box-shadow: 3px 3px 0 var(--ink); font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 28px; font-weight: 700; cursor: pointer; }
+.kachel:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
+.kachel:disabled { opacity: .25; box-shadow: none; cursor: default; }
+.bauen .leise-knopf:disabled { opacity: .4; }
+
+/* Paare finden */
+.blitz-brett { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.blitz-brett .spalte { display: flex; flex-direction: column; gap: 10px; }
+.paar { min-height: 64px; padding: 6px 10px; border: 3px solid var(--ink); border-radius: 16px; background: var(--white); box-shadow: 3px 3px 0 var(--ink); font-size: 15px; font-weight: 900; line-height: 1.2; cursor: pointer; overflow-wrap: anywhere; }
+.paar.jp { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 24px; font-weight: 700; }
+.paar.gewaehlt { background: var(--yellow); transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
+.paar.falsch { background: var(--red); color: var(--white); }
+.paar:disabled { cursor: default; }

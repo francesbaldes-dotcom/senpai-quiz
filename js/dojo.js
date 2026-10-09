@@ -19,9 +19,24 @@ const MAX_WIEDERHOLUNG = 20; // Karten pro Wiederholungsrunde
 const XP_RICHTIG = 5;
 const XP_LEKTION = 25; // beim ersten Abschluss einer Lektion
 const HOEREN_ANTEIL = 0.3; // Anteil der Hör-Aufgaben, wenn eine japanische Stimme da ist
+const BILD_ANTEIL = 0.25; // Anteil der Bild-Aufgaben bei Karten mit Bild
+const ZIELE = [5, 10, 20]; // wählbares Tagesziel (Karten pro Tag)
+const BLITZ_DAUER = 60; // Sekunden für „Paare finden“
+const BLITZ_PAARE = 5; // Paare gleichzeitig auf dem Brett
+const XP_PAAR = 2;
+
+// Lernstufen = Leitner-Fächer 0–5 mit Namen (wie WaniKani: Apprentice … Burned)
+export const STUFEN = [
+  { name: 'Neuling', farbe: '#D9D4C7' },
+  { name: 'Schüler', farbe: '#FFD23F' },
+  { name: 'Geselle', farbe: '#FF8A3D' },
+  { name: 'Meister', farbe: '#177A41' },
+  { name: 'Erleuchtet', farbe: '#1F5FD1' },
+  { name: 'Eingebrannt', farbe: '#141414' },
+];
 
 // Profil-Teil (profil.dojo). karten: { id: { f: Fach, bis: 'JJJJ-MM-TT' } }
-export const DOJO_PROFIL = { frei: null, karten: {}, lektionen: [], tage: {} };
+export const DOJO_PROFIL = { frei: null, karten: {}, lektionen: [], tage: {}, ziel: 10, fehler: { datum: null, ids: [] }, blitz: 0 };
 
 let DATEN = null; // data/dojo.json
 let KARTEN = {}; // id → Karte
@@ -33,7 +48,9 @@ const dui = {
   lektion: null, // Lektion auf den Lernkarten
   schritt: 0, // Index der Lernkarte
   runde: null, // laufende Abfrage
+  blitz: null, // laufendes „Paare finden“
   ergebnis: null,
+  zielErreicht: false, // Tagesziel in dieser Runde erreicht (für den Ergebnis-Bildschirm)
   eingabe: '',
   meldung: '',
   fehler: '',
@@ -57,7 +74,7 @@ export async function ladeDojo() {
       }
       for (const w of l.woerter ?? []) {
         const id = `v:${w[1]}`;
-        KARTEN[id] = { id, typ: 'vokabel', lektion, ja: w[0], romaji: w[1], de: w[2], hinweis: w[3] };
+        KARTEN[id] = { id, typ: 'vokabel', lektion, ja: w[0], romaji: w[1], de: w[2], hinweis: w[3], bild: w[4] ? `assets/dojo/${w[4]}.webp` : null };
         lektion.karten.push(id);
       }
       LEKTIONEN.push(lektion);
@@ -72,6 +89,9 @@ export function dojoEinrichten(anbindung) {
   p.dojo.karten ||= {};
   p.dojo.lektionen ||= [];
   p.dojo.tage ||= {};
+  p.dojo.ziel ||= 10;
+  p.dojo.fehler ||= { datum: null, ids: [] };
+  p.dojo.blitz ||= 0;
   stimmenLaden();
   document.getElementById('app').addEventListener('input', (e) => {
     if (e.target.id === 'dojo-eingabe') dui.eingabe = e.target.value;
@@ -153,6 +173,49 @@ function lektionStand(l) {
   };
 }
 
+// Tagesziel: gezählt werden beantwortete Karten und gefundene Paare
+function heuteZahl() {
+  return profil().dojo.tage[heute()] ?? 0;
+}
+
+function zaehleHeute(n = 1) {
+  const p = profil();
+  const vorher = heuteZahl();
+  p.dojo.tage[heute()] = vorher + n;
+  if (vorher < p.dojo.ziel && vorher + n >= p.dojo.ziel) {
+    app.serie(); // Tagesziel erreicht → Serie läuft weiter wie beim Tagesquiz
+    dui.zielErreicht = true;
+  }
+}
+
+// Fehler des Tages (Duolingo „Fehler üben“): bleiben, bis sie in einer Fehler-Runde richtig waren
+function fehlerHeute() {
+  const f = profil().dojo.fehler;
+  return f.datum === heute() ? f.ids.filter((id) => KARTEN[id] && lektionOffen(KARTEN[id].lektion)) : [];
+}
+
+function merkeFehler(id, korrekt, fehlerRunde) {
+  const f = profil().dojo.fehler;
+  if (f.datum !== heute()) {
+    f.datum = heute();
+    f.ids = [];
+  }
+  if (!korrekt && !f.ids.includes(id)) f.ids.push(id);
+  if (korrekt && fehlerRunde) f.ids = f.ids.filter((x) => x !== id);
+}
+
+// Nächste sinnvolle Lektion: die erste offene, die noch nicht abgeschlossen ist
+function empfohleneLektion() {
+  return LEKTIONEN.find((l) => lektionOffen(l) && !lektionStand(l).fertig) ?? null;
+}
+
+// Anzahl Karten je Stufe in einer Lektion (für die Stufen-Leiste)
+function stufenZaehler(l) {
+  const z = STUFEN.map(() => 0);
+  for (const id of l.karten) if (!KARTEN[id].nurLernen && fach(id) >= 0) z[fach(id)]++;
+  return z;
+}
+
 function gesamtSitzt() {
   return Object.keys(KARTEN).filter((id) => sitzt(id)).length;
 }
@@ -163,6 +226,13 @@ function guertel(n = gesamtSitzt()) {
   for (const g of liste) if (n >= g.ab) aktuell = g;
   const naechster = liste[liste.indexOf(aktuell) + 1] ?? null;
   return { ...aktuell, naechster, n };
+}
+
+const GUERTEL_BILD = { 'Weiß': 'weiss', 'Gelb': 'gelb', 'Orange': 'orange', 'Grün': 'gruen', 'Blau': 'blau', 'Braun': 'braun', 'Schwarz': 'schwarz' };
+
+// Maskottchen im Karate-Anzug mit dem aktuellen Gürtel (assets/dojo/guertel-*.webp)
+function guertelBild(g = guertel(), klasse = 'maskottchen') {
+  return `<img class="${klasse}" src="assets/dojo/guertel-${GUERTEL_BILD[g.name] ?? 'weiss'}.webp" alt="">`;
 }
 
 function guertelChip(g = guertel()) {
@@ -217,11 +287,23 @@ function rueckseite(k) {
 // Art der Aufgabe je Fach: erkennen → schreiben → tippen, dazwischen Hören
 function aufgabenArt(id, erzwungen = null) {
   if (erzwungen) return erzwungen;
+  const k = KARTEN[id];
   const f = fach(id);
-  if (kannSprechen() && f >= 1 && Math.random() < HOEREN_ANTEIL) return 'hoeren';
+  const z = Math.random();
+  if (kannSprechen() && f >= 1 && z < HOEREN_ANTEIL) return 'hoeren';
+  if (k.bild && f >= 1 && z < HOEREN_ANTEIL + BILD_ANTEIL) return 'bild';
   if (f <= 1) return 'lesen';
-  if (f === 2) return 'schreiben';
-  return 'tippen';
+  if (f === 2) return k.typ === 'vokabel' && Math.random() < 0.5 ? 'bauen' : 'schreiben';
+  return k.typ === 'vokabel' && Math.random() < 0.3 ? 'bauen' : 'tippen';
+}
+
+// Kana-Kacheln für „Silben ordnen“: die Zeichen des Worts plus zwei Ablenker derselben Schrift
+function kacheln(k) {
+  const zeichen = Array.from(k.ja);
+  const schrift = /[\u30A0-\u30FF]/.test(k.ja) ? 'k:' : 'h:';
+  const pool = Object.values(KARTEN).filter((x) => x.typ === 'kana' && x.id.startsWith(schrift) && !x.nurLernen && !zeichen.includes(x.zeichen));
+  const extra = mischen(pool).slice(0, 2).map((x) => x.zeichen);
+  return mischen([...zeichen, ...extra]).map((z) => ({ z, benutzt: false }));
 }
 
 // Drei Ablenker aus derselben Schrift bzw. aus den Vokabeln, bevorzugt aus derselben Lektion
@@ -240,10 +322,13 @@ function ablenker(k, n = 3) {
 function baueAufgabe(id, art) {
   const k = KARTEN[id];
   const a = { id, karte: k, art, ergebnis: null, optionen: null, loesung: 0 };
-  if (art !== 'tippen') {
+  if (art === 'bauen') {
+    a.kacheln = kacheln(k);
+    a.gebaut = []; // Indizes der angetippten Kacheln
+  } else if (art !== 'tippen') {
     const andere = ablenker(k);
     const alle = mischen([k, ...andere]);
-    a.optionen = alle.map((x) => (art === 'lesen' ? rueckseite(x) : art === 'schreiben' ? vorderseite(x) : k.typ === 'kana' ? vorderseite(x) : rueckseite(x)));
+    a.optionen = alle.map((x) => (art === 'lesen' ? rueckseite(x) : art === 'schreiben' || art === 'bild' ? vorderseite(x) : k.typ === 'kana' ? vorderseite(x) : rueckseite(x)));
     a.loesung = alle.indexOf(k);
   }
   return a;
@@ -254,12 +339,19 @@ function starteRunde(art, ids, lektion = null) {
   if (art === 'lektion') {
     // erst alle erkennen, dann alle schreiben
     mischen(ids).forEach((id) => aufgaben.push(baueAufgabe(id, 'lesen')));
-    mischen(ids).forEach((id) => aufgaben.push(baueAufgabe(id, kannSprechen() && Math.random() < HOEREN_ANTEIL ? 'hoeren' : 'schreiben')));
+    // zweiter Durchgang: Kana schreiben, Vokabeln abwechselnd zusammensetzen und schreiben, dazwischen Hören
+    mischen(ids).forEach((id, i) => {
+      const k = KARTEN[id];
+      let art = k.typ === 'vokabel' && i % 2 === 0 ? 'bauen' : 'schreiben';
+      if (kannSprechen() && Math.random() < HOEREN_ANTEIL) art = 'hoeren';
+      aufgaben.push(baueAufgabe(id, art));
+    });
   } else {
     ids.forEach((id) => aufgaben.push(baueAufgabe(id, aufgabenArt(id))));
   }
   dui.runde = { art, lektion, aufgaben, i: 0, richtig: 0, falsch: 0, xp: 0, gesehen: new Set(), guertelVorher: guertel().ab };
   dui.eingabe = '';
+  dui.zielErreicht = false;
   app.ui.screen = 'dojoAbfrage';
   app.render();
   starteAufgabe();
@@ -300,8 +392,12 @@ function werte(a, korrekt) {
   const karten = p.dojo.karten;
   const vorher = karten[a.id]?.f ?? -1;
   const f = korrekt ? Math.min(INTERVALLE.length - 1, Math.max(0, vorher) + 1) : 0;
-  karten[a.id] = { f, bis: tagPlus(INTERVALLE[f]) };
+  // Streuung (wie Anki): ab Fach 2 ±15 %, damit nicht alle Karten einer Lektion am selben Tag fällig werden
+  const tage = INTERVALLE[f];
+  const streu = f >= 2 ? Math.round((Math.random() * 2 - 1) * tage * 0.15) : 0;
+  karten[a.id] = { f, bis: tagPlus(tage + streu) };
   a.ergebnis = { korrekt, fachVorher: vorher, fach: f };
+  merkeFehler(a.id, korrekt, r.art === 'fehler');
   if (korrekt) {
     r.richtig++;
     r.xp += XP_RICHTIG;
@@ -314,7 +410,7 @@ function werte(a, korrekt) {
       r.aufgaben.push(baueAufgabe(a.id, a.art === 'tippen' ? 'tippen' : 'lesen'));
     }
   }
-  p.dojo.tage[heute()] = (p.dojo.tage[heute()] ?? 0) + 1;
+  zaehleHeute(1);
   app.speichern();
   app.render();
 }
@@ -331,7 +427,7 @@ function beendeRunde() {
   }
   app.speichern();
   const g = guertel();
-  dui.ergebnis = { ...r, lektionNeu, guertel: g, aufgestiegen: g.ab > r.guertelVorher };
+  dui.ergebnis = { ...r, lektionNeu, guertel: g, aufgestiegen: g.ab > r.guertelVorher, zielErreicht: dui.zielErreicht };
   dui.runde = null;
   app.ui.screen = 'dojoErgebnis';
   app.render();
@@ -350,6 +446,103 @@ function tastatur(e) {
   if (e.target?.tagName === 'INPUT') return;
   const n = Number(e.key);
   if (!a.ergebnis && a.optionen && n >= 1 && n <= a.optionen.length) aktionen.dojoAntwort({ i: n - 1 });
+  if (!a.ergebnis && a.kacheln && e.key === 'Backspace') aktionen.dojoKachelZurueck();
+}
+
+// ---------- Paare finden (Blitz) ----------
+
+let blitzUhr = null;
+
+function blitzPool() {
+  const offen = (id) => !KARTEN[id].nurLernen && lektionOffen(KARTEN[id].lektion);
+  const gelernt = Object.keys(KARTEN).filter((id) => offen(id) && fach(id) >= 0);
+  if (gelernt.length >= 10) return gelernt;
+  const frei = LEKTIONEN.filter((l) => l.frei).flatMap((l) => l.karten).filter(offen);
+  return [...new Set([...gelernt, ...frei])];
+}
+
+function starteBlitz() {
+  const b = { warteschlange: mischen(blitzPool()), brett: [], links: [], rechts: [], wahlLinks: null, wahlRechts: null, falsch: null, punkte: 0, fehler: 0, ende: Date.now() + BLITZ_DAUER * 1000 };
+  dui.blitz = b;
+  dui.zielErreicht = false;
+  blitzNachfuellen();
+  app.ui.screen = 'dojoBlitz';
+  app.render();
+  clearInterval(blitzUhr);
+  blitzUhr = setInterval(blitzTick, 200);
+}
+
+// Brett auf fünf Paare auffüllen; Karten mit gleicher Lesung oder Bedeutung nie gleichzeitig
+function blitzNachfuellen() {
+  const b = dui.blitz;
+  let versuche = b.warteschlange.length;
+  while (b.brett.length < BLITZ_PAARE && b.warteschlange.length && versuche-- > 0) {
+    const id = b.warteschlange.shift();
+    const k = KARTEN[id];
+    if (b.brett.some((x) => rueckseite(KARTEN[x]) === rueckseite(k) || vorderseite(KARTEN[x]) === vorderseite(k))) {
+      b.warteschlange.push(id);
+      continue;
+    }
+    b.brett.push(id);
+    b.links.push(id);
+    b.rechts.splice(Math.floor(Math.random() * (b.rechts.length + 1)), 0, id);
+  }
+}
+
+function blitzTick() {
+  const b = dui.blitz;
+  if (!b || app.ui.screen !== 'dojoBlitz') return clearInterval(blitzUhr);
+  const rest = Math.max(0, b.ende - Date.now());
+  const balken = document.getElementById('blitz-balken');
+  const zeit = document.getElementById('blitz-zeit');
+  if (balken) balken.style.width = `${(rest / (BLITZ_DAUER * 1000)) * 100}%`;
+  if (zeit) zeit.textContent = `${Math.ceil(rest / 1000)} s`;
+  if (rest <= 0) beendeBlitz();
+}
+
+function blitzWahl(seite, id) {
+  const b = dui.blitz;
+  if (!b || b.falsch) return;
+  if (seite === 'links') b.wahlLinks = b.wahlLinks === id ? null : id;
+  else b.wahlRechts = b.wahlRechts === id ? null : id;
+  if (b.wahlLinks && b.wahlRechts) {
+    if (b.wahlLinks === b.wahlRechts) {
+      b.punkte++;
+      b.brett = b.brett.filter((x) => x !== id);
+      b.links = b.links.filter((x) => x !== id);
+      b.rechts = b.rechts.filter((x) => x !== id);
+      b.wahlLinks = b.wahlRechts = null;
+      blitzNachfuellen();
+      if (!b.brett.length) return beendeBlitz();
+    } else {
+      b.fehler++;
+      b.falsch = { links: b.wahlLinks, rechts: b.wahlRechts };
+      setTimeout(() => {
+        if (dui.blitz !== b) return;
+        b.falsch = null;
+        b.wahlLinks = b.wahlRechts = null;
+        app.render();
+      }, 450);
+    }
+  }
+  app.render();
+}
+
+function beendeBlitz() {
+  clearInterval(blitzUhr);
+  const b = dui.blitz;
+  if (!b) return;
+  const p = profil();
+  const xp = b.punkte * XP_PAAR;
+  p.xp += xp;
+  const rekord = b.punkte > p.dojo.blitz;
+  if (rekord) p.dojo.blitz = b.punkte;
+  zaehleHeute(b.punkte);
+  app.speichern();
+  dui.blitz = null;
+  dui.ergebnis = { art: 'blitz', punkte: b.punkte, fehler: b.fehler, xp, rekord, richtig: b.punkte, falsch: b.fehler, zielErreicht: dui.zielErreicht, guertel: guertel(), aufgestiegen: false };
+  app.ui.screen = 'dojoErgebnis';
+  app.render();
 }
 
 // ---------- Aktionen ----------
@@ -380,6 +573,52 @@ const aktionen = {
     const ids = faelligeKarten().slice(0, MAX_WIEDERHOLUNG);
     if (!ids.length) return;
     starteRunde('wiederholen', ids);
+  },
+  dojoFehler() {
+    const ids = mischen(fehlerHeute()).slice(0, MAX_WIEDERHOLUNG);
+    if (!ids.length) return;
+    starteRunde('fehler', ids);
+  },
+  dojoBlitz() {
+    if (blitzPool().length < 4) return;
+    starteBlitz();
+  },
+  dojoBlitzWahl(d) {
+    blitzWahl(d.seite, d.id);
+  },
+  async dojoBlitzAbbrechen() {
+    if (!dui.blitz || app.ui.dialog) return;
+    const ok = await app.frage({ titel: 'Blitz beenden?', text: 'Die bisher gefundenen Paare zählen.', ja: 'Beenden', nein: 'Weiterspielen', stimmung: 'panisch' });
+    if (!ok || !dui.blitz) return;
+    beendeBlitz();
+  },
+  dojoZiel(d) {
+    const n = Number(d.ziel);
+    if (!ZIELE.includes(n)) return;
+    profil().dojo.ziel = n;
+    app.speichern();
+    app.render();
+  },
+  dojoKachel(d) {
+    const a = aktuelleAufgabe();
+    if (!a || a.ergebnis || !a.kacheln) return;
+    const i = Number(d.i);
+    const kachel = a.kacheln[i];
+    if (!kachel || kachel.benutzt) return;
+    kachel.benutzt = true;
+    a.gebaut.push(i);
+    const wort = a.gebaut.map((x) => a.kacheln[x].z).join('');
+    if (Array.from(wort).length >= Array.from(a.karte.ja).length) {
+      a.gewaehlt = wort;
+      return werte(a, wort === a.karte.ja);
+    }
+    app.render();
+  },
+  dojoKachelZurueck() {
+    const a = aktuelleAufgabe();
+    if (!a || a.ergebnis || !a.gebaut?.length) return;
+    a.kacheln[a.gebaut.pop()].benutzt = false;
+    app.render();
   },
   dojoSprich(d) {
     const k = d.id ? KARTEN[d.id] : aktuelleAufgabe()?.karte;
@@ -423,6 +662,8 @@ const aktionen = {
     aktionen.dojoZurueck();
   },
   dojoZurueck() {
+    clearInterval(blitzUhr);
+    dui.blitz = null;
     dui.lektion = null;
     dui.runde = null;
     dui.ergebnis = null;
@@ -490,9 +731,10 @@ export function dojoKarteStart() {
   let text;
   if (!frei && !g.n && !Object.keys(profil().dojo.karten).length) text = 'Hiragana, Katakana und 150 Anime-Vokabeln. Probelektionen gratis.';
   else if (faellig) text = `${faellig} ${faellig === 1 ? 'Karte' : 'Karten'} zum Wiederholen fällig`;
-  else text = `${g.name}er Gürtel · ${g.n} ${g.n === 1 ? 'Karte sitzt' : 'Karten sitzen'}`;
+  else if (heuteZahl() < profil().dojo.ziel) text = `Tagesziel: ${heuteZahl()} / ${profil().dojo.ziel}${empfohleneLektion() ? ` · weiter mit ${empfohleneLektion().titel}` : ''}`;
+  else text = `Tagesziel geschafft · ${g.name}er Gürtel`;
   return `<button class="karte dojokarte" data-aktion="nav" data-ziel="dojo">
-    <img src="assets/stimmung/mentor.webp" alt="" class="maskottchen">
+    ${guertelBild(g)}
     <span class="text">
       <span class="label">Senpai Dojo</span>
       <span class="display">Japanisch lernen</span>
@@ -510,8 +752,27 @@ function kopf(titel, zurueckZiel = 'start', rechts = '') {
   </div>`;
 }
 
+function tageszielKarte() {
+  const p = profil();
+  const n = heuteZahl();
+  const geschafft = n >= p.dojo.ziel;
+  const streak = app.streak?.() ?? 0;
+  return `<div class="karte tagesziel">
+    <div class="oben">
+      <span class="label">Tagesziel</span>
+      <span class="stand">${geschafft ? `${app.ICON.haken} geschafft` : `${n} / ${p.dojo.ziel}`}${streak ? ` · ${app.ICON.flamme} ${streak} ${streak === 1 ? 'Tag' : 'Tage'}` : ''}</span>
+    </div>
+    <div class="balken"><span style="width:${Math.round(Math.min(1, n / p.dojo.ziel) * 100)}%"></span></div>
+    <div class="unten-zeile">
+      <small>${geschafft ? 'Deine Serie läuft weiter. Tagesquiz und Dojo zählen beide.' : `Noch ${p.dojo.ziel - n} ${p.dojo.ziel - n === 1 ? 'Karte' : 'Karten'}, dann läuft deine Serie weiter.`}</small>
+      <div class="segmente klein" role="group" aria-label="Tagesziel wählen">${ZIELE.map((z) => `<button data-aktion="dojoZiel" data-ziel="${z}" aria-pressed="${z === p.dojo.ziel}">${z}</button>`).join('')}</div>
+    </div>
+  </div>`;
+}
+
 function dojoScreen() {
   const g = guertel();
+  const fehler = fehlerHeute();
   const meldung = dui.meldung;
   dui.meldung = ''; // nur einmal zeigen
   const faellig = faelligeKarten().length;
@@ -522,7 +783,7 @@ function dojoScreen() {
     ${meldung ? `<p class="meldung">${app.esc(meldung)}</p>` : ''}
 
     <div class="karte guertel-karte">
-      ${app.maskottchen(faellig ? 'kaempferisch' : 'mentor')}
+      ${guertelBild(g)}
       <div class="text">
         <span class="display">${g.n} ${g.n === 1 ? 'Karte sitzt' : 'Karten sitzen'}</span>
         <div class="balken"><span style="width:${Math.round(Math.min(1, bisNaechster) * 100)}%"></span></div>
@@ -531,9 +792,15 @@ function dojoScreen() {
       </div>
     </div>
 
+    ${tageszielKarte()}
+
     ${faellig
       ? `<button class="knopf knopf-rot" data-aktion="dojoWiederholen">${app.ICON.nochmal} Wiederholen · ${faellig} fällig</button>`
       : `<p class="kleingedruckt" style="margin:0;text-align:center">${Object.keys(profil().dojo.karten).length ? 'Heute ist nichts zum Wiederholen fällig. Lern eine neue Lektion!' : 'Fang mit der ersten Lektion an. Fällige Karten erscheinen hier zum Wiederholen.'}</p>`}
+    <div class="modi">
+      <button class="knopf" data-aktion="dojoBlitz" ${blitzPool().length < 4 ? 'disabled' : ''}>${app.ICON.blitz}<span><b>Paare finden</b><small>60 Sekunden${profil().dojo.blitz ? ` · Rekord ${profil().dojo.blitz}` : ''}</small></span></button>
+      <button class="knopf" data-aktion="dojoFehler" ${fehler.length ? '' : 'disabled'}>${app.ICON.nochmal}<span><b>Fehler üben</b><small>${fehler.length ? `${fehler.length} von heute` : 'heute keine'}</small></span></button>
+    </div>
 
     ${frei ? '' : `<div class="karte dojo-hinweis">
       <span class="label">Probe</span>
@@ -550,9 +817,17 @@ function dojoScreen() {
   </section>`;
 }
 
+function stufenLeiste(l) {
+  const z = stufenZaehler(l);
+  const gesamt = l.karten.filter((id) => !KARTEN[id].nurLernen).length;
+  if (!z.some((n) => n)) return '';
+  return `<span class="stufen-leiste" aria-hidden="true">${z.map((n, i) => (n ? `<span style="width:${(n / gesamt) * 100}%;background:${STUFEN[i].farbe}"></span>` : '')).join('')}</span>`;
+}
+
 function lektionZeile(l) {
   const s = lektionStand(l);
   const offen = lektionOffen(l);
+  const empfohlen = empfohleneLektion() === l;
   const status = !offen ? 'gesperrt' : s.fertig ? 'fertig' : s.gelernt ? 'offen' : '';
   const statusInhalt = !offen ? app.ICON.schloss : s.fertig ? app.ICON.haken : app.esc(String(LEKTIONEN.indexOf(l) + 1));
   const vorschau = l.zeichen ? l.zeichen.slice(0, 5).map((z) => z[0]).join(' ') : `${l.woerter.length} Wörter`;
@@ -561,7 +836,8 @@ function lektionZeile(l) {
     <span class="text">
       <b>${app.esc(l.titel)}</b>
       <small>${JP(vorschau)} · ${s.sitzt} / ${s.gesamt} ${s.gesamt === 1 ? 'sitzt' : 'sitzen'}</small>
-      ${l.frei && !dojoFrei() ? '<span class="probe">Gratis</span>' : ''}
+      ${stufenLeiste(l)}
+      ${empfohlen ? '<span class="probe empfohlen">Empfohlen</span>' : l.frei && !dojoFrei() ? '<span class="probe">Gratis</span>' : ''}
     </span>
     <span class="rechts">${offen ? app.ICON.weiter : ''}</span>
   </button>`;
@@ -577,7 +853,9 @@ function dojoLernenScreen() {
     <div class="balken"><span style="width:${Math.round(((dui.schritt + 1) / l.karten.length) * 100)}%"></span></div>
 
     <div class="karte lernkarte">
-      <span class="schrift">${app.esc(k.typ === 'kana' ? k.schrift : 'Vokabel')}</span>
+      ${app.maskottchen('lesend')}
+      <span class="schrift">${app.esc(k.typ === 'kana' ? k.schrift : 'Vokabel')}${fach(k.id) >= 0 ? ` · <span class="stufe" style="--stufe:${STUFEN[fach(k.id)].farbe}">${app.esc(STUFEN[fach(k.id)].name)}</span>` : ''}</span>
+      ${k.bild ? `<img class="vokabel-bild" src="${k.bild}" alt="">` : ''}
       <span class="zeichen ${k.typ === 'kana' ? '' : 'wort'}" lang="ja">${app.esc(vorderseite(k))}</span>
       <span class="romaji">${app.esc(k.romaji)}</span>
       ${k.typ === 'vokabel' ? `<span class="bedeutung">${app.esc(k.de)}</span>` : ''}
@@ -602,6 +880,8 @@ const AUFGABEN_TEXT = {
   schreiben: { kana: 'Welches Zeichen ist das?', vokabel: 'Wie schreibt man das?' },
   tippen: { kana: 'Tippe die Lesung', vokabel: 'Tippe die Lesung (Rōmaji)' },
   hoeren: { kana: 'Was hörst du?', vokabel: 'Was hörst du?' },
+  bauen: { kana: 'Setze zusammen', vokabel: 'Setze das Wort zusammen' },
+  bild: { kana: 'Was zeigt das Bild?', vokabel: 'Was zeigt das Bild?' },
 };
 
 function dojoAbfrageScreen() {
@@ -610,7 +890,7 @@ function dojoAbfrageScreen() {
   if (!r || !a) return dojoScreen();
   const k = a.karte;
   const vorne = a.art === 'lesen' || a.art === 'tippen';
-  const titel = r.art === 'lektion' ? r.lektion.titel : 'Wiederholen';
+  const titel = r.art === 'lektion' ? r.lektion.titel : r.art === 'fehler' ? 'Fehler üben' : 'Wiederholen';
   return `<section class="screen dojo">
     <div class="kopfzeile">
       <button class="icon-knopf" data-aktion="dojoAbbrechen" aria-label="Abfrage beenden">${app.ICON.kreuz}</button>
@@ -625,12 +905,16 @@ function dojoAbfrageScreen() {
       <span class="aufgabe">${app.esc(AUFGABEN_TEXT[a.art][k.typ])}</span>
       ${a.art === 'hoeren'
         ? `<button class="knopf hoer-knopf gross" data-aktion="dojoSprich" aria-label="Noch einmal anhören">${ICON_LAUT}</button>`
+        : a.art === 'bild'
+          ? `<img class="vokabel-bild gross" src="${k.bild}" alt="">`
+        : a.art === 'bauen'
+          ? `<span class="text">${app.esc(k.de)}</span><span class="romaji-klein">${app.esc(k.romaji)}</span>`
         : vorne
           ? `<span class="zeichen ${k.typ === 'kana' ? '' : 'wort'}" lang="ja">${app.esc(vorderseite(k))}</span>`
           : `<span class="text">${app.esc(rueckseite(k))}</span>`}
     </div>
 
-    ${a.art === 'tippen' ? tippForm(a) : antworten(a)}
+    ${a.art === 'tippen' ? tippForm(a) : a.art === 'bauen' ? kachelFeld(a) : antworten(a)}
 
     <div class="unten">${a.ergebnis ? ergebnisBanner(a) : ''}</div>
   </section>`;
@@ -638,7 +922,7 @@ function dojoAbfrageScreen() {
 
 function antworten(a) {
   const k = a.karte;
-  const japanisch = a.art === 'schreiben' || (a.art === 'hoeren' && k.typ === 'kana');
+  const japanisch = a.art === 'schreiben' || a.art === 'bild' || (a.art === 'hoeren' && k.typ === 'kana');
   const kurz = k.typ === 'kana' || japanisch;
   return `<div class="antworten dojo-antworten ${kurz ? 'gitter' : ''}">${a.optionen.map((o, i) => {
     let zustand = '';
@@ -651,6 +935,17 @@ function antworten(a) {
       <span class="buchstabe">${i + 1}</span><span class="text ${japanisch ? 'jp' : ''}" ${japanisch ? 'lang="ja"' : ''}>${app.esc(o)}</span>
     </button>`;
   }).join('')}</div>`;
+}
+
+function kachelFeld(a) {
+  const laenge = Array.from(a.karte.ja).length;
+  const gebaut = a.gebaut.map((i) => a.kacheln[i].z);
+  const zustand = a.ergebnis ? (a.ergebnis.korrekt ? 'richtig' : 'falsch') : '';
+  return `<div class="bauen">
+    <div class="bau-feld ${zustand}" lang="ja" aria-live="polite">${Array.from({ length: laenge }, (_, i) => `<span class="platz ${gebaut[i] ? 'voll' : ''}">${app.esc(gebaut[i] ?? '')}</span>`).join('')}</div>
+    <div class="kacheln">${a.kacheln.map((k, i) => `<button class="kachel" lang="ja" data-aktion="dojoKachel" data-i="${i}" ${k.benutzt || a.ergebnis ? 'disabled' : ''}>${app.esc(k.z)}</button>`).join('')}</div>
+    ${a.ergebnis ? '' : `<button class="leise-knopf" data-aktion="dojoKachelZurueck" ${a.gebaut.length ? '' : 'disabled'}>Letzte Kachel zurück</button>`}
+  </div>`;
 }
 
 function tippForm(a) {
@@ -668,6 +963,7 @@ function ergebnisBanner(a) {
     <div class="text">
       <span class="display">${e.korrekt ? 'Richtig!' : 'Nicht ganz.'}</span>
       <span>${JP(loesung)}</span>
+      ${e.korrekt && e.fach !== e.fachVorher ? `<span class="stufen-wechsel">${e.fachVorher >= 0 ? `${app.esc(STUFEN[e.fachVorher].name)} → ` : ''}<b>${app.esc(STUFEN[e.fach].name)}</b></span>` : ''}
       ${!e.korrekt || a.art === 'tippen' ? `<p class="merk">${app.esc(k.typ === 'kana' ? k.merk : k.hinweis)}</p>` : ''}
     </div>
     <button class="knopf" id="dojo-weiter" data-aktion="dojoNaechste">Weiter</button>
@@ -677,20 +973,36 @@ function ergebnisBanner(a) {
 function dojoErgebnisScreen() {
   const e = dui.ergebnis;
   if (!e) return dojoScreen();
+  if (e.art === 'blitz') {
+    return `<section class="screen dojo">
+      <div class="karte dojo-ergebnis">
+        ${app.maskottchen(e.rekord && e.punkte > 0 ? 'feiernd' : e.punkte >= 10 ? 'daumenhoch' : 'verlegen')}
+        <h2>${e.punkte} ${e.punkte === 1 ? 'Paar' : 'Paare'} in ${BLITZ_DAUER} Sekunden</h2>
+        <p>${e.rekord && e.punkte > 0 ? 'Neuer Rekord!' : `${e.fehler} ${e.fehler === 1 ? 'Fehlgriff' : 'Fehlgriffe'}. Rekord: ${profil().dojo.blitz}`}</p>
+        <span class="xp">+${e.xp} XP</span>
+        ${e.zielErreicht ? `<p class="ziel-hinweis">${app.ICON.flamme} Tagesziel geschafft, deine Serie läuft weiter!</p>` : ''}
+      </div>
+      <div class="unten">
+        <button class="knopf knopf-rot" data-aktion="dojoBlitz">${app.ICON.nochmal} Noch einmal</button>
+        <button class="knopf" data-aktion="dojoZurueck">Zurück zum Dojo</button>
+      </div>
+    </section>`;
+  }
   const gesamt = e.richtig + e.falsch;
   const quote = gesamt ? e.richtig / gesamt : 0;
-  const stimmung = e.aufgestiegen ? 'siegreich' : quote >= 0.9 ? 'stolz' : quote >= 0.6 ? 'jubelnd' : 'entschlossen';
+  const stimmung = e.aufgestiegen ? 'konfetti' : quote >= 0.9 ? 'stolz' : quote >= 0.6 ? 'daumenhoch' : 'verlegen';
   const naechste = e.lektion ? naechsteLektion(e.lektion) : null;
   const senpai = e.aufgestiegen
     ? `Neuer Gürtel: ${e.guertel.name}!`
     : e.lektionNeu ? 'Lektion geschafft. Morgen fragt dich der Senpai noch einmal ab.' : quote >= 0.9 ? 'Sauber. Das sitzt.' : 'Fehler sind Teil des Trainings. Die Karten kommen wieder.';
   return `<section class="screen dojo">
     <div class="karte dojo-ergebnis">
-      ${app.maskottchen(stimmung)}
+      ${e.aufgestiegen ? guertelBild(e.guertel) : app.maskottchen(stimmung)}
       <h2>${e.richtig} von ${gesamt} richtig</h2>
       <p>${app.esc(senpai)}</p>
       <span class="xp">+${e.xp} XP</span>
       ${e.aufgestiegen ? guertelChip(e.guertel) : ''}
+      ${e.zielErreicht ? `<p class="ziel-hinweis">${app.ICON.flamme} Tagesziel geschafft, deine Serie läuft weiter!</p>` : ''}
     </div>
     <div class="unten">
       ${naechste ? `<button class="knopf knopf-rot" data-aktion="dojoWeiterLernen">Weiter: ${app.esc(naechste.titel)} ${app.ICON.weiter}</button>` : ''}
@@ -723,8 +1035,37 @@ function dojoKaufScreen() {
   </section>`;
 }
 
+function dojoBlitzScreen() {
+  const b = dui.blitz;
+  if (!b) return dojoScreen();
+  const knopf = (seite, id) => {
+    const k = KARTEN[id];
+    const text = seite === 'links' ? vorderseite(k) : rueckseite(k);
+    const jp = seite === 'links';
+    const gewaehlt = (seite === 'links' ? b.wahlLinks : b.wahlRechts) === id;
+    const falsch = b.falsch && b.falsch[seite] === id;
+    return `<button class="paar ${gewaehlt ? 'gewaehlt' : ''} ${falsch ? 'falsch' : ''} ${jp ? 'jp' : ''}" ${jp ? 'lang="ja"' : ''} data-aktion="dojoBlitzWahl" data-seite="${seite}" data-id="${app.esc(id)}" ${b.falsch ? 'disabled' : ''}>${app.esc(text)}</button>`;
+  };
+  return `<section class="screen dojo">
+    <div class="kopfzeile">
+      <button class="icon-knopf" data-aktion="dojoBlitzAbbrechen" aria-label="Blitz beenden">${app.ICON.kreuz}</button>
+      <div class="fortschritt">
+        <span class="label">Paare finden · <span id="blitz-zeit">${BLITZ_DAUER} s</span></span>
+        <div class="balken"><span id="blitz-balken" style="width:100%"></span></div>
+      </div>
+      <span class="tag">${app.ICON.haken} ${b.punkte}</span>
+    </div>
+    <p class="kleingedruckt" style="margin:0;text-align:center">Tippe links ein Zeichen oder Wort und rechts die passende Lesung oder Bedeutung.</p>
+    <div class="blitz-brett">
+      <div class="spalte">${b.links.map((id) => knopf('links', id)).join('')}</div>
+      <div class="spalte">${b.rechts.map((id) => knopf('rechts', id)).join('')}</div>
+    </div>
+  </section>`;
+}
+
 export const DOJO_SCREENS = {
   dojo: dojoScreen,
+  dojoBlitz: dojoBlitzScreen,
   dojoLernen: dojoLernenScreen,
   dojoAbfrage: dojoAbfrageScreen,
   dojoErgebnis: dojoErgebnisScreen,
