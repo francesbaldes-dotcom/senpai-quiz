@@ -289,10 +289,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `e-440` *Auswahl* – Welche Farbe hat Conans typische Jacke?  
   **Blau** · Rot · Grün · Schwarz
-- `e-441` *Wahr/Falsch* – Pikachu kann nur „Pika“ und „Pikachu“ sagen.  
+- `e-441` *Wahr/Falsch* – Pikachu spricht in der Serie nur mit Silben seines eigenen Namens.  
   **Wahr** · Falsch
-- `e-442` *Auswahl* – Welche Farbe hat Pikachus Schwanz an der Spitze?  
-  **Er ist gelb mit braunem Ansatz** · Rot · Schwarz · Weiß
+- `e-442` *Auswahl* – Welche Farbe hat Pikachus blitzförmiger Schwanz?  
+  **Gelb mit braunem Ansatz** · Rot · Schwarz · Weiß
 - `e-443` *Wahr/Falsch* – Die Titanen in „Attack on Titan“ sind meist nackt.  
   **Wahr** · Falsch
 - `e-455` *Emoji-Rätsel* – Welche Serie ist gemeint? 🏐👑🍊  
@@ -303,7 +303,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Bleach** · Naruto · Soul Eater · D.Gray-man
 - `e-470` *Auswahl* – Um welche Sportart geht es in „Slam Dunk“?  
   **Basketball** · Volleyball · Fußball · Baseball
-- `e-471` *Auswahl* – Wie heißt die Hauptfigur mit den roten Haaren?  
+- `e-471` *Auswahl* – Wie heißt die rothaarige Hauptfigur von „Slam Dunk“?  
   **Hanamichi Sakuragi** · Kaede Rukawa · Takenori Akagi · Ryota Miyagi
 - `e-484` *Wahr/Falsch* – Conan wohnt bei Ran und ihrem Vater Kogoro.  
   **Wahr** · Falsch
@@ -504,7 +504,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Tenya Iida** · Eijiro Kirishima · Denki Kaminari · Minoru Mineta
 - `e-415` *Auswahl* – Was isst Denji in seiner Erinnerung als Luxus, als er noch arm war?  
   **Toast mit Marmelade** · Sushi · Steak · Ramen
-- `e-444` *Wahr/Falsch* – Nezuko kann als Dämon nicht sprechen, weil sie den Bambus im Mund trägt.  
+- `e-444` *Wahr/Falsch* – Nezuko trägt als Dämon ein Bambusrohr im Mund, damit sie keine Menschen beißt.  
   **Wahr** · Falsch
 - `e-445` *Wahr/Falsch* – Satoru Gojo gilt als der stärkste Jujuzist.  
   **Wahr** · Falsch
@@ -640,7 +640,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-448` *Wahr/Falsch* – Jinwoo kann seine Schatten in seinem eigenen Schatten verstauen.  
   **Wahr** · Falsch
 - `e-450` *Emoji-Rätsel* – Welche Serie ist gemeint? 🔥🐉🧚  
-  **Fairy Tail** · Black Clover · Seven Deadly Sins · Frieren
+  **Fairy Tail** · Black Clover · Soul Eater · Frieren
 - `e-460` *Emoji-Rätsel* – Welche Serie ist gemeint? 🧝‍♀️⏳🗡️  
   **Frieren** · Sword Art Online · Re:Zero · Mushoku Tensei
 - `e-462` *Emoji-Rätsel* – Welche Serie ist gemeint? 🏠👧🧠😈  
@@ -772,7 +772,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Mit einem riesigen Schwert, dem Drachentöter** · Mit einem Bogen · Mit Magie · Mit zwei Dolchen
 - `e-492` *Wahr/Falsch* – Ryuk ist ein Shinigami.  
   **Wahr** · Falsch
-- `e-494` *Wahr/Falsch* – Kaneki trägt im Kampf eine Augenklappe über dem Ghoul-Auge.  
+- `e-494` *Wahr/Falsch* – Kaneki verdeckt im Alltag sein Ghoul-Auge mit einer Augenklappe.  
   **Wahr** · Falsch
 - `e-497` *Wahr/Falsch* – Yugi hat auffällig gestylte, mehrfarbige Haare.  
   **Wahr** · Falsch
@@ -860,7 +860,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-453` *Wahr/Falsch* – „Sailor Moon“ spielt in Tokio.  
   **Wahr** · Falsch
 - `e-458` *Emoji-Rätsel* – Welche Serie ist gemeint? 💊🏯🐱  
-  **Die Tagebücher der Apothekerin** · Akatsuki no Yona · Inu Yasha · Snow White with the Red Hair
+  **Die Tagebücher der Apothekerin** · Yona – Prinzessin der Morgendämmerung · Inu Yasha · Die rothaarige Schneeprinzessin
 - `e-459` *Emoji-Rätsel* – Welche Serie ist gemeint? 🎩😈🫖🇬🇧  
   **Black Butler** · Hellsing · Moriarty the Patriot · Vampire Knight
 - `e-472` *Auswahl* – Was stellt Wakana Gojo in „My Dress-Up Darling“ her?  
@@ -942,9 +942,9 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Kikis schwarze Katze** · Totoros Freund · Ein Rußgeist · Haku als Drache
 - `e-427` *Auswahl* – Wie heißt der Junge aus Tokio in „Your Name.“?  
   **Taki Tachibana** · Hodaka Morishima · Sōta Munakata · Takao Akizuki
-- `e-476` *Auswahl* – Welches Tier ist Totoro?  
-  **Ein großer Waldgeist, der an eine Mischung aus Bär, Katze und Eule erinnert** · Ein Hund · Ein Drache · Ein Fuchs
-- `e-519` *Wahr/Falsch* – Hayao Miyazaki hat zwei Oscars für seine Filme gewonnen.  
+- `e-476` *Auswahl* – Was für ein Wesen ist Totoro?  
+  **Ein Waldgeist** · Ein Hund · Ein Drache · Ein Fuchs
+- `e-519` *Wahr/Falsch* – Hayao Miyazaki hat zweimal den Oscar für den besten Animationsfilm gewonnen.  
   **Wahr** · Falsch
 
 ### Manga, Begriffe & Kultur
@@ -1666,8 +1666,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Naoto Tachibana** · Chifuyu Matsuno · Takashi Mitsuya · Keisuke Baji
 - `f-614` *Auswahl* – Wie heißt der rothaarige Schüler mit dem Hang zur Gewalt in „Assassination Classroom“?  
   **Karma Akabane** · Nagisa Shiota · Ryoma Terasaka · Itona Horibe
-- `f-615` *Auswahl* – Wie heißt die Nakiri-Erbin, die Somas Rivalin wird?  
-  **Erina Nakiri** · Megumi Tadokoro · Alice Nakiri · Ikumi Mito
+- `f-615` *Auswahl* – Wie heißt die Nakiri-Erbin mit der „Zunge Gottes“, die Somas Rivalin wird?  
+  **Erina Nakiri** · Megumi Tadokoro · Hisako Arato · Ikumi Mito
 - `f-617` *Auswahl* – Wie heißt Gabimarus Frau, zu der er zurückkehren will?  
   **Yui** · Sagiri · Mei · Yuzuriha
 
@@ -1961,7 +1961,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-576` *Auswahl* – In welches Tier verwandelt sich Ranmas Vater Genma?  
   **In einen Panda** · In ein Schwein · In eine Katze · In eine Ente
 - `f-583` *Auswahl* – Wie heißt die Söldnertruppe, der Guts beitritt?  
-  **Die Falkentruppe (Band of the Hawk)** · Die Schwarzen Stiere · Die Phantom-Truppe · Die Sonnen-Piraten
+  **Die Falken (Band of the Hawk)** · Die Schwarzen Stiere · Die Phantom-Truppe · Die Sonnen-Piraten
 - `f-584` *Auswahl* – Wer ist Griffith?  
   **Der charismatische Anführer der Falkentruppe** · Guts’ Bruder · Ein Dämon von Anfang an · Ein König
 - `f-585` *Auswahl* – Was ist die Finsternis („Eclipse“)?  
@@ -2085,7 +2085,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ein chinesischer Händler mit Opiumgeschäften** · Ciels Butler · Ein Shinigami · Ein Polizist
 - `f-580` *Auswahl* – Was näht Gojo für Marin?  
   **Cosplay-Kostüme** · Schuluniformen · Kimonos · Vorhänge
-- `f-581` *Auswahl* – Wie heißt der japanische Originaltitel?  
+- `f-581` *Auswahl* – Wie lautet der japanische Originaltitel von „My Dress-Up Darling“?  
   **Sono Bisque Doll wa Koi o Suru** · Kimi ni Todoke · Horimiya · Kaguya-sama
 - `f-582` *Auswahl* – Welches Studio animiert „My Dress-Up Darling“?  
   **CloverWorks** · Kyoto Animation · MAPPA · Bones
@@ -2206,11 +2206,11 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ghost in the Shell** · Patlabor · Angel’s Egg · Jin-Roh
 - `f-568` *Auswahl* – Wie heißt der zweite Kinofilm der Reihe „Sword Art Online Progressive“ (Japan 2022, deutscher Kinostart 2023)?  
   **Scherzo of Deep Night** · Aria of a Starless Night · Ordinal Scale · Alicization
-- `f-586` *Auswahl* – In welchem Film von Mamoru Hosoda wird der Junge Ren zum Schüler des Bestien Kumatetsu?  
+- `f-586` *Auswahl* – In welchem Film von Mamoru Hosoda wird der Junge Ren zum Schüler des Biests Kumatetsu?  
   **Der Junge und das Biest** · Wolfskinder · Mirai · Belle
-- `f-587` *Auswahl* – Wie heißt der Kinofilm 2023 zu „Blue Giant“ über einen jungen Saxofonisten?  
+- `f-587` *Auswahl* – Welcher Anime-Film von 2023 erzählt vom jungen Saxofonisten Dai Miyamoto?  
   **Blue Giant** · Blue Period · Blue Box · Blue Spring
-- `f-611` *Auswahl* – Welcher Film von Mamoru Hosoda spielt im Jahr 2010 um ein Mädchen namens Makoto?  
+- `f-611` *Auswahl* – In welchem Film von Mamoru Hosoda entdeckt die Oberschülerin Makoto, dass sie durch die Zeit springen kann?  
   **Das Mädchen, das durch die Zeit sprang** · Summer Wars · Belle · Mirai
 - `f-612` *Auswahl* – Wie heißt der Dragon-Ball-Kinofilm von 2018 mit Broly?  
   **Dragon Ball Super: Broly** · Dragon Ball Z: Kampf der Götter · Dragon Ball Super: Super Hero · Resurrection F
@@ -2374,8 +2374,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Buggy** · Alvida · Captain Kuro · Don Krieg
 - `o-301` *Auswahl* – Wie heißt Zorros bekannteste Technik mit drei Schwertern?  
   **Santoryu (Drei-Schwerter-Stil)** · Ittoryu · Nitoryu · Kyutoryu
-- `o-302` *Auswahl* – Wie heißt der Fischmensch, der Jinbe vor seinem Beitritt zu den Strohhüten als Kapitän anführte?  
-  **Fisher Tiger (Sonnen-Piraten)** · Arlong · Hody Jones · Jack
+- `o-302` *Auswahl* – Wie heißt der Gründer und erste Kapitän der Sonnen-Piraten, unter dem Jinbei (Jinbe) einst segelte?  
+  **Fisher Tiger** · Arlong · Hody Jones · Jack
 - `o-328` *Wer bin ich?* – Wer bin ich? Ich bin ein Fischmensch und Meister des Fischmenschen-Karate. / Ich war Samurai der Meere und saß in Impel Down. / Ich bin der Steuermann der Strohhutbande.  
   **Jinbe** · Arlong · Hody Jones · Fisher Tiger
 - `o-329` *Schätzfrage* – In welchem Jahr startete die Netflix-Realserie „One Piece“?  
@@ -2445,7 +2445,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-306` *Auswahl* – Wer ist der Zweite Hokage?  
   **Tobirama Senju** · Hashirama Senju · Hiruzen Sarutobi · Minato Namikaze
 - `o-332` *Auswahl* – Wie heißt die Technik, mit der Naruto und Sasuke am Ende die Göttin Kaguya versiegeln?  
-  **Das Sechs-Pfade-Siegel (Chibaku Tensei)** · Rasengan · Edo Tensei · Izanami
+  **Chibaku Tensei der Sechs Pfade** · Rasengan · Edo Tensei · Izanami
 - `o-333` *Schätzfrage* – In welchem Jahr endete der Naruto-Manga in Japan?  
   **2014** (Schieberegler 2005–2025, ±1 zählt als knapp)
 
@@ -2568,11 +2568,11 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-320` *Auswahl* – Wie heißt der Kinofilm von 2022 zu „Slam Dunk“?  
   **The First Slam Dunk** · Slam Dunk: Final Game · Slam Dunk Forever · Slam Dunk: Shohoku
 - `o-334` *Auswahl* – Wie heißt der Kinofilm von 2019 zu „Detektiv Conan“, der in Singapur spielt?  
-  **Die stahlblaue Faust (The Fist of Blue Sapphire)** · Das scharlachrote Geschoss · Der scharlachrote Liebesbrief · Zero the Enforcer
+  **Die stahlblaue Faust (The Fist of Blue Sapphire)** · Die scharlachrote Kugel · Der purpurrote Liebesbrief · Zero der Vollstrecker
 - `o-335` *Schätzfrage* – In welchem Jahr erschien der erste Conan-Kinofilm in Japan?  
   **1997** (Schieberegler 1990–2010, ±1 zählt als knapp)
 - `o-336` *Auswahl* – Welches Pokémon fängt Ash in der Hoenn-Region als Erstes?  
-  **Geckarbor** · Flemmli · Hydropi · Schwalbini
+  **Schwalbini** · Geckarbor · Flemmli · Hydropi
 - `o-337` *Auswahl* – In welcher Region beginnt die Serie „Pokémon Horizonte“ mit Liko und Roy?  
   **Paldea** · Kanto · Galar · Alola
 - `o-338` *Auswahl* – Wie viele Staffeln hat der Anime „Attack on Titan“?  
@@ -2714,18 +2714,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ein namenloser Arzt** · Tamayo · Yushiro · Kokushibo
 - `o-292` *Auswahl* – Wie heißt Sukunas Sphärenentfaltung?  
   **Bösartiger Schrein (Malevolent Shrine)** · Unendliche Leere · Chimären-Schatten · Gefängnisreich
-- `o-312` *Auswahl* – Welche Hashira trägt einen Hanafuda-ähnlichen Haori und ist der Wind-Hashira?  
+- `o-312` *Auswahl* – Wer ist der Wind-Hashira (Wind-Säule), erkennbar an seinem narbenübersäten Gesicht und Oberkörper?  
   **Sanemi Shinazugawa** · Gyomei Himejima · Obanai Iguro · Muichiro Tokito
 - `o-313` *Auswahl* – Wie heißt Gojos Sphärenentfaltung?  
   **Unendliche Leere (Unlimited Void)** · Bösartiger Schrein · Chimären-Schatten · Selbstverkörperung der Perfektion
-- `o-314` *Auswahl* – Wie heißt Dekus Quirk-Fähigkeit, bei der er Luft schnipst?  
+- `o-314` *Auswahl* – Wie heißt Dekus Angriff, bei dem er mit einem Fingerschnipsen eine Druckwelle erzeugt?  
   **Delaware Smash** · Detroit Smash · Texas Smash · Manchester Smash
-- `o-315` *Auswahl* – Welche vier Reiter gehören zu Makimas Teufelsart?  
-  **Die Teufel von Kontrolle, Krieg, Hunger und Tod** · Feuer, Wasser, Erde, Luft · Pistole, Bombe, Katana, Kettensäge · Fuchs, Hai, Geist, Engel
+- `o-315` *Auswahl* – Makima, der Kontrollteufel, gehört zu den „Vier Reitern“. Welche vier Teufel bilden diese Gruppe?  
+  **Kontrolle, Krieg, Hunger und Tod** · Feuer, Wasser, Erde und Luft · Pistole, Bombe, Katana und Kettensäge · Fuchs, Hai, Geist und Engel
 - `o-317` *Auswahl* – Wie heißt „Mein Schulgeist Hanako“ im Original?  
   **Jibaku Shōnen Hanako-kun** · Toire no Hanako-san · Hanako to Nene · Gakkō no Kaidan
 - `o-326` *Auswahl* – Wie heißt der weiß gekleidete Kult in „Fire Force“?  
-  **Die Weißgewandeten (White-Clad)** · Die Infernals · Die Schwarzen · Die Evangelisten
+  **Die Weißen Kapuzen (White-Clad)** · Die Infernals · Die Schwarzen · Die Aschebringer
 - `o-339` *Auswahl* – Wie heißt der Kinofilm von 2025 zu „Demon Slayer“ mit vollem Titel?  
   **Demon Slayer: Kimetsu no Yaiba – Infinity Castle** · Demon Slayer: Mugen Train · Demon Slayer: Swordsmith Village · Demon Slayer: Hashira Training
 - `o-340` *Auswahl* – Wie heißt Megumis Sphärenentfaltung?  
@@ -2813,10 +2813,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Hajime Komoto** · Yuki Tabata · Gege Akutami · Kazue Kato
 - `o-279` *Auswahl* – Wer hat „Noragami“ erschaffen?  
   **Adachitoka** · CLAMP · AidaIro · Yana Toboso
-- `o-316` *Auswahl* – Wer ist Kaisel in „Solo Leveling“?  
-  **Ein Wyvern, auf dem Jinwoo reitet** · Ein Ritter · Ein Orc · Ein Riese
-- `o-325` *Auswahl* – Wie heißt der Fluch des Abyss, der beim Aufstieg wirkt?  
-  **Der Fluch des Abgrunds (Aufstiegsfluch)** · Der Abstiegsfluch · Der Sonnenfluch · Der Nebelfluch
+- `o-316` *Auswahl* – Wer oder was ist Kaisel in „Solo Leveling“?  
+  **Ein Wyvern-Schatten, auf dem Jinwoo reitet** · Ein Ritter · Ein Orc · Ein Riese
+- `o-325` *Auswahl* – Wann wirkt der Fluch des Abgrunds in „Made in Abyss“?  
+  **Beim Aufstieg** · Beim Abstieg · Nur nachts · Nur bei Berührung von Relikten
 - `o-343` *Auswahl* – Wie heißt der Monarch der Zerstörung, der Endgegner von „Solo Leveling“?  
   **Antares** · Ashborn · Baran · Legia
 - `o-346` *Auswahl* – Wie heißt Rimurus Nation in „That Time I Got Reincarnated as a Slime“?  
@@ -3028,9 +3028,9 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Erinnerungen an Marnie** · Arrietty · Das wandelnde Schloss · Die Chroniken von Erdsee
 - `o-300` *Auswahl* – Wie heißt Shinkais Film von 2011 über ein Mädchen, das in die unterirdische Welt Agartha reist?  
   **Die Reise nach Agartha (Children Who Chase Lost Voices)** · The Place Promised in Our Early Days · Voices of a Distant Star · She and Her Cat
-- `o-323` *Auswahl* – Wie heißt der junge Pilot und Schwein-Mensch Porco Rosso mit bürgerlichem Namen?  
+- `o-323` *Auswahl* – Wie heißt der zum Schwein verwandelte Pilot Porco Rosso mit bürgerlichem Namen?  
   **Marco Pagot** · Gina · Curtis · Fio Piccolo
-- `o-350` *Auswahl* – Welcher Ghibli-Film basiert auf einer Erzählung von Isao Takahata über ein Mädchen und eine Reise aufs Land 1982?  
+- `o-350` *Auswahl* – Welcher Ghibli-Film von Isao Takahata erzählt von der 27-jährigen Taeko, die 1982 aufs Land reist und sich an ihre Kindheit erinnert?  
   **Tränen der Erinnerung** · Die letzten Glühwürmchen · Pom Poko · Meine Nachbarn die Yamadas
 
 ### Manga, Begriffe & Kultur
@@ -3093,7 +3093,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Der normale Sammelband, Kanzenban ist eine größere Luxusausgabe** · Ein Magazin, Kanzenban ein Band · Eine Farbausgabe, Kanzenban schwarz-weiß · Ein Webcomic, Kanzenban gedruckt
 - `o-324` *Auswahl* – Was ist ein „Yonkoma“-Manga typischerweise?  
   **Ein Comedy-Strip aus vier Panels** · Ein vierbändiger Manga · Ein Manga mit vier Hauptfiguren · Ein Manga in vier Farben
-- `o-351` *Auswahl* – Welcher deutsche Publisher brachte ab 2009 Anime-DVDs wie „Death Note“ und „Naruto Shippuden“ heraus und gehört heute zu Crunchyroll?  
+- `o-351` *Auswahl* – Welcher deutsche Anime-Publisher brachte ab 2009 unter diesem Namen Serien wie „Fairy Tail“ und „My Hero Academia“ auf DVD heraus und ging 2022 in der Marke Crunchyroll auf?  
   **Kazé** · Nipponart · peppermint anime · Universum Anime
-- `o-352` *Auswahl* – Wie nennt man die ersten gedruckten Seiten eines Magazins in Farbe, die oft bei neuen Serien vergeben werden?  
-  **Farbseiten (Color Pages) bzw. Cover-Platz** · Omake · Kakioroshi · Obi
+- `o-352` *Auswahl* – Wie heißt in japanischen Manga-Magazinen die farbige Eröffnungsstrecke am Heftanfang, die eine Serie zum Start oder als Auszeichnung bekommt?  
+  **Kantō Color (farbige Eröffnungsseiten)** · Omake · Kakioroshi · Obi
