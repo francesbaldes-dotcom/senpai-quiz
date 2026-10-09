@@ -191,8 +191,358 @@ Reihenfolge: erst die großen Lücken bei den Giganten, dann die Chart-Spitze, d
 6. **Distraktoren aus derselben Welt.** Falsche Antworten sollen plausibel sein: andere Figuren derselben Serie oder desselben Genres, keine erkennbar fremden Namen.
 7. **Pro Lieferung ein Smoke-Test.** JSON laden, Statistik prüfen, eine Runde im Browser spielen.
 
-## Was nach 800 kommt
+## Phase 2: von 800 auf 1.500 Fragen
+
+Stand 9. Oktober 2026, nach Erreichen der 800. Zielbild bei 1.500: Tier S je rund 60 Fragen, Tier A rund 40, Tier B 25, Tier C 20, Tier D 15 bis 18, Tier E 9, dazu 22 neue Serien mit je 6, Filme +35 und Kultur +38. Die Obergrenze je Serie bleibt bewusst unter dem, was ins Obskure kippt.
+
+Neu aufgenommene Serien (je 6 Fragen): Captain Tsubasa, Beyblade, Slam Dunk, Kuroko’s Basketball, Assassination Classroom, Food Wars, Fire Force, Noragami, Seraph of the End, My Dress-Up Darling, Horimiya, Your Lie in April, Violet Evergarden, Steins;Gate, Code Geass, Psycho-Pass, Berserk, Vinland Saga, Made in Abyss, Hell’s Paradise, Mashle, Akatsuki no Yona.
+
+Jede Lieferung wird nach dem Anhängen von zwei Prüfagenten gegen Wikipedia und Fandom-Wikis geprüft, Funde werden vor dem nächsten Schritt eingespielt.
+
+### Lieferung 9: 800 → 900 Fragen
+
+- One Piece: +2
+- Dragon Ball: +2
+- Naruto: +3
+- Detektiv Conan: +3
+- Pokémon: +3
+- Attack on Titan: +3
+- Demon Slayer: +3
+- Jujutsu Kaisen: +3
+- My Hero Academia: +3
+- Chainsaw Man: +3
+- Solo Leveling: +3
+- Death Note: +2
+- Fairy Tail: +2
+- Tokyo Ghoul: +2
+- Spy x Family: +2
+- Sailor Moon: +2
+- Yu-Gi-Oh!: +2
+- Haikyu!!: +2
+- Blue Lock: +2
+- Dandadan: +2
+- Die Tagebücher der Apothekerin: +2
+- Black Butler: +2
+- Frieren: +2
+- Dr. Stone: +2
+- The Promised Neverland: +2
+- Sakamoto Days: +1
+- Kagurabachi: +1
+- Hunter x Hunter: +2
+- Bleach: +2
+- Black Clover: +3
+- Oshi no Ko: +3
+- Cardcaptor Sakura: +3
+- Neon Genesis Evangelion: +3
+- Assassination Classroom: +3
+- Your Lie in April: +3
+- Made in Abyss: +3
+- Ghibli: +3
+- Hosoda, Kon, Yuasa, Oshii: +1
+- Kinofilme zu Serien: +2
+- Sprache und Alltag: +2
+- Essen und Japan-Reise: +2
+- Conventions, DACH-TV- und Verlagsgeschichte: +2
+- Manga-Handwerk und Begriffe: +2
+
+### Lieferung 10: 900 → 1000 Fragen
+
+- One Piece: +3
+- Dragon Ball: +3
+- Naruto: +3
+- Detektiv Conan: +3
+- Pokémon: +3
+- Attack on Titan: +3
+- Demon Slayer: +3
+- Jujutsu Kaisen: +3
+- My Hero Academia: +3
+- Chainsaw Man: +3
+- Solo Leveling: +3
+- Death Note: +2
+- Fairy Tail: +2
+- Tokyo Ghoul: +2
+- Spy x Family: +2
+- Sailor Moon: +2
+- Yu-Gi-Oh!: +2
+- Haikyu!!: +2
+- Blue Lock: +2
+- Dandadan: +2
+- Die Tagebücher der Apothekerin: +2
+- Black Butler: +2
+- Frieren: +2
+- Dr. Stone: +2
+- The Promised Neverland: +2
+- Sakamoto Days: +1
+- Kagurabachi: +1
+- Hunter x Hunter: +2
+- Bleach: +2
+- One-Punch Man: +3
+- Kaiju No. 8: +3
+- Ouran High School Host Club: +3
+- Klassiker-Block (Cowboy Bebop, Gintama, Yu Yu Hakusho): +3
+- Food Wars: +3
+- Violet Evergarden: +4
+- Hell’s Paradise: +4
+- Ghibli: +2
+- Hosoda, Kon, Yuasa, Oshii: +1
+- Kinofilme zu Serien: +1
+- Sprache und Alltag: +2
+- Essen und Japan-Reise: +1
+- Conventions, DACH-TV- und Verlagsgeschichte: +1
+- Manga-Handwerk und Begriffe: +2
+
+### Lieferung 11: 1000 → 1100 Fragen
+
+- One Piece: +3
+- Dragon Ball: +3
+- Naruto: +4
+- Detektiv Conan: +4
+- Pokémon: +4
+- Attack on Titan: +3
+- Demon Slayer: +3
+- Jujutsu Kaisen: +3
+- My Hero Academia: +3
+- Chainsaw Man: +3
+- Solo Leveling: +3
+- Death Note: +2
+- Fairy Tail: +2
+- Tokyo Ghoul: +2
+- Spy x Family: +2
+- Sailor Moon: +2
+- Yu-Gi-Oh!: +2
+- Haikyu!!: +1
+- Blue Lock: +1
+- Dandadan: +1
+- Die Tagebücher der Apothekerin: +1
+- Black Butler: +1
+- Frieren: +1
+- Dr. Stone: +1
+- The Promised Neverland: +1
+- Sakamoto Days: +1
+- Kagurabachi: +1
+- Hunter x Hunter: +2
+- Bleach: +2
+- Seven Deadly Sins: +4
+- Vagabond: +4
+- Kaguya-sama: +4
+- Shōjo-Klassiker (Wedding Peach, Fullmoon, Vampire Knight): +4
+- Fire Force: +4
+- Steins;Gate: +4
+- Mashle: +4
+- Ghibli: +2
+- Hosoda, Kon, Yuasa, Oshii: +1
+- Kinofilme zu Serien: +1
+- Sprache und Alltag: +2
+- Essen und Japan-Reise: +1
+- Conventions, DACH-TV- und Verlagsgeschichte: +1
+- Manga-Handwerk und Begriffe: +2
+
+### Lieferung 12: 1100 → 1200 Fragen
+
+- One Piece: +5
+- Dragon Ball: +4
+- Naruto: +4
+- Detektiv Conan: +4
+- Pokémon: +4
+- Attack on Titan: +3
+- Demon Slayer: +3
+- Jujutsu Kaisen: +3
+- My Hero Academia: +2
+- Chainsaw Man: +2
+- Solo Leveling: +2
+- Death Note: +1
+- Fairy Tail: +1
+- Tokyo Ghoul: +1
+- Spy x Family: +1
+- Sailor Moon: +1
+- Yu-Gi-Oh!: +1
+- Haikyu!!: +1
+- Blue Lock: +1
+- Dandadan: +1
+- Die Tagebücher der Apothekerin: +1
+- Black Butler: +1
+- Frieren: +1
+- Dr. Stone: +1
+- The Promised Neverland: +1
+- Sakamoto Days: +1
+- Kagurabachi: +1
+- Hunter x Hunter: +1
+- Bleach: +1
+- Blue Exorcist: +4
+- Mob Psycho 100: +4
+- Nana: +4
+- Captain Tsubasa: +6
+- Noragami: +6
+- Code Geass: +6
+- Akatsuki no Yona: +6
+- Ghibli: +2
+- Hosoda, Kon, Yuasa, Oshii: +1
+- Kinofilme zu Serien: +1
+- Sprache und Alltag: +2
+- Essen und Japan-Reise: +1
+- Conventions, DACH-TV- und Verlagsgeschichte: +1
+- Manga-Handwerk und Begriffe: +1
+- Ouran High School Host Club: +1
+
+### Lieferung 13: 1200 → 1300 Fragen
+
+- One Piece: +3
+- Dragon Ball: +4
+- Naruto: +4
+- Detektiv Conan: +4
+- Pokémon: +4
+- Attack on Titan: +3
+- Demon Slayer: +3
+- Jujutsu Kaisen: +3
+- My Hero Academia: +2
+- Chainsaw Man: +2
+- Solo Leveling: +2
+- Death Note: +1
+- Fairy Tail: +1
+- Tokyo Ghoul: +1
+- Spy x Family: +1
+- Sailor Moon: +1
+- Yu-Gi-Oh!: +1
+- Haikyu!!: +1
+- Blue Lock: +1
+- Dandadan: +1
+- Die Tagebücher der Apothekerin: +1
+- Black Butler: +1
+- Frieren: +1
+- Dr. Stone: +1
+- The Promised Neverland: +1
+- Sakamoto Days: +1
+- Kagurabachi: +1
+- Hunter x Hunter: +1
+- Bleach: +1
+- Bungo Stray Dogs: +4
+- Fullmetal Alchemist: +4
+- JoJo’s Bizarre Adventure: +4
+- Beyblade: +6
+- Seraph of the End: +6
+- Psycho-Pass: +6
+- Ghibli: +2
+- Makoto Shinkai: +5
+- Hosoda, Kon, Yuasa, Oshii: +1
+- Kinofilme zu Serien: +1
+- Sprache und Alltag: +2
+- Essen und Japan-Reise: +1
+- Conventions, DACH-TV- und Verlagsgeschichte: +1
+- Manga-Handwerk und Begriffe: +1
+- Black Clover: +1
+- One-Punch Man: +1
+- Kaiju No. 8: +1
+- Mashle: +1
+
+### Lieferung 14: 1300 → 1400 Fragen
+
+- One Piece: +5
+- Dragon Ball: +5
+- Naruto: +4
+- Detektiv Conan: +4
+- Pokémon: +4
+- Attack on Titan: +2
+- Demon Slayer: +2
+- Jujutsu Kaisen: +2
+- My Hero Academia: +2
+- Chainsaw Man: +2
+- Solo Leveling: +2
+- Death Note: +1
+- Fairy Tail: +1
+- Tokyo Ghoul: +1
+- Spy x Family: +1
+- Sailor Moon: +1
+- Yu-Gi-Oh!: +1
+- Haikyu!!: +1
+- Blue Lock: +1
+- Dandadan: +1
+- Die Tagebücher der Apothekerin: +1
+- Black Butler: +1
+- Frieren: +1
+- Dr. Stone: +1
+- The Promised Neverland: +1
+- Sakamoto Days: +1
+- Kagurabachi: +1
+- Hunter x Hunter: +1
+- Bleach: +1
+- Mein Schulgeist Hanako: +4
+- Digimon: +4
+- Inu Yasha / Ranma ½: +4
+- Slam Dunk: +6
+- My Dress-Up Darling: +6
+- Berserk: +6
+- Ghibli: +2
+- Hosoda, Kon, Yuasa, Oshii: +1
+- Kinofilme zu Serien: +1
+- Sprache und Alltag: +1
+- Essen und Japan-Reise: +1
+- Conventions, DACH-TV- und Verlagsgeschichte: +1
+- Manga-Handwerk und Begriffe: +1
+- Assassination Classroom: +1
+- Made in Abyss: +2
+- Your Lie in April: +1
+- Fire Force: +2
+- Steins;Gate: +2
+- Mashle: +1
+- Food Wars: +1
+
+### Lieferung 15: 1400 → 1500 Fragen
+
+- One Piece: +4
+- Dragon Ball: +4
+- Naruto: +3
+- Detektiv Conan: +3
+- Pokémon: +3
+- Attack on Titan: +2
+- Demon Slayer: +2
+- Jujutsu Kaisen: +2
+- My Hero Academia: +2
+- Chainsaw Man: +2
+- Solo Leveling: +2
+- Death Note: +1
+- Fairy Tail: +1
+- Tokyo Ghoul: +1
+- Spy x Family: +1
+- Sailor Moon: +1
+- Yu-Gi-Oh!: +1
+- Haikyu!!: +1
+- Blue Lock: +1
+- Dandadan: +1
+- Die Tagebücher der Apothekerin: +1
+- Black Butler: +1
+- Frieren: +1
+- Dr. Stone: +1
+- The Promised Neverland: +1
+- Sakamoto Days: +1
+- Kagurabachi: +1
+- Hunter x Hunter: +1
+- Bleach: +1
+- Tokyo Revengers: +4
+- Fruits Basket: +4
+- Isekai-Block (Re:Zero, KonoSuba, Slime, Shield Hero, SAO): +4
+- Kuroko’s Basketball: +6
+- Horimiya: +6
+- Vinland Saga: +6
+- Ghibli: +2
+- Hosoda, Kon, Yuasa, Oshii: +1
+- Kinofilme zu Serien: +1
+- Sprache und Alltag: +1
+- Essen und Japan-Reise: +1
+- Conventions, DACH-TV- und Verlagsgeschichte: +1
+- Manga-Handwerk und Begriffe: +1
+- Your Lie in April: +2
+- Assassination Classroom: +2
+- Food Wars: +2
+- Violet Evergarden: +2
+- Hell’s Paradise: +2
+- Oshi no Ko: +1
+- Cardcaptor Sakura: +1
+- Neon Genesis Evangelion: +1
+- Made in Abyss: +1
+- Klassiker-Block (Cowboy Bebop, Gintama, Yu Yu Hakusho): +1
+
+## Nach 1.500
 
 - Jahrescharts 2026 (Media Control, Carlsen, Egmont) im Januar 2027 prüfen und Tiers neu gewichten.
-- Serien, die bis dahin in die Top 25 aufsteigen (Kandidaten: Kaiju No. 8, Wind Breaker, Gachiakuta, The Color of the End), von Tier E nach C heben.
-- Bild-Fragen (Silhouette, Zitat, Opening) als neuer Fragetyp, sobald die App sie darstellen kann.
+- Aufsteiger in die Top 25 (Kandidaten: Gachiakuta, Wind Breaker, The Color of the End) nachziehen.
+- Bild- und Zitat-Fragen als neuer Fragetyp, sobald die App sie darstellen kann.
