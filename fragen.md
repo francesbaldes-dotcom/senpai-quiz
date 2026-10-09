@@ -1,8 +1,8 @@
-# Senpai Quiz – 1400 Fragen
+# Senpai Quiz – 1500 Fragen
 
 Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Antworten.
 
-## Einsteiger (478 Fragen)
+## Einsteiger (521 Fragen)
 
 ### One Piece
 
@@ -44,6 +44,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Seinen ganzen Körper** · Nur die Arme · Nur die Beine · Nur den Hals
 - `e-433` *Emoji-Rätsel* – Welche Serie ist gemeint? 🦌👨‍⚕️🍬  
   **One Piece (Chopper)** · Dr. Stone · Cells at Work! · Monster
+- `e-479` *Wahr/Falsch* – Nami liebt Geld und Mandarinen.  
+  **Wahr** · Falsch
+- `e-480` *Auswahl* – Was trägt Ruffy immer auf dem Kopf?  
+  **Einen Strohhut** · Eine Krone · Ein Kopftuch · Eine Mütze
 
 ### Dragon Ball
 
@@ -83,6 +87,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Capsule Corporation** · Red Ribbon · Kame House · Saiyan Inc.
 - `e-436` *Emoji-Rätsel* – Welche Serie ist gemeint? 🐒🟠🐢  
   **Dragon Ball** · Naruto · One Piece · Digimon
+- `e-481` *Wahr/Falsch* – Son-Goku isst außergewöhnlich viel.  
+  **Wahr** · Falsch
+- `e-482` *Auswahl* – Welche Farbe hat Son-Gokus Kampfanzug?  
+  **Orange** · Grün · Schwarz · Rot
 
 ### Naruto
 
@@ -126,6 +134,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `e-438` *Auswahl* – Welche Frisur hat Naruto?  
   **Stacheliges blondes Haar** · Lange schwarze Haare · Eine Glatze · Rote Locken
+- `e-483` *Wahr/Falsch* – Naruto will Hokage werden, damit alle im Dorf ihn anerkennen.  
+  **Wahr** · Falsch
 
 ### Shōnen
 
@@ -295,6 +305,22 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Basketball** · Volleyball · Fußball · Baseball
 - `e-471` *Auswahl* – Wie heißt die Hauptfigur mit den roten Haaren?  
   **Hanamichi Sakuragi** · Kaede Rukawa · Takenori Akagi · Ryota Miyagi
+- `e-484` *Wahr/Falsch* – Conan wohnt bei Ran und ihrem Vater Kogoro.  
+  **Wahr** · Falsch
+- `e-485` *Wahr/Falsch* – Pokémon-Trainer fangen Pokémon, um mit ihnen zu kämpfen.  
+  **Wahr** · Falsch
+- `e-486` *Wahr/Falsch* – Mikasa gehört zum Ackermann-Clan.  
+  **Wahr** · Falsch
+- `e-498` *Wahr/Falsch* – Hinata und Kageyama spielen im selben Team.  
+  **Wahr** · Falsch
+- `e-499` *Wahr/Falsch* – Isagi spielt als Stürmer.  
+  **Wahr** · Falsch
+- `e-509` *Wahr/Falsch* – Ichigo Kurosaki kann Geister sehen.  
+  **Wahr** · Falsch
+- `e-513` *Auswahl* – Was ist Kurokos Besonderheit im Basketball?  
+  **Er ist fast unsichtbar auf dem Feld und ein Meister des Passens** · Er ist der größte Spieler · Er wirft nur Dreier · Er ist der Kapitän
+- `e-514` *Auswahl* – Wie heißt Kurokos Partner mit den roten Haaren?  
+  **Taiga Kagami** · Daiki Aomine · Seijuro Akashi · Ryota Kise
 
 ### Neue Hits
 
@@ -498,6 +524,26 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Kagurabachi** · Bleach · Demon Slayer · Samurai Champloo
 - `e-467` *Wahr/Falsch* – Hanako trägt ein Küchenmesser bei sich.  
   **Wahr** · Falsch
+- `e-487` *Wahr/Falsch* – Tanjiro hat eine Narbe auf der Stirn.  
+  **Wahr** · Falsch
+- `e-488` *Wahr/Falsch* – Yuji Itadori ist zu Beginn Mitglied des Okkult-Clubs seiner Schule.  
+  **Wahr** · Falsch
+- `e-489` *Wahr/Falsch* – Deku hat grüne Haare.  
+  **Wahr** · Falsch
+- `e-490` *Wahr/Falsch* – Denji kann sich durch Blut heilen.  
+  **Wahr** · Falsch
+- `e-495` *Wahr/Falsch* – Anya hat rosa Haare.  
+  **Wahr** · Falsch
+- `e-500` *Wahr/Falsch* – Okarun trägt eine Brille.  
+  **Wahr** · Falsch
+- `e-504` *Wahr/Falsch* – Senku hat grün-weiße, nach oben stehende Haare.  
+  **Wahr** · Falsch
+- `e-506` *Wahr/Falsch* – Sakamoto trägt eine Brille.  
+  **Wahr** · Falsch
+- `e-507` *Wahr/Falsch* – Chihiro in „Kagurabachi“ ist ein Mädchen.  
+  **Falsch** · Wahr
+- `e-510` *Wahr/Falsch* – Takemichi reist in der Serie mehrfach zwischen Vergangenheit und Gegenwart.  
+  **Wahr** · Falsch
 
 ### Isekai & Fantasy
 
@@ -601,6 +647,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **The Promised Neverland** · Made in Abyss · Another · Angels of Death
 - `e-465` *Emoji-Rätsel* – Welche Serie ist gemeint? 🎣🐜🃏  
   **Hunter x Hunter** · Yu Yu Hakusho · JoJo’s Bizarre Adventure · Toriko
+- `e-491` *Wahr/Falsch* – Sung Jinwoo hat zu Beginn fast keine Kampfkraft.  
+  **Wahr** · Falsch
+- `e-493` *Wahr/Falsch* – Natsu Dragneel hat rosa Haare.  
+  **Wahr** · Falsch
+- `e-503` *Wahr/Falsch* – Frieren ist über tausend Jahre alt.  
+  **Wahr** · Falsch
+- `e-505` *Wahr/Falsch* – Die Kinder in „The Promised Neverland“ werden täglich getestet.  
+  **Wahr** · Falsch
+- `e-508` *Wahr/Falsch* – Gon hat grün-schwarze, stachelige Haare.  
+  **Wahr** · Falsch
+- `e-512` *Wahr/Falsch* – Kazuma aus „KonoSuba“ stirbt zu Beginn auf peinliche Weise.  
+  **Wahr** · Falsch
 
 ### Klassiker & Kult
 
@@ -712,6 +770,16 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Guts** · Griffith · Casca · Puck
 - `e-475` *Auswahl* – Womit kämpft Guts?  
   **Mit einem riesigen Schwert, dem Drachentöter** · Mit einem Bogen · Mit Magie · Mit zwei Dolchen
+- `e-492` *Wahr/Falsch* – Ryuk ist ein Shinigami.  
+  **Wahr** · Falsch
+- `e-494` *Wahr/Falsch* – Kaneki trägt im Kampf eine Augenklappe über dem Ghoul-Auge.  
+  **Wahr** · Falsch
+- `e-497` *Wahr/Falsch* – Yugi hat auffällig gestylte, mehrfarbige Haare.  
+  **Wahr** · Falsch
+- `e-517` *Auswahl* – In welcher Epoche spielt „Vinland Saga“?  
+  **In der Wikingerzeit um das Jahr 1000** · Im Mittelalter Japans · In der Antike · Im 19. Jahrhundert
+- `e-518` *Auswahl* – Wie heißt die Hauptfigur, die ihren Vater rächen will?  
+  **Thorfinn** · Askeladd · Thorkell · Knut
 
 ### Shōjo & Romance
 
@@ -799,6 +867,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Hina-Puppen** · Kimonos · Schwerter · Figuren aus Ton
 - `e-473` *Auswahl* – Wofür begeistert sich Marin Kitagawa?  
   **Cosplay** · Volleyball · Kochen · Malerei
+- `e-496` *Wahr/Falsch* – Bunny Tsukino ist zu Beginn 14 Jahre alt.  
+  **Wahr** · Falsch
+- `e-501` *Wahr/Falsch* – Maomao arbeitet zu Beginn als einfache Dienerin im Palast.  
+  **Wahr** · Falsch
+- `e-502` *Wahr/Falsch* – Sebastian Michaelis trägt immer weiße Handschuhe.  
+  **Wahr** · Falsch
+- `e-511` *Wahr/Falsch* – Tohru Honda lebt zu Beginn in einem Zelt.  
+  **Wahr** · Falsch
+- `e-515` *Auswahl* – Was versteckt Hori in „Horimiya“ vor ihren Mitschülern?  
+  **Dass sie zu Hause schlicht ist und den Haushalt führt** · Dass sie reich ist · Dass sie eine Zwillingsschwester hat · Dass sie Sängerin ist
+- `e-516` *Auswahl* – Was versteckt Miyamura unter seiner Schuluniform?  
+  **Tattoos und Piercings** · Eine Narbe · Einen Schwanz · Ein Tattoo seines Namens
 
 ### Ghibli & Kinofilme
 
@@ -864,6 +944,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Taki Tachibana** · Hodaka Morishima · Sōta Munakata · Takao Akizuki
 - `e-476` *Auswahl* – Welches Tier ist Totoro?  
   **Ein großer Waldgeist, der an eine Mischung aus Bär, Katze und Eule erinnert** · Ein Hund · Ein Drache · Ein Fuchs
+- `e-519` *Wahr/Falsch* – Hayao Miyazaki hat zwei Oscars für seine Filme gewonnen.  
+  **Wahr** · Falsch
 
 ### Manga, Begriffe & Kultur
 
@@ -989,8 +1071,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Fein gemahlener grüner Tee** · Ein Reiswein · Eine Suppe · Ein Fischgericht
 - `e-478` *Auswahl* – Was bedeutet „Oishii desu“?  
   **Es ist lecker** · Es ist teuer · Es ist heiß · Es ist fertig
+- `e-520` *Wahr/Falsch* – Das Wort „Anime“ ist die japanische Kurzform von „Animation“.  
+  **Wahr** · Falsch
+- `e-521` *Auswahl* – Was ist Edamame?  
+  **Gekochte grüne Sojabohnen** · Eingelegter Rettich · Süße Reisbällchen · Frittierte Garnelen
 
-## Fan (595 Fragen)
+## Fan (617 Fragen)
 
 ### One Piece
 
@@ -1309,6 +1395,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Kaede Rukawa** · Takenori Akagi · Hisashi Mitsui · Kiminobu Kogure
 - `f-579` *Auswahl* – Wie heißt die Schule in „Slam Dunk“?  
   **Shohoku** · Karasuno · Seirin · Teiko
+- `f-602` *Auswahl* – Wie heißt die legendäre Mittelschul-Mannschaft, aus der Kuroko stammt?  
+  **Generation der Wunder (Teiko)** · Shohoku · Karasuno · Seirin
+- `f-603` *Auswahl* – Wie heißt die Schule, für die Kuroko und Kagami spielen?  
+  **Seirin** · Shohoku · Teiko · Rakuzan
+- `f-604` *Auswahl* – Wie heißt das Model unter den Wunderkindern, das Techniken kopieren kann?  
+  **Ryota Kise** · Shintaro Midorima · Atsushi Murasakibara · Daiki Aomine
 
 ### Neue Hits
 
@@ -1568,6 +1660,16 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Er führt ein Plasmaschwert, Excalibur** · Er fliegt · Er friert · Er liest Gedanken
 - `f-595` *Auswahl* – Wie heißt Somas Vater in „Food Wars“, ein legendärer Koch?  
   **Joichiro Yukihira** · Senzaemon Nakiri · Azami Nakiri · Shinomiya
+- `f-596` *Auswahl* – Wie heißt Takemichis Freundin, deren Tod er verhindern will?  
+  **Hinata Tachibana** · Emma Sano · Senju Kawaragi · Yuzuha Shiba
+- `f-597` *Auswahl* – Wie heißt Hinatas Bruder, mit dem Takemichi per Handschlag die Zeitreise auslöst?  
+  **Naoto Tachibana** · Chifuyu Matsuno · Takashi Mitsuya · Keisuke Baji
+- `f-614` *Auswahl* – Wie heißt der rothaarige Schüler mit dem Hang zur Gewalt in „Assassination Classroom“?  
+  **Karma Akabane** · Nagisa Shiota · Ryoma Terasaka · Itona Horibe
+- `f-615` *Auswahl* – Wie heißt die Nakiri-Erbin, die Somas Rivalin wird?  
+  **Erina Nakiri** · Megumi Tadokoro · Alice Nakiri · Ikumi Mito
+- `f-617` *Auswahl* – Wie heißt Gabimarus Frau, zu der er zurückkehren will?  
+  **Yui** · Sagiri · Mei · Yuzuriha
 
 ### Isekai & Fantasy
 
@@ -1711,6 +1813,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ränge der Höhlenforscher** · Signalgeräte · Waffen · Relikte
 - `f-594` *Auswahl* – Wer ist Lance Crown in „Mashle“?  
   **Ein Mitschüler mit Gravitationsmagie, der Mashs Freund wird** · Ein Lehrer · Mashs Bruder · Der Schulleiter
+- `f-600` *Auswahl* – Wie heißt das Halbelfen-Mädchen, das Subaru in „Re:Zero“ liebt?  
+  **Emilia** · Rem · Ram · Beatrice
+- `f-601` *Auswahl* – Wie heißt die Explosionsmagierin in „KonoSuba“?  
+  **Megumin** · Aqua · Darkness · Wiz
 
 ### Klassiker & Kult
 
@@ -1862,6 +1968,14 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ein Ritual, bei dem Griffith seine Gefährten opfert** · Eine Sonnenfinsternis ohne Folgen · Ein Turnier · Eine Schlacht gegen Elfen
 - `f-593` *Auswahl* – Wie heißt Okabes beste Freundin, die „Tuturu“ sagt?  
   **Mayuri Shiina** · Kurisu Makise · Suzuha Amane · Moeka Kiryu
+- `f-608` *Auswahl* – Wer hat Thorfinns Vater Thors getötet?  
+  **Askeladd** · Thorkell · Knut · Floki
+- `f-609` *Auswahl* – Was ist Vinland?  
+  **Das Land im Westen, das Leif Eriksson entdeckte** · Eine Stadt in Dänemark · Ein Schiff · Eine Wikingerburg
+- `f-610` *Auswahl* – Was wird Thorfinn in der zweiten Staffel?  
+  **Ein Sklave auf einem Hof** · König von Dänemark · Ein Priester · Ein Händler
+- `f-616` *Auswahl* – Wie heißt Violets Major, dessen Worte sie nicht versteht?  
+  **Gilbert Bougainvillea** · Claudia Hodgins · Benedict Blue · Leon Stephanotis
 
 ### Shōjo & Romance
 
@@ -1977,6 +2091,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **CloverWorks** · Kyoto Animation · MAPPA · Bones
 - `f-591` *Auswahl* – Wie heißt Koseis Kindheitsfreundin in „Your Lie in April“?  
   **Tsubaki Sawabe** · Kaori Miyazono · Nagi Aiza · Emi Igawa
+- `f-598` *Auswahl* – In welches Tier verwandelt sich Yuki Soma?  
+  **In eine Ratte** · In eine Katze · In einen Hund · In einen Hasen
+- `f-599` *Auswahl* – In welches Tier verwandelt sich Shigure Soma?  
+  **In einen Hund** · In eine Ratte · In einen Tiger · In ein Schwein
+- `f-605` *Auswahl* – Wie heißt Horis kleiner Bruder?  
+  **Sota** · Kyosuke · Shu · Toru
+- `f-606` *Auswahl* – Welche Art von Geschichte ist „Horimiya“?  
+  **Eine Schul-Romance** · Ein Sport-Anime · Ein Isekai · Ein Horror
+- `f-607` *Auswahl* – Welches Studio animierte „Horimiya“ 2021?  
+  **CloverWorks** · Kyoto Animation · MAPPA · Madhouse
+- `f-613` *Auswahl* – Wie lautet Kaoris titelgebende Lüge in „Your Lie in April“?  
+  **Dass sie in Watari verliebt sei** · Dass sie Klavier spiele · Dass sie gesund sei · Dass sie aus Tokio komme
 
 ### Ghibli & Kinofilme
 
@@ -2084,6 +2210,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Der Junge und das Biest** · Wolfskinder · Mirai · Belle
 - `f-587` *Auswahl* – Wie heißt der Kinofilm 2023 zu „Blue Giant“ über einen jungen Saxofonisten?  
   **Blue Giant** · Blue Period · Blue Box · Blue Spring
+- `f-611` *Auswahl* – Welcher Film von Mamoru Hosoda spielt im Jahr 2010 um ein Mädchen namens Makoto?  
+  **Das Mädchen, das durch die Zeit sprang** · Summer Wars · Belle · Mirai
+- `f-612` *Auswahl* – Wie heißt der Dragon-Ball-Kinofilm von 2018 mit Broly?  
+  **Dragon Ball Super: Broly** · Dragon Ball Z: Kampf der Götter · Dragon Ball Super: Super Hero · Resurrection F
 
 ### Manga, Begriffe & Kultur
 
@@ -2212,7 +2342,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-588` *Auswahl* – Welche deutsche Stadt war bis 2022 Heimat der Anime-Convention Connichi?  
   **Kassel** · Wiesbaden · Mannheim · Düsseldorf
 
-## Otaku (327 Fragen)
+## Otaku (362 Fragen)
 
 ### One Piece
 
@@ -2246,6 +2376,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Santoryu (Drei-Schwerter-Stil)** · Ittoryu · Nitoryu · Kyutoryu
 - `o-302` *Auswahl* – Wie heißt der Fischmensch, der Jinbe vor seinem Beitritt zu den Strohhüten als Kapitän anführte?  
   **Fisher Tiger (Sonnen-Piraten)** · Arlong · Hody Jones · Jack
+- `o-328` *Wer bin ich?* – Wer bin ich? Ich bin ein Fischmensch und Meister des Fischmenschen-Karate. / Ich war Samurai der Meere und saß in Impel Down. / Ich bin der Steuermann der Strohhutbande.  
+  **Jinbe** · Arlong · Hody Jones · Fisher Tiger
+- `o-329` *Schätzfrage* – In welchem Jahr startete die Netflix-Realserie „One Piece“?  
+  **2023** (Schieberegler 2015–2030, ±0 zählt als knapp)
 
 ### Dragon Ball
 
@@ -2277,6 +2411,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Red-Ribbon-Armee** · Freezers Armee · Saiyajin-Armee · Pilaf-Bande
 - `o-304` *Auswahl* – Welcher Kämpfer hat drei Augen?  
   **Tenshinhan** · Yamchu · Chao-Zu · Kuririn
+- `o-330` *Reihenfolge* – Sortiere die Dragon-Ball-Serien nach ihrem Start, die älteste zuerst.  
+  **Dragon Ball (1986) → Dragon Ball Z (1989) → Dragon Ball GT (1996) → Dragon Ball Super (2015)**
+- `o-331` *Auswahl* – Wer ist C16 in „Dragon Ball Z“?  
+  **Ein sanfter Androide, der Tiere liebt und von Cell zerstört wird** · Vegetas Bruder · Ein Namekianer · Der Erfinder der Dragonballs
 
 ### Naruto
 
@@ -2306,6 +2444,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Rasenshuriken** · Chidori · Kirin · Odama Rasengan
 - `o-306` *Auswahl* – Wer ist der Zweite Hokage?  
   **Tobirama Senju** · Hashirama Senju · Hiruzen Sarutobi · Minato Namikaze
+- `o-332` *Auswahl* – Wie heißt die Technik, mit der Naruto und Sasuke am Ende die Göttin Kaguya versiegeln?  
+  **Das Sechs-Pfade-Siegel (Chibaku Tensei)** · Rasengan · Edo Tensei · Izanami
+- `o-333` *Schätzfrage* – In welchem Jahr endete der Naruto-Manga in Japan?  
+  **2014** (Schieberegler 2005–2025, ±1 zählt als knapp)
 
 ### Shōnen
 
@@ -2425,6 +2567,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Der Karren-Titan** · Der Kiefer-Titan · Der Kriegshammer-Titan · Der Weibliche Titan
 - `o-320` *Auswahl* – Wie heißt der Kinofilm von 2022 zu „Slam Dunk“?  
   **The First Slam Dunk** · Slam Dunk: Final Game · Slam Dunk Forever · Slam Dunk: Shohoku
+- `o-334` *Auswahl* – Wie heißt der Kinofilm von 2019 zu „Detektiv Conan“, der in Singapur spielt?  
+  **Die stahlblaue Faust (The Fist of Blue Sapphire)** · Das scharlachrote Geschoss · Der scharlachrote Liebesbrief · Zero the Enforcer
+- `o-335` *Schätzfrage* – In welchem Jahr erschien der erste Conan-Kinofilm in Japan?  
+  **1997** (Schieberegler 1990–2010, ±1 zählt als knapp)
+- `o-336` *Auswahl* – Welches Pokémon fängt Ash in der Hoenn-Region als Erstes?  
+  **Geckarbor** · Flemmli · Hydropi · Schwalbini
+- `o-337` *Auswahl* – In welcher Region beginnt die Serie „Pokémon Horizonte“ mit Liko und Roy?  
+  **Paldea** · Kanto · Galar · Alola
+- `o-338` *Auswahl* – Wie viele Staffeln hat der Anime „Attack on Titan“?  
+  **Vier** · Drei · Fünf · Sechs
+- `o-347` *Auswahl* – Wer hat „Kuroko’s Basketball“ erschaffen?  
+  **Tadatoshi Fujimaki** · Takehiko Inoue · Haruichi Furudate · Yoichi Takahashi
 
 ### Neue Hits
 
@@ -2572,6 +2726,24 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Jibaku Shōnen Hanako-kun** · Toire no Hanako-san · Hanako to Nene · Gakkō no Kaidan
 - `o-326` *Auswahl* – Wie heißt der weiß gekleidete Kult in „Fire Force“?  
   **Die Weißgewandeten (White-Clad)** · Die Infernals · Die Schwarzen · Die Evangelisten
+- `o-339` *Auswahl* – Wie heißt der Kinofilm von 2025 zu „Demon Slayer“ mit vollem Titel?  
+  **Demon Slayer: Kimetsu no Yaiba – Infinity Castle** · Demon Slayer: Mugen Train · Demon Slayer: Swordsmith Village · Demon Slayer: Hashira Training
+- `o-340` *Auswahl* – Wie heißt Megumis Sphärenentfaltung?  
+  **Chimären-Schatten-Garten** · Unendliche Leere · Bösartiger Schrein · Hundeloch
+- `o-341` *Auswahl* – Wer ist Nana Shimura?  
+  **Die siebte Trägerin von One For All und All Mights Mentorin** · Dekus Mutter · Shigarakis Schwester · Eine Lehrerin der U.A.
+- `o-342` *Auswahl* – Wer ist Kobeni Higashiyamas Teufelsvertrag-Partner?  
+  **Das ist unbekannt – sie verrät es nie** · Der Fuchsteufel · Der Geisterteufel · Der Zukunftsteufel
+- `o-344` *Auswahl* – Wie heißt der Intrigant, der Toman von innen zerstört?  
+  **Tetta Kisaki** · Shuji Hanma · Izana Kurokawa · Taiju Shiba
+- `o-354` *Auswahl* – Welches Studio animierte „Assassination Classroom“?  
+  **Lerche** · Bones · MAPPA · Wit Studio
+- `o-355` *Auswahl* – Wer schrieb „Food Wars“ (Story)?  
+  **Yuto Tsukuda (Zeichnungen Shun Saeki)** · Riichiro Inagaki · Yusei Matsui · Tsugumi Ohba
+- `o-357` *Auswahl* – Welches Studio animierte „Hell’s Paradise“?  
+  **MAPPA** · Bones · ufotable · Madhouse
+- `o-358` *Auswahl* – Wer zeichnet „Oshi no Ko“?  
+  **Mengo Yokoyari** · Aka Akasaka · Shinichi Fukuda · HERO
 
 ### Isekai & Fantasy
 
@@ -2645,6 +2817,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ein Wyvern, auf dem Jinwoo reitet** · Ein Ritter · Ein Orc · Ein Riese
 - `o-325` *Auswahl* – Wie heißt der Fluch des Abyss, der beim Aufstieg wirkt?  
   **Der Fluch des Abgrunds (Aufstiegsfluch)** · Der Abstiegsfluch · Der Sonnenfluch · Der Nebelfluch
+- `o-343` *Auswahl* – Wie heißt der Monarch der Zerstörung, der Endgegner von „Solo Leveling“?  
+  **Antares** · Ashborn · Baran · Legia
+- `o-346` *Auswahl* – Wie heißt Rimurus Nation in „That Time I Got Reincarnated as a Slime“?  
+  **Tempest (Jura-Tempest-Föderation)** · Liones · Fiore · Melromarc
+- `o-361` *Auswahl* – Wer ist Nanachi in „Made in Abyss“?  
+  **Ein hasenartiges Wesen, das einst ein Mensch war** · Ein Roboter · Rikos Mutter · Ein Weißpfeifen-Forscher
 
 ### Klassiker & Kult
 
@@ -2720,6 +2898,14 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Kentaro Miura** · Takehiko Inoue · Makoto Yukimura · Hirohiko Araki
 - `o-327` *Auswahl* – Was ist eine „D-Mail“ in „Steins;Gate“?  
   **Eine Nachricht in die Vergangenheit** · Eine E-Mail an SERN · Ein Chat mit Kurisu · Ein Zeitreise-Ticket
+- `o-349` *Auswahl* – Wer hat „Vinland Saga“ erschaffen?  
+  **Makoto Yukimura** · Kentaro Miura · Takehiko Inoue · Hiromu Arakawa
+- `o-356` *Auswahl* – Auf welcher Light Novel von Kana Akatsuki basiert „Violet Evergarden“?  
+  **Violet Evergarden** · Violet und der Major · Die Briefschreiberin · Auto Memory Doll
+- `o-360` *Auswahl* – Wie heißt der 17. Engel, der sich als Kaworu Nagisa ausgibt?  
+  **Tabris** · Adam · Lilith · Sachiel
+- `o-362` *Auswahl* – Wie heißt Spikes Partner und Ex-Polizist mit Metallarm in „Cowboy Bebop“?  
+  **Jet Black** · Vicious · Ed · Faye Valentine
 
 ### Shōjo & Romance
 
@@ -2783,6 +2969,14 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Der kühle Vizepräsident und Rechner** · Der Präsident · Einer der Zwillinge · Haruhis Cousin
 - `o-321` *Auswahl* – Wer hat „My Dress-Up Darling“ erschaffen?  
   **Shinichi Fukuda** · Aka Akasaka · HERO · Naoshi Arakawa
+- `o-345` *Auswahl* – Wie heißt das Oberhaupt der Familie Soma, dessen Wort Gesetz ist?  
+  **Akito Soma** · Hatori Soma · Kureno Soma · Ayame Soma
+- `o-348` *Auswahl* – Auf welchem Webcomic von HERO basiert „Horimiya“?  
+  **Hori-san to Miyamura-kun** · Kimi ni Todoke · Toradora! · Nisekoi
+- `o-353` *Auswahl* – Wer hat „Your Lie in April“ erschaffen?  
+  **Naoshi Arakawa** · Aka Akasaka · HERO · Shinichi Fukuda
+- `o-359` *Auswahl* – Wie heißt Sakuras Bruder in „Cardcaptor Sakura“?  
+  **Toya Kinomoto** · Yukito Tsukishiro · Syaoran · Eriol
 
 ### Ghibli & Kinofilme
 
@@ -2836,6 +3030,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Die Reise nach Agartha (Children Who Chase Lost Voices)** · The Place Promised in Our Early Days · Voices of a Distant Star · She and Her Cat
 - `o-323` *Auswahl* – Wie heißt der junge Pilot und Schwein-Mensch Porco Rosso mit bürgerlichem Namen?  
   **Marco Pagot** · Gina · Curtis · Fio Piccolo
+- `o-350` *Auswahl* – Welcher Ghibli-Film basiert auf einer Erzählung von Isao Takahata über ein Mädchen und eine Reise aufs Land 1982?  
+  **Tränen der Erinnerung** · Die letzten Glühwürmchen · Pom Poko · Meine Nachbarn die Yamadas
 
 ### Manga, Begriffe & Kultur
 
@@ -2897,3 +3093,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Der normale Sammelband, Kanzenban ist eine größere Luxusausgabe** · Ein Magazin, Kanzenban ein Band · Eine Farbausgabe, Kanzenban schwarz-weiß · Ein Webcomic, Kanzenban gedruckt
 - `o-324` *Auswahl* – Was ist ein „Yonkoma“-Manga typischerweise?  
   **Ein Comedy-Strip aus vier Panels** · Ein vierbändiger Manga · Ein Manga mit vier Hauptfiguren · Ein Manga in vier Farben
+- `o-351` *Auswahl* – Welcher deutsche Publisher brachte ab 2009 Anime-DVDs wie „Death Note“ und „Naruto Shippuden“ heraus und gehört heute zu Crunchyroll?  
+  **Kazé** · Nipponart · peppermint anime · Universum Anime
+- `o-352` *Auswahl* – Wie nennt man die ersten gedruckten Seiten eines Magazins in Farbe, die oft bei neuen Serien vergeben werden?  
+  **Farbseiten (Color Pages) bzw. Cover-Platz** · Omake · Kakioroshi · Obi

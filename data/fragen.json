@@ -19737,6 +19737,1352 @@
     "Shinomiya"
    ],
    "correct": 0
+  },
+  {
+   "id": "e-479",
+   "difficulty": 1,
+   "category": "onepiece",
+   "type": "true_false",
+   "question": "Nami liebt Geld und Mandarinen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-480",
+   "difficulty": 1,
+   "category": "onepiece",
+   "type": "multiple_choice",
+   "question": "Was trägt Ruffy immer auf dem Kopf?",
+   "answers": [
+    "Einen Strohhut",
+    "Eine Krone",
+    "Ein Kopftuch",
+    "Eine Mütze"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-328",
+   "difficulty": 3,
+   "category": "onepiece",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Jinbe",
+    "Arlong",
+    "Hody Jones",
+    "Fisher Tiger"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin ein Fischmensch und Meister des Fischmenschen-Karate.",
+    "Ich war Samurai der Meere und saß in Impel Down.",
+    "Ich bin der Steuermann der Strohhutbande."
+   ]
+  },
+  {
+   "id": "o-329",
+   "difficulty": 3,
+   "category": "onepiece",
+   "type": "estimate",
+   "question": "In welchem Jahr startete die Netflix-Realserie „One Piece“?",
+   "answers": [
+    "2023"
+   ],
+   "correct": 0,
+   "answer": 2023,
+   "min": 2015,
+   "max": 2030,
+   "tolerance": 0
+  },
+  {
+   "id": "e-481",
+   "difficulty": 1,
+   "category": "dragonball",
+   "type": "true_false",
+   "question": "Son-Goku isst außergewöhnlich viel.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-482",
+   "difficulty": 1,
+   "category": "dragonball",
+   "type": "multiple_choice",
+   "question": "Welche Farbe hat Son-Gokus Kampfanzug?",
+   "answers": [
+    "Orange",
+    "Grün",
+    "Schwarz",
+    "Rot"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-330",
+   "difficulty": 3,
+   "category": "dragonball",
+   "type": "order",
+   "question": "Sortiere die Dragon-Ball-Serien nach ihrem Start, die älteste zuerst.",
+   "answers": [
+    "Dragon Ball",
+    "Dragon Ball Z",
+    "Dragon Ball GT",
+    "Dragon Ball Super"
+   ],
+   "correct": 0,
+   "years": [
+    1986,
+    1989,
+    1996,
+    2015
+   ]
+  },
+  {
+   "id": "o-331",
+   "difficulty": 3,
+   "category": "dragonball",
+   "type": "multiple_choice",
+   "question": "Wer ist C16 in „Dragon Ball Z“?",
+   "answers": [
+    "Ein sanfter Androide, der Tiere liebt und von Cell zerstört wird",
+    "Vegetas Bruder",
+    "Ein Namekianer",
+    "Der Erfinder der Dragonballs"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-483",
+   "difficulty": 1,
+   "category": "naruto",
+   "type": "true_false",
+   "question": "Naruto will Hokage werden, damit alle im Dorf ihn anerkennen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-332",
+   "difficulty": 3,
+   "category": "naruto",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Technik, mit der Naruto und Sasuke am Ende die Göttin Kaguya versiegeln?",
+   "answers": [
+    "Das Sechs-Pfade-Siegel (Chibaku Tensei)",
+    "Rasengan",
+    "Edo Tensei",
+    "Izanami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-333",
+   "difficulty": 3,
+   "category": "naruto",
+   "type": "estimate",
+   "question": "In welchem Jahr endete der Naruto-Manga in Japan?",
+   "answers": [
+    "2014"
+   ],
+   "correct": 0,
+   "answer": 2014,
+   "min": 2005,
+   "max": 2025,
+   "tolerance": 1
+  },
+  {
+   "id": "e-484",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Conan wohnt bei Ran und ihrem Vater Kogoro.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-334",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Kinofilm von 2019 zu „Detektiv Conan“, der in Singapur spielt?",
+   "answers": [
+    "Die stahlblaue Faust (The Fist of Blue Sapphire)",
+    "Das scharlachrote Geschoss",
+    "Der scharlachrote Liebesbrief",
+    "Zero the Enforcer"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-335",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "In welchem Jahr erschien der erste Conan-Kinofilm in Japan?",
+   "answers": [
+    "1997"
+   ],
+   "correct": 0,
+   "answer": 1997,
+   "min": 1990,
+   "max": 2010,
+   "tolerance": 1
+  },
+  {
+   "id": "e-485",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Pokémon-Trainer fangen Pokémon, um mit ihnen zu kämpfen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-336",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Pokémon fängt Ash in der Hoenn-Region als Erstes?",
+   "answers": [
+    "Geckarbor",
+    "Flemmli",
+    "Hydropi",
+    "Schwalbini"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-337",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "In welcher Region beginnt die Serie „Pokémon Horizonte“ mit Liko und Roy?",
+   "answers": [
+    "Paldea",
+    "Kanto",
+    "Galar",
+    "Alola"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-486",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Mikasa gehört zum Ackermann-Clan.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-338",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie viele Staffeln hat der Anime „Attack on Titan“?",
+   "answers": [
+    "Vier",
+    "Drei",
+    "Fünf",
+    "Sechs"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-487",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Tanjiro hat eine Narbe auf der Stirn.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-339",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Kinofilm von 2025 zu „Demon Slayer“ mit vollem Titel?",
+   "answers": [
+    "Demon Slayer: Kimetsu no Yaiba – Infinity Castle",
+    "Demon Slayer: Mugen Train",
+    "Demon Slayer: Swordsmith Village",
+    "Demon Slayer: Hashira Training"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-488",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Yuji Itadori ist zu Beginn Mitglied des Okkult-Clubs seiner Schule.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-340",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Megumis Sphärenentfaltung?",
+   "answers": [
+    "Chimären-Schatten-Garten",
+    "Unendliche Leere",
+    "Bösartiger Schrein",
+    "Hundeloch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-489",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Deku hat grüne Haare.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-341",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist Nana Shimura?",
+   "answers": [
+    "Die siebte Trägerin von One For All und All Mights Mentorin",
+    "Dekus Mutter",
+    "Shigarakis Schwester",
+    "Eine Lehrerin der U.A."
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-490",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Denji kann sich durch Blut heilen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-342",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist Kobeni Higashiyamas Teufelsvertrag-Partner?",
+   "answers": [
+    "Das ist unbekannt – sie verrät es nie",
+    "Der Fuchsteufel",
+    "Der Geisterteufel",
+    "Der Zukunftsteufel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-491",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "true_false",
+   "question": "Sung Jinwoo hat zu Beginn fast keine Kampfkraft.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-343",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Monarch der Zerstörung, der Endgegner von „Solo Leveling“?",
+   "answers": [
+    "Antares",
+    "Ashborn",
+    "Baran",
+    "Legia"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-492",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "true_false",
+   "question": "Ryuk ist ein Shinigami.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-493",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "true_false",
+   "question": "Natsu Dragneel hat rosa Haare.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-494",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "true_false",
+   "question": "Kaneki trägt im Kampf eine Augenklappe über dem Ghoul-Auge.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-495",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Anya hat rosa Haare.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-496",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "true_false",
+   "question": "Bunny Tsukino ist zu Beginn 14 Jahre alt.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-497",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "true_false",
+   "question": "Yugi hat auffällig gestylte, mehrfarbige Haare.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-498",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Hinata und Kageyama spielen im selben Team.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-499",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Isagi spielt als Stürmer.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-500",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Okarun trägt eine Brille.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-501",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "true_false",
+   "question": "Maomao arbeitet zu Beginn als einfache Dienerin im Palast.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-502",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "true_false",
+   "question": "Sebastian Michaelis trägt immer weiße Handschuhe.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-503",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "true_false",
+   "question": "Frieren ist über tausend Jahre alt.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-504",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Senku hat grün-weiße, nach oben stehende Haare.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-505",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "true_false",
+   "question": "Die Kinder in „The Promised Neverland“ werden täglich getestet.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-506",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Sakamoto trägt eine Brille.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-507",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Chihiro in „Kagurabachi“ ist ein Mädchen.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-508",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "true_false",
+   "question": "Gon hat grün-schwarze, stachelige Haare.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-509",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Ichigo Kurosaki kann Geister sehen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-510",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Takemichi reist in der Serie mehrfach zwischen Vergangenheit und Gegenwart.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-596",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Takemichis Freundin, deren Tod er verhindern will?",
+   "answers": [
+    "Hinata Tachibana",
+    "Emma Sano",
+    "Senju Kawaragi",
+    "Yuzuha Shiba"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-597",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Hinatas Bruder, mit dem Takemichi per Handschlag die Zeitreise auslöst?",
+   "answers": [
+    "Naoto Tachibana",
+    "Chifuyu Matsuno",
+    "Takashi Mitsuya",
+    "Keisuke Baji"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-344",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Intrigant, der Toman von innen zerstört?",
+   "answers": [
+    "Tetta Kisaki",
+    "Shuji Hanma",
+    "Izana Kurokawa",
+    "Taiju Shiba"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-511",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "true_false",
+   "question": "Tohru Honda lebt zu Beginn in einem Zelt.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-598",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "In welches Tier verwandelt sich Yuki Soma?",
+   "answers": [
+    "In eine Ratte",
+    "In eine Katze",
+    "In einen Hund",
+    "In einen Hasen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-599",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "In welches Tier verwandelt sich Shigure Soma?",
+   "answers": [
+    "In einen Hund",
+    "In eine Ratte",
+    "In einen Tiger",
+    "In ein Schwein"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-345",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Oberhaupt der Familie Soma, dessen Wort Gesetz ist?",
+   "answers": [
+    "Akito Soma",
+    "Hatori Soma",
+    "Kureno Soma",
+    "Ayame Soma"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-512",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "true_false",
+   "question": "Kazuma aus „KonoSuba“ stirbt zu Beginn auf peinliche Weise.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-600",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Halbelfen-Mädchen, das Subaru in „Re:Zero“ liebt?",
+   "answers": [
+    "Emilia",
+    "Rem",
+    "Ram",
+    "Beatrice"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-601",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Explosionsmagierin in „KonoSuba“?",
+   "answers": [
+    "Megumin",
+    "Aqua",
+    "Darkness",
+    "Wiz"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-346",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt Rimurus Nation in „That Time I Got Reincarnated as a Slime“?",
+   "answers": [
+    "Tempest (Jura-Tempest-Föderation)",
+    "Liones",
+    "Fiore",
+    "Melromarc"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-513",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was ist Kurokos Besonderheit im Basketball?",
+   "answers": [
+    "Er ist fast unsichtbar auf dem Feld und ein Meister des Passens",
+    "Er ist der größte Spieler",
+    "Er wirft nur Dreier",
+    "Er ist der Kapitän"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-514",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Kurokos Partner mit den roten Haaren?",
+   "answers": [
+    "Taiga Kagami",
+    "Daiki Aomine",
+    "Seijuro Akashi",
+    "Ryota Kise"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-602",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die legendäre Mittelschul-Mannschaft, aus der Kuroko stammt?",
+   "answers": [
+    "Generation der Wunder (Teiko)",
+    "Shohoku",
+    "Karasuno",
+    "Seirin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-603",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Schule, für die Kuroko und Kagami spielen?",
+   "answers": [
+    "Seirin",
+    "Shohoku",
+    "Teiko",
+    "Rakuzan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-604",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Model unter den Wunderkindern, das Techniken kopieren kann?",
+   "answers": [
+    "Ryota Kise",
+    "Shintaro Midorima",
+    "Atsushi Murasakibara",
+    "Daiki Aomine"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-347",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer hat „Kuroko’s Basketball“ erschaffen?",
+   "answers": [
+    "Tadatoshi Fujimaki",
+    "Takehiko Inoue",
+    "Haruichi Furudate",
+    "Yoichi Takahashi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-515",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was versteckt Hori in „Horimiya“ vor ihren Mitschülern?",
+   "answers": [
+    "Dass sie zu Hause schlicht ist und den Haushalt führt",
+    "Dass sie reich ist",
+    "Dass sie eine Zwillingsschwester hat",
+    "Dass sie Sängerin ist"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-516",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was versteckt Miyamura unter seiner Schuluniform?",
+   "answers": [
+    "Tattoos und Piercings",
+    "Eine Narbe",
+    "Einen Schwanz",
+    "Ein Tattoo seines Namens"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-605",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt Horis kleiner Bruder?",
+   "answers": [
+    "Sota",
+    "Kyosuke",
+    "Shu",
+    "Toru"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-606",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Welche Art von Geschichte ist „Horimiya“?",
+   "answers": [
+    "Eine Schul-Romance",
+    "Ein Sport-Anime",
+    "Ein Isekai",
+    "Ein Horror"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-607",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Welches Studio animierte „Horimiya“ 2021?",
+   "answers": [
+    "CloverWorks",
+    "Kyoto Animation",
+    "MAPPA",
+    "Madhouse"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-348",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Auf welchem Webcomic von HERO basiert „Horimiya“?",
+   "answers": [
+    "Hori-san to Miyamura-kun",
+    "Kimi ni Todoke",
+    "Toradora!",
+    "Nisekoi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-517",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "In welcher Epoche spielt „Vinland Saga“?",
+   "answers": [
+    "In der Wikingerzeit um das Jahr 1000",
+    "Im Mittelalter Japans",
+    "In der Antike",
+    "Im 19. Jahrhundert"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-518",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Hauptfigur, die ihren Vater rächen will?",
+   "answers": [
+    "Thorfinn",
+    "Askeladd",
+    "Thorkell",
+    "Knut"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-608",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer hat Thorfinns Vater Thors getötet?",
+   "answers": [
+    "Askeladd",
+    "Thorkell",
+    "Knut",
+    "Floki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-609",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Was ist Vinland?",
+   "answers": [
+    "Das Land im Westen, das Leif Eriksson entdeckte",
+    "Eine Stadt in Dänemark",
+    "Ein Schiff",
+    "Eine Wikingerburg"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-610",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Was wird Thorfinn in der zweiten Staffel?",
+   "answers": [
+    "Ein Sklave auf einem Hof",
+    "König von Dänemark",
+    "Ein Priester",
+    "Ein Händler"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-349",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer hat „Vinland Saga“ erschaffen?",
+   "answers": [
+    "Makoto Yukimura",
+    "Kentaro Miura",
+    "Takehiko Inoue",
+    "Hiromu Arakawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-519",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "true_false",
+   "question": "Hayao Miyazaki hat zwei Oscars für seine Filme gewonnen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-350",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Ghibli-Film basiert auf einer Erzählung von Isao Takahata über ein Mädchen und eine Reise aufs Land 1982?",
+   "answers": [
+    "Tränen der Erinnerung",
+    "Die letzten Glühwürmchen",
+    "Pom Poko",
+    "Meine Nachbarn die Yamadas"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-611",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Film von Mamoru Hosoda spielt im Jahr 2010 um ein Mädchen namens Makoto?",
+   "answers": [
+    "Das Mädchen, das durch die Zeit sprang",
+    "Summer Wars",
+    "Belle",
+    "Mirai"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-612",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Dragon-Ball-Kinofilm von 2018 mit Broly?",
+   "answers": [
+    "Dragon Ball Super: Broly",
+    "Dragon Ball Z: Kampf der Götter",
+    "Dragon Ball Super: Super Hero",
+    "Resurrection F"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-520",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "true_false",
+   "question": "Das Wort „Anime“ ist die japanische Kurzform von „Animation“.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-521",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Edamame?",
+   "answers": [
+    "Gekochte grüne Sojabohnen",
+    "Eingelegter Rettich",
+    "Süße Reisbällchen",
+    "Frittierte Garnelen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-351",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Welcher deutsche Publisher brachte ab 2009 Anime-DVDs wie „Death Note“ und „Naruto Shippuden“ heraus und gehört heute zu Crunchyroll?",
+   "answers": [
+    "Kazé",
+    "Nipponart",
+    "peppermint anime",
+    "Universum Anime"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-352",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie nennt man die ersten gedruckten Seiten eines Magazins in Farbe, die oft bei neuen Serien vergeben werden?",
+   "answers": [
+    "Farbseiten (Color Pages) bzw. Cover-Platz",
+    "Omake",
+    "Kakioroshi",
+    "Obi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-613",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie lautet Kaoris titelgebende Lüge in „Your Lie in April“?",
+   "answers": [
+    "Dass sie in Watari verliebt sei",
+    "Dass sie Klavier spiele",
+    "Dass sie gesund sei",
+    "Dass sie aus Tokio komme"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-353",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer hat „Your Lie in April“ erschaffen?",
+   "answers": [
+    "Naoshi Arakawa",
+    "Aka Akasaka",
+    "HERO",
+    "Shinichi Fukuda"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-614",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt der rothaarige Schüler mit dem Hang zur Gewalt in „Assassination Classroom“?",
+   "answers": [
+    "Karma Akabane",
+    "Nagisa Shiota",
+    "Ryoma Terasaka",
+    "Itona Horibe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-354",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches Studio animierte „Assassination Classroom“?",
+   "answers": [
+    "Lerche",
+    "Bones",
+    "MAPPA",
+    "Wit Studio"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-615",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Nakiri-Erbin, die Somas Rivalin wird?",
+   "answers": [
+    "Erina Nakiri",
+    "Megumi Tadokoro",
+    "Alice Nakiri",
+    "Ikumi Mito"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-355",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer schrieb „Food Wars“ (Story)?",
+   "answers": [
+    "Yuto Tsukuda (Zeichnungen Shun Saeki)",
+    "Riichiro Inagaki",
+    "Yusei Matsui",
+    "Tsugumi Ohba"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-616",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Violets Major, dessen Worte sie nicht versteht?",
+   "answers": [
+    "Gilbert Bougainvillea",
+    "Claudia Hodgins",
+    "Benedict Blue",
+    "Leon Stephanotis"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-356",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Auf welcher Light Novel von Kana Akatsuki basiert „Violet Evergarden“?",
+   "answers": [
+    "Violet Evergarden",
+    "Violet und der Major",
+    "Die Briefschreiberin",
+    "Auto Memory Doll"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-617",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Gabimarus Frau, zu der er zurückkehren will?",
+   "answers": [
+    "Yui",
+    "Sagiri",
+    "Mei",
+    "Yuzuriha"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-357",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches Studio animierte „Hell’s Paradise“?",
+   "answers": [
+    "MAPPA",
+    "Bones",
+    "ufotable",
+    "Madhouse"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-358",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer zeichnet „Oshi no Ko“?",
+   "answers": [
+    "Mengo Yokoyari",
+    "Aka Akasaka",
+    "Shinichi Fukuda",
+    "HERO"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-359",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt Sakuras Bruder in „Cardcaptor Sakura“?",
+   "answers": [
+    "Toya Kinomoto",
+    "Yukito Tsukishiro",
+    "Syaoran",
+    "Eriol"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-360",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt der 17. Engel, der sich als Kaworu Nagisa ausgibt?",
+   "answers": [
+    "Tabris",
+    "Adam",
+    "Lilith",
+    "Sachiel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-361",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer ist Nanachi in „Made in Abyss“?",
+   "answers": [
+    "Ein hasenartiges Wesen, das einst ein Mensch war",
+    "Ein Roboter",
+    "Rikos Mutter",
+    "Ein Weißpfeifen-Forscher"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-362",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Spikes Partner und Ex-Polizist mit Metallarm in „Cowboy Bebop“?",
+   "answers": [
+    "Jet Black",
+    "Vicious",
+    "Ed",
+    "Faye Valentine"
+   ],
+   "correct": 0
   }
  ]
 }
