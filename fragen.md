@@ -1,8 +1,8 @@
-# Senpai Quiz – 200 Fragen
+# Senpai Quiz – 300 Fragen
 
 Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Antworten.
 
-## Einsteiger (69 Fragen)
+## Einsteiger (106 Fragen)
 
 ### Shōnen-Klassiker
 
@@ -30,6 +30,36 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Naruto Uzumaki** · Sasuke Uchiha · Monkey D. Ruffy · Son-Goku
 - `e-069` *Emoji-Rätsel* – Welche Serie ist gemeint? ⚡🐭🧢  
   **Pokémon** · Digimon · Yu-Gi-Oh! · Dragon Ball
+- `e-070` *Auswahl* – Welchen Namen gibt sich Shinichi Kudo in „Detektiv Conan“, nachdem er geschrumpft wurde?  
+  **Conan Edogawa** · Kaito Kid · Heiji Hattori · Kogoro Mori
+- `e-071` *Emoji-Rätsel* – Welche Serie ist gemeint? 🔍👓🧒  
+  **Detektiv Conan** · Death Note · Hunter x Hunter · Yu-Gi-Oh!
+- `e-072` *Auswahl* – Um welche Sportart geht es in „Haikyu!!“?  
+  **Volleyball** · Basketball · Fußball · Baseball
+- `e-073` *Auswahl* – Um welche Sportart geht es in „Blue Lock“?  
+  **Fußball** · Volleyball · Tennis · Boxen
+- `e-074` *Wahr/Falsch* – Ashs Pikachu weigert sich, in seinem Pokéball zu bleiben.  
+  **Wahr** · Falsch
+- `e-075` *Auswahl* – Welchen goldenen Gegenstand trägt Yugi in „Yu-Gi-Oh!“ um den Hals?  
+  **Das Millennium-Puzzle** · Einen Dragonball · Ein kleines Death Note · Einen Pokéball
+- `e-076` *Auswahl* – Wer ist die Navigatorin der Strohhutbande in „One Piece“?  
+  **Nami** · Nico Robin · Boa Hancock · Vivi
+- `e-077` *Auswahl* – Wie heißt Son-Gokus bekannteste Angriffstechnik?  
+  **Kamehameha** · Rasengan · Chidori · Bankai
+- `e-078` *Auswahl* – Wie heißt der maskierte Lehrer von Team 7 in „Naruto“?  
+  **Kakashi Hatake** · Jiraiya · Iruka Umino · Asuma Sarutobi
+- `e-079` *Wer bin ich?* – Wer bin ich? Ich trage immer einen roten Schal. / Ich gehöre zu den besten Soldatinnen im Kampf gegen die Titanen. / Eren ist mir wichtiger als alles andere.  
+  **Mikasa Ackermann** · Annie Leonhart · Sasha Braus · Historia Reiss
+- `e-080` *Wahr/Falsch* – Eren Jäger aus „Attack on Titan“ kann sich selbst in einen Titanen verwandeln.  
+  **Wahr** · Falsch
+- `e-081` *Auswahl* – Welche Haarfarbe hat Ichigo Kurosaki aus „Bleach“?  
+  **Orange** · Blau · Schwarz · Weiß
+- `e-082` *Auswahl* – Wovon ernähren sich die Ghoule in „Tokyo Ghoul“?  
+  **Von Menschenfleisch** · Von Reis · Von Seelen · Von Sonnenlicht
+- `e-083` *Emoji-Rätsel* – Welche Serie ist gemeint? 🏐🐦‍⬛🧡  
+  **Haikyu!!** · Kuroko’s Basketball · Blue Lock · Free!
+- `e-106` *Wahr/Falsch* – Ziel des Projekts „Blue Lock“ ist es, den besten Torwart Japans zu finden.  
+  **Falsch** · Wahr
 
 ### Shōjo & Romance
 
@@ -53,6 +83,14 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `e-052` *Wer bin ich?* – Wer bin ich? Meine blonden Haare trage ich in zwei Knoten mit langen Zöpfen. / Ich esse gern und komme oft zu spät zur Schule. / Mit einer magischen Brosche verwandle ich mich in eine Kriegerin.  
   **Bunny Tsukino** · Rei Hino · Sakura Kinomoto · Tohru Honda
+- `e-096` *Auswahl* – Wo arbeitet Maomao in „Die Tagebücher der Apothekerin“?  
+  **Im Palast des Kaisers** · In einem Krankenhaus in Tokio · Auf einem Piratenschiff · In einer Zauberschule
+- `e-097` *Auswahl* – Was ist Sebastian Michaelis in „Black Butler“ in Wahrheit?  
+  **Ein Dämon** · Ein Vampir · Ein Roboter · Ein Engel
+- `e-098` *Auswahl* – Wie heißt die weiße Katze in „Sailor Moon“, die zu Sailor Venus gehört?  
+  **Artemis** · Luna · Diana · Jiji
+- `e-099` *Wahr/Falsch* – Chibiusa ist Bunnys Tochter aus der Zukunft.  
+  **Wahr** · Falsch
 
 ### Studio-Filme
 
@@ -78,6 +116,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `e-058` *Auswahl* – Wer hält in „Das wandelnde Schloss“ das Schloss in Gang?  
   **Der Feuerdämon Calcifer** · Eine Dampfmaschine · Ein Windrad · Ein Zauberstab
+- `e-100` *Auswahl* – Welches Fahrzeug bringt Satsuki und Mei in „Mein Nachbar Totoro“ ans Ziel?  
+  **Der Katzenbus** · Der Katzenzug · Das Katzenschiff · Das Katzenflugzeug
+- `e-101` *Wahr/Falsch* – „Demon Slayer: Infinity Castle“ wurde 2025 zum weltweit erfolgreichsten Anime-Film aller Zeiten.  
+  **Wahr** · Falsch
+- `e-102` *Auswahl* – Welches geklonte Pokémon ist der Gegner in „Pokémon – Der Film“?  
+  **Mewtu** · Mew · Lugia · Glurak
 
 ### Manga & Mangaka
 
@@ -105,6 +149,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Japan** · China · Südkorea · Frankreich
 - `e-064` *Wer bin ich?* – Wer bin ich? Ich bin Mangaka. / Ich habe einen Jungen mit Strohhut erfunden. / Mein Manga gehört zu den meistverkauften der Welt.  
   **Eiichirō Oda** · Akira Toriyama · Masashi Kishimoto · Tite Kubo
+- `e-105` *Auswahl* – Wer hat „Detektiv Conan“ erschaffen?  
+  **Gosho Aoyama** · Eiichirō Oda · Akira Toriyama · Masashi Kishimoto
 
 ### Neue Serien
 
@@ -130,6 +176,30 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `e-067` *Wer bin ich?* – Wer bin ich? Ich bin ein kleines Mädchen. / Ich liebe Erdnüsse. / Ich kann Gedanken lesen.  
   **Anya Forger** · Yor Forger · Nezuko Kamado · Frieren
+- `e-084` *Auswahl* – Wie heißt die Heldenschule, auf die Deku in „My Hero Academia“ geht?  
+  **U.A. High** · Konoha-Akademie · Eden Academy · Tokyo Jujutsu High
+- `e-085` *Auswahl* – Woran zieht Denji in „Chainsaw Man“, um sich zu verwandeln?  
+  **An der Starterleine an seiner Brust** · An einem Hebel auf seinem Rücken · An einem Ring an seinem Finger · An einer Kette um seinen Hals
+- `e-086` *Auswahl* – Wie heißt die Hauptfigur von „Solo Leveling“?  
+  **Sung Jinwoo** · Cha Hae-in · Go Gunhee · Choi Jong-in
+- `e-087` *Auswahl* – Als was galt Jinwoo zu Beginn von „Solo Leveling“?  
+  **Als schwächster Jäger der Menschheit** · Als stärkster Jäger Koreas · Als König der Piraten · Als Dämonenkönig
+- `e-088` *Auswahl* – Wer ist Sukuna in „Jujutsu Kaisen“?  
+  **Der König der Flüche** · Ein Shinigami · Ein Titan · Ein Pirat
+- `e-089` *Auswahl* – Woran glauben Momo und Okarun in „Dandadan“ zu Beginn?  
+  **Momo an Geister, Okarun an Aliens** · Momo an Aliens, Okarun an Geister · Beide an Geister · Beide an gar nichts
+- `e-090` *Emoji-Rätsel* – Welche Serie ist gemeint? 👻👽👵  
+  **Dandadan** · Mob Psycho 100 · Jujutsu Kaisen · Mein Schulgeist Hanako
+- `e-091` *Auswahl* – Was ist in „Dr. Stone“ mit der Menschheit passiert?  
+  **Alle Menschen wurden zu Stein** · Alle Menschen wurden zu Titanen · Alle Menschen sind verschwunden · Alle Menschen wurden zu Dämonen
+- `e-092` *Emoji-Rätsel* – Welche Serie ist gemeint? 🛒🔫🍙  
+  **Sakamoto Days** · Spy x Family · Gintama · Hitman Reborn!
+- `e-093` *Auswahl* – Wo wachsen Emma, Norman und Ray in „The Promised Neverland“ auf?  
+  **In einem Waisenhaus** · In einem Internat · Auf einem Piratenschiff · In einem Tempel
+- `e-094` *Wahr/Falsch* – Tanjiro aus „Demon Slayer“ verkauft Holzkohle, bevor er Dämonenjäger wird.  
+  **Wahr** · Falsch
+- `e-095` *Auswahl* – Wie heißt die Eliteschule, die Anya in „Spy x Family“ besucht?  
+  **Eden Academy** · U.A. High · Ouran-Akademie · Shuchiin-Akademie
 
 ### Begriffe & Kultur
 
@@ -159,8 +229,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Karaoke** · Cosplay · Origami · Ikebana
 - `e-047` *Auswahl* – Was bedeutet „Baka“?  
   **Dummkopf** · Freund · Lehrer · Katze
+- `e-103` *Auswahl* – Wie nennt man das Gegenstück zum „Senpai“, also die jüngere Person?  
+  **Kōhai** · Sensei · Sama · Kun
+- `e-104` *Auswahl* – Welcher deutsche Sender zeigte ab 1999 „Pokémon“ und später „Naruto“ und „One Piece“?  
+  **RTL II** · ZDF · ProSieben · KiKA
 
-## Fan (81 Fragen)
+## Fan (119 Fragen)
 
 ### Shōnen-Klassiker
 
@@ -188,6 +262,38 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `f-081` *Schätzfrage* – Wie viele Bände hat der Manga „Naruto“?  
   **72** (Schieberegler 20–120, ±3 zählt als knapp)
+- `f-082` *Auswahl* – Womit verstellt Conan seine Stimme, wenn er Fälle löst?  
+  **Mit seiner Fliege** · Mit seiner Armbanduhr · Mit seiner Brille · Mit seinen Schuhen
+- `f-083` *Wer bin ich?* – Wer bin ich? Ich sehe aus wie ein Grundschüler, bin aber eigentlich Oberschüler. / Ich wohne bei einem Detektiv, der sich mit meinen gelösten Fällen schmückt. / Meine große Liebe Ran weiß nicht, wer ich wirklich bin.  
+  **Conan Edogawa** · Heiji Hattori · Kaito Kid · Kogoro Mori
+- `f-084` *Auswahl* – Welche Magie beherrscht Natsu in „Fairy Tail“?  
+  **Feuer-Drachentöter-Magie** · Eismagie · Stellargeister-Magie · Requip-Magie
+- `f-085` *Auswahl* – Wie heißt Natsus blaue, fliegende Katze in „Fairy Tail“?  
+  **Happy** · Carla · Plue · Lily
+- `f-086` *Auswahl* – Wie wird Tobio Kageyama in „Haikyu!!“ genannt?  
+  **König des Spielfelds** · Kleiner Riese · Der eiserne Blocker · Der Ass
+- `f-087` *Auswahl* – Wie heißt die Hauptfigur von „Blue Lock“?  
+  **Yoichi Isagi** · Rin Itoshi · Seishiro Nagi · Meguru Bachira
+- `f-088` *Auswahl* – Wodurch wird Ken Kaneki in „Tokyo Ghoul“ zum Halb-Ghoul?  
+  **Durch die Organe eines Ghouls nach einem Unfall** · Durch einen Biss · Durch einen Fluch · Durch ein Experiment der Regierung
+- `f-089` *Auswahl* – Wer gibt Ichigo in „Bleach“ seine Shinigami-Kräfte?  
+  **Rukia Kuchiki** · Orihime Inoue · Uryu Ishida · Renji Abarai
+- `f-090` *Wer bin ich?* – Wer bin ich? Ich leite einen riesigen Konzern. / Mein Lieblingsmonster ist der Blauäugige weiße Drache. / Yugi ist mein größter Rivale.  
+  **Seto Kaiba** · Joey Wheeler · Maximillion Pegasus · Bakura
+- `f-091` *Auswahl* – Wer hat Ruffy seinen Strohhut geschenkt?  
+  **Shanks** · Gol D. Roger · Portgas D. Ace · Weißbart
+- `f-092` *Auswahl* – Wie lautet Son-Gokus Name als Saiyajin?  
+  **Kakarott** · Raditz · Bardock · Nappa
+- `f-093` *Auswahl* – Wie heißt Ashs Heimatstadt in der deutschen Fassung von „Pokémon“?  
+  **Alabastia** · Vertania City · Marmoria City · Orania City
+- `f-094` *Wahr/Falsch* – Ash Ketchum wurde 2022 im Anime endlich Pokémon-Weltmeister.  
+  **Wahr** · Falsch
+- `f-095` *Auswahl* – Wie heißt die Einheit in „Attack on Titan“, die außerhalb der Mauern erkundet?  
+  **Aufklärungstrupp** · Militärpolizei · Mauergarnison · Königsgarde
+- `f-096` *Reihenfolge* – Sortiere die Anime nach ihrem Start in Japan, den ältesten zuerst.  
+  **Detektiv Conan (1996) → Pokémon (1997) → One Piece (1999) → Naruto (2002)**
+- `f-097` *Schätzfrage* – Wie viele Bände hat der Manga „Attack on Titan“?  
+  **34** (Schieberegler 10–80, ±3 zählt als knapp)
 
 ### Shōjo & Romance
 
@@ -219,6 +325,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Miyuki Shirogane** · Kaguya Shinomiya · Tamaki Suoh · Mamoru Chiba
 - `f-055` *Auswahl* – Wer ist der Präsident des Host Clubs in „Ouran High School Host Club“?  
   **Tamaki Suoh** · Kyoya Ootori · Hikaru Hitachiin · Takashi Morinozuka
+- `f-110` *Auswahl* – Worin kennt sich Maomao in „Die Tagebücher der Apothekerin“ besonders gut aus?  
+  **In Giften und Heilkräutern** · In Kampfkunst · In Kalligrafie · Im Tanz
+- `f-111` *Auswahl* – Wie heißt der junge Earl, dem Sebastian in „Black Butler“ dient?  
+  **Ciel Phantomhive** · Alois Trancy · Edward Midford · Vincent Phantomhive
+- `f-112` *Wer bin ich?* – Wer bin ich? Ich bin Butler in einem Herrenhaus im England des 19. Jahrhunderts. / Ich diene einem jungen Earl mit Augenklappe. / Ich bin einfach ein teuflisch guter Butler.  
+  **Sebastian Michaelis** · Tamaki Suoh · Grell Sutcliff · Howl
 
 ### Studio-Filme
 
@@ -254,6 +366,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ashitaka** · Haku · Hauro · Pazu
 - `f-063` *Auswahl* – Welcher Ghibli-Film dreht sich um eine fliegende Stadt?  
   **Das Schloss im Himmel** · Porco Rosso · Nausicaä aus dem Tal der Winde · Arrietty
+- `f-113` *Auswahl* – Welcher Film von Hayao Miyazaki gewann 2024 den Oscar als bester Animationsfilm?  
+  **Der Junge und der Reiher** · Chihiros Reise ins Zauberland · Suzume · Belle
+- `f-114` *Auswahl* – Welcher Hashira stirbt in „Demon Slayer: Mugen Train“?  
+  **Kyojuro Rengoku** · Giyu Tomioka · Tengen Uzui · Shinobu Kocho
 
 ### Manga & Mangaka
 
@@ -285,6 +401,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Manhua** · Manhwa · Webtoon · Yonkoma
 - `f-072` *Schätzfrage* – Wie viele Bände hat der Manga „Death Note“?  
   **12** (Schieberegler 1–40, ±1 zählt als knapp)
+- `f-115` *Auswahl* – Wer hat „My Hero Academia“ erschaffen?  
+  **Kohei Horikoshi** · Gege Akutami · Tatsuki Fujimoto · Yuki Tabata
+- `f-116` *Auswahl* – Wer hat „Jujutsu Kaisen“ erschaffen?  
+  **Gege Akutami** · Kohei Horikoshi · Yukinobu Tatsu · Koyoharu Gotouge
+- `f-117` *Wahr/Falsch* – Der Manga „Jujutsu Kaisen“ wurde 2024 abgeschlossen.  
+  **Wahr** · Falsch
 
 ### Neue Serien
 
@@ -316,6 +438,30 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Frieren** · Spy x Family · Oshi no Ko · Mob Psycho 100
 - `f-079` *Wahr/Falsch* – Saitama aus „One Punch Man“ hat durch sein hartes Training alle Haare verloren.  
   **Wahr** · Falsch
+- `f-098` *Auswahl* – Wie heißt Denjis Partnerin mit den Hörnern in „Chainsaw Man“?  
+  **Power** · Makima · Kobeni · Himeno
+- `f-099` *Auswahl* – Woraus besteht Jinwoos Armee in „Solo Leveling“?  
+  **Aus den Schatten besiegter Gegner** · Aus Robotern · Aus Drachen · Aus Klonen seiner selbst
+- `f-100` *Wer bin ich?* – Wer bin ich? Ich galt als schwächster Jäger der Menschheit. / Ein geheimnisvolles System lässt mich aufleveln wie in einem Spiel. / Ich befehlige eine Armee aus Schatten.  
+  **Sung Jinwoo** · Yuji Itadori · Asta · Izuku Midoriya
+- `f-101` *Auswahl* – Wie heißt die Geisteroma, die Okarun in „Dandadan“ verflucht?  
+  **Turbo-Oma** · Hanako · Sadako · Kuchisake-onna
+- `f-102` *Wer bin ich?* – Wer bin ich? Ich bin ein Wissenschaftsgenie. / Nach rund 3.700 Jahren als Statue bin ich wieder aufgewacht. / Ich will die Zivilisation mit der Kraft der Wissenschaft wieder aufbauen.  
+  **Senku Ishigami** · Rintaro Okabe · Shiro · Light Yagami
+- `f-103` *Auswahl* – Was ist das dunkle Geheimnis des Waisenhauses in „The Promised Neverland“?  
+  **Die Kinder werden als Nahrung für Dämonen aufgezogen** · Die Kinder werden zu Soldaten ausgebildet · Die Kinder werden an Piraten verkauft · Die Kinder sind Roboter
+- `f-104` *Auswahl* – Was war Taro Sakamoto aus „Sakamoto Days“, bevor er einen Kiosk eröffnete?  
+  **Ein legendärer Auftragskiller** · Ein Polizist · Ein Sumoringer · Ein Sternekoch
+- `f-105` *Auswahl* – Was war Chihiros Vater in „Kagurabachi“ von Beruf?  
+  **Schwertschmied** · Samurai · Mönch · Fischer
+- `f-106` *Wahr/Falsch* – Izuku Midoriya aus „My Hero Academia“ wurde ohne Superkraft geboren.  
+  **Wahr** · Falsch
+- `f-107` *Wer bin ich?* – Wer bin ich? Meine Superkraft lässt meinen Schweiß explodieren. / Deku und ich kennen uns seit der Kindheit. / Ich bin laut, aufbrausend und will die Nummer eins werden.  
+  **Katsuki Bakugo** · Shoto Todoroki · Eijiro Kirishima · Tenya Iida
+- `f-108` *Emoji-Rätsel* – Welche Serie ist gemeint? 🪚😈🐕  
+  **Chainsaw Man** · Jujutsu Kaisen · Devilman Crybaby · Fire Force
+- `f-109` *Reihenfolge* – Sortiere diese Anime nach ihrem Start, den ältesten zuerst.  
+  **My Hero Academia (2016) → Jujutsu Kaisen (2020) → Chainsaw Man (2022) → Solo Leveling (2024)**
 
 ### Begriffe & Kultur
 
@@ -341,8 +487,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **17** (Schieberegler 5–40, ±1 zählt als knapp)
 - `f-046` *Wahr/Falsch* – Mit „-kun“ spricht man in Japan vor allem ältere, besonders respektierte Personen an.  
   **Falsch** · Wahr
+- `f-118` *Auswahl* – In welcher deutschen Stadt findet die Anime-Convention AnimagiC statt?  
+  **Mannheim** · Köln · Berlin · Leipzig
+- `f-119` *Auswahl* – Was ist ein Webtoon?  
+  **Ein Comic, der fürs Smartphone gemacht ist und vertikal gescrollt wird** · Ein Anime, der nur online läuft · Ein animierter Werbespot · Ein Manga in Farbe
 
-## Otaku (50 Fragen)
+## Otaku (75 Fragen)
 
 ### Shōnen-Klassiker
 
@@ -366,6 +516,28 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Tony Tony Chopper** · Brook · Franky · Lysop
 - `o-050` *Reihenfolge* – In welcher Reihenfolge lernt Ruffy diese späteren Crewmitglieder kennen?  
   **Lorenor Zorro → Nami → Lysop → Sanji**
+- `o-051` *Auswahl* – Wie heißt das Gift, das Shinichi Kudo in „Detektiv Conan“ schrumpfen ließ?  
+  **APTX 4869** · Silver Bullet · Pacifier · Kira-Serum
+- `o-052` *Auswahl* – Nach welchem Schema vergibt die Schwarze Organisation in „Detektiv Conan“ ihre Decknamen?  
+  **Nach alkoholischen Getränken** · Nach Edelsteinen · Nach Planeten · Nach Schachfiguren
+- `o-053` *Schätzfrage* – In welchem Jahr startete der Manga „Detektiv Conan“ in Japan?  
+  **1994** (Schieberegler 1980–2010, ±2 zählt als knapp)
+- `o-054` *Auswahl* – Wie heißt das Café, in dem Kaneki in „Tokyo Ghoul“ arbeitet?  
+  **Anteiku** · Helter Skelter · Re · Chateau Rize
+- `o-055` *Wer bin ich?* – Wer bin ich? Ich war ein ganz normaler Student und liebte Bücher. / Nach einer Organtransplantation kann ich nur noch Menschenfleisch und Kaffee zu mir nehmen. / Nach einer Folter wurden meine Haare weiß.  
+  **Ken Kaneki** · Shu Tsukiyama · Koutarou Amon · Uta
+- `o-056` *Auswahl* – In welchem Königreich spielt „Fairy Tail“?  
+  **Fiore** · Alvarez · Clover · Paradis
+- `o-057` *Auswahl* – Welches Team ist in „Haikyu!!“ Karasunos Rivale mit dem Katzen-Symbol?  
+  **Nekoma** · Aoba Johsai · Shiratorizawa · Fukurodani
+- `o-058` *Auswahl* – Wer leitet das Projekt „Blue Lock“?  
+  **Jinpachi Ego** · Anri Teieri · Rin Itoshi · Noel Noa
+- `o-059` *Auswahl* – Wie heißt Ichigos Zanpakuto in „Bleach“?  
+  **Zangetsu** · Senbonzakura · Zabimaru · Hyorinmaru
+- `o-060` *Auswahl* – Welches Tier zeigt das Tattoo der Phantom-Truppe in „Hunter x Hunter“?  
+  **Eine Spinne mit zwölf Beinen** · Eine Schlange · Ein Skorpion · Ein Rabe
+- `o-061` *Schätzfrage* – Wie viele Pokémon gab es in der ersten Generation?  
+  **151** (Schieberegler 50–300, ±5 zählt als knapp)
 
 ### Shōjo & Romance
 
@@ -387,6 +559,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Nana Osaki** · Nana Komatsu · Reira Serizawa · Rei Hino
 - `o-033` *Schätzfrage* – Wie viele Bände hat der Manga „Fruits Basket“?  
   **23** (Schieberegler 5–60, ±2 zählt als knapp)
+- `o-072` *Auswahl* – Was verbirgt Ciels Augenklappe in „Black Butler“?  
+  **Das Siegel seines Pakts mit Sebastian** · Ein Glasauge · Eine Narbe aus einem Brand · Ein Sharingan
 
 ### Studio-Filme
 
@@ -421,6 +595,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Falsch** · Wahr
 - `o-043` *Auswahl* – Welcher Manga erschien 1997 bei Carlsen als erster in Deutschland in japanischer Leserichtung?  
   **Dragon Ball** · One Piece · Sailor Moon · Akira
+- `o-073` *Reihenfolge* – Sortiere die Manga nach ihrem Start in Japan, den ältesten zuerst.  
+  **Bleach (2001) → Fairy Tail (2006) → Tokyo Ghoul (2011) → Dr. Stone (2017)**
+- `o-074` *Auswahl* – Wer hat den Webtoon zu „Solo Leveling“ gezeichnet?  
+  **Dubu (Jang Sung-rak)** · Chugong · Boichi · Gege Akutami
 
 ### Neue Serien
 
@@ -444,6 +622,26 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ai Hoshino** · Ruby Hoshino · Kana Arima · Akane Kurokawa
 - `o-048` *Wahr/Falsch* – Der Manga zu „Frieren“ erscheint im Magazin „Weekly Shōnen Sunday“.  
   **Wahr** · Falsch
+- `o-062` *Auswahl* – Wer ist der Schurke Dabi in „My Hero Academia“ in Wahrheit?  
+  **Toya Todoroki** · Tenko Shimura · Tomura Shigarakis Bruder · Ein Klon von Endeavor
+- `o-063` *Wahr/Falsch* – Makima aus „Chainsaw Man“ ist der Kontroll-Teufel.  
+  **Wahr** · Falsch
+- `o-064` *Auswahl* – Wer ist die Hauptfigur im zweiten Teil von „Chainsaw Man“?  
+  **Asa Mitaka** · Kobeni Higashiyama · Reze · Quanxi
+- `o-065` *Auswahl* – Wie heißt Jinwoos erster Elite-Schatten, ein roter Ritter?  
+  **Igris** · Beru · Iron · Tank
+- `o-066` *Auswahl* – Wie heißt die seltene Augen-Fähigkeit von Satoru Gojo?  
+  **Sechs Augen** · Sharingan · Rinnegan · Geass
+- `o-067` *Auswahl* – In welchen Worten spricht Toge Inumaki aus „Jujutsu Kaisen“ ausschließlich?  
+  **In Onigiri-Zutaten** · In Zahlen · In Pokémon-Namen · In Zitaten aus Filmen
+- `o-068` *Auswahl* – Wie lautet Okaruns richtiger Name in „Dandadan“?  
+  **Ken Takakura** · Jiji Enjoji · Seiko Ayase · Momo Ayase
+- `o-069` *Auswahl* – Wer schreibt die Geschichte von „Dr. Stone“ und erfand zuvor „Eyeshield 21“?  
+  **Riichiro Inagaki** · Boichi · Kaiu Shirai · Posuka Demizu
+- `o-070` *Auswahl* – Welche Nummer trägt Emma in „The Promised Neverland“ am Hals?  
+  **63194** · 22194 · 81194 · 11194
+- `o-071` *Auswahl* – Wie heißt Chihiros Schwert in „Kagurabachi“, das Goldfische beschwört?  
+  **Enten** · Kuregumo · Shinuchi · Zangetsu
 
 ### Begriffe & Kultur
 
@@ -461,3 +659,5 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Comiket** · AnimagiC · Japan Expo · Anime Expo
 - `o-027` *Schätzfrage* – In welchem Jahr fand die erste Comiket statt?  
   **1975** (Schieberegler 1960–2000, ±2 zählt als knapp)
+- `o-075` *Wahr/Falsch* – Die Zeichentrickserie „Die Biene Maja“ von 1975 wurde in Japan produziert.  
+  **Wahr** · Falsch
