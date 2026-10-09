@@ -14268,7 +14268,7 @@
    "question": "Welcher Spruch ist typisch für Shikamaru?",
    "answers": [
     "„Wie nervig“",
-    "„Glaub es!“",
+    "„Die Kraft der Jugend!“",
     "„Das ist mein Ninja-Weg“",
     "„Dattebayo“"
    ],
@@ -14366,7 +14366,7 @@
    "question": "Welches Stein-Pokémon ist Rockos Partner?",
    "answers": [
     "Onix",
-    "Geodude",
+    "Georok",
     "Rihorn",
     "Kleinstein"
    ],
@@ -14434,7 +14434,7 @@
    "difficulty": 2,
    "category": "shonen",
    "type": "multiple_choice",
-   "question": "Was ist das „Große Erdrutschen“ (Rumbling)?",
+   "question": "Was ist das „Rumbling“ (dt. auch „Walze“) in „Attack on Titan“?",
    "answers": [
     "Der Marsch der Mauer-Titanen, der die Welt zerstören soll",
     "Ein Erdbeben in Shiganshina",
@@ -14942,7 +14942,7 @@
    "question": "Wie heißt der Dämon, der kein Menschenfleisch isst und mit Mujika reist?",
    "answers": [
     "Sonju",
-    "Lewis",
+    "Peter Ratri",
     "Leuvis",
     "Bayon"
    ],
@@ -15037,7 +15037,7 @@
    "difficulty": 1,
    "category": "isekai",
    "type": "multiple_choice",
-   "question": "Wie heißt das Königreich in „Seven Deadly Sins“?",
+   "question": "Wie heißt das Königreich, dessen Prinzessin Elizabeth in „Seven Deadly Sins“ ist?",
    "answers": [
     "Liones",
     "Fiore",

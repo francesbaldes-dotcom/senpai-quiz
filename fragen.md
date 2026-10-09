@@ -220,7 +220,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-351` *Auswahl* – Welche Farbe hat Conans Fliege mit dem Stimmenverzerrer?  
   **Rot** · Blau · Schwarz · Grün
 - `e-352` *Auswahl* – Welches Stein-Pokémon ist Rockos Partner?  
-  **Onix** · Geodude · Rihorn · Kleinstein
+  **Onix** · Georok · Rihorn · Kleinstein
 - `e-353` *Auswahl* – Wie heißt Erens Heimatstadt am Rand von Mauer Maria?  
   **Shiganshina** · Trost · Mitras · Stohess
 - `e-365` *Auswahl* – Welche Farbe hat die Uniform der Shinigami in „Bleach“?  
@@ -493,7 +493,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Gajeel Redfox** · Natsu Dragneel · Laxus Dreyar · Sting Eucliffe
 - `e-364` *Auswahl* – Wie heißt Gons Tante, die ihn großgezogen hat?  
   **Mito** · Kite · Biscuit · Palm
-- `e-366` *Auswahl* – Wie heißt das Königreich in „Seven Deadly Sins“?  
+- `e-366` *Auswahl* – Wie heißt das Königreich, dessen Prinzessin Elizabeth in „Seven Deadly Sins“ ist?  
   **Liones** · Fiore · Camelot · Britannia-Stadt
 - `e-372` *Auswahl* – Was kann Mash in „Mashle“ nicht, obwohl alle anderen es können?  
   **Magie wirken** · Laufen · Lesen · Kochen
@@ -945,7 +945,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-372` *Auswahl* – Wie heißt Narutos Lieblings-Ramen-Laden?  
   **Ichiraku** · Teuchi’s · Konoha Ramen · Akimichi
 - `f-413` *Auswahl* – Welcher Spruch ist typisch für Shikamaru?  
-  **„Wie nervig“** · „Glaub es!“ · „Das ist mein Ninja-Weg“ · „Dattebayo“
+  **„Wie nervig“** · „Die Kraft der Jugend!“ · „Das ist mein Ninja-Weg“ · „Dattebayo“
 - `f-414` *Auswahl* – Welcher Clan beherrscht Schatten-Techniken?  
   **Nara** · Hyuga · Yamanaka · Akimichi
 - `f-464` *Auswahl* – Welches Tier beschwört Sasuke als Verbündeten?  
@@ -1081,7 +1081,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Paul** · Gary · Trip · Alain
 - `f-417` *Auswahl* – Welches Pokémon kann sich in jedes andere Pokémon verwandeln?  
   **Ditto** · Mew · Zoroark · Evoli
-- `f-418` *Auswahl* – Was ist das „Große Erdrutschen“ (Rumbling)?  
+- `f-418` *Auswahl* – Was ist das „Rumbling“ (dt. auch „Walze“) in „Attack on Titan“?  
   **Der Marsch der Mauer-Titanen, der die Welt zerstören soll** · Ein Erdbeben in Shiganshina · Die Belagerung von Trost · Ein Aufstand der Militärpolizei
 - `f-429` *Auswahl* – Welche Position spielt Tobio Kageyama?  
   **Zuspieler** · Mittelblocker · Libero · Außenangreifer
@@ -1440,7 +1440,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-434` *Auswahl* – Welche Fähigkeit hat die Magierin Übel in „Frieren“?  
   **Sie kann alles zerschneiden, was sie sich zerschneidbar vorstellen kann** · Sie kann fliegen · Sie kann die Zeit anhalten · Sie kann Tote erwecken
 - `f-436` *Auswahl* – Wie heißt der Dämon, der kein Menschenfleisch isst und mit Mujika reist?  
-  **Sonju** · Lewis · Leuvis · Bayon
+  **Sonju** · Peter Ratri · Leuvis · Bayon
 - `f-439` *Auswahl* – Wie heißt Killuas älterer Bruder, der mit Nadeln kämpft?  
   **Illumi** · Milluki · Kalluto · Silva
 - `f-441` *Auswahl* – Welche Sünde verkörpert Ban?  
