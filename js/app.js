@@ -2103,6 +2103,9 @@ Object.assign(aktionen, {
       const id = await online.herausfordern(d.id);
       await oeffneDuell(id);
     } catch (fehler) {
+      // Läuft schon ein Duell gegen diesen Spieler, dorthin wechseln; dafür die Liste
+      // frisch holen, sonst fehlt ein Duell, das der Gegner gerade erst angefangen hat.
+      await ladeDuelle(true);
       const laufend = ui.online.duelle.find((x) => x.status === 'laeuft' && [x.spieler1, x.spieler2].includes(d.id));
       if (laufend) return oeffneDuell(laufend.id);
       ui.online.fehler = fehler.message;
