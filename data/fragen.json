@@ -10079,10 +10079,10 @@
    "type": "multiple_choice",
    "question": "Welcher Organisation tritt Atsushi bei?",
    "answers": [
-    "Der Bewaffneten Detektei",
-    "Der Port-Mafia",
+    "Den Bewaffneten Detektiven (Armed Detective Agency)",
+    "Der Hafenmafia (Port Mafia)",
     "Der Gilde",
-    "Den Todeshunden"
+    "Den Jagdhunden"
    ],
    "correct": 0
   },
@@ -10091,7 +10091,7 @@
    "difficulty": 3,
    "category": "shonen",
    "type": "multiple_choice",
-   "question": "Wer ist der Boss der Port-Mafia?",
+   "question": "Wer ist der Boss der Hafenmafia (Port Mafia) in „Bungo Stray Dogs“?",
    "answers": [
     "Ogai Mori",
     "Chuya Nakahara",
@@ -10193,7 +10193,7 @@
    "answers": [
     "Tokyo Manji Gang (Toman)",
     "Akatsuki",
-    "Black Dragon",
+    "Bonten",
     "Shibuya Kings"
    ],
    "correct": 0
@@ -10404,7 +10404,7 @@
     "Takezo",
     "Kojiro",
     "Matahachi",
-    "Shinmen"
+    "Gonnosuke"
    ],
    "correct": 0
   },
@@ -10779,11 +10779,11 @@
    "difficulty": 2,
    "category": "klassiker",
    "type": "multiple_choice",
-   "question": "Wie heißt Ranmas Verlobte?",
+   "question": "Mit welcher der Tendo-Schwestern ist Ranma verlobt?",
    "answers": [
     "Akane Tendo",
-    "Shampoo",
-    "Ukyo Kuonji",
+    "Nabiki Tendo",
+    "Kasumi Tendo",
     "Kodachi Kuno"
    ],
    "correct": 0
@@ -11311,12 +11311,12 @@
    "difficulty": 2,
    "category": "filme",
    "type": "multiple_choice",
-   "question": "Wie heißt die Katze in „Suzume“, die ein Schlussstein war?",
+   "question": "Wie heißt die kleine weiße Katze in „Suzume“, die Sōta in einen Stuhl verwandelt?",
    "answers": [
     "Daijin",
     "Jiji",
     "Chibi",
-    "Sadaijin"
+    "Tama"
    ],
    "correct": 0
   },

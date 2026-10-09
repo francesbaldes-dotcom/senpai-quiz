@@ -273,7 +273,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-246` *Auswahl* – Um wie viele Jahre springt Takemichi in „Tokyo Revengers“ in die Vergangenheit?  
   **12 Jahre** · 5 Jahre · 20 Jahre · 2 Jahre
 - `e-247` *Auswahl* – Wie heißt die Gang, in die Takemichi eintritt?  
-  **Tokyo Manji Gang (Toman)** · Akatsuki · Black Dragon · Shibuya Kings
+  **Tokyo Manji Gang (Toman)** · Akatsuki · Bonten · Shibuya Kings
 - `e-248` *Auswahl* – Wie heißen Ai Hoshinos Zwillinge in „Oshi no Ko“?  
   **Aqua und Ruby** · Kana und Akane · Mem und Frill · Goro und Sarina
 - `e-249` *Auswahl* – Was passiert mit Kafka Hibino in „Kaiju No. 8“?  
@@ -760,7 +760,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-292` *Auswahl* – Was bewirkt Dazais Fähigkeit „No Longer Human“?  
   **Sie hebt jede andere Fähigkeit bei Berührung auf** · Sie macht ihn unsterblich · Sie lässt ihn fliegen · Sie liest Gedanken
 - `f-293` *Auswahl* – Welcher Organisation tritt Atsushi bei?  
-  **Der Bewaffneten Detektei** · Der Port-Mafia · Der Gilde · Den Todeshunden
+  **Den Bewaffneten Detektiven (Armed Detective Agency)** · Der Hafenmafia (Port Mafia) · Der Gilde · Den Jagdhunden
 
 ### Neue Hits
 
@@ -1026,8 +1026,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Star Platinum** · The World · Crazy Diamond · Gold Experience
 - `f-311` *Auswahl* – Was ist Inu Yasha?  
   **Ein Halbdämon, halb Hundedämon, halb Mensch** · Ein Samurai · Ein Fuchsgeist · Ein Shinigami
-- `f-312` *Auswahl* – Wie heißt Ranmas Verlobte?  
-  **Akane Tendo** · Shampoo · Ukyo Kuonji · Kodachi Kuno
+- `f-312` *Auswahl* – Mit welcher der Tendo-Schwestern ist Ranma verlobt?  
+  **Akane Tendo** · Nabiki Tendo · Kasumi Tendo · Kodachi Kuno
 - `f-315` *Auswahl* – Wie heißt die Organisation, die die EVAs einsetzt?  
   **NERV** · SEELE · CCG · SHIELD
 - `f-316` *Auswahl* – Welchen EVA steuert Rei Ayanami?  
@@ -1166,8 +1166,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Pokémon: Mewtu schlägt zurück – Evolution** · Pokémon: Die Macht in uns · Pokémon: Der Film – Geheimnisse des Dschungels · Pokémon: Lugia
 - `f-328` *Auswahl* – Wie alt ist Kiki, als sie in „Kikis kleiner Lieferservice“ ihr Zuhause verlässt?  
   **13 Jahre** · 10 Jahre · 16 Jahre · 18 Jahre
-- `f-329` *Auswahl* – Wie heißt die Katze in „Suzume“, die ein Schlussstein war?  
-  **Daijin** · Jiji · Chibi · Sadaijin
+- `f-329` *Auswahl* – Wie heißt die kleine weiße Katze in „Suzume“, die Sōta in einen Stuhl verwandelt?  
+  **Daijin** · Jiji · Chibi · Tama
 - `f-330` *Auswahl* – Wie heißt der letzte Film der Evangelion-Rebuild-Reihe (2021)?  
   **Evangelion: 3.0+1.0 Thrice Upon a Time** · Evangelion: 4.0 · The End of Evangelion · Evangelion: Final
 
@@ -1391,7 +1391,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Sosuke Aizen** · Toshiro Hitsugaya · Byakuya Kuchiki · Kenpachi Zaraki
 - `o-173` *Auswahl* – Wer hat „Blue Exorcist“ erschaffen?  
   **Kazue Kato** · Yana Toboso · Hiro Mashima · Yoshihiro Togashi
-- `o-174` *Auswahl* – Wer ist der Boss der Port-Mafia?  
+- `o-174` *Auswahl* – Wer ist der Boss der Hafenmafia (Port Mafia) in „Bungo Stray Dogs“?  
   **Ogai Mori** · Chuya Nakahara · Ryunosuke Akutagawa · Fjodor Dostojewski
 
 ### Neue Hits
@@ -1559,7 +1559,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-139` *Auswahl* – Wie lautet Ls richtiger Name?  
   **L Lawliet** · L Yagami · Ryuzaki · Hideki Ryuga
 - `o-179` *Auswahl* – Wie heißt Musashi in seiner Jugend, bevor er den Namen annimmt?  
-  **Takezo** · Kojiro · Matahachi · Shinmen
+  **Takezo** · Kojiro · Matahachi · Gonnosuke
 - `o-180` *Schätzfrage* – In welchem Jahr startete „Vagabond“ in Japan?  
   **1998** (Schieberegler 1985–2010, ±2 zählt als knapp)
 - `o-182` *Auswahl* – Wer hat „Fullmetal Alchemist“ erschaffen?  
