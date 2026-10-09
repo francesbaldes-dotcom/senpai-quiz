@@ -9959,6 +9959,1408 @@
     "The Wonderland"
    ],
    "correct": 0
+  },
+  {
+   "id": "e-240",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist der leibliche Vater von Rin Okumura in „Blue Exorcist“?",
+   "answers": [
+    "Satan",
+    "Mephisto Pheles",
+    "Amaimon",
+    "Ein Engel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-241",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was will Rin Okumura werden?",
+   "answers": [
+    "Exorzist",
+    "Hokage",
+    "Dämonenkönig",
+    "Priester"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-290",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Rins Zwillingsbruder, der zugleich sein Lehrer ist?",
+   "answers": [
+    "Yukio Okumura",
+    "Ryuji Suguro",
+    "Renzo Shima",
+    "Konekomaru Miwa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-291",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Schwert, das Rins blaue Dämonenflammen versiegelt?",
+   "answers": [
+    "Kurikara",
+    "Zangetsu",
+    "Enten",
+    "Kusanagi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-173",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer hat „Blue Exorcist“ erschaffen?",
+   "answers": [
+    "Kazue Kato",
+    "Yana Toboso",
+    "Hiro Mashima",
+    "Yoshihiro Togashi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-242",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wonach sind die Figuren in „Bungo Stray Dogs“ benannt?",
+   "answers": [
+    "Nach echten japanischen Schriftstellern",
+    "Nach Göttern",
+    "Nach Planeten",
+    "Nach Hunderassen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-243",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Hauptfigur, die sich in einen weißen Tiger verwandeln kann?",
+   "answers": [
+    "Atsushi Nakajima",
+    "Osamu Dazai",
+    "Ryunosuke Akutagawa",
+    "Doppo Kunikida"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-292",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was bewirkt Dazais Fähigkeit „No Longer Human“?",
+   "answers": [
+    "Sie hebt jede andere Fähigkeit bei Berührung auf",
+    "Sie macht ihn unsterblich",
+    "Sie lässt ihn fliegen",
+    "Sie liest Gedanken"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-293",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welcher Organisation tritt Atsushi bei?",
+   "answers": [
+    "Der Bewaffneten Detektei",
+    "Der Port-Mafia",
+    "Der Gilde",
+    "Den Todeshunden"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-174",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist der Boss der Port-Mafia?",
+   "answers": [
+    "Ogai Mori",
+    "Chuya Nakahara",
+    "Ryunosuke Akutagawa",
+    "Fjodor Dostojewski"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-244",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wo haust Hanako in „Mein Schulgeist Hanako“?",
+   "answers": [
+    "In der Mädchentoilette im dritten Stock",
+    "Auf dem Dachboden",
+    "In der Turnhalle",
+    "Im Keller der Schule"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-245",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Mädchen, das Hanako beschwört, um einen Wunsch erfüllt zu bekommen?",
+   "answers": [
+    "Nene Yashiro",
+    "Aoi Akane",
+    "Sakura Nanamine",
+    "Mei Misaki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-294",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was wird Nene nach dem Pakt mit Hanako?",
+   "answers": [
+    "Seine Assistentin, die mit ihm die sieben Schulgeister in Schach hält",
+    "Selbst ein Geist",
+    "Schulsprecherin",
+    "Hanakos Braut"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-295",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Hanakos Zwillingsbruder?",
+   "answers": [
+    "Tsukasa",
+    "Kou",
+    "Teru",
+    "Mitsuba"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-175",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer hat „Mein Schulgeist Hanako“ erschaffen?",
+   "answers": [
+    "AidaIro",
+    "CLAMP",
+    "Yana Toboso",
+    "Kazue Kato"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-246",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Um wie viele Jahre springt Takemichi in „Tokyo Revengers“ in die Vergangenheit?",
+   "answers": [
+    "12 Jahre",
+    "5 Jahre",
+    "20 Jahre",
+    "2 Jahre"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-247",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Gang, in die Takemichi eintritt?",
+   "answers": [
+    "Tokyo Manji Gang (Toman)",
+    "Akatsuki",
+    "Black Dragon",
+    "Shibuya Kings"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-296",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist der Anführer von Toman, genannt Mikey?",
+   "answers": [
+    "Manjiro Sano",
+    "Ken Ryuguji",
+    "Tetta Kisaki",
+    "Keisuke Baji"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-297",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Mikeys Vize mit der Drachen-Tätowierung an der Schläfe?",
+   "answers": [
+    "Draken (Ken Ryuguji)",
+    "Baji",
+    "Chifuyu",
+    "Kazutora"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-176",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer hat „Tokyo Revengers“ erschaffen?",
+   "answers": [
+    "Ken Wakui",
+    "Yukinobu Tatsu",
+    "Muneyuki Kaneshiro",
+    "Tatsuki Fujimoto"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-248",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißen Ai Hoshinos Zwillinge in „Oshi no Ko“?",
+   "answers": [
+    "Aqua und Ruby",
+    "Kana und Akane",
+    "Mem und Frill",
+    "Goro und Sarina"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-298",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welchen Weg schlägt Aqua ein, um den Mörder seiner Mutter zu finden?",
+   "answers": [
+    "Er wird Schauspieler",
+    "Er wird Polizist",
+    "Er wird Idol-Manager",
+    "Er wird Journalist"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-177",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer schreibt die Geschichte von „Oshi no Ko“ und schuf zuvor „Kaguya-sama“?",
+   "answers": [
+    "Aka Akasaka",
+    "Mengo Yokoyari",
+    "Tatsuki Fujimoto",
+    "Yukinobu Tatsu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-249",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was passiert mit Kafka Hibino in „Kaiju No. 8“?",
+   "answers": [
+    "Er verwandelt sich selbst in ein Kaiju",
+    "Er wird von einem Kaiju gefressen",
+    "Er wird zum Kaiju-Jäger befördert",
+    "Er verliert sein Gedächtnis"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-250",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie alt ist Kafka, als er sich endlich bei der Verteidigungstruppe bewirbt?",
+   "answers": [
+    "32",
+    "18",
+    "25",
+    "40"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-299",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Kafkas Kindheitsfreundin, die Kommandantin geworden ist?",
+   "answers": [
+    "Mina Ashiro",
+    "Kikoru Shinomiya",
+    "Reno Ichikawa",
+    "Konomi Okonogi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-300",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was war Kafkas Job, bevor er zur Verteidigungstruppe ging?",
+   "answers": [
+    "Er beseitigte Kaiju-Kadaver",
+    "Er war Lehrer",
+    "Er war Polizist",
+    "Er war Koch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-178",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer hat „Kaiju No. 8“ erschaffen?",
+   "answers": [
+    "Naoya Matsumoto",
+    "Yuto Suzuki",
+    "Gege Akutami",
+    "Takeru Hokazono"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-251",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Von welchem historischen Schwertkämpfer handelt „Vagabond“?",
+   "answers": [
+    "Miyamoto Musashi",
+    "Oda Nobunaga",
+    "Sasaki Kojiro",
+    "Tokugawa Ieyasu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-301",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Auf welchem Roman basiert „Vagabond“?",
+   "answers": [
+    "„Musashi“ von Eiji Yoshikawa",
+    "„Shogun“ von James Clavell",
+    "„Der Chrysanthementhron“",
+    "„Hagakure“"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-302",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer ist Musashis gehörloser Rivale in „Vagabond“?",
+   "answers": [
+    "Sasaki Kojiro",
+    "Yagyu Sekishusai",
+    "Inshun",
+    "Matahachi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-179",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Musashi in seiner Jugend, bevor er den Namen annimmt?",
+   "answers": [
+    "Takezo",
+    "Kojiro",
+    "Matahachi",
+    "Shinmen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-180",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "estimate",
+   "question": "In welchem Jahr startete „Vagabond“ in Japan?",
+   "answers": [
+    "1998"
+   ],
+   "correct": 0,
+   "answer": 1998,
+   "min": 1985,
+   "max": 2010,
+   "tolerance": 2
+  },
+  {
+   "id": "e-252",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Mob aus „Mob Psycho 100“ mit richtigem Namen?",
+   "answers": [
+    "Shigeo Kageyama",
+    "Ritsu Kageyama",
+    "Arataka Reigen",
+    "Teruki Hanazawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-253",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was passiert, wenn Mobs Gefühle 100 Prozent erreichen?",
+   "answers": [
+    "Seine Psychokräfte explodieren",
+    "Er schläft ein",
+    "Er verliert seine Kräfte",
+    "Er wird unsichtbar"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-303",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist Mobs Mentor, in Wahrheit ein Schwindler ohne Kräfte?",
+   "answers": [
+    "Reigen Arataka",
+    "Teruki Hanazawa",
+    "Dimple",
+    "Ritsu Kageyama"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-304",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt der böse Geist, der sich Mob anschließt?",
+   "answers": [
+    "Dimple (Ekubo)",
+    "Mogami",
+    "Toichiro",
+    "Shou"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-181",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches Studio animierte „Mob Psycho 100“?",
+   "answers": [
+    "Bones",
+    "MAPPA",
+    "Madhouse",
+    "Science SARU"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-254",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Was versuchen die Elric-Brüder zu Beginn von „Fullmetal Alchemist“, was streng verboten ist?",
+   "answers": [
+    "Ihre tote Mutter wiederzubeleben",
+    "Gold herzustellen",
+    "Den Stein der Weisen zu stehlen",
+    "Sich unsterblich zu machen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-305",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Anime-Neuverfilmung von 2009, die dem Manga folgt?",
+   "answers": [
+    "Fullmetal Alchemist: Brotherhood",
+    "Fullmetal Alchemist: Conqueror of Shamballa",
+    "Fullmetal Alchemist: Sacred Star",
+    "Fullmetal Alchemist: Origins"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-182",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer hat „Fullmetal Alchemist“ erschaffen?",
+   "answers": [
+    "Hiromu Arakawa",
+    "Tite Kubo",
+    "Rumiko Takahashi",
+    "Yana Toboso"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-255",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Tais Partner-Digimon in „Digimon Adventure“?",
+   "answers": [
+    "Agumon",
+    "Gabumon",
+    "Patamon",
+    "Gomamon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-256",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie werden die Kinder genannt, die in die Digiwelt gelangen?",
+   "answers": [
+    "Digiritter",
+    "Digimeister",
+    "Digi-Trainer",
+    "Digi-Helden"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-306",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Zu welchem Digimon digitiert Agumon auf dem Champion-Level?",
+   "answers": [
+    "Greymon",
+    "Garurumon",
+    "Angemon",
+    "Birdramon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-307",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "estimate",
+   "question": "In welchem Jahr lief „Digimon Adventure“ erstmals in Deutschland?",
+   "answers": [
+    "2000"
+   ],
+   "correct": 0,
+   "answer": 2000,
+   "min": 1995,
+   "max": 2010,
+   "tolerance": 1
+  },
+  {
+   "id": "o-183",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer sang das deutsche Digimon-Opening „Leb deinen Traum“?",
+   "answers": [
+    "Frank Schindel",
+    "Noel Pix",
+    "Oliver Petszokat",
+    "Herbert Grönemeyer"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-308",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Warum muss Haruhi in „Ouran High School Host Club“ im Host Club arbeiten?",
+   "answers": [
+    "Sie hat eine teure Vase zerbrochen und arbeitet die Schulden ab",
+    "Sie hat ein Stipendium dafür",
+    "Sie wurde von Tamaki gezwungen",
+    "Sie will Geld für ihre Familie verdienen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-257",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Eliteschule in „Kaguya-sama: Love is War“?",
+   "answers": [
+    "Shuchiin-Akademie",
+    "Ouran-Akademie",
+    "Eden Academy",
+    "U.A. High"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-184",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Schülerrats-Sekretärin mit den verrückten Ideen in „Kaguya-sama“?",
+   "answers": [
+    "Chika Fujiwara",
+    "Ai Hayasaka",
+    "Miko Iino",
+    "Kei Shirogane"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-309",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Band von Nanas Ex-Freund Ren in „Nana“?",
+   "answers": [
+    "Trapnest",
+    "Black Stones",
+    "Asian Kung-Fu",
+    "Night Flight"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-185",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer hat „Nana“ erschaffen?",
+   "answers": [
+    "Ai Yazawa",
+    "Naoko Takeuchi",
+    "Arina Tanemura",
+    "Natsuki Takaya"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-258",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißen die Kampfgeister, mit denen in „JoJo’s Bizarre Adventure“ ab Teil 3 gekämpft wird?",
+   "answers": [
+    "Stands",
+    "Kagune",
+    "Shikigami",
+    "Hollows"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-259",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Erzfeind der Familie Joestar, ein Vampir?",
+   "answers": [
+    "Dio Brando",
+    "Kars",
+    "Yoshikage Kira",
+    "Diavolo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-310",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Jotaro Kujos Stand?",
+   "answers": [
+    "Star Platinum",
+    "The World",
+    "Crazy Diamond",
+    "Gold Experience"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-186",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt der erste Teil von „JoJo’s Bizarre Adventure“?",
+   "answers": [
+    "Phantom Blood",
+    "Battle Tendency",
+    "Stardust Crusaders",
+    "Diamond Is Unbreakable"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-260",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "In was verwandelt sich Ranma, wenn er mit kaltem Wasser übergossen wird?",
+   "answers": [
+    "In ein Mädchen",
+    "In ein Schwein",
+    "In eine Katze",
+    "In einen Panda"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-261",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welches Schmuckstück sucht Kagome in „Inu Yasha“?",
+   "answers": [
+    "Das Juwel der vier Seelen",
+    "Den Dragonball",
+    "Das Millennium-Puzzle",
+    "Den Stein der Weisen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-311",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Was ist Inu Yasha?",
+   "answers": [
+    "Ein Halbdämon, halb Hundedämon, halb Mensch",
+    "Ein Samurai",
+    "Ein Fuchsgeist",
+    "Ein Shinigami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-312",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Ranmas Verlobte?",
+   "answers": [
+    "Akane Tendo",
+    "Shampoo",
+    "Ukyo Kuonji",
+    "Kodachi Kuno"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-262",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welche Fähigkeit hat Subaru in „Re:Zero“?",
+   "answers": [
+    "Nach seinem Tod zu einem früheren Zeitpunkt zurückzukehren",
+    "Unsichtbarkeit",
+    "Feuermagie",
+    "Gedankenlesen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-263",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Als was wird Satoru Mikami in „That Time I Got Reincarnated as a Slime“ wiedergeboren?",
+   "answers": [
+    "Als Schleim",
+    "Als Drache",
+    "Als Spinne",
+    "Als Ritter"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-313",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt die nutzlose Göttin, die Kazuma in „KonoSuba“ begleitet?",
+   "answers": [
+    "Aqua",
+    "Megumin",
+    "Darkness",
+    "Eris"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-314",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welche Waffe bekommt Naofumi in „The Rising of the Shield Hero“?",
+   "answers": [
+    "Einen Schild",
+    "Ein Schwert",
+    "Einen Speer",
+    "Einen Bogen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-187",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt Kiritos Partnerin in „Sword Art Online“?",
+   "answers": [
+    "Asuna",
+    "Sinon",
+    "Leafa",
+    "Alice"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-264",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer steuert in „Neon Genesis Evangelion“ den EVA-01?",
+   "answers": [
+    "Shinji Ikari",
+    "Rei Ayanami",
+    "Asuka Langley",
+    "Gendo Ikari"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-265",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißen die Feinde, gegen die die EVAs kämpfen?",
+   "answers": [
+    "Engel",
+    "Titanen",
+    "Kaiju",
+    "Dämonen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-315",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Organisation, die die EVAs einsetzt?",
+   "answers": [
+    "NERV",
+    "SEELE",
+    "CCG",
+    "SHIELD"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-316",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welchen EVA steuert Rei Ayanami?",
+   "answers": [
+    "EVA-00",
+    "EVA-01",
+    "EVA-02",
+    "EVA-03"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-188",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer führte bei „Neon Genesis Evangelion“ Regie?",
+   "answers": [
+    "Hideaki Anno",
+    "Mamoru Oshii",
+    "Satoshi Kon",
+    "Katsuhiro Otomo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-266",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welchen Beruf hat Spike Spiegel in „Cowboy Bebop“?",
+   "answers": [
+    "Kopfgeldjäger",
+    "Polizist",
+    "Pilot der Marine",
+    "Koch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-317",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Raumschiff in „Cowboy Bebop“?",
+   "answers": [
+    "Bebop",
+    "Swordfish",
+    "Outlaw Star",
+    "Nostromo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-318",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "In welcher Welt spielt „Gintama“?",
+   "answers": [
+    "In einem Edo-Japan, das von Aliens übernommen wurde",
+    "Im Weltraum",
+    "Im heutigen Tokio",
+    "Im Mittelalter Europas"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-319",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Was passiert mit Yusuke Urameshi zu Beginn von „Yu Yu Hakusho“?",
+   "answers": [
+    "Er stirbt, als er ein Kind rettet, und kehrt als Geisterdetektiv zurück",
+    "Er wird Hokage",
+    "Er findet ein Death Note",
+    "Er wird von einem Vampir gebissen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-189",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer hat „Yu Yu Hakusho“ erschaffen?",
+   "answers": [
+    "Yoshihiro Togashi",
+    "Akira Toriyama",
+    "Tite Kubo",
+    "Hirohiko Araki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-267",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "In was verwandelt sich Momoko in „Wedding Peach“?",
+   "answers": [
+    "In einen Liebesengel im Brautkleid",
+    "In eine Meerjungfrau",
+    "In eine Katze",
+    "In eine Prinzessin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-320",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was will Mitsuki in „Fullmoon wo Sagashite“ unbedingt werden?",
+   "answers": [
+    "Sängerin",
+    "Ärztin",
+    "Tänzerin",
+    "Schauspielerin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-321",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Schule in „Vampire Knight“?",
+   "answers": [
+    "Cross Academy",
+    "Ouran-Akademie",
+    "Shuchiin-Akademie",
+    "Eden Academy"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-268",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was sind die Schüler der Nachtklasse in „Vampire Knight“?",
+   "answers": [
+    "Vampire",
+    "Werwölfe",
+    "Geister",
+    "Engel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-190",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer hat „Fullmoon wo Sagashite“ erschaffen?",
+   "answers": [
+    "Arina Tanemura",
+    "Ai Yazawa",
+    "Naoko Takeuchi",
+    "Natsuki Takaya"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-269",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Sake?",
+   "answers": [
+    "Reiswein",
+    "Grüner Tee",
+    "Eine Suppe",
+    "Ein Reisgericht"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-270",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Oyasumi“?",
+   "answers": [
+    "Gute Nacht",
+    "Guten Morgen",
+    "Bis bald",
+    "Lecker"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-271",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist eine Tatami?",
+   "answers": [
+    "Eine Matte aus Reisstroh als Bodenbelag",
+    "Ein Kimono-Gürtel",
+    "Eine Teeschale",
+    "Ein Schwert"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-272",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Wasabi?",
+   "answers": [
+    "Scharfer grüner Meerrettich",
+    "Eine süße Bohnenpaste",
+    "Ein Fisch",
+    "Ein Reisschnaps"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-273",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Kappa in der japanischen Folklore?",
+   "answers": [
+    "Ein Wasserwesen mit Schale und Wasserschale auf dem Kopf",
+    "Ein Bergriese",
+    "Ein Fuchsgeist",
+    "Ein Hausgeist"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-322",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Harem-Anime?",
+   "answers": [
+    "Eine Hauptfigur ist von mehreren Verehrerinnen oder Verehrern umgeben",
+    "Ein Anime über Könige",
+    "Ein Anime nur mit Frauen",
+    "Ein historischer Anime"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-323",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was versteht man unter „Slice of Life“?",
+   "answers": [
+    "Ruhige Alltagsgeschichten ohne große Abenteuer",
+    "Horror-Anime",
+    "Koch-Anime",
+    "Sport-Anime"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-324",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Shōnen Jump+?",
+   "answers": [
+    "Shūeishas Online-Plattform für Manga wie Dandadan oder Spy x Family",
+    "Eine Convention",
+    "Ein Anime-Studio",
+    "Ein Sammelband-Format"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-325",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wofür stehen „OP“ und „ED“ bei Anime?",
+   "answers": [
+    "Vorspann- und Abspannlied",
+    "Original und Englisch",
+    "Opening und Episode",
+    "Offline und Download"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-326",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist eine „Kuudere“?",
+   "answers": [
+    "Eine kühle, distanzierte Figur, die innerlich liebevoll ist",
+    "Eine schüchterne Figur",
+    "Eine aggressive Figur",
+    "Eine verrückte Figur"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-327",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist die Golden Week?",
+   "answers": [
+    "Eine Feiertagswoche Ende April bis Anfang Mai",
+    "Die Woche der Kirschblüte",
+    "Eine Anime-Messe",
+    "Ein Manga-Wettbewerb"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-191",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie heißt das deutsche Anime-Magazin, das seit 1994 erscheint?",
+   "answers": [
+    "AnimaniA",
+    "Manga Power",
+    "Koneko",
+    "Banzai!"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-192",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist eine Bunkoban-Ausgabe?",
+   "answers": [
+    "Eine kleinformatige Neuauflage eines Manga",
+    "Eine Farbausgabe",
+    "Ein Artbook",
+    "Die Erstausgabe im Magazin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-193",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Kamishibai?",
+   "answers": [
+    "Ein japanisches Papiertheater, das als Vorläufer von Manga und Anime gilt",
+    "Eine Kampfsportart",
+    "Ein Puppentheater",
+    "Eine Zeichenschule"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-274",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt der maskierte Geist in „Chihiros Reise ins Zauberland“, der Gold verteilt?",
+   "answers": [
+    "Ohngesicht",
+    "Haku",
+    "Kamaji",
+    "Yubaba"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-328",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie alt ist Kiki, als sie in „Kikis kleiner Lieferservice“ ihr Zuhause verlässt?",
+   "answers": [
+    "13 Jahre",
+    "10 Jahre",
+    "16 Jahre",
+    "18 Jahre"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-194",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Ghibli-Film von Isao Takahata basiert auf dem „Märchen vom Bambussammler“?",
+   "answers": [
+    "Die Legende der Prinzessin Kaguya",
+    "Pom Poko",
+    "Tränen der Erinnerung",
+    "Meine Nachbarn die Yamadas"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-329",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Katze in „Suzume“, die ein Schlussstein war?",
+   "answers": [
+    "Daijin",
+    "Jiji",
+    "Chibi",
+    "Sadaijin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-275",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Film von Mamoru Hosoda begegnet der kleine Kun seiner Schwester aus der Zukunft?",
+   "answers": [
+    "Mirai",
+    "Belle",
+    "Summer Wars",
+    "Wolfskinder"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-330",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt der letzte Film der Evangelion-Rebuild-Reihe (2021)?",
+   "answers": [
+    "Evangelion: 3.0+1.0 Thrice Upon a Time",
+    "Evangelion: 4.0",
+    "The End of Evangelion",
+    "Evangelion: Final"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-195",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Film von Masaaki Yuasa erzählt von einer durchzechten Nacht in Kyoto?",
+   "answers": [
+    "Night Is Short, Walk On Girl",
+    "Lu Over the Wall",
+    "Inu-Oh",
+    "Ride Your Wave"
+   ],
+   "correct": 0
   }
  ]
 }
