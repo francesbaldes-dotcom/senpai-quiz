@@ -364,7 +364,9 @@ function baueStationen() {
       boss,
       titel: boss ? s.name : s.titel,
       bild: s.bild,
-      auftritt: s.auftritt,
+      auftritt: s.auftritt, // Boss: sein Satz auf der Stationskarte
+      senpai: s.senpai, // Station: Satz des Senpai auf der Stationskarte
+      nachBoss: s.nachBoss, // Boss: Satz des Senpai nach dem Sieg
       kategorien: s.kategorien ?? k.kategorien ?? [],
       schwierigkeit: s.schwierigkeit ?? k.schwierigkeit ?? [1, 2, 3],
       typen: s.typen ?? k.typen ?? ALLE_TYPEN,
@@ -400,6 +402,23 @@ function reiseStand() {
     kapitelFertig: letzteBossKapitel,
     fertig: STATIONEN.length > 0 && !naechste,
   };
+}
+
+// Titel am Spielernamen: „Reisender“ ab Akt III (nach Boss 4), „Heimkehrer“ nach dem Ende
+function reiseTitel() {
+  const stand = reiseStand();
+  if (stand.fertig) return 'Heimkehrer';
+  if (stand.kapitelFertig >= 4) return 'Reisender';
+  return null;
+}
+
+// Text zum Teilen eines Boss-Siegs bzw. des Endes der Reise
+function bossText(s) {
+  const stand = reiseStand();
+  const kopf = stand.fertig && s === STATIONEN[STATIONEN.length - 1]
+    ? `Heldenreise geschafft! Boss „${s.titel}“ besiegt 🏆`
+    : `Boss „${s.titel}“ besiegt · Kapitel ${s.kapitel.nr}: ${s.kapitel.titel}`;
+  return `Senpai Quiz · Heldenreise\n${kopf}\n⭐ ${stand.sterne} / ${stand.sterneMax} Sterne`;
 }
 
 // 'offen' (bestanden), 'aktuell' (als Nächstes dran) oder 'gesperrt'
@@ -646,9 +665,11 @@ function beendeRunde() {
     const sterne = bestanden ? r.leben : 0;
     const vorher = stationSterne(s.id);
     const erstmals = bestanden && vorher === 0;
+    const titelVorher = reiseTitel();
     if (erstmals) xp += s.boss ? 150 : 50;
     if (sterne > vorher) profil.reise.sterne[s.id] = sterne;
-    reise = { station: s, bestanden, sterne, vorher, erstmals, stand: null };
+    const titelNachher = reiseTitel();
+    reise = { station: s, bestanden, sterne, vorher, erstmals, stand: null, neuerTitel: titelNachher !== titelVorher ? titelNachher : null };
   }
   profil.xp += xp;
   profil.spiele++;
@@ -1012,23 +1033,13 @@ const aktionen = {
       streak: aktuelleStreak(),
       link: appLink().replace(/^https?:\/\//, ''),
     });
-    const ergebnis = await teilen(tagesquizText(), appLink(), datei);
-    if (ergebnis === 'abgebrochen') return;
-    ui.hinweis = null;
-    if (ergebnis === 'fehler') {
-      ui.hinweis = { text: 'Teilen ist auf diesem Gerät leider nicht möglich.', fehler: true };
-      return render();
-    }
-    let text = ergebnis === 'kopiert' ? 'Ergebnis kopiert' : '';
-    if (!profil.abzeichen.includes('teilgeist')) {
-      const ab = ABZEICHEN.find((x) => x.id === 'teilgeist');
-      profil.abzeichen.push(ab.id);
-      speichern();
-      if (ui.screen === 'ergebnis' && ui.ergebnis) ui.ergebnis.neueAbzeichen = [...ui.ergebnis.neueAbzeichen, ab];
-      else text += `${text ? ' · ' : ''}Neues Abzeichen: ${ab.name}`;
-    }
-    if (text) ui.hinweis = { text };
-    render();
+    nachTeilen(await teilen(tagesquizText(), appLink(), datei));
+  },
+  // Heldenreise: Boss-Sieg teilen (Ergebnis-Bildschirm)
+  async bossTeilen() {
+    const s = ui.ergebnis?.reise?.station;
+    if (!s?.boss) return;
+    nachTeilen(await teilen(bossText(s), appLink()));
   },
   async zuruecksetzen() {
     const ok = await frage({ titel: 'Fortschritt zurücksetzen?', text: 'Alle Punkte, Statistiken und Abzeichen werden gelöscht.', ja: 'Löschen', gefaehrlich: true });
@@ -1167,7 +1178,7 @@ function startScreen() {
     <div class="rangzeile">
       ${rangEmblem(rg.name, 40)}
       <div class="rang">
-        <div><span class="display">Rang: ${esc(rg.name)}</span><small>${rg.bis ? `${zahl(profil.xp)} / ${zahl(rg.bis)} XP` : `${zahl(profil.xp)} XP`}</small></div>
+        <div><span class="display">Rang: ${esc(rg.name)}${reiseTitel() ? ` <span class="titel-chip">${esc(reiseTitel())}</span>` : ''}</span><small>${rg.bis ? `${zahl(profil.xp)} / ${zahl(rg.bis)} XP` : `${zahl(profil.xp)} XP`}</small></div>
         <div class="balken"><span style="width:${prozent(rg.anteil)}"></span></div>
       </div>
       <button class="icon-knopf" data-aktion="nav" data-ziel="info" aria-label="Info">${ICON.regler}</button>
@@ -1508,9 +1519,14 @@ function ergebnisScreen() {
   let wertung = e.modus === 'survival' || e.modus === 'blitz' ? `${e.richtig} richtig` : `${e.richtig} / ${e.gesamt} richtig`;
   if (e.reise) {
     const s = e.reise.station;
-    titel = !e.reise.bestanden ? (s.boss ? 'BOSS GEWINNT' : 'GESCHEITERT') : s.boss ? 'BOSS BESIEGT!' : e.reise.sterne === 3 ? 'PERFEKT!' : 'STATION GESCHAFFT!';
+    const ende = e.reise.bestanden && e.reise.stand.fertig && s === STATIONEN[STATIONEN.length - 1];
+    titel = !e.reise.bestanden ? (s.boss ? 'BOSS GEWINNT' : 'GESCHEITERT') : ende ? 'HEIMKEHR!' : s.boss ? 'BOSS BESIEGT!' : e.reise.sterne === 3 ? 'PERFEKT!' : 'STATION GESCHAFFT!';
     wertung = e.reise.bestanden ? sterneReihe(e.reise.sterne) : `${e.richtig} / ${e.gesamt} richtig`;
   }
+  // Senpai-Zitat nach einem Boss-Sieg
+  const zitat = e.reise?.bestanden && e.reise.station.boss && e.reise.station.nachBoss
+    ? `<div class="karte senpai-zitat">${maskottchen('mentor')}<p>${esc(e.reise.station.nachBoss)}</p></div>`
+    : '';
   const vorher = rang(e.xpVorher);
   const nachher = rang(e.xpVorher + e.xp);
   const aufgestiegen = nachher.name !== vorher.name;
@@ -1527,13 +1543,15 @@ function ergebnisScreen() {
     const s = e.reise.station;
     const naechste = e.reise.stand.naechste;
     const zurKarte = '<button class="knopf" data-aktion="nav" data-ziel="reise">Zur Karte</button>';
+    const teilenKnopf = s.boss && e.reise.bestanden ? `<button class="knopf" data-aktion="bossTeilen">${ICON.teilen} Teilen</button>` : '';
     if (!e.reise.bestanden) {
       fuss = `<button class="knopf knopf-rot" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button><div class="zweier">${zurKarte}<button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button></div>`;
     } else if (e.reise.stand.fertig) {
-      fuss = `<button class="knopf knopf-rot" data-aktion="nav" data-ziel="reise">Zur Karte</button><div class="zweier"><button class="knopf" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button><button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button></div>`;
+      fuss = `<button class="knopf knopf-rot" data-aktion="nav" data-ziel="reise">Zur Karte</button><div class="zweier">${teilenKnopf || `<button class="knopf" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button>`}<button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button></div>`;
     } else {
       const text = naechste.boss ? `Weiter: ${esc(naechste.titel)}` : `Weiter: Station ${naechste.nr}`;
-      fuss = `<button class="knopf knopf-rot" data-aktion="reiseWeiter">${text} ${ICON.weiter}</button><div class="zweier">${zurKarte}${e.reise.sterne < 3 && s ? `<button class="knopf" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button>` : '<button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button>'}</div>`;
+      const zweiter = teilenKnopf || (e.reise.sterne < 3 ? `<button class="knopf" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button>` : '<button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button>');
+      fuss = `<button class="knopf knopf-rot" data-aktion="reiseWeiter">${text} ${ICON.weiter}</button><div class="zweier">${zurKarte}${zweiter}</div>`;
     }
   }
   return `<section class="screen">
@@ -1556,7 +1574,9 @@ function ergebnisScreen() {
       <div class="unter"><span>${esc(nachher.name)}</span><span>${esc(nachher.naechster || '')}</span></div>
     </div>
 
+    ${zitat}
     ${aufgestiegen ? `<div class="erfolg">${rangEmblem(nachher.name, 46)}<span><span class="label">Neuer Rang</span><b>${esc(nachher.name)}</b><small>Du bist aufgestiegen!</small></span></div>` : ''}
+    ${e.reise?.neuerTitel ? `<div class="erfolg"><span class="medaille">${ICON.medaille}</span><span><span class="label">Neuer Titel</span><b>${esc(e.reise.neuerTitel)}</b><small>Steht ab jetzt neben deinem Rang.</small></span></div>` : ''}
     ${e.neuerRekord ? `<div class="erfolg"><span class="medaille">${ICON.blitz}</span><span><span class="label">Neuer Rekord</span><b>${e.richtig} richtige Antworten</b><small>${e.modus === 'survival' ? 'Survival' : 'Blitz'}</small></span></div>` : ''}
     ${e.neueAbzeichen.map((ab) => `<div class="erfolg">${abzeichenEmblem(ab.id, 46)}<span><span class="label">Neues Abzeichen</span><b>${esc(ab.name)}</b><small>${esc(ab.text)}</small></span></div>`).join('')}
 
@@ -1600,7 +1620,7 @@ function reiseScreen() {
   let html = '';
   let nr = 0;
   for (const akt of REISE.akte) {
-    html += `<div class="akt-karte karte" style="background-image:url('${akt.bild}')"><span class="label">Akt ${akt.nr}</span><b>${esc(akt.name)}</b></div>`;
+    html += `<div class="akt-karte karte" style="background-image:url('${akt.bild}')"><span class="label">Akt ${akt.nr}</span><b>${esc(akt.name)}</b>${akt.einleitung ? `<small>${esc(akt.einleitung)}</small>` : ''}</div>`;
     for (const k of REISE.kapitel.filter((x) => x.akt === akt.nr)) {
       const stationen = STATIONEN.filter((s) => s.kapitel === k);
       const sterne = stationen.reduce((summe, s) => summe + stationSterne(s.id), 0);
@@ -1640,7 +1660,9 @@ function stationDialog() {
   let text;
   if (zustand === 'gesperrt') text = gesperrtText();
   else if (s.boss) text = s.auftritt;
-  else text = `${s.fragen} Fragen, 3 Herzen. ${s.joker.length ? 'Joker erlaubt.' : 'Noch ohne Joker.'}`;
+  else text = s.senpai ?? '';
+  const jokerNamen = { fifty: '50:50', zeit: '+10 s', skip: 'Weiter' };
+  const regeln = `${s.fragen} Fragen · 3 Herzen${s.zeit !== FRAGEZEIT ? ` · ${s.zeit} s pro Frage` : ''} · ${s.boss ? 'keine Joker' : s.joker.length ? `Joker: ${s.joker.map((j) => jokerNamen[j]).join(', ')}` : 'noch keine Joker'}`;
   return `<div class="dialog-hintergrund" data-aktion="stationHintergrund">
     <div class="karte dialog dialog-station ${s.boss ? 'boss' : ''}" id="station-dialog" role="dialog" aria-modal="true" aria-labelledby="station-titel" tabindex="-1">
       <div class="dialog-kopf">
@@ -1651,7 +1673,8 @@ function stationDialog() {
         </div>
       </div>
       ${zustand !== 'gesperrt' ? sterneReihe(sterne, 32) : ''}
-      <p>${esc(text)}</p>
+      ${text ? `<p>${esc(text)}</p>` : ''}
+      ${zustand !== 'gesperrt' ? `<small class="regeln">${esc(regeln)}</small>` : ''}
       <div class="kat-reihe">${kategorien.length === Object.keys(KATEGORIEN).length ? '<span>Alle Kategorien</span>' : kategorien.map((k) => `<span>${kategorieIcon(k, 18)}${esc(KATEGORIEN[k])}</span>`).join('')}<span class="stufe">${esc(stufen)}</span></div>
       ${zustand === 'gesperrt'
         ? `<button class="knopf" data-aktion="stationSchliessen">${ICON.schloss} Noch gesperrt</button>`
@@ -2029,6 +2052,26 @@ Object.assign(aktionen, {
     render();
   },
 });
+
+// Nach dem Teilen: Hinweis anzeigen und beim ersten Mal das Abzeichen „Teilgeist“ vergeben
+function nachTeilen(ergebnis) {
+  if (ergebnis === 'abgebrochen') return;
+  ui.hinweis = null;
+  if (ergebnis === 'fehler') {
+    ui.hinweis = { text: 'Teilen ist auf diesem Gerät leider nicht möglich.', fehler: true };
+    return render();
+  }
+  let text = ergebnis === 'kopiert' ? 'Ergebnis kopiert' : '';
+  if (!profil.abzeichen.includes('teilgeist')) {
+    const ab = ABZEICHEN.find((x) => x.id === 'teilgeist');
+    profil.abzeichen.push(ab.id);
+    speichern();
+    if (ui.screen === 'ergebnis' && ui.ergebnis) ui.ergebnis.neueAbzeichen = [...ui.ergebnis.neueAbzeichen, ab];
+    else text += `${text ? ' · ' : ''}Neues Abzeichen: ${ab.name}`;
+  }
+  if (text) ui.hinweis = { text };
+  render();
+}
 
 // Meldung nach dem Teilen (Start- und Ergebnis-Bildschirm)
 function hinweisBlock() {

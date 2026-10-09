@@ -1,30 +1,35 @@
 {
- "hinweis": "Heldenreise: 5 Akte, 10 Kapitel, je 4 Stationen und ein Boss. Stationen erben kategorien, schwierigkeit, typen und joker vom Kapitel; leere kategorien = alle. Station: 5 Fragen, Boss: 7 Fragen, immer 3 Herzen. pflicht = Fragetypen, die beim Boss möglichst vorkommen sollen. Siehe heldenreise.md.",
+ "hinweis": "Heldenreise: 5 Akte, 10 Kapitel, je 4 Stationen und ein Boss. Stationen erben kategorien, schwierigkeit, typen und joker vom Kapitel; leere kategorien = alle. Station: 5 Fragen, Boss: 7 Fragen, immer 3 Herzen. pflicht = Fragetypen, die beim Boss möglichst vorkommen sollen. Siehe heldenreise.md. senpai = Satz des Mentors auf der Stationskarte, auftritt = Satz des Bosses, nachBoss = Senpai nach dem Sieg, einleitung = Satz auf der Akt-Karte.",
  "akte": [
   {
    "nr": 1,
    "name": "Aufbruch",
-   "bild": "assets/reise/akt-1.webp"
+   "bild": "assets/reise/akt-1.webp",
+   "einleitung": "Ein Dorf, ein Fernseher, ein Brief. So fangen Abenteuer an."
   },
   {
    "nr": 2,
    "name": "Schwelle",
-   "bild": "assets/reise/akt-2.webp"
+   "bild": "assets/reise/akt-2.webp",
+   "einleitung": "Der Senpai zeigt den Weg. Das Tor zeigt, ob du ihn gehen kannst."
   },
   {
    "nr": 3,
    "name": "Prüfungen",
-   "bild": "assets/reise/akt-3.webp"
+   "bild": "assets/reise/akt-3.webp",
+   "einleitung": "Arena und Turm. Hier werden aus Fans Reisende."
   },
   {
    "nr": 4,
    "name": "Abgrund",
-   "bild": "assets/reise/akt-4.webp"
+   "bild": "assets/reise/akt-4.webp",
+   "einleitung": "Tief unten wartet die schwerste Prüfung. Und dahinter der Schatz."
   },
   {
    "nr": 5,
    "name": "Rückkehr",
-   "bild": "assets/reise/akt-5.webp"
+   "bild": "assets/reise/akt-5.webp",
+   "einleitung": "Der Weg nach Hause führt über den Thron des Spoilers."
   }
  ],
  "kapitel": [
@@ -52,16 +57,20 @@
      "typen": [
       "multiple_choice",
       "true_false"
-     ]
+     ],
+     "senpai": "Jeder Held fängt irgendwo an. Meistens mit einer Frage, die er eigentlich wissen müsste. Drei Herzen hast du, pass gut auf sie auf."
     },
     {
-     "titel": "Der Marktplatz"
+     "titel": "Der Marktplatz",
+     "senpai": "Auf dem Marktplatz reden alle in Bildern. Lies die Emojis, dann weißt du, was gemeint ist."
     },
     {
-     "titel": "Die Bibliothek"
+     "titel": "Die Bibliothek",
+     "senpai": "Die Bibliothek riecht nach altem Papier und Nori. Hier steht alles, was der Spoiler vergessen machen will."
     },
     {
-     "titel": "Der alte Fernseher"
+     "titel": "Der alte Fernseher",
+     "senpai": "Dieser Fernseher hat schon Serien gezeigt, als ich noch ein Reiskorn war. Erinner dich für ihn."
     }
    ],
    "boss": {
@@ -81,7 +90,8 @@
     "pflicht": [
      "who_am_i"
     ],
-    "auftritt": "Du willst wissen, wie es weitergeht? Dann beweise, dass du dich an den Anfang erinnerst."
+    "auftritt": "Du willst wissen, wie es weitergeht? Dann beweise, dass du dich an den Anfang erinnerst.",
+    "nachBoss": "Siehst du? Ein Cliffhanger ist nur gefährlich, wenn man den Anfang vergisst. Das Dorf erinnert sich wieder."
    }
   },
   {
@@ -107,24 +117,28 @@
    ],
    "stationen": [
     {
-     "titel": "Post vom Senpai"
+     "titel": "Post vom Senpai",
+     "senpai": "Ein Brief! Von mir! Darin steht: Nimm den 50:50-Joker, er streicht zwei falsche Antworten. Einmal pro Station."
     },
     {
-     "titel": "Der Trainingsplatz"
+     "titel": "Der Trainingsplatz",
+     "senpai": "Training heißt: dieselbe Frage, bis sie sitzt. Nur dass hier jede Frage neu ist. Also fast dasselbe."
     },
     {
      "titel": "Neue Gesichter",
      "joker": [
       "fifty",
       "zeit"
-     ]
+     ],
+     "senpai": "Neue Helden, neue Serien. Und ein neuer Joker: +10 Sekunden, wenn die Uhr zu laut tickt."
     },
     {
      "titel": "Die Entscheidung",
      "joker": [
       "fifty",
       "zeit"
-     ]
+     ],
+     "senpai": "Hier kehren viele um. Du nicht, oder? Der Boss wartet schon mit seiner Lieblingsfolge: der, in der nichts passiert."
     }
    ],
    "boss": {
@@ -133,7 +147,8 @@
     "pflicht": [
      "who_am_i"
     ],
-    "auftritt": "Nichts passiert. Niemand erinnert sich. Genau so mag ich es."
+    "auftritt": "Nichts passiert. Niemand erinnert sich. Genau so mag ich es.",
+    "nachBoss": "Die Filler-Folge ist vorbei, niemand hat sie vermisst. Jetzt beginnt die Geschichte wirklich."
    }
   },
   {
@@ -162,16 +177,20 @@
    ],
    "stationen": [
     {
-     "titel": "Lektion eins"
+     "titel": "Lektion eins",
+     "senpai": "Lektion eins: Wer eine Frage nicht mag, überspringt sie. Der Joker „Weiter“ ist neu, nutz ihn weise."
     },
     {
-     "titel": "Die Grand Line"
+     "titel": "Die Grand Line",
+     "senpai": "Auf der Grand Line gilt: Der Weg ist das Ziel. Aber das Ziel ist auch ganz gut."
     },
     {
-     "titel": "Das Kame-Haus"
+     "titel": "Das Kame-Haus",
+     "senpai": "Am Strand ein kleines Haus, darin ein alter Meister. Du weißt, welche Serie ich meine. Beweise es."
     },
     {
-     "titel": "Die Akademie"
+     "titel": "Die Akademie",
+     "senpai": "Die Akademie prüft jeden Tag: fünf kurze Fragen im Tagesquiz, und gegen Freunde kämpfst du im Duell. Aber erst diese hier."
     }
    ],
    "boss": {
@@ -186,7 +205,8 @@
     "pflicht": [
      "who_am_i"
     ],
-    "auftritt": "Alle Namen falsch, alle Sätze verdreht. Findest du trotzdem die Wahrheit?"
+    "auftritt": "Alle Namen falsch, alle Sätze verdreht. Findest du trotzdem die Wahrheit?",
+    "nachBoss": "Die Namen stimmen wieder, die Sätze auch. Du bist bereit für das Tor."
    }
   },
   {
@@ -213,16 +233,20 @@
       "emoji",
       "who_am_i",
       "estimate"
-     ]
+     ],
+     "senpai": "Hinter dem Tor fragt niemand mehr nach Namen, dort fragt man nach Zahlen. Schätzfragen: Nah dran gibt halbe Punkte."
     },
     {
-     "titel": "Die Wächter"
+     "titel": "Die Wächter",
+     "senpai": "Die Wächter prüfen, ob du Reihenfolgen kennst. Tipp die Titel der Reihe nach an, nochmal tippen nimmt es zurück."
     },
     {
-     "titel": "Der erste Schritt"
+     "titel": "Der erste Schritt",
+     "senpai": "Ein Schritt durch das Tor. Von hier an gibt es alles: jede Kategorie, jeder Fragetyp."
     },
     {
-     "titel": "Kein Zurück"
+     "titel": "Kein Zurück",
+     "senpai": "Kein Zurück mehr. Also doch, der Knopf oben links. Aber du willst nicht."
     }
    ],
    "boss": {
@@ -232,7 +256,8 @@
      "who_am_i",
      "order"
     ],
-    "auftritt": "Nicht lizenziert, nicht verfügbar, nicht erinnert. Stempel drauf."
+    "auftritt": "Nicht lizenziert, nicht verfügbar, nicht erinnert. Stempel drauf.",
+    "nachBoss": "Der Stempel ist zerbrochen. Lizenziert oder nicht, die Erinnerung gehört dir. Willkommen auf der anderen Seite, Reisender."
    }
   },
   {
@@ -257,16 +282,20 @@
    ],
    "stationen": [
     {
-     "titel": "Vorrunde"
+     "titel": "Vorrunde",
+     "senpai": "Willkommen in der Arena! Vorrunde: alle gegen alle, du gegen fünf Fragen."
     },
     {
-     "titel": "Viertelfinale"
+     "titel": "Viertelfinale",
+     "senpai": "Die Tribünen füllen sich. Shōnen pur: Freundschaft, Anstrengung, Sieg. Und Trivia."
     },
     {
-     "titel": "Halbfinale"
+     "titel": "Halbfinale",
+     "senpai": "Halbfinale. Hier scheitern Helden, die zu früh feiern. Ein Herz nach dem anderen."
     },
     {
-     "titel": "Finale"
+     "titel": "Finale",
+     "senpai": "Finale! Das Publikum schreit deinen Namen. Also, es würde, wenn es deinen Namen kennen würde."
     }
    ],
    "boss": {
@@ -276,7 +305,8 @@
      "who_am_i",
      "estimate"
     ],
-    "auftritt": "Alles schon gesehen! Ich zeige es dir trotzdem noch einmal. Und noch einmal."
+    "auftritt": "Alles schon gesehen! Ich zeige es dir trotzdem noch einmal. Und noch einmal.",
+    "nachBoss": "Der Recap-Film hat ausgespielt. Du brauchst keine Zusammenfassung, du warst dabei."
    }
   },
   {
@@ -298,16 +328,20 @@
    ],
    "stationen": [
     {
-     "titel": "Erdgeschoss"
+     "titel": "Erdgeschoss",
+     "senpai": "Der Turm der neuen Hits. Jede Etage eine Serie, die jünger ist als mein Stirnband."
     },
     {
-     "titel": "Die Wendeltreppe"
+     "titel": "Die Wendeltreppe",
+     "senpai": "Treppen in andere Welten. Isekai: Wer stirbt, fängt woanders neu an. Du hast dafür Herzen."
     },
     {
-     "titel": "Das Portal"
+     "titel": "Das Portal",
+     "senpai": "Durch das Portal! Keine Sorge, auf der anderen Seite ist auch nur ein Quiz."
     },
     {
-     "titel": "Die Spitze"
+     "titel": "Die Spitze",
+     "senpai": "Die Spitze des Turms. Von hier siehst du das Hiatus-Gespenst. Es schläft. Noch."
     }
    ],
    "boss": {
@@ -317,7 +351,8 @@
      "who_am_i",
      "order"
     ],
-    "auftritt": "Das nächste Kapitel kommt … irgendwann. Bis dahin vergisst du alles."
+    "auftritt": "Das nächste Kapitel kommt … irgendwann. Bis dahin vergisst du alles.",
+    "nachBoss": "Das Gespenst ist eingeschlafen, diesmal für immer. Keine Pause mehr, die Geschichte geht weiter."
    }
   },
   {
@@ -339,16 +374,20 @@
    ],
    "stationen": [
     {
-     "titel": "Die Hängebrücke"
+     "titel": "Die Hängebrücke",
+     "senpai": "Die Brücke knarrt. Klassiker tragen dich hinüber, wenn du sie noch kennst."
     },
     {
-     "titel": "Im Nebel"
+     "titel": "Im Nebel",
+     "senpai": "Im Nebel verwechselt man leicht Serien. Shōjo oder Shōnen? Herzklopfen oder Faustkampf?"
     },
     {
-     "titel": "Leuchtende Augen"
+     "titel": "Leuchtende Augen",
+     "senpai": "Da unten leuchtet etwas. Augen? Oder nur der Fernseher aus dem Dorf? Konzentrier dich."
     },
     {
-     "titel": "Der Sprung"
+     "titel": "Der Sprung",
+     "senpai": "Jeder Held springt einmal. Du springst mit drei Herzen und ohne Fallschirm."
     }
    ],
    "boss": {
@@ -363,7 +402,8 @@
      "who_am_i",
      "estimate"
     ],
-    "auftritt": "Die Lippen sagen das eine, die Stimme das andere. Wem glaubst du?"
+    "auftritt": "Die Lippen sagen das eine, die Stimme das andere. Wem glaubst du?",
+    "nachBoss": "Der Dub-Dämon ist verstummt. Lippen und Stimme sagen wieder dasselbe: Du hast gewonnen."
    }
   },
   {
@@ -386,16 +426,20 @@
    ],
    "stationen": [
     {
-     "titel": "Die Schatzkammer"
+     "titel": "Die Schatzkammer",
+     "senpai": "Die Schatzkammer: Filme, die man zweimal schaut. Mindestens."
     },
     {
-     "titel": "Das Kino"
+     "titel": "Das Kino",
+     "senpai": "Dunkel, Popcorn, Ghibli. Das Kino fragt, ob du aufgepasst hast."
     },
     {
-     "titel": "Das Archiv"
+     "titel": "Das Archiv",
+     "senpai": "Im Archiv liegen Magazine, Verlage, Begriffe. Trocken? Vielleicht. Wertvoll? Sehr."
     },
     {
-     "titel": "Der Schlüssel"
+     "titel": "Der Schlüssel",
+     "senpai": "Der Schlüssel zum Schatz ist Wissen. Klingt kitschig, ist aber so."
     }
    ],
    "boss": {
@@ -405,7 +449,8 @@
      "who_am_i",
      "order"
     ],
-    "auftritt": "Verwackelt, verpixelt, verraten. Erkennst du das Original noch?"
+    "auftritt": "Verwackelt, verpixelt, verraten. Erkennst du das Original noch?",
+    "nachBoss": "Die Raubkopie löst sich auf, nur das Original bleibt. Nimm den Schatz und lauf, der Rückweg wird nicht leicht."
    }
   },
   {
@@ -425,16 +470,20 @@
    ],
    "stationen": [
     {
-     "titel": "Auf der Flucht"
+     "titel": "Auf der Flucht",
+     "senpai": "Lauf! Der Spoiler schickt seine Schergen. Schnelle Antworten geben Zeitbonus."
     },
     {
-     "titel": "Der Hinterhalt"
+     "titel": "Der Hinterhalt",
+     "senpai": "Hinterhalt! Fragen aus allen Richtungen, Fan- und Otaku-Stufe. Bleib ruhig."
     },
     {
-     "titel": "Die Abkürzung"
+     "titel": "Die Abkürzung",
+     "senpai": "Eine Abkürzung durch den Wald. Oder ein Umweg. Bei Quizfragen weiß man das nie."
     },
     {
-     "titel": "Letzte Meile"
+     "titel": "Letzte Meile",
+     "senpai": "Die letzte Meile vor dem Thron. Du bist weiter gekommen als jeder Neuling vor dir."
     }
    ],
    "boss": {
@@ -444,7 +493,8 @@
      "who_am_i",
      "estimate"
     ],
-    "auftritt": "Ich weiß schon, was in Kapitel 1100 passiert. Soll ich es dir sagen?"
+    "auftritt": "Ich weiß schon, was in Kapitel 1100 passiert. Soll ich es dir sagen?",
+    "nachBoss": "Der Leak ist gestopft. Was in Kapitel 1100 passiert, erfährst du, wenn es so weit ist. So soll es sein."
    }
   },
   {
@@ -463,16 +513,20 @@
    ],
    "stationen": [
     {
-     "titel": "Vor dem Thron"
+     "titel": "Vor dem Thron",
+     "senpai": "Der Thron des Spoilers. Ab hier nur Otaku-Fragen. Kein Zittern, Reisender."
     },
     {
-     "titel": "Die Wahrheit"
+     "titel": "Die Wahrheit",
+     "senpai": "Die Wahrheit über den Spoiler: Er kennt alle Enden, aber keine Anfänge. Du kennst beide."
     },
     {
-     "titel": "Der letzte Hinweis"
+     "titel": "Der letzte Hinweis",
+     "senpai": "Mein letzter Hinweis: Es gibt keinen Hinweis. Du weißt genug."
     },
     {
-     "titel": "Das Ende naht"
+     "titel": "Das Ende naht",
+     "senpai": "Das Ende naht. Für ihn. Beim Endboss gibt es keine zweite Chance, also alle Herzen festhalten."
     }
    ],
    "boss": {
@@ -485,7 +539,8 @@
      "estimate",
      "order"
     ],
-    "auftritt": "Ich kenne jedes Ende. Und wenn du verlierst, kennst du keins mehr."
+    "auftritt": "Ich kenne jedes Ende. Und wenn du verlierst, kennst du keins mehr.",
+    "nachBoss": "Der Spoiler ist fort. Die Erinnerungen sind zurück. Und du bist nicht mehr der Neuling, der im Dorf losgezogen ist. Willkommen zu Hause, Heimkehrer."
    }
   }
  ]

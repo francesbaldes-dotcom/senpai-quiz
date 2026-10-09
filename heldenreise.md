@@ -151,7 +151,7 @@ Beispiele für den Ton:
 | Stufe | Inhalt | Aufwand |
 |---|---|---|
 | **1 (MVP)** | **Fertig (9. Oktober 2026):** Karte, 50 Stationen aus `reise.json`, Herzen, Sterne, lineares Freischalten, Fortschritt im Profil; dazu schon Boss-Regeln (Fragetypen, keine Joker, Endboss 10 Fragen mit 12 s), Boss-Auftritt auf der Stationskarte, die vier Abzeichen, Zweite Chance per Video und das Prüfskript | erledigt |
-| **2** | Senpai-Dialoge zwischen den Stationen, Titel „Reisender“/„Heimkehrer“ am Spielernamen, Teilen von Boss-Siegen | 1 Tag plus Texte |
+| **2** | **Fertig (9. Oktober 2026):** Senpai-Satz auf jeder Stationskarte, Boss-Auftritt, Senpai-Zitat nach jedem Boss-Sieg, Akt-Sätze auf den Trennkarten (alle Texte in `data/reise.json`), Titel „Reisender“ (ab Boss 4) und „Heimkehrer“ (nach dem Ende) neben dem Rang auf der Startseite, Teilen von Boss-Siegen und des Endes mit Text und Link | erledigt |
 | **3** | Geheimpfade, „Zweite Reise“ als New Game+ (alles auf Stufe 3, 2 Herzen), saisonale Kurz-Kapitel zu Neustarts | offen |
 
 ## Entscheidungen (9. Oktober 2026)
@@ -163,4 +163,4 @@ Beispiele für den Ton:
 | Erzählung | **Mit dem Spoiler** als Gegenspieler, Bosse sind seine Handlanger, Senpai-Sätze zwischen den Stationen, alle überspringbar. |
 | Platzierung | **Oberste Karte im Startbildschirm** mit „Weiter bei Station 4.2“, darunter die bisherigen Modi. |
 
-Ausbaustufe 1 ist seit dem 9. Oktober 2026 in der App (Modus `reise` in `js/app.js`, Karte und Stationskarte, `data/reise.json`, `scripts/reise_check.py`). Nächster Schritt ist Ausbaustufe 2.
+Ausbaustufe 1 und 2 sind seit dem 9. Oktober 2026 in der App (Modus `reise` in `js/app.js`, Karte und Stationskarte, Dialoge, Titel und Teilen; Daten in `data/reise.json`, Prüfung mit `scripts/reise_check.py`). Die Titel stehen bisher nur lokal neben dem Rang; im Duell sichtbar werden sie erst mit einer Spalte in der Supabase-Tabelle `profile`. Nächster Schritt ist Ausbaustufe 3.
