@@ -17072,7 +17072,7 @@
    "difficulty": 1,
    "category": "naruto",
    "type": "multiple_choice",
-   "question": "Wie heißt Narutos Lehrer in Shippuden, der Holz-Jutsu beherrscht?",
+   "question": "Wie heißt der Vertretungs-Teamleiter von Team 7 in „Naruto Shippuden“, der Holz-Jutsu beherrscht?",
    "answers": [
     "Yamato",
     "Kakashi",
@@ -17114,7 +17114,7 @@
    "difficulty": 3,
    "category": "naruto",
    "type": "multiple_choice",
-   "question": "Wie heißt Kakashis Technik, die er mit dem Sharingan kopiert hat und selbst erfand?",
+   "question": "Wie heißt die Blitz-Technik, die Kakashi selbst erfand und später Sasuke beibrachte?",
    "answers": [
     "Chidori",
     "Rasengan",
@@ -17184,7 +17184,7 @@
    "difficulty": 1,
    "category": "shonen",
    "type": "multiple_choice",
-   "question": "Welches Pokémon liegt in der ersten Folge verletzt bei Ash im Pokémon-Center... wer ist Ashs erstes Pokémon?",
+   "question": "Welches Pokémon bekommt Ash in der allerersten Folge von Professor Eich?",
    "answers": [
     "Pikachu",
     "Glumanda",
@@ -17240,7 +17240,7 @@
    "difficulty": 1,
    "category": "shonen",
    "type": "multiple_choice",
-   "question": "Welche Farbe hat der Umhang des Aufklärungstrupps mit den Schwingen der Freiheit?",
+   "question": "Welche Farbe hat der Umhang des Aufklärungstrupps mit den Flügeln der Freiheit?",
    "answers": [
     "Grün",
     "Rot",
@@ -17310,9 +17310,9 @@
    "difficulty": 3,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Wie heißt der Arzt-Dämon, der Muzan einst erschuf?",
+   "question": "Wer verwandelte Muzan in der Heian-Zeit durch eine experimentelle Behandlung in einen Dämon?",
    "answers": [
-    "Ein namenloser Arzt der Heian-Zeit",
+    "Ein namenloser Arzt",
     "Tamayo",
     "Yushiro",
     "Kokushibo"
@@ -17380,7 +17380,7 @@
    "difficulty": 2,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Wie heißt Dekus Mitschüler, der sich in Stein verhärten kann?",
+   "question": "Wie heißt Dekus Mitschüler, dessen Körper sich stahlhart verhärten kann?",
    "answers": [
     "Eijiro Kirishima",
     "Tenya Iida",
@@ -17436,12 +17436,12 @@
    "difficulty": 2,
    "category": "isekai",
    "type": "multiple_choice",
-   "question": "Wie heißt Jinwoos Schatten-Soldat, der einst ein Orc-Schamane war?",
+   "question": "Wie heißt Jinwoos Schatten, der einst der Orc-Schamane Kargalgan war?",
    "answers": [
-    "Tank (Bär) nein",
+    "Tusk (im Anime: Fang)",
     "Igris",
     "Beru",
-    "Iron"
+    "Tank"
    ],
    "correct": 0
   },
@@ -17548,7 +17548,7 @@
    "difficulty": 2,
    "category": "shonen",
    "type": "multiple_choice",
-   "question": "Wie heißt der Torwart... wer ist Gin Gagamaru?",
+   "question": "Wer ist Gin Gagamaru in „Blue Lock“?",
    "answers": [
     "Ein Spieler mit extremer Beweglichkeit in Team Z",
     "Der Trainer",
@@ -17562,12 +17562,12 @@
    "difficulty": 2,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Welcher Serpo-Alien wird später Momos Verbündeter und wohnt bei ihr?",
+   "question": "Wie heißt das Alien-Mädchen, die letzte Überlebende der Sumerer, die bei Momo und Seiko einzieht?",
    "answers": [
-    "Keiner – aber die Alien-Prinzessin Vamola",
-    "Turbo-Oma",
-    "Jiji",
-    "Aira"
+    "Vamola",
+    "Aira Shiratori",
+    "Rin",
+    "Kinta"
    ],
    "correct": 0
   },
@@ -17604,12 +17604,12 @@
    "difficulty": 2,
    "category": "isekai",
    "type": "multiple_choice",
-   "question": "Was ist Frierens stärkster Zauber zum Töten von Dämonen?",
+   "question": "Wie heißt der Angriffszauber in „Frieren“, der ursprünglich vom Dämon Qual entwickelt wurde?",
    "answers": [
     "Zoltraak",
-    "Kamehameha",
-    "Rasengan",
-    "Expelliarmus"
+    "Judradjim",
+    "Catastravia",
+    "Auserlese"
    ],
    "correct": 0
   },
@@ -17646,7 +17646,7 @@
    "difficulty": 2,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Was war Sakamotos Rang als Killer?",
+   "question": "Welchen Ruf hatte Sakamoto in seiner Zeit als Auftragskiller?",
    "answers": [
     "Er galt als bester Killer der Welt",
     "Anfänger",
@@ -17662,7 +17662,7 @@
    "type": "multiple_choice",
    "question": "Welches Element kontrolliert die Klinge Kuregumo in „Kagurabachi“?",
    "answers": [
-    "Dunkle Wolken bzw. Rauch",
+    "Wolken",
     "Feuer",
     "Eis",
     "Blitz"
@@ -17674,7 +17674,7 @@
    "difficulty": 2,
    "category": "isekai",
    "type": "multiple_choice",
-   "question": "Wie heißt die Prüferin mit der Lollipop-Vorliebe... wer ist Biscuit Krueger?",
+   "question": "Wer ist Biscuit Krueger in „Hunter x Hunter“?",
    "answers": [
     "Eine Hunterin, die Gon und Killua auf Greed Island trainiert",
     "Killuas Mutter",
@@ -17884,7 +17884,7 @@
    "difficulty": 1,
    "category": "shonen",
    "type": "multiple_choice",
-   "question": "Wie heißt die Hauptfigur der ersten Serie?",
+   "question": "Wie heißt die Hauptfigur der ersten „Beyblade“-Serie in der deutschen Fassung?",
    "answers": [
     "Tyson",
     "Kai",
@@ -18052,7 +18052,7 @@
    "difficulty": 1,
    "category": "klassiker",
    "type": "multiple_choice",
-   "question": "Wie heißt die junge Inspektorin, die neu zur Einheit 1 kommt?",
+   "question": "Wie heißt die junge Inspektorin, die in der ersten Staffel von „Psycho-Pass“ neu zur Einheit 1 kommt?",
    "answers": [
     "Akane Tsunemori",
     "Shion Karanomori",
@@ -18150,7 +18150,7 @@
    "difficulty": 2,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Wie heißt das Wunderkind-Mädchen, das Kafka mit der Axt rettet?",
+   "question": "Wie heißt das Wunderkind mit der Axt, das Kafka bei der Aufnahmeprüfung in „Kaiju No. 8“ in Kaiju-Form rettet?",
    "answers": [
     "Kikoru Shinomiya",
     "Mina Ashiro",
@@ -18164,7 +18164,7 @@
    "difficulty": 2,
    "category": "isekai",
    "type": "multiple_choice",
-   "question": "Wer ist Mashs Freund mit der Jungfrauen-Brille... wer ist Finn Ames?",
+   "question": "Wer ist Finn Ames in „Mashle“?",
    "answers": [
     "Mashs Zimmergenosse an der Easton-Akademie",
     "Mashs Vater",
@@ -18178,7 +18178,7 @@
    "difficulty": 1,
    "category": "filme",
    "type": "multiple_choice",
-   "question": "Wie heißt der Hase/Wächter... welche Figur ist Jiji?",
+   "question": "Welche Figur ist Jiji in „Kikis kleiner Lieferservice“?",
    "answers": [
     "Kikis schwarze Katze",
     "Totoros Freund",
@@ -18192,7 +18192,7 @@
    "difficulty": 3,
    "category": "filme",
    "type": "multiple_choice",
-   "question": "Welcher Ghibli-Film basiert auf dem Roman „Als Marnie da war“ von Joan G. Robinson?",
+   "question": "Welcher Ghibli-Film basiert auf dem Roman „When Marnie Was There“ von Joan G. Robinson?",
    "answers": [
     "Erinnerungen an Marnie",
     "Arrietty",
@@ -18264,7 +18264,7 @@
    "type": "multiple_choice",
    "question": "Wie heißt Shinkais Film von 2011 über ein Mädchen, das in die unterirdische Welt Agartha reist?",
    "answers": [
-    "Children Who Chase Lost Voices",
+    "Die Reise nach Agartha (Children Who Chase Lost Voices)",
     "The Place Promised in Our Early Days",
     "Voices of a Distant Star",
     "She and Her Cat"
@@ -18290,12 +18290,12 @@
    "difficulty": 2,
    "category": "filme",
    "type": "multiple_choice",
-   "question": "Wie heißt der Kinofilm von 2021 zu „Demon Slayer“ ... nein, der Kinofilm von 2023 zu „Sword Art Online“?",
+   "question": "Wie heißt der zweite Kinofilm der Reihe „Sword Art Online Progressive“ (Japan 2022, deutscher Kinostart 2023)?",
    "answers": [
-    "Sword Art Online Progressive: Scherzo of Deep Night",
-    "Sword Art Online: Ordinal Scale",
-    "Sword Art Online: Alicization",
-    "Sword Art Online: Aincrad"
+    "Scherzo of Deep Night",
+    "Aria of a Starless Night",
+    "Ordinal Scale",
+    "Alicization"
    ],
    "correct": 0
   },
@@ -18819,7 +18819,7 @@
    "difficulty": 3,
    "category": "isekai",
    "type": "multiple_choice",
-   "question": "Wie heißt Jinwoos Schatten, der einst der Eis-Elf... wer ist Kaisel?",
+   "question": "Wer ist Kaisel in „Solo Leveling“?",
    "answers": [
     "Ein Wyvern, auf dem Jinwoo reitet",
     "Ein Ritter",
@@ -19103,7 +19103,7 @@
    "difficulty": 2,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Welche Fische hat Nene nach einem Fluch an den Beinen... was passiert mit Nene zu Beginn?",
+   "question": "Was passiert mit Nene kurz nach ihrer ersten Begegnung mit Hanako?",
    "answers": [
     "Sie bekommt vorübergehend Fischbeine (Meerjungfrau-Fluch)",
     "Sie stirbt",
@@ -19519,7 +19519,7 @@
    "difficulty": 2,
    "category": "filme",
    "type": "multiple_choice",
-   "question": "Welcher Film von Mamoru Hosoda spielt in Japan und erzählt von Kun... nein: von Ren, einem Jungen, der zum Schüler des Bestien Kumatetsu wird?",
+   "question": "In welchem Film von Mamoru Hosoda wird der Junge Ren zum Schüler des Bestien Kumatetsu?",
    "answers": [
     "Der Junge und das Biest",
     "Wolfskinder",
@@ -19715,7 +19715,7 @@
    "difficulty": 2,
    "category": "isekai",
    "type": "multiple_choice",
-   "question": "Wie heißt Mashs Rivale... wer ist Lance Crown?",
+   "question": "Wer ist Lance Crown in „Mashle“?",
    "answers": [
     "Ein Mitschüler mit Gravitationsmagie, der Mashs Freund wird",
     "Ein Lehrer",

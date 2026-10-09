@@ -120,7 +120,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Kiba Inuzuka** · Shino Aburame · Choji Akimichi · Shikamaru Nara
 - `e-379` *Auswahl* – Wie heißt die Prüfung, bei der Genin zu Chunin aufsteigen?  
   **Chunin-Auswahlprüfung** · Hokage-Prüfung · Anbu-Test · Jonin-Examen
-- `e-408` *Auswahl* – Wie heißt Narutos Lehrer in Shippuden, der Holz-Jutsu beherrscht?  
+- `e-408` *Auswahl* – Wie heißt der Vertretungs-Teamleiter von Team 7 in „Naruto Shippuden“, der Holz-Jutsu beherrscht?  
   **Yamato** · Kakashi · Jiraiya · Sai
 - `e-437` *Wahr/Falsch* – Naruto hat Schnurrhaar-Striche im Gesicht.  
   **Wahr** · Falsch
@@ -261,15 +261,15 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Tsubasa Ozora** · Kojiro Hyuga · Genzo Wakabayashi · Taro Misaki
 - `e-409` *Auswahl* – Wie heißt Ran mit Nachnamen?  
   **Mori** · Kudo · Suzuki · Hattori
-- `e-410` *Auswahl* – Welches Pokémon liegt in der ersten Folge verletzt bei Ash im Pokémon-Center... wer ist Ashs erstes Pokémon?  
+- `e-410` *Auswahl* – Welches Pokémon bekommt Ash in der allerersten Folge von Professor Eich?  
   **Pikachu** · Glumanda · Bisasam · Schiggy
-- `e-411` *Auswahl* – Welche Farbe hat der Umhang des Aufklärungstrupps mit den Schwingen der Freiheit?  
+- `e-411` *Auswahl* – Welche Farbe hat der Umhang des Aufklärungstrupps mit den Flügeln der Freiheit?  
   **Grün** · Rot · Schwarz · Blau
 - `e-417` *Auswahl* – Welche Fähigkeit hat Ryunosuke Akutagawa?  
   **Rashomon, einen Mantel, der sich in Klingen verwandelt** · Verwandlung in einen Tiger · Aufhebung aller Fähigkeiten · Fliegen
 - `e-420` *Auswahl* – Womit kämpfen die Figuren in „Beyblade“?  
   **Mit Kampfkreiseln** · Mit Karten · Mit Murmeln · Mit Robotern
-- `e-421` *Auswahl* – Wie heißt die Hauptfigur der ersten Serie?  
+- `e-421` *Auswahl* – Wie heißt die Hauptfigur der ersten „Beyblade“-Serie in der deutschen Fassung?  
   **Tyson** · Kai · Max · Ray
 - `e-422` *Auswahl* – Wer beherrscht in „Seraph of the End“ die Welt nach einem Virus?  
   **Vampire** · Titanen · Dämonen · Roboter
@@ -696,7 +696,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Jotaro Kujo** · Joseph Joestar · Josuke Higashikata · Giorno Giovanna
 - `e-424` *Auswahl* – Was misst das Sibyl-System in „Psycho-Pass“?  
   **Die Verbrechensneigung der Menschen** · Die Intelligenz · Die Gesundheit · Das Einkommen
-- `e-425` *Auswahl* – Wie heißt die junge Inspektorin, die neu zur Einheit 1 kommt?  
+- `e-425` *Auswahl* – Wie heißt die junge Inspektorin, die in der ersten Staffel von „Psycho-Pass“ neu zur Einheit 1 kommt?  
   **Akane Tsunemori** · Shion Karanomori · Yayoi Kunizuka · Mika Shimotsuki
 - `e-449` *Wahr/Falsch* – Light Yagami ist ein Musterschüler mit Bestnoten.  
   **Wahr** · Falsch
@@ -858,7 +858,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Attack on Titan: The Last Attack** · Attack on Titan: Final Rumbling · Attack on Titan: Wings of Freedom · Attack on Titan: Chronicle
 - `e-402` *Auswahl* – Welchen Beruf hat Kikis Vermieterin Osono?  
   **Bäckerin** · Lehrerin · Hexe · Ärztin
-- `e-426` *Auswahl* – Wie heißt der Hase/Wächter... welche Figur ist Jiji?  
+- `e-426` *Auswahl* – Welche Figur ist Jiji in „Kikis kleiner Lieferservice“?  
   **Kikis schwarze Katze** · Totoros Freund · Ein Rußgeist · Haku als Drache
 - `e-427` *Auswahl* – Wie heißt der Junge aus Tokio in „Your Name.“?  
   **Taki Tachibana** · Hodaka Morishima · Sōta Munakata · Takao Akizuki
@@ -1283,7 +1283,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Die rechtmäßige Königin der Mauern** · Erens Schwester · Eine Titanen-Forscherin · Levis Tochter
 - `f-533` *Auswahl* – Wie heißt Nekomas Zuspieler mit dem Pudding-Haar?  
   **Kenma Kozume** · Tetsuro Kuroo · Lev Haiba · Morisuke Yaku
-- `f-534` *Auswahl* – Wie heißt der Torwart... wer ist Gin Gagamaru?  
+- `f-534` *Auswahl* – Wer ist Gin Gagamaru in „Blue Lock“?  
   **Ein Spieler mit extremer Beweglichkeit in Team Z** · Der Trainer · Ein Torwart aus Italien · Isagis Vater
 - `f-544` *Auswahl* – Wie heißt Rukias Bruder, Kommandant der 6. Kompanie?  
   **Byakuya Kuchiki** · Renji Abarai · Toshiro Hitsugaya · Kenpachi Zaraki
@@ -1540,27 +1540,27 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Shinobus Schülerin, die mit einer Münze Entscheidungen trifft** · Tanjiros Schwester · Eine Dämonin · Die Blumen-Hashira
 - `f-523` *Auswahl* – Wer ist Mahito?  
   **Ein Fluch, der Seelen formen und Menschen verformen kann** · Ein Jujuzist · Gojos Lehrer · Yujis Bruder
-- `f-524` *Auswahl* – Wie heißt Dekus Mitschüler, der sich in Stein verhärten kann?  
+- `f-524` *Auswahl* – Wie heißt Dekus Mitschüler, dessen Körper sich stahlhart verhärten kann?  
   **Eijiro Kirishima** · Tenya Iida · Fumikage Tokoyami · Hanta Sero
 - `f-525` *Auswahl* – Wer ist Angel Devil?  
   **Ein Teufel bei der öffentlichen Sicherheit, dessen Berührung Lebenszeit raubt** · Denjis Vater · Ein Jäger aus China · Powers Bruder
 - `f-530` *Auswahl* – Wer ist Becky Blackbell?  
   **Anyas beste Freundin an der Eden Academy** · Anyas Lehrerin · Eine Spionin · Yors Kollegin
-- `f-535` *Auswahl* – Welcher Serpo-Alien wird später Momos Verbündeter und wohnt bei ihr?  
-  **Keiner – aber die Alien-Prinzessin Vamola** · Turbo-Oma · Jiji · Aira
+- `f-535` *Auswahl* – Wie heißt das Alien-Mädchen, die letzte Überlebende der Sumerer, die bei Momo und Seiko einzieht?  
+  **Vamola** · Aira Shiratori · Rin · Kinta
 - `f-539` *Auswahl* – Wie heißt Senkus Schiff, mit dem die Gruppe nach Amerika fährt?  
   **Perseus** · Sunny · Nautilus · Ishigami
-- `f-541` *Auswahl* – Was war Sakamotos Rang als Killer?  
+- `f-541` *Auswahl* – Welchen Ruf hatte Sakamoto in seiner Zeit als Auftragskiller?  
   **Er galt als bester Killer der Welt** · Anfänger · Mittelmaß · Er war Polizist
 - `f-542` *Auswahl* – Welches Element kontrolliert die Klinge Kuregumo in „Kagurabachi“?  
-  **Dunkle Wolken bzw. Rauch** · Feuer · Eis · Blitz
+  **Wolken** · Feuer · Eis · Blitz
 - `f-561` *Auswahl* – Welchen Rang erreicht Saitama erst nach Prüfung trotz seiner Stärke?  
   **Klasse C, Rang 388** · Klasse S, Rang 1 · Klasse A, Rang 1 · Klasse B, Rang 7
-- `f-562` *Auswahl* – Wie heißt das Wunderkind-Mädchen, das Kafka mit der Axt rettet?  
+- `f-562` *Auswahl* – Wie heißt das Wunderkind mit der Axt, das Kafka bei der Aufnahmeprüfung in „Kaiju No. 8“ in Kaiju-Form rettet?  
   **Kikoru Shinomiya** · Mina Ashiro · Reno Ichikawa · Konomi
 - `f-571` *Auswahl* – Wie heißt Nenes Mitschüler, der Exorzist werden will?  
   **Kou Minamoto** · Tsukasa · Teru Minamoto · Akane Aoi
-- `f-572` *Auswahl* – Welche Fische hat Nene nach einem Fluch an den Beinen... was passiert mit Nene zu Beginn?  
+- `f-572` *Auswahl* – Was passiert mit Nene kurz nach ihrer ersten Begegnung mit Hanako?  
   **Sie bekommt vorübergehend Fischbeine (Meerjungfrau-Fluch)** · Sie stirbt · Sie wird unsichtbar · Sie verliert ihr Gedächtnis
 - `f-589` *Auswahl* – Wie heißt der Schüler in „Assassination Classroom“, der als Attentäter am talentiertesten ist?  
   **Nagisa Shiota** · Karma Akabane · Kaede Kayano · Itona Horibe
@@ -1693,23 +1693,23 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Fünf Yen** · Fünf Euro · Eine Million Yen · Nichts
 - `f-502` *Auswahl* – Welche Kriegsgöttin verfolgt Yato aus Rache?  
   **Bishamon** · Kofuku · Amaterasu · Izanami
-- `f-526` *Auswahl* – Wie heißt Jinwoos Schatten-Soldat, der einst ein Orc-Schamane war?  
-  **Tank (Bär) nein** · Igris · Beru · Iron
+- `f-526` *Auswahl* – Wie heißt Jinwoos Schatten, der einst der Orc-Schamane Kargalgan war?  
+  **Tusk (im Anime: Fang)** · Igris · Beru · Tank
 - `f-528` *Auswahl* – Welche Magie nutzt Laxus Dreyar?  
   **Blitz-Drachentöter-Magie** · Eismagie · Requip · Stellargeister
-- `f-538` *Auswahl* – Was ist Frierens stärkster Zauber zum Töten von Dämonen?  
-  **Zoltraak** · Kamehameha · Rasengan · Expelliarmus
+- `f-538` *Auswahl* – Wie heißt der Angriffszauber in „Frieren“, der ursprünglich vom Dämon Qual entwickelt wurde?  
+  **Zoltraak** · Judradjim · Catastravia · Auserlese
 - `f-540` *Auswahl* – Wer ist Peter Ratri?  
   **Der Anführer der Ratri-Familie, die das Versprechen mit den Dämonen hütet** · Ein Dämonenkönig · Isabellas Mann · Ein Kind aus Grace Field
-- `f-543` *Auswahl* – Wie heißt die Prüferin mit der Lollipop-Vorliebe... wer ist Biscuit Krueger?  
+- `f-543` *Auswahl* – Wer ist Biscuit Krueger in „Hunter x Hunter“?  
   **Eine Hunterin, die Gon und Killua auf Greed Island trainiert** · Killuas Mutter · Eine Chimera-Ameise · Gons Tante
 - `f-560` *Auswahl* – Wie heißt Astas Anti-Magie-Schwert?  
   **Dämonentöter** · Kurikara · Zangetsu · Enten
-- `f-563` *Auswahl* – Wer ist Mashs Freund mit der Jungfrauen-Brille... wer ist Finn Ames?  
+- `f-563` *Auswahl* – Wer ist Finn Ames in „Mashle“?  
   **Mashs Zimmergenosse an der Easton-Akademie** · Mashs Vater · Ein Lehrer · Ein Bösewicht
 - `f-590` *Auswahl* – Was sind die „Pfeifen“ (Whistles) in „Made in Abyss“?  
   **Ränge der Höhlenforscher** · Signalgeräte · Waffen · Relikte
-- `f-594` *Auswahl* – Wie heißt Mashs Rivale... wer ist Lance Crown?  
+- `f-594` *Auswahl* – Wer ist Lance Crown in „Mashle“?  
   **Ein Mitschüler mit Gravitationsmagie, der Mashs Freund wird** · Ein Lehrer · Mashs Bruder · Der Schulleiter
 
 ### Klassiker & Kult
@@ -2078,9 +2078,9 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Keisuke Suga** · Taki · Sōta · Teshigawara
 - `f-567` *Auswahl* – Welcher Film von Mamoru Oshii handelt von der Cyborg-Polizistin Motoko Kusanagi?  
   **Ghost in the Shell** · Patlabor · Angel’s Egg · Jin-Roh
-- `f-568` *Auswahl* – Wie heißt der Kinofilm von 2021 zu „Demon Slayer“ ... nein, der Kinofilm von 2023 zu „Sword Art Online“?  
-  **Sword Art Online Progressive: Scherzo of Deep Night** · Sword Art Online: Ordinal Scale · Sword Art Online: Alicization · Sword Art Online: Aincrad
-- `f-586` *Auswahl* – Welcher Film von Mamoru Hosoda spielt in Japan und erzählt von Kun... nein: von Ren, einem Jungen, der zum Schüler des Bestien Kumatetsu wird?  
+- `f-568` *Auswahl* – Wie heißt der zweite Kinofilm der Reihe „Sword Art Online Progressive“ (Japan 2022, deutscher Kinostart 2023)?  
+  **Scherzo of Deep Night** · Aria of a Starless Night · Ordinal Scale · Alicization
+- `f-586` *Auswahl* – In welchem Film von Mamoru Hosoda wird der Junge Ren zum Schüler des Bestien Kumatetsu?  
   **Der Junge und das Biest** · Wolfskinder · Mirai · Belle
 - `f-587` *Auswahl* – Wie heißt der Kinofilm 2023 zu „Blue Giant“ über einen jungen Saxofonisten?  
   **Blue Giant** · Blue Period · Blue Box · Blue Spring
@@ -2300,7 +2300,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Kubikiribōchō** · Samehada · Kusanagi · Hiramekarei
 - `o-269` *Auswahl* – Wie heißt Itachis Technik, die Gegner in eine 72-stündige Illusion zwingt?  
   **Tsukuyomi** · Amaterasu · Susanoo · Izanagi
-- `o-287` *Auswahl* – Wie heißt Kakashis Technik, die er mit dem Sharingan kopiert hat und selbst erfand?  
+- `o-287` *Auswahl* – Wie heißt die Blitz-Technik, die Kakashi selbst erfand und später Sasuke beibrachte?  
   **Chidori** · Rasengan · Amaterasu · Kirin
 - `o-305` *Auswahl* – Wie heißt Narutos Wind-Technik, eine Weiterentwicklung des Rasengan?  
   **Rasenshuriken** · Chidori · Kirin · Odama Rasengan
@@ -2556,8 +2556,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Divergent Fist (Divergierende Faust)** · Schwarzer Blitz · Sphärenentfaltung · Fluchrede
 - `o-276` *Auswahl* – Wie heißt die Organisation böser Esper in „Mob Psycho 100“?  
   **Klaue (Claw)** · Hand · Fist · Eye
-- `o-291` *Auswahl* – Wie heißt der Arzt-Dämon, der Muzan einst erschuf?  
-  **Ein namenloser Arzt der Heian-Zeit** · Tamayo · Yushiro · Kokushibo
+- `o-291` *Auswahl* – Wer verwandelte Muzan in der Heian-Zeit durch eine experimentelle Behandlung in einen Dämon?  
+  **Ein namenloser Arzt** · Tamayo · Yushiro · Kokushibo
 - `o-292` *Auswahl* – Wie heißt Sukunas Sphärenentfaltung?  
   **Bösartiger Schrein (Malevolent Shrine)** · Unendliche Leere · Chimären-Schatten · Gefängnisreich
 - `o-312` *Auswahl* – Welche Hashira trägt einen Hanafuda-ähnlichen Haori und ist der Wind-Hashira?  
@@ -2641,7 +2641,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Hajime Komoto** · Yuki Tabata · Gege Akutami · Kazue Kato
 - `o-279` *Auswahl* – Wer hat „Noragami“ erschaffen?  
   **Adachitoka** · CLAMP · AidaIro · Yana Toboso
-- `o-316` *Auswahl* – Wie heißt Jinwoos Schatten, der einst der Eis-Elf... wer ist Kaisel?  
+- `o-316` *Auswahl* – Wer ist Kaisel in „Solo Leveling“?  
   **Ein Wyvern, auf dem Jinwoo reitet** · Ein Ritter · Ein Orc · Ein Riese
 - `o-325` *Auswahl* – Wie heißt der Fluch des Abyss, der beim Aufstieg wirkt?  
   **Der Fluch des Abgrunds (Aufstiegsfluch)** · Der Abstiegsfluch · Der Sonnenfluch · Der Nebelfluch
@@ -2830,10 +2830,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Nausicaä aus dem Tal der Winde** · Das Schloss im Himmel · Mein Nachbar Totoro · Das Schloss des Cagliostro
 - `o-283` *Auswahl* – Welcher Ghibli-Film von 1991 erzählt von einer Büroangestellten, die aufs Land fährt?  
   **Tränen der Erinnerung** · Flüstern des Meeres · Stimme des Herzens · Pom Poko
-- `o-299` *Auswahl* – Welcher Ghibli-Film basiert auf dem Roman „Als Marnie da war“ von Joan G. Robinson?  
+- `o-299` *Auswahl* – Welcher Ghibli-Film basiert auf dem Roman „When Marnie Was There“ von Joan G. Robinson?  
   **Erinnerungen an Marnie** · Arrietty · Das wandelnde Schloss · Die Chroniken von Erdsee
 - `o-300` *Auswahl* – Wie heißt Shinkais Film von 2011 über ein Mädchen, das in die unterirdische Welt Agartha reist?  
-  **Children Who Chase Lost Voices** · The Place Promised in Our Early Days · Voices of a Distant Star · She and Her Cat
+  **Die Reise nach Agartha (Children Who Chase Lost Voices)** · The Place Promised in Our Early Days · Voices of a Distant Star · She and Her Cat
 - `o-323` *Auswahl* – Wie heißt der junge Pilot und Schwein-Mensch Porco Rosso mit bürgerlichem Namen?  
   **Marco Pagot** · Gina · Curtis · Fio Piccolo
 
