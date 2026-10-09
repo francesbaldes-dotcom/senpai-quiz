@@ -1762,7 +1762,7 @@ function reiseKachelStart() {
   const zweite = stand.durchgang === 2;
   let text;
   if (stand.fertig) text = zweite ? 'Beide Reisen geschafft' : 'Reise geschafft';
-  else text = `weiter bei ${n.boss ? `${n.kapitel.nr}.Boss` : n.nr}`;
+  else text = `weiter bei ${n.boss ? `Boss ${n.kapitel.nr}` : n.nr}`;
   return `<button class="fortschritt-kachel reise" data-aktion="nav" data-ziel="reise">
     <span class="symbol">${ICON.fahne}</span>
     <span><b>${zweite ? 'Zweite Reise' : 'Reise'}</b><small>${esc(text)}</small></span>

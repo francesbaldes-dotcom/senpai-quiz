@@ -192,7 +192,7 @@ button { font: inherit; color: inherit; }
 .sprechblase small { font-size: 11px; font-weight: 700; white-space: nowrap; }
 
 /* Fortschrittszeile: Reise und Dojo als farbige Karten */
-.fortschritt-zeile { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 14px; }
+.fortschritt-zeile { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 14px; flex: 1 0 auto; max-height: 190px; }
 .fortschritt-kachel {
   display: flex;
   flex-direction: column;
