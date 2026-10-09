@@ -1,8 +1,8 @@
-# Senpai Quiz – 500 Fragen
+# Senpai Quiz – 600 Fragen
 
 Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Antworten.
 
-## Einsteiger (174 Fragen)
+## Einsteiger (207 Fragen)
 
 ### One Piece
 
@@ -153,6 +153,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `e-172` *Auswahl* – Welcher deutsche Verlag veröffentlicht „Attack on Titan“?  
   **Carlsen** · Egmont Manga · Tokyopop · Altraverse
+- `e-196` *Auswahl* – Welche Position spielt Shoyo Hinata?  
+  **Mittelblocker** · Zuspieler · Libero · Außenangreifer
+- `e-197` *Auswahl* – Welches Tier ist das Symbol der Karasuno-Oberschule?  
+  **Krähe** · Katze · Eule · Adler
+- `e-199` *Auswahl* – Wie viele Stürmer werden zu Beginn in das Blue-Lock-Projekt gesteckt?  
+  **300** · 50 · 100 · 1000
 
 ### Neue Hits
 
@@ -222,6 +228,14 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Aki Hayakawa** · Kishibe · Himeno · Beam
 - `e-167` *Wahr/Falsch* – Denji träumt am Anfang von ganz einfachen Dingen wie Brot mit Marmelade und einer Freundin.  
   **Wahr** · Falsch
+- `e-193` *Auswahl* – Was ist Loid Forger zur Tarnung von Beruf?  
+  **Psychiater** · Lehrer · Koch · Polizist
+- `e-194` *Auswahl* – Wie heißt Anyas Lieblingsserie im Fernsehen?  
+  **Spy Wars** · Ninja Wars · Pirate Wars · Hero Wars
+- `e-195` *Auswahl* – Was für ein Tier ist Bond?  
+  **Ein großer weißer Hund** · Eine Katze · Ein Pinguin · Ein Hamster
+- `e-200` *Auswahl* – Was wächst aus Denjis Kopf, wenn er sich verwandelt?  
+  **Eine Kettensäge** · Ein Wolfskopf · Ein Totenschädel · Eine Flamme
 
 ### Isekai & Fantasy
 
@@ -233,6 +247,24 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Als schwächster Jäger der Menschheit** · Als stärkster Jäger Koreas · Als König der Piraten · Als Dämonenkönig
 - `e-093` *Auswahl* – Wo wachsen Emma, Norman und Ray in „The Promised Neverland“ auf?  
   **In einem Waisenhaus** · In einem Internat · Auf einem Piratenschiff · In einem Tempel
+- `e-175` *Auswahl* – Wie heißen in „Solo Leveling“ die Portale, aus denen Monster in unsere Welt kommen?  
+  **Gates** · Risse · Höllenschlünde · Wurmlöcher
+- `e-176` *Auswahl* – Wie werden die Menschen genannt, die in „Solo Leveling“ Monster bekämpfen?  
+  **Jäger** · Jujuzisten · Helden · Shinigami
+- `e-177` *Auswahl* – In welchem Rang startet Sung Jinwoo als Jäger?  
+  **E-Rang** · S-Rang · A-Rang · C-Rang
+- `e-178` *Wahr/Falsch* – Jinwoo ist der einzige Mensch, der durch Kämpfe wie in einem Videospiel aufleveln kann.  
+  **Wahr** · Falsch
+- `e-179` *Auswahl* – Wer ist Sung Jinah?  
+  **Jinwoos jüngere Schwester** · Eine S-Rang-Jägerin · Jinwoos Mutter · Die Leiterin der Jäger-Vereinigung
+- `e-185` *Auswahl* – Wie heißt die Magiergilde, zu der Natsu und Lucy gehören?  
+  **Fairy Tail** · Sabertooth · Blue Pegasus · Lamia Scale
+- `e-186` *Auswahl* – Welche Magie nutzt Lucy Heartfilia?  
+  **Stellargeister-Magie mit goldenen und silbernen Schlüsseln** · Feuermagie · Eismagie · Requip-Magie
+- `e-187` *Auswahl* – Welche Angewohnheit hat Gray Fullbuster?  
+  **Er zieht sich unbewusst aus** · Er schläft überall ein · Er isst ständig · Er lügt ständig
+- `e-188` *Auswahl* – Wie heißt die rothaarige Magierin, die blitzschnell ihre Rüstungen wechselt?  
+  **Erza Scarlet** · Juvia Lockser · Wendy Marvell · Mirajane Strauss
 
 ### Klassiker & Kult
 
@@ -248,6 +280,26 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Von Menschenfleisch** · Von Reis · Von Seelen · Von Sonnenlicht
 - `e-104` *Auswahl* – Welcher deutsche Sender zeigte ab 1999 „Pokémon“ und später „Naruto“ und „One Piece“?  
   **RTL II** · ZDF · ProSieben · KiKA
+- `e-180` *Auswahl* – Wer übernimmt in Duellen die Kontrolle über Yugi, wenn das Millennium-Puzzle aktiv wird?  
+  **Der Geist des Pharaos Atem** · Ryuk · Exodia · Maximillion Pegasus
+- `e-181` *Auswahl* – Wie heißt Yugis bester Freund, der selbst Duellant wird?  
+  **Joey Wheeler** · Tristan Taylor · Seto Kaiba · Maximillion Pegasus
+- `e-182` *Auswahl* – Welches Monster ist Yugis bekannteste Karte?  
+  **Dunkler Magier** · Blauäugiger weißer Drache · Exodia · Rotäugiger Schwarzer Drache
+- `e-183` *Wahr/Falsch* – Das Sammelkartenspiel aus „Yu-Gi-Oh!“ gibt es auch in der echten Welt.  
+  **Wahr** · Falsch
+- `e-184` *Auswahl* – Welches Monster gewinnt das Duell sofort, wenn alle fünf Teile auf der Hand liegen?  
+  **Exodia** · Dunkler Magier · Slifer · Obelisk
+- `e-189` *Auswahl* – Was tragen Ghoule in „Tokyo Ghoul“, wenn sie als Ghoul auftreten?  
+  **Masken** · Hüte · Umhänge · Handschuhe
+- `e-190` *Auswahl* – Wie heißt das Mädchen aus dem Café, das Kaneki beibringt, als Ghoul zu überleben?  
+  **Touka Kirishima** · Rize Kamishiro · Hinami Fueguchi · Akira Mado
+- `e-191` *Auswahl* – Wie heißt die Behörde, die in „Tokyo Ghoul“ Ghoule jagt?  
+  **CCG** · CIA · Marine · Aufklärungstrupp
+- `e-192` *Auswahl* – Wie heißt die Waffe, die aus dem Körper eines Ghouls wächst?  
+  **Kagune** · Zanpakuto · Kakugan · Quinque
+- `e-198` *Auswahl* – Wie heißt der Schüler, der das Death Note findet?  
+  **Light Yagami** · L · Near · Mello
 
 ### Shōjo & Romance
 
@@ -320,6 +372,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Rußmännchen** · Kodama · Kappa · Tanuki
 - `e-174` *Auswahl* – In welchem One-Piece-Kinofilm von 2022 tritt die Sängerin Uta auf?  
   **One Piece Film: Red** · One Piece: Stampede · One Piece Film: Gold · One Piece: Strong World
+- `e-206` *Auswahl* – Wie heißt die Hexe, die das Badehaus in „Chihiros Reise ins Zauberland“ leitet?  
+  **Yubaba** · Zeniba · Kamaji · Lin
+- `e-207` *Auswahl* – In welchem Dragon-Ball-Kinofilm von 2022 stehen Gohan und Piccolo im Mittelpunkt?  
+  **Dragon Ball Super: Super Hero** · Dragon Ball Super: Broly · Resurrection F · Battle of Gods
 
 ### Manga, Begriffe & Kultur
 
@@ -381,8 +437,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Das Tor zu einem Shintō-Schrein** · Ein Fischgericht · Eine Papierlaterne · Ein Fächer
 - `e-171` *Auswahl* – Was sind „Chibi“-Zeichnungen?  
   **Figuren mit übergroßem Kopf und winzigem Körper, oft für Comedy** · Realistische Porträts · Hintergrundbilder · Farbseiten
+- `e-201` *Auswahl* – Was ist Mochi?  
+  **Ein Reiskuchen aus Klebreis** · Eine Nudelsorte · Ein grüner Tee · Eine Suppe
+- `e-202` *Auswahl* – Was bedeutet „Hai“?  
+  **Ja** · Nein · Vielleicht · Hallo
+- `e-203` *Auswahl* – Was ist ein Yukata?  
+  **Ein leichter Sommer-Kimono aus Baumwolle** · Ein Holzschuh · Ein Fächer · Ein Hut
+- `e-204` *Auswahl* – Was ist ein Shōjo-Manga?  
+  **Ein Manga, der sich vor allem an Mädchen richtet** · Ein Manga für Erwachsene · Ein Manga über Sport · Ein Manga ohne Text
+- `e-205` *Auswahl* – Wofür steht die Abkürzung „WSJ“ in Manga-Kreisen?  
+  **Weekly Shōnen Jump** · World Shōjo Journal · Wöchentliches Sammel-Journal · Weekly Shōnen Sunday
 
-## Fan (202 Fragen)
+## Fan (246 Fragen)
 
 ### One Piece
 
@@ -533,6 +599,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Erwin Smith** · Dot Pixis · Levi Ackermann · Nile Dok
 - `f-174` *Wer bin ich?* – Wer bin ich? Ich bin klein, aber der stärkste Soldat der Menschheit. / Ich bin besessen von Sauberkeit. / Ich führe ein Sonderkommando im Aufklärungstrupp.  
   **Levi Ackermann** · Erwin Smith · Reiner Braun · Jean Kirstein
+- `f-226` *Auswahl* – Wie wird Hinatas großes Vorbild genannt, ein kleiner Spieler aus Karasuno?  
+  **Der kleine Riese** · Der König · Das Ass · Der Phönix
+- `f-227` *Auswahl* – Welche Schule mit Oikawa als Zuspieler ist Karasunos großer Rivale in der Präfektur?  
+  **Aoba Johsai** · Nekoma · Shiratorizawa · Fukurodani
+- `f-228` *Auswahl* – Wer ist Karasunos Libero mit der blonden Strähne?  
+  **Yu Nishinoya** · Ryunosuke Tanaka · Kei Tsukishima · Daichi Sawamura
+- `f-231` *Auswahl* – Welcher Spieler spricht von einem „Monster“ in sich, das ihn antreibt?  
+  **Meguru Bachira** · Rin Itoshi · Seishiro Nagi · Hyoma Chigiri
+- `f-232` *Auswahl* – Welche Fähigkeit macht Yoichi Isagi besonders?  
+  **Sein räumliches Wahrnehmungsvermögen** · Seine Schnelligkeit · Seine Kopfbälle · Seine Schusskraft
+- `f-233` *Auswahl* – Wer ist Rin Itoshis berühmter älterer Bruder?  
+  **Sae Itoshi** · Noel Noa · Shoei Baro · Jinpachi Ego
 
 ### Neue Hits
 
@@ -612,6 +690,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ein Bomben-Teufel-Hybrid** · Ein normales Mädchen · Eine Teufelsjägerin · Ein Engel
 - `f-193` *Wer bin ich?* – Wer bin ich? Ich bin Teufelsjäger der öffentlichen Sicherheit. / Ich will den Waffen-Teufel töten, der meine Familie auslöschte. / Ich rauche und ertrage Denji und Power nur mit Mühe.  
   **Aki Hayakawa** · Kishibe · Denji · Angel Devil
+- `f-223` *Auswahl* – Wie heißt Yors Bruder, der für die Geheimpolizei arbeitet?  
+  **Yuri Briar** · Franky Franklin · Donovan Desmond · Henry Henderson
+- `f-224` *Auswahl* – Wie heißt die Mission, für die Loid eine Familie gründet?  
+  **Operation Strix** · Operation Eule · Operation Twilight · Operation Eden
+- `f-225` *Auswahl* – Mit welchem Jungen soll Anya sich anfreunden, weil sein Vater Loids Zielperson ist?  
+  **Damian Desmond** · Ewen Egeburg · Emile Elman · George Glooman
+- `f-234` *Auswahl* – Was zeichnet die Teufelsjägerin Kobeni aus?  
+  **Sie hat ständig Panik, überlebt aber alles** · Sie ist unbesiegbar · Sie kann fliegen · Sie spricht nie
+- `f-235` *Auswahl* – Welcher erfahrene Teufelsjäger trainiert Denji und Power und trinkt ständig?  
+  **Kishibe** · Aki Hayakawa · Angel Devil · Himeno
+- `f-236` *Wer bin ich?* – Wer bin ich? Ich leite Denjis Einheit bei der öffentlichen Sicherheit. / Meine Augen haben ringförmige Muster. / Denji würde alles für mich tun.  
+  **Makima** · Power · Himeno · Kobeni Higashiyama
 
 ### Isekai & Fantasy
 
@@ -635,6 +725,26 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Sung Jinwoo** · Yuji Itadori · Asta · Izuku Midoriya
 - `f-103` *Auswahl* – Was ist das dunkle Geheimnis des Waisenhauses in „The Promised Neverland“?  
   **Die Kinder werden als Nahrung für Dämonen aufgezogen** · Die Kinder werden zu Soldaten ausgebildet · Die Kinder werden an Piraten verkauft · Die Kinder sind Roboter
+- `f-203` *Auswahl* – Welche S-Rang-Jägerin verliebt sich in Jinwoo?  
+  **Cha Hae-in** · Lee Joohee · Sung Jinah · Yoo Soohyun
+- `f-204` *Auswahl* – Wie heißt der Ameisen-König von der Insel Jeju, den Jinwoo zu seinem Schatten macht?  
+  **Beru** · Igris · Iron · Tusk
+- `f-205` *Auswahl* – Welchen Titel trägt Jinwoo am Ende seiner Entwicklung?  
+  **Schatten-Monarch** · König der Jäger · Dämonenkönig · Herr der Gates
+- `f-206` *Auswahl* – Welches Studio animiert „Solo Leveling“?  
+  **A-1 Pictures** · MAPPA · ufotable · Bones
+- `f-207` *Auswahl* – Wie heißt der reiche junge Jäger, der Jinwoo zu Beginn als Raid-Partner bezahlt und später seine Gilde mitgründet?  
+  **Yoo Jinho** · Woo Jinchul · Go Gunhee · Choi Jong-in
+- `f-208` *Wer bin ich?* – Wer bin ich? Ich bin ein älterer Herr und Vorsitzender der koreanischen Jäger-Vereinigung. / Ich bin selbst ein S-Rang-Jäger. / Ich will Jinwoo unbedingt für die Vereinigung gewinnen.  
+  **Go Gunhee** · Choi Jong-in · Baek Yoonho · Woo Jinchul
+- `f-214` *Auswahl* – Wer ist zu Beginn der Meister der Gilde Fairy Tail?  
+  **Makarov Dreyar** · Laxus Dreyar · Gildarts Clive · Mavis Vermillion
+- `f-215` *Auswahl* – Wer hat Natsu aufgezogen?  
+  **Der Feuerdrache Igneel** · Der Eisdrache Deliora · Makarov · Acnologia
+- `f-216` *Auswahl* – In welcher Stadt steht das Gildenhaus von Fairy Tail?  
+  **Magnolia** · Crocus · Hargeon · Era
+- `f-217` *Wer bin ich?* – Wer bin ich? Ich bin eine Wassermagierin. / Früher regnete es immer dort, wo ich war. / Ich bin hoffnungslos in Gray verliebt und spreche von mir in der dritten Person.  
+  **Juvia Lockser** · Erza Scarlet · Lucy Heartfilia · Levy McGarden
 
 ### Klassiker & Kult
 
@@ -658,6 +768,30 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Seto Kaiba** · Joey Wheeler · Maximillion Pegasus · Bakura
 - `f-154` *Wahr/Falsch* – Die Serie „Heidi“ von 1974 wurde in Japan produziert, Hayao Miyazaki arbeitete daran mit.  
   **Wahr** · Falsch
+- `f-209` *Auswahl* – Wer hat in der Serie das Spiel Duel Monsters erfunden?  
+  **Maximillion Pegasus** · Seto Kaiba · Solomon Muto · Marik Ishtar
+- `f-210` *Auswahl* – Wie heißen die drei ägyptischen Götterkarten?  
+  **Slifer, Obelisk und Ra** · Horus, Anubis und Osiris · Exodia, Kuriboh und Ra · Isis, Seth und Thot
+- `f-211` *Auswahl* – Welche Karte ist Joeys Lieblingsmonster?  
+  **Rotäugiger Schwarzer Drache** · Blauäugiger weißer Drache · Zeitzauberer · Kuriboh
+- `f-212` *Wer bin ich?* – Wer bin ich? Ich habe Duel Monsters erfunden. / Ich besitze das Millenniumsauge. / Ich liebe Zeichentrickfilme und rede sehr geziert.  
+  **Maximillion Pegasus** · Seto Kaiba · Marik Ishtar · Bakura
+- `f-213` *Auswahl* – Wie heißt die Nachfolgeserie mit Jaden Yuki an der Duell-Akademie?  
+  **Yu-Gi-Oh! GX** · Yu-Gi-Oh! 5D’s · Yu-Gi-Oh! Zexal · Yu-Gi-Oh! Arc-V
+- `f-218` *Auswahl* – Wie sieht das Auge eines Ghouls aus, wenn er hungrig ist oder kämpft?  
+  **Rote Iris mit schwarzem Augapfel** · Komplett weiß · Gelb leuchtend · Blau mit Schlitzpupille
+- `f-219` *Auswahl* – Welche Ghoul-Frau verursacht den Unfall, der Kaneki zum Halb-Ghoul macht?  
+  **Rize Kamishiro** · Touka Kirishima · Hinami Fueguchi · Eto
+- `f-220` *Auswahl* – Wer foltert Kaneki so sehr, dass seine Haare weiß werden?  
+  **Yamori, genannt Jason** · Shu Tsukiyama · Nishiki Nishio · Ayato Kirishima
+- `f-221` *Auswahl* – Wie heißt die Fortsetzung, in der Kaneki als Ermittler Haise Sasaki lebt?  
+  **Tokyo Ghoul:re** · Tokyo Ghoul Zero · Tokyo Revengers · Tokyo Ghoul Jack
+- `f-222` *Wer bin ich?* – Wer bin ich? Ich bin ein Gourmet-Ghoul mit extravagantem Stil. / Ich streue gern französische Wörter ein. / Ich bin besessen davon, Kaneki zu kosten.  
+  **Shu Tsukiyama** · Uta · Nishiki Nishio · Renji Yomo
+- `f-229` *Auswahl* – Welche Frucht liebt der Shinigami Ryuk?  
+  **Äpfel** · Birnen · Erdbeeren · Bananen
+- `f-230` *Auswahl* – Welchen Beruf hat Lights Vater?  
+  **Er ist Polizist und leitet die Ermittlungen gegen Kira** · Lehrer · Richter · Arzt
 
 ### Shōjo & Romance
 
@@ -695,6 +829,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ciel Phantomhive** · Alois Trancy · Edward Midford · Vincent Phantomhive
 - `f-112` *Wer bin ich?* – Wer bin ich? Ich bin Butler in einem Herrenhaus im England des 19. Jahrhunderts. / Ich diene einem jungen Earl mit Augenklappe. / Ich bin einfach ein teuflisch guter Butler.  
   **Sebastian Michaelis** · Tamaki Suoh · Grell Sutcliff · Howl
+- `f-237` *Auswahl* – Wie lautet Bunnys Verwandlungsspruch in der deutschen Fassung?  
+  **„Macht der Mondnebel, mach auf!“** · „Mondstein, flieg und sieg!“ · „Im Namen des Mondes!“ · „Mondlicht, erleuchte mich!“
 
 ### Ghibli & Kinofilme
 
@@ -748,6 +884,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Hina Amano** · Mitsuha Miyamizu · Suzume Iwato · Akari Shinohara
 - `f-202` *Auswahl* – In welchem Film von Mamoru Hosoda tritt Suzu in der virtuellen Welt „U“ als Sängerin Belle auf?  
   **Belle** · Summer Wars · Mirai · Der Junge und das Biest
+- `f-244` *Auswahl* – In welchem Ghibli-Film verteidigen Tanuki ihren Wald gegen ein Bauprojekt?  
+  **Pom Poko** · Mein Nachbar Totoro · Arrietty · Die Chroniken von Erdsee
+- `f-245` *Auswahl* – Wie heißt Mitsuhas Heimatdorf in „Your Name.“?  
+  **Itomori** · Hida · Shinjuku · Kamakura
+- `f-246` *Auswahl* – In welchem Film von Mamoru Hosoda zieht Hana zwei Kinder groß, die sich in Wölfe verwandeln können?  
+  **Wolfskinder** · Mirai · Belle · Summer Wars
 
 ### Manga, Begriffe & Kultur
 
@@ -817,8 +959,20 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Eine in sich abgeschlossene Manga-Geschichte in einem Kapitel** · Ein Manga mit nur einer Figur · Eine einzelne Farbseite · Ein Anime-Kurzfilm
 - `f-199` *Auswahl* – Womit erzeugen Mangaka traditionell Grautöne und Schattierungen?  
   **Mit Rasterfolien (Screentones)** · Mit Wasserfarben · Mit Kohle · Mit Kreide
+- `f-238` *Auswahl* – Was ist ein Matsuri?  
+  **Ein japanisches Volksfest, oft an einem Schrein** · Ein Kampfsport · Ein Kochstil · Ein Schulfach
+- `f-239` *Auswahl* – Was ist Gacha?  
+  **Ein Kapselautomat oder eine Zufallsziehung für Sammelfiguren** · Ein Nudelgericht · Ein Tempel · Eine Frisur
+- `f-240` *Auswahl* – Was bedeutet „Nani?!“  
+  **„Was?!“** · „Nein!“ · „Hilfe!“ · „Los!“
+- `f-241` *Wahr/Falsch* – Die Serie „Wickie und die starken Männer“ von 1974 wurde in Japan animiert.  
+  **Wahr** · Falsch
+- `f-242` *Auswahl* – In welchem Magazin erschien „Sailor Moon“ in Japan?  
+  **Nakayoshi** · Ribon · Weekly Shōnen Jump · Hana to Yume
+- `f-243` *Auswahl* – Wer schuf „Die Rosen von Versailles“ und prägte damit den Shōjo-Manga der 1970er?  
+  **Riyoko Ikeda** · Naoko Takeuchi · Rumiko Takahashi · Moto Hagio
 
-## Otaku (124 Fragen)
+## Otaku (147 Fragen)
 
 ### One Piece
 
@@ -925,6 +1079,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **2021** (Schieberegler 2010–2030, ±1 zählt als knapp)
 - `o-122` *Auswahl* – In welchem Magazin erschien „Attack on Titan“ in Japan?  
   **Bessatsu Shōnen Magazine** · Weekly Shōnen Jump · Weekly Shōnen Sunday · Shōnen Jump+
+- `o-137` *Schätzfrage* – Wie viele Bände hat der Manga „Haikyu!!“?  
+  **45** (Schieberegler 10–80, ±3 zählt als knapp)
+- `o-140` *Auswahl* – Wer zeichnet „Blue Lock“?  
+  **Yusuke Nomura** · Haruichi Furudate · Takehiko Inoue · Muneyuki Kaneshiro
 
 ### Neue Hits
 
@@ -978,6 +1136,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **2014** (Schieberegler 2000–2025, ±1 zählt als knapp)
 - `o-117` *Auswahl* – Wie heißt der Kriegs-Teufel, der sich in Teil 2 den Körper mit Asa Mitaka teilt?  
   **Yoru** · Makima · Nayuta · Fami
+- `o-135` *Auswahl* – Wie heißen die beiden verfeindeten Länder in „Spy x Family“?  
+  **Ostania und Westalis** · Marley und Paradis · Fiore und Alvarez · Nordland und Südland
+- `o-136` *Auswahl* – Unter welchem Decknamen arbeitet Yor als Auftragsmörderin?  
+  **Dornenprinzessin** · Schwarze Witwe · Rose · Nachtigall
+- `o-141` *Auswahl* – Wie heißt Tatsuki Fujimotos One-Shot von 2021, der 2024 als Kinofilm erschien?  
+  **Look Back** · Fire Punch · Goodbye, Eri · Just Listen to the Song
 
 ### Isekai & Fantasy
 
@@ -999,6 +1163,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Dubu (Jang Sung-rak)** · Chugong · Boichi · Gege Akutami
 - `o-121` *Auswahl* – Welcher deutsche Verlag veröffentlicht „Solo Leveling“?  
   **Altraverse** · Carlsen · Egmont Manga · Tokyopop
+- `o-125` *Auswahl* – Wie heißt Jinwoos verschollener Vater?  
+  **Sung Il-hwan** · Sung Jinho · Hwang Dongsoo · Thomas Andre
+- `o-126` *Auswahl* – Wer schrieb die Romanvorlage zu „Solo Leveling“?  
+  **Chugong** · Dubu · Jang Sung-rak · Kim Carnby
+- `o-127` *Auswahl* – Wie lautet der Untertitel der zweiten Anime-Staffel von „Solo Leveling“?  
+  **Arise from the Shadow** · Shadow Monarch · Rise of the Hunter · The Final Gate
+- `o-130` *Auswahl* – Welcher schwarze Magier gilt als größter Feind von Fairy Tail?  
+  **Zeref** · Acnologia · Jose Porla · Hades
+- `o-131` *Schätzfrage* – Wie viele Bände hat der Manga „Fairy Tail“?  
+  **63** (Schieberegler 20–100, ±3 zählt als knapp)
+- `o-132` *Auswahl* – Welche Serie von Hiro Mashima erschien vor „Fairy Tail“?  
+  **Rave** · Edens Zero · Fairy Tail: 100 Years Quest · Monster Hunter Orage
 
 ### Klassiker & Kult
 
@@ -1018,6 +1194,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `o-094` *Auswahl* – Welcher deutsche Sender strahlte „Sailor Moon“ 1995 als Erster aus?  
   **ZDF** · RTL II · Sat.1 · Tele 5
+- `o-128` *Auswahl* – Wer hat „Yu-Gi-Oh!“ erschaffen?  
+  **Kazuki Takahashi** · Akira Toriyama · Hiro Mashima · Yoshihiro Togashi
+- `o-129` *Wahr/Falsch* – Im Manga begann „Yu-Gi-Oh!“ mit verschiedenen Spielen, das Kartenspiel rückte erst später in den Mittelpunkt.  
+  **Wahr** · Falsch
+- `o-133` *Auswahl* – Welcher CCG-Ermittler ist Mados Partner und wird zu Kanekis großem Gegenspieler?  
+  **Koutarou Amon** · Juuzou Suzuya · Kishou Arima · Seidou Takizawa
+- `o-134` *Auswahl* – Was ist eine Quinque?  
+  **Eine Waffe der CCG, gefertigt aus dem Kagune eines Ghouls** · Eine Ghoul-Maske · Ein Kaffeehaus für Ghoule · Ein Rang bei der CCG
+- `o-138` *Auswahl* – Wer übernimmt nach L die Jagd auf Kira?  
+  **Near und Mello** · Watari · Misa Amane · Rem
+- `o-139` *Auswahl* – Wie lautet Ls richtiger Name?  
+  **L Lawliet** · L Yagami · Ryuzaki · Hideki Ryuga
 
 ### Shōjo & Romance
 
@@ -1068,6 +1256,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Der Wind erhebt sich** · Porco Rosso · Das Schloss im Himmel · Der Junge und der Reiher
 - `o-124` *Auswahl* – In welchem Film von Satoshi Kon finden drei Obdachlose an Weihnachten ein Baby?  
   **Tokyo Godfathers** · Paprika · Perfect Blue · Millennium Actress
+- `o-146` *Auswahl* – Welcher Ghibli-Film basiert auf einem Roman von Diana Wynne Jones?  
+  **Das wandelnde Schloss** · Die Chroniken von Erdsee · Arrietty · Erinnerungen an Marnie
+- `o-147` *Auswahl* – Wie heißt die Fortsetzung von „Ghost in the Shell“ aus dem Jahr 2004?  
+  **Innocence** · Stand Alone Complex · Arise · Solid State Society
 
 ### Manga, Begriffe & Kultur
 
@@ -1097,3 +1289,11 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ein Dämon oder Oger aus der japanischen Mythologie** · Eine Katze · Ein Reiskuchen · Ein Samurai
 - `o-120` *Auswahl* – Wie heißt das jährliche Event des Verlags Shūeisha in Chiba, bei dem neue Jump-Anime und -Manga angekündigt werden?  
   **Jump Festa** · Comiket · AnimeJapan · Wonder Festival
+- `o-142` *Auswahl* – Was ist ein Kotatsu?  
+  **Ein beheizter Tisch mit Decke** · Ein Teekessel · Ein Papierschirm · Ein Schwertständer
+- `o-143` *Auswahl* – Wie heißt das Fest im August, bei dem Japaner ihre Ahnen ehren?  
+  **Obon** · Tanabata · Setsubun · Hinamatsuri
+- `o-144` *Auswahl* – Was ist CLAMP?  
+  **Ein vierköpfiges Mangaka-Kollektiv (Cardcaptor Sakura, xxxHolic)** · Ein Verlag · Ein Magazin · Ein Anime-Studio
+- `o-145` *Auswahl* – Welcher Mangaka zeichnete „Vagabond“ und „Slam Dunk“?  
+  **Takehiko Inoue** · Hiro Mashima · Kentaro Miura · Naoki Urasawa

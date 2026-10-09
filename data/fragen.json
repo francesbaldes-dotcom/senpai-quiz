@@ -7147,6 +7147,1425 @@
     "Millennium Actress"
    ],
    "correct": 0
+  },
+  {
+   "id": "e-175",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißen in „Solo Leveling“ die Portale, aus denen Monster in unsere Welt kommen?",
+   "answers": [
+    "Gates",
+    "Risse",
+    "Höllenschlünde",
+    "Wurmlöcher"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-176",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie werden die Menschen genannt, die in „Solo Leveling“ Monster bekämpfen?",
+   "answers": [
+    "Jäger",
+    "Jujuzisten",
+    "Helden",
+    "Shinigami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-177",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "In welchem Rang startet Sung Jinwoo als Jäger?",
+   "answers": [
+    "E-Rang",
+    "S-Rang",
+    "A-Rang",
+    "C-Rang"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-178",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "true_false",
+   "question": "Jinwoo ist der einzige Mensch, der durch Kämpfe wie in einem Videospiel aufleveln kann.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-179",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer ist Sung Jinah?",
+   "answers": [
+    "Jinwoos jüngere Schwester",
+    "Eine S-Rang-Jägerin",
+    "Jinwoos Mutter",
+    "Die Leiterin der Jäger-Vereinigung"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-203",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welche S-Rang-Jägerin verliebt sich in Jinwoo?",
+   "answers": [
+    "Cha Hae-in",
+    "Lee Joohee",
+    "Sung Jinah",
+    "Yoo Soohyun"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-204",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Ameisen-König von der Insel Jeju, den Jinwoo zu seinem Schatten macht?",
+   "answers": [
+    "Beru",
+    "Igris",
+    "Iron",
+    "Tusk"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-205",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welchen Titel trägt Jinwoo am Ende seiner Entwicklung?",
+   "answers": [
+    "Schatten-Monarch",
+    "König der Jäger",
+    "Dämonenkönig",
+    "Herr der Gates"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-206",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welches Studio animiert „Solo Leveling“?",
+   "answers": [
+    "A-1 Pictures",
+    "MAPPA",
+    "ufotable",
+    "Bones"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-207",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt der reiche junge Jäger, der Jinwoo zu Beginn als Raid-Partner bezahlt und später seine Gilde mitgründet?",
+   "answers": [
+    "Yoo Jinho",
+    "Woo Jinchul",
+    "Go Gunhee",
+    "Choi Jong-in"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-208",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Go Gunhee",
+    "Choi Jong-in",
+    "Baek Yoonho",
+    "Woo Jinchul"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin ein älterer Herr und Vorsitzender der koreanischen Jäger-Vereinigung.",
+    "Ich bin selbst ein S-Rang-Jäger.",
+    "Ich will Jinwoo unbedingt für die Vereinigung gewinnen."
+   ]
+  },
+  {
+   "id": "o-125",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt Jinwoos verschollener Vater?",
+   "answers": [
+    "Sung Il-hwan",
+    "Sung Jinho",
+    "Hwang Dongsoo",
+    "Thomas Andre"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-126",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer schrieb die Romanvorlage zu „Solo Leveling“?",
+   "answers": [
+    "Chugong",
+    "Dubu",
+    "Jang Sung-rak",
+    "Kim Carnby"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-127",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie lautet der Untertitel der zweiten Anime-Staffel von „Solo Leveling“?",
+   "answers": [
+    "Arise from the Shadow",
+    "Shadow Monarch",
+    "Rise of the Hunter",
+    "The Final Gate"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-180",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer übernimmt in Duellen die Kontrolle über Yugi, wenn das Millennium-Puzzle aktiv wird?",
+   "answers": [
+    "Der Geist des Pharaos Atem",
+    "Ryuk",
+    "Exodia",
+    "Maximillion Pegasus"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-181",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Yugis bester Freund, der selbst Duellant wird?",
+   "answers": [
+    "Joey Wheeler",
+    "Tristan Taylor",
+    "Seto Kaiba",
+    "Maximillion Pegasus"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-182",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welches Monster ist Yugis bekannteste Karte?",
+   "answers": [
+    "Dunkler Magier",
+    "Blauäugiger weißer Drache",
+    "Exodia",
+    "Rotäugiger Schwarzer Drache"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-183",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "true_false",
+   "question": "Das Sammelkartenspiel aus „Yu-Gi-Oh!“ gibt es auch in der echten Welt.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-184",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welches Monster gewinnt das Duell sofort, wenn alle fünf Teile auf der Hand liegen?",
+   "answers": [
+    "Exodia",
+    "Dunkler Magier",
+    "Slifer",
+    "Obelisk"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-209",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer hat in der Serie das Spiel Duel Monsters erfunden?",
+   "answers": [
+    "Maximillion Pegasus",
+    "Seto Kaiba",
+    "Solomon Muto",
+    "Marik Ishtar"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-210",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißen die drei ägyptischen Götterkarten?",
+   "answers": [
+    "Slifer, Obelisk und Ra",
+    "Horus, Anubis und Osiris",
+    "Exodia, Kuriboh und Ra",
+    "Isis, Seth und Thot"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-211",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welche Karte ist Joeys Lieblingsmonster?",
+   "answers": [
+    "Rotäugiger Schwarzer Drache",
+    "Blauäugiger weißer Drache",
+    "Zeitzauberer",
+    "Kuriboh"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-212",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Maximillion Pegasus",
+    "Seto Kaiba",
+    "Marik Ishtar",
+    "Bakura"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich habe Duel Monsters erfunden.",
+    "Ich besitze das Millenniumsauge.",
+    "Ich liebe Zeichentrickfilme und rede sehr geziert."
+   ]
+  },
+  {
+   "id": "f-213",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Nachfolgeserie mit Jaden Yuki an der Duell-Akademie?",
+   "answers": [
+    "Yu-Gi-Oh! GX",
+    "Yu-Gi-Oh! 5D’s",
+    "Yu-Gi-Oh! Zexal",
+    "Yu-Gi-Oh! Arc-V"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-128",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer hat „Yu-Gi-Oh!“ erschaffen?",
+   "answers": [
+    "Kazuki Takahashi",
+    "Akira Toriyama",
+    "Hiro Mashima",
+    "Yoshihiro Togashi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-129",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "true_false",
+   "question": "Im Manga begann „Yu-Gi-Oh!“ mit verschiedenen Spielen, das Kartenspiel rückte erst später in den Mittelpunkt.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-185",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Magiergilde, zu der Natsu und Lucy gehören?",
+   "answers": [
+    "Fairy Tail",
+    "Sabertooth",
+    "Blue Pegasus",
+    "Lamia Scale"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-186",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welche Magie nutzt Lucy Heartfilia?",
+   "answers": [
+    "Stellargeister-Magie mit goldenen und silbernen Schlüsseln",
+    "Feuermagie",
+    "Eismagie",
+    "Requip-Magie"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-187",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welche Angewohnheit hat Gray Fullbuster?",
+   "answers": [
+    "Er zieht sich unbewusst aus",
+    "Er schläft überall ein",
+    "Er isst ständig",
+    "Er lügt ständig"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-188",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt die rothaarige Magierin, die blitzschnell ihre Rüstungen wechselt?",
+   "answers": [
+    "Erza Scarlet",
+    "Juvia Lockser",
+    "Wendy Marvell",
+    "Mirajane Strauss"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-214",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer ist zu Beginn der Meister der Gilde Fairy Tail?",
+   "answers": [
+    "Makarov Dreyar",
+    "Laxus Dreyar",
+    "Gildarts Clive",
+    "Mavis Vermillion"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-215",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer hat Natsu aufgezogen?",
+   "answers": [
+    "Der Feuerdrache Igneel",
+    "Der Eisdrache Deliora",
+    "Makarov",
+    "Acnologia"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-216",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "In welcher Stadt steht das Gildenhaus von Fairy Tail?",
+   "answers": [
+    "Magnolia",
+    "Crocus",
+    "Hargeon",
+    "Era"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-217",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Juvia Lockser",
+    "Erza Scarlet",
+    "Lucy Heartfilia",
+    "Levy McGarden"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin eine Wassermagierin.",
+    "Früher regnete es immer dort, wo ich war.",
+    "Ich bin hoffnungslos in Gray verliebt und spreche von mir in der dritten Person."
+   ]
+  },
+  {
+   "id": "o-130",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welcher schwarze Magier gilt als größter Feind von Fairy Tail?",
+   "answers": [
+    "Zeref",
+    "Acnologia",
+    "Jose Porla",
+    "Hades"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-131",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "estimate",
+   "question": "Wie viele Bände hat der Manga „Fairy Tail“?",
+   "answers": [
+    "63"
+   ],
+   "correct": 0,
+   "answer": 63,
+   "min": 20,
+   "max": 100,
+   "tolerance": 3
+  },
+  {
+   "id": "o-132",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welche Serie von Hiro Mashima erschien vor „Fairy Tail“?",
+   "answers": [
+    "Rave",
+    "Edens Zero",
+    "Fairy Tail: 100 Years Quest",
+    "Monster Hunter Orage"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-189",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Was tragen Ghoule in „Tokyo Ghoul“, wenn sie als Ghoul auftreten?",
+   "answers": [
+    "Masken",
+    "Hüte",
+    "Umhänge",
+    "Handschuhe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-190",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Mädchen aus dem Café, das Kaneki beibringt, als Ghoul zu überleben?",
+   "answers": [
+    "Touka Kirishima",
+    "Rize Kamishiro",
+    "Hinami Fueguchi",
+    "Akira Mado"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-191",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Behörde, die in „Tokyo Ghoul“ Ghoule jagt?",
+   "answers": [
+    "CCG",
+    "CIA",
+    "Marine",
+    "Aufklärungstrupp"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-192",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Waffe, die aus dem Körper eines Ghouls wächst?",
+   "answers": [
+    "Kagune",
+    "Zanpakuto",
+    "Kakugan",
+    "Quinque"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-218",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie sieht das Auge eines Ghouls aus, wenn er hungrig ist oder kämpft?",
+   "answers": [
+    "Rote Iris mit schwarzem Augapfel",
+    "Komplett weiß",
+    "Gelb leuchtend",
+    "Blau mit Schlitzpupille"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-219",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welche Ghoul-Frau verursacht den Unfall, der Kaneki zum Halb-Ghoul macht?",
+   "answers": [
+    "Rize Kamishiro",
+    "Touka Kirishima",
+    "Hinami Fueguchi",
+    "Eto"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-220",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer foltert Kaneki so sehr, dass seine Haare weiß werden?",
+   "answers": [
+    "Yamori, genannt Jason",
+    "Shu Tsukiyama",
+    "Nishiki Nishio",
+    "Ayato Kirishima"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-221",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Fortsetzung, in der Kaneki als Ermittler Haise Sasaki lebt?",
+   "answers": [
+    "Tokyo Ghoul:re",
+    "Tokyo Ghoul Zero",
+    "Tokyo Revengers",
+    "Tokyo Ghoul Jack"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-222",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Shu Tsukiyama",
+    "Uta",
+    "Nishiki Nishio",
+    "Renji Yomo"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin ein Gourmet-Ghoul mit extravagantem Stil.",
+    "Ich streue gern französische Wörter ein.",
+    "Ich bin besessen davon, Kaneki zu kosten."
+   ]
+  },
+  {
+   "id": "o-133",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welcher CCG-Ermittler ist Mados Partner und wird zu Kanekis großem Gegenspieler?",
+   "answers": [
+    "Koutarou Amon",
+    "Juuzou Suzuya",
+    "Kishou Arima",
+    "Seidou Takizawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-134",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Was ist eine Quinque?",
+   "answers": [
+    "Eine Waffe der CCG, gefertigt aus dem Kagune eines Ghouls",
+    "Eine Ghoul-Maske",
+    "Ein Kaffeehaus für Ghoule",
+    "Ein Rang bei der CCG"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-193",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was ist Loid Forger zur Tarnung von Beruf?",
+   "answers": [
+    "Psychiater",
+    "Lehrer",
+    "Koch",
+    "Polizist"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-194",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Anyas Lieblingsserie im Fernsehen?",
+   "answers": [
+    "Spy Wars",
+    "Ninja Wars",
+    "Pirate Wars",
+    "Hero Wars"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-195",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was für ein Tier ist Bond?",
+   "answers": [
+    "Ein großer weißer Hund",
+    "Eine Katze",
+    "Ein Pinguin",
+    "Ein Hamster"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-223",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Yors Bruder, der für die Geheimpolizei arbeitet?",
+   "answers": [
+    "Yuri Briar",
+    "Franky Franklin",
+    "Donovan Desmond",
+    "Henry Henderson"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-224",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Mission, für die Loid eine Familie gründet?",
+   "answers": [
+    "Operation Strix",
+    "Operation Eule",
+    "Operation Twilight",
+    "Operation Eden"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-225",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Mit welchem Jungen soll Anya sich anfreunden, weil sein Vater Loids Zielperson ist?",
+   "answers": [
+    "Damian Desmond",
+    "Ewen Egeburg",
+    "Emile Elman",
+    "George Glooman"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-135",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißen die beiden verfeindeten Länder in „Spy x Family“?",
+   "answers": [
+    "Ostania und Westalis",
+    "Marley und Paradis",
+    "Fiore und Alvarez",
+    "Nordland und Südland"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-136",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Unter welchem Decknamen arbeitet Yor als Auftragsmörderin?",
+   "answers": [
+    "Dornenprinzessin",
+    "Schwarze Witwe",
+    "Rose",
+    "Nachtigall"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-196",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Position spielt Shoyo Hinata?",
+   "answers": [
+    "Mittelblocker",
+    "Zuspieler",
+    "Libero",
+    "Außenangreifer"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-197",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Tier ist das Symbol der Karasuno-Oberschule?",
+   "answers": [
+    "Krähe",
+    "Katze",
+    "Eule",
+    "Adler"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-226",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie wird Hinatas großes Vorbild genannt, ein kleiner Spieler aus Karasuno?",
+   "answers": [
+    "Der kleine Riese",
+    "Der König",
+    "Das Ass",
+    "Der Phönix"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-227",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Schule mit Oikawa als Zuspieler ist Karasunos großer Rivale in der Präfektur?",
+   "answers": [
+    "Aoba Johsai",
+    "Nekoma",
+    "Shiratorizawa",
+    "Fukurodani"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-228",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist Karasunos Libero mit der blonden Strähne?",
+   "answers": [
+    "Yu Nishinoya",
+    "Ryunosuke Tanaka",
+    "Kei Tsukishima",
+    "Daichi Sawamura"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-137",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "Wie viele Bände hat der Manga „Haikyu!!“?",
+   "answers": [
+    "45"
+   ],
+   "correct": 0,
+   "answer": 45,
+   "min": 10,
+   "max": 80,
+   "tolerance": 3
+  },
+  {
+   "id": "e-198",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Schüler, der das Death Note findet?",
+   "answers": [
+    "Light Yagami",
+    "L",
+    "Near",
+    "Mello"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-229",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welche Frucht liebt der Shinigami Ryuk?",
+   "answers": [
+    "Äpfel",
+    "Birnen",
+    "Erdbeeren",
+    "Bananen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-230",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welchen Beruf hat Lights Vater?",
+   "answers": [
+    "Er ist Polizist und leitet die Ermittlungen gegen Kira",
+    "Lehrer",
+    "Richter",
+    "Arzt"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-138",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer übernimmt nach L die Jagd auf Kira?",
+   "answers": [
+    "Near und Mello",
+    "Watari",
+    "Misa Amane",
+    "Rem"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-139",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie lautet Ls richtiger Name?",
+   "answers": [
+    "L Lawliet",
+    "L Yagami",
+    "Ryuzaki",
+    "Hideki Ryuga"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-199",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie viele Stürmer werden zu Beginn in das Blue-Lock-Projekt gesteckt?",
+   "answers": [
+    "300",
+    "50",
+    "100",
+    "1000"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-231",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welcher Spieler spricht von einem „Monster“ in sich, das ihn antreibt?",
+   "answers": [
+    "Meguru Bachira",
+    "Rin Itoshi",
+    "Seishiro Nagi",
+    "Hyoma Chigiri"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-232",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Fähigkeit macht Yoichi Isagi besonders?",
+   "answers": [
+    "Sein räumliches Wahrnehmungsvermögen",
+    "Seine Schnelligkeit",
+    "Seine Kopfbälle",
+    "Seine Schusskraft"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-233",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist Rin Itoshis berühmter älterer Bruder?",
+   "answers": [
+    "Sae Itoshi",
+    "Noel Noa",
+    "Shoei Baro",
+    "Jinpachi Ego"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-140",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer zeichnet „Blue Lock“?",
+   "answers": [
+    "Yusuke Nomura",
+    "Haruichi Furudate",
+    "Takehiko Inoue",
+    "Muneyuki Kaneshiro"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-200",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was wächst aus Denjis Kopf, wenn er sich verwandelt?",
+   "answers": [
+    "Eine Kettensäge",
+    "Ein Wolfskopf",
+    "Ein Totenschädel",
+    "Eine Flamme"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-234",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was zeichnet die Teufelsjägerin Kobeni aus?",
+   "answers": [
+    "Sie hat ständig Panik, überlebt aber alles",
+    "Sie ist unbesiegbar",
+    "Sie kann fliegen",
+    "Sie spricht nie"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-235",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welcher erfahrene Teufelsjäger trainiert Denji und Power und trinkt ständig?",
+   "answers": [
+    "Kishibe",
+    "Aki Hayakawa",
+    "Angel Devil",
+    "Himeno"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-236",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Makima",
+    "Power",
+    "Himeno",
+    "Kobeni Higashiyama"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich leite Denjis Einheit bei der öffentlichen Sicherheit.",
+    "Meine Augen haben ringförmige Muster.",
+    "Denji würde alles für mich tun."
+   ]
+  },
+  {
+   "id": "o-141",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Tatsuki Fujimotos One-Shot von 2021, der 2024 als Kinofilm erschien?",
+   "answers": [
+    "Look Back",
+    "Fire Punch",
+    "Goodbye, Eri",
+    "Just Listen to the Song"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-237",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie lautet Bunnys Verwandlungsspruch in der deutschen Fassung?",
+   "answers": [
+    "„Macht der Mondnebel, mach auf!“",
+    "„Mondstein, flieg und sieg!“",
+    "„Im Namen des Mondes!“",
+    "„Mondlicht, erleuchte mich!“"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-201",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Mochi?",
+   "answers": [
+    "Ein Reiskuchen aus Klebreis",
+    "Eine Nudelsorte",
+    "Ein grüner Tee",
+    "Eine Suppe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-202",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Hai“?",
+   "answers": [
+    "Ja",
+    "Nein",
+    "Vielleicht",
+    "Hallo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-203",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Yukata?",
+   "answers": [
+    "Ein leichter Sommer-Kimono aus Baumwolle",
+    "Ein Holzschuh",
+    "Ein Fächer",
+    "Ein Hut"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-238",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Matsuri?",
+   "answers": [
+    "Ein japanisches Volksfest, oft an einem Schrein",
+    "Ein Kampfsport",
+    "Ein Kochstil",
+    "Ein Schulfach"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-239",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Gacha?",
+   "answers": [
+    "Ein Kapselautomat oder eine Zufallsziehung für Sammelfiguren",
+    "Ein Nudelgericht",
+    "Ein Tempel",
+    "Eine Frisur"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-240",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Nani?!“",
+   "answers": [
+    "„Was?!“",
+    "„Nein!“",
+    "„Hilfe!“",
+    "„Los!“"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-241",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "true_false",
+   "question": "Die Serie „Wickie und die starken Männer“ von 1974 wurde in Japan animiert.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-142",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Kotatsu?",
+   "answers": [
+    "Ein beheizter Tisch mit Decke",
+    "Ein Teekessel",
+    "Ein Papierschirm",
+    "Ein Schwertständer"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-143",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Fest im August, bei dem Japaner ihre Ahnen ehren?",
+   "answers": [
+    "Obon",
+    "Tanabata",
+    "Setsubun",
+    "Hinamatsuri"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-204",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Shōjo-Manga?",
+   "answers": [
+    "Ein Manga, der sich vor allem an Mädchen richtet",
+    "Ein Manga für Erwachsene",
+    "Ein Manga über Sport",
+    "Ein Manga ohne Text"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-205",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wofür steht die Abkürzung „WSJ“ in Manga-Kreisen?",
+   "answers": [
+    "Weekly Shōnen Jump",
+    "World Shōjo Journal",
+    "Wöchentliches Sammel-Journal",
+    "Weekly Shōnen Sunday"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-242",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "In welchem Magazin erschien „Sailor Moon“ in Japan?",
+   "answers": [
+    "Nakayoshi",
+    "Ribon",
+    "Weekly Shōnen Jump",
+    "Hana to Yume"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-243",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wer schuf „Die Rosen von Versailles“ und prägte damit den Shōjo-Manga der 1970er?",
+   "answers": [
+    "Riyoko Ikeda",
+    "Naoko Takeuchi",
+    "Rumiko Takahashi",
+    "Moto Hagio"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-144",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist CLAMP?",
+   "answers": [
+    "Ein vierköpfiges Mangaka-Kollektiv (Cardcaptor Sakura, xxxHolic)",
+    "Ein Verlag",
+    "Ein Magazin",
+    "Ein Anime-Studio"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-145",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Welcher Mangaka zeichnete „Vagabond“ und „Slam Dunk“?",
+   "answers": [
+    "Takehiko Inoue",
+    "Hiro Mashima",
+    "Kentaro Miura",
+    "Naoki Urasawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-206",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Hexe, die das Badehaus in „Chihiros Reise ins Zauberland“ leitet?",
+   "answers": [
+    "Yubaba",
+    "Zeniba",
+    "Kamaji",
+    "Lin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-244",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Ghibli-Film verteidigen Tanuki ihren Wald gegen ein Bauprojekt?",
+   "answers": [
+    "Pom Poko",
+    "Mein Nachbar Totoro",
+    "Arrietty",
+    "Die Chroniken von Erdsee"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-146",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Ghibli-Film basiert auf einem Roman von Diana Wynne Jones?",
+   "answers": [
+    "Das wandelnde Schloss",
+    "Die Chroniken von Erdsee",
+    "Arrietty",
+    "Erinnerungen an Marnie"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-245",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt Mitsuhas Heimatdorf in „Your Name.“?",
+   "answers": [
+    "Itomori",
+    "Hida",
+    "Shinjuku",
+    "Kamakura"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-207",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Dragon-Ball-Kinofilm von 2022 stehen Gohan und Piccolo im Mittelpunkt?",
+   "answers": [
+    "Dragon Ball Super: Super Hero",
+    "Dragon Ball Super: Broly",
+    "Resurrection F",
+    "Battle of Gods"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-246",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Film von Mamoru Hosoda zieht Hana zwei Kinder groß, die sich in Wölfe verwandeln können?",
+   "answers": [
+    "Wolfskinder",
+    "Mirai",
+    "Belle",
+    "Summer Wars"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-147",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Fortsetzung von „Ghost in the Shell“ aus dem Jahr 2004?",
+   "answers": [
+    "Innocence",
+    "Stand Alone Complex",
+    "Arise",
+    "Solid State Society"
+   ],
+   "correct": 0
   }
  ]
 }
