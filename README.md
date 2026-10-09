@@ -35,4 +35,13 @@ Die richtige Antwort steht immer an erster Stelle (`"correct": 0`), die App misc
 - **Survival:** endlos, bis 3 Fehler gemacht sind
 - **Blitz:** 60 Sekunden, so viele Fragen wie möglich
 
+## Belohnungswerbung
+
+Werbevideos gibt es nur freiwillig gegen eine Belohnung (`js/werbung.js`). Im Browser läuft eine Attrappe mit 5-Sekunden-Countdown; in der iPhone-App kommt dort AdMob hinein (`@capacitor-community/admob`, wie bei Resist the Cute).
+
+- **Joker zurückholen:** Ein benutzter Joker lässt sich einmal pro Runde per Video wieder auffüllen. Die Uhr der Frage steht so lange still.
+- **Zweite Chance:** Im Survival einmal pro Runde mit 1 Leben weiterspielen.
+- **XP verdoppeln:** auf dem Ergebnis-Bildschirm, einmal pro Runde.
+- **Serie retten:** Wer das Tagesquiz genau einen Tag verpasst hat (Serie ab 2 Tagen), kann sie per Video erhalten.
+
 Punkte: 100 pro richtiger Antwort plus bis zu 75 Zeitbonus, mal Combo (×2 ab 3 richtigen am Stück, ×3 ab 5). XP = Punkte ÷ 10. Fortschritt wird nur lokal im Browser gespeichert.

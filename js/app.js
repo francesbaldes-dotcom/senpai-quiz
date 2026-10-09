@@ -1,5 +1,7 @@
 // Senpai Quiz – Prototyp. Reines JavaScript ohne Build-Schritt.
 
+import { belohnungsvideo, werbungOffen } from './werbung.js';
+
 const app = document.getElementById('app');
 
 // ---------- Konstanten ----------
@@ -51,6 +53,7 @@ const ICON = {
   blitz: '<svg width="24" height="24" viewBox="0 0 24 24" fill="#FFD23F" stroke="#141414" stroke-width="2.2" stroke-linejoin="round"><path d="M13 3L5 14h6l-1 7 8-11h-6l1-7z"/></svg>',
   haus: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg>',
   diagramm: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>',
+  video: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg>',
   medaille: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="5"/><path d="M8 3l3 7M16 3l-3 7"/></svg>',
   schloss: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
   zurueck: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>',
@@ -166,6 +169,13 @@ function datumText(d) {
 }
 const heute = () => datumText(new Date());
 const gestern = () => datumText(new Date(Date.now() - 86400000));
+const vorgestern = () => datumText(new Date(Date.now() - 2 * 86400000));
+
+// Serie genau einen Tag verpasst: per Video rettbar
+function streakRettbar() {
+  const { tage, letzter } = profil.streak;
+  return tage >= 2 && letzter === vorgestern() && profil.tagesquiz?.datum !== heute();
+}
 
 function aktuelleStreak() {
   const { tage, letzter } = profil.streak;
@@ -261,6 +271,8 @@ function neueRunde(modus, opts = {}) {
     zeiten: [],
     verlauf: [],
     joker: { fifty: false, zeit: false, skip: false },
+    nachgefuellt: { fifty: false, zeit: false, skip: false },
+    zweiteChance: false,
     blitzEnde: modus === 'blitz' ? Date.now() + BLITZZEIT * 1000 : null,
   };
   starteFrage();
@@ -459,10 +471,33 @@ function beendeRunde() {
   ui.runde = null;
   ui.screen = 'ergebnis';
   render();
+  zeigeXpBalken();
+}
+
+function zeigeXpBalken() {
   requestAnimationFrame(() => requestAnimationFrame(() => {
     const neu = document.getElementById('xp-neu');
     if (neu) neu.style.width = neu.dataset.ziel;
   }));
+}
+
+// Uhr der laufenden Frage anhalten, solange ein Werbevideo läuft
+async function mitPausierterUhr(aufgabe) {
+  const r = ui.runde;
+  const a = r?.aktuell;
+  const laeuft = !!(a && !a.ergebnis && a.ende && timerId);
+  const pauseBeginn = Date.now();
+  if (laeuft) stoppeTimer();
+  try {
+    return await aufgabe();
+  } finally {
+    if (laeuft && ui.runde === r && r.aktuell === a && !a.ergebnis) {
+      const pause = Date.now() - pauseBeginn;
+      a.ende += pause;
+      a.start += pause;
+      starteTimer();
+    }
+  }
 }
 
 // ---------- Aktionen ----------
@@ -562,6 +597,45 @@ const aktionen = {
     if (e.modus === 'tages') return aktionen.nav({ ziel: 'start' });
     neueRunde(e.modus, e.opts);
   },
+  async jokerVideo(d) {
+    const r = ui.runde;
+    if (!r || !r.joker[d.joker] || r.nachgefuellt[d.joker]) return;
+    const namen = { fifty: '50:50', zeit: '+10 s', skip: 'Weiter' };
+    const ok = await mitPausierterUhr(() => belohnungsvideo(`Joker „${namen[d.joker]}“ zurück`));
+    if (!ok || ui.runde !== r) return;
+    r.joker[d.joker] = false;
+    r.nachgefuellt[d.joker] = true;
+    render();
+  },
+  async zweiteChance() {
+    const r = ui.runde;
+    if (!r || r.zweiteChance || r.leben > 0) return;
+    const ok = await belohnungsvideo('1 Leben, du spielst weiter');
+    if (!ok || ui.runde !== r) return;
+    r.leben = 1;
+    r.zweiteChance = true;
+    weiter();
+  },
+  async xpVerdoppeln() {
+    const e = ui.ergebnis;
+    if (!e || e.verdoppelt) return;
+    const ok = await belohnungsvideo(`+${zahl(e.xp)} XP extra`);
+    if (!ok || ui.ergebnis !== e) return;
+    profil.xp += e.xp;
+    e.xp *= 2;
+    e.verdoppelt = true;
+    speichern();
+    render();
+    zeigeXpBalken();
+  },
+  async streakRetten() {
+    if (!streakRettbar()) return;
+    const ok = await belohnungsvideo(`Deine Serie von ${profil.streak.tage} Tagen bleibt erhalten`);
+    if (!ok || !streakRettbar()) return;
+    profil.streak.letzter = gestern();
+    speichern();
+    render();
+  },
   zuruecksetzen() {
     if (!confirm('Wirklich alle Punkte, Statistiken und Abzeichen löschen?')) return;
     profil = structuredClone(PROFIL_START);
@@ -585,7 +659,7 @@ app.addEventListener('input', (e) => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if (ui.screen !== 'frage' || !ui.runde) return;
+  if (ui.screen !== 'frage' || !ui.runde || werbungOffen()) return;
   const a = ui.runde.aktuell;
   if (a.ergebnis && (e.key === 'Enter' || e.key === ' ')) {
     if (ui.runde.modus !== 'blitz') {
@@ -665,7 +739,10 @@ function startScreen() {
       <div class="text">
         <span class="label">Tagesquiz</span>
         <span class="display">${erledigt ? `Heute: ${profil.tagesquiz.richtig} / ${profil.tagesquiz.gesamt} richtig` : '5 Fragen, für alle gleich'}</span>
-        <span class="streak">${ICON.flamme} ${streak === 1 ? '1 Tag' : `${streak} Tage`} in Folge${erledigt ? ' · morgen geht’s weiter' : ''}</span>
+        ${streakRettbar()
+          ? `<span class="streak">${ICON.flamme} Deine Serie von ${profil.streak.tage} Tagen ist gerissen!</span>
+             <button class="knopf knopf-video knopf-klein" data-aktion="streakRetten" aria-label="Video ansehen und Serie retten">${ICON.video} Serie retten</button>`
+          : `<span class="streak">${ICON.flamme} ${streak === 1 ? '1 Tag' : `${streak} Tage`} in Folge${erledigt ? ' · morgen geht’s weiter' : ''}</span>`}
       </div>
       ${erledigt
         ? `<img class="tages-schlaf" src="assets/stimmung/schlafend.webp" alt="Tagesquiz erledigt">`
@@ -818,13 +895,17 @@ function unterBlock(r) {
     if (r.modus !== 'klassisch' && r.modus !== 'survival') return '';
     const fiftyMoeglich = ['multiple_choice', 'emoji', 'who_am_i'].includes(f.type);
     const joker = [
-      ['fifty', '50:50', 'zwei weg', !fiftyMoeglich],
+      ['fifty', '50:50', 'zwei weg', !fiftyMoeglich || a.entfernt.length > 0],
       ['zeit', '+10 s', 'mehr Zeit', false],
       ['skip', 'Weiter', 'überspringen', false],
     ];
     return `<span class="label">Joker</span>
       <div class="joker-leiste">${joker.map(([id, name, info, gesperrt]) => {
         const benutzt = r.joker[id];
+        if (benutzt && !r.nachgefuellt[id] && !gesperrt) {
+          return `<button class="knopf joker joker-video" data-aktion="jokerVideo" data-joker="${id}" aria-label="Video ansehen, Joker ${name} zurückholen">
+          <b>${name}</b><small>${ICON.video} Video</small></button>`;
+        }
         return `<button class="knopf joker" data-aktion="joker" data-joker="${id}" ${benutzt || gesperrt ? 'disabled' : ''}>
           <b>${name}</b><small>${benutzt ? 'benutzt' : info}</small></button>`;
       }).join('')}</div>`;
@@ -843,9 +924,11 @@ function unterBlock(r) {
   if (r.modus === 'survival' && !e.korrekt) text += r.leben > 0 ? ` · noch ${r.leben} ${r.leben === 1 ? 'Leben' : 'Leben'}` : ' · keine Leben mehr';
   const letzte = r.modus === 'survival' ? r.leben <= 0 || r.index >= r.fragen.length - 1 : r.index >= r.fragen.length - 1;
   const knopf = r.modus === 'blitz' ? '' : `<button class="knopf" data-aktion="weiter">${letzte ? 'Ergebnis' : 'Weiter'} ${ICON.weiter}</button>`;
+  const zweiteChance = r.modus === 'survival' && r.leben <= 0 && !r.zweiteChance;
   return `<div class="karte banner ${e.korrekt ? 'gut' : 'schlecht'}" role="status">
     <div class="text"><span class="display">${titel}</span><small>${esc(text)}</small></div>${knopf}
-  </div>`;
+  </div>
+  ${zweiteChance ? `<button class="knopf knopf-video" data-aktion="zweiteChance">${ICON.video} Video ansehen: mit 1 Leben weiterspielen</button>` : ''}`;
 }
 
 function frageScreen() {
@@ -908,7 +991,7 @@ function ergebnisScreen() {
     </div>
 
     <div class="karte xp-karte">
-      <div class="oben"><span class="display">+${zahl(e.xp)} XP</span><small>${nochText}</small></div>
+      <div class="oben"><span class="display">+${zahl(e.xp)} XP${e.verdoppelt ? ' ×2' : ''}</span><small>${nochText}</small></div>
       <div class="balken"><span style="width:${prozent(altAnteil)}"></span><span class="neu" id="xp-neu" data-ziel="${prozent(neuAnteil)}"></span></div>
       <div class="unter"><span>${esc(nachher.name)}</span><span>${esc(nachher.naechster || '')}</span></div>
     </div>
@@ -918,6 +1001,7 @@ function ergebnisScreen() {
     ${e.neueAbzeichen.map((ab) => `<div class="erfolg"><span class="medaille">${ICON.medaille}</span><span><span class="label">Neues Abzeichen</span><b>${esc(ab.name)}</b><small>${esc(ab.text)}</small></span></div>`).join('')}
 
     <div class="fusszeile">
+      ${!e.verdoppelt && e.xp > 0 ? `<button class="knopf knopf-video" data-aktion="xpVerdoppeln">${ICON.video} Video ansehen: XP verdoppeln</button>` : ''}
       ${e.modus === 'tages' ? '' : `<button class="knopf knopf-rot" data-aktion="nochmal">${ICON.nochmal} Nochmal</button>`}
       <div class="zweier">
         ${zweiterKnopf}
