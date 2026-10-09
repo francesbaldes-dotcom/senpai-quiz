@@ -2866,6 +2866,1445 @@
    "min": 1960,
    "max": 2000,
    "tolerance": 2
+  },
+  {
+   "id": "e-070",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welchen Namen gibt sich Shinichi Kudo in „Detektiv Conan“, nachdem er geschrumpft wurde?",
+   "answers": [
+    "Conan Edogawa",
+    "Kaito Kid",
+    "Heiji Hattori",
+    "Kogoro Mori"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-071",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🔍👓🧒",
+   "answers": [
+    "Detektiv Conan",
+    "Death Note",
+    "Hunter x Hunter",
+    "Yu-Gi-Oh!"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-072",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Um welche Sportart geht es in „Haikyu!!“?",
+   "answers": [
+    "Volleyball",
+    "Basketball",
+    "Fußball",
+    "Baseball"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-073",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Um welche Sportart geht es in „Blue Lock“?",
+   "answers": [
+    "Fußball",
+    "Volleyball",
+    "Tennis",
+    "Boxen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-074",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Ashs Pikachu weigert sich, in seinem Pokéball zu bleiben.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-075",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welchen goldenen Gegenstand trägt Yugi in „Yu-Gi-Oh!“ um den Hals?",
+   "answers": [
+    "Das Millennium-Puzzle",
+    "Einen Dragonball",
+    "Ein kleines Death Note",
+    "Einen Pokéball"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-076",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist die Navigatorin der Strohhutbande in „One Piece“?",
+   "answers": [
+    "Nami",
+    "Nico Robin",
+    "Boa Hancock",
+    "Vivi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-077",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Son-Gokus bekannteste Angriffstechnik?",
+   "answers": [
+    "Kamehameha",
+    "Rasengan",
+    "Chidori",
+    "Bankai"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-078",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt der maskierte Lehrer von Team 7 in „Naruto“?",
+   "answers": [
+    "Kakashi Hatake",
+    "Jiraiya",
+    "Iruka Umino",
+    "Asuma Sarutobi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-079",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Mikasa Ackermann",
+    "Annie Leonhart",
+    "Sasha Braus",
+    "Historia Reiss"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich trage immer einen roten Schal.",
+    "Ich gehöre zu den besten Soldatinnen im Kampf gegen die Titanen.",
+    "Eren ist mir wichtiger als alles andere."
+   ]
+  },
+  {
+   "id": "e-080",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Eren Jäger aus „Attack on Titan“ kann sich selbst in einen Titanen verwandeln.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-081",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Haarfarbe hat Ichigo Kurosaki aus „Bleach“?",
+   "answers": [
+    "Orange",
+    "Blau",
+    "Schwarz",
+    "Weiß"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-082",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wovon ernähren sich die Ghoule in „Tokyo Ghoul“?",
+   "answers": [
+    "Von Menschenfleisch",
+    "Von Reis",
+    "Von Seelen",
+    "Von Sonnenlicht"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-083",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🏐🐦‍⬛🧡",
+   "answers": [
+    "Haikyu!!",
+    "Kuroko’s Basketball",
+    "Blue Lock",
+    "Free!"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-084",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Heldenschule, auf die Deku in „My Hero Academia“ geht?",
+   "answers": [
+    "U.A. High",
+    "Konoha-Akademie",
+    "Eden Academy",
+    "Tokyo Jujutsu High"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-085",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Woran zieht Denji in „Chainsaw Man“, um sich zu verwandeln?",
+   "answers": [
+    "An der Starterleine an seiner Brust",
+    "An einem Hebel auf seinem Rücken",
+    "An einem Ring an seinem Finger",
+    "An einer Kette um seinen Hals"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-086",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Hauptfigur von „Solo Leveling“?",
+   "answers": [
+    "Sung Jinwoo",
+    "Cha Hae-in",
+    "Go Gunhee",
+    "Choi Jong-in"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-087",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Als was galt Jinwoo zu Beginn von „Solo Leveling“?",
+   "answers": [
+    "Als schwächster Jäger der Menschheit",
+    "Als stärkster Jäger Koreas",
+    "Als König der Piraten",
+    "Als Dämonenkönig"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-088",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist Sukuna in „Jujutsu Kaisen“?",
+   "answers": [
+    "Der König der Flüche",
+    "Ein Shinigami",
+    "Ein Titan",
+    "Ein Pirat"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-089",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Woran glauben Momo und Okarun in „Dandadan“ zu Beginn?",
+   "answers": [
+    "Momo an Geister, Okarun an Aliens",
+    "Momo an Aliens, Okarun an Geister",
+    "Beide an Geister",
+    "Beide an gar nichts"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-090",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 👻👽👵",
+   "answers": [
+    "Dandadan",
+    "Mob Psycho 100",
+    "Jujutsu Kaisen",
+    "Mein Schulgeist Hanako"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-091",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was ist in „Dr. Stone“ mit der Menschheit passiert?",
+   "answers": [
+    "Alle Menschen wurden zu Stein",
+    "Alle Menschen wurden zu Titanen",
+    "Alle Menschen sind verschwunden",
+    "Alle Menschen wurden zu Dämonen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-092",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🛒🔫🍙",
+   "answers": [
+    "Sakamoto Days",
+    "Spy x Family",
+    "Gintama",
+    "Hitman Reborn!"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-093",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wo wachsen Emma, Norman und Ray in „The Promised Neverland“ auf?",
+   "answers": [
+    "In einem Waisenhaus",
+    "In einem Internat",
+    "Auf einem Piratenschiff",
+    "In einem Tempel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-094",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Tanjiro aus „Demon Slayer“ verkauft Holzkohle, bevor er Dämonenjäger wird.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-095",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Eliteschule, die Anya in „Spy x Family“ besucht?",
+   "answers": [
+    "Eden Academy",
+    "U.A. High",
+    "Ouran-Akademie",
+    "Shuchiin-Akademie"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-096",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wo arbeitet Maomao in „Die Tagebücher der Apothekerin“?",
+   "answers": [
+    "Im Palast des Kaisers",
+    "In einem Krankenhaus in Tokio",
+    "Auf einem Piratenschiff",
+    "In einer Zauberschule"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-097",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was ist Sebastian Michaelis in „Black Butler“ in Wahrheit?",
+   "answers": [
+    "Ein Dämon",
+    "Ein Vampir",
+    "Ein Roboter",
+    "Ein Engel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-098",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt die weiße Katze in „Sailor Moon“, die zu Sailor Venus gehört?",
+   "answers": [
+    "Artemis",
+    "Luna",
+    "Diana",
+    "Jiji"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-099",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "true_false",
+   "question": "Chibiusa ist Bunnys Tochter aus der Zukunft.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-100",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welches Fahrzeug bringt Satsuki und Mei in „Mein Nachbar Totoro“ ans Ziel?",
+   "answers": [
+    "Der Katzenbus",
+    "Der Katzenzug",
+    "Das Katzenschiff",
+    "Das Katzenflugzeug"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-101",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "true_false",
+   "question": "„Demon Slayer: Infinity Castle“ wurde 2025 zum weltweit erfolgreichsten Anime-Film aller Zeiten.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-102",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welches geklonte Pokémon ist der Gegner in „Pokémon – Der Film“?",
+   "answers": [
+    "Mewtu",
+    "Mew",
+    "Lugia",
+    "Glurak"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-103",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie nennt man das Gegenstück zum „Senpai“, also die jüngere Person?",
+   "answers": [
+    "Kōhai",
+    "Sensei",
+    "Sama",
+    "Kun"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-104",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Welcher deutsche Sender zeigte ab 1999 „Pokémon“ und später „Naruto“ und „One Piece“?",
+   "answers": [
+    "RTL II",
+    "ZDF",
+    "ProSieben",
+    "KiKA"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-105",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wer hat „Detektiv Conan“ erschaffen?",
+   "answers": [
+    "Gosho Aoyama",
+    "Eiichirō Oda",
+    "Akira Toriyama",
+    "Masashi Kishimoto"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-106",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Ziel des Projekts „Blue Lock“ ist es, den besten Torwart Japans zu finden.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-082",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Womit verstellt Conan seine Stimme, wenn er Fälle löst?",
+   "answers": [
+    "Mit seiner Fliege",
+    "Mit seiner Armbanduhr",
+    "Mit seiner Brille",
+    "Mit seinen Schuhen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-083",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Conan Edogawa",
+    "Heiji Hattori",
+    "Kaito Kid",
+    "Kogoro Mori"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich sehe aus wie ein Grundschüler, bin aber eigentlich Oberschüler.",
+    "Ich wohne bei einem Detektiv, der sich mit meinen gelösten Fällen schmückt.",
+    "Meine große Liebe Ran weiß nicht, wer ich wirklich bin."
+   ]
+  },
+  {
+   "id": "f-084",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Magie beherrscht Natsu in „Fairy Tail“?",
+   "answers": [
+    "Feuer-Drachentöter-Magie",
+    "Eismagie",
+    "Stellargeister-Magie",
+    "Requip-Magie"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-085",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Natsus blaue, fliegende Katze in „Fairy Tail“?",
+   "answers": [
+    "Happy",
+    "Carla",
+    "Plue",
+    "Lily"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-086",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie wird Tobio Kageyama in „Haikyu!!“ genannt?",
+   "answers": [
+    "König des Spielfelds",
+    "Kleiner Riese",
+    "Der eiserne Blocker",
+    "Der Ass"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-087",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Hauptfigur von „Blue Lock“?",
+   "answers": [
+    "Yoichi Isagi",
+    "Rin Itoshi",
+    "Seishiro Nagi",
+    "Meguru Bachira"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-088",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wodurch wird Ken Kaneki in „Tokyo Ghoul“ zum Halb-Ghoul?",
+   "answers": [
+    "Durch die Organe eines Ghouls nach einem Unfall",
+    "Durch einen Biss",
+    "Durch einen Fluch",
+    "Durch ein Experiment der Regierung"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-089",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer gibt Ichigo in „Bleach“ seine Shinigami-Kräfte?",
+   "answers": [
+    "Rukia Kuchiki",
+    "Orihime Inoue",
+    "Uryu Ishida",
+    "Renji Abarai"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-090",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Seto Kaiba",
+    "Joey Wheeler",
+    "Maximillion Pegasus",
+    "Bakura"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich leite einen riesigen Konzern.",
+    "Mein Lieblingsmonster ist der Blauäugige weiße Drache.",
+    "Yugi ist mein größter Rivale."
+   ]
+  },
+  {
+   "id": "f-091",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer hat Ruffy seinen Strohhut geschenkt?",
+   "answers": [
+    "Shanks",
+    "Gol D. Roger",
+    "Portgas D. Ace",
+    "Weißbart"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-092",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie lautet Son-Gokus Name als Saiyajin?",
+   "answers": [
+    "Kakarott",
+    "Raditz",
+    "Bardock",
+    "Nappa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-093",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Ashs Heimatstadt in der deutschen Fassung von „Pokémon“?",
+   "answers": [
+    "Alabastia",
+    "Vertania City",
+    "Marmoria City",
+    "Orania City"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-094",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Ash Ketchum wurde 2022 im Anime endlich Pokémon-Weltmeister.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-095",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Einheit in „Attack on Titan“, die außerhalb der Mauern erkundet?",
+   "answers": [
+    "Aufklärungstrupp",
+    "Militärpolizei",
+    "Mauergarnison",
+    "Königsgarde"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-096",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "order",
+   "question": "Sortiere die Anime nach ihrem Start in Japan, den ältesten zuerst.",
+   "answers": [
+    "Detektiv Conan",
+    "Pokémon",
+    "One Piece",
+    "Naruto"
+   ],
+   "years": [
+    1996,
+    1997,
+    1999,
+    2002
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-097",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "Wie viele Bände hat der Manga „Attack on Titan“?",
+   "answers": [
+    "34"
+   ],
+   "correct": 0,
+   "answer": 34,
+   "min": 10,
+   "max": 80,
+   "tolerance": 3
+  },
+  {
+   "id": "f-098",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Denjis Partnerin mit den Hörnern in „Chainsaw Man“?",
+   "answers": [
+    "Power",
+    "Makima",
+    "Kobeni",
+    "Himeno"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-099",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Woraus besteht Jinwoos Armee in „Solo Leveling“?",
+   "answers": [
+    "Aus den Schatten besiegter Gegner",
+    "Aus Robotern",
+    "Aus Drachen",
+    "Aus Klonen seiner selbst"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-100",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Sung Jinwoo",
+    "Yuji Itadori",
+    "Asta",
+    "Izuku Midoriya"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich galt als schwächster Jäger der Menschheit.",
+    "Ein geheimnisvolles System lässt mich aufleveln wie in einem Spiel.",
+    "Ich befehlige eine Armee aus Schatten."
+   ]
+  },
+  {
+   "id": "f-101",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Geisteroma, die Okarun in „Dandadan“ verflucht?",
+   "answers": [
+    "Turbo-Oma",
+    "Hanako",
+    "Sadako",
+    "Kuchisake-onna"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-102",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Senku Ishigami",
+    "Rintaro Okabe",
+    "Shiro",
+    "Light Yagami"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin ein Wissenschaftsgenie.",
+    "Nach rund 3.700 Jahren als Statue bin ich wieder aufgewacht.",
+    "Ich will die Zivilisation mit der Kraft der Wissenschaft wieder aufbauen."
+   ]
+  },
+  {
+   "id": "f-103",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was ist das dunkle Geheimnis des Waisenhauses in „The Promised Neverland“?",
+   "answers": [
+    "Die Kinder werden als Nahrung für Dämonen aufgezogen",
+    "Die Kinder werden zu Soldaten ausgebildet",
+    "Die Kinder werden an Piraten verkauft",
+    "Die Kinder sind Roboter"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-104",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was war Taro Sakamoto aus „Sakamoto Days“, bevor er einen Kiosk eröffnete?",
+   "answers": [
+    "Ein legendärer Auftragskiller",
+    "Ein Polizist",
+    "Ein Sumoringer",
+    "Ein Sternekoch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-105",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was war Chihiros Vater in „Kagurabachi“ von Beruf?",
+   "answers": [
+    "Schwertschmied",
+    "Samurai",
+    "Mönch",
+    "Fischer"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-106",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Izuku Midoriya aus „My Hero Academia“ wurde ohne Superkraft geboren.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-107",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Katsuki Bakugo",
+    "Shoto Todoroki",
+    "Eijiro Kirishima",
+    "Tenya Iida"
+   ],
+   "correct": 0,
+   "hints": [
+    "Meine Superkraft lässt meinen Schweiß explodieren.",
+    "Deku und ich kennen uns seit der Kindheit.",
+    "Ich bin laut, aufbrausend und will die Nummer eins werden."
+   ]
+  },
+  {
+   "id": "f-108",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🪚😈🐕",
+   "answers": [
+    "Chainsaw Man",
+    "Jujutsu Kaisen",
+    "Devilman Crybaby",
+    "Fire Force"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-109",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "order",
+   "question": "Sortiere diese Anime nach ihrem Start, den ältesten zuerst.",
+   "answers": [
+    "My Hero Academia",
+    "Jujutsu Kaisen",
+    "Chainsaw Man",
+    "Solo Leveling"
+   ],
+   "years": [
+    2016,
+    2020,
+    2022,
+    2024
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-110",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Worin kennt sich Maomao in „Die Tagebücher der Apothekerin“ besonders gut aus?",
+   "answers": [
+    "In Giften und Heilkräutern",
+    "In Kampfkunst",
+    "In Kalligrafie",
+    "Im Tanz"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-111",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt der junge Earl, dem Sebastian in „Black Butler“ dient?",
+   "answers": [
+    "Ciel Phantomhive",
+    "Alois Trancy",
+    "Edward Midford",
+    "Vincent Phantomhive"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-112",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Sebastian Michaelis",
+    "Tamaki Suoh",
+    "Grell Sutcliff",
+    "Howl"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin Butler in einem Herrenhaus im England des 19. Jahrhunderts.",
+    "Ich diene einem jungen Earl mit Augenklappe.",
+    "Ich bin einfach ein teuflisch guter Butler."
+   ]
+  },
+  {
+   "id": "f-113",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Film von Hayao Miyazaki gewann 2024 den Oscar als bester Animationsfilm?",
+   "answers": [
+    "Der Junge und der Reiher",
+    "Chihiros Reise ins Zauberland",
+    "Suzume",
+    "Belle"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-114",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Hashira stirbt in „Demon Slayer: Mugen Train“?",
+   "answers": [
+    "Kyojuro Rengoku",
+    "Giyu Tomioka",
+    "Tengen Uzui",
+    "Shinobu Kocho"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-115",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wer hat „My Hero Academia“ erschaffen?",
+   "answers": [
+    "Kohei Horikoshi",
+    "Gege Akutami",
+    "Tatsuki Fujimoto",
+    "Yuki Tabata"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-116",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wer hat „Jujutsu Kaisen“ erschaffen?",
+   "answers": [
+    "Gege Akutami",
+    "Kohei Horikoshi",
+    "Yukinobu Tatsu",
+    "Koyoharu Gotouge"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-117",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "true_false",
+   "question": "Der Manga „Jujutsu Kaisen“ wurde 2024 abgeschlossen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-118",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "In welcher deutschen Stadt findet die Anime-Convention AnimagiC statt?",
+   "answers": [
+    "Mannheim",
+    "Köln",
+    "Berlin",
+    "Leipzig"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-119",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Webtoon?",
+   "answers": [
+    "Ein Comic, der fürs Smartphone gemacht ist und vertikal gescrollt wird",
+    "Ein Anime, der nur online läuft",
+    "Ein animierter Werbespot",
+    "Ein Manga in Farbe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-051",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Gift, das Shinichi Kudo in „Detektiv Conan“ schrumpfen ließ?",
+   "answers": [
+    "APTX 4869",
+    "Silver Bullet",
+    "Pacifier",
+    "Kira-Serum"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-052",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Nach welchem Schema vergibt die Schwarze Organisation in „Detektiv Conan“ ihre Decknamen?",
+   "answers": [
+    "Nach alkoholischen Getränken",
+    "Nach Edelsteinen",
+    "Nach Planeten",
+    "Nach Schachfiguren"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-053",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "In welchem Jahr startete der Manga „Detektiv Conan“ in Japan?",
+   "answers": [
+    "1994"
+   ],
+   "correct": 0,
+   "answer": 1994,
+   "min": 1980,
+   "max": 2010,
+   "tolerance": 2
+  },
+  {
+   "id": "o-054",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Café, in dem Kaneki in „Tokyo Ghoul“ arbeitet?",
+   "answers": [
+    "Anteiku",
+    "Helter Skelter",
+    "Re",
+    "Chateau Rize"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-055",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Ken Kaneki",
+    "Shu Tsukiyama",
+    "Koutarou Amon",
+    "Uta"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich war ein ganz normaler Student und liebte Bücher.",
+    "Nach einer Organtransplantation kann ich nur noch Menschenfleisch und Kaffee zu mir nehmen.",
+    "Nach einer Folter wurden meine Haare weiß."
+   ]
+  },
+  {
+   "id": "o-056",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "In welchem Königreich spielt „Fairy Tail“?",
+   "answers": [
+    "Fiore",
+    "Alvarez",
+    "Clover",
+    "Paradis"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-057",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Team ist in „Haikyu!!“ Karasunos Rivale mit dem Katzen-Symbol?",
+   "answers": [
+    "Nekoma",
+    "Aoba Johsai",
+    "Shiratorizawa",
+    "Fukurodani"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-058",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer leitet das Projekt „Blue Lock“?",
+   "answers": [
+    "Jinpachi Ego",
+    "Anri Teieri",
+    "Rin Itoshi",
+    "Noel Noa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-059",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Ichigos Zanpakuto in „Bleach“?",
+   "answers": [
+    "Zangetsu",
+    "Senbonzakura",
+    "Zabimaru",
+    "Hyorinmaru"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-060",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Tier zeigt das Tattoo der Phantom-Truppe in „Hunter x Hunter“?",
+   "answers": [
+    "Eine Spinne mit zwölf Beinen",
+    "Eine Schlange",
+    "Ein Skorpion",
+    "Ein Rabe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-061",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "Wie viele Pokémon gab es in der ersten Generation?",
+   "answers": [
+    "151"
+   ],
+   "correct": 0,
+   "answer": 151,
+   "min": 50,
+   "max": 300,
+   "tolerance": 5
+  },
+  {
+   "id": "o-062",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist der Schurke Dabi in „My Hero Academia“ in Wahrheit?",
+   "answers": [
+    "Toya Todoroki",
+    "Tenko Shimura",
+    "Tomura Shigarakis Bruder",
+    "Ein Klon von Endeavor"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-063",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Makima aus „Chainsaw Man“ ist der Kontroll-Teufel.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-064",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist die Hauptfigur im zweiten Teil von „Chainsaw Man“?",
+   "answers": [
+    "Asa Mitaka",
+    "Kobeni Higashiyama",
+    "Reze",
+    "Quanxi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-065",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Jinwoos erster Elite-Schatten, ein roter Ritter?",
+   "answers": [
+    "Igris",
+    "Beru",
+    "Iron",
+    "Tank"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-066",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die seltene Augen-Fähigkeit von Satoru Gojo?",
+   "answers": [
+    "Sechs Augen",
+    "Sharingan",
+    "Rinnegan",
+    "Geass"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-067",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "In welchen Worten spricht Toge Inumaki aus „Jujutsu Kaisen“ ausschließlich?",
+   "answers": [
+    "In Onigiri-Zutaten",
+    "In Zahlen",
+    "In Pokémon-Namen",
+    "In Zitaten aus Filmen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-068",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie lautet Okaruns richtiger Name in „Dandadan“?",
+   "answers": [
+    "Ken Takakura",
+    "Jiji Enjoji",
+    "Seiko Ayase",
+    "Momo Ayase"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-069",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer schreibt die Geschichte von „Dr. Stone“ und erfand zuvor „Eyeshield 21“?",
+   "answers": [
+    "Riichiro Inagaki",
+    "Boichi",
+    "Kaiu Shirai",
+    "Posuka Demizu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-070",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Nummer trägt Emma in „The Promised Neverland“ am Hals?",
+   "answers": [
+    "63194",
+    "22194",
+    "81194",
+    "11194"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-071",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Chihiros Schwert in „Kagurabachi“, das Goldfische beschwört?",
+   "answers": [
+    "Enten",
+    "Kuregumo",
+    "Shinuchi",
+    "Zangetsu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-072",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was verbirgt Ciels Augenklappe in „Black Butler“?",
+   "answers": [
+    "Das Siegel seines Pakts mit Sebastian",
+    "Ein Glasauge",
+    "Eine Narbe aus einem Brand",
+    "Ein Sharingan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-073",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "order",
+   "question": "Sortiere die Manga nach ihrem Start in Japan, den ältesten zuerst.",
+   "answers": [
+    "Bleach",
+    "Fairy Tail",
+    "Tokyo Ghoul",
+    "Dr. Stone"
+   ],
+   "years": [
+    2001,
+    2006,
+    2011,
+    2017
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-074",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Wer hat den Webtoon zu „Solo Leveling“ gezeichnet?",
+   "answers": [
+    "Dubu (Jang Sung-rak)",
+    "Chugong",
+    "Boichi",
+    "Gege Akutami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-075",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "true_false",
+   "question": "Die Zeichentrickserie „Die Biene Maja“ von 1975 wurde in Japan produziert.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
   }
  ]
 }

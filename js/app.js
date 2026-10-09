@@ -1,6 +1,7 @@
 // Senpai Quiz – Prototyp. Reines JavaScript ohne Build-Schritt.
 
 import { belohnungsvideo, werbungOffen } from './werbung.js';
+import * as online from './online.js';
 
 const app = document.getElementById('app');
 
@@ -10,6 +11,13 @@ const FRAGEZEIT = 15;
 const BLITZZEIT = 60;
 const RUNDENLAENGE = 10;
 const SPEICHER = 'senpai-quiz-v1';
+const VERSION = '0.1.0';
+const MELDE_GRUENDE = [
+  ['antwort_falsch', 'Antwort ist falsch'],
+  ['unklar', 'Frage ist unklar'],
+  ['tippfehler', 'Tippfehler'],
+];
+const MELDE_TEXT_MAX = 200;
 
 const STUFEN_WAHL = [
   { id: 'easy', label: 'Einsteiger', stufen: [1] },
@@ -54,6 +62,9 @@ const ICON = {
   haus: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg>',
   diagramm: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 20V10M12 20V4M19 20v-7"/></svg>',
   video: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg>',
+  schwerter: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4M19 21l2-2M9.5 17.5L21 6V3h-3L6.5 14.5M11 19l-6-6M8 16l-4 4M5 21l-2-2"/></svg>',
+  lupe: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>',
+  teilen: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>',
   medaille: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="15" r="5"/><path d="M8 3l3 7M16 3l-3 7"/></svg>',
   schloss: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
   zurueck: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>',
@@ -104,6 +115,22 @@ const ui = {
   wahl: { stufe: 'fan', kategorie: 'mix' },
   runde: null,
   ergebnis: null,
+  melden: null, // offener „Frage melden“-Dialog: { grund, text, fehler, sendet }
+  online: {
+    profil: undefined, // undefined = noch unbekannt, null = kein Account
+    duelle: [],
+    laedt: false,
+    fehler: '',
+    meldung: '',
+    nameEingabe: '',
+    suchText: '',
+    codeEingabe: '',
+    treffer: null,
+    einladung: null,
+    einladungProfil: null,
+    duellId: null,
+    linkZeigen: false,
+  },
 };
 
 let timerId = null;
@@ -218,6 +245,14 @@ function antwortText(f) {
   return f.answers[f.correct];
 }
 
+// Was der Spieler bei der aktuellen Frage angetippt hat, als Text (für „Frage melden“)
+function gewaehlteAntwort(a) {
+  const f = a.frage;
+  if (f.type === 'estimate') return String(a.schaetz);
+  if (f.type === 'order') return a.reihenfolge.length ? a.reihenfolge.map((i) => a.optionen[i].text).join(' → ') : null;
+  return a.gewaehlt === null ? null : a.optionen[a.gewaehlt]?.text ?? null;
+}
+
 // ---------- Fragen auswählen ----------
 
 function poolFuer(kategorie, stufe) {
@@ -254,6 +289,8 @@ function neueRunde(modus, opts = {}) {
     fragen = mischen(FRAGEN).sort((a, b) => a.difficulty - b.difficulty);
   } else if (modus === 'blitz') {
     fragen = mischen(FRAGEN.filter((f) => ['multiple_choice', 'emoji', 'true_false'].includes(f.type)));
+  } else if (modus === 'duell') {
+    fragen = opts.fragenIds.map((id) => FRAGEN.find((f) => f.id === id)).filter(Boolean);
   }
   ui.runde = {
     modus,
@@ -411,6 +448,7 @@ function auswerten(korrekt, info = {}) {
 function weiter() {
   const r = ui.runde;
   if (!r) return;
+  ui.melden = null;
   if (r.modus === 'survival' && r.leben <= 0) return beendeRunde();
   if (r.modus === 'blitz' && Date.now() >= r.blitzEnde) return beendeRunde();
   r.index++;
@@ -421,8 +459,10 @@ function weiter() {
 
 function beendeRunde() {
   stoppeTimer();
+  ui.melden = null;
   const r = ui.runde;
   if (!r) return;
+  if (r.modus === 'duell') return duellRundeFertig(r);
   const feste = r.modus === 'klassisch' || r.modus === 'tages';
   const gesamt = feste ? r.fragen.length : r.beantwortet;
   const perfekt = feste && r.richtig === r.fragen.length;
@@ -505,7 +545,11 @@ async function mitPausierterUhr(aufgabe) {
 const aktionen = {
   nav(d) {
     ui.screen = d.ziel;
+    ui.online.fehler = '';
+    ui.online.meldung = '';
+    ui.online.linkZeigen = false;
     render();
+    if (d.ziel === 'duelle' && ui.online.profil) ladeDuelle(true);
   },
   tagesquiz() {
     if (profil.tagesquiz?.datum === heute()) return;
@@ -525,9 +569,65 @@ const aktionen = {
   los() {
     neueRunde('klassisch', { ...ui.wahl });
   },
+  melden() {
+    const a = ui.runde?.aktuell;
+    if (!a?.ergebnis || a.gemeldet || ui.melden) return;
+    ui.melden = { grund: null, text: '', fehler: '', sendet: false };
+    render();
+    document.getElementById('melde-dialog')?.focus();
+  },
+  meldeGrund(d) {
+    if (!ui.melden || ui.melden.sendet) return;
+    ui.melden.grund = d.grund;
+    ui.melden.fehler = '';
+    render();
+  },
+  meldeAbbrechen() {
+    if (ui.melden?.sendet) return;
+    ui.melden = null;
+    render();
+  },
+  async meldeSenden() {
+    const m = ui.melden;
+    const r = ui.runde;
+    const a = r?.aktuell;
+    if (!m || m.sendet || !a?.ergebnis) return;
+    if (!m.grund) {
+      m.fehler = 'Bitte wähle aus, was nicht stimmt.';
+      return render();
+    }
+    m.sendet = true;
+    m.fehler = '';
+    render();
+    try {
+      await online.frageMelden({
+        frageId: a.frage.id,
+        grund: m.grund,
+        text: m.text.trim().slice(0, MELDE_TEXT_MAX),
+        antwort: gewaehlteAntwort(a),
+        alsRichtig: a.ergebnis.korrekt,
+        modus: r.modus,
+        version: VERSION,
+      });
+      if (ui.melden !== m) return;
+      a.gemeldet = true;
+      ui.melden = null;
+    } catch (fehler) {
+      if (ui.melden !== m) return;
+      m.sendet = false;
+      m.fehler = 'Konnte nicht gesendet werden';
+      console.warn('Meldung fehlgeschlagen:', fehler.message);
+    }
+    render();
+  },
   abbrechen() {
+    if (ui.runde?.modus === 'duell') {
+      if (!confirm('Runde abbrechen? Fragen ohne Antwort zählen als falsch.')) return;
+      return duellRundeFertig(ui.runde);
+    }
     if (!confirm('Runde wirklich beenden? Der Fortschritt dieser Runde geht verloren.')) return;
     stoppeTimer();
+    ui.melden = null;
     ui.runde = null;
     ui.screen = 'start';
     render();
@@ -650,7 +750,26 @@ app.addEventListener('click', (e) => {
   aktionen[el.dataset.aktion]?.(el.dataset);
 });
 
+app.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const formular = e.target.closest('form[data-aktion]');
+  if (formular) aktionen[formular.dataset.aktion]?.(formular.dataset);
+});
+
+const EINGABEFELDER = { 'name-eingabe': 'nameEingabe', 'such-eingabe': 'suchText', 'code-eingabe': 'codeEingabe' };
+
 app.addEventListener('input', (e) => {
+  if (EINGABEFELDER[e.target.id]) {
+    ui.online[EINGABEFELDER[e.target.id]] = e.target.value;
+    return;
+  }
+  if (e.target.id === 'melde-text') {
+    if (!ui.melden) return;
+    ui.melden.text = e.target.value.slice(0, MELDE_TEXT_MAX);
+    const zaehler = document.getElementById('melde-zaehler');
+    if (zaehler) zaehler.textContent = `${ui.melden.text.length} / ${MELDE_TEXT_MAX}`;
+    return;
+  }
   if (e.target.id !== 'schaetzregler') return;
   const a = ui.runde?.aktuell;
   if (!a) return;
@@ -660,6 +779,10 @@ app.addEventListener('input', (e) => {
 
 document.addEventListener('keydown', (e) => {
   if (ui.screen !== 'frage' || !ui.runde || werbungOffen()) return;
+  if (ui.melden) {
+    if (e.key === 'Escape') aktionen.meldeAbbrechen();
+    return;
+  }
   const a = ui.runde.aktuell;
   if (a.ergebnis && (e.key === 'Enter' || e.key === ' ')) {
     if (ui.runde.modus !== 'blitz') {
@@ -680,6 +803,7 @@ document.addEventListener('keydown', (e) => {
 function tabbar(aktiv) {
   const tabs = [
     ['start', 'Start', ICON.haus],
+    ['duelle', 'Duelle', ICON.schwerter],
     ['statistik', 'Statistik', ICON.diagramm],
     ['abzeichen', 'Abzeichen', ICON.medaille],
   ];
@@ -806,7 +930,7 @@ function frageKopf(r) {
       const klasse = i < r.verlauf.length ? (r.verlauf[i] ? 'richtig' : 'falsch') : i === r.index ? 'jetzt' : '';
       return `<span class="${klasse}"></span>`;
     }).join('');
-    const titel = r.modus === 'tages' ? 'Tagesquiz' : 'Frage';
+    const titel = r.modus === 'tages' ? 'Tagesquiz' : r.modus === 'duell' ? 'Duell · Frage' : 'Frage';
     fortschritt = `<b>${titel} ${r.index + 1} von ${r.fragen.length}</b><div class="punkte-dots">${dots}</div>`;
   }
   return `<div class="kopfzeile">
@@ -924,11 +1048,40 @@ function unterBlock(r) {
   if (r.modus === 'survival' && !e.korrekt) text += r.leben > 0 ? ` · noch ${r.leben} ${r.leben === 1 ? 'Leben' : 'Leben'}` : ' · keine Leben mehr';
   const letzte = r.modus === 'survival' ? r.leben <= 0 || r.index >= r.fragen.length - 1 : r.index >= r.fragen.length - 1;
   const knopf = r.modus === 'blitz' ? '' : `<button class="knopf" data-aktion="weiter">${letzte ? 'Ergebnis' : 'Weiter'} ${ICON.weiter}</button>`;
+  let melden = '';
+  if (r.modus !== 'blitz') {
+    melden = a.gemeldet
+      ? '<span class="melde-dank">Danke! Wir prüfen das.</span>'
+      : '<button class="melde-link" data-aktion="melden">Frage melden</button>';
+  }
   const zweiteChance = r.modus === 'survival' && r.leben <= 0 && !r.zweiteChance;
   return `<div class="karte banner ${e.korrekt ? 'gut' : 'schlecht'}" role="status">
-    <div class="text"><span class="display">${titel}</span><small>${esc(text)}</small></div>${knopf}
+    <div class="text"><span class="display">${titel}</span><small>${esc(text)}</small>${melden}</div>${knopf}
   </div>
   ${zweiteChance ? `<button class="knopf knopf-video" data-aktion="zweiteChance">${ICON.video} Video ansehen: mit 1 Leben weiterspielen</button>` : ''}`;
+}
+
+function meldeDialog() {
+  const m = ui.melden;
+  if (!m) return '';
+  return `<div class="dialog-hintergrund">
+    <div class="karte dialog" id="melde-dialog" role="dialog" aria-modal="true" aria-labelledby="melde-titel" tabindex="-1">
+      <h2 id="melde-titel">Was stimmt nicht?</h2>
+      <div class="gruende">${MELDE_GRUENDE.map(([id, name]) => `
+        <button class="knopf grund ${m.grund === id ? 'gewaehlt' : ''}" data-aktion="meldeGrund" data-grund="${id}" aria-pressed="${m.grund === id}" ${m.sendet ? 'disabled' : ''}>${name}</button>`).join('')}
+      </div>
+      <label class="melde-feld">
+        <span>Kurze Erklärung <small>(optional)</small></span>
+        <textarea id="melde-text" maxlength="${MELDE_TEXT_MAX}" rows="3" placeholder="z. B. Die Folge heißt anders …" ${m.sendet ? 'disabled' : ''}>${esc(m.text)}</textarea>
+        <small class="zaehler" id="melde-zaehler">${m.text.length} / ${MELDE_TEXT_MAX}</small>
+      </label>
+      ${m.fehler ? `<p class="fehler" role="alert">${esc(m.fehler)}</p>` : ''}
+      <div class="zweier">
+        <button class="knopf" data-aktion="meldeAbbrechen" ${m.sendet ? 'disabled' : ''}>Abbrechen</button>
+        <button class="knopf knopf-rot" data-aktion="meldeSenden" ${m.sendet ? 'disabled' : ''}>${m.sendet ? 'Sendet …' : 'Senden'}</button>
+      </div>
+    </div>
+  </div>`;
 }
 
 function frageScreen() {
@@ -959,6 +1112,7 @@ function frageScreen() {
     </div>
     ${antwortenBlock(a)}
     <div class="unten">${unterBlock(r)}</div>
+    ${meldeDialog()}
   </section>`;
 }
 
@@ -1070,10 +1224,526 @@ function infoScreen() {
     <div class="karte info-text">
       <p><b>Senpai Quiz ist ein inoffizielles Fan-Quiz.</b> Es steht in keiner Verbindung zu den Rechteinhabern der genannten Serien, Filme und Manga. Alle Namen und Marken gehören ihren jeweiligen Eigentümern.</p>
       <p>Alle Fragen sind selbst geschrieben. Die App enthält keine Bilder, Musik oder Ausschnitte aus Anime oder Manga.</p>
-      <p>Dein Fortschritt wird nur auf diesem Gerät gespeichert.</p>
+      <p>Dein Fortschritt im Einzelspiel wird nur auf diesem Gerät gespeichert. Für Duelle gegen Freunde legst du einen Account an.</p>
       <p style="font-size:13px;font-weight:700">Prototyp · ${FRAGEN.length} Fragen</p>
     </div>
+    ${kontoBereich()}
   </section>`;
+}
+
+// ---------- Online: Account und Duelle ----------
+
+const ONLINE_SCREENS = ['duelle', 'duell', 'duellKategorie'];
+let pollId = null;
+
+function ichId() {
+  return ui.online.profil?.id;
+}
+
+function zeichneOnlineNeu() {
+  const tippt = document.activeElement && ['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName);
+  if (ONLINE_SCREENS.includes(ui.screen) && !tippt) render();
+}
+
+function steuerePolling() {
+  const aktiv = ['duelle', 'duell'].includes(ui.screen) && !!ui.online.profil;
+  if (aktiv && !pollId) {
+    pollId = setInterval(() => {
+      if (document.visibilityState === 'visible') ladeDuelle(true);
+    }, 15000);
+  } else if (!aktiv && pollId) {
+    clearInterval(pollId);
+    pollId = null;
+  }
+}
+
+async function ladeOnlineProfil() {
+  ui.online.fehler = '';
+  try {
+    ui.online.profil = await online.meinProfil();
+  } catch (fehler) {
+    ui.online.profil = undefined;
+    ui.online.fehler = fehler.message;
+  }
+  if (ui.online.profil && ui.online.einladung) return zeigeEinladung();
+  if (ui.online.profil) await ladeDuelle(true);
+  if (ui.online.einladung && ui.online.profil === null) {
+    ui.screen = 'duelle';
+    return render();
+  }
+  if (ONLINE_SCREENS.includes(ui.screen) || ui.screen === 'info') render();
+}
+
+async function ladeDuelle(leise = false) {
+  if (!ui.online.profil) return;
+  if (!leise) {
+    ui.online.laedt = true;
+    zeichneOnlineNeu();
+  }
+  try {
+    const duelle = await online.meineDuelle();
+    const geaendert = JSON.stringify(duelle) !== JSON.stringify(ui.online.duelle);
+    ui.online.duelle = duelle;
+    if (!leise || geaendert) {
+      ui.online.laedt = false;
+      zeichneOnlineNeu();
+    }
+  } catch (fehler) {
+    if (!leise) ui.online.fehler = fehler.message;
+  } finally {
+    if (ui.online.laedt) {
+      ui.online.laedt = false;
+      zeichneOnlineNeu();
+    }
+  }
+}
+
+async function zeigeEinladung() {
+  const code = ui.online.einladung;
+  try {
+    const gegner = await online.profilPerCode(code);
+    if (!gegner) {
+      ui.online.einladung = null;
+      ui.online.fehler = `Zum Einladungscode ${code} wurde kein Spieler gefunden.`;
+      ui.screen = 'duelle';
+    } else if (gegner.id === ichId()) {
+      ui.online.einladung = null;
+      ui.online.meldung = 'Das ist dein eigener Einladungslink. Schick ihn an deine Freunde!';
+      ui.screen = 'duelle';
+    } else {
+      ui.online.einladungProfil = gegner;
+      ui.screen = 'einladung';
+    }
+  } catch (fehler) {
+    ui.online.fehler = fehler.message;
+    ui.screen = 'duelle';
+  }
+  render();
+  ladeDuelle(true);
+}
+
+// Was ein Spieler von einem Duell sehen darf: Die Ergebnisse des Gegners für eine Runde
+// erscheinen erst, wenn man selbst gespielt hat (wie bei Quizduell).
+function duellSicht(d) {
+  const ich = ichId();
+  const binErster = d.spieler1 === ich;
+  const gegnerId = binErster ? d.spieler2 : d.spieler1;
+  const gegnerName = (binErster ? d.s2 : d.s1)?.spielername ?? 'Unbekannt';
+  const runden = [...(d.duell_runden || [])].sort((a, b) => a.nr - b.nr);
+  let meine = 0;
+  let seine = 0;
+  const zeilen = [1, 2, 3, 4, 5, 6].map((nr) => {
+    const runde = runden.find((x) => x.nr === nr);
+    const mein = runde?.duell_antworten?.find((x) => x.spieler === ich)?.ergebnisse ?? null;
+    const sein = runde?.duell_antworten?.find((x) => x.spieler === gegnerId)?.ergebnisse ?? null;
+    const seinSichtbar = !!mein || d.status !== 'laeuft';
+    if (mein) meine += mein.filter(Boolean).length;
+    if (sein && seinSichtbar) seine += sein.filter(Boolean).length;
+    return { nr, kategorie: runde?.kategorie, mein, sein: seinSichtbar ? sein : null, verdeckt: !!sein && !seinSichtbar };
+  });
+  const amZug = d.status === 'laeuft' && d.am_zug === ich;
+  const aktuelleRunde = runden.find((x) => x.nr === d.runde);
+  let phase = 'ende';
+  if (d.status === 'laeuft') phase = !amZug ? 'warten' : aktuelleRunde ? 'spielen' : 'waehlen';
+  let ausgang = null;
+  if (d.status !== 'laeuft') ausgang = d.gewinner === ich ? 'sieg' : d.gewinner ? 'niederlage' : 'unentschieden';
+  return { d, gegnerId, gegnerName, zeilen, meine, seine, phase, aktuelleRunde, ausgang };
+}
+
+function duellStatusText(s) {
+  const n = `Runde ${s.d.runde} von 6`;
+  if (s.phase === 'waehlen') return `Du wählst die Kategorie · ${n}`;
+  if (s.phase === 'spielen') return `Du bist dran · ${n}`;
+  if (s.phase === 'warten') return `${s.gegnerName} ist dran · ${n}`;
+  const aufgegeben = s.d.status === 'aufgegeben'
+    ? (s.d.aufgegeben_von === ichId() ? ' · du hast aufgegeben' : ` · ${s.gegnerName} hat aufgegeben`)
+    : '';
+  return { sieg: 'Gewonnen!', niederlage: 'Verloren', unentschieden: 'Unentschieden' }[s.ausgang] + aufgegeben;
+}
+
+function duellStimmung(s) {
+  if (s.phase === 'warten') return 'schlafend';
+  if (s.phase !== 'ende') return 'entschlossen';
+  return { sieg: 'stolz', niederlage: 'traurig', unentschieden: 'nachdenklich' }[s.ausgang];
+}
+
+async function duellRundeFertig(r) {
+  stoppeTimer();
+  const ergebnisse = [0, 1, 2].map((i) => r.verlauf[i] === true);
+  const xp = Math.round(r.punkte / 10);
+  profil.xp += xp;
+  profil.spiele++;
+  speichern();
+  ui.runde = null;
+  ui.online.duellId = r.opts.duellId;
+  ui.online.fehler = '';
+  ui.online.meldung = '';
+  ui.screen = 'duell';
+  ui.online.laedt = true;
+  render();
+  try {
+    await online.rundeAbschliessen(r.opts.duellId, ergebnisse);
+    ui.online.meldung = `${r.richtig} von 3 richtig · +${zahl(xp)} XP`;
+  } catch (fehler) {
+    ui.online.fehler = `Dein Ergebnis konnte nicht gespeichert werden: ${fehler.message}`;
+  }
+  await ladeDuelle();
+}
+
+async function oeffneDuell(id) {
+  ui.online.duellId = id;
+  ui.online.fehler = '';
+  ui.online.meldung = '';
+  ui.screen = 'duell';
+  await ladeDuelle();
+}
+
+Object.assign(aktionen, {
+  async accountErstellen() {
+    const o = ui.online;
+    const name = o.nameEingabe.trim();
+    if (!/^[A-Za-z0-9_]{3,20}$/.test(name)) {
+      o.fehler = 'Der Spielername braucht 3 bis 20 Zeichen: Buchstaben, Zahlen oder _';
+      return render();
+    }
+    o.laedt = true;
+    o.fehler = '';
+    render();
+    try {
+      o.profil = await online.accountAnlegen(name);
+      o.laedt = false;
+      if (o.einladung) return zeigeEinladung();
+      o.meldung = `Willkommen, ${o.profil.spielername}! Fordere jetzt einen Freund heraus.`;
+      render();
+      ladeDuelle(true);
+    } catch (fehler) {
+      o.laedt = false;
+      o.fehler = fehler.message;
+      render();
+    }
+  },
+  onlineNeu() {
+    ui.online.fehler = '';
+    render();
+    ladeOnlineProfil();
+  },
+  aktualisieren() {
+    ui.online.meldung = '';
+    ui.online.fehler = '';
+    ladeDuelle();
+  },
+  async suchen() {
+    const o = ui.online;
+    const text = o.suchText.trim();
+    o.fehler = '';
+    if (text.length < 2) {
+      o.fehler = 'Gib mindestens 2 Zeichen ein.';
+      return render();
+    }
+    try {
+      o.treffer = (await online.spielerSuchen(text)).filter((p) => p.id !== ichId());
+    } catch (fehler) {
+      o.fehler = fehler.message;
+    }
+    render();
+  },
+  codeEinloesen() {
+    const code = ui.online.codeEingabe.trim().toUpperCase();
+    if (!/^[A-Z0-9]{6}$/.test(code)) {
+      ui.online.fehler = 'Ein Einladungscode hat 6 Zeichen.';
+      return render();
+    }
+    ui.online.einladung = code;
+    zeigeEinladung();
+  },
+  async herausfordern(d) {
+    ui.online.fehler = '';
+    try {
+      const id = await online.herausfordern(d.id);
+      await oeffneDuell(id);
+    } catch (fehler) {
+      const laufend = ui.online.duelle.find((x) => x.status === 'laeuft' && [x.spieler1, x.spieler2].includes(d.id));
+      if (laufend) return oeffneDuell(laufend.id);
+      ui.online.fehler = fehler.message;
+      render();
+    }
+  },
+  duellOeffnen(d) {
+    oeffneDuell(d.id);
+  },
+  async kategorieNehmen(d) {
+    const id = ui.online.duellId;
+    try {
+      const fragenIds = await online.rundeStarten(id, d.kategorie);
+      neueRunde('duell', { duellId: id, fragenIds });
+    } catch (fehler) {
+      ui.online.fehler = fehler.message;
+      ui.screen = 'duell';
+      render();
+      ladeDuelle(true);
+    }
+  },
+  rundeSpielen() {
+    const d = ui.online.duelle.find((x) => x.id === ui.online.duellId);
+    const runde = d && duellSicht(d).aktuelleRunde;
+    if (runde) neueRunde('duell', { duellId: d.id, fragenIds: runde.fragen });
+  },
+  async aufgeben() {
+    if (!confirm('Willst du dieses Duell wirklich aufgeben? Dein Gegner gewinnt dann.')) return;
+    try {
+      await online.aufgeben(ui.online.duellId);
+    } catch (fehler) {
+      ui.online.fehler = fehler.message;
+    }
+    ladeDuelle();
+  },
+  async einladen() {
+    const p = ui.online.profil;
+    const link = `${location.origin}${location.pathname}?einladung=${p.einladungscode}`;
+    const text = `Fordere mich in Senpai Quiz zu einem Anime-Duell heraus! Mein Spielername: ${p.spielername}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: 'Senpai Quiz', text, url: link });
+        return;
+      } catch (fehler) {
+        if (fehler.name === 'AbortError') return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(`${text} ${link}`);
+      ui.online.meldung = 'Einladungslink kopiert. Schick ihn per WhatsApp oder Nachricht.';
+    } catch {
+      ui.online.linkZeigen = true;
+    }
+    render();
+  },
+  async einladungAnnehmen() {
+    const gegner = ui.online.einladungProfil;
+    ui.online.einladung = null;
+    ui.online.einladungProfil = null;
+    await aktionen.herausfordern({ id: gegner.id });
+  },
+  einladungSpaeter() {
+    ui.online.einladung = null;
+    ui.online.einladungProfil = null;
+    aktionen.nav({ ziel: 'duelle' });
+  },
+  async kontoLoeschen() {
+    if (!confirm('Account wirklich löschen? Dein Spielername und alle deine Duelle werden endgültig gelöscht.')) return;
+    try {
+      await online.kontoLoeschen();
+      ui.online.profil = null;
+      ui.online.duelle = [];
+      ui.online.meldung = 'Dein Account wurde gelöscht.';
+    } catch (fehler) {
+      ui.online.fehler = fehler.message;
+    }
+    render();
+  },
+});
+
+function hinweise() {
+  const o = ui.online;
+  return `${o.fehler ? `<p class="fehler" role="alert">${esc(o.fehler)}</p>` : ''}${o.meldung ? `<p class="meldung" role="status">${esc(o.meldung)}</p>` : ''}`;
+}
+
+function accountScreen() {
+  const o = ui.online;
+  return `<section class="screen mit-tabbar">
+    <div class="kopfzeile"><h1>Duelle</h1></div>
+    <div class="karte konto-karte">
+      ${maskottchen(o.einladung ? 'jubelnd' : 'entschlossen')}
+      <h2>${o.einladung ? 'Du wurdest herausgefordert!' : 'Spiel gegen deine Freunde'}</h2>
+      <p>${o.einladung ? 'Erstelle zuerst deinen Account, dann geht’s los.' : 'Wie bei Quizduell: 6 Runden mit je 3 Fragen. Ihr spielt abwechselnd, wann es euch passt.'}</p>
+      <form class="formular" data-aktion="accountErstellen">
+        <label for="name-eingabe">Dein Spielername</label>
+        <input id="name-eingabe" maxlength="20" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="z. B. ramen_fan_99" value="${esc(o.nameEingabe)}">
+        <small>3 bis 20 Zeichen: Buchstaben, Zahlen oder _. Andere Spieler sehen diesen Namen.</small>
+        ${hinweise()}
+        <button class="knopf knopf-rot" type="submit" ${o.laedt ? 'disabled' : ''}>${o.laedt ? 'Einen Moment …' : 'Account erstellen'}</button>
+      </form>
+      <p class="kleingedruckt">Wir brauchen keine E-Mail-Adresse. Dein Account ist an dieses Gerät gebunden: Wenn du die App löschst, ist er weg.</p>
+    </div>
+    ${tabbar('duelle')}
+  </section>`;
+}
+
+function duellZeile(d) {
+  const s = duellSicht(d);
+  const dran = s.phase === 'waehlen' || s.phase === 'spielen';
+  return `<button class="karte duell-zeile ${dran ? 'dran' : ''}" data-aktion="duellOeffnen" data-id="${d.id}">
+    <span><b>${esc(s.gegnerName)}</b><small>${esc(duellStatusText(s))}</small></span>
+    <span class="stand display">${s.meine} : ${s.seine}</span>
+  </button>`;
+}
+
+function duelleScreen() {
+  const o = ui.online;
+  if (o.profil === undefined) {
+    return `<section class="screen mit-tabbar">
+      <div class="kopfzeile"><h1>Duelle</h1></div>
+      ${o.fehler
+        ? `${hinweise()}<button class="knopf" data-aktion="onlineNeu">${ICON.nochmal} Nochmal versuchen</button>`
+        : '<p class="leer">Verbinde mit dem Server …</p>'}
+      ${tabbar('duelle')}
+    </section>`;
+  }
+  if (!o.profil) return accountScreen();
+
+  const sichten = o.duelle.map((d) => ({ d, s: duellSicht(d) }));
+  const dran = sichten.filter(({ s }) => s.phase === 'waehlen' || s.phase === 'spielen');
+  const warten = sichten.filter(({ s }) => s.phase === 'warten');
+  const ende = sichten.filter(({ s }) => s.phase === 'ende').slice(0, 10);
+  const abschnitt = (titel, liste) => (liste.length
+    ? `<div class="abschnitt"><span class="label">${titel}</span>${liste.map(({ d }) => duellZeile(d)).join('')}</div>`
+    : '');
+  const link = `${location.origin}${location.pathname}?einladung=${o.profil.einladungscode}`;
+
+  return `<section class="screen mit-tabbar">
+    <div class="kopfzeile">
+      <h1 style="flex:1">Duelle</h1>
+      <button class="icon-knopf" data-aktion="aktualisieren" aria-label="Aktualisieren">${ICON.nochmal}</button>
+    </div>
+    <div class="karte profil-karte">
+      <div><span class="label">Dein Spielername</span><b class="display">${esc(o.profil.spielername)}</b></div>
+      <div style="text-align:right"><span class="label">Einladungscode</span><b class="code">${esc(o.profil.einladungscode)}</b></div>
+    </div>
+    <div class="zweier">
+      <button class="knopf" data-aktion="nav" data-ziel="suche">${ICON.lupe} Spieler suchen</button>
+      <button class="knopf" data-aktion="einladen">${ICON.teilen} Freund einladen</button>
+    </div>
+    ${o.linkZeigen ? `<div class="karte formular link-feld"><label for="einladungslink">Kopiere diesen Link und schick ihn deinem Freund:</label><input id="einladungslink" readonly value="${esc(link)}" onfocus="this.select()"></div>` : ''}
+    ${hinweise()}
+    ${abschnitt('Du bist dran', dran)}
+    ${abschnitt('Warten auf Gegner', warten)}
+    ${abschnitt('Beendet', ende)}
+    ${!o.duelle.length ? `<div class="karte leer">${maskottchen('nachdenklich')}<span>${o.laedt ? 'Lade Duelle …' : 'Noch keine Duelle. Fordere einen Freund heraus!'}</span></div>` : ''}
+    ${tabbar('duelle')}
+  </section>`;
+}
+
+function sucheScreen() {
+  const o = ui.online;
+  const treffer = o.treffer === null ? '' : o.treffer.length
+    ? `<div class="abschnitt">${o.treffer.map((p) => `
+        <div class="karte duell-zeile">
+          <b>${esc(p.spielername)}</b>
+          <button class="knopf knopf-klein" data-aktion="herausfordern" data-id="${p.id}">${ICON.schwerter} Herausfordern</button>
+        </div>`).join('')}</div>`
+    : '<p class="leer">Niemand gefunden. Stimmt der Spielername?</p>';
+  return `<section class="screen">
+    <div class="kopfzeile">
+      <button class="icon-knopf" data-aktion="nav" data-ziel="duelle" aria-label="Zurück zu den Duellen">${ICON.zurueck}</button>
+      <h1>Spieler suchen</h1>
+    </div>
+    <form class="karte formular" data-aktion="suchen">
+      <label for="such-eingabe">Spielername</label>
+      <div class="such-zeile">
+        <input id="such-eingabe" maxlength="20" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" value="${esc(o.suchText)}">
+        <button class="knopf" type="submit" aria-label="Suchen">${ICON.lupe}</button>
+      </div>
+    </form>
+    ${hinweise()}
+    ${treffer}
+    <form class="karte formular" data-aktion="codeEinloesen">
+      <label for="code-eingabe">Oder Einladungscode eingeben</label>
+      <div class="such-zeile">
+        <input id="code-eingabe" maxlength="6" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="ABC123" value="${esc(o.codeEingabe)}">
+        <button class="knopf" type="submit">Los</button>
+      </div>
+    </form>
+  </section>`;
+}
+
+function punktReihe(ergebnisse, verdeckt) {
+  if (verdeckt) return '<span class="punkt verdeckt">?</span>'.repeat(3);
+  if (!ergebnisse) return '<span class="punkt"></span>'.repeat(3);
+  return ergebnisse.map((ok) => `<span class="punkt ${ok ? 'ja' : 'nein'}" aria-label="${ok ? 'richtig' : 'falsch'}"></span>`).join('');
+}
+
+function duellScreen() {
+  const o = ui.online;
+  const d = o.duelle.find((x) => x.id === o.duellId);
+  const zurueck = `<button class="icon-knopf" data-aktion="nav" data-ziel="duelle" aria-label="Zurück zu den Duellen">${ICON.zurueck}</button>`;
+  if (!d) {
+    return `<section class="screen"><div class="kopfzeile">${zurueck}<h1>Duell</h1></div>
+      ${hinweise()}<p class="leer">${o.laedt ? 'Lade Duell …' : 'Duell nicht gefunden.'}</p></section>`;
+  }
+  const s = duellSicht(d);
+  let aktion = '';
+  if (s.phase === 'waehlen') aktion = `<button class="knopf knopf-rot" data-aktion="nav" data-ziel="duellKategorie">Kategorie wählen</button>`;
+  if (s.phase === 'spielen') aktion = `<button class="knopf knopf-rot" data-aktion="rundeSpielen">${ICON.play} Runde ${d.runde} spielen</button>`;
+  if (s.phase === 'warten') aktion = `<button class="knopf" data-aktion="aktualisieren">${ICON.nochmal} Aktualisieren</button>`;
+  if (s.phase === 'ende') aktion = `<button class="knopf knopf-rot" data-aktion="herausfordern" data-id="${s.gegnerId}">${ICON.schwerter} Revanche</button>`;
+
+  return `<section class="screen">
+    <div class="kopfzeile">${zurueck}<h1>Duell</h1></div>
+    <div class="karte duell-kopf">
+      <div class="seite"><span class="label">Du</span><b>${esc(o.profil.spielername)}</b></div>
+      <div class="mitte">${maskottchen(duellStimmung(s))}<span class="display stand-gross">${s.meine} : ${s.seine}</span></div>
+      <div class="seite rechts"><span class="label">Gegner</span><b>${esc(s.gegnerName)}</b></div>
+    </div>
+    <p class="status-text">${esc(duellStatusText(s))}</p>
+    ${hinweise()}
+    <div class="karte runden">
+      ${s.zeilen.map((z) => `<div class="runden-zeile ${z.nr === d.runde && d.status === 'laeuft' ? 'aktiv' : ''}">
+        <span class="punkte-reihe">${punktReihe(z.mein)}</span>
+        <span class="runden-kat">${z.kategorie ? esc(KATEGORIEN[z.kategorie]) : `Runde ${z.nr}`}</span>
+        <span class="punkte-reihe">${punktReihe(z.sein, z.verdeckt)}</span>
+      </div>`).join('')}
+    </div>
+    <div class="fusszeile">
+      ${o.laedt ? '<p class="leer">Speichere …</p>' : aktion}
+      ${d.status === 'laeuft' ? '<button class="leise-knopf" data-aktion="aufgeben">Aufgeben</button>' : ''}
+    </div>
+  </section>`;
+}
+
+function duellKategorieScreen() {
+  const o = ui.online;
+  const d = o.duelle.find((x) => x.id === o.duellId);
+  if (!d) return duellScreen();
+  const s = duellSicht(d);
+  return `<section class="screen">
+    <div class="kopfzeile">
+      <button class="icon-knopf" data-aktion="nav" data-ziel="duell" aria-label="Zurück zum Duell">${ICON.zurueck}</button>
+      <h1>Kategorie wählen</h1>
+    </div>
+    <p style="margin:0;font-weight:700;line-height:1.45">Runde ${d.runde} von 6. Du spielst zuerst, danach bekommt ${esc(s.gegnerName)} dieselben drei Fragen.</p>
+    ${hinweise()}
+    <div class="abschnitt">
+      ${d.kategorie_optionen.map((k) => `
+        <button class="knopf kat breit" style="background:${FARBEN[k][0]};color:${FARBEN[k][1]}" data-aktion="kategorieNehmen" data-kategorie="${k}">
+          <span style="display:flex;flex-direction:column;gap:2px"><b>${esc(KATEGORIEN[k])}</b><small>${esc(UNTERTITEL[k])}</small></span>
+        </button>`).join('')}
+    </div>
+  </section>`;
+}
+
+function einladungScreen() {
+  const gegner = ui.online.einladungProfil;
+  if (!gegner) return duelleScreen();
+  return `<section class="screen">
+    <div class="karte konto-karte">
+      ${maskottchen('jubelnd')}
+      <h2>${esc(gegner.spielername)} fordert dich heraus!</h2>
+      <p>6 Runden mit je 3 Fragen. Wer am Ende mehr richtig hat, gewinnt.</p>
+      ${hinweise()}
+      <button class="knopf knopf-rot" data-aktion="einladungAnnehmen">${ICON.schwerter} Duell starten</button>
+      <button class="leise-knopf" data-aktion="einladungSpaeter">Später</button>
+    </div>
+  </section>`;
+}
+
+function kontoBereich() {
+  const p = ui.online.profil;
+  if (!p) return ui.online.meldung ? hinweise() : '';
+  return `<div class="karte info-text">
+    <p><b>Dein Account: ${esc(p.spielername)}</b></p>
+    <p>Für Duelle speichern wir auf einem Server in Frankfurt (Supabase): deinen Spielernamen, eine zufällige Nutzer-ID, deinen Einladungscode und deine Duelle. Keine E-Mail-Adresse, kein echter Name.</p>
+    ${hinweise()}
+    <button class="knopf" data-aktion="kontoLoeschen">Account löschen</button>
+  </div>`;
 }
 
 const SCREENS = {
@@ -1084,6 +1754,11 @@ const SCREENS = {
   statistik: statistikScreen,
   abzeichen: abzeichenScreen,
   info: infoScreen,
+  duelle: duelleScreen,
+  suche: sucheScreen,
+  duell: duellScreen,
+  duellKategorie: duellKategorieScreen,
+  einladung: einladungScreen,
 };
 
 let letzterScreen = null;
@@ -1094,6 +1769,7 @@ function render() {
     window.scrollTo(0, 0);
     letzterScreen = ui.screen;
   }
+  steuerePolling();
 }
 
 // ---------- Start ----------
@@ -1107,7 +1783,14 @@ async function init() {
     SCHWIERIGKEIT = daten.schwierigkeiten;
     // Stimmungsbilder vorladen, damit beim Wechsel nichts flackert
     STIMMUNGEN.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });
+    // Einladungslink? (…?einladung=CODE)
+    const parameter = new URLSearchParams(location.search);
+    if (parameter.get('einladung')) {
+      ui.online.einladung = parameter.get('einladung');
+      history.replaceState(null, '', location.pathname);
+    }
     render();
+    ladeOnlineProfil();
   } catch (fehler) {
     app.innerHTML = '<p class="laden">Die Fragen konnten nicht geladen werden.</p>';
     console.error(fehler);

@@ -207,7 +207,7 @@ button { font: inherit; color: inherit; }
   border-top: 3px solid var(--ink);
   background: var(--white);
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .tab {
   height: 74px;
@@ -428,6 +428,48 @@ button { font: inherit; color: inherit; }
 .banner small { font-size: 13px; font-weight: 700; }
 .banner .knopf { position: relative; min-height: 50px; padding: 0 16px; font-family: var(--display); font-size: 16px; box-shadow: 3px 3px 0 var(--ink); }
 
+.melde-link { position: relative; align-self: flex-start; margin-top: 4px; padding: 4px 0; border: 0; background: none; color: var(--white); opacity: .85; font-size: 12px; font-weight: 700; text-decoration: underline; cursor: pointer; }
+.melde-link:hover, .melde-link:focus-visible { opacity: 1; }
+.melde-dank { position: relative; margin-top: 4px; font-size: 12px; font-weight: 700; opacity: .9; }
+
+/* ---------- Dialog (Frage melden) ---------- */
+
+.dialog-hintergrund {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(20, 20, 20, .55);
+}
+.dialog { width: 100%; max-width: 400px; padding: 18px; display: flex; flex-direction: column; gap: 12px; outline: none; }
+.dialog h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 22px; line-height: 1.15; }
+.dialog .gruende { display: flex; flex-direction: column; gap: 8px; }
+.dialog .grund { min-height: 50px; justify-content: flex-start; padding: 0 14px; font-weight: 900; font-size: 15px; box-shadow: 3px 3px 0 var(--ink); }
+.dialog .grund.gewaehlt { background: var(--yellow); }
+.melde-feld { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 900; }
+.melde-feld small { font-weight: 500; }
+.melde-feld textarea {
+  width: 100%;
+  resize: none;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  -webkit-user-select: text;
+  user-select: text;
+}
+.melde-feld textarea:focus { outline: 3px solid var(--blue); outline-offset: 2px; }
+.melde-feld .zaehler { align-self: flex-end; font-size: 12px; color: #4A463F; }
+.dialog .fehler { font-size: 13px; }
+
 .loesung { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; }
 .loesung ol { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 4px; font-weight: 900; }
 
@@ -519,7 +561,8 @@ button { font: inherit; color: inherit; }
 /* ---------- Belohnungswerbung ---------- */
 
 .knopf-video { background: var(--blue); color: var(--white); font-size: 15px; font-weight: 900; padding: 0 14px; }
-.knopf-klein { min-height: 44px; padding: 0 12px; font-size: 13px; font-weight: 900; align-self: flex-start; margin-top: 4px; }
+.knopf-klein { min-height: 44px; padding: 0 12px; font-size: 13px; font-weight: 900; flex-shrink: 0; }
+.tageskarte .knopf-klein { align-self: flex-start; margin-top: 4px; }
 .joker-video small { display: inline-flex; align-items: center; gap: 4px; color: var(--blue); font-weight: 900; }
 
 .werbung {
@@ -548,6 +591,91 @@ button { font: inherit; color: inherit; }
 .werbung-belohnung { font-weight: 900; }
 .werbung-karte .balken span { background: var(--blue); transition: width .1s linear; }
 .werbung-karte .knopf:disabled { opacity: .6; }
+
+/* ---------- Duelle ---------- */
+
+.formular { display: flex; flex-direction: column; gap: 8px; }
+.karte.formular { padding: 14px 16px; }
+.formular label { font-size: 14px; font-weight: 900; }
+.formular input {
+  min-width: 0;
+  height: 52px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  padding: 0 14px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  -webkit-user-select: text;
+  user-select: text;
+}
+.formular input:focus { outline: 3px solid var(--blue); outline-offset: 2px; }
+.formular small { font-size: 12px; font-weight: 500; line-height: 1.4; }
+.link-feld input { font-size: 13px; }
+.such-zeile { display: flex; gap: 10px; }
+.such-zeile input { flex: 1; }
+.such-zeile .knopf { min-height: 52px; padding: 0 16px; font-weight: 900; }
+
+.konto-karte { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.konto-karte .maskottchen { width: 120px; height: 120px; align-self: center; }
+.konto-karte h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 24px; line-height: 1.15; text-align: center; }
+.konto-karte > p { margin: 0; line-height: 1.5; text-align: center; }
+.kleingedruckt { font-size: 12px !important; line-height: 1.45; color: #4A463F; }
+
+.fehler, .meldung { margin: 0; padding: 10px 12px; border: 2px solid; border-radius: 12px; font-size: 14px; font-weight: 700; line-height: 1.4; }
+.fehler { border-color: var(--red); background: #FDE8E7; color: #8A1712; }
+.meldung { border-color: var(--green); background: #E3F3E9; color: #0F5A2F; }
+
+.profil-karte { padding: 14px 16px; display: flex; justify-content: space-between; gap: 12px; }
+.profil-karte > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.profil-karte .display { font-size: 20px; overflow-wrap: anywhere; }
+.code { font-family: ui-monospace, Menlo, monospace; font-size: 20px; letter-spacing: .12em; }
+.zweier .knopf svg { flex-shrink: 0; }
+
+.abschnitt { display: flex; flex-direction: column; gap: 10px; }
+.duell-zeile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  box-shadow: 4px 4px 0 var(--ink);
+  text-align: left;
+  color: var(--ink);
+  font: inherit;
+}
+button.duell-zeile { cursor: pointer; }
+button.duell-zeile:active { transform: translate(4px, 4px); box-shadow: none; }
+.duell-zeile b { font-size: 17px; overflow-wrap: anywhere; }
+.duell-zeile small { display: block; margin-top: 2px; font-size: 13px; font-weight: 700; }
+.duell-zeile .stand { font-size: 22px; white-space: nowrap; }
+.duell-zeile.dran { background: var(--yellow); }
+
+.leer { margin: 0; padding: 18px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; font-weight: 700; }
+.leer .maskottchen { width: 110px; height: 110px; }
+
+.duell-kopf { padding: 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 8px; }
+.duell-kopf .seite { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.duell-kopf .seite b { font-size: 16px; overflow-wrap: anywhere; }
+.duell-kopf .rechts { align-items: flex-end; text-align: right; }
+.duell-kopf .mitte { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.duell-kopf .maskottchen { width: 84px; height: 84px; }
+.stand-gross { font-size: 30px; }
+.status-text { margin: 0; text-align: center; font-weight: 900; }
+
+.runden { padding: 6px 14px; }
+.runden-zeile { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 2px dashed var(--line); }
+.runden-zeile:last-child { border-bottom: 0; }
+.runden-kat { text-align: center; font-size: 13px; font-weight: 900; line-height: 1.25; }
+.runden-zeile.aktiv .runden-kat { color: var(--red); }
+.punkte-reihe { display: flex; gap: 5px; }
+.punkt { width: 18px; height: 18px; border: 2px solid var(--ink); border-radius: 50%; background: var(--muted); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 900; }
+.punkt.ja { background: var(--green); }
+.punkt.nein { background: var(--red); }
+.punkt.verdeckt { background: var(--white); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
