@@ -1,8 +1,8 @@
-# Senpai Quiz – 1100 Fragen
+# Senpai Quiz – 1200 Fragen
 
 Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Antworten.
 
-## Einsteiger (375 Fragen)
+## Einsteiger (405 Fragen)
 
 ### One Piece
 
@@ -32,6 +32,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Shanks** · Weißbart · Gol D. Roger · Blackbeard
 - `e-348` *Auswahl* – Wie heißt Ruffys Teufelsfrucht in der deutschen Fassung?  
   **Gum-Gum-Frucht** · Feuer-Frucht · Flora-Frucht · Donner-Frucht
+- `e-376` *Auswahl* – Welches Tier ist Tony Tony Chopper?  
+  **Ein Rentier** · Ein Hund · Ein Bär · Ein Hase
+- `e-377` *Auswahl* – Welche Waffe nutzt Lysop?  
+  **Eine Schleuder** · Ein Schwert · Einen Bogen · Eine Pistole
 
 ### Dragon Ball
 
@@ -61,6 +65,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Kuririn** · Yamchu · Tenshinhan · Chao-Zu
 - `e-349` *Auswahl* – Welcher Bösewicht ist ein rosafarbenes, kindliches Wesen aus Magie?  
   **Boo** · Freezer · Cell · Beerus
+- `e-378` *Auswahl* – Was wünscht sich Oolong beim ersten Mal von Shenlong?  
+  **Ein Paar Unterhosen** · Unsterblichkeit · Einen Berg Gold · Die Weltherrschaft
 
 ### Naruto
 
@@ -96,6 +102,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Das Blatt-Symbol von Konoha** · Ein Sand-Symbol · Ein Wolken-Symbol · Ein Nebel-Symbol
 - `e-350` *Auswahl* – Wie heißt Narutos Freund mit dem Hund Akamaru?  
   **Kiba Inuzuka** · Shino Aburame · Choji Akimichi · Shikamaru Nara
+- `e-379` *Auswahl* – Wie heißt die Prüfung, bei der Genin zu Chunin aufsteigen?  
+  **Chunin-Auswahlprüfung** · Hokage-Prüfung · Anbu-Test · Jonin-Examen
 
 ### Shōnen
 
@@ -217,6 +225,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Shiganshina** · Trost · Mitras · Stohess
 - `e-365` *Auswahl* – Welche Farbe hat die Uniform der Shinigami in „Bleach“?  
   **Schwarz** · Weiß · Rot · Blau
+- `e-380` *Auswahl* – Wie heißt Conans Grundschule?  
+  **Teitan-Grundschule** · Beika-Grundschule · Haido-Grundschule · Konoha-Grundschule
+- `e-381` *Auswahl* – Was ruft Team Rocket, wenn es besiegt davonfliegt?  
+  **„Das war's dann wohl schon wieder“** · „Wir kommen wieder“ · „Pikachu, wir hassen dich“ · „Auf Wiedersehen, Ash“
+- `e-382` *Auswahl* – Wie heißt Erens Kindheitsfreund, der ihn oft kritisiert und ein Pferdegesicht hat?  
+  **Jean Kirstein** · Connie Springer · Marco Bott · Bertholdt
+- `e-391` *Auswahl* – Wie heißt die Exorzisten-Schule in „Blue Exorcist“?  
+  **Wahre-Kreuz-Akademie (True Cross Academy)** · Shuchiin · Eden · Totsuki
+- `e-394` *Auswahl* – Welche Sportart steht in „Captain Tsubasa“ im Mittelpunkt?  
+  **Fußball** · Baseball · Volleyball · Basketball
+- `e-395` *Auswahl* – Wie heißt die Hauptfigur mit vollem Namen?  
+  **Tsubasa Ozora** · Kojiro Hyuga · Genzo Wakabayashi · Taro Misaki
 
 ### Neue Hits
 
@@ -380,6 +400,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Einen Pinguin** · Einen Bären · Einen Hund · Einen Hasen
 - `e-370` *Auswahl* – Welche Kraft hat Shinra in „Fire Force“?  
   **Er erzeugt Feuer mit seinen Füßen** · Er kann fliegen · Er friert Dinge ein · Er liest Gedanken
+- `e-383` *Auswahl* – Welche Farbe hat Tanjiros Haar?  
+  **Dunkelrot** · Schwarz · Blond · Weiß
+- `e-384` *Auswahl* – Was sind Fluchwerkzeuge in „Jujutsu Kaisen“?  
+  **Mit Fluchenergie aufgeladene Waffen** · Zauberstäbe · Bücher · Talismane gegen Flüche
+- `e-385` *Auswahl* – Welches Sportfest veranstaltet die U.A. High jedes Jahr?  
+  **Das U.A.-Sportfest** · Die Heldenolympiade · Das Quirk-Turnier · Den Heldenmarathon
+- `e-386` *Auswahl* – Welchen Teufel fürchtet Denji anfangs am meisten?  
+  **Keinen, er will vor allem ein normales Leben** · Den Pistolenteufel · Den Fuchsteufel · Den Zombieteufel
+- `e-389` *Auswahl* – Welches Land spioniert Loid für Westalis aus?  
+  **Ostania** · Marley · Paradis · Fiore
+- `e-392` *Auswahl* – Wie heißt Mobs jüngerer Bruder?  
+  **Ritsu Kageyama** · Teruki Hanazawa · Tome Kurata · Shou Suzuki
 
 ### Isekai & Fantasy
 
@@ -465,6 +497,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Liones** · Fiore · Camelot · Britannia-Stadt
 - `e-372` *Auswahl* – Was kann Mash in „Mashle“ nicht, obwohl alle anderen es können?  
   **Magie wirken** · Laufen · Lesen · Kochen
+- `e-387` *Auswahl* – Was tut Jinwoo mit Gegnern, die er besiegt hat?  
+  **Er erweckt ihre Schatten als Soldaten** · Er frisst sie · Er versiegelt sie · Er lässt sie frei
+- `e-396` *Auswahl* – Was ist Yato in „Noragami“?  
+  **Ein unbekannter Gott, der Aufträge für fünf Yen erledigt** · Ein Shinigami · Ein Dämon · Ein Samurai
+- `e-397` *Auswahl* – Wie heißt das Mädchen, dessen Seele nach einem Unfall immer wieder ihren Körper verlässt?  
+  **Hiyori Iki** · Nora · Bishamon · Kofuku
 
 ### Klassiker & Kult
 
@@ -548,6 +586,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Zwei** · Einem · Drei · Vier
 - `e-371` *Auswahl* – Womit verschicken Okabe und seine Freunde in „Steins;Gate“ Nachrichten in die Vergangenheit?  
   **Mit einer umgebauten Mikrowelle** · Mit einem Zeitauto · Mit einem Telefon aus der Zukunft · Mit einem Fernseher
+- `e-388` *Auswahl* – Wer ist Soichiro Yagami?  
+  **Lights Vater** · Lights Bruder · Ls Betreuer · Ein Shinigami
+- `e-398` *Auswahl* – Welche Kraft erhält Lelouch in „Code Geass“?  
+  **Das Geass, mit dem er absolute Befehle erteilen kann** · Zeitreisen · Unsichtbarkeit · Gedankenlesen
+- `e-399` *Auswahl* – Unter welchem Namen führt Lelouch den Widerstand an?  
+  **Zero** · Kira · L · Akatsuki
 
 ### Shōjo & Romance
 
@@ -617,6 +661,14 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Aus dem reichen Shinomiya-Konzern** · Aus einer Bauernfamilie · Aus einer Samurai-Familie · Aus einem Tempel
 - `e-369` *Auswahl* – Wie heißt der Vampir-Adlige, den Yuki in „Vampire Knight“ liebt?  
   **Kaname Kuran** · Zero Kiryu · Kaien Cross · Hanabusa Aido
+- `e-390` *Auswahl* – Welche Farbe hat Bunnys Schuluniform in „Sailor Moon“?  
+  **Blau-weiß** · Rot-schwarz · Grün-gelb · Rosa
+- `e-393` *Auswahl* – Wie heißt die zweite Nana mit Nachnamen, das Mädchen vom Land?  
+  **Nana Komatsu** · Nana Osaki · Nana Saito · Nana Ichinose
+- `e-400` *Auswahl* – Wer ist Yona in „Akatsuki no Yona“?  
+  **Eine Prinzessin, die nach dem Mord an ihrem Vater fliehen muss** · Eine Magierin · Eine Piratin · Eine Göttin
+- `e-401` *Auswahl* – Welche Haarfarbe hat Yona?  
+  **Rot** · Schwarz · Blond · Blau
 
 ### Ghibli & Kinofilme
 
@@ -674,6 +726,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Kodama** · Rußmännchen · Kappa · Tanuki
 - `e-344` *Auswahl* – Wie heißt der Kinofilm mit dem Finale von „Attack on Titan“?  
   **Attack on Titan: The Last Attack** · Attack on Titan: Final Rumbling · Attack on Titan: Wings of Freedom · Attack on Titan: Chronicle
+- `e-402` *Auswahl* – Welchen Beruf hat Kikis Vermieterin Osono?  
+  **Bäckerin** · Lehrerin · Hexe · Ärztin
 
 ### Manga, Begriffe & Kultur
 
@@ -783,8 +837,14 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Großer Bruder** · Kleiner Bruder · Vater · Onkel
 - `e-375` *Auswahl* – Was ist Dango?  
   **Reisbällchen am Spieß** · Gegrillter Fisch · Eine Nudelsuppe · Ein Reiswein
+- `e-403` *Auswahl* – Was bedeutet „Tadaima“?  
+  **Ich bin wieder zu Hause** · Guten Appetit · Auf Wiedersehen · Danke
+- `e-404` *Auswahl* – Was bedeutet „Okaeri“?  
+  **Willkommen zurück** · Guten Morgen · Entschuldigung · Bis später
+- `e-405` *Auswahl* – Was ist Udon?  
+  **Dicke Weizennudeln** · Dünne Buchweizennudeln · Reisbällchen · Ein Fischgericht
 
-## Fan (459 Fragen)
+## Fan (511 Fragen)
 
 ### One Piece
 
@@ -814,6 +874,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Monkey D. Dragon, Anführer der Revolutionsarmee** · Monkey D. Garp · Gol D. Roger · Shanks
 - `f-411` *Auswahl* – Wie heißt das zweite Schiff der Strohhutbande?  
   **Thousand Sunny** · Flying Lamb · Moby Dick · Oro Jackson
+- `f-460` *Wer bin ich?* – Wer bin ich? Ich bin Archäologin und kann die Porneglyphen lesen. / Als Kind war ich das einzige überlebende Kind von Ohara. / Mit meiner Teufelsfrucht lasse ich überall Arme sprießen.  
+  **Nico Robin** · Nami · Boa Hancock · Nefertari Vivi
+- `f-461` *Auswahl* – Wie heißt das Marine-Hauptquartier, in dem der große Krieg gegen Weißbart stattfindet?  
+  **Marine Ford** · Enies Lobby · Impel Down · Water Seven
 
 ### Dragon Ball
 
@@ -843,6 +907,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Vegetas und Bulmas** · Son-Gokus und Chi-Chis · Piccolos · Muten Roshis
 - `f-412` *Auswahl* – Wie heißt Son-Gohans Tochter?  
   **Pan** · Bra · Marron · Videl
+- `f-462` *Auswahl* – Wie heißt Vegetas Bruder, der zu Beginn von „Dragon Ball Z“ auftaucht?  
+  **Raditz** · Nappa · Bardock · Turles
+- `f-463` *Auswahl* – Wie heißt das Turnier, bei dem sich die Kämpfer regelmäßig messen?  
+  **Großes Turnier (Tenkaichi Budōkai)** · Cell-Spiele · Turnier der Kraft · Saiyajin-Turnier
 
 ### Naruto
 
@@ -880,6 +948,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **„Wie nervig“** · „Glaub es!“ · „Das ist mein Ninja-Weg“ · „Dattebayo“
 - `f-414` *Auswahl* – Welcher Clan beherrscht Schatten-Techniken?  
   **Nara** · Hyuga · Yamanaka · Akimichi
+- `f-464` *Auswahl* – Welches Tier beschwört Sasuke als Verbündeten?  
+  **Schlangen und später Falken** · Kröten · Hunde · Schnecken
+- `f-465` *Auswahl* – Wie heißt Sakuras Lehrmeisterin, die Fünfte Hokage?  
+  **Tsunade** · Kurenai · Anko · Shizune
 
 ### Shōnen
 
@@ -1017,6 +1089,32 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Als König** · Als Prinzessin · Als Monster · Als Genie
 - `f-440` *Auswahl* – Wie heißt Ichigos Vater, der eine Klinik führt?  
   **Isshin Kurosaki** · Ryuken Ishida · Kisuke Urahara · Jushiro Ukitake
+- `f-466` *Auswahl* – Wie heißt der Kommissar, der sich immer in seine Kollegin Sato verliebt?  
+  **Wataru Takagi** · Juzo Megure · Ninzaburo Shiratori · Kazunobu Chiba
+- `f-467` *Auswahl* – Welche Rolle hat Professor Agasa gegenüber Ai Haibara?  
+  **Sie wohnt bei ihm** · Er ist ihr Vater · Er ist ihr Lehrer · Er ist ihr Chef
+- `f-468` *Auswahl* – Wie heißt Ashs Vogel-Pokémon aus Kanto, das er später bei einem Schwarm zurücklässt?  
+  **Tauboga** · Taubsi · Habitak · Smettbo
+- `f-469` *Auswahl* – Wie heißt Mistys Begleit-Pokémon, das ihr ständig folgt?  
+  **Enton** · Togepi · Starmie · Psiana
+- `f-470` *Auswahl* – Welche Flüssigkeit nutzt der 3D-Manöver-Apparat als Antrieb?  
+  **Gas** · Wasser · Öl · Dampf
+- `f-479` *Auswahl* – Wer ist Kei Tsukishima in „Haikyu!!“?  
+  **Karasunos großer, sarkastischer Mittelblocker mit Brille** · Der Trainer · Ein Spieler von Nekoma · Hinatas Bruder
+- `f-480` *Auswahl* – Wer ist Rensuke Kunigami?  
+  **Ein Stürmer mit Held-Ideal, der mit Isagi in Team Z spielt** · Der Trainer von Blue Lock · Isagis Bruder · Ein Torwart
+- `f-490` *Auswahl* – Wer ist Yoruichi Shihoin?  
+  **Eine ehemalige Shinigami-Kommandantin, die sich in eine Katze verwandeln kann** · Ichigos Mutter · Ein Hollow · Ein Quincy
+- `f-491` *Auswahl* – Wer ist Mephisto Pheles?  
+  **Der Direktor der Akademie, in Wahrheit ein Dämonenkönig** · Rins Bruder · Ein Exorzist · Ein Engel
+- `f-492` *Auswahl* – Wie heißt Rins Freundin, die Kräuter und einen Feenhund züchtet?  
+  **Shiemi Moriyama** · Izumo Kamiki · Shura Kirigakure · Paku
+- `f-497` *Auswahl* – Wie heißt Tsubasas Rivale mit dem „Tiger-Schuss“?  
+  **Kojiro Hyuga** · Genzo Wakabayashi · Taro Misaki · Jun Misugi
+- `f-498` *Auswahl* – Welcher Torwart ist Tsubasas Freund und Rivale aus der Kindheit?  
+  **Genzo Wakabayashi** · Ken Wakashimazu · Taro Misaki · Ryo Ishizaki
+- `f-499` *Auswahl* – Unter welchem Titel lief „Captain Tsubasa“ in den 1990ern in Deutschland?  
+  **Die tollen Fußballstars** · Die Fußball-Helden · Tsubasa und seine Freunde · Kick it!
 
 ### Neue Hits
 
@@ -1224,6 +1322,26 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Special Fire Force Company 8** · Company 1 · Company 3 · Company 5
 - `f-450` *Auswahl* – Was sind Infernals in „Fire Force“?  
   **Menschen, die spontan zu Flammenwesen werden** · Feuerwehrleute mit Kräften · Dämonen aus der Hölle · Roboter
+- `f-471` *Auswahl* – Wer ist der Oberste der Dämonenjäger, Kagaya Ubuyashiki?  
+  **Das Familienoberhaupt, das die Dämonenjäger leitet** · Ein Hashira · Ein ehemaliger Dämon · Tanjiros Großvater
+- `f-472` *Auswahl* – Wer ist Masamichi Yaga?  
+  **Der Direktor der Jujutsu-Akademie Tokio, der Puppen beseelt** · Ein Fluch · Gojos Vater · Yujis Großvater
+- `f-473` *Auswahl* – Wie heißt Momo Yaoyorozus Fähigkeit?  
+  **Sie erschafft Gegenstände aus ihrem Körper** · Sie wird unsichtbar · Sie kontrolliert Schwerkraft · Sie erzeugt Säure
+- `f-474` *Auswahl* – Wer ist Himeno?  
+  **Akis Partnerin bei der öffentlichen Sicherheit mit Augenklappe** · Denjis Schwester · Eine Teufelin · Makimas Chefin
+- `f-481` *Auswahl* – Welche Fähigkeit nutzt Okarun in seiner Turbo-Oma-Form?  
+  **Extreme Geschwindigkeit** · Unsichtbarkeit · Feuer · Gedankenlesen
+- `f-485` *Auswahl* – Wie heißt das Kriegerdorf, das Senku zum Königreich der Wissenschaft macht?  
+  **Ishigami-Dorf** · Steindorf · Konoha · Tsukasa-Reich
+- `f-487` *Auswahl* – Wer ist Heisuke Mashimo in „Sakamoto Days“?  
+  **Ein Scharfschütze mit Vogel, der sich Sakamoto anschließt** · Sakamotos Sohn · Ein Polizist · Der Boss der Order
+- `f-488` *Auswahl* – Wer ist Sojo in „Kagurabachi“?  
+  **Ein Yakuza-Zauberer mit der Klinge Kuregumo** · Chihiros Bruder · Ein Polizist · Chihiros Lehrer
+- `f-493` *Auswahl* – Wie heißt Reigens Büro?  
+  **Spirits and Such Consultation Office** · Geisterjäger GmbH · Psycho-Helden · Mob Agency
+- `f-494` *Auswahl* – Wer ist Teruki Hanazawa?  
+  **Ein Schüler mit Psychokräften, der Mob zunächst bekämpft und dann sein Freund wird** · Mobs Lehrer · Ein Geist · Reigens Bruder
 
 ### Isekai & Fantasy
 
@@ -1333,6 +1451,22 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Windbeutel (Cream Puffs)** · Mochi · Dango · Taiyaki
 - `f-454` *Auswahl* – Wie heißt die Zauberschule in „Mashle“?  
   **Easton Magic Academy** · Hogwarts · Clover Academy · Shuchiin
+- `f-475` *Auswahl* – Wer ist Choi Jong-in?  
+  **Der S-Rang-Jäger und Gildenmeister der Hunters-Gilde** · Jinwoos Bruder · Ein Monarch · Ein Arzt
+- `f-476` *Auswahl* – Wie heißt Erzas Rivalin und Freundin mit blauen Haaren aus der Zwillingsgilde?  
+  **Juvia Lockser** · Mirajane Strauss · Levy McGarden · Cana Alberona
+- `f-484` *Auswahl* – Welche Figur ist Sein in „Frieren“?  
+  **Ein Priester, der sich der Gruppe anschließt** · Ein Dämon · Frierens Bruder · Ein Zwerg
+- `f-486` *Auswahl* – Wie heißt Emmas Freund mit der Brille, der unter den jüngeren Kindern bleibt?  
+  **Phil** · Don · Gilda · Nat
+- `f-489` *Auswahl* – Welche Tiere jagen Gon und Killua im Chimera-Ant-Arc?  
+  **Chimera-Ameisen** · Drachen · Riesenfrösche · Titanen
+- `f-500` *Auswahl* – Was ist Yukine?  
+  **Yatos Regalia, eine Waffe aus einer Geisterseele** · Yatos Bruder · Ein Dämon · Ein Shinigami
+- `f-501` *Auswahl* – Wie viel verlangt Yato für seine Dienste?  
+  **Fünf Yen** · Fünf Euro · Eine Million Yen · Nichts
+- `f-502` *Auswahl* – Welche Kriegsgöttin verfolgt Yato aus Rache?  
+  **Bishamon** · Kofuku · Amaterasu · Izanami
 
 ### Klassiker & Kult
 
@@ -1438,6 +1572,16 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Hououin Kyouma** · Daru · Mad Scientist 42 · Doktor Zeit
 - `f-452` *Auswahl* – Wie heißt die Wissenschaftlerin, deren Tod Okabe verhindern will?  
   **Kurisu Makise** · Mayuri Shiina · Suzuha Amane · Faris NyanNyan
+- `f-477` *Auswahl* – Wie heißt Toukas Bruder, der zu Aogiri Tree gehört?  
+  **Ayato Kirishima** · Nishiki Nishio · Renji Yomo · Uta
+- `f-478` *Auswahl* – Was ist Bakura in „Yu-Gi-Oh!“?  
+  **Yugis Freund, der vom Geist des Millenniumsrings besessen ist** · Kaibas Diener · Ein Duellrichter · Pegasus’ Sohn
+- `f-503` *Auswahl* – Wer ist Suzaku Kururugi?  
+  **Lelouchs bester Freund, der für Britannia kämpft** · Lelouchs Bruder · Ein Pilot der Rebellen · Ein Kaiser
+- `f-504` *Auswahl* – Wie heißt das Mädchen mit den grünen Haaren, das Lelouch das Geass gibt?  
+  **C.C.** · Kallen · Nunnally · Shirley
+- `f-505` *Auswahl* – Wie heißen die Kampfroboter in „Code Geass“?  
+  **Knightmare Frames** · EVAs · Gundams · Mobile Suits
 
 ### Shōjo & Romance
 
@@ -1525,6 +1669,20 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Mitsuki Koyama** · Momoko Hanasaki · Yuki Cross · Sakura Kinomoto
 - `f-448` *Auswahl* – Wie heißen Momokos Freundinnen Yuri und Hinagiku als Engel in „Wedding Peach“?  
   **Angel Lily und Angel Daisy** · Angel Rose und Angel Tulip · Sailor Lily und Sailor Daisy · Angel Peach und Angel Plum
+- `f-482` *Auswahl* – Wie heißt die Oberste Konkubine, deren Baby Maomao zu Beginn rettet?  
+  **Lihua** · Gyokuyou · Ah-Duo · Lishu
+- `f-483` *Auswahl* – Wie heißt Ciels Hund, der in Wahrheit ein Höllenhund ist?  
+  **Pluto** · Sebastian · Finny · Snake
+- `f-495` *Auswahl* – Welchen Spitznamen bekommt Nana Komatsu?  
+  **Hachi** · Nanako · Nanni · Koma
+- `f-496` *Auswahl* – Wer ist Ren Honjo?  
+  **Gitarrist von Trapnest und Nana Osakis Ex-Freund** · Hachis Bruder · Ein Produzent · Der Sänger der Black Stones
+- `f-506` *Auswahl* – Wer tötet Yonas Vater?  
+  **Soo-won, ihre Jugendliebe** · Hak · Ein Dämon · Ein fremder König
+- `f-507` *Auswahl* – Wer ist Hak?  
+  **Yonas Leibwächter und treuer Begleiter** · Yonas Bruder · Der Mörder ihres Vaters · Ein Drache
+- `f-508` *Auswahl* – Wen sucht Yona auf ihrer Reise?  
+  **Die vier Drachenkrieger** · Ein Schwert · Ihren Bruder · Den Kaiser
 
 ### Ghibli & Kinofilme
 
@@ -1614,6 +1772,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Paprika** · Perfect Blue · Millennium Actress · Tokyo Godfathers
 - `f-457` *Auswahl* – Wie heißt der Kinofilm von 2021 zu „Jujutsu Kaisen“?  
   **Jujutsu Kaisen 0** · Jujutsu Kaisen: Shibuya · Jujutsu Kaisen: Sukuna · Jujutsu Kaisen: Gojo
+- `f-509` *Auswahl* – Welcher Film von Masaaki Yuasa erzählt von Inu-Oh, einem Noh-Tänzer?  
+  **Inu-Oh** · Ride Your Wave · Lu Over the Wall · Mind Game
+- `f-510` *Auswahl* – Wie heißt der Kinofilm von 2024 zu „My Hero Academia“?  
+  **My Hero Academia: You're Next** · My Hero Academia: Two Heroes · My Hero Academia: Heroes Rising · My Hero Academia: World Heroes’ Mission
 
 ### Manga, Begriffe & Kultur
 
@@ -1733,8 +1895,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **AniNite** · AnimagiC · DoKomi · Connichi
 - `f-459` *Auswahl* – Was sind Furigana?  
   **Kleine Lesehilfen in Kana über schwierigen Kanji** · Lautmalereien · Farbseiten · Ein Papierformat
+- `f-511` *Auswahl* – Wie heißt der deutsche Verlag, der in den 2000ern „Yu-Gi-Oh!“ und „Fruits Basket“ herausbrachte und in Köln saß?  
+  **Tokyopop** · Carlsen · Egmont · Panini
 
-## Otaku (266 Fragen)
+## Otaku (284 Fragen)
 
 ### One Piece
 
@@ -1760,6 +1924,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **3 Milliarden Berry** · 1,5 Milliarden Berry · 500 Millionen Berry · 4,6 Milliarden Berry
 - `o-244` *Auswahl* – Welcher Pirat trägt den Beinamen „Chirurg des Todes“?  
   **Trafalgar Law** · Eustass Kid · Marco · Crocodile
+- `o-267` *Auswahl* – Wie heißt das Gefängnis, in das Ruffy einbricht, um Ace zu retten?  
+  **Impel Down** · Enies Lobby · Marine Ford · Punk Hazard
 
 ### Dragon Ball
 
@@ -1783,6 +1949,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Dende** · Piccolo · Nail · Moori
 - `o-245` *Auswahl* – Wie heißt die Technik, mit der sich Son-Goku sofort an einen anderen Ort teleportiert?  
   **Momentane Teleportation** · Kaioken · Genkidama · Taiyoken
+- `o-268` *Auswahl* – Wer ist Whis?  
+  **Der Engel und Lehrmeister von Beerus** · Ein Gott der Zerstörung · Vegetas Sohn · Ein Namekianer
 
 ### Naruto
 
@@ -1804,6 +1972,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Hagoromo Otsutsuki** · Kaguya Otsutsuki · Indra · Madara Uchiha
 - `o-246` *Auswahl* – Wie heißt Zabuzas riesiges Schwert?  
   **Kubikiribōchō** · Samehada · Kusanagi · Hiramekarei
+- `o-269` *Auswahl* – Wie heißt Itachis Technik, die Gegner in eine 72-stündige Illusion zwingt?  
+  **Tsukuyomi** · Amaterasu · Susanoo · Izanagi
 
 ### Shōnen
 
@@ -1889,6 +2059,16 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **1996** (Schieberegler 1985–2005, ±1 zählt als knapp)
 - `o-250` *Auswahl* – Wie heißt die Begründerin der Eldianer, die vor 2000 Jahren die Titanenkraft erhielt?  
   **Ymir Fritz** · Historia Reiss · Dina Fritz · Frieda Reiss
+- `o-270` *Auswahl* – Welche Farbe hat das Auto von Professor Agasa, ein VW Käfer?  
+  **Gelb** · Rot · Blau · Grün
+- `o-271` *Auswahl* – Wie heißt die Insel-Region der siebten Generation?  
+  **Alola** · Galar · Kalos · Paldea
+- `o-272` *Auswahl* – Welche Familie trägt den „Urtitanen“ auf Paradis, bevor Grisha ihn stiehlt?  
+  **Reiss** · Ackermann · Fritz · Tybur
+- `o-275` *Auswahl* – In welchem Magazin erscheint „Blue Exorcist“?  
+  **Jump SQ** · Weekly Shōnen Jump · Shōnen Magazine · Monthly G Fantasy
+- `o-278` *Auswahl* – Wer hat „Captain Tsubasa“ erschaffen?  
+  **Yoichi Takahashi** · Akira Toriyama · Takehiko Inoue · Mitsuru Adachi
 
 ### Neue Hits
 
@@ -2014,6 +2194,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Nayuta** · Asa · Yoru · Fami
 - `o-262` *Auswahl* – Wer hat „Fire Force“ erschaffen und zuvor „Soul Eater“?  
   **Atsushi Ohkubo** · Yuki Tabata · Kohei Horikoshi · Hiro Mashima
+- `o-273` *Auswahl* – Welches Tier begleitet Inosuke in seiner Kindheit?  
+  **Wildschweine** · Wölfe · Bären · Füchse
+- `o-274` *Auswahl* – Wie heißt Yujis Technik, bei der er Fluchenergie verzögert einsetzt?  
+  **Divergent Fist (Divergierende Faust)** · Schwarzer Blitz · Sphärenentfaltung · Fluchrede
+- `o-276` *Auswahl* – Wie heißt die Organisation böser Esper in „Mob Psycho 100“?  
+  **Claw** · Hand · Fist · Eye
 
 ### Isekai & Fantasy
 
@@ -2081,6 +2267,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Stolz** · Neid · Gier · Zorn
 - `o-264` *Auswahl* – Wer hat „Mashle“ erschaffen?  
   **Hajime Komoto** · Yuki Tabata · Gege Akutami · Kazue Kato
+- `o-279` *Auswahl* – Wer hat „Noragami“ erschaffen?  
+  **Adachitoka** · CLAMP · AidaIro · Yana Toboso
 
 ### Klassiker & Kult
 
@@ -2140,6 +2328,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ganryūjima** · Jeju · Okinawa · Sado
 - `o-263` *Auswahl* – Welche Organisation jagt das Labor in „Steins;Gate“?  
   **SERN** · NERV · SEELE · CCG
+- `o-280` *Auswahl* – Welches Studio produzierte „Code Geass“?  
+  **Sunrise** · Gainax · Madhouse · Bones
 
 ### Shōjo & Romance
 
@@ -2195,6 +2385,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Weekly Young Jump** · Weekly Shōnen Jump · Nakayoshi · Hana to Yume
 - `o-261` *Auswahl* – Wer hat „Vampire Knight“ erschaffen?  
   **Matsuri Hino** · Arina Tanemura · Ai Yazawa · Yana Toboso
+- `o-277` *Auswahl* – Warum ist „Nana“ seit 2009 unvollendet?  
+  **Ai Yazawa erkrankte schwer und pausierte** · Der Verlag stellte die Reihe ein · Die Geschichte war zu Ende · Ein Rechtsstreit
+- `o-281` *Auswahl* – Wer hat „Akatsuki no Yona“ erschaffen?  
+  **Mizuho Kusanagi** · Arina Tanemura · Natsuki Takaya · Ai Yazawa
+- `o-282` *Auswahl* – Wer ist Kyoya Ootori im Host Club?  
+  **Der kühle Vizepräsident und Rechner** · Der Präsident · Einer der Zwillinge · Haruhis Cousin
 
 ### Ghibli & Kinofilme
 
@@ -2240,6 +2436,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Arrietty** · Erinnerungen an Marnie · Der Mohnblumenberg · Aya und die Hexe
 - `o-265` *Auswahl* – Welcher Film von 1984 gilt als Vorläufer von Studio Ghibli?  
   **Nausicaä aus dem Tal der Winde** · Das Schloss im Himmel · Mein Nachbar Totoro · Das Schloss des Cagliostro
+- `o-283` *Auswahl* – Welcher Ghibli-Film von 1991 erzählt von einer Büroangestellten, die aufs Land fährt?  
+  **Tränen der Erinnerung** · Flüstern des Meeres · Stimme des Herzens · Pom Poko
 
 ### Manga, Begriffe & Kultur
 
@@ -2297,3 +2495,5 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Weekly Shōnen Magazine** · Weekly Shōnen Jump · Weekly Shōnen Sunday · Monthly G Fantasy
 - `o-266` *Auswahl* – Was bedeutet „Moe“ in der Anime-Kultur?  
   **Starke Zuneigung zu niedlichen Figuren** · Ein Kampfstil · Ein Manga-Format · Eine Frisur
+- `o-284` *Auswahl* – Was ist ein „Tankōbon“ im Unterschied zu einem „Kanzenban“?  
+  **Der normale Sammelband, Kanzenban ist eine größere Luxusausgabe** · Ein Magazin, Kanzenban ein Band · Eine Farbausgabe, Kanzenban schwarz-weiß · Ein Webcomic, Kanzenban gedruckt
