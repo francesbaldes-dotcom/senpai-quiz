@@ -86,6 +86,7 @@ const ABZEICHEN = [
   { id: 'schnellfeuer', name: 'Schnellfeuer', text: '10 richtige Antworten im Blitz-Modus.', pruefe: (r) => r.modus === 'blitz' && r.richtig >= 10 },
   { id: 'treue', name: 'Treue Seele', text: '7 Tage in Folge das Tagesquiz gespielt.', pruefe: () => profil.streak.tage >= 7 },
   { id: 'allrounder', name: 'Allrounder', text: 'In jeder Kategorie eine Runde gespielt.', pruefe: () => Object.keys(KATEGORIEN).every((k) => profil.gespielteKategorien.includes(k)) },
+  { id: 'teilgeist', name: 'Teilgeist', text: 'Zum ersten Mal ein Ergebnis geteilt.', pruefe: () => false }, // wird beim Teilen vergeben
 ];
 
 // ---------- Daten & Zustand ----------
@@ -116,6 +117,7 @@ const ui = {
   runde: null,
   ergebnis: null,
   melden: null, // offener „Frage melden“-Dialog: { grund, text, fehler, sendet }
+  hinweis: null, // Meldung nach dem Teilen: { text, fehler }
   online: {
     profil: undefined, // undefined = noch unbekannt, null = kein Account
     duelle: [],
@@ -197,6 +199,45 @@ function datumText(d) {
 const heute = () => datumText(new Date());
 const gestern = () => datumText(new Date(Date.now() - 86400000));
 const vorgestern = () => datumText(new Date(Date.now() - 2 * 86400000));
+
+// Datum 2026-10-09 → 09.10.2026
+function datumDeutsch(iso) {
+  const [j, m, t] = String(iso).split('-');
+  return `${t}.${m}.${j}`;
+}
+
+// Adresse der App, z. B. für Einladungslinks und geteilte Ergebnisse
+function appLink() {
+  return `${location.origin}${location.pathname}`;
+}
+
+// Text mit Link über das Teilen-Menü des Geräts, sonst in die Zwischenablage.
+// Ergebnis: 'geteilt', 'kopiert', 'abgebrochen' oder 'fehler'.
+async function teilen(text, url) {
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: 'Senpai Quiz', text, url });
+      return 'geteilt';
+    } catch (fehler) {
+      if (fehler.name === 'AbortError') return 'abgebrochen';
+    }
+  }
+  try {
+    await navigator.clipboard.writeText(`${text}\n${url}`);
+    return 'kopiert';
+  } catch {
+    return 'fehler';
+  }
+}
+
+// Text zum Teilen des heutigen Tagesquiz-Ergebnisses
+function tagesquizText() {
+  const t = profil.tagesquiz;
+  const kaestchen = (t.verlauf || []).map((ok) => (ok ? '🟩' : '🟥')).join('');
+  const streak = aktuelleStreak();
+  const stand = `${t.richtig}/${t.gesamt}${streak > 1 ? ` · 🔥 ${streak} Tage` : ''}`;
+  return `Senpai Quiz · Tagesquiz ${datumDeutsch(t.datum)}\n${[kaestchen, stand].filter(Boolean).join('  ')}`;
+}
 
 // Serie genau einen Tag verpasst: per Video rettbar
 function streakRettbar() {
@@ -292,6 +333,7 @@ function neueRunde(modus, opts = {}) {
   } else if (modus === 'duell') {
     fragen = opts.fragenIds.map((id) => FRAGEN.find((f) => f.id === id)).filter(Boolean);
   }
+  ui.hinweis = null;
   ui.runde = {
     modus,
     opts,
@@ -482,7 +524,7 @@ function beendeRunde() {
       s.tage = s.letzter === gestern() ? s.tage + 1 : 1;
       s.letzter = heute();
     }
-    profil.tagesquiz = { datum: heute(), richtig: r.richtig, gesamt };
+    profil.tagesquiz = { datum: heute(), richtig: r.richtig, gesamt, verlauf: [...r.verlauf], punkte: r.punkte };
   }
   if (r.modus === 'klassisch' && r.opts.kategorie !== 'mix' && !profil.gespielteKategorien.includes(r.opts.kategorie)) {
     profil.gespielteKategorien.push(r.opts.kategorie);
@@ -545,6 +587,7 @@ async function mitPausierterUhr(aufgabe) {
 const aktionen = {
   nav(d) {
     ui.screen = d.ziel;
+    ui.hinweis = null;
     ui.online.fehler = '';
     ui.online.meldung = '';
     ui.online.linkZeigen = false;
@@ -736,6 +779,26 @@ const aktionen = {
     speichern();
     render();
   },
+  async ergebnisTeilen() {
+    if (!profil.tagesquiz) return;
+    const ergebnis = await teilen(tagesquizText(), appLink());
+    if (ergebnis === 'abgebrochen') return;
+    ui.hinweis = null;
+    if (ergebnis === 'fehler') {
+      ui.hinweis = { text: 'Teilen ist auf diesem Gerät leider nicht möglich.', fehler: true };
+      return render();
+    }
+    let text = ergebnis === 'kopiert' ? 'Ergebnis kopiert' : '';
+    if (!profil.abzeichen.includes('teilgeist')) {
+      const ab = ABZEICHEN.find((x) => x.id === 'teilgeist');
+      profil.abzeichen.push(ab.id);
+      speichern();
+      if (ui.screen === 'ergebnis' && ui.ergebnis) ui.ergebnis.neueAbzeichen = [...ui.ergebnis.neueAbzeichen, ab];
+      else text += `${text ? ' · ' : ''}Neues Abzeichen: ${ab.name}`;
+    }
+    if (text) ui.hinweis = { text };
+    render();
+  },
   zuruecksetzen() {
     if (!confirm('Wirklich alle Punkte, Statistiken und Abzeichen löschen?')) return;
     profil = structuredClone(PROFIL_START);
@@ -867,11 +930,13 @@ function startScreen() {
           ? `<span class="streak">${ICON.flamme} Deine Serie von ${profil.streak.tage} Tagen ist gerissen!</span>
              <button class="knopf knopf-video knopf-klein" data-aktion="streakRetten" aria-label="Video ansehen und Serie retten">${ICON.video} Serie retten</button>`
           : `<span class="streak">${ICON.flamme} ${streak === 1 ? '1 Tag' : `${streak} Tage`} in Folge${erledigt ? ' · morgen geht’s weiter' : ''}</span>`}
+        ${erledigt ? `<button class="knopf knopf-klein" data-aktion="ergebnisTeilen">${ICON.teilen} Teilen</button>` : ''}
       </div>
       ${erledigt
         ? `<img class="tages-schlaf" src="assets/stimmung/schlafend.webp" alt="Tagesquiz erledigt">`
         : `<button class="rund-knopf" data-aktion="tagesquiz" aria-label="Tagesquiz starten">${ICON.play}</button>`}
     </div>
+    ${hinweisBlock()}
 
     <button class="knopf knopf-rot" data-aktion="nav" data-ziel="kategorie">${ICON.play} Klassisch spielen</button>
 
@@ -1156,7 +1221,10 @@ function ergebnisScreen() {
 
     <div class="fusszeile">
       ${!e.verdoppelt && e.xp > 0 ? `<button class="knopf knopf-video" data-aktion="xpVerdoppeln">${ICON.video} Video ansehen: XP verdoppeln</button>` : ''}
-      ${e.modus === 'tages' ? '' : `<button class="knopf knopf-rot" data-aktion="nochmal">${ICON.nochmal} Nochmal</button>`}
+      ${hinweisBlock()}
+      ${e.modus === 'tages'
+        ? `<button class="knopf knopf-rot" data-aktion="ergebnisTeilen">${ICON.teilen} Ergebnis teilen</button>`
+        : `<button class="knopf knopf-rot" data-aktion="nochmal">${ICON.nochmal} Nochmal</button>`}
       <div class="zweier">
         ${zweiterKnopf}
         <button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button>
@@ -1499,22 +1567,12 @@ Object.assign(aktionen, {
   },
   async einladen() {
     const p = ui.online.profil;
-    const link = `${location.origin}${location.pathname}?einladung=${p.einladungscode}`;
+    const link = `${appLink()}?einladung=${p.einladungscode}`;
     const text = `Fordere mich in Senpai Quiz zu einem Anime-Duell heraus! Mein Spielername: ${p.spielername}`;
-    if (navigator.share) {
-      try {
-        await navigator.share({ title: 'Senpai Quiz', text, url: link });
-        return;
-      } catch (fehler) {
-        if (fehler.name === 'AbortError') return;
-      }
-    }
-    try {
-      await navigator.clipboard.writeText(`${text} ${link}`);
-      ui.online.meldung = 'Einladungslink kopiert. Schick ihn per WhatsApp oder Nachricht.';
-    } catch {
-      ui.online.linkZeigen = true;
-    }
+    const ergebnis = await teilen(text, link);
+    if (ergebnis === 'geteilt' || ergebnis === 'abgebrochen') return;
+    if (ergebnis === 'kopiert') ui.online.meldung = 'Einladungslink kopiert. Schick ihn per WhatsApp oder Nachricht.';
+    else ui.online.linkZeigen = true;
     render();
   },
   async einladungAnnehmen() {
@@ -1541,6 +1599,13 @@ Object.assign(aktionen, {
     render();
   },
 });
+
+// Meldung nach dem Teilen (Start- und Ergebnis-Bildschirm)
+function hinweisBlock() {
+  const h = ui.hinweis;
+  if (!h) return '';
+  return `<p class="${h.fehler ? 'fehler' : 'meldung'}" role="${h.fehler ? 'alert' : 'status'}">${esc(h.text)}</p>`;
+}
 
 function hinweise() {
   const o = ui.online;
@@ -1597,7 +1662,7 @@ function duelleScreen() {
   const abschnitt = (titel, liste) => (liste.length
     ? `<div class="abschnitt"><span class="label">${titel}</span>${liste.map(({ d }) => duellZeile(d)).join('')}</div>`
     : '');
-  const link = `${location.origin}${location.pathname}?einladung=${o.profil.einladungscode}`;
+  const link = `${appLink()}?einladung=${o.profil.einladungscode}`;
 
   return `<section class="screen mit-tabbar">
     <div class="kopfzeile">
