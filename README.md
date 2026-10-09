@@ -23,6 +23,7 @@ In Claude Code startet `.claude/launch.json` denselben Server für die Browser-V
 | `js/app.js` | Spiellogik und alle Bildschirme |
 | `js/speicher.js` | Speichern des Profils: im Browser `localStorage`, in der Capacitor-App das Plugin Preferences (dieser native Pfad ist noch ungetestet, weil es noch kein Capacitor-Projekt gibt) |
 | `js/online.js` | Supabase-Client für Accounts und Duelle |
+| `js/grafik.js` | Inline-SVG-Grafiken im Manga-Look: Kategorie-Icons (`kategorieIcon`), Abzeichen-Embleme (`abzeichenEmblem`), Rang-Embleme (`rangEmblem`) und Bausteine für die Heldenreise-Karte (`stationsKnoten`, `bossKnoten`). Eigene Symbole, keine Markenzeichen |
 | `vendor/` | Supabase-JS (2.45.4), lokal eingebunden |
 | `css/style.css` | Gestaltung (Manga-Look) |
 | `css/fonts.css`, `fonts/` | Dela Gothic One und Rubik, lokal eingebunden (SIL Open Font License) |

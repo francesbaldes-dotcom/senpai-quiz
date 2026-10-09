@@ -3,6 +3,7 @@
 import { belohnungsvideo, werbungOffen } from './werbung.js';
 import * as online from './online.js';
 import { speicherBereit, ladeProfil, speichereProfil } from './speicher.js';
+import { kategorieIcon, abzeichenEmblem, rangEmblem } from './grafik.js';
 
 const app = document.getElementById('app');
 
@@ -993,6 +994,7 @@ function startScreen() {
   const streak = aktuelleStreak();
   return `<section class="screen mit-tabbar">
     <div class="rangzeile">
+      ${rangEmblem(rg.name, 40)}
       <div class="rang">
         <div><span class="display">Rang: ${esc(rg.name)}</span><small>${rg.bis ? `${zahl(profil.xp)} / ${zahl(rg.bis)} XP` : `${zahl(profil.xp)} XP`}</small></div>
         <div class="balken"><span style="width:${prozent(rg.anteil)}"></span></div>
@@ -1057,7 +1059,8 @@ function kategorieScreen() {
   const stufeName = STUFEN_WAHL.find((s) => s.id === stufe).label;
   const kachel = (id, name, unter, bg, fg, breit = false) => `
     <button class="knopf kat ${breit ? 'breit' : ''}" style="background:${bg};color:${fg}" data-aktion="kategorie" data-kategorie="${id}" aria-pressed="${kategorie === id}">
-      ${breit ? `<span style="display:flex;flex-direction:column;gap:2px"><b>${esc(name)}</b><small>${esc(unter)}</small></span>` : `<b>${esc(name)}</b><small>${esc(unter)}</small>`}
+      ${kategorieIcon(id, breit ? 36 : 30)}
+      ${breit ? `<span class="kat-text"><b>${esc(name)}</b><small>${esc(unter)}</small></span>` : `<b>${esc(name)}</b><small>${esc(unter)}</small>`}
       ${kategorie === id ? `<span class="haken">${ICON.haken}</span>` : ''}
     </button>`;
   return `<section class="screen">
@@ -1288,7 +1291,7 @@ function frageScreen() {
       <b id="zeitlabel">${Math.ceil(restMs / 1000)} s</b>
     </div>
     <div class="tags">
-      <span class="tag" style="background:${bg};color:${fg}">${esc(KATEGORIEN[f.category])} · ${esc(SCHWIERIGKEIT[f.difficulty])}</span>
+      <span class="tag" style="background:${bg};color:${fg}">${kategorieIcon(f.category, 16)}${esc(KATEGORIEN[f.category])} · ${esc(SCHWIERIGKEIT[f.difficulty])}</span>
       ${!a.ergebnis && naechsterFaktor > 1 ? `<span class="combo">Combo ×${naechsterFaktor}</span>` : ''}
     </div>
     <div class="frage-zeile">
@@ -1334,9 +1337,9 @@ function ergebnisScreen() {
       <div class="unter"><span>${esc(nachher.name)}</span><span>${esc(nachher.naechster || '')}</span></div>
     </div>
 
-    ${aufgestiegen ? `<div class="erfolg"><span class="medaille">${ICON.medaille}</span><span><span class="label">Neuer Rang</span><b>${esc(nachher.name)}</b><small>Du bist aufgestiegen!</small></span></div>` : ''}
+    ${aufgestiegen ? `<div class="erfolg">${rangEmblem(nachher.name, 46)}<span><span class="label">Neuer Rang</span><b>${esc(nachher.name)}</b><small>Du bist aufgestiegen!</small></span></div>` : ''}
     ${e.neuerRekord ? `<div class="erfolg"><span class="medaille">${ICON.blitz}</span><span><span class="label">Neuer Rekord</span><b>${e.richtig} richtige Antworten</b><small>${e.modus === 'survival' ? 'Survival' : 'Blitz'}</small></span></div>` : ''}
-    ${e.neueAbzeichen.map((ab) => `<div class="erfolg"><span class="medaille">${ICON.medaille}</span><span><span class="label">Neues Abzeichen</span><b>${esc(ab.name)}</b><small>${esc(ab.text)}</small></span></div>`).join('')}
+    ${e.neueAbzeichen.map((ab) => `<div class="erfolg">${abzeichenEmblem(ab.id, 46)}<span><span class="label">Neues Abzeichen</span><b>${esc(ab.name)}</b><small>${esc(ab.text)}</small></span></div>`).join('')}
 
     <div class="fusszeile">
       ${!e.verdoppelt && e.xp > 0 ? `<button class="knopf knopf-video" data-aktion="xpVerdoppeln">${ICON.video} Video ansehen: XP verdoppeln</button>` : ''}
@@ -1358,7 +1361,7 @@ function statistikScreen() {
     const k = profil.kategorien[id] || { richtig: 0, beantwortet: 0 };
     const anteil = k.beantwortet ? k.richtig / k.beantwortet : 0;
     return `<div class="statistik-zeile">
-      <div><span>${esc(name)}</span><small>${k.beantwortet ? `${Math.round(anteil * 100)} % · ${k.richtig}/${k.beantwortet}` : 'noch nicht gespielt'}</small></div>
+      <div><span>${kategorieIcon(id, 22)}${esc(name)}</span><small>${k.beantwortet ? `${Math.round(anteil * 100)} % · ${k.richtig}/${k.beantwortet}` : 'noch nicht gespielt'}</small></div>
       <div class="balken"><span style="width:${prozent(anteil)};background:${FARBEN[id][0]}"></span></div>
     </div>`;
   }).join('');
@@ -1393,7 +1396,7 @@ function abzeichenScreen() {
       ${ABZEICHEN.map((ab) => {
         const offen = profil.abzeichen.includes(ab.id);
         return `<div class="karte abzeichen ${offen ? '' : 'gesperrt'}">
-          <span class="medaille">${offen ? ICON.medaille : ICON.schloss}</span>
+          ${abzeichenEmblem(ab.id, 46)}
           <b>${esc(ab.name)}</b><small>${esc(ab.text)}</small>
         </div>`;
       }).join('')}
@@ -1875,7 +1878,7 @@ function duellScreen() {
     <div class="karte runden">
       ${s.zeilen.map((z) => `<div class="runden-zeile ${z.nr === d.runde && d.status === 'laeuft' ? 'aktiv' : ''}">
         <span class="punkte-reihe">${punktReihe(z.mein)}</span>
-        <span class="runden-kat">${z.kategorie ? esc(kategorieName(z.kategorie)) : `Runde ${z.nr}`}</span>
+        <span class="runden-kat">${z.kategorie ? `${kategorieIcon(z.kategorie, 16)}${esc(kategorieName(z.kategorie))}` : `Runde ${z.nr}`}</span>
         <span class="punkte-reihe">${punktReihe(z.sein, z.verdeckt)}</span>
       </div>`).join('')}
     </div>
@@ -1901,7 +1904,8 @@ function duellKategorieScreen() {
     <div class="abschnitt">
       ${d.kategorie_optionen.map((k) => `
         <button class="knopf kat breit" style="background:${(FARBEN[k] ?? FARBEN.kultur)[0]};color:${(FARBEN[k] ?? FARBEN.kultur)[1]}" data-aktion="kategorieNehmen" data-kategorie="${k}">
-          <span style="display:flex;flex-direction:column;gap:2px"><b>${esc(kategorieName(k))}</b><small>${esc(UNTERTITEL[k] ?? '')}</small></span>
+          ${kategorieIcon(k, 36)}
+          <span class="kat-text"><b>${esc(kategorieName(k))}</b><small>${esc(UNTERTITEL[k] ?? '')}</small></span>
         </button>`).join('')}
     </div>
   </section>`;
