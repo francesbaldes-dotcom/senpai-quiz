@@ -128,7 +128,23 @@ const ABZEICHEN = [
   { id: 'sternenfaenger', name: 'Sternenfänger', text: 'Alle Sterne der Heldenreise gesammelt.', pruefe: () => reiseStand(1).sterne >= reiseStand(1).sterneMax },
   { id: 'pfadfinder', name: 'Pfadfinder', text: 'Alle fünf Geheimpfade der Heldenreise geschafft.', pruefe: () => GEHEIM.length > 0 && GEHEIM.every((g) => stationSterne(g.id, 1) > 0) },
   { id: 'zweitereise', name: 'Zweite Reise', text: 'Die Zweite Reise bis zum Ende gespielt.', pruefe: () => reiseStand(2).fertig },
+  // Senpai Dojo: prüft und vergibt js/dojo.js nach jeder Dojo-Runde
+  { id: 'hiragana', name: 'Hiragana-Held', text: 'Alle Hiragana-Lektionen im Dojo abgeschlossen.', pruefe: () => false },
+  { id: 'katakana', name: 'Katakana-Kenner', text: 'Alle Katakana-Lektionen im Dojo abgeschlossen.', pruefe: () => false },
+  { id: 'wortschatz', name: 'Wortschatz', text: '100 Vokabeln sitzen im Dojo.', pruefe: () => false },
+  { id: 'guertel', name: 'Gürtelträger', text: 'Die erste Gürtelprüfung im Dojo bestanden.', pruefe: () => false },
+  { id: 'shiritori', name: 'Kettenmeister', text: 'Eine Wortkette mit 10 Gliedern ohne Fehler.', pruefe: () => false },
+  { id: 'fleiss', name: 'Fleißig', text: 'An 7 Tagen im Dojo gelernt.', pruefe: () => false },
 ];
+
+// Abzeichen außerhalb einer Quizrunde vergeben (Dojo). Rückgabe: das Abzeichen, wenn es neu war, sonst null
+function abzeichenVergeben(id) {
+  const ab = ABZEICHEN.find((x) => x.id === id);
+  if (!ab || profil.abzeichen.includes(id)) return null;
+  profil.abzeichen.push(id);
+  speichern();
+  return ab;
+}
 
 // ---------- Daten & Zustand ----------
 
@@ -2511,7 +2527,7 @@ async function init() {
     profil.reise ||= { sterne: {}, durchgang: 1 };
     ui.durchgang = profil.reise.durchgang === 2 && zweiteReiseOffen() ? 2 : 1;
     uebernimmAlteKategorien();
-    dojoEinrichten({ profil: () => profil, speichern, render, esc, maskottchen, tabbar, frage, ICON, ui, onlineProfil: () => ui.online.profil, serie: serieHeute, streak: aktuelleStreak });
+    dojoEinrichten({ profil: () => profil, speichern, render, esc, maskottchen, tabbar, frage, ICON, ui, onlineProfil: () => ui.online.profil, serie: serieHeute, streak: aktuelleStreak, abzeichen: abzeichenVergeben, abzeichenEmblem });
     // Stimmungsbilder vorladen, damit beim Wechsel nichts flackert
     STIMMUNGEN.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });
     // Einladungslink? (…?einladung=CODE)

@@ -179,6 +179,37 @@ const ABZEICHEN_EMBLEME = {
   zweitereise: [INK, `
     <path d="M20 4l4.8 10.4 11.2 1.2-8.4 7.6 2.4 11.2L20 29.6l-10 5.8 2.4-11.2-8.4-7.6 11.2-1.2z" fill="${YELLOW}"/>
     <path d="M35 24l3 6.5 7 .8-5.2 4.8 1.5 7-6.3-3.6-6.3 3.6 1.5-7-5.2-4.8 7-.8z" fill="${WHITE}"/>`],
+  // ---------- Senpai Dojo ----------
+  // あ: alle Hiragana-Lektionen
+  hiragana: [RED, `
+    <text x="24" y="35" text-anchor="middle" font-family="'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif" font-size="30" font-weight="700" fill="${WHITE}" stroke="none">あ</text>`],
+  // ア: alle Katakana-Lektionen
+  katakana: [BLUE, `
+    <text x="24" y="35" text-anchor="middle" font-family="'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif" font-size="30" font-weight="700" fill="${WHITE}" stroke="none">ア</text>`],
+  // Aufgeschlagenes Buch: 100 Vokabeln sitzen
+  wortschatz: [GREEN, `
+    <path d="M24 13c-5-4-11-4-17-2v26c6-2 12-2 17 2z" fill="${WHITE}"/>
+    <path d="M24 13c5-4 11-4 17-2v26c-6-2-12-2-17 2z" fill="${WHITE}"/>
+    <path d="M24 13v26M12 19c3-1 6-1 8 0M12 26c3-1 6-1 8 0M28 19c3-1 6-1 8 0M28 26c3-1 6-1 8 0"/>`],
+  // Geknoteter Gürtel: erste Gürtelprüfung
+  guertel: [PURPLE, `
+    <path d="M3 19h42v10H3z" fill="${YELLOW}"/>
+    <path d="M22 29l-6 13M26 29l6 13" stroke-width="8"/>
+    <path d="M22 29l-6 13M26 29l6 13" stroke="${YELLOW}" stroke-width="4"/>
+    <circle cx="24" cy="24" r="6" fill="${YELLOW}"/>`],
+  // Perlenkette: Wortkette ohne Fehler
+  shiritori: [ORANGE, `
+    <path d="M8 36C8 20 40 28 40 12" fill="none"/>
+    <circle cx="8" cy="36" r="5" fill="${WHITE}"/>
+    <circle cx="17" cy="27" r="5" fill="${YELLOW}"/>
+    <circle cx="27" cy="23" r="5" fill="${WHITE}"/>
+    <circle cx="36" cy="18" r="5" fill="${YELLOW}"/>
+    <circle cx="40" cy="9" r="4" fill="${WHITE}"/>`],
+  // Kalender mit Haken: sieben Lerntage
+  fleiss: [TEAL, `
+    <rect x="7" y="11" width="34" height="30" rx="4" fill="${WHITE}"/>
+    <path d="M7 19h34M15 7v8M33 7v8"/>
+    <path d="M16 30l6 6 11-12" stroke-width="4"/>`],
 };
 
 export function abzeichenEmblem(id, groesse = 46) {

@@ -548,7 +548,7 @@ function beendeRunde() {
   ligaPunkte(r.xp);
   app.speichern();
   const g = guertel();
-  dui.ergebnis = { ...r, lektionNeu, bestanden, guertel: g, aufgestiegen: g.ab > r.guertelVorher, zielErreicht: dui.zielErreicht };
+  dui.ergebnis = { ...r, lektionNeu, bestanden, guertel: g, aufgestiegen: g.ab > r.guertelVorher, zielErreicht: dui.zielErreicht, neueAbzeichen: neueAbzeichen() };
   dui.runde = null;
   app.ui.screen = 'dojoErgebnis';
   app.render();
@@ -568,6 +568,35 @@ function tastatur(e) {
   const n = Number(e.key);
   if (!a.ergebnis && a.optionen && n >= 1 && n <= a.optionen.length) aktionen.dojoAntwort({ i: n - 1 });
   if (!a.ergebnis && a.kacheln && e.key === 'Backspace') aktionen.dojoKachelZurueck();
+}
+
+// ---------- Abzeichen ----------
+
+const ABZEICHEN_BEDINGUNG = {
+  hiragana: () => DATEN.gruppen.find((g) => g.id === 'hiragana').lektionen.every((l) => profil().dojo.lektionen.includes(l.id)),
+  katakana: () => DATEN.gruppen.find((g) => g.id === 'katakana').lektionen.every((l) => profil().dojo.lektionen.includes(l.id)),
+  wortschatz: () => Object.keys(KARTEN).filter((id) => KARTEN[id].typ === 'vokabel' && sitzt(id)).length >= 100,
+  guertel: () => (profil().dojo.pruefungen ?? []).length >= 1,
+  shiritori: () => (profil().dojo.kette ?? 0) >= KETTE_ZUEGE,
+  fleiss: () => Object.values(profil().dojo.tage).filter((n) => n >= 5).length >= 7,
+};
+
+// Nach jeder Dojo-Runde: neue Abzeichen vergeben, Rückgabe für den Ergebnis-Bildschirm
+function neueAbzeichen() {
+  if (!app.abzeichen) return [];
+  const neu = [];
+  for (const [id, erfuellt] of Object.entries(ABZEICHEN_BEDINGUNG)) {
+    if (!profil().abzeichen.includes(id) && erfuellt()) {
+      const ab = app.abzeichen(id);
+      if (ab) neu.push(ab);
+    }
+  }
+  return neu;
+}
+
+function abzeichenBlock(e) {
+  if (!e.neueAbzeichen?.length) return '';
+  return e.neueAbzeichen.map((ab) => `<div class="erfolg">${app.abzeichenEmblem(ab.id, 46)}<span><span class="label">Neues Abzeichen</span><b>${app.esc(ab.name)}</b><small>${app.esc(ab.text)}</small></span></div>`).join('');
 }
 
 // ---------- Wochenliga ----------
@@ -754,7 +783,7 @@ function beendeBlitz() {
   ligaPunkte(xp);
   app.speichern();
   dui.blitz = null;
-  dui.ergebnis = { art: 'blitz', punkte: b.punkte, fehler: b.fehler, xp, rekord, richtig: b.punkte, falsch: b.fehler, zielErreicht: dui.zielErreicht, guertel: guertel(), aufgestiegen: false };
+  dui.ergebnis = { art: 'blitz', punkte: b.punkte, fehler: b.fehler, xp, rekord, richtig: b.punkte, falsch: b.fehler, zielErreicht: dui.zielErreicht, guertel: guertel(), aufgestiegen: false, neueAbzeichen: neueAbzeichen() };
   app.ui.screen = 'dojoErgebnis';
   app.render();
 }
@@ -869,7 +898,7 @@ function beendeKette() {
   ligaPunkte(kette.xp);
   app.speichern();
   dui.kette = null;
-  dui.ergebnis = { art: 'kette', punkte: kette.richtig, zuege: kette.zug, xp: kette.xp, rekord, richtig: kette.richtig, falsch: kette.zug - kette.richtig, zielErreicht: dui.zielErreicht, guertel: guertel(), aufgestiegen: false };
+  dui.ergebnis = { art: 'kette', punkte: kette.richtig, zuege: kette.zug, xp: kette.xp, rekord, richtig: kette.richtig, falsch: kette.zug - kette.richtig, zielErreicht: dui.zielErreicht, guertel: guertel(), aufgestiegen: false, neueAbzeichen: neueAbzeichen() };
   app.ui.screen = 'dojoErgebnis';
   app.render();
 }
@@ -1332,6 +1361,7 @@ function dojoErgebnisScreen() {
         <span class="xp">+${e.xp} XP</span>
         ${e.zielErreicht ? `<p class="ziel-hinweis">${app.ICON.flamme} Tagesziel geschafft, deine Serie läuft weiter!</p>` : ''}
       </div>
+      ${abzeichenBlock(e)}
       <div class="unten">
         <button class="knopf knopf-rot" data-aktion="dojoKette">${app.ICON.nochmal} Noch eine Kette</button>
         <button class="knopf" data-aktion="dojoZurueck">Zurück zum Dojo</button>
@@ -1348,6 +1378,7 @@ function dojoErgebnisScreen() {
         ${e.bestanden ? guertelChip(e.guertel) : ''}
         ${e.zielErreicht ? `<p class="ziel-hinweis">${app.ICON.flamme} Tagesziel geschafft, deine Serie läuft weiter!</p>` : ''}
       </div>
+      ${abzeichenBlock(e)}
       <div class="unten">
         ${e.bestanden ? '' : guertel().pruefung ? `<button class="knopf knopf-rot" data-aktion="dojoPruefung">${app.ICON.nochmal} Noch einmal</button>` : `<p class="kleingedruckt" style="margin:0;text-align:center">Durch die Fehler sitzen gerade zu wenige Karten für ${app.esc(e.guertelZiel)}. Wiederhole sie, dann steht die Prüfung wieder offen.</p>`}
         <button class="knopf" data-aktion="dojoZurueck">Zurück zum Dojo</button>
@@ -1363,6 +1394,7 @@ function dojoErgebnisScreen() {
         <span class="xp">+${e.xp} XP</span>
         ${e.zielErreicht ? `<p class="ziel-hinweis">${app.ICON.flamme} Tagesziel geschafft, deine Serie läuft weiter!</p>` : ''}
       </div>
+      ${abzeichenBlock(e)}
       <div class="unten">
         <button class="knopf knopf-rot" data-aktion="dojoBlitz">${app.ICON.nochmal} Noch einmal</button>
         <button class="knopf" data-aktion="dojoZurueck">Zurück zum Dojo</button>
@@ -1385,6 +1417,7 @@ function dojoErgebnisScreen() {
       ${e.aufgestiegen ? guertelChip(e.guertel) : ''}
       ${e.zielErreicht ? `<p class="ziel-hinweis">${app.ICON.flamme} Tagesziel geschafft, deine Serie läuft weiter!</p>` : ''}
     </div>
+    ${abzeichenBlock(e)}
     <div class="unten">
       ${naechste ? `<button class="knopf knopf-rot" data-aktion="dojoWeiterLernen">Weiter: ${app.esc(naechste.titel)} ${app.ICON.weiter}</button>` : ''}
       <button class="knopf" data-aktion="dojoZurueck">Zurück zum Dojo</button>
