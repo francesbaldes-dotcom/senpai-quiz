@@ -1154,7 +1154,10 @@ function dojoScreen() {
   const frei = dojoFrei();
   const bisNaechster = g.naechster ? (g.n - g.ab) / (g.naechster.ab - g.ab) : 1;
   return `<section class="screen mit-tabbar dojo">
-    ${kopf('Senpai Dojo', 'start', guertelChip(g))}
+    <div class="kopfzeile">
+      <h1 class="display" style="margin:0;flex:1;font-size:20px;line-height:1.1">Senpai Dojo</h1>
+      ${guertelChip(g)}
+    </div>
     ${meldung ? `<p class="meldung">${app.esc(meldung)}</p>` : ''}
 
     <div class="karte guertel-karte">
@@ -1192,7 +1195,7 @@ function dojoScreen() {
       <div class="lektionen">${gr.lektionen.map((l) => lektionZeile(LEKTIONEN.find((x) => x.id === l.id))).join('')}</div>
     </div>`).join('')}
 
-    ${app.tabbar('start')}
+    ${app.tabbar('dojo')}
   </section>`;
 }
 

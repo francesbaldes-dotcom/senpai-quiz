@@ -109,6 +109,10 @@ const ICON = {
   nochmal: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5"/></svg>',
   minus: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg>',
   plus: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>',
+  // Tab-Leiste: Fahne (Heldenreise), Torii (Dojo), Kopf (Profil)
+  fahne: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V3M6 4h12l-3 4.5 3 4.5H6"/></svg>',
+  torii: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5c3-1.4 15-1.4 18 0M6 5v16M18 5v16M5 10.5h14M12 6v4.5"/></svg>',
+  kopf: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4.2"/><path d="M4.5 20.5c.6-4.2 3.8-6.5 7.5-6.5s6.9 2.3 7.5 6.5"/></svg>',
 };
 
 const ABZEICHEN = [
@@ -1258,14 +1262,17 @@ document.addEventListener('keydown', (e) => {
 // ---------- Bausteine ----------
 
 function tabbar(aktiv) {
+  // [Tab-ID, Beschriftung, Icon, Zielbildschirm]
   const tabs = [
-    ['start', 'Start', ICON.haus],
-    ['duelle', 'Duelle', ICON.schwerter],
-    ['statistik', 'Statistik', ICON.diagramm],
-    ['abzeichen', 'Abzeichen', ICON.medaille],
+    ['start', 'Start', ICON.haus, 'start'],
+    ['reise', 'Reise', ICON.fahne, 'reise'],
+    ['dojo', 'Dojo', ICON.torii, 'dojo'],
+    ['duelle', 'Duelle', ICON.schwerter, 'duelle'],
+    ['profil', 'Profil', ICON.kopf, 'statistik'],
   ];
-  return `<nav class="tabbar" aria-label="Hauptmenü">${tabs.map(([id, name, icon]) => `
-    <button class="tab" data-aktion="nav" data-ziel="${id}" ${id === aktiv ? 'aria-current="page"' : ''}>${icon}${name}</button>`).join('')}
+  if (aktiv === 'statistik' || aktiv === 'abzeichen') aktiv = 'profil';
+  return `<nav class="tabbar" aria-label="Hauptmenü">${tabs.map(([id, name, icon, ziel]) => `
+    <button class="tab" data-aktion="nav" data-ziel="${ziel}" ${id === aktiv ? 'aria-current="page"' : ''}>${icon}${name}</button>`).join('')}
   </nav>`;
 }
 
@@ -1803,15 +1810,15 @@ function reiseScreen() {
         <button data-aktion="durchgang" data-durchgang="2" aria-pressed="${ui.durchgang === 2}">Zweite Reise</button>
       </div>${ui.durchgang === 2 ? '<p class="reise-hinweis">Alle Stationen auf Fan und Otaku, nur zwei Herzen. Eigene Sterne, Geheimpfade bleiben auf Otaku.</p>' : ''}`
     : '';
-  return `<section class="screen reise">
+  return `<section class="screen reise mit-tabbar">
     <div class="kopfzeile">
-      <button class="icon-knopf" data-aktion="nav" data-ziel="start" aria-label="Zurück zum Start">${ICON.zurueck}</button>
       <h1>${ui.durchgang === 2 ? 'Zweite Reise' : 'Heldenreise'}</h1>
       <span class="sterne-stand">${sterneReihe(1, 18, 1)} ${stand.sterne} / ${stand.sterneMax}</span>
     </div>
     ${wahl}
     ${html}
     ${stationDialog()}
+    ${tabbar('reise')}
   </section>`;
 }
 
