@@ -1765,7 +1765,7 @@ function reiseKachelStart() {
   else text = `weiter bei ${n.boss ? `${n.kapitel.nr}.Boss` : n.nr}`;
   return `<button class="fortschritt-kachel reise" data-aktion="nav" data-ziel="reise">
     <span class="symbol">${ICON.fahne}</span>
-    <span><b>${zweite ? 'Zweite Reise' : 'Heldenreise'}</b><small>${esc(text)}</small></span>
+    <span><b>${zweite ? 'Zweite Reise' : 'Reise'}</b><small>${esc(text)}</small></span>
   </button>`;
 }
 

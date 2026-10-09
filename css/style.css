@@ -192,7 +192,7 @@ button { font: inherit; color: inherit; }
 .sprechblase small { font-size: 11px; font-weight: 700; white-space: nowrap; }
 
 /* Fortschrittszeile: Reise und Dojo als farbige Karten */
-.fortschritt-zeile { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.fortschritt-zeile { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 14px; }
 .fortschritt-kachel {
   display: flex;
   flex-direction: column;
@@ -211,7 +211,11 @@ button { font: inherit; color: inherit; }
   transition: transform .08s, box-shadow .08s;
 }
 .fortschritt-kachel.reise { background: var(--red); }
-.fortschritt-kachel.dojo { background: var(--blue); }
+.fortschritt-kachel.dojo { background: var(--blue); gap: 4px; padding: 8px 14px; }
+.fortschritt-kachel.dojo .symbol { width: 42px; height: 42px; }
+.fortschritt-kachel.dojo .symbol svg { width: 26px; height: 26px; }
+.fortschritt-kachel.dojo b { font-size: 22px; }
+.fortschritt-kachel.dojo small { font-size: 13px; }
 .fortschritt-kachel:active { transform: translate(4px, 4px); box-shadow: none; }
 .fortschritt-kachel .symbol { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--white); color: var(--ink); border: 2px solid var(--ink); }
 .fortschritt-kachel .symbol svg { width: 24px; height: 24px; }
