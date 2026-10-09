@@ -4305,6 +4305,1420 @@
     "Falsch"
    ],
    "correct": 0
+  },
+  {
+   "id": "e-107",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist der Koch der Strohhutbande?",
+   "answers": [
+    "Sanji",
+    "Lysop",
+    "Franky",
+    "Brook"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-108",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was ist das „One Piece“?",
+   "answers": [
+    "Der legendäre Schatz des Piratenkönigs Gol D. Roger",
+    "Ruffys Strohhut",
+    "Das Schiff der Strohhutbande",
+    "Eine besonders seltene Teufelsfrucht"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-109",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Lysop ist der Scharfschütze der Strohhutbande.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-110",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Brook",
+    "Franky",
+    "Jinbe",
+    "Tony Tony Chopper"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin ein lebendes Skelett mit Afro.",
+    "Ich bin der Musiker der Strohhutbande.",
+    "Mein Markenzeichen ist mein Lachen: Yohohoho!"
+   ]
+  },
+  {
+   "id": "f-120",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt das erste Schiff der Strohhutbande in der deutschen Fassung?",
+   "answers": [
+    "Flying Lamb",
+    "Thousand Sunny",
+    "Moby Dick",
+    "Red Force"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-121",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Fähigkeit verleiht Nico Robin ihre Teufelsfrucht?",
+   "answers": [
+    "Sie lässt überall zusätzliche Arme und Hände wachsen",
+    "Sie verwandelt sich in Feuer",
+    "Sie wird unsichtbar",
+    "Sie kontrolliert Sand"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-122",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist Ruffys Großvater?",
+   "answers": [
+    "Monkey D. Garp, ein Vizeadmiral der Marine",
+    "Gol D. Roger",
+    "Shanks",
+    "Weißbart"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-123",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was ist Franky, der Schiffszimmermann der Strohhüte?",
+   "answers": [
+    "Ein Cyborg",
+    "Ein Fischmensch",
+    "Ein Rentier",
+    "Ein Skelett"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-124",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt das gefährliche Meer, das zum One Piece führt?",
+   "answers": [
+    "Grand Line",
+    "Ostblau",
+    "Calm Belt",
+    "Red Line"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-125",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "Wie viele Mitglieder hat die Strohhutbande nach dem Beitritt von Jinbe, Ruffy mitgezählt?",
+   "answers": [
+    "10"
+   ],
+   "correct": 0,
+   "answer": 10,
+   "min": 5,
+   "max": 15,
+   "tolerance": 1
+  },
+  {
+   "id": "f-126",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Lorenor Zorro hat einen notorisch schlechten Orientierungssinn und verläuft sich ständig.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-076",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Auf welcher Insel wuchs Ruffy auf?",
+   "answers": [
+    "Dawn Island",
+    "Drumm",
+    "Jaya",
+    "Water Seven"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-077",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welcher Admiral mit der Magma-Frucht tötet Portgas D. Ace in Marine Ford?",
+   "answers": [
+    "Akainu",
+    "Aokiji",
+    "Kizaru",
+    "Sengoku"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-078",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "In welchem Jahr lief „One Piece“ erstmals auf RTL II?",
+   "answers": [
+    "2003"
+   ],
+   "correct": 0,
+   "answer": 2003,
+   "min": 1995,
+   "max": 2015,
+   "tolerance": 1
+  },
+  {
+   "id": "e-111",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist Son-Gokus stolzer Rivale und Prinz der Saiyajins?",
+   "answers": [
+    "Vegeta",
+    "Piccolo",
+    "Freezer",
+    "Cell"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-112",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Son-Gokus erster Sohn?",
+   "answers": [
+    "Son-Gohan",
+    "Son-Goten",
+    "Trunks",
+    "Yamchu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-113",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Mädchen, das Son-Goku zu Beginn mit einem Dragonball-Radar trifft?",
+   "answers": [
+    "Bulma",
+    "Chichi",
+    "Lunch",
+    "Videl"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-114",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Son-Goku ist ein ganz normaler Mensch von der Erde.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-115",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🐉🟠7️⃣",
+   "answers": [
+    "Dragon Ball",
+    "Fairy Tail",
+    "Yu-Gi-Oh!",
+    "Blue Exorcist"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-116",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Wolke, auf der Son-Goku fliegt?",
+   "answers": [
+    "Jindujun",
+    "Nimbus",
+    "Wolke Sieben",
+    "Kinto"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-127",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Son-Gokus Lehrmeister mit dem Schildkrötenpanzer?",
+   "answers": [
+    "Muten Roshi",
+    "Meister Kaio",
+    "Dende",
+    "Mr. Popo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-128",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Nahrung heilt in „Dragon Ball“ jede Verletzung sofort?",
+   "answers": [
+    "Magische Bohnen",
+    "Zauberkirschen",
+    "Drachenbeeren",
+    "Heilpilze"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-129",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welcher Bösewicht zerstört den Heimatplaneten der Saiyajins?",
+   "answers": [
+    "Freezer",
+    "Cell",
+    "Boo",
+    "Vegeta"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-130",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Piccolo",
+    "Dende",
+    "Cell",
+    "Zarbon"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin grün und stamme vom Planeten Namek.",
+    "Ich war einst Son-Gokus Feind, heute trainiere ich seinen Sohn.",
+    "Ich kann meine Arme verlängern und verlorene Gliedmaßen nachwachsen lassen."
+   ]
+  },
+  {
+   "id": "f-131",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Gott der Zerstörung in „Dragon Ball Super“?",
+   "answers": [
+    "Beerus",
+    "Whis",
+    "Zamasu",
+    "Jiren"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-132",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "order",
+   "question": "Sortiere die großen Gegner nach ihrem Auftreten in „Dragon Ball Z“, den ersten zuerst.",
+   "answers": [
+    "Vegeta",
+    "Freezer",
+    "Cell",
+    "Boo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-133",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "„Dragon Ball GT“ basiert auf einem Manga von Akira Toriyama.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-079",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Fusion von Son-Goku und Vegeta mithilfe der Potara-Ohrringe?",
+   "answers": [
+    "Vegetto",
+    "Gogeta",
+    "Gotenks",
+    "Vegeku"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-080",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Son-Gokus Vater?",
+   "answers": [
+    "Bardock",
+    "Raditz",
+    "Nappa",
+    "Turles"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-081",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "Wie viele Folgen hat „Dragon Ball Z“?",
+   "answers": [
+    "291"
+   ],
+   "correct": 0,
+   "answer": 291,
+   "min": 100,
+   "max": 400,
+   "tolerance": 15
+  },
+  {
+   "id": "o-082",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "In welchem Jahr startete der Manga „Dragon Ball“ in der Weekly Shōnen Jump?",
+   "answers": [
+    "1984"
+   ],
+   "correct": 0,
+   "answer": 1984,
+   "min": 1975,
+   "max": 2000,
+   "tolerance": 2
+  },
+  {
+   "id": "o-083",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die 2024 gestartete Anime-Serie, an deren Geschichte Akira Toriyama zuletzt mitarbeitete?",
+   "answers": [
+    "Dragon Ball Daima",
+    "Dragon Ball Kai",
+    "Dragon Ball Heroes",
+    "Dragon Ball GT"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-117",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Narutos Heimatdorf?",
+   "answers": [
+    "Konohagakure, das Dorf verborgen hinter den Blättern",
+    "Sunagakure",
+    "Kirigakure",
+    "Iwagakure"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-118",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist das Mädchen in Team 7?",
+   "answers": [
+    "Sakura Haruno",
+    "Hinata Hyuga",
+    "Ino Yamanaka",
+    "Tenten"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-119",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Mit welcher Technik erzeugt Naruto viele Kopien von sich selbst?",
+   "answers": [
+    "Schattendoppelgänger",
+    "Rasengan",
+    "Chidori",
+    "Byakugan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-120",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Farbe hat Narutos Jacke?",
+   "answers": [
+    "Orange",
+    "Grün",
+    "Schwarz",
+    "Blau"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-121",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Sasuke Uchiha",
+    "Itachi Uchiha",
+    "Neji Hyuga",
+    "Gaara"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich gehöre zum Uchiha-Clan.",
+    "Ich will meinen älteren Bruder zur Rechenschaft ziehen.",
+    "Ich bin Narutos Rivale und werde von vielen Mädchen angehimmelt."
+   ]
+  },
+  {
+   "id": "e-122",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Narutos Sohn, der Held der Nachfolgeserie?",
+   "answers": [
+    "Boruto",
+    "Kawaki",
+    "Shikadai",
+    "Mitsuki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-123",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🍥🦊🍜",
+   "answers": [
+    "Naruto",
+    "Bleach",
+    "Inu Yasha",
+    "Dr. Stone"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-124",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die besondere Augen-Fähigkeit des Uchiha-Clans?",
+   "answers": [
+    "Sharingan",
+    "Byakugan",
+    "Rinnegan",
+    "Tenseigan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-134",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Naruto heiratet am Ende der Serie Hinata Hyuga.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-135",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welcher der drei legendären Sannin wird Narutos Lehrmeister?",
+   "answers": [
+    "Jiraiya",
+    "Tsunade",
+    "Orochimaru",
+    "Hiruzen Sarutobi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-136",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer wird nach dem Tod des Dritten Hokage die Fünfte Hokage?",
+   "answers": [
+    "Tsunade",
+    "Kakashi Hatake",
+    "Jiraiya",
+    "Danzo Shimura"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-137",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Organisation in schwarzen Mänteln mit roten Wolken?",
+   "answers": [
+    "Akatsuki",
+    "Anbu",
+    "Wurzel",
+    "Die sieben Schwertkämpfer"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-138",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Mit welchem Element kämpft Gaara?",
+   "answers": [
+    "Sand",
+    "Wasser",
+    "Feuer",
+    "Blitz"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-139",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Rock Lee",
+    "Neji Hyuga",
+    "Kiba Inuzuka",
+    "Shikamaru Nara"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich beherrsche weder Ninjutsu noch Genjutsu.",
+    "Ich kämpfe nur mit Taijutsu und trage Gewichte an den Beinen.",
+    "Mein großes Vorbild ist Gai-sensei."
+   ]
+  },
+  {
+   "id": "f-140",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was ist das Rasengan?",
+   "answers": [
+    "Eine rotierende Chakra-Kugel in der Hand",
+    "Ein Blitzschlag aus der Handfläche",
+    "Ein Feuerball",
+    "Eine Illusionstechnik"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-141",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "order",
+   "question": "Sortiere die Hokage nach ihrer Amtszeit, den ersten zuerst.",
+   "answers": [
+    "Hashirama Senju",
+    "Hiruzen Sarutobi",
+    "Minato Namikaze",
+    "Tsunade"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-142",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "Wie viele Folgen hat „Naruto Shippuden“?",
+   "answers": [
+    "500"
+   ],
+   "correct": 0,
+   "answer": 500,
+   "min": 100,
+   "max": 800,
+   "tolerance": 25
+  },
+  {
+   "id": "o-084",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Narutos Mutter?",
+   "answers": [
+    "Kushina Uzumaki",
+    "Mito Uzumaki",
+    "Tsunade",
+    "Karin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-085",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Chakra-Natur hat Naruto von Geburt an?",
+   "answers": [
+    "Wind",
+    "Feuer",
+    "Wasser",
+    "Erde"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-086",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer verbirgt sich hinter der Maske von „Tobi“?",
+   "answers": [
+    "Obito Uchiha",
+    "Madara Uchiha",
+    "Nagato",
+    "Zetsu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-087",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Bijū ist in Killer B versiegelt?",
+   "answers": [
+    "Gyuki, der Achtschwänzige",
+    "Shukaku, der Einschwänzige",
+    "Kurama, der Neunschwänzige",
+    "Matatabi, der Zweischwänzige"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-088",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "true_false",
+   "question": "Masashi Kishimotos Zwillingsbruder Seishi ist ebenfalls Mangaka und schuf „666 Satan“.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-125",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Shinichis Kindheitsfreundin, bei deren Familie Conan wohnt?",
+   "answers": [
+    "Ran Mori",
+    "Ai Haibara",
+    "Sonoko Suzuki",
+    "Kazuha Toyama"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-126",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer baut Conan seine Gadgets?",
+   "answers": [
+    "Professor Agasa",
+    "Kogoro Mori",
+    "Kommissar Megure",
+    "Heiji Hattori"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-127",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Womit schläfert Conan Kogoro Mori ein, um in dessen Namen Fälle zu lösen?",
+   "answers": [
+    "Mit seiner Betäubungs-Armbanduhr",
+    "Mit seiner Fliege",
+    "Mit seinen Kraftschuhen",
+    "Mit seiner Brille"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-128",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Conan ist in Wahrheit ein ganz normaler Grundschüler, der nur Detektiv spielt.",
+   "answers": [
+    "Falsch",
+    "Wahr"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-129",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Kindertruppe, mit der Conan in der Grundschule Fälle löst?",
+   "answers": [
+    "Detective Boys",
+    "Junior-Ermittler",
+    "Die Strohhutbande",
+    "Team 7"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-130",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 👦🕶️⌚💤",
+   "answers": [
+    "Detektiv Conan",
+    "Death Note",
+    "Psycho-Pass",
+    "Spy x Family"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-131",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Organisation hat Shinichi Kudo vergiftet?",
+   "answers": [
+    "Die Schwarze Organisation",
+    "Akatsuki",
+    "Die Marine",
+    "Die Phantom-Truppe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-143",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Oberschüler-Detektiv aus Osaka, Conans Rivale und Freund?",
+   "answers": [
+    "Heiji Hattori",
+    "Kaito Kid",
+    "Shuichi Akai",
+    "Kogoro Mori"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-144",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist Ai Haibara in Wahrheit?",
+   "answers": [
+    "Eine frühere Wissenschaftlerin der Schwarzen Organisation, die das Gift mitentwickelte",
+    "Rans Cousine",
+    "Kaito Kids Schwester",
+    "Eine verdeckte Polizistin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-145",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Mit welchem Fahrzeug verfolgt Conan Täter?",
+   "answers": [
+    "Mit einem Turbo-Skateboard",
+    "Mit einem Motorrad",
+    "Mit einem Fahrrad",
+    "Mit Rollschuhen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-146",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Shinichis Vater, ein berühmter Krimiautor?",
+   "answers": [
+    "Yusaku Kudo",
+    "Kogoro Mori",
+    "Hiroshi Agasa",
+    "Shuichi Akai"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-147",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Kaito Kid",
+    "Heiji Hattori",
+    "Gin",
+    "Bourbon"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin ein Meisterdieb mit weißem Zylinder und Umhang.",
+    "Ich kündige meine Diebstähle vorher an.",
+    "Ich sehe Shinichi Kudo zum Verwechseln ähnlich."
+   ]
+  },
+  {
+   "id": "f-148",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "„Detektiv Conan“ ist mit über 100 Bänden einer der längsten laufenden Manga in Deutschland.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-149",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Kommissar mit dem Hut, der Kogoro Mori oft zu Fällen hinzuzieht?",
+   "answers": [
+    "Kommissar Megure",
+    "Kommissar Takagi",
+    "Kommissar Sato",
+    "Kommissar Nakamori"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-150",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "In welchem Jahr lief „Detektiv Conan“ erstmals im deutschen Fernsehen auf RTL II?",
+   "answers": [
+    "2002"
+   ],
+   "correct": 0,
+   "answer": 2002,
+   "min": 1995,
+   "max": 2015,
+   "tolerance": 1
+  },
+  {
+   "id": "o-089",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche beiden Männer der Schwarzen Organisation verabreichen Shinichi das Gift?",
+   "answers": [
+    "Gin und Wodka",
+    "Bourbon und Rye",
+    "Vermouth und Chianti",
+    "Kir und Korn"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-090",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Shinichis Mutter, eine ehemalige Schauspielerin?",
+   "answers": [
+    "Yukiko Kudo",
+    "Eri Kisaki",
+    "Sonoko Suzuki",
+    "Jodie Starling"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-091",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie lautet Ai Haibaras richtiger Name?",
+   "answers": [
+    "Shiho Miyano",
+    "Akemi Miyano",
+    "Masumi Sera",
+    "Chris Vineyard"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-092",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Für welche Behörde arbeitet Shuichi Akai?",
+   "answers": [
+    "FBI",
+    "CIA",
+    "Interpol",
+    "Tokioter Polizei"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-093",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "Wie viele Kinofilme zu „Detektiv Conan“ erschienen bis einschließlich 2025?",
+   "answers": [
+    "28"
+   ],
+   "correct": 0,
+   "answer": 28,
+   "min": 5,
+   "max": 50,
+   "tolerance": 3
+  },
+  {
+   "id": "e-132",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Sayōnara“?",
+   "answers": [
+    "Auf Wiedersehen",
+    "Guten Morgen",
+    "Entschuldigung",
+    "Prost"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-133",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Ramen?",
+   "answers": [
+    "Eine Nudelsuppe",
+    "Ein Reisgericht",
+    "Gegrillter Fisch",
+    "Ein Teegebäck"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-134",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Ohayō“?",
+   "answers": [
+    "Guten Morgen",
+    "Gute Nacht",
+    "Danke",
+    "Ja"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-135",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie heißt das japanische Kirschblütenfest, bei dem man unter blühenden Bäumen picknickt?",
+   "answers": [
+    "Hanami",
+    "Matsuri",
+    "Obon",
+    "Tanabata"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-151",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Welches Stadtviertel Tokios gilt als Zentrum der Otaku-Kultur mit Elektronik- und Mangaläden?",
+   "answers": [
+    "Akihabara",
+    "Shibuya",
+    "Harajuku",
+    "Ginza"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-152",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Yōkai?",
+   "answers": [
+    "Ein Geist- oder Fabelwesen aus der japanischen Folklore",
+    "Ein Kampfsportler",
+    "Ein Sushi-Koch",
+    "Ein Schulfest"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-153",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "In welcher deutschen Stadt findet die Anime-Convention DoKomi statt?",
+   "answers": [
+    "Düsseldorf",
+    "Hamburg",
+    "Dortmund",
+    "Kassel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-154",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "true_false",
+   "question": "Die Serie „Heidi“ von 1974 wurde in Japan produziert, Hayao Miyazaki arbeitete daran mit.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-094",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Welcher deutsche Sender strahlte „Sailor Moon“ 1995 als Erster aus?",
+   "answers": [
+    "ZDF",
+    "RTL II",
+    "Sat.1",
+    "Tele 5"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-095",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Shōnen“ wörtlich?",
+   "answers": [
+    "Junge",
+    "Mädchen",
+    "Held",
+    "Kampf"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-136",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "In welchem Jahrzehnt begann der Manga-Boom in Deutschland mit „Dragon Ball“ und „Sailor Moon“?",
+   "answers": [
+    "1990er",
+    "1970er",
+    "1980er",
+    "2000er"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-137",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Welcher deutsche Verlag veröffentlicht „Naruto“?",
+   "answers": [
+    "Carlsen",
+    "Egmont Manga",
+    "Tokyopop",
+    "Altraverse"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-155",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Welcher japanische Verlag gibt die Weekly Shōnen Jump heraus?",
+   "answers": [
+    "Shūeisha",
+    "Kōdansha",
+    "Shōgakukan",
+    "Kadokawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-156",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Was ist „Naruto Massiv“?",
+   "answers": [
+    "Eine Sammelausgabe mit drei Bänden in einem Buch",
+    "Ein Artbook",
+    "Ein Roman zur Serie",
+    "Eine Farbausgabe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-096",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Bei welchem Mangaka arbeitete Eiichirō Oda als Assistent, bevor „One Piece“ startete?",
+   "answers": [
+    "Nobuhiro Watsuki (Rurouni Kenshin)",
+    "Akira Toriyama",
+    "Masashi Kishimoto",
+    "Tite Kubo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-097",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "In welchem Magazin erscheint „Detektiv Conan“ in Japan?",
+   "answers": [
+    "Weekly Shōnen Sunday",
+    "Weekly Shōnen Jump",
+    "Weekly Shōnen Magazine",
+    "Ribon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-138",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Ghibli-Film lebt ein winziges Mädchen unter dem Fußboden eines Hauses?",
+   "answers": [
+    "Arrietty",
+    "Ponyo",
+    "Kikis kleiner Lieferservice",
+    "Die Chroniken von Erdsee"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-157",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Regisseur gründete Ghibli mit und drehte „Die letzten Glühwürmchen“?",
+   "answers": [
+    "Isao Takahata",
+    "Makoto Shinkai",
+    "Mamoru Hosoda",
+    "Satoshi Kon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-158",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wo steht das Ghibli-Museum?",
+   "answers": [
+    "In Mitaka bei Tokio",
+    "In Kyoto",
+    "In Osaka",
+    "In Sapporo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-098",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wonach ist Studio Ghibli benannt?",
+   "answers": [
+    "Nach einem heißen Wüstenwind und einem italienischen Flugzeug",
+    "Nach einer japanischen Blume",
+    "Nach Miyazakis Heimatdorf",
+    "Nach einem Tempel in Kyoto"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-139",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Film von Makoto Shinkai muss die Hauptfigur Türen schließen, aus denen Unheil kommt?",
+   "answers": [
+    "Suzume",
+    "Your Name.",
+    "Weathering With You",
+    "Belle"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-159",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In was wird Sōta in „Suzume“ verwandelt?",
+   "answers": [
+    "In einen dreibeinigen Kinderstuhl",
+    "In eine Katze",
+    "In einen Regenschirm",
+    "In einen Vogel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-140",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Anime-Film wurde 2020 zum erfolgreichsten Kinofilm aller Zeiten in Japan?",
+   "answers": [
+    "Demon Slayer: Mugen Train",
+    "Your Name.",
+    "Chihiros Reise ins Zauberland",
+    "One Piece Film: Red"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-160",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Film von Mamoru Hosoda handelt von einem Mädchen, das durch die Zeit springen kann?",
+   "answers": [
+    "Das Mädchen, das durch die Zeit sprang",
+    "Summer Wars",
+    "Wolfskinder",
+    "Belle"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-099",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Anime-Film von Mamoru Oshii aus dem Jahr 1995 beeinflusste „Matrix“ stark?",
+   "answers": [
+    "Ghost in the Shell",
+    "Akira",
+    "Perfect Blue",
+    "Neon Genesis Evangelion"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-100",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Film von Satoshi Kon wird ein ehemaliges Idol von einem Stalker verfolgt?",
+   "answers": [
+    "Perfect Blue",
+    "Paprika",
+    "Millennium Actress",
+    "Tokyo Godfathers"
+   ],
+   "correct": 0
   }
  ]
 }

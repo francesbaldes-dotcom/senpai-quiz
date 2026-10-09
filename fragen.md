@@ -1,8 +1,8 @@
-# Senpai Quiz – 300 Fragen
+# Senpai Quiz – 400 Fragen
 
 Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Antworten.
 
-## Einsteiger (106 Fragen)
+## Einsteiger (140 Fragen)
 
 ### Shōnen-Klassiker
 
@@ -60,6 +60,56 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Haikyu!!** · Kuroko’s Basketball · Blue Lock · Free!
 - `e-106` *Wahr/Falsch* – Ziel des Projekts „Blue Lock“ ist es, den besten Torwart Japans zu finden.  
   **Falsch** · Wahr
+- `e-107` *Auswahl* – Wer ist der Koch der Strohhutbande?  
+  **Sanji** · Lysop · Franky · Brook
+- `e-108` *Auswahl* – Was ist das „One Piece“?  
+  **Der legendäre Schatz des Piratenkönigs Gol D. Roger** · Ruffys Strohhut · Das Schiff der Strohhutbande · Eine besonders seltene Teufelsfrucht
+- `e-109` *Wahr/Falsch* – Lysop ist der Scharfschütze der Strohhutbande.  
+  **Wahr** · Falsch
+- `e-110` *Wer bin ich?* – Wer bin ich? Ich bin ein lebendes Skelett mit Afro. / Ich bin der Musiker der Strohhutbande. / Mein Markenzeichen ist mein Lachen: Yohohoho!  
+  **Brook** · Franky · Jinbe · Tony Tony Chopper
+- `e-111` *Auswahl* – Wer ist Son-Gokus stolzer Rivale und Prinz der Saiyajins?  
+  **Vegeta** · Piccolo · Freezer · Cell
+- `e-112` *Auswahl* – Wie heißt Son-Gokus erster Sohn?  
+  **Son-Gohan** · Son-Goten · Trunks · Yamchu
+- `e-113` *Auswahl* – Wie heißt das Mädchen, das Son-Goku zu Beginn mit einem Dragonball-Radar trifft?  
+  **Bulma** · Chichi · Lunch · Videl
+- `e-114` *Wahr/Falsch* – Son-Goku ist ein ganz normaler Mensch von der Erde.  
+  **Falsch** · Wahr
+- `e-115` *Emoji-Rätsel* – Welche Serie ist gemeint? 🐉🟠7️⃣  
+  **Dragon Ball** · Fairy Tail · Yu-Gi-Oh! · Blue Exorcist
+- `e-116` *Auswahl* – Wie heißt die Wolke, auf der Son-Goku fliegt?  
+  **Jindujun** · Nimbus · Wolke Sieben · Kinto
+- `e-117` *Auswahl* – Wie heißt Narutos Heimatdorf?  
+  **Konohagakure, das Dorf verborgen hinter den Blättern** · Sunagakure · Kirigakure · Iwagakure
+- `e-118` *Auswahl* – Wer ist das Mädchen in Team 7?  
+  **Sakura Haruno** · Hinata Hyuga · Ino Yamanaka · Tenten
+- `e-119` *Auswahl* – Mit welcher Technik erzeugt Naruto viele Kopien von sich selbst?  
+  **Schattendoppelgänger** · Rasengan · Chidori · Byakugan
+- `e-120` *Auswahl* – Welche Farbe hat Narutos Jacke?  
+  **Orange** · Grün · Schwarz · Blau
+- `e-121` *Wer bin ich?* – Wer bin ich? Ich gehöre zum Uchiha-Clan. / Ich will meinen älteren Bruder zur Rechenschaft ziehen. / Ich bin Narutos Rivale und werde von vielen Mädchen angehimmelt.  
+  **Sasuke Uchiha** · Itachi Uchiha · Neji Hyuga · Gaara
+- `e-122` *Auswahl* – Wie heißt Narutos Sohn, der Held der Nachfolgeserie?  
+  **Boruto** · Kawaki · Shikadai · Mitsuki
+- `e-123` *Emoji-Rätsel* – Welche Serie ist gemeint? 🍥🦊🍜  
+  **Naruto** · Bleach · Inu Yasha · Dr. Stone
+- `e-124` *Auswahl* – Wie heißt die besondere Augen-Fähigkeit des Uchiha-Clans?  
+  **Sharingan** · Byakugan · Rinnegan · Tenseigan
+- `e-125` *Auswahl* – Wie heißt Shinichis Kindheitsfreundin, bei deren Familie Conan wohnt?  
+  **Ran Mori** · Ai Haibara · Sonoko Suzuki · Kazuha Toyama
+- `e-126` *Auswahl* – Wer baut Conan seine Gadgets?  
+  **Professor Agasa** · Kogoro Mori · Kommissar Megure · Heiji Hattori
+- `e-127` *Auswahl* – Womit schläfert Conan Kogoro Mori ein, um in dessen Namen Fälle zu lösen?  
+  **Mit seiner Betäubungs-Armbanduhr** · Mit seiner Fliege · Mit seinen Kraftschuhen · Mit seiner Brille
+- `e-128` *Wahr/Falsch* – Conan ist in Wahrheit ein ganz normaler Grundschüler, der nur Detektiv spielt.  
+  **Falsch** · Wahr
+- `e-129` *Auswahl* – Wie heißt die Kindertruppe, mit der Conan in der Grundschule Fälle löst?  
+  **Detective Boys** · Junior-Ermittler · Die Strohhutbande · Team 7
+- `e-130` *Emoji-Rätsel* – Welche Serie ist gemeint? 👦🕶️⌚💤  
+  **Detektiv Conan** · Death Note · Psycho-Pass · Spy x Family
+- `e-131` *Auswahl* – Welche Organisation hat Shinichi Kudo vergiftet?  
+  **Die Schwarze Organisation** · Akatsuki · Die Marine · Die Phantom-Truppe
 
 ### Shōjo & Romance
 
@@ -122,6 +172,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `e-102` *Auswahl* – Welches geklonte Pokémon ist der Gegner in „Pokémon – Der Film“?  
   **Mewtu** · Mew · Lugia · Glurak
+- `e-138` *Auswahl* – In welchem Ghibli-Film lebt ein winziges Mädchen unter dem Fußboden eines Hauses?  
+  **Arrietty** · Ponyo · Kikis kleiner Lieferservice · Die Chroniken von Erdsee
+- `e-139` *Auswahl* – In welchem Film von Makoto Shinkai muss die Hauptfigur Türen schließen, aus denen Unheil kommt?  
+  **Suzume** · Your Name. · Weathering With You · Belle
+- `e-140` *Auswahl* – Welcher Anime-Film wurde 2020 zum erfolgreichsten Kinofilm aller Zeiten in Japan?  
+  **Demon Slayer: Mugen Train** · Your Name. · Chihiros Reise ins Zauberland · One Piece Film: Red
 
 ### Manga & Mangaka
 
@@ -151,6 +207,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Eiichirō Oda** · Akira Toriyama · Masashi Kishimoto · Tite Kubo
 - `e-105` *Auswahl* – Wer hat „Detektiv Conan“ erschaffen?  
   **Gosho Aoyama** · Eiichirō Oda · Akira Toriyama · Masashi Kishimoto
+- `e-136` *Auswahl* – In welchem Jahrzehnt begann der Manga-Boom in Deutschland mit „Dragon Ball“ und „Sailor Moon“?  
+  **1990er** · 1970er · 1980er · 2000er
+- `e-137` *Auswahl* – Welcher deutsche Verlag veröffentlicht „Naruto“?  
+  **Carlsen** · Egmont Manga · Tokyopop · Altraverse
 
 ### Neue Serien
 
@@ -233,8 +293,16 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Kōhai** · Sensei · Sama · Kun
 - `e-104` *Auswahl* – Welcher deutsche Sender zeigte ab 1999 „Pokémon“ und später „Naruto“ und „One Piece“?  
   **RTL II** · ZDF · ProSieben · KiKA
+- `e-132` *Auswahl* – Was bedeutet „Sayōnara“?  
+  **Auf Wiedersehen** · Guten Morgen · Entschuldigung · Prost
+- `e-133` *Auswahl* – Was ist Ramen?  
+  **Eine Nudelsuppe** · Ein Reisgericht · Gegrillter Fisch · Ein Teegebäck
+- `e-134` *Auswahl* – Was bedeutet „Ohayō“?  
+  **Guten Morgen** · Gute Nacht · Danke · Ja
+- `e-135` *Auswahl* – Wie heißt das japanische Kirschblütenfest, bei dem man unter blühenden Bäumen picknickt?  
+  **Hanami** · Matsuri · Obon · Tanabata
 
-## Fan (119 Fragen)
+## Fan (160 Fragen)
 
 ### Shōnen-Klassiker
 
@@ -294,6 +362,68 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Detektiv Conan (1996) → Pokémon (1997) → One Piece (1999) → Naruto (2002)**
 - `f-097` *Schätzfrage* – Wie viele Bände hat der Manga „Attack on Titan“?  
   **34** (Schieberegler 10–80, ±3 zählt als knapp)
+- `f-120` *Auswahl* – Wie heißt das erste Schiff der Strohhutbande in der deutschen Fassung?  
+  **Flying Lamb** · Thousand Sunny · Moby Dick · Red Force
+- `f-121` *Auswahl* – Welche Fähigkeit verleiht Nico Robin ihre Teufelsfrucht?  
+  **Sie lässt überall zusätzliche Arme und Hände wachsen** · Sie verwandelt sich in Feuer · Sie wird unsichtbar · Sie kontrolliert Sand
+- `f-122` *Auswahl* – Wer ist Ruffys Großvater?  
+  **Monkey D. Garp, ein Vizeadmiral der Marine** · Gol D. Roger · Shanks · Weißbart
+- `f-123` *Auswahl* – Was ist Franky, der Schiffszimmermann der Strohhüte?  
+  **Ein Cyborg** · Ein Fischmensch · Ein Rentier · Ein Skelett
+- `f-124` *Auswahl* – Wie heißt das gefährliche Meer, das zum One Piece führt?  
+  **Grand Line** · Ostblau · Calm Belt · Red Line
+- `f-125` *Schätzfrage* – Wie viele Mitglieder hat die Strohhutbande nach dem Beitritt von Jinbe, Ruffy mitgezählt?  
+  **10** (Schieberegler 5–15, ±1 zählt als knapp)
+- `f-126` *Wahr/Falsch* – Lorenor Zorro hat einen notorisch schlechten Orientierungssinn und verläuft sich ständig.  
+  **Wahr** · Falsch
+- `f-127` *Auswahl* – Wie heißt Son-Gokus Lehrmeister mit dem Schildkrötenpanzer?  
+  **Muten Roshi** · Meister Kaio · Dende · Mr. Popo
+- `f-128` *Auswahl* – Welche Nahrung heilt in „Dragon Ball“ jede Verletzung sofort?  
+  **Magische Bohnen** · Zauberkirschen · Drachenbeeren · Heilpilze
+- `f-129` *Auswahl* – Welcher Bösewicht zerstört den Heimatplaneten der Saiyajins?  
+  **Freezer** · Cell · Boo · Vegeta
+- `f-130` *Wer bin ich?* – Wer bin ich? Ich bin grün und stamme vom Planeten Namek. / Ich war einst Son-Gokus Feind, heute trainiere ich seinen Sohn. / Ich kann meine Arme verlängern und verlorene Gliedmaßen nachwachsen lassen.  
+  **Piccolo** · Dende · Cell · Zarbon
+- `f-131` *Auswahl* – Wie heißt der Gott der Zerstörung in „Dragon Ball Super“?  
+  **Beerus** · Whis · Zamasu · Jiren
+- `f-132` *Reihenfolge* – Sortiere die großen Gegner nach ihrem Auftreten in „Dragon Ball Z“, den ersten zuerst.  
+  **Vegeta → Freezer → Cell → Boo**
+- `f-133` *Wahr/Falsch* – „Dragon Ball GT“ basiert auf einem Manga von Akira Toriyama.  
+  **Falsch** · Wahr
+- `f-134` *Wahr/Falsch* – Naruto heiratet am Ende der Serie Hinata Hyuga.  
+  **Wahr** · Falsch
+- `f-135` *Auswahl* – Welcher der drei legendären Sannin wird Narutos Lehrmeister?  
+  **Jiraiya** · Tsunade · Orochimaru · Hiruzen Sarutobi
+- `f-136` *Auswahl* – Wer wird nach dem Tod des Dritten Hokage die Fünfte Hokage?  
+  **Tsunade** · Kakashi Hatake · Jiraiya · Danzo Shimura
+- `f-137` *Auswahl* – Wie heißt die Organisation in schwarzen Mänteln mit roten Wolken?  
+  **Akatsuki** · Anbu · Wurzel · Die sieben Schwertkämpfer
+- `f-138` *Auswahl* – Mit welchem Element kämpft Gaara?  
+  **Sand** · Wasser · Feuer · Blitz
+- `f-139` *Wer bin ich?* – Wer bin ich? Ich beherrsche weder Ninjutsu noch Genjutsu. / Ich kämpfe nur mit Taijutsu und trage Gewichte an den Beinen. / Mein großes Vorbild ist Gai-sensei.  
+  **Rock Lee** · Neji Hyuga · Kiba Inuzuka · Shikamaru Nara
+- `f-140` *Auswahl* – Was ist das Rasengan?  
+  **Eine rotierende Chakra-Kugel in der Hand** · Ein Blitzschlag aus der Handfläche · Ein Feuerball · Eine Illusionstechnik
+- `f-141` *Reihenfolge* – Sortiere die Hokage nach ihrer Amtszeit, den ersten zuerst.  
+  **Hashirama Senju → Hiruzen Sarutobi → Minato Namikaze → Tsunade**
+- `f-142` *Schätzfrage* – Wie viele Folgen hat „Naruto Shippuden“?  
+  **500** (Schieberegler 100–800, ±25 zählt als knapp)
+- `f-143` *Auswahl* – Wie heißt der Oberschüler-Detektiv aus Osaka, Conans Rivale und Freund?  
+  **Heiji Hattori** · Kaito Kid · Shuichi Akai · Kogoro Mori
+- `f-144` *Auswahl* – Wer ist Ai Haibara in Wahrheit?  
+  **Eine frühere Wissenschaftlerin der Schwarzen Organisation, die das Gift mitentwickelte** · Rans Cousine · Kaito Kids Schwester · Eine verdeckte Polizistin
+- `f-145` *Auswahl* – Mit welchem Fahrzeug verfolgt Conan Täter?  
+  **Mit einem Turbo-Skateboard** · Mit einem Motorrad · Mit einem Fahrrad · Mit Rollschuhen
+- `f-146` *Auswahl* – Wie heißt Shinichis Vater, ein berühmter Krimiautor?  
+  **Yusaku Kudo** · Kogoro Mori · Hiroshi Agasa · Shuichi Akai
+- `f-147` *Wer bin ich?* – Wer bin ich? Ich bin ein Meisterdieb mit weißem Zylinder und Umhang. / Ich kündige meine Diebstähle vorher an. / Ich sehe Shinichi Kudo zum Verwechseln ähnlich.  
+  **Kaito Kid** · Heiji Hattori · Gin · Bourbon
+- `f-148` *Wahr/Falsch* – „Detektiv Conan“ ist mit über 100 Bänden einer der längsten laufenden Manga in Deutschland.  
+  **Wahr** · Falsch
+- `f-149` *Auswahl* – Wie heißt der Kommissar mit dem Hut, der Kogoro Mori oft zu Fällen hinzuzieht?  
+  **Kommissar Megure** · Kommissar Takagi · Kommissar Sato · Kommissar Nakamori
+- `f-150` *Schätzfrage* – In welchem Jahr lief „Detektiv Conan“ erstmals im deutschen Fernsehen auf RTL II?  
+  **2002** (Schieberegler 1995–2015, ±1 zählt als knapp)
 
 ### Shōjo & Romance
 
@@ -370,6 +500,14 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Der Junge und der Reiher** · Chihiros Reise ins Zauberland · Suzume · Belle
 - `f-114` *Auswahl* – Welcher Hashira stirbt in „Demon Slayer: Mugen Train“?  
   **Kyojuro Rengoku** · Giyu Tomioka · Tengen Uzui · Shinobu Kocho
+- `f-157` *Auswahl* – Welcher Regisseur gründete Ghibli mit und drehte „Die letzten Glühwürmchen“?  
+  **Isao Takahata** · Makoto Shinkai · Mamoru Hosoda · Satoshi Kon
+- `f-158` *Auswahl* – Wo steht das Ghibli-Museum?  
+  **In Mitaka bei Tokio** · In Kyoto · In Osaka · In Sapporo
+- `f-159` *Auswahl* – In was wird Sōta in „Suzume“ verwandelt?  
+  **In einen dreibeinigen Kinderstuhl** · In eine Katze · In einen Regenschirm · In einen Vogel
+- `f-160` *Auswahl* – Welcher Film von Mamoru Hosoda handelt von einem Mädchen, das durch die Zeit springen kann?  
+  **Das Mädchen, das durch die Zeit sprang** · Summer Wars · Wolfskinder · Belle
 
 ### Manga & Mangaka
 
@@ -407,6 +545,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Gege Akutami** · Kohei Horikoshi · Yukinobu Tatsu · Koyoharu Gotouge
 - `f-117` *Wahr/Falsch* – Der Manga „Jujutsu Kaisen“ wurde 2024 abgeschlossen.  
   **Wahr** · Falsch
+- `f-155` *Auswahl* – Welcher japanische Verlag gibt die Weekly Shōnen Jump heraus?  
+  **Shūeisha** · Kōdansha · Shōgakukan · Kadokawa
+- `f-156` *Auswahl* – Was ist „Naruto Massiv“?  
+  **Eine Sammelausgabe mit drei Bänden in einem Buch** · Ein Artbook · Ein Roman zur Serie · Eine Farbausgabe
 
 ### Neue Serien
 
@@ -491,8 +633,16 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Mannheim** · Köln · Berlin · Leipzig
 - `f-119` *Auswahl* – Was ist ein Webtoon?  
   **Ein Comic, der fürs Smartphone gemacht ist und vertikal gescrollt wird** · Ein Anime, der nur online läuft · Ein animierter Werbespot · Ein Manga in Farbe
+- `f-151` *Auswahl* – Welches Stadtviertel Tokios gilt als Zentrum der Otaku-Kultur mit Elektronik- und Mangaläden?  
+  **Akihabara** · Shibuya · Harajuku · Ginza
+- `f-152` *Auswahl* – Was ist ein Yōkai?  
+  **Ein Geist- oder Fabelwesen aus der japanischen Folklore** · Ein Kampfsportler · Ein Sushi-Koch · Ein Schulfest
+- `f-153` *Auswahl* – In welcher deutschen Stadt findet die Anime-Convention DoKomi statt?  
+  **Düsseldorf** · Hamburg · Dortmund · Kassel
+- `f-154` *Wahr/Falsch* – Die Serie „Heidi“ von 1974 wurde in Japan produziert, Hayao Miyazaki arbeitete daran mit.  
+  **Wahr** · Falsch
 
-## Otaku (75 Fragen)
+## Otaku (100 Fragen)
 
 ### Shōnen-Klassiker
 
@@ -538,6 +688,40 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Eine Spinne mit zwölf Beinen** · Eine Schlange · Ein Skorpion · Ein Rabe
 - `o-061` *Schätzfrage* – Wie viele Pokémon gab es in der ersten Generation?  
   **151** (Schieberegler 50–300, ±5 zählt als knapp)
+- `o-076` *Auswahl* – Auf welcher Insel wuchs Ruffy auf?  
+  **Dawn Island** · Drumm · Jaya · Water Seven
+- `o-077` *Auswahl* – Welcher Admiral mit der Magma-Frucht tötet Portgas D. Ace in Marine Ford?  
+  **Akainu** · Aokiji · Kizaru · Sengoku
+- `o-078` *Schätzfrage* – In welchem Jahr lief „One Piece“ erstmals auf RTL II?  
+  **2003** (Schieberegler 1995–2015, ±1 zählt als knapp)
+- `o-079` *Auswahl* – Wie heißt die Fusion von Son-Goku und Vegeta mithilfe der Potara-Ohrringe?  
+  **Vegetto** · Gogeta · Gotenks · Vegeku
+- `o-080` *Auswahl* – Wie heißt Son-Gokus Vater?  
+  **Bardock** · Raditz · Nappa · Turles
+- `o-081` *Schätzfrage* – Wie viele Folgen hat „Dragon Ball Z“?  
+  **291** (Schieberegler 100–400, ±15 zählt als knapp)
+- `o-082` *Schätzfrage* – In welchem Jahr startete der Manga „Dragon Ball“ in der Weekly Shōnen Jump?  
+  **1984** (Schieberegler 1975–2000, ±2 zählt als knapp)
+- `o-083` *Auswahl* – Wie heißt die 2024 gestartete Anime-Serie, an deren Geschichte Akira Toriyama zuletzt mitarbeitete?  
+  **Dragon Ball Daima** · Dragon Ball Kai · Dragon Ball Heroes · Dragon Ball GT
+- `o-084` *Auswahl* – Wie heißt Narutos Mutter?  
+  **Kushina Uzumaki** · Mito Uzumaki · Tsunade · Karin
+- `o-085` *Auswahl* – Welche Chakra-Natur hat Naruto von Geburt an?  
+  **Wind** · Feuer · Wasser · Erde
+- `o-086` *Auswahl* – Wer verbirgt sich hinter der Maske von „Tobi“?  
+  **Obito Uchiha** · Madara Uchiha · Nagato · Zetsu
+- `o-087` *Auswahl* – Welches Bijū ist in Killer B versiegelt?  
+  **Gyuki, der Achtschwänzige** · Shukaku, der Einschwänzige · Kurama, der Neunschwänzige · Matatabi, der Zweischwänzige
+- `o-089` *Auswahl* – Welche beiden Männer der Schwarzen Organisation verabreichen Shinichi das Gift?  
+  **Gin und Wodka** · Bourbon und Rye · Vermouth und Chianti · Kir und Korn
+- `o-090` *Auswahl* – Wie heißt Shinichis Mutter, eine ehemalige Schauspielerin?  
+  **Yukiko Kudo** · Eri Kisaki · Sonoko Suzuki · Jodie Starling
+- `o-091` *Auswahl* – Wie lautet Ai Haibaras richtiger Name?  
+  **Shiho Miyano** · Akemi Miyano · Masumi Sera · Chris Vineyard
+- `o-092` *Auswahl* – Für welche Behörde arbeitet Shuichi Akai?  
+  **FBI** · CIA · Interpol · Tokioter Polizei
+- `o-093` *Schätzfrage* – Wie viele Kinofilme zu „Detektiv Conan“ erschienen bis einschließlich 2025?  
+  **28** (Schieberegler 5–50, ±3 zählt als knapp)
 
 ### Shōjo & Romance
 
@@ -578,6 +762,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Falsch** · Wahr
 - `o-038` *Reihenfolge* – Sortiere die Filme von Makoto Shinkai nach Erscheinungsjahr, den ältesten zuerst.  
   **5 Centimeters per Second (2007) → Your Name. (2016) → Weathering With You (2019) → Suzume (2022)**
+- `o-098` *Auswahl* – Wonach ist Studio Ghibli benannt?  
+  **Nach einem heißen Wüstenwind und einem italienischen Flugzeug** · Nach einer japanischen Blume · Nach Miyazakis Heimatdorf · Nach einem Tempel in Kyoto
+- `o-099` *Auswahl* – Welcher Anime-Film von Mamoru Oshii aus dem Jahr 1995 beeinflusste „Matrix“ stark?  
+  **Ghost in the Shell** · Akira · Perfect Blue · Neon Genesis Evangelion
+- `o-100` *Auswahl* – In welchem Film von Satoshi Kon wird ein ehemaliges Idol von einem Stalker verfolgt?  
+  **Perfect Blue** · Paprika · Millennium Actress · Tokyo Godfathers
 
 ### Manga & Mangaka
 
@@ -599,6 +789,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Bleach (2001) → Fairy Tail (2006) → Tokyo Ghoul (2011) → Dr. Stone (2017)**
 - `o-074` *Auswahl* – Wer hat den Webtoon zu „Solo Leveling“ gezeichnet?  
   **Dubu (Jang Sung-rak)** · Chugong · Boichi · Gege Akutami
+- `o-088` *Wahr/Falsch* – Masashi Kishimotos Zwillingsbruder Seishi ist ebenfalls Mangaka und schuf „666 Satan“.  
+  **Wahr** · Falsch
+- `o-096` *Auswahl* – Bei welchem Mangaka arbeitete Eiichirō Oda als Assistent, bevor „One Piece“ startete?  
+  **Nobuhiro Watsuki (Rurouni Kenshin)** · Akira Toriyama · Masashi Kishimoto · Tite Kubo
+- `o-097` *Auswahl* – In welchem Magazin erscheint „Detektiv Conan“ in Japan?  
+  **Weekly Shōnen Sunday** · Weekly Shōnen Jump · Weekly Shōnen Magazine · Ribon
 
 ### Neue Serien
 
@@ -661,3 +857,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **1975** (Schieberegler 1960–2000, ±2 zählt als knapp)
 - `o-075` *Wahr/Falsch* – Die Zeichentrickserie „Die Biene Maja“ von 1975 wurde in Japan produziert.  
   **Wahr** · Falsch
+- `o-094` *Auswahl* – Welcher deutsche Sender strahlte „Sailor Moon“ 1995 als Erster aus?  
+  **ZDF** · RTL II · Sat.1 · Tele 5
+- `o-095` *Auswahl* – Was bedeutet „Shōnen“ wörtlich?  
+  **Junge** · Mädchen · Held · Kampf
