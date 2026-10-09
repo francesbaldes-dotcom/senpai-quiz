@@ -4,7 +4,7 @@ import { belohnungsvideo, werbungOffen } from './werbung.js';
 import * as online from './online.js';
 import { speicherBereit, ladeProfil, speichereProfil } from './speicher.js';
 import { kategorieIcon, abzeichenEmblem, rangEmblem, stationsKnoten, bossKnoten } from './grafik.js';
-import { tagesquizBild, kannBildTeilen } from './teilen-bild.js';
+import { tagesquizBild, bossBild, kannBildTeilen } from './teilen-bild.js';
 
 const app = document.getElementById('app');
 
@@ -1039,7 +1039,18 @@ const aktionen = {
   async bossTeilen() {
     const s = ui.ergebnis?.reise?.station;
     if (!s?.boss) return;
-    nachTeilen(await teilen(bossText(s), appLink()));
+    const stand = reiseStand();
+    const datei = await bossBild({
+      boss: s.titel,
+      bild: s.bild,
+      kapitelNr: s.kapitel.nr,
+      kapitelTitel: s.kapitel.titel,
+      sterne: stand.sterne,
+      sterneMax: stand.sterneMax,
+      heimkehr: stand.fertig && s === STATIONEN[STATIONEN.length - 1],
+      link: appLink().replace(/^https?:\/\//, ''),
+    });
+    nachTeilen(await teilen(bossText(s), appLink(), datei));
   },
   async zuruecksetzen() {
     const ok = await frage({ titel: 'Fortschritt zurücksetzen?', text: 'Alle Punkte, Statistiken und Abzeichen werden gelöscht.', ja: 'Löschen', gefaehrlich: true });
