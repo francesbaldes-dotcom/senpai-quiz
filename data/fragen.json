@@ -15814,7 +15814,7 @@
    "type": "multiple_choice",
    "question": "Was ruft Team Rocket, wenn es besiegt davonfliegt?",
    "answers": [
-    "„Das war's dann wohl schon wieder“",
+    "„Das war mal wieder ein Schuss in den Ofen!“",
     "„Wir kommen wieder“",
     "„Pikachu, wir hassen dich“",
     "„Auf Wiedersehen, Ash“"
@@ -15840,7 +15840,7 @@
    "difficulty": 2,
    "category": "shonen",
    "type": "multiple_choice",
-   "question": "Wie heißt Mistys Begleit-Pokémon, das ihr ständig folgt?",
+   "question": "Welches Pokémon von Misty kommt ständig ungefragt aus seinem Pokéball?",
    "answers": [
     "Enton",
     "Togepi",
@@ -15870,10 +15870,10 @@
    "type": "multiple_choice",
    "question": "Wie heißt Erens Kindheitsfreund, der ihn oft kritisiert und ein Pferdegesicht hat?",
    "answers": [
-    "Jean Kirstein",
+    "Jean Kirschstein",
     "Connie Springer",
     "Marco Bott",
-    "Bertholdt"
+    "Berthold Fubar"
    ],
    "correct": 0
   },
@@ -15900,7 +15900,7 @@
    "answers": [
     "Reiss",
     "Ackermann",
-    "Fritz",
+    "Braun",
     "Tybur"
    ],
    "correct": 0
@@ -16022,12 +16022,12 @@
    "difficulty": 1,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Welchen Teufel fürchtet Denji anfangs am meisten?",
+   "question": "Welchen Beruf übt Denji bei der öffentlichen Sicherheit aus?",
    "answers": [
-    "Keinen, er will vor allem ein normales Leben",
-    "Den Pistolenteufel",
-    "Den Fuchsteufel",
-    "Den Zombieteufel"
+    "Teufelsjäger",
+    "Polizist",
+    "Arzt",
+    "Koch"
    ],
    "correct": 0
   },
@@ -16092,12 +16092,12 @@
    "difficulty": 2,
    "category": "isekai",
    "type": "multiple_choice",
-   "question": "Wie heißt Erzas Rivalin und Freundin mit blauen Haaren aus der Zwillingsgilde?",
+   "question": "Wie heißt die Kartenmagierin von Fairy Tail, die gern trinkt?",
    "answers": [
+    "Cana Alberona",
     "Juvia Lockser",
     "Mirajane Strauss",
-    "Levy McGarden",
-    "Cana Alberona"
+    "Levy McGarden"
    ],
    "correct": 0
   },
@@ -16204,10 +16204,10 @@
    "difficulty": 2,
    "category": "shojo",
    "type": "multiple_choice",
-   "question": "Wie heißt die Oberste Konkubine, deren Baby Maomao zu Beginn rettet?",
+   "question": "Wie heißt die Konkubine, deren Baby Maomao zu Beginn vor dem Gesichtspuder-Gift rettet?",
    "answers": [
-    "Lihua",
     "Gyokuyou",
+    "Lihua",
     "Ah-Duo",
     "Lishu"
    ],
@@ -16260,7 +16260,7 @@
    "difficulty": 2,
    "category": "isekai",
    "type": "multiple_choice",
-   "question": "Wie heißt Emmas Freund mit der Brille, der unter den jüngeren Kindern bleibt?",
+   "question": "Wie heißt der aufgeweckte Vierjährige, der mit den jüngeren Kindern in Grace Field zurückbleibt?",
    "answers": [
     "Phil",
     "Don",
@@ -16290,7 +16290,7 @@
    "type": "multiple_choice",
    "question": "Wer ist Sojo in „Kagurabachi“?",
    "answers": [
-    "Ein Yakuza-Zauberer mit der Klinge Kuregumo",
+    "Ein krimineller Zauberer und Waffenhändler mit der Klinge Kuregumo",
     "Chihiros Bruder",
     "Ein Polizist",
     "Chihiros Lehrer"
@@ -16358,7 +16358,7 @@
    "difficulty": 2,
    "category": "shonen",
    "type": "multiple_choice",
-   "question": "Wie heißt Rins Freundin, die Kräuter und einen Feenhund züchtet?",
+   "question": "Wie heißt Rins Freundin, die Kräuter züchtet und einen Pflanzengeist (Greenman) als Vertrauten hat?",
    "answers": [
     "Shiemi Moriyama",
     "Izumo Kamiki",
@@ -16402,7 +16402,7 @@
    "type": "multiple_choice",
    "question": "Wie heißt Reigens Büro?",
    "answers": [
-    "Spirits and Such Consultation Office",
+    "Beratungsstelle für Geister und so (Spirits and Such Consultation Office)",
     "Geisterjäger GmbH",
     "Psycho-Helden",
     "Mob Agency"
@@ -16430,7 +16430,7 @@
    "type": "multiple_choice",
    "question": "Wie heißt die Organisation böser Esper in „Mob Psycho 100“?",
    "answers": [
-    "Claw",
+    "Klaue (Claw)",
     "Hand",
     "Fist",
     "Eye"
@@ -16946,11 +16946,11 @@
    "difficulty": 2,
    "category": "kultur",
    "type": "multiple_choice",
-   "question": "Wie heißt der deutsche Verlag, der in den 2000ern „Yu-Gi-Oh!“ und „Fruits Basket“ herausbrachte und in Köln saß?",
+   "question": "Welcher deutsche Verlag veröffentlichte „Fruits Basket“?",
    "answers": [
-    "Tokyopop",
     "Carlsen",
-    "Egmont",
+    "Tokyopop",
+    "Egmont Manga",
     "Panini"
    ],
    "correct": 0

@@ -234,9 +234,9 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-380` *Auswahl* – Wie heißt Conans Grundschule?  
   **Teitan-Grundschule** · Beika-Grundschule · Haido-Grundschule · Konoha-Grundschule
 - `e-381` *Auswahl* – Was ruft Team Rocket, wenn es besiegt davonfliegt?  
-  **„Das war's dann wohl schon wieder“** · „Wir kommen wieder“ · „Pikachu, wir hassen dich“ · „Auf Wiedersehen, Ash“
+  **„Das war mal wieder ein Schuss in den Ofen!“** · „Wir kommen wieder“ · „Pikachu, wir hassen dich“ · „Auf Wiedersehen, Ash“
 - `e-382` *Auswahl* – Wie heißt Erens Kindheitsfreund, der ihn oft kritisiert und ein Pferdegesicht hat?  
-  **Jean Kirstein** · Connie Springer · Marco Bott · Bertholdt
+  **Jean Kirschstein** · Connie Springer · Marco Bott · Berthold Fubar
 - `e-391` *Auswahl* – Wie heißt die Exorzisten-Schule in „Blue Exorcist“?  
   **Wahre-Kreuz-Akademie (True Cross Academy)** · Shuchiin · Eden · Totsuki
 - `e-394` *Auswahl* – Welche Sportart steht in „Captain Tsubasa“ im Mittelpunkt?  
@@ -428,8 +428,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Mit Fluchenergie aufgeladene Waffen** · Zauberstäbe · Bücher · Talismane gegen Flüche
 - `e-385` *Auswahl* – Welches Sportfest veranstaltet die U.A. High jedes Jahr?  
   **Das U.A.-Sportfest** · Die Heldenolympiade · Das Quirk-Turnier · Den Heldenmarathon
-- `e-386` *Auswahl* – Welchen Teufel fürchtet Denji anfangs am meisten?  
-  **Keinen, er will vor allem ein normales Leben** · Den Pistolenteufel · Den Fuchsteufel · Den Zombieteufel
+- `e-386` *Auswahl* – Welchen Beruf übt Denji bei der öffentlichen Sicherheit aus?  
+  **Teufelsjäger** · Polizist · Arzt · Koch
 - `e-389` *Auswahl* – Welches Land spioniert Loid für Westalis aus?  
   **Ostania** · Marley · Paradis · Fiore
 - `e-392` *Auswahl* – Wie heißt Mobs jüngerer Bruder?  
@@ -1155,7 +1155,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Sie wohnt bei ihm** · Er ist ihr Vater · Er ist ihr Lehrer · Er ist ihr Chef
 - `f-468` *Auswahl* – Wie heißt Ashs Vogel-Pokémon aus Kanto, das er später bei einem Schwarm zurücklässt?  
   **Tauboga** · Taubsi · Habitak · Smettbo
-- `f-469` *Auswahl* – Wie heißt Mistys Begleit-Pokémon, das ihr ständig folgt?  
+- `f-469` *Auswahl* – Welches Pokémon von Misty kommt ständig ungefragt aus seinem Pokéball?  
   **Enton** · Togepi · Starmie · Psiana
 - `f-470` *Auswahl* – Welche Flüssigkeit nutzt der 3D-Manöver-Apparat als Antrieb?  
   **Gas** · Wasser · Öl · Dampf
@@ -1167,7 +1167,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Eine ehemalige Shinigami-Kommandantin, die sich in eine Katze verwandeln kann** · Ichigos Mutter · Ein Hollow · Ein Quincy
 - `f-491` *Auswahl* – Wer ist Mephisto Pheles?  
   **Der Direktor der Akademie, in Wahrheit ein Dämonenkönig** · Rins Bruder · Ein Exorzist · Ein Engel
-- `f-492` *Auswahl* – Wie heißt Rins Freundin, die Kräuter und einen Feenhund züchtet?  
+- `f-492` *Auswahl* – Wie heißt Rins Freundin, die Kräuter züchtet und einen Pflanzengeist (Greenman) als Vertrauten hat?  
   **Shiemi Moriyama** · Izumo Kamiki · Shura Kirigakure · Paku
 - `f-497` *Auswahl* – Wie heißt Tsubasas Rivale mit dem „Tiger-Schuss“?  
   **Kojiro Hyuga** · Genzo Wakabayashi · Taro Misaki · Jun Misugi
@@ -1429,9 +1429,9 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-487` *Auswahl* – Wer ist Heisuke Mashimo in „Sakamoto Days“?  
   **Ein Scharfschütze mit Vogel, der sich Sakamoto anschließt** · Sakamotos Sohn · Ein Polizist · Der Boss der Order
 - `f-488` *Auswahl* – Wer ist Sojo in „Kagurabachi“?  
-  **Ein Yakuza-Zauberer mit der Klinge Kuregumo** · Chihiros Bruder · Ein Polizist · Chihiros Lehrer
+  **Ein krimineller Zauberer und Waffenhändler mit der Klinge Kuregumo** · Chihiros Bruder · Ein Polizist · Chihiros Lehrer
 - `f-493` *Auswahl* – Wie heißt Reigens Büro?  
-  **Spirits and Such Consultation Office** · Geisterjäger GmbH · Psycho-Helden · Mob Agency
+  **Beratungsstelle für Geister und so (Spirits and Such Consultation Office)** · Geisterjäger GmbH · Psycho-Helden · Mob Agency
 - `f-494` *Auswahl* – Wer ist Teruki Hanazawa?  
   **Ein Schüler mit Psychokräften, der Mob zunächst bekämpft und dann sein Freund wird** · Mobs Lehrer · Ein Geist · Reigens Bruder
 - `f-522` *Auswahl* – Wer ist Kanao Tsuyuri?  
@@ -1567,11 +1567,11 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Easton Magic Academy** · Hogwarts · Clover Academy · Shuchiin
 - `f-475` *Auswahl* – Wer ist Choi Jong-in?  
   **Der S-Rang-Jäger und Gildenmeister der Hunters-Gilde** · Jinwoos Bruder · Ein Monarch · Ein Arzt
-- `f-476` *Auswahl* – Wie heißt Erzas Rivalin und Freundin mit blauen Haaren aus der Zwillingsgilde?  
-  **Juvia Lockser** · Mirajane Strauss · Levy McGarden · Cana Alberona
+- `f-476` *Auswahl* – Wie heißt die Kartenmagierin von Fairy Tail, die gern trinkt?  
+  **Cana Alberona** · Juvia Lockser · Mirajane Strauss · Levy McGarden
 - `f-484` *Auswahl* – Welche Figur ist Sein in „Frieren“?  
   **Ein Priester, der sich der Gruppe anschließt** · Ein Dämon · Frierens Bruder · Ein Zwerg
-- `f-486` *Auswahl* – Wie heißt Emmas Freund mit der Brille, der unter den jüngeren Kindern bleibt?  
+- `f-486` *Auswahl* – Wie heißt der aufgeweckte Vierjährige, der mit den jüngeren Kindern in Grace Field zurückbleibt?  
   **Phil** · Don · Gilda · Nat
 - `f-489` *Auswahl* – Welche Tiere jagen Gon und Killua im Chimera-Ant-Arc?  
   **Chimera-Ameisen** · Drachen · Riesenfrösche · Titanen
@@ -1817,8 +1817,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Mitsuki Koyama** · Momoko Hanasaki · Yuki Cross · Sakura Kinomoto
 - `f-448` *Auswahl* – Wie heißen Momokos Freundinnen Yuri und Hinagiku als Engel in „Wedding Peach“?  
   **Angel Lily und Angel Daisy** · Angel Rose und Angel Tulip · Sailor Lily und Sailor Daisy · Angel Peach und Angel Plum
-- `f-482` *Auswahl* – Wie heißt die Oberste Konkubine, deren Baby Maomao zu Beginn rettet?  
-  **Lihua** · Gyokuyou · Ah-Duo · Lishu
+- `f-482` *Auswahl* – Wie heißt die Konkubine, deren Baby Maomao zu Beginn vor dem Gesichtspuder-Gift rettet?  
+  **Gyokuyou** · Lihua · Ah-Duo · Lishu
 - `f-483` *Auswahl* – Wie heißt Ciels Hund, der in Wahrheit ein Höllenhund ist?  
   **Pluto** · Sebastian · Finny · Snake
 - `f-495` *Auswahl* – Welchen Spitznamen bekommt Nana Komatsu?  
@@ -2059,8 +2059,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **AniNite** · AnimagiC · DoKomi · Connichi
 - `f-459` *Auswahl* – Was sind Furigana?  
   **Kleine Lesehilfen in Kana über schwierigen Kanji** · Lautmalereien · Farbseiten · Ein Papierformat
-- `f-511` *Auswahl* – Wie heißt der deutsche Verlag, der in den 2000ern „Yu-Gi-Oh!“ und „Fruits Basket“ herausbrachte und in Köln saß?  
-  **Tokyopop** · Carlsen · Egmont · Panini
+- `f-511` *Auswahl* – Welcher deutsche Verlag veröffentlichte „Fruits Basket“?  
+  **Carlsen** · Tokyopop · Egmont Manga · Panini
 - `f-569` *Auswahl* – Welcher Streamingdienst ist in Deutschland der größte Anbieter für Anime-Simulcasts?  
   **Crunchyroll** · Netflix · Disney+ · Amazon Prime
 - `f-570` *Auswahl* – Was ist ein „Mangaka-Assistent“?  
@@ -2238,7 +2238,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-271` *Auswahl* – Wie heißt die Insel-Region der siebten Generation?  
   **Alola** · Galar · Kalos · Paldea
 - `o-272` *Auswahl* – Welche Familie trägt den „Urtitanen“ auf Paradis, bevor Grisha ihn stiehlt?  
-  **Reiss** · Ackermann · Fritz · Tybur
+  **Reiss** · Ackermann · Braun · Tybur
 - `o-275` *Auswahl* – In welchem Magazin erscheint „Blue Exorcist“?  
   **Jump SQ** · Weekly Shōnen Jump · Shōnen Magazine · Monthly G Fantasy
 - `o-278` *Auswahl* – Wer hat „Captain Tsubasa“ erschaffen?  
@@ -2385,7 +2385,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-274` *Auswahl* – Wie heißt Yujis Technik, bei der er Fluchenergie verzögert einsetzt?  
   **Divergent Fist (Divergierende Faust)** · Schwarzer Blitz · Sphärenentfaltung · Fluchrede
 - `o-276` *Auswahl* – Wie heißt die Organisation böser Esper in „Mob Psycho 100“?  
-  **Claw** · Hand · Fist · Eye
+  **Klaue (Claw)** · Hand · Fist · Eye
 - `o-291` *Auswahl* – Wie heißt der Arzt-Dämon, der Muzan einst erschuf?  
   **Ein namenloser Arzt der Heian-Zeit** · Tamayo · Yushiro · Kokushibo
 - `o-292` *Auswahl* – Wie heißt Sukunas Sphärenentfaltung?  
