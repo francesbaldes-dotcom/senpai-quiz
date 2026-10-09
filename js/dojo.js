@@ -11,7 +11,7 @@
 // (Mehrfachwahl), dann schreiben (Zeichen wählen), ab Fach 3 die Lesung tippen.
 // Ab Fach 3 „sitzt“ eine Karte und zählt für den Gürtel.
 
-import { ANGEBOTE, kaufen, kaufOffen, kaeufeWiederherstellen } from './kauf.js';
+import { ANGEBOTE, kaufen, kaufOffen, kaufMoeglich, kaeufeWiederherstellen } from './kauf.js';
 
 const INTERVALLE = [0, 1, 3, 7, 14, 30]; // Tage bis zur nächsten Wiederholung je Fach
 const SITZT_AB = 3; // ab diesem Fach zählt eine Karte als gelernt
@@ -712,12 +712,13 @@ function dojoKaufScreen() {
         <li>Gürtel vom Weißen bis zum Schwarzen</li>
       </ul>
       ${dui.fehler ? `<p class="fehler">${app.esc(dui.fehler)}</p>` : ''}
-      ${ANGEBOTE.map((a) => `<button class="angebot ${a.id === 'einmal' ? 'empfohlen' : ''}" data-aktion="dojoKaufen" data-angebot="${a.id}" ${dui.kauft ? 'disabled' : ''}>
+      ${kaufMoeglich() ? '' : '<p class="meldung">Kaufen geht nur in der iPhone-App. In der Web-Version kannst du die kostenlosen Lektionen spielen.</p>'}
+      ${ANGEBOTE.map((a) => `<button class="angebot ${a.id === 'einmal' ? 'empfohlen' : ''}" data-aktion="dojoKaufen" data-angebot="${a.id}" ${dui.kauft || !kaufMoeglich() ? 'disabled' : ''}>
         <span class="text"><b>${app.esc(a.name)}</b><small>${app.esc(a.text)}</small></span>
         <span class="preis"><b>${app.esc(a.preis)}</b><small>${app.esc(a.je)}</small></span>
       </button>`).join('')}
       <button class="leise-knopf" data-aktion="dojoWiederherstellen" ${dui.kauft ? 'disabled' : ''}>Käufe wiederherstellen</button>
-      <p class="kleingedruckt" style="margin:0;text-align:center">Das Abo verlängert sich automatisch und lässt sich jederzeit in den Einstellungen des App Store kündigen. Im Browser ist der Kauf nur eine Probe.</p>
+      <p class="kleingedruckt" style="margin:0;text-align:center">Das Monatsabo kostet 2,99 € pro Monat, wird über deine Apple-ID abgerechnet und verlängert sich automatisch, wenn du es nicht spätestens 24 Stunden vor Ablauf kündigst. Kündigen kannst du jederzeit in den iOS-Einstellungen unter Abonnements. Der Einmalkauf gilt dauerhaft. Es gelten die <a href="nutzungsbedingungen.html#dojo" target="_blank" rel="noopener">Nutzungsbedingungen</a> und die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
     </div>
   </section>`;
 }

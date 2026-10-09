@@ -13,7 +13,8 @@
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/rechtstext.css">
 <!-- Vor dem Store-Start der iPhone-App prüfen: Abschnitt 8 (AdMob) und 9 (App Store) gelten erst, wenn die App im App Store ist.
-     Kommen In-App-Käufe („Senpai Pass“) oder Push-Mitteilungen dazu, braucht es dafür einen eigenen Abschnitt. -->
+     Abschnitt 9 beschreibt den In-App-Kauf fürs Senpai Dojo; wird dafür RevenueCat angebunden, muss der Dienst dort
+     als Empfänger (Kauf-Quittung, anonyme App-Nutzer-ID) ergänzt werden. Push-Mitteilungen gibt es weiterhin nicht. -->
 </head>
 <body>
 <main>
@@ -45,7 +46,7 @@ E-Mail: <a href="mailto:francesbaldes+senpai@gmail.com">francesbaldes+senpai@gma
 <p>Senpai Quiz gibt es als Web-Version unter <a href="https://francesbaldes-dotcom.github.io/senpai-quiz/">francesbaldes-dotcom.github.io/senpai-quiz</a>, die du auch auf den Home-Bildschirm deines Handys legen kannst, und als App für das iPhone. Beide Versionen funktionieren gleich und verarbeiten dieselben Daten. Wo sich etwas unterscheidet, steht es im jeweiligen Abschnitt.</p>
 
 <h2>3. Was auf deinem Gerät gespeichert wird</h2>
-<p>Die App speichert deinen Spielstand im lokalen Speicher deines Browsers beziehungsweise der App auf deinem Gerät: Punkte, Erfahrungspunkte und Rang, Statistik je Kategorie, Abzeichen, Serie und Ergebnisse des Tagesquiz, Fortschritt und Sterne der Heldenreise sowie den Anmelde-Schlüssel deines Accounts, falls du einen angelegt hast (siehe Abschnitt 4).</p>
+<p>Die App speichert deinen Spielstand im lokalen Speicher deines Browsers beziehungsweise der App auf deinem Gerät: Punkte, Erfahrungspunkte und Rang, Statistik je Kategorie, Abzeichen, Serie und Ergebnisse des Tagesquiz, Fortschritt und Sterne der Heldenreise, deinen Lernstand im Senpai Dojo (Lernfach und Fälligkeit je Karte, abgeschlossene Lektionen), den Stand deiner Dojo-Freischaltung sowie den Anmelde-Schlüssel deines Accounts, falls du einen angelegt hast (siehe Abschnitt 4).</p>
 <p>Diese Daten verlassen dein Gerät nicht und werden nicht an den Anbieter übertragen. Sie werden gelöscht, wenn du die Website-Daten im Browser löschst oder die App vom Gerät entfernst. Nutzt du Geräte-Backups (zum Beispiel iCloud), kann der Spielstand Teil des Backups sein; das steuern dein Gerät und seine Einstellungen.</p>
 <p>Das Speichern ist technisch notwendig, damit die App deinen Fortschritt behalten kann, und erfolgt deshalb ohne Einwilligung (§ 25 Abs. 2 Nr. 2 TDDDG). Die App setzt keine Cookies.</p>
 
@@ -58,6 +59,7 @@ E-Mail: <a href="mailto:francesbaldes+senpai@gmail.com">francesbaldes+senpai@gma
 <li><b>Einladungscode:</b> ein zufälliger sechsstelliger Code, mit dem Freunde dich finden.</li>
 <li><b>Duelle:</b> wer gegen wen spielt, gewählte Kategorien, die gestellten Fragen, je Runde ob deine drei Antworten richtig oder falsch waren, der Spielstand, wer am Zug ist, Ergebnis und Zeitpunkte.</li>
 <li><b>Zeitpunkt</b> des Anlegens und der letzten Anmeldung deines Accounts.</li>
+<li><b>Dojo-Freischaltung:</b> das Datum, bis zu dem das Senpai Dojo für dich freigeschaltet ist, wenn du es gekauft hast (siehe Abschnitt 9). Keine Zahlungsdaten.</li>
 </ul>
 <p>Auf deinem Gerät bleibt ein Anmelde-Schlüssel gespeichert, mit dem die App dich beim nächsten Start wiedererkennt. Darum ist der Account an dieses Gerät gebunden: Löschst du die App oder die Website-Daten, kann er nicht wiederhergestellt werden.</p>
 <h3>Wer sie sieht</h3>
@@ -91,7 +93,10 @@ E-Mail: <a href="mailto:francesbaldes+senpai@gmail.com">francesbaldes+senpai@gma
 <p>Der Anbieter erhält von Google nur zusammengefasste Berichte (zum Beispiel wie viele Videos angesehen wurden), keine Daten über dich als Person. Die Belohnung aus einem Video wird nur auf deinem Gerät verbucht.</p>
 
 <h2>9. Apple App Store</h2>
-<p>Wenn du die App über den App Store lädst, verarbeitet Apple Daten zu Download und Konto nach den eigenen Datenschutzbestimmungen: <a href="https://www.apple.com/legal/privacy/de-ww/">apple.com/legal/privacy</a>. Darauf hat der Anbieter keinen Einfluss. Die App enthält derzeit keine In-App-Käufe und sendet keine Push-Mitteilungen.</p>
+<p>Wenn du die App über den App Store lädst, verarbeitet Apple Daten zu Download und Konto nach den eigenen Datenschutzbestimmungen: <a href="https://www.apple.com/legal/privacy/de-ww/">apple.com/legal/privacy</a>. Darauf hat der Anbieter keinen Einfluss. Die App sendet keine Push-Mitteilungen.</p>
+<h3>In-App-Kauf fürs Senpai Dojo</h3>
+<p>Das Monatsabo und der Einmalkauf für das Senpai Dojo laufen als In-App-Kauf über Apple. Die Zahlung wickelt Apple über deine Apple-ID ab; der Anbieter erhält von Apple keine Zahlungsdaten, keinen Namen und keine Adresse, sondern nur zusammengefasste Verkaufszahlen ohne Bezug zu dir.</p>
+<p>Damit die App weiß, ob das Dojo freigeschaltet ist, merkt sie sich den Kauf auf deinem Gerät und prüft ihn mit der Kauf-Quittung von Apple. Hast du einen Account, wird zusätzlich das Ablaufdatum der Freischaltung in deinem Profil auf dem Server gespeichert (Abschnitt 4), damit die Freischaltung nach einem Neustart oder einem Gerätewechsel mit „Käufe wiederherstellen“ sicher erkannt wird. Rechtsgrundlage ist die Erfüllung des Kaufvertrags mit dir (Art. 6 Abs. 1 lit. b DSGVO). Das Ablaufdatum wird gelöscht, wenn du den Account löschst.</p>
 
 <h2>10. Was die App nicht tut</h2>
 <ul>
@@ -106,8 +111,9 @@ E-Mail: <a href="mailto:francesbaldes+senpai@gmail.com">francesbaldes+senpai@gma
 <table>
 <thead><tr><th>Daten</th><th>Wo</th><th>Wie lange</th></tr></thead>
 <tbody>
-<tr><td>Spielstand, Statistik, Abzeichen, Heldenreise</td><td>nur auf deinem Gerät</td><td>bis du die App oder die Website-Daten löschst</td></tr>
-<tr><td>Nutzer-ID, Spielername, Einladungscode, Duelle</td><td>Supabase, Server in Frankfurt</td><td>bis du den Account löschst</td></tr>
+<tr><td>Spielstand, Statistik, Abzeichen, Heldenreise, Lernstand im Dojo</td><td>nur auf deinem Gerät</td><td>bis du die App oder die Website-Daten löschst</td></tr>
+<tr><td>Nutzer-ID, Spielername, Einladungscode, Duelle, Ablauf der Dojo-Freischaltung</td><td>Supabase, Server in Frankfurt</td><td>bis du den Account löschst</td></tr>
+<tr><td>Zahlung für das Dojo (nur iPhone-App)</td><td>Apple (In-App-Kauf)</td><td>nach den Regeln von Apple; der Anbieter erhält keine Zahlungsdaten</td></tr>
 <tr><td>Fragen-Meldungen (ohne Bezug zu dir)</td><td>Supabase, Server in Frankfurt</td><td>bis zur Bearbeitung</td></tr>
 <tr><td>Server-Protokolle (IP-Adresse)</td><td>GitHub Pages (Web-Version), Supabase</td><td>kurzzeitig, durch den jeweiligen Dienst</td></tr>
 <tr><td>Werbedaten (nur iPhone-App, nur bei Belohnungsvideos)</td><td>Google AdMob</td><td>nach den Regeln von Google</td></tr>
@@ -123,7 +129,7 @@ E-Mail: <a href="mailto:francesbaldes+senpai@gmail.com">francesbaldes+senpai@gma
 <p>Die App richtet sich an Anime-Fans jeden Alters und erhebt bewusst so wenig wie möglich: Kein Account braucht eine E-Mail-Adresse, einen Namen oder ein Geburtsdatum. Eltern können den Account ihres Kindes in der App jederzeit löschen. In der iPhone-App erscheinen Werbevideos nur, wenn sie freiwillig angetippt werden; personalisierte Werbung lässt sich über die Werbe-Einwilligung und das Tracking in den iOS-Einstellungen abschalten.</p>
 
 <h2>14. Änderungen</h2>
-<p>Kommen neue Funktionen dazu, die Daten verarbeiten, zum Beispiel Käufe, Push-Mitteilungen oder Bestenlisten, wird diese Erklärung vorher angepasst. Das Datum oben zeigt den aktuellen Stand.</p>
+<p>Kommen neue Funktionen dazu, die Daten verarbeiten, zum Beispiel Push-Mitteilungen oder Bestenlisten, wird diese Erklärung vorher angepasst. Das Datum oben zeigt den aktuellen Stand.</p>
 
 <p class="fuss">Weitere Angaben: <a href="impressum.html">Impressum</a> · <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a> · <a href="./">Zur App</a></p>
 </article>

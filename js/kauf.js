@@ -16,10 +16,20 @@ export const ANGEBOTE = [
 
 const ATTRAPPE_DAUER = 1.5; // Sekunden „Verbindung zum Store“
 
+// Die Attrappe läuft nur bei lokaler Entwicklung. Auf der veröffentlichten
+// Web-Version (GitHub Pages) gibt es keinen Store, dort ist das Dojo nur
+// über die Probelektionen nutzbar; gekauft wird in der iPhone-App.
+const LOKAL = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+
 let offen = false;
 
 export function kaufOffen() {
   return offen;
+}
+
+// Kann hier überhaupt gekauft werden? (nativ mit Store oder lokale Attrappe)
+export function kaufMoeglich() {
+  return !!store() || LOKAL;
 }
 
 function store() {
@@ -42,6 +52,7 @@ export function kaufen(angebotId) {
     console.warn('In-App-Kauf: Store-Plugin noch nicht angebunden.');
     return Promise.resolve(null);
   }
+  if (!LOKAL) return Promise.resolve(null);
   offen = true;
   return new Promise((fertig) => {
     const huelle = document.createElement('div');
