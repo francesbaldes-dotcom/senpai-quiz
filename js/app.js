@@ -5,6 +5,7 @@ import * as online from './online.js';
 import { speicherBereit, ladeProfil, speichereProfil } from './speicher.js';
 import { kategorieIcon, abzeichenEmblem, rangEmblem, stationsKnoten, bossKnoten } from './grafik.js';
 import { tagesquizBild, bossBild, kannBildTeilen } from './teilen-bild.js';
+import { spielernameErlaubt, SPIELERNAME_VERBOTEN } from './spielername.js';
 
 const app = document.getElementById('app');
 
@@ -1868,6 +1869,15 @@ function infoScreen() {
       <p style="font-size:13px;font-weight:700">Prototyp · ${FRAGEN.length} Fragen</p>
     </div>
     ${kontoBereich()}
+    <div class="karte info-text">
+      <p><b>Rechtliches</b></p>
+      <p class="rechts-links">
+        <a href="impressum.html" target="_blank" rel="noopener">Impressum</a>
+        <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutz</a>
+        <a href="nutzungsbedingungen.html" target="_blank" rel="noopener">Nutzungsbedingungen</a>
+      </p>
+      <p class="kleingedruckt">Kontakt: <a href="mailto:francesbaldes+senpai@gmail.com">francesbaldes+senpai@gmail.com</a></p>
+    </div>
   </section>`;
 }
 
@@ -2044,6 +2054,10 @@ Object.assign(aktionen, {
     const name = o.nameEingabe.trim();
     if (!/^[A-Za-z0-9_]{3,20}$/.test(name)) {
       o.fehler = 'Der Spielername braucht 3 bis 20 Zeichen: Buchstaben, Zahlen oder _';
+      return render();
+    }
+    if (!spielernameErlaubt(name)) {
+      o.fehler = SPIELERNAME_VERBOTEN;
       return render();
     }
     o.laedt = true;
@@ -2228,6 +2242,7 @@ function accountScreen() {
         <button class="knopf knopf-rot" type="submit" ${o.laedt ? 'disabled' : ''}>${o.laedt ? 'Einen Moment …' : 'Account erstellen'}</button>
       </form>
       <p class="kleingedruckt">Wir brauchen keine E-Mail-Adresse. Dein Account ist an dieses Gerät gebunden: Wenn du die App löschst, ist er weg.</p>
+      <p class="kleingedruckt">Mit „Account erstellen“ akzeptierst du die <a href="nutzungsbedingungen.html" target="_blank" rel="noopener">Nutzungsbedingungen</a>. Was wir speichern, steht in der <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
     </div>
     ${tabbar('duelle')}
   </section>`;
