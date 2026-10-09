@@ -856,7 +856,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-272` *Auswahl* – Welchen Beruf strebt Leorio an?  
   **Arzt** · Anwalt · Koch · Lehrer
 - `f-274` *Auswahl* – In welche Truppe wird Asta aufgenommen?  
-  **Black Bulls (Schwarze Stiere)** · Golden Dawn (Goldene Morgendämmerung) · Silver Eagles (Silberne Adler) · Crimson Lions (Purpurne Löwen)
+  **Black Bulls (Schwarzer Stier)** · Golden Dawn (Goldene Morgendämmerung) · Silver Eagles (Silberne Adler) · Crimson Lions (Purpurne Löwen)
 - `f-275` *Auswahl* – Wie viele Blätter hat das Kleeblatt auf Astas Grimoire?  
   **Fünf** · Drei · Vier · Sieben
 - `f-277` *Auswahl* – Wie heißt die Prinzessin, die die Seven Deadly Sins sucht?  
@@ -1234,7 +1234,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-140` *Auswahl* – Wer zeichnet „Blue Lock“?  
   **Yusuke Nomura** · Haruichi Furudate · Takehiko Inoue · Muneyuki Kaneshiro
 - `o-164` *Auswahl* – Wer verrät die Soul Society und wird zum großen Gegner?  
-  **Sosuke Aizen** · Gin Ichimaru · Byakuya Kuchiki · Kenpachi Zaraki
+  **Sosuke Aizen** · Toshiro Hitsugaya · Byakuya Kuchiki · Kenpachi Zaraki
 
 ### Neue Hits
 
@@ -1301,9 +1301,9 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-156` *Auswahl* – Woraus stellt Senku das Mittel zum Entsteinern her?  
   **Aus Salpetersäure und Alkohol** · Aus Kohle und Wasser · Aus Honig und Salz · Aus Eisen und Schwefel
 - `o-157` *Schätzfrage* – Wie viele Bände hat der Manga „Dr. Stone“?  
-  **26** (Schieberegler 10–50, ±2 zählt als knapp)
+  **27** (Schieberegler 10–50, ±2 zählt als knapp)
 - `o-160` *Auswahl* – Wie heißt die junge Chinesin aus einer Mafia-Familie, die in Sakamotos Laden arbeitet?  
-  **Lu Xiaotang** · Osaragi · Mafuyu Seba · Natsuki Seo
+  **Lu Shaotang (Lu Xiaotang)** · Osaragi · Mafuyu Seba · Natsuki Seo
 - `o-161` *Auswahl* – Wer hat „Kagurabachi“ erschaffen?  
   **Takeru Hokazono** · Yuto Suzuki · Yukinobu Tatsu · Gege Akutami
 - `o-166` *Auswahl* – Wer schuf den ursprünglichen Webcomic „One-Punch Man“?  
@@ -1496,4 +1496,4 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-169` *Auswahl* – Was ist ein „Kakioroshi“?  
   **Neu gezeichnete Bonusseiten, die nur im Sammelband erscheinen** · Eine Farbseite im Magazin · Ein Vorab-Kapitel · Ein Fan-Manga
 - `o-170` *Auswahl* – Wie nennt man die lautmalerischen Schriftzeichen in Manga-Panels, etwa für Herzklopfen?  
-  **Onomatopoesie (Giongo und Gitaigo)** · Furigana · Kanji · Rubi
+  **Onomatopoesie (Giongo und Gitaigo)** · Furigana · Kanji · Hiragana

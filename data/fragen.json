@@ -9058,10 +9058,10 @@
    "type": "estimate",
    "question": "Wie viele Bände hat der Manga „Dr. Stone“?",
    "answers": [
-    "26"
+    "27"
    ],
    "correct": 0,
-   "answer": 26,
+   "answer": 27,
    "min": 10,
    "max": 50,
    "tolerance": 2
@@ -9255,7 +9255,7 @@
    "type": "multiple_choice",
    "question": "Wie heißt die junge Chinesin aus einer Mafia-Familie, die in Sakamotos Laden arbeitet?",
    "answers": [
-    "Lu Xiaotang",
+    "Lu Shaotang (Lu Xiaotang)",
     "Osaragi",
     "Mafuyu Seba",
     "Natsuki Seo"
@@ -9450,7 +9450,7 @@
    "question": "Wer verrät die Soul Society und wird zum großen Gegner?",
    "answers": [
     "Sosuke Aizen",
-    "Gin Ichimaru",
+    "Toshiro Hitsugaya",
     "Byakuya Kuchiki",
     "Kenpachi Zaraki"
    ],
@@ -9491,7 +9491,7 @@
    "type": "multiple_choice",
    "question": "In welche Truppe wird Asta aufgenommen?",
    "answers": [
-    "Black Bulls (Schwarze Stiere)",
+    "Black Bulls (Schwarzer Stier)",
     "Golden Dawn (Goldene Morgendämmerung)",
     "Silver Eagles (Silberne Adler)",
     "Crimson Lions (Purpurne Löwen)"
@@ -9858,7 +9858,7 @@
     "Onomatopoesie (Giongo und Gitaigo)",
     "Furigana",
     "Kanji",
-    "Rubi"
+    "Hiragana"
    ],
    "correct": 0
   },
