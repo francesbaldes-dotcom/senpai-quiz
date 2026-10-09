@@ -1,8 +1,8 @@
-# Senpai Quiz – 400 Fragen
+# Senpai Quiz – 500 Fragen
 
 Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Antworten.
 
-## Einsteiger (140 Fragen)
+## Einsteiger (174 Fragen)
 
 ### Shōnen-Klassiker
 
@@ -110,6 +110,32 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Detektiv Conan** · Death Note · Psycho-Pass · Spy x Family
 - `e-131` *Auswahl* – Welche Organisation hat Shinichi Kudo vergiftet?  
   **Die Schwarze Organisation** · Akatsuki · Die Marine · Die Phantom-Truppe
+- `e-141` *Auswahl* – Mit wem reist Ash zu Beginn durch die Kanto-Region?  
+  **Mit Misty und Rocko** · Mit Lilia und Maike · Mit Serena und Citron · Mit Lucia und Maximilian
+- `e-142` *Auswahl* – Wie heißt das Trio von Team Rocket, das Ash ständig verfolgt?  
+  **Jessie, James und Mauzi** · Giovanni, Butch und Cassidy · Rocko, Misty und Tracey · Rot, Blau und Grün
+- `e-143` *Auswahl* – Welches Pokémon von Team Rocket kann wie ein Mensch sprechen?  
+  **Mauzi** · Woingenau · Smettbo · Arbok
+- `e-144` *Auswahl* – Zu welchem Pokémon entwickelt sich Glumanda am Ende?  
+  **Glurak** · Glutexo · Lohgock · Flamara
+- `e-145` *Auswahl* – Von welchem Professor bekommt Ash in Alabastia sein erstes Pokémon?  
+  **Professor Eich** · Professor Lind · Professor Birk · Professor Esche
+- `e-146` *Auswahl* – Welche drei Starter-Pokémon stehen in der Kanto-Region zur Wahl?  
+  **Bisasam, Glumanda und Schiggy** · Endivie, Feurigel und Karnimani · Pikachu, Evoli und Mew · Geckarbor, Flemmli und Hydropi
+- `e-147` *Wahr/Falsch* – Evoli kann sich in mehrere verschiedene Pokémon entwickeln.  
+  **Wahr** · Falsch
+- `e-148` *Wer bin ich?* – Wer bin ich? Ich bin ein rosa, kugelrundes Pokémon. / Ich singe gern, aber dabei schlafen alle ein. / Danach male ich den Schlafenden ins Gesicht.  
+  **Pummeluff** · Pikachu · Relaxo · Piepi
+- `e-149` *Auswahl* – Was muss ein Trainer sammeln, um an der Pokémon-Liga einer Region teilzunehmen?  
+  **Acht Arena-Orden** · Alle Pokémon der Region · Hundert Pokébälle · Drei legendäre Pokémon
+- `e-150` *Auswahl* – Wie heißt Erens bester Freund, der klug, aber körperlich schwach ist?  
+  **Armin Arlert** · Jean Kirstein · Connie Springer · Reiner Braun
+- `e-151` *Auswahl* – Mit welchem Gerät bewegen sich die Soldaten durch die Luft?  
+  **Mit dem 3D-Manöver-Apparat** · Mit einem Jetpack · Mit einer Greifhaken-Pistole · Mit Flügeln aus Stahl
+- `e-152` *Auswahl* – Wo sind die Titanen verwundbar?  
+  **Am Nacken** · Am Herzen · An den Augen · An den Fersen
+- `e-153` *Wahr/Falsch* – Die Titanen fressen Menschen, obwohl sie keine Nahrung brauchen.  
+  **Wahr** · Falsch
 
 ### Shōjo & Romance
 
@@ -178,6 +204,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Suzume** · Your Name. · Weathering With You · Belle
 - `e-140` *Auswahl* – Welcher Anime-Film wurde 2020 zum erfolgreichsten Kinofilm aller Zeiten in Japan?  
   **Demon Slayer: Mugen Train** · Your Name. · Chihiros Reise ins Zauberland · One Piece Film: Red
+- `e-173` *Auswahl* – Wie heißen die kleinen schwarzen Rußwesen in „Mein Nachbar Totoro“ und „Chihiros Reise ins Zauberland“?  
+  **Rußmännchen** · Kodama · Kappa · Tanuki
+- `e-174` *Auswahl* – In welchem One-Piece-Kinofilm von 2022 tritt die Sängerin Uta auf?  
+  **One Piece Film: Red** · One Piece: Stampede · One Piece Film: Gold · One Piece: Strong World
 
 ### Manga & Mangaka
 
@@ -210,6 +240,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-136` *Auswahl* – In welchem Jahrzehnt begann der Manga-Boom in Deutschland mit „Dragon Ball“ und „Sailor Moon“?  
   **1990er** · 1970er · 1980er · 2000er
 - `e-137` *Auswahl* – Welcher deutsche Verlag veröffentlicht „Naruto“?  
+  **Carlsen** · Egmont Manga · Tokyopop · Altraverse
+- `e-171` *Auswahl* – Was sind „Chibi“-Zeichnungen?  
+  **Figuren mit übergroßem Kopf und winzigem Körper, oft für Comedy** · Realistische Porträts · Hintergrundbilder · Farbseiten
+- `e-172` *Auswahl* – Welcher deutsche Verlag veröffentlicht „Attack on Titan“?  
   **Carlsen** · Egmont Manga · Tokyopop · Altraverse
 
 ### Neue Serien
@@ -260,6 +294,34 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `e-095` *Auswahl* – Wie heißt die Eliteschule, die Anya in „Spy x Family“ besucht?  
   **Eden Academy** · U.A. High · Ouran-Akademie · Shuchiin-Akademie
+- `e-154` *Auswahl* – Mit welcher Waffe kämpfen die Dämonenjäger in „Demon Slayer“?  
+  **Mit Nichirin-Schwertern** · Mit Bögen · Mit Pistolen · Mit Speeren
+- `e-155` *Auswahl* – Wie heißt Tanjiros ängstlicher Freund mit den gelben Haaren?  
+  **Zenitsu Agatsuma** · Inosuke Hashibira · Giyu Tomioka · Genya Shinazugawa
+- `e-156` *Wahr/Falsch* – Nezuko wird tagsüber in einer Holzkiste auf Tanjiros Rücken getragen, um sie vor der Sonne zu schützen.  
+  **Wahr** · Falsch
+- `e-157` *Auswahl* – Wie heißt die Schule, an der Yuji Itadori zum Jujuzisten ausgebildet wird?  
+  **Tokyo Jujutsu High** · U.A. High · Konoha-Akademie · Eden Academy
+- `e-158` *Auswahl* – Welche Haarfarbe hat Satoru Gojo?  
+  **Weiß** · Schwarz · Blond · Blau
+- `e-159` *Auswahl* – Wie heißt das Mädchen in Yujis Team, das mit Hammer und Nägeln kämpft?  
+  **Nobara Kugisaki** · Maki Zenin · Mai Zenin · Utahime Iori
+- `e-160` *Wahr/Falsch* – Yuji Itadori hatte schon vor Sukunas Finger übermenschliche Körperkraft.  
+  **Wahr** · Falsch
+- `e-161` *Auswahl* – Wie heißt Dekus Freundin, die Dinge schwerelos machen kann?  
+  **Ochaco Uraraka** · Momo Yaoyorozu · Tsuyu Asui · Kyoka Jiro
+- `e-162` *Auswahl* – Welche Kräfte hat Shoto Todoroki?  
+  **Eis und Feuer** · Explosionen · Schwerkraft · Unsichtbarkeit
+- `e-163` *Auswahl* – Wie heißt die Schurkenorganisation, die All Might stürzen will?  
+  **Die Liga der Schurken** · Akatsuki · Die Schwarze Organisation · Die Phantom-Truppe
+- `e-164` *Wahr/Falsch* – All Might wird als „Symbol des Friedens“ bezeichnet.  
+  **Wahr** · Falsch
+- `e-165` *Auswahl* – Warum jagt Denji zu Beginn Teufel für die Yakuza?  
+  **Um die Schulden seines Vaters abzubezahlen** · Aus Rache · Aus Langeweile · Weil er ein Held werden will
+- `e-166` *Auswahl* – Wie heißt Denjis ernster Kollege, der einen Vertrag mit dem Fuchs-Teufel hat?  
+  **Aki Hayakawa** · Kishibe · Himeno · Beam
+- `e-167` *Wahr/Falsch* – Denji träumt am Anfang von ganz einfachen Dingen wie Brot mit Marmelade und einer Freundin.  
+  **Wahr** · Falsch
 
 ### Begriffe & Kultur
 
@@ -301,8 +363,14 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Guten Morgen** · Gute Nacht · Danke · Ja
 - `e-135` *Auswahl* – Wie heißt das japanische Kirschblütenfest, bei dem man unter blühenden Bäumen picknickt?  
   **Hanami** · Matsuri · Obon · Tanabata
+- `e-168` *Auswahl* – Was ist ein Kimono?  
+  **Ein traditionelles japanisches Gewand** · Ein Schwert · Ein Reisgericht · Ein Tempel
+- `e-169` *Auswahl* – Was bedeutet „Gomen nasai“?  
+  **Es tut mir leid** · Guten Appetit · Herzlich willkommen · Bis morgen
+- `e-170` *Auswahl* – Was ist ein Torii?  
+  **Das Tor zu einem Shintō-Schrein** · Ein Fischgericht · Eine Papierlaterne · Ein Fächer
 
-## Fan (160 Fragen)
+## Fan (202 Fragen)
 
 ### Shōnen-Klassiker
 
@@ -424,6 +492,34 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Kommissar Megure** · Kommissar Takagi · Kommissar Sato · Kommissar Nakamori
 - `f-150` *Schätzfrage* – In welchem Jahr lief „Detektiv Conan“ erstmals im deutschen Fernsehen auf RTL II?  
   **2002** (Schieberegler 1995–2015, ±1 zählt als knapp)
+- `f-161` *Auswahl* – Welches legendäre Pokémon ist der Hüter des Meeres in „Pokémon 2000“?  
+  **Lugia** · Ho-Oh · Kyogre · Arktos
+- `f-162` *Auswahl* – Wie heißt Ashs Rivale aus Alabastia, der Enkel von Professor Eich?  
+  **Gary Eich** · Paul · Tracey · Richie
+- `f-163` *Auswahl* – Welche Pokémon-Spiele erschienen 1999 als erste in Deutschland?  
+  **Rote und Blaue Edition** · Gold und Silber · Rubin und Saphir · Schwarz und Weiß
+- `f-164` *Auswahl* – Wer löste Ash 2023 als Hauptfigur des Pokémon-Anime ab?  
+  **Liko und Roy** · Goh und Chloe · Serena und Citron · Lucia und Maximilian
+- `f-165` *Wahr/Falsch* – Ash ist im Anime über 25 Jahre lang immer zehn Jahre alt geblieben.  
+  **Wahr** · Falsch
+- `f-166` *Wer bin ich?* – Wer bin ich? Ich bin ein rosa, katzenartiges Pokémon und gelte als Vorfahr aller Pokémon. / Ich bin extrem selten und kann mich unsichtbar machen. / Aus meinen Genen wurde ein mächtiger Klon erschaffen.  
+  **Mew** · Mewtu · Celebi · Jirachi
+- `f-167` *Schätzfrage* – Wie viele Folgen hat die Pokémon-Serie mit Ash als Hauptfigur (1997 bis 2023)?  
+  **1232** (Schieberegler 200–2000, ±100 zählt als knapp)
+- `f-168` *Reihenfolge* – Sortiere die Pokémon-Regionen nach ihrem Auftreten im Anime, die erste zuerst.  
+  **Kanto → Johto → Hoenn → Sinnoh**
+- `f-169` *Auswahl* – Wer ist der Boss von Team Rocket?  
+  **Giovanni** · Cyrus · Maxie · Archie
+- `f-170` *Auswahl* – Wer gilt als stärkster Soldat der Menschheit?  
+  **Levi Ackermann** · Erwin Smith · Hange Zoë · Jean Kirstein
+- `f-171` *Auswahl* – Wie heißen die drei Mauern?  
+  **Maria, Rose und Sina** · Maria, Anna und Eva · Rose, Lilie und Tulpe · Sina, Nina und Mina
+- `f-172` *Auswahl* – Welche Rekrutin isst ständig und wurde berühmt, weil sie beim Appell eine Kartoffel aß?  
+  **Sasha Braus** · Krista Lenz · Ymir · Annie Leonhart
+- `f-173` *Auswahl* – Wer kommandiert den Aufklärungstrupp, als Eren ihm beitritt?  
+  **Erwin Smith** · Dot Pixis · Levi Ackermann · Nile Dok
+- `f-174` *Wer bin ich?* – Wer bin ich? Ich bin klein, aber der stärkste Soldat der Menschheit. / Ich bin besessen von Sauberkeit. / Ich führe ein Sonderkommando im Aufklärungstrupp.  
+  **Levi Ackermann** · Erwin Smith · Reiner Braun · Jean Kirstein
 
 ### Shōjo & Romance
 
@@ -508,6 +604,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **In einen dreibeinigen Kinderstuhl** · In eine Katze · In einen Regenschirm · In einen Vogel
 - `f-160` *Auswahl* – Welcher Film von Mamoru Hosoda handelt von einem Mädchen, das durch die Zeit springen kann?  
   **Das Mädchen, das durch die Zeit sprang** · Summer Wars · Wolfskinder · Belle
+- `f-200` *Auswahl* – Welcher Ghibli-Film handelt von zwei Geschwistern im Zweiten Weltkrieg?  
+  **Die letzten Glühwürmchen** · Der Wind erhebt sich · Porco Rosso · Pom Poko
+- `f-201` *Auswahl* – Wie heißt das Mädchen in „Weathering With You“, das das Wetter aufklaren lassen kann?  
+  **Hina Amano** · Mitsuha Miyamizu · Suzume Iwato · Akari Shinohara
+- `f-202` *Auswahl* – In welchem Film von Mamoru Hosoda tritt Suzu in der virtuellen Welt „U“ als Sängerin Belle auf?  
+  **Belle** · Summer Wars · Mirai · Der Junge und das Biest
 
 ### Manga & Mangaka
 
@@ -549,6 +651,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Shūeisha** · Kōdansha · Shōgakukan · Kadokawa
 - `f-156` *Auswahl* – Was ist „Naruto Massiv“?  
   **Eine Sammelausgabe mit drei Bänden in einem Buch** · Ein Artbook · Ein Roman zur Serie · Eine Farbausgabe
+- `f-198` *Auswahl* – Was ist ein One-Shot?  
+  **Eine in sich abgeschlossene Manga-Geschichte in einem Kapitel** · Ein Manga mit nur einer Figur · Eine einzelne Farbseite · Ein Anime-Kurzfilm
+- `f-199` *Auswahl* – Womit erzeugen Mangaka traditionell Grautöne und Schattierungen?  
+  **Mit Rasterfolien (Screentones)** · Mit Wasserfarben · Mit Kohle · Mit Kreide
 
 ### Neue Serien
 
@@ -604,6 +710,44 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Chainsaw Man** · Jujutsu Kaisen · Devilman Crybaby · Fire Force
 - `f-109` *Reihenfolge* – Sortiere diese Anime nach ihrem Start, den ältesten zuerst.  
   **My Hero Academia (2016) → Jujutsu Kaisen (2020) → Chainsaw Man (2022) → Solo Leveling (2024)**
+- `f-175` *Auswahl* – In welcher Epoche spielt „Demon Slayer“?  
+  **In der Taishō-Zeit (1910er und 1920er Jahre)** · In der Edo-Zeit · In der Heian-Zeit · In der Gegenwart
+- `f-176` *Auswahl* – Welcher Hashira verschont Tanjiro und Nezuko zu Beginn und schickt ihn zu seinem Lehrmeister?  
+  **Giyu Tomioka** · Kyojuro Rengoku · Tengen Uzui · Sanemi Shinazugawa
+- `f-177` *Auswahl* – Was ist das Hinokami Kagura?  
+  **Ein Tanz aus Tanjiros Familie, aus dem seine Sonnen-Atmung hervorgeht** · Ein Heilritual der Dämonenjäger · Ein Schwert aus Scharlachsand · Ein Dämon in Fuchsgestalt
+- `f-178` *Wer bin ich?* – Wer bin ich? Ich bin die Insekten-Hashira. / Ich bin zu schwach, einem Dämon den Kopf abzuschlagen, also nutze ich Gift. / Ich lächle immer, auch wenn ich wütend bin.  
+  **Shinobu Kocho** · Mitsuri Kanroji · Kanao Tsuyuri · Tamayo
+- `f-179` *Auswahl* – Wer ist Megumi Fushiguros Vater?  
+  **Toji Fushiguro** · Naoya Zenin · Satoru Gojo · Masamichi Yaga
+- `f-180` *Auswahl* – Was bewirkt eine „Domain Expansion“ (Gebietserweiterung)?  
+  **Sie erschafft einen eigenen Raum, in dem die Angriffe des Anwenders garantiert treffen** · Sie heilt alle Verbündeten · Sie lässt den Anwender fliehen · Sie verdoppelt die Fluchenergie
+- `f-181` *Auswahl* – Welches Tier ist ein Mitschüler an der Jujutsu-Schule und spricht wie ein Mensch?  
+  **Ein Panda** · Ein Fuchs · Eine Katze · Ein Rabe
+- `f-182` *Auswahl* – Wer ist die Hauptfigur des Vorgängers „Jujutsu Kaisen 0“?  
+  **Yuta Okkotsu** · Yuji Itadori · Kento Nanami · Toge Inumaki
+- `f-183` *Wer bin ich?* – Wer bin ich? Ich war Büroangestellter, bevor ich zur Jujutsu-Welt zurückkehrte. / Ich hasse Überstunden. / Meine Technik teilt Gegner im Verhältnis 7 zu 3.  
+  **Kento Nanami** · Satoru Gojo · Aoi Todo · Suguru Geto
+- `f-184` *Auswahl* – Wer führt die Liga der Schurken an?  
+  **Tomura Shigaraki** · Dabi · Himiko Toga · Stain
+- `f-185` *Auswahl* – Welche Schülerin mit Froschkräften sagt ständig „Kero“?  
+  **Tsuyu Asui** · Mina Ashido · Toru Hagakure · Kyoka Jiro
+- `f-186` *Auswahl* – Wie heißt der Klassenlehrer der 1-A, der Kräfte anderer mit seinem Blick löschen kann?  
+  **Shota Aizawa (Eraser Head)** · All Might · Present Mic · Midnight
+- `f-187` *Auswahl* – Wer wird nach All Mights Rückzug die Nummer eins der Helden?  
+  **Endeavor** · Hawks · Best Jeanist · Edgeshot
+- `f-188` *Wer bin ich?* – Wer bin ich? Ich bin eine Schurkin mit blonden Haarknoten. / Ich kann mich in Menschen verwandeln, deren Blut ich trinke. / Ich bin auf verstörende Weise in Deku und Ochaco verliebt.  
+  **Himiko Toga** · Mina Ashido · Nejire Hado · Mirko
+- `f-189` *Auswahl* – Welches Studio animiert „My Hero Academia“?  
+  **Bones** · MAPPA · ufotable · Wit Studio
+- `f-190` *Auswahl* – Wie heißt Powers Katze?  
+  **Nyako** · Pochita · Tama · Meowth
+- `f-191` *Auswahl* – Welcher Teufel ist in „Chainsaw Man“ besonders mächtig, weil die Menschen ihn so sehr fürchten?  
+  **Der Waffen-Teufel** · Der Katzen-Teufel · Der Tomaten-Teufel · Der Fisch-Teufel
+- `f-192` *Auswahl* – Was ist Reze in Wahrheit?  
+  **Ein Bomben-Teufel-Hybrid** · Ein normales Mädchen · Eine Teufelsjägerin · Ein Engel
+- `f-193` *Wer bin ich?* – Wer bin ich? Ich bin Teufelsjäger der öffentlichen Sicherheit. / Ich will den Waffen-Teufel töten, der meine Familie auslöschte. / Ich rauche und ertrage Denji und Power nur mit Mühe.  
+  **Aki Hayakawa** · Kishibe · Denji · Angel Devil
 
 ### Begriffe & Kultur
 
@@ -641,8 +785,16 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Düsseldorf** · Hamburg · Dortmund · Kassel
 - `f-154` *Wahr/Falsch* – Die Serie „Heidi“ von 1974 wurde in Japan produziert, Hayao Miyazaki arbeitete daran mit.  
   **Wahr** · Falsch
+- `f-194` *Auswahl* – Was ist ein Maid Café?  
+  **Ein Café, in dem die Bedienung in Dienstmädchen-Kostümen die Gäste wie Herrschaften behandelt** · Ein Café nur für Frauen · Ein Café mit Katzen · Ein Café in einem Tempel
+- `f-195` *Auswahl* – Was ist ein Simulcast?  
+  **Eine Anime-Folge, die fast zeitgleich mit Japan im Ausland gestreamt wird** · Eine Synchronfassung · Ein Kinofilm zur Serie · Ein Hörspiel
+- `f-196` *Auswahl* – Was bedeutet „Nakama“?  
+  **Kameraden oder enge Gefährten** · Feinde · Lehrer · Eltern
+- `f-197` *Wahr/Falsch* – Das Wort „Manga“ wurde durch den Künstler Hokusai bekannt, der 1814 seine Skizzenbücher „Hokusai Manga“ nannte.  
+  **Wahr** · Falsch
 
-## Otaku (100 Fragen)
+## Otaku (124 Fragen)
 
 ### Shōnen-Klassiker
 
@@ -722,6 +874,22 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **FBI** · CIA · Interpol · Tokioter Polizei
 - `o-093` *Schätzfrage* – Wie viele Kinofilme zu „Detektiv Conan“ erschienen bis einschließlich 2025?  
   **28** (Schieberegler 5–50, ±3 zählt als knapp)
+- `o-101` *Auswahl* – Welche Pokédex-Nummer hat Pikachu?  
+  **025** · 001 · 150 · 133
+- `o-102` *Auswahl* – Welches Pokémon fängt Ash im Anime als Erstes selbst?  
+  **Raupy** · Taubsi · Glumanda · Schiggy
+- `o-103` *Auswahl* – Welche Folge wurde 1997 in Japan wegen Blitzlichteffekten berüchtigt und nie außerhalb Japans gezeigt?  
+  **Die Porygon-Folge** · Die Mewtu-Folge · Die Pummeluff-Folge · Die Dratini-Folge
+- `o-104` *Auswahl* – Wie heißt Ashs Pokémon, das sich weigerte, sich zu entwickeln, und ihm später als Glurak nicht gehorchte?  
+  **Glumanda** · Schiggy · Bisasam · Taubsi
+- `o-105` *Auswahl* – In welchen Titanen verwandelt sich Annie Leonhart?  
+  **In den Weiblichen Titanen** · In den Kolossalen Titanen · In den Gepanzerten Titanen · In den Bestien-Titanen
+- `o-106` *Auswahl* – Wie heißt die Insel, auf der die drei Mauern stehen?  
+  **Paradis** · Marley · Hizuru · Eldia
+- `o-107` *Auswahl* – Welcher Titan kann Erinnerungen und Willen aller Eldianer beeinflussen?  
+  **Der Urtitan** · Der Bestien-Titan · Der Kriegshammer-Titan · Der Kolossale Titan
+- `o-108` *Schätzfrage* – In welchem Jahr endete der Manga „Attack on Titan“?  
+  **2021** (Schieberegler 2010–2030, ±1 zählt als knapp)
 
 ### Shōjo & Romance
 
@@ -768,6 +936,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ghost in the Shell** · Akira · Perfect Blue · Neon Genesis Evangelion
 - `o-100` *Auswahl* – In welchem Film von Satoshi Kon wird ein ehemaliges Idol von einem Stalker verfolgt?  
   **Perfect Blue** · Paprika · Millennium Actress · Tokyo Godfathers
+- `o-123` *Auswahl* – Welcher Ghibli-Film erzählt vom Flugzeugkonstrukteur Jiro Horikoshi?  
+  **Der Wind erhebt sich** · Porco Rosso · Das Schloss im Himmel · Der Junge und der Reiher
+- `o-124` *Auswahl* – In welchem Film von Satoshi Kon finden drei Obdachlose an Weihnachten ein Baby?  
+  **Tokyo Godfathers** · Paprika · Perfect Blue · Millennium Actress
 
 ### Manga & Mangaka
 
@@ -795,6 +967,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Nobuhiro Watsuki (Rurouni Kenshin)** · Akira Toriyama · Masashi Kishimoto · Tite Kubo
 - `o-097` *Auswahl* – In welchem Magazin erscheint „Detektiv Conan“ in Japan?  
   **Weekly Shōnen Sunday** · Weekly Shōnen Jump · Weekly Shōnen Magazine · Ribon
+- `o-118` *Auswahl* – In welchem Magazin erscheint der zweite Teil von „Chainsaw Man“?  
+  **Shōnen Jump+ (online)** · Weekly Shōnen Jump · Weekly Shōnen Magazine · Big Comic
+- `o-121` *Auswahl* – Welcher deutsche Verlag veröffentlicht „Solo Leveling“?  
+  **Altraverse** · Carlsen · Egmont Manga · Tokyopop
+- `o-122` *Auswahl* – In welchem Magazin erschien „Attack on Titan“ in Japan?  
+  **Bessatsu Shōnen Magazine** · Weekly Shōnen Jump · Weekly Shōnen Sunday · Shōnen Jump+
 
 ### Neue Serien
 
@@ -838,6 +1016,24 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **63194** · 22194 · 81194 · 11194
 - `o-071` *Auswahl* – Wie heißt Chihiros Schwert in „Kagurabachi“, das Goldfische beschwört?  
   **Enten** · Kuregumo · Shinuchi · Zangetsu
+- `o-109` *Auswahl* – Wer ist der Oberste Mond 1 unter Muzans Dämonen?  
+  **Kokushibo** · Akaza · Doma · Gyutaro
+- `o-110` *Schätzfrage* – Wie viele Bände hat der Manga „Demon Slayer“?  
+  **23** (Schieberegler 10–50, ±2 zählt als knapp)
+- `o-111` *Auswahl* – Wer war Gojos bester Freund in der Schulzeit und wandte sich später gegen die Jujutsu-Welt?  
+  **Suguru Geto** · Kento Nanami · Toji Fushiguro · Masamichi Yaga
+- `o-112` *Auswahl* – Was geschieht mit Gojo beim Shibuya-Vorfall?  
+  **Er wird in der Gefängnis-Domäne versiegelt** · Er besiegt Sukuna endgültig · Er verliert seine Sechs Augen · Er wechselt die Seiten
+- `o-113` *Schätzfrage* – Wie viele Bände hat der Manga „Jujutsu Kaisen“?  
+  **30** (Schieberegler 10–60, ±2 zählt als knapp)
+- `o-114` *Auswahl* – Wie lautet All Mights bürgerlicher Name?  
+  **Toshinori Yagi** · Hisashi Midoriya · Sorahiko Torino · Enji Todoroki
+- `o-115` *Auswahl* – Welcher Schurke hat All Might Jahre vor der Handlung schwer verwundet?  
+  **All For One** · Stain · Overhaul · Tomura Shigaraki
+- `o-116` *Schätzfrage* – In welchem Jahr startete der Manga „My Hero Academia“?  
+  **2014** (Schieberegler 2000–2025, ±1 zählt als knapp)
+- `o-117` *Auswahl* – Wie heißt der Kriegs-Teufel, der sich in Teil 2 den Körper mit Asa Mitaka teilt?  
+  **Yoru** · Makima · Nayuta · Fami
 
 ### Begriffe & Kultur
 
@@ -861,3 +1057,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **ZDF** · RTL II · Sat.1 · Tele 5
 - `o-095` *Auswahl* – Was bedeutet „Shōnen“ wörtlich?  
   **Junge** · Mädchen · Held · Kampf
+- `o-119` *Auswahl* – Was ist ein Oni?  
+  **Ein Dämon oder Oger aus der japanischen Mythologie** · Eine Katze · Ein Reiskuchen · Ein Samurai
+- `o-120` *Auswahl* – Wie heißt das jährliche Event des Verlags Shūeisha in Chiba, bei dem neue Jump-Anime und -Manga angekündigt werden?  
+  **Jump Festa** · Comiket · AnimeJapan · Wonder Festival

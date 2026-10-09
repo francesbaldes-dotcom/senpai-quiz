@@ -5719,6 +5719,1430 @@
     "Tokyo Godfathers"
    ],
    "correct": 0
+  },
+  {
+   "id": "e-141",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Mit wem reist Ash zu Beginn durch die Kanto-Region?",
+   "answers": [
+    "Mit Misty und Rocko",
+    "Mit Lilia und Maike",
+    "Mit Serena und Citron",
+    "Mit Lucia und Maximilian"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-142",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Trio von Team Rocket, das Ash ständig verfolgt?",
+   "answers": [
+    "Jessie, James und Mauzi",
+    "Giovanni, Butch und Cassidy",
+    "Rocko, Misty und Tracey",
+    "Rot, Blau und Grün"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-143",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Pokémon von Team Rocket kann wie ein Mensch sprechen?",
+   "answers": [
+    "Mauzi",
+    "Woingenau",
+    "Smettbo",
+    "Arbok"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-144",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Zu welchem Pokémon entwickelt sich Glumanda am Ende?",
+   "answers": [
+    "Glurak",
+    "Glutexo",
+    "Lohgock",
+    "Flamara"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-145",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Von welchem Professor bekommt Ash in Alabastia sein erstes Pokémon?",
+   "answers": [
+    "Professor Eich",
+    "Professor Lind",
+    "Professor Birk",
+    "Professor Esche"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-146",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche drei Starter-Pokémon stehen in der Kanto-Region zur Wahl?",
+   "answers": [
+    "Bisasam, Glumanda und Schiggy",
+    "Endivie, Feurigel und Karnimani",
+    "Pikachu, Evoli und Mew",
+    "Geckarbor, Flemmli und Hydropi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-147",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Evoli kann sich in mehrere verschiedene Pokémon entwickeln.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-148",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Pummeluff",
+    "Pikachu",
+    "Relaxo",
+    "Piepi"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin ein rosa, kugelrundes Pokémon.",
+    "Ich singe gern, aber dabei schlafen alle ein.",
+    "Danach male ich den Schlafenden ins Gesicht."
+   ]
+  },
+  {
+   "id": "e-149",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was muss ein Trainer sammeln, um an der Pokémon-Liga einer Region teilzunehmen?",
+   "answers": [
+    "Acht Arena-Orden",
+    "Alle Pokémon der Region",
+    "Hundert Pokébälle",
+    "Drei legendäre Pokémon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-161",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches legendäre Pokémon ist der Hüter des Meeres in „Pokémon 2000“?",
+   "answers": [
+    "Lugia",
+    "Ho-Oh",
+    "Kyogre",
+    "Arktos"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-162",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Ashs Rivale aus Alabastia, der Enkel von Professor Eich?",
+   "answers": [
+    "Gary Eich",
+    "Paul",
+    "Tracey",
+    "Richie"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-163",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Pokémon-Spiele erschienen 1999 als erste in Deutschland?",
+   "answers": [
+    "Rote und Blaue Edition",
+    "Gold und Silber",
+    "Rubin und Saphir",
+    "Schwarz und Weiß"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-164",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer löste Ash 2023 als Hauptfigur des Pokémon-Anime ab?",
+   "answers": [
+    "Liko und Roy",
+    "Goh und Chloe",
+    "Serena und Citron",
+    "Lucia und Maximilian"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-165",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Ash ist im Anime über 25 Jahre lang immer zehn Jahre alt geblieben.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-166",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Mew",
+    "Mewtu",
+    "Celebi",
+    "Jirachi"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin ein rosa, katzenartiges Pokémon und gelte als Vorfahr aller Pokémon.",
+    "Ich bin extrem selten und kann mich unsichtbar machen.",
+    "Aus meinen Genen wurde ein mächtiger Klon erschaffen."
+   ]
+  },
+  {
+   "id": "f-167",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "Wie viele Folgen hat die Pokémon-Serie mit Ash als Hauptfigur (1997 bis 2023)?",
+   "answers": [
+    "1232"
+   ],
+   "correct": 0,
+   "answer": 1232,
+   "min": 200,
+   "max": 2000,
+   "tolerance": 100
+  },
+  {
+   "id": "f-168",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "order",
+   "question": "Sortiere die Pokémon-Regionen nach ihrem Auftreten im Anime, die erste zuerst.",
+   "answers": [
+    "Kanto",
+    "Johto",
+    "Hoenn",
+    "Sinnoh"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-169",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist der Boss von Team Rocket?",
+   "answers": [
+    "Giovanni",
+    "Cyrus",
+    "Maxie",
+    "Archie"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-101",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Pokédex-Nummer hat Pikachu?",
+   "answers": [
+    "025",
+    "001",
+    "150",
+    "133"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-102",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Pokémon fängt Ash im Anime als Erstes selbst?",
+   "answers": [
+    "Raupy",
+    "Taubsi",
+    "Glumanda",
+    "Schiggy"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-103",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Folge wurde 1997 in Japan wegen Blitzlichteffekten berüchtigt und nie außerhalb Japans gezeigt?",
+   "answers": [
+    "Die Porygon-Folge",
+    "Die Mewtu-Folge",
+    "Die Pummeluff-Folge",
+    "Die Dratini-Folge"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-104",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Ashs Pokémon, das sich weigerte, sich zu entwickeln, und ihm später als Glurak nicht gehorchte?",
+   "answers": [
+    "Glumanda",
+    "Schiggy",
+    "Bisasam",
+    "Taubsi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-150",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Erens bester Freund, der klug, aber körperlich schwach ist?",
+   "answers": [
+    "Armin Arlert",
+    "Jean Kirstein",
+    "Connie Springer",
+    "Reiner Braun"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-151",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Mit welchem Gerät bewegen sich die Soldaten durch die Luft?",
+   "answers": [
+    "Mit dem 3D-Manöver-Apparat",
+    "Mit einem Jetpack",
+    "Mit einer Greifhaken-Pistole",
+    "Mit Flügeln aus Stahl"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-152",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wo sind die Titanen verwundbar?",
+   "answers": [
+    "Am Nacken",
+    "Am Herzen",
+    "An den Augen",
+    "An den Fersen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-153",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Die Titanen fressen Menschen, obwohl sie keine Nahrung brauchen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-170",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer gilt als stärkster Soldat der Menschheit?",
+   "answers": [
+    "Levi Ackermann",
+    "Erwin Smith",
+    "Hange Zoë",
+    "Jean Kirstein"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-171",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißen die drei Mauern?",
+   "answers": [
+    "Maria, Rose und Sina",
+    "Maria, Anna und Eva",
+    "Rose, Lilie und Tulpe",
+    "Sina, Nina und Mina"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-172",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Rekrutin isst ständig und wurde berühmt, weil sie beim Appell eine Kartoffel aß?",
+   "answers": [
+    "Sasha Braus",
+    "Krista Lenz",
+    "Ymir",
+    "Annie Leonhart"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-173",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer kommandiert den Aufklärungstrupp, als Eren ihm beitritt?",
+   "answers": [
+    "Erwin Smith",
+    "Dot Pixis",
+    "Levi Ackermann",
+    "Nile Dok"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-174",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Levi Ackermann",
+    "Erwin Smith",
+    "Reiner Braun",
+    "Jean Kirstein"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin klein, aber der stärkste Soldat der Menschheit.",
+    "Ich bin besessen von Sauberkeit.",
+    "Ich führe ein Sonderkommando im Aufklärungstrupp."
+   ]
+  },
+  {
+   "id": "o-105",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "In welchen Titanen verwandelt sich Annie Leonhart?",
+   "answers": [
+    "In den Weiblichen Titanen",
+    "In den Kolossalen Titanen",
+    "In den Gepanzerten Titanen",
+    "In den Bestien-Titanen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-106",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Insel, auf der die drei Mauern stehen?",
+   "answers": [
+    "Paradis",
+    "Marley",
+    "Hizuru",
+    "Eldia"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-107",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welcher Titan kann Erinnerungen und Willen aller Eldianer beeinflussen?",
+   "answers": [
+    "Der Urtitan",
+    "Der Bestien-Titan",
+    "Der Kriegshammer-Titan",
+    "Der Kolossale Titan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-108",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "In welchem Jahr endete der Manga „Attack on Titan“?",
+   "answers": [
+    "2021"
+   ],
+   "correct": 0,
+   "answer": 2021,
+   "min": 2010,
+   "max": 2030,
+   "tolerance": 1
+  },
+  {
+   "id": "e-154",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Mit welcher Waffe kämpfen die Dämonenjäger in „Demon Slayer“?",
+   "answers": [
+    "Mit Nichirin-Schwertern",
+    "Mit Bögen",
+    "Mit Pistolen",
+    "Mit Speeren"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-155",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Tanjiros ängstlicher Freund mit den gelben Haaren?",
+   "answers": [
+    "Zenitsu Agatsuma",
+    "Inosuke Hashibira",
+    "Giyu Tomioka",
+    "Genya Shinazugawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-156",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Nezuko wird tagsüber in einer Holzkiste auf Tanjiros Rücken getragen, um sie vor der Sonne zu schützen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-175",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "In welcher Epoche spielt „Demon Slayer“?",
+   "answers": [
+    "In der Taishō-Zeit (1910er und 1920er Jahre)",
+    "In der Edo-Zeit",
+    "In der Heian-Zeit",
+    "In der Gegenwart"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-176",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welcher Hashira verschont Tanjiro und Nezuko zu Beginn und schickt ihn zu seinem Lehrmeister?",
+   "answers": [
+    "Giyu Tomioka",
+    "Kyojuro Rengoku",
+    "Tengen Uzui",
+    "Sanemi Shinazugawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-177",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was ist das Hinokami Kagura?",
+   "answers": [
+    "Ein Tanz aus Tanjiros Familie, aus dem seine Sonnen-Atmung hervorgeht",
+    "Ein Heilritual der Dämonenjäger",
+    "Ein Schwert aus Scharlachsand",
+    "Ein Dämon in Fuchsgestalt"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-178",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Shinobu Kocho",
+    "Mitsuri Kanroji",
+    "Kanao Tsuyuri",
+    "Tamayo"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin die Insekten-Hashira.",
+    "Ich bin zu schwach, einem Dämon den Kopf abzuschlagen, also nutze ich Gift.",
+    "Ich lächle immer, auch wenn ich wütend bin."
+   ]
+  },
+  {
+   "id": "o-109",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist der Oberste Mond 1 unter Muzans Dämonen?",
+   "answers": [
+    "Kokushibo",
+    "Akaza",
+    "Doma",
+    "Gyutaro"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-110",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "estimate",
+   "question": "Wie viele Bände hat der Manga „Demon Slayer“?",
+   "answers": [
+    "23"
+   ],
+   "correct": 0,
+   "answer": 23,
+   "min": 10,
+   "max": 50,
+   "tolerance": 2
+  },
+  {
+   "id": "e-157",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Schule, an der Yuji Itadori zum Jujuzisten ausgebildet wird?",
+   "answers": [
+    "Tokyo Jujutsu High",
+    "U.A. High",
+    "Konoha-Akademie",
+    "Eden Academy"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-158",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Haarfarbe hat Satoru Gojo?",
+   "answers": [
+    "Weiß",
+    "Schwarz",
+    "Blond",
+    "Blau"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-159",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Mädchen in Yujis Team, das mit Hammer und Nägeln kämpft?",
+   "answers": [
+    "Nobara Kugisaki",
+    "Maki Zenin",
+    "Mai Zenin",
+    "Utahime Iori"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-160",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Yuji Itadori hatte schon vor Sukunas Finger übermenschliche Körperkraft.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-179",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist Megumi Fushiguros Vater?",
+   "answers": [
+    "Toji Fushiguro",
+    "Naoya Zenin",
+    "Satoru Gojo",
+    "Masamichi Yaga"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-180",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was bewirkt eine „Domain Expansion“ (Gebietserweiterung)?",
+   "answers": [
+    "Sie erschafft einen eigenen Raum, in dem die Angriffe des Anwenders garantiert treffen",
+    "Sie heilt alle Verbündeten",
+    "Sie lässt den Anwender fliehen",
+    "Sie verdoppelt die Fluchenergie"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-181",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches Tier ist ein Mitschüler an der Jujutsu-Schule und spricht wie ein Mensch?",
+   "answers": [
+    "Ein Panda",
+    "Ein Fuchs",
+    "Eine Katze",
+    "Ein Rabe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-182",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist die Hauptfigur des Vorgängers „Jujutsu Kaisen 0“?",
+   "answers": [
+    "Yuta Okkotsu",
+    "Yuji Itadori",
+    "Kento Nanami",
+    "Toge Inumaki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-183",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Kento Nanami",
+    "Satoru Gojo",
+    "Aoi Todo",
+    "Suguru Geto"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich war Büroangestellter, bevor ich zur Jujutsu-Welt zurückkehrte.",
+    "Ich hasse Überstunden.",
+    "Meine Technik teilt Gegner im Verhältnis 7 zu 3."
+   ]
+  },
+  {
+   "id": "o-111",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer war Gojos bester Freund in der Schulzeit und wandte sich später gegen die Jujutsu-Welt?",
+   "answers": [
+    "Suguru Geto",
+    "Kento Nanami",
+    "Toji Fushiguro",
+    "Masamichi Yaga"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-112",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was geschieht mit Gojo beim Shibuya-Vorfall?",
+   "answers": [
+    "Er wird in der Gefängnis-Domäne versiegelt",
+    "Er besiegt Sukuna endgültig",
+    "Er verliert seine Sechs Augen",
+    "Er wechselt die Seiten"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-113",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "estimate",
+   "question": "Wie viele Bände hat der Manga „Jujutsu Kaisen“?",
+   "answers": [
+    "30"
+   ],
+   "correct": 0,
+   "answer": 30,
+   "min": 10,
+   "max": 60,
+   "tolerance": 2
+  },
+  {
+   "id": "e-161",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Dekus Freundin, die Dinge schwerelos machen kann?",
+   "answers": [
+    "Ochaco Uraraka",
+    "Momo Yaoyorozu",
+    "Tsuyu Asui",
+    "Kyoka Jiro"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-162",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Kräfte hat Shoto Todoroki?",
+   "answers": [
+    "Eis und Feuer",
+    "Explosionen",
+    "Schwerkraft",
+    "Unsichtbarkeit"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-163",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Schurkenorganisation, die All Might stürzen will?",
+   "answers": [
+    "Die Liga der Schurken",
+    "Akatsuki",
+    "Die Schwarze Organisation",
+    "Die Phantom-Truppe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-164",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "All Might wird als „Symbol des Friedens“ bezeichnet.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-184",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer führt die Liga der Schurken an?",
+   "answers": [
+    "Tomura Shigaraki",
+    "Dabi",
+    "Himiko Toga",
+    "Stain"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-185",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Schülerin mit Froschkräften sagt ständig „Kero“?",
+   "answers": [
+    "Tsuyu Asui",
+    "Mina Ashido",
+    "Toru Hagakure",
+    "Kyoka Jiro"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-186",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Klassenlehrer der 1-A, der Kräfte anderer mit seinem Blick löschen kann?",
+   "answers": [
+    "Shota Aizawa (Eraser Head)",
+    "All Might",
+    "Present Mic",
+    "Midnight"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-187",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer wird nach All Mights Rückzug die Nummer eins der Helden?",
+   "answers": [
+    "Endeavor",
+    "Hawks",
+    "Best Jeanist",
+    "Edgeshot"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-188",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Himiko Toga",
+    "Mina Ashido",
+    "Nejire Hado",
+    "Mirko"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin eine Schurkin mit blonden Haarknoten.",
+    "Ich kann mich in Menschen verwandeln, deren Blut ich trinke.",
+    "Ich bin auf verstörende Weise in Deku und Ochaco verliebt."
+   ]
+  },
+  {
+   "id": "f-189",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches Studio animiert „My Hero Academia“?",
+   "answers": [
+    "Bones",
+    "MAPPA",
+    "ufotable",
+    "Wit Studio"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-114",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie lautet All Mights bürgerlicher Name?",
+   "answers": [
+    "Toshinori Yagi",
+    "Hisashi Midoriya",
+    "Sorahiko Torino",
+    "Enji Todoroki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-115",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welcher Schurke hat All Might Jahre vor der Handlung schwer verwundet?",
+   "answers": [
+    "All For One",
+    "Stain",
+    "Overhaul",
+    "Tomura Shigaraki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-116",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "estimate",
+   "question": "In welchem Jahr startete der Manga „My Hero Academia“?",
+   "answers": [
+    "2014"
+   ],
+   "correct": 0,
+   "answer": 2014,
+   "min": 2000,
+   "max": 2025,
+   "tolerance": 1
+  },
+  {
+   "id": "e-165",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Warum jagt Denji zu Beginn Teufel für die Yakuza?",
+   "answers": [
+    "Um die Schulden seines Vaters abzubezahlen",
+    "Aus Rache",
+    "Aus Langeweile",
+    "Weil er ein Held werden will"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-166",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Denjis ernster Kollege, der einen Vertrag mit dem Fuchs-Teufel hat?",
+   "answers": [
+    "Aki Hayakawa",
+    "Kishibe",
+    "Himeno",
+    "Beam"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-167",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Denji träumt am Anfang von ganz einfachen Dingen wie Brot mit Marmelade und einer Freundin.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-190",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Powers Katze?",
+   "answers": [
+    "Nyako",
+    "Pochita",
+    "Tama",
+    "Meowth"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-191",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welcher Teufel ist in „Chainsaw Man“ besonders mächtig, weil die Menschen ihn so sehr fürchten?",
+   "answers": [
+    "Der Waffen-Teufel",
+    "Der Katzen-Teufel",
+    "Der Tomaten-Teufel",
+    "Der Fisch-Teufel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-192",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was ist Reze in Wahrheit?",
+   "answers": [
+    "Ein Bomben-Teufel-Hybrid",
+    "Ein normales Mädchen",
+    "Eine Teufelsjägerin",
+    "Ein Engel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-193",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Aki Hayakawa",
+    "Kishibe",
+    "Denji",
+    "Angel Devil"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin Teufelsjäger der öffentlichen Sicherheit.",
+    "Ich will den Waffen-Teufel töten, der meine Familie auslöschte.",
+    "Ich rauche und ertrage Denji und Power nur mit Mühe."
+   ]
+  },
+  {
+   "id": "o-117",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Kriegs-Teufel, der sich in Teil 2 den Körper mit Asa Mitaka teilt?",
+   "answers": [
+    "Yoru",
+    "Makima",
+    "Nayuta",
+    "Fami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-118",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "In welchem Magazin erscheint der zweite Teil von „Chainsaw Man“?",
+   "answers": [
+    "Shōnen Jump+ (online)",
+    "Weekly Shōnen Jump",
+    "Weekly Shōnen Magazine",
+    "Big Comic"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-168",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Kimono?",
+   "answers": [
+    "Ein traditionelles japanisches Gewand",
+    "Ein Schwert",
+    "Ein Reisgericht",
+    "Ein Tempel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-169",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Gomen nasai“?",
+   "answers": [
+    "Es tut mir leid",
+    "Guten Appetit",
+    "Herzlich willkommen",
+    "Bis morgen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-170",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Torii?",
+   "answers": [
+    "Das Tor zu einem Shintō-Schrein",
+    "Ein Fischgericht",
+    "Eine Papierlaterne",
+    "Ein Fächer"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-194",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Maid Café?",
+   "answers": [
+    "Ein Café, in dem die Bedienung in Dienstmädchen-Kostümen die Gäste wie Herrschaften behandelt",
+    "Ein Café nur für Frauen",
+    "Ein Café mit Katzen",
+    "Ein Café in einem Tempel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-195",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Simulcast?",
+   "answers": [
+    "Eine Anime-Folge, die fast zeitgleich mit Japan im Ausland gestreamt wird",
+    "Eine Synchronfassung",
+    "Ein Kinofilm zur Serie",
+    "Ein Hörspiel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-196",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Nakama“?",
+   "answers": [
+    "Kameraden oder enge Gefährten",
+    "Feinde",
+    "Lehrer",
+    "Eltern"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-197",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "true_false",
+   "question": "Das Wort „Manga“ wurde durch den Künstler Hokusai bekannt, der 1814 seine Skizzenbücher „Hokusai Manga“ nannte.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-119",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Oni?",
+   "answers": [
+    "Ein Dämon oder Oger aus der japanischen Mythologie",
+    "Eine Katze",
+    "Ein Reiskuchen",
+    "Ein Samurai"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-120",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie heißt das jährliche Event des Verlags Shūeisha in Chiba, bei dem neue Jump-Anime und -Manga angekündigt werden?",
+   "answers": [
+    "Jump Festa",
+    "Comiket",
+    "AnimeJapan",
+    "Wonder Festival"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-171",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Was sind „Chibi“-Zeichnungen?",
+   "answers": [
+    "Figuren mit übergroßem Kopf und winzigem Körper, oft für Comedy",
+    "Realistische Porträts",
+    "Hintergrundbilder",
+    "Farbseiten"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-172",
+   "difficulty": 1,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Welcher deutsche Verlag veröffentlicht „Attack on Titan“?",
+   "answers": [
+    "Carlsen",
+    "Egmont Manga",
+    "Tokyopop",
+    "Altraverse"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-198",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Was ist ein One-Shot?",
+   "answers": [
+    "Eine in sich abgeschlossene Manga-Geschichte in einem Kapitel",
+    "Ein Manga mit nur einer Figur",
+    "Eine einzelne Farbseite",
+    "Ein Anime-Kurzfilm"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-199",
+   "difficulty": 2,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Womit erzeugen Mangaka traditionell Grautöne und Schattierungen?",
+   "answers": [
+    "Mit Rasterfolien (Screentones)",
+    "Mit Wasserfarben",
+    "Mit Kohle",
+    "Mit Kreide"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-121",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "Welcher deutsche Verlag veröffentlicht „Solo Leveling“?",
+   "answers": [
+    "Altraverse",
+    "Carlsen",
+    "Egmont Manga",
+    "Tokyopop"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-122",
+   "difficulty": 3,
+   "category": "manga",
+   "type": "multiple_choice",
+   "question": "In welchem Magazin erschien „Attack on Titan“ in Japan?",
+   "answers": [
+    "Bessatsu Shōnen Magazine",
+    "Weekly Shōnen Jump",
+    "Weekly Shōnen Sunday",
+    "Shōnen Jump+"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-173",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißen die kleinen schwarzen Rußwesen in „Mein Nachbar Totoro“ und „Chihiros Reise ins Zauberland“?",
+   "answers": [
+    "Rußmännchen",
+    "Kodama",
+    "Kappa",
+    "Tanuki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-200",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Ghibli-Film handelt von zwei Geschwistern im Zweiten Weltkrieg?",
+   "answers": [
+    "Die letzten Glühwürmchen",
+    "Der Wind erhebt sich",
+    "Porco Rosso",
+    "Pom Poko"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-123",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Ghibli-Film erzählt vom Flugzeugkonstrukteur Jiro Horikoshi?",
+   "answers": [
+    "Der Wind erhebt sich",
+    "Porco Rosso",
+    "Das Schloss im Himmel",
+    "Der Junge und der Reiher"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-201",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Mädchen in „Weathering With You“, das das Wetter aufklaren lassen kann?",
+   "answers": [
+    "Hina Amano",
+    "Mitsuha Miyamizu",
+    "Suzume Iwato",
+    "Akari Shinohara"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-174",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem One-Piece-Kinofilm von 2022 tritt die Sängerin Uta auf?",
+   "answers": [
+    "One Piece Film: Red",
+    "One Piece: Stampede",
+    "One Piece Film: Gold",
+    "One Piece: Strong World"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-202",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Film von Mamoru Hosoda tritt Suzu in der virtuellen Welt „U“ als Sängerin Belle auf?",
+   "answers": [
+    "Belle",
+    "Summer Wars",
+    "Mirai",
+    "Der Junge und das Biest"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-124",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Film von Satoshi Kon finden drei Obdachlose an Weihnachten ein Baby?",
+   "answers": [
+    "Tokyo Godfathers",
+    "Paprika",
+    "Perfect Blue",
+    "Millennium Actress"
+   ],
+   "correct": 0
   }
  ]
 }
