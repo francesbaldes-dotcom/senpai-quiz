@@ -428,6 +428,48 @@ button { font: inherit; color: inherit; }
 .banner small { font-size: 13px; font-weight: 700; }
 .banner .knopf { position: relative; min-height: 50px; padding: 0 16px; font-family: var(--display); font-size: 16px; box-shadow: 3px 3px 0 var(--ink); }
 
+.melde-link { position: relative; align-self: flex-start; margin-top: 4px; padding: 4px 0; border: 0; background: none; color: var(--white); opacity: .85; font-size: 12px; font-weight: 700; text-decoration: underline; cursor: pointer; }
+.melde-link:hover, .melde-link:focus-visible { opacity: 1; }
+.melde-dank { position: relative; margin-top: 4px; font-size: 12px; font-weight: 700; opacity: .9; }
+
+/* ---------- Dialog (Frage melden) ---------- */
+
+.dialog-hintergrund {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(20, 20, 20, .55);
+}
+.dialog { width: 100%; max-width: 400px; padding: 18px; display: flex; flex-direction: column; gap: 12px; outline: none; }
+.dialog h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 22px; line-height: 1.15; }
+.dialog .gruende { display: flex; flex-direction: column; gap: 8px; }
+.dialog .grund { min-height: 50px; justify-content: flex-start; padding: 0 14px; font-weight: 900; font-size: 15px; box-shadow: 3px 3px 0 var(--ink); }
+.dialog .grund.gewaehlt { background: var(--yellow); }
+.melde-feld { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 900; }
+.melde-feld small { font-weight: 500; }
+.melde-feld textarea {
+  width: 100%;
+  resize: none;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  -webkit-user-select: text;
+  user-select: text;
+}
+.melde-feld textarea:focus { outline: 3px solid var(--blue); outline-offset: 2px; }
+.melde-feld .zaehler { align-self: flex-end; font-size: 12px; color: #4A463F; }
+.dialog .fehler { font-size: 13px; }
+
 .loesung { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; }
 .loesung ol { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 4px; font-weight: 900; }
 

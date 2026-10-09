@@ -10,6 +10,13 @@ const FRAGEZEIT = 15;
 const BLITZZEIT = 60;
 const RUNDENLAENGE = 10;
 const SPEICHER = 'senpai-quiz-v1';
+const VERSION = '0.1.0';
+const MELDE_GRUENDE = [
+  ['antwort_falsch', 'Antwort ist falsch'],
+  ['unklar', 'Frage ist unklar'],
+  ['tippfehler', 'Tippfehler'],
+];
+const MELDE_TEXT_MAX = 200;
 
 const STUFEN_WAHL = [
   { id: 'easy', label: 'Einsteiger', stufen: [1] },
@@ -106,6 +113,7 @@ const ui = {
   wahl: { stufe: 'fan', kategorie: 'mix' },
   runde: null,
   ergebnis: null,
+  melden: null, // offener „Frage melden“-Dialog: { grund, text, fehler, sendet }
   online: {
     profil: undefined, // undefined = noch unbekannt, null = kein Account
     duelle: [],
@@ -226,6 +234,14 @@ function antwortText(f) {
   if (f.type === 'estimate') return String(f.answer);
   if (f.type === 'order') return f.answers.join(' → ');
   return f.answers[f.correct];
+}
+
+// Was der Spieler bei der aktuellen Frage angetippt hat, als Text (für „Frage melden“)
+function gewaehlteAntwort(a) {
+  const f = a.frage;
+  if (f.type === 'estimate') return String(a.schaetz);
+  if (f.type === 'order') return a.reihenfolge.length ? a.reihenfolge.map((i) => a.optionen[i].text).join(' → ') : null;
+  return a.gewaehlt === null ? null : a.optionen[a.gewaehlt]?.text ?? null;
 }
 
 // ---------- Fragen auswählen ----------
@@ -421,6 +437,7 @@ function auswerten(korrekt, info = {}) {
 function weiter() {
   const r = ui.runde;
   if (!r) return;
+  ui.melden = null;
   if (r.modus === 'survival' && r.leben <= 0) return beendeRunde();
   if (r.modus === 'blitz' && Date.now() >= r.blitzEnde) return beendeRunde();
   r.index++;
@@ -431,6 +448,7 @@ function weiter() {
 
 function beendeRunde() {
   stoppeTimer();
+  ui.melden = null;
   const r = ui.runde;
   if (!r) return;
   if (r.modus === 'duell') return duellRundeFertig(r);
@@ -517,6 +535,57 @@ const aktionen = {
   los() {
     neueRunde('klassisch', { ...ui.wahl });
   },
+  melden() {
+    const a = ui.runde?.aktuell;
+    if (!a?.ergebnis || a.gemeldet || ui.melden) return;
+    ui.melden = { grund: null, text: '', fehler: '', sendet: false };
+    render();
+    document.getElementById('melde-dialog')?.focus();
+  },
+  meldeGrund(d) {
+    if (!ui.melden || ui.melden.sendet) return;
+    ui.melden.grund = d.grund;
+    ui.melden.fehler = '';
+    render();
+  },
+  meldeAbbrechen() {
+    if (ui.melden?.sendet) return;
+    ui.melden = null;
+    render();
+  },
+  async meldeSenden() {
+    const m = ui.melden;
+    const r = ui.runde;
+    const a = r?.aktuell;
+    if (!m || m.sendet || !a?.ergebnis) return;
+    if (!m.grund) {
+      m.fehler = 'Bitte wähle aus, was nicht stimmt.';
+      return render();
+    }
+    m.sendet = true;
+    m.fehler = '';
+    render();
+    try {
+      await online.frageMelden({
+        frageId: a.frage.id,
+        grund: m.grund,
+        text: m.text.trim().slice(0, MELDE_TEXT_MAX),
+        antwort: gewaehlteAntwort(a),
+        alsRichtig: a.ergebnis.korrekt,
+        modus: r.modus,
+        version: VERSION,
+      });
+      if (ui.melden !== m) return;
+      a.gemeldet = true;
+      ui.melden = null;
+    } catch (fehler) {
+      if (ui.melden !== m) return;
+      m.sendet = false;
+      m.fehler = 'Konnte nicht gesendet werden';
+      console.warn('Meldung fehlgeschlagen:', fehler.message);
+    }
+    render();
+  },
   abbrechen() {
     if (ui.runde?.modus === 'duell') {
       if (!confirm('Runde abbrechen? Fragen ohne Antwort zählen als falsch.')) return;
@@ -524,6 +593,7 @@ const aktionen = {
     }
     if (!confirm('Runde wirklich beenden? Der Fortschritt dieser Runde geht verloren.')) return;
     stoppeTimer();
+    ui.melden = null;
     ui.runde = null;
     ui.screen = 'start';
     render();
@@ -620,6 +690,13 @@ app.addEventListener('input', (e) => {
     ui.online[EINGABEFELDER[e.target.id]] = e.target.value;
     return;
   }
+  if (e.target.id === 'melde-text') {
+    if (!ui.melden) return;
+    ui.melden.text = e.target.value.slice(0, MELDE_TEXT_MAX);
+    const zaehler = document.getElementById('melde-zaehler');
+    if (zaehler) zaehler.textContent = `${ui.melden.text.length} / ${MELDE_TEXT_MAX}`;
+    return;
+  }
   if (e.target.id !== 'schaetzregler') return;
   const a = ui.runde?.aktuell;
   if (!a) return;
@@ -629,6 +706,10 @@ app.addEventListener('input', (e) => {
 
 document.addEventListener('keydown', (e) => {
   if (ui.screen !== 'frage' || !ui.runde) return;
+  if (ui.melden) {
+    if (e.key === 'Escape') aktionen.meldeAbbrechen();
+    return;
+  }
   const a = ui.runde.aktuell;
   if (a.ergebnis && (e.key === 'Enter' || e.key === ' ')) {
     if (ui.runde.modus !== 'blitz') {
@@ -887,8 +968,37 @@ function unterBlock(r) {
   if (r.modus === 'survival' && !e.korrekt) text += r.leben > 0 ? ` · noch ${r.leben} ${r.leben === 1 ? 'Leben' : 'Leben'}` : ' · keine Leben mehr';
   const letzte = r.modus === 'survival' ? r.leben <= 0 || r.index >= r.fragen.length - 1 : r.index >= r.fragen.length - 1;
   const knopf = r.modus === 'blitz' ? '' : `<button class="knopf" data-aktion="weiter">${letzte ? 'Ergebnis' : 'Weiter'} ${ICON.weiter}</button>`;
+  let melden = '';
+  if (r.modus !== 'blitz') {
+    melden = a.gemeldet
+      ? '<span class="melde-dank">Danke! Wir prüfen das.</span>'
+      : '<button class="melde-link" data-aktion="melden">Frage melden</button>';
+  }
   return `<div class="karte banner ${e.korrekt ? 'gut' : 'schlecht'}" role="status">
-    <div class="text"><span class="display">${titel}</span><small>${esc(text)}</small></div>${knopf}
+    <div class="text"><span class="display">${titel}</span><small>${esc(text)}</small>${melden}</div>${knopf}
+  </div>`;
+}
+
+function meldeDialog() {
+  const m = ui.melden;
+  if (!m) return '';
+  return `<div class="dialog-hintergrund">
+    <div class="karte dialog" id="melde-dialog" role="dialog" aria-modal="true" aria-labelledby="melde-titel" tabindex="-1">
+      <h2 id="melde-titel">Was stimmt nicht?</h2>
+      <div class="gruende">${MELDE_GRUENDE.map(([id, name]) => `
+        <button class="knopf grund ${m.grund === id ? 'gewaehlt' : ''}" data-aktion="meldeGrund" data-grund="${id}" aria-pressed="${m.grund === id}" ${m.sendet ? 'disabled' : ''}>${name}</button>`).join('')}
+      </div>
+      <label class="melde-feld">
+        <span>Kurze Erklärung <small>(optional)</small></span>
+        <textarea id="melde-text" maxlength="${MELDE_TEXT_MAX}" rows="3" placeholder="z. B. Die Folge heißt anders …" ${m.sendet ? 'disabled' : ''}>${esc(m.text)}</textarea>
+        <small class="zaehler" id="melde-zaehler">${m.text.length} / ${MELDE_TEXT_MAX}</small>
+      </label>
+      ${m.fehler ? `<p class="fehler" role="alert">${esc(m.fehler)}</p>` : ''}
+      <div class="zweier">
+        <button class="knopf" data-aktion="meldeAbbrechen" ${m.sendet ? 'disabled' : ''}>Abbrechen</button>
+        <button class="knopf knopf-rot" data-aktion="meldeSenden" ${m.sendet ? 'disabled' : ''}>${m.sendet ? 'Sendet …' : 'Senden'}</button>
+      </div>
+    </div>
   </div>`;
 }
 
@@ -920,6 +1030,7 @@ function frageScreen() {
     </div>
     ${antwortenBlock(a)}
     <div class="unten">${unterBlock(r)}</div>
+    ${meldeDialog()}
   </section>`;
 }
 

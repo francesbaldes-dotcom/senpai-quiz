@@ -91,6 +91,20 @@ export async function aufgeben(duellId) {
   return versuche(() => sb().rpc('duell_aufgeben', { p_duell: duellId }));
 }
 
+// Meldung zu einer Frage („Frage melden“). Braucht keinen Account: Die Tabelle
+// erlaubt der Rolle anon das Einfügen, lesen kann sie nur das Dashboard.
+export async function frageMelden(daten) {
+  return versuche(() => sb().from('meldungen').insert({
+    frage_id: daten.frageId,
+    grund: daten.grund,
+    text: daten.text || null,
+    antwort: daten.antwort ?? null,
+    als_richtig: daten.alsRichtig ?? null,
+    modus: daten.modus ?? null,
+    version: daten.version ?? null,
+  }));
+}
+
 export async function kontoLoeschen() {
   await versuche(() => sb().rpc('konto_loeschen'));
   await sb().auth.signOut({ scope: 'local' });

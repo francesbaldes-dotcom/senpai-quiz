@@ -51,3 +51,16 @@ Duelle gegen Freunde laufen wie bei Quizduell: **6 Runden mit je 3 Fragen**, abw
 - **Tabellen:** `profile`, `duelle`, `duell_runden`, `duell_antworten`, `fragen` (nur IDs und Kategorie der duelltauglichen Fragen, erzeugt mit `python3 scripts/fragen_sql.py`). Alle mit Zeilenschutz: Jeder sieht nur seine eigenen Duelle.
 - **RPC-Funktionen:** `profil_anlegen`, `duell_herausfordern`, `runde_starten`, `runde_abschliessen`, `duell_aufgeben`, `konto_loeschen`. Geschrieben wird nur über diese Funktionen; sie prüfen, wer am Zug ist.
 - **Schema:** `supabase/migrations/`.
+
+## Fragen melden
+
+Nach jeder beantworteten Frage (außer im Blitz) steht im Ergebnis-Banner der Link „Frage melden“. Der Dialog fragt nach dem Grund (Antwort ist falsch, Frage ist unklar, Tippfehler) und einer optionalen Erklärung mit bis zu 200 Zeichen. Gespeichert wird in der Supabase-Tabelle `meldungen`: Frage-ID, Grund, Text, die angetippte Antwort, ob sie als richtig gewertet wurde, der Spielmodus und die App-Version (`VERSION` in `js/app.js`). Keine Nutzer-ID, keine Gerätedaten; ein Account ist nicht nötig, die Rolle `anon` darf nur einfügen.
+
+Meldungen ansehen: im Supabase-Dashboard das Projekt `senpai-quiz` öffnen, dann **Table Editor → meldungen** (neueste zuerst nach `erstellt` sortieren) oder im **SQL Editor**:
+
+```sql
+select erstellt, frage_id, grund, text, antwort, als_richtig, modus, version
+from public.meldungen order by erstellt desc;
+```
+
+Die Frage-ID findet man in `data/fragen.json` oder `fragen.md`. Erledigte Meldungen kann man dort löschen; aus der App heraus geht das nicht.
