@@ -18368,6 +18368,1383 @@
     "Ein Synchronsprecher"
    ],
    "correct": 0
+  },
+  {
+   "id": "e-431",
+   "difficulty": 1,
+   "category": "onepiece",
+   "type": "true_false",
+   "question": "Ruffy kann nicht schwimmen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-432",
+   "difficulty": 1,
+   "category": "onepiece",
+   "type": "multiple_choice",
+   "question": "Welches Körperteil kann Ruffy dank seiner Teufelsfrucht dehnen?",
+   "answers": [
+    "Seinen ganzen Körper",
+    "Nur die Arme",
+    "Nur die Beine",
+    "Nur den Hals"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-433",
+   "difficulty": 1,
+   "category": "onepiece",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🦌👨‍⚕️🍬",
+   "answers": [
+    "One Piece (Chopper)",
+    "Dr. Stone",
+    "Cells at Work!",
+    "Monster"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-301",
+   "difficulty": 3,
+   "category": "onepiece",
+   "type": "multiple_choice",
+   "question": "Wie heißt Zorros bekannteste Technik mit drei Schwertern?",
+   "answers": [
+    "Santoryu (Drei-Schwerter-Stil)",
+    "Ittoryu",
+    "Nitoryu",
+    "Kyutoryu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-302",
+   "difficulty": 3,
+   "category": "onepiece",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Fischmensch, der Jinbe vor seinem Beitritt zu den Strohhüten als Kapitän anführte?",
+   "answers": [
+    "Fisher Tiger (Sonnen-Piraten)",
+    "Arlong",
+    "Hody Jones",
+    "Jack"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-434",
+   "difficulty": 1,
+   "category": "dragonball",
+   "type": "true_false",
+   "question": "Son-Goku hat Angst vor Spritzen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-435",
+   "difficulty": 1,
+   "category": "dragonball",
+   "type": "multiple_choice",
+   "question": "Wie heißt Bulmas Firma?",
+   "answers": [
+    "Capsule Corporation",
+    "Red Ribbon",
+    "Kame House",
+    "Saiyan Inc."
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-436",
+   "difficulty": 1,
+   "category": "dragonball",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🐒🟠🐢",
+   "answers": [
+    "Dragon Ball",
+    "Naruto",
+    "One Piece",
+    "Digimon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-303",
+   "difficulty": 3,
+   "category": "dragonball",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Armee, die Son-Goku als Kind bekämpft?",
+   "answers": [
+    "Red-Ribbon-Armee",
+    "Freezers Armee",
+    "Saiyajin-Armee",
+    "Pilaf-Bande"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-304",
+   "difficulty": 3,
+   "category": "dragonball",
+   "type": "multiple_choice",
+   "question": "Welcher Kämpfer hat drei Augen?",
+   "answers": [
+    "Tenshinhan",
+    "Yamchu",
+    "Chao-Zu",
+    "Kuririn"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-437",
+   "difficulty": 1,
+   "category": "naruto",
+   "type": "true_false",
+   "question": "Naruto hat Schnurrhaar-Striche im Gesicht.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-438",
+   "difficulty": 1,
+   "category": "naruto",
+   "type": "multiple_choice",
+   "question": "Welche Frisur hat Naruto?",
+   "answers": [
+    "Stacheliges blondes Haar",
+    "Lange schwarze Haare",
+    "Eine Glatze",
+    "Rote Locken"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-305",
+   "difficulty": 3,
+   "category": "naruto",
+   "type": "multiple_choice",
+   "question": "Wie heißt Narutos Wind-Technik, eine Weiterentwicklung des Rasengan?",
+   "answers": [
+    "Rasenshuriken",
+    "Chidori",
+    "Kirin",
+    "Odama Rasengan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-306",
+   "difficulty": 3,
+   "category": "naruto",
+   "type": "multiple_choice",
+   "question": "Wer ist der Zweite Hokage?",
+   "answers": [
+    "Tobirama Senju",
+    "Hashirama Senju",
+    "Hiruzen Sarutobi",
+    "Minato Namikaze"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-439",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Conan trägt eine Brille, obwohl er keine braucht.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-440",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Farbe hat Conans typische Jacke?",
+   "answers": [
+    "Blau",
+    "Rot",
+    "Grün",
+    "Schwarz"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-307",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Conans Turbo-Skateboard-Antrieb?",
+   "answers": [
+    "Solarzellen",
+    "Ein Benzinmotor",
+    "Eine Batterie",
+    "Dampf"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-308",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "who_am_i",
+   "question": "Wer bin ich?",
+   "answers": [
+    "Gin",
+    "Wodka",
+    "Bourbon",
+    "Vermouth"
+   ],
+   "correct": 0,
+   "hints": [
+    "Ich bin ein Mitglied der Schwarzen Organisation mit langen silbernen Haaren.",
+    "Ich fahre einen schwarzen Porsche 356A.",
+    "Ich habe Shinichi das Gift gegeben."
+   ]
+  },
+  {
+   "id": "e-441",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Pikachu kann nur „Pika“ und „Pikachu“ sagen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-442",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Farbe hat Pikachus Schwanz an der Spitze?",
+   "answers": [
+    "Er ist gelb mit braunem Ansatz",
+    "Rot",
+    "Schwarz",
+    "Weiß"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-309",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Pokémon-Center-Pokémon, das Schwester Joy hilft?",
+   "answers": [
+    "Chaneira",
+    "Pummeluff",
+    "Piepi",
+    "Relaxo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-310",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Pokémon hat die Nummer 150?",
+   "answers": [
+    "Mewtu",
+    "Mew",
+    "Dragoran",
+    "Lavados"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-443",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "true_false",
+   "question": "Die Titanen in „Attack on Titan“ sind meist nackt.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-311",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Titan von Pieck Finger?",
+   "answers": [
+    "Der Karren-Titan",
+    "Der Kiefer-Titan",
+    "Der Kriegshammer-Titan",
+    "Der Weibliche Titan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-444",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Nezuko kann als Dämon nicht sprechen, weil sie den Bambus im Mund trägt.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-312",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Hashira trägt einen Hanafuda-ähnlichen Haori und ist der Wind-Hashira?",
+   "answers": [
+    "Sanemi Shinazugawa",
+    "Gyomei Himejima",
+    "Obanai Iguro",
+    "Muichiro Tokito"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-445",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Satoru Gojo gilt als der stärkste Jujuzist.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-313",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Gojos Sphärenentfaltung?",
+   "answers": [
+    "Unendliche Leere (Unlimited Void)",
+    "Bösartiger Schrein",
+    "Chimären-Schatten",
+    "Selbstverkörperung der Perfektion"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-446",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "All Might hat in seiner Heldenform riesige Muskeln, in seiner wahren Form ist er dürr.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-314",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Dekus Quirk-Fähigkeit, bei der er Luft schnipst?",
+   "answers": [
+    "Delaware Smash",
+    "Detroit Smash",
+    "Texas Smash",
+    "Manchester Smash"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-447",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Power hat Hörner auf dem Kopf.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-315",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche vier Reiter gehören zu Makimas Teufelsart?",
+   "answers": [
+    "Die Teufel von Kontrolle, Krieg, Hunger und Tod",
+    "Feuer, Wasser, Erde, Luft",
+    "Pistole, Bombe, Katana, Kettensäge",
+    "Fuchs, Hai, Geist, Engel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-448",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "true_false",
+   "question": "Jinwoo kann seine Schatten in seinem eigenen Schatten verstauen.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-316",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt Jinwoos Schatten, der einst der Eis-Elf... wer ist Kaisel?",
+   "answers": [
+    "Ein Wyvern, auf dem Jinwoo reitet",
+    "Ein Ritter",
+    "Ein Orc",
+    "Ein Riese"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-449",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🍎📓💀",
+   "answers": [
+    "Death Note",
+    "Tokyo Ghoul",
+    "Another",
+    "Mirai Nikki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-450",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🔥🐉🧚",
+   "answers": [
+    "Fairy Tail",
+    "Black Clover",
+    "Seven Deadly Sins",
+    "Frieren"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-451",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🎭☕🩸",
+   "answers": [
+    "Tokyo Ghoul",
+    "Vampire Knight",
+    "Hellsing",
+    "Seraph of the End"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-452",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🕵️👩‍👧🔪🐶",
+   "answers": [
+    "Spy x Family",
+    "Sakamoto Days",
+    "Detektiv Conan",
+    "Black Butler"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-453",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🌙🐈‍⬛🌹🎀",
+   "answers": [
+    "Sailor Moon",
+    "Cardcaptor Sakura",
+    "Wedding Peach",
+    "Tokyo Mew Mew"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-454",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🃏🐉🧩",
+   "answers": [
+    "Yu-Gi-Oh!",
+    "Beyblade",
+    "Duel Masters",
+    "Bakugan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-455",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🏐👑🍊",
+   "answers": [
+    "Haikyu!!",
+    "Kuroko’s Basketball",
+    "Slam Dunk",
+    "Blue Lock"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-456",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? ⚽🔒🥅",
+   "answers": [
+    "Blue Lock",
+    "Captain Tsubasa",
+    "Inazuma Eleven",
+    "Haikyu!!"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-457",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 👵💨👻🛸",
+   "answers": [
+    "Dandadan",
+    "Mob Psycho 100",
+    "Mein Schulgeist Hanako",
+    "Noragami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-458",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 💊🏯🐱",
+   "answers": [
+    "Die Tagebücher der Apothekerin",
+    "Akatsuki no Yona",
+    "Inu Yasha",
+    "Snow White with the Red Hair"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-459",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🎩😈🫖🇬🇧",
+   "answers": [
+    "Black Butler",
+    "Hellsing",
+    "Moriarty the Patriot",
+    "Vampire Knight"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-460",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🧝‍♀️⏳🗡️",
+   "answers": [
+    "Frieren",
+    "Sword Art Online",
+    "Re:Zero",
+    "Mushoku Tensei"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-461",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🗿🧪🥤",
+   "answers": [
+    "Dr. Stone",
+    "Cells at Work!",
+    "Steins;Gate",
+    "Edens Zero"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-462",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🏠👧🧠😈",
+   "answers": [
+    "The Promised Neverland",
+    "Made in Abyss",
+    "Another",
+    "Angels of Death"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-463",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🏪🔫🍙",
+   "answers": [
+    "Sakamoto Days",
+    "Spy x Family",
+    "Gintama",
+    "Hitman Reborn!"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-464",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🐟🗡️⚔️",
+   "answers": [
+    "Kagurabachi",
+    "Bleach",
+    "Demon Slayer",
+    "Samurai Champloo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-465",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🎣🐜🃏",
+   "answers": [
+    "Hunter x Hunter",
+    "Yu Yu Hakusho",
+    "JoJo’s Bizarre Adventure",
+    "Toriko"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-466",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "emoji",
+   "question": "Welche Serie ist gemeint? 🍊⚔️💀",
+   "answers": [
+    "Bleach",
+    "Naruto",
+    "Soul Eater",
+    "D.Gray-man"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-467",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Hanako trägt ein Küchenmesser bei sich.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-571",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Nenes Mitschüler, der Exorzist werden will?",
+   "answers": [
+    "Kou Minamoto",
+    "Tsukasa",
+    "Teru Minamoto",
+    "Akane Aoi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-572",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Fische hat Nene nach einem Fluch an den Beinen... was passiert mit Nene zu Beginn?",
+   "answers": [
+    "Sie bekommt vorübergehend Fischbeine (Meerjungfrau-Fluch)",
+    "Sie stirbt",
+    "Sie wird unsichtbar",
+    "Sie verliert ihr Gedächtnis"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-317",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt „Mein Schulgeist Hanako“ im Original?",
+   "answers": [
+    "Jibaku Shōnen Hanako-kun",
+    "Toire no Hanako-san",
+    "Hanako to Nene",
+    "Gakkō no Kaidan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-468",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "true_false",
+   "question": "Digimon ist eine Abkürzung für „Digital Monster“.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-573",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Matts Digimon?",
+   "answers": [
+    "Gabumon",
+    "Agumon",
+    "Patamon",
+    "Biyomon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-574",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Tais Schwester, die später selbst Digiritterin wird?",
+   "answers": [
+    "Kari",
+    "Sora",
+    "Mimi",
+    "Yolei"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-318",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Kinofilm von 2000 mit Omnimon?",
+   "answers": [
+    "Digimon: Der Film",
+    "Digimon Adventure tri.",
+    "Digimon: Last Evolution Kizuna",
+    "Digimon Frontier"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-469",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "true_false",
+   "question": "Inu Yasha hat Hundeohren.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-575",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Inu Yashas Halbbruder, ein vollwertiger Dämon?",
+   "answers": [
+    "Sesshomaru",
+    "Naraku",
+    "Koga",
+    "Miroku"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-576",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "In welches Tier verwandelt sich Ranmas Vater Genma?",
+   "answers": [
+    "In einen Panda",
+    "In ein Schwein",
+    "In eine Katze",
+    "In eine Ente"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-319",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Mönch mit dem Windloch in der Hand in „Inu Yasha“?",
+   "answers": [
+    "Miroku",
+    "Sango",
+    "Shippo",
+    "Koga"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-470",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Um welche Sportart geht es in „Slam Dunk“?",
+   "answers": [
+    "Basketball",
+    "Volleyball",
+    "Fußball",
+    "Baseball"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-471",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Hauptfigur mit den roten Haaren?",
+   "answers": [
+    "Hanamichi Sakuragi",
+    "Kaede Rukawa",
+    "Takenori Akagi",
+    "Ryota Miyagi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-577",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Warum fängt Sakuragi mit Basketball an?",
+   "answers": [
+    "Um das Mädchen Haruko zu beeindrucken",
+    "Weil sein Vater Trainer ist",
+    "Weil er Profi werden will",
+    "Aus Langeweile"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-578",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Sakuragis Rivale im Team, der kühle Star?",
+   "answers": [
+    "Kaede Rukawa",
+    "Takenori Akagi",
+    "Hisashi Mitsui",
+    "Kiminobu Kogure"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-579",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Schule in „Slam Dunk“?",
+   "answers": [
+    "Shohoku",
+    "Karasuno",
+    "Seirin",
+    "Teiko"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-320",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Kinofilm von 2022 zu „Slam Dunk“?",
+   "answers": [
+    "The First Slam Dunk",
+    "Slam Dunk: Final Game",
+    "Slam Dunk Forever",
+    "Slam Dunk: Shohoku"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-472",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was stellt Wakana Gojo in „My Dress-Up Darling“ her?",
+   "answers": [
+    "Hina-Puppen",
+    "Kimonos",
+    "Schwerter",
+    "Figuren aus Ton"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-473",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wofür begeistert sich Marin Kitagawa?",
+   "answers": [
+    "Cosplay",
+    "Volleyball",
+    "Kochen",
+    "Malerei"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-580",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was näht Gojo für Marin?",
+   "answers": [
+    "Cosplay-Kostüme",
+    "Schuluniformen",
+    "Kimonos",
+    "Vorhänge"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-581",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt der japanische Originaltitel?",
+   "answers": [
+    "Sono Bisque Doll wa Koi o Suru",
+    "Kimi ni Todoke",
+    "Horimiya",
+    "Kaguya-sama"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-582",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Welches Studio animiert „My Dress-Up Darling“?",
+   "answers": [
+    "CloverWorks",
+    "Kyoto Animation",
+    "MAPPA",
+    "Bones"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-321",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer hat „My Dress-Up Darling“ erschaffen?",
+   "answers": [
+    "Shinichi Fukuda",
+    "Aka Akasaka",
+    "HERO",
+    "Naoshi Arakawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-474",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Hauptfigur von „Berserk“?",
+   "answers": [
+    "Guts",
+    "Griffith",
+    "Casca",
+    "Puck"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-475",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Womit kämpft Guts?",
+   "answers": [
+    "Mit einem riesigen Schwert, dem Drachentöter",
+    "Mit einem Bogen",
+    "Mit Magie",
+    "Mit zwei Dolchen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-583",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Söldnertruppe, der Guts beitritt?",
+   "answers": [
+    "Die Falkentruppe (Band of the Hawk)",
+    "Die Schwarzen Stiere",
+    "Die Phantom-Truppe",
+    "Die Sonnen-Piraten"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-584",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer ist Griffith?",
+   "answers": [
+    "Der charismatische Anführer der Falkentruppe",
+    "Guts’ Bruder",
+    "Ein Dämon von Anfang an",
+    "Ein König"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-585",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Was ist die Finsternis („Eclipse“)?",
+   "answers": [
+    "Ein Ritual, bei dem Griffith seine Gefährten opfert",
+    "Eine Sonnenfinsternis ohne Folgen",
+    "Ein Turnier",
+    "Eine Schlacht gegen Elfen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-322",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer hat „Berserk“ erschaffen?",
+   "answers": [
+    "Kentaro Miura",
+    "Takehiko Inoue",
+    "Makoto Yukimura",
+    "Hirohiko Araki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-476",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welches Tier ist Totoro?",
+   "answers": [
+    "Ein großer Waldgeist, der an eine Mischung aus Bär, Katze und Eule erinnert",
+    "Ein Hund",
+    "Ein Drache",
+    "Ein Fuchs"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-323",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt der junge Pilot und Schwein-Mensch Porco Rosso mit bürgerlichem Namen?",
+   "answers": [
+    "Marco Pagot",
+    "Gina",
+    "Curtis",
+    "Fio Piccolo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-586",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Film von Mamoru Hosoda spielt in Japan und erzählt von Kun... nein: von Ren, einem Jungen, der zum Schüler des Bestien Kumatetsu wird?",
+   "answers": [
+    "Der Junge und das Biest",
+    "Wolfskinder",
+    "Mirai",
+    "Belle"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-587",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Kinofilm 2023 zu „Blue Giant“ über einen jungen Saxofonisten?",
+   "answers": [
+    "Blue Giant",
+    "Blue Period",
+    "Blue Box",
+    "Blue Spring"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-477",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Matcha?",
+   "answers": [
+    "Fein gemahlener grüner Tee",
+    "Ein Reiswein",
+    "Eine Suppe",
+    "Ein Fischgericht"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-478",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Oishii desu“?",
+   "answers": [
+    "Es ist lecker",
+    "Es ist teuer",
+    "Es ist heiß",
+    "Es ist fertig"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-588",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Welche deutsche Stadt war bis 2022 Heimat der Anime-Convention Connichi?",
+   "answers": [
+    "Kassel",
+    "Wiesbaden",
+    "Mannheim",
+    "Düsseldorf"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-324",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein „Yonkoma“-Manga typischerweise?",
+   "answers": [
+    "Ein Comedy-Strip aus vier Panels",
+    "Ein vierbändiger Manga",
+    "Ein Manga mit vier Hauptfiguren",
+    "Ein Manga in vier Farben"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-589",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Schüler in „Assassination Classroom“, der als Attentäter am talentiertesten ist?",
+   "answers": [
+    "Nagisa Shiota",
+    "Karma Akabane",
+    "Kaede Kayano",
+    "Itona Horibe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-590",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Was sind die „Pfeifen“ (Whistles) in „Made in Abyss“?",
+   "answers": [
+    "Ränge der Höhlenforscher",
+    "Signalgeräte",
+    "Waffen",
+    "Relikte"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-325",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Fluch des Abyss, der beim Aufstieg wirkt?",
+   "answers": [
+    "Der Fluch des Abgrunds (Aufstiegsfluch)",
+    "Der Abstiegsfluch",
+    "Der Sonnenfluch",
+    "Der Nebelfluch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-591",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt Koseis Kindheitsfreundin in „Your Lie in April“?",
+   "answers": [
+    "Tsubaki Sawabe",
+    "Kaori Miyazono",
+    "Nagi Aiza",
+    "Emi Igawa"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-592",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Kraft hat Arthur Boyle in „Fire Force“?",
+   "answers": [
+    "Er führt ein Plasmaschwert, Excalibur",
+    "Er fliegt",
+    "Er friert",
+    "Er liest Gedanken"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-326",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt der weiß gekleidete Kult in „Fire Force“?",
+   "answers": [
+    "Die Weißgewandeten (White-Clad)",
+    "Die Infernals",
+    "Die Schwarzen",
+    "Die Evangelisten"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-593",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Okabes beste Freundin, die „Tuturu“ sagt?",
+   "answers": [
+    "Mayuri Shiina",
+    "Kurisu Makise",
+    "Suzuha Amane",
+    "Moeka Kiryu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-327",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Was ist eine „D-Mail“ in „Steins;Gate“?",
+   "answers": [
+    "Eine Nachricht in die Vergangenheit",
+    "Eine E-Mail an SERN",
+    "Ein Chat mit Kurisu",
+    "Ein Zeitreise-Ticket"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-594",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt Mashs Rivale... wer ist Lance Crown?",
+   "answers": [
+    "Ein Mitschüler mit Gravitationsmagie, der Mashs Freund wird",
+    "Ein Lehrer",
+    "Mashs Bruder",
+    "Der Schulleiter"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-595",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Somas Vater in „Food Wars“, ein legendärer Koch?",
+   "answers": [
+    "Joichiro Yukihira",
+    "Senzaemon Nakiri",
+    "Azami Nakiri",
+    "Shinomiya"
+   ],
+   "correct": 0
   }
  ]
 }
