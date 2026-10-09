@@ -1,0 +1,492 @@
+{
+ "hinweis": "Heldenreise: 5 Akte, 10 Kapitel, je 4 Stationen und ein Boss. Stationen erben kategorien, schwierigkeit, typen und joker vom Kapitel; leere kategorien = alle. Station: 5 Fragen, Boss: 7 Fragen, immer 3 Herzen. pflicht = Fragetypen, die beim Boss möglichst vorkommen sollen. Siehe heldenreise.md.",
+ "akte": [
+  {
+   "nr": 1,
+   "name": "Aufbruch",
+   "bild": "assets/reise/akt-1.webp"
+  },
+  {
+   "nr": 2,
+   "name": "Schwelle",
+   "bild": "assets/reise/akt-2.webp"
+  },
+  {
+   "nr": 3,
+   "name": "Prüfungen",
+   "bild": "assets/reise/akt-3.webp"
+  },
+  {
+   "nr": 4,
+   "name": "Abgrund",
+   "bild": "assets/reise/akt-4.webp"
+  },
+  {
+   "nr": 5,
+   "name": "Rückkehr",
+   "bild": "assets/reise/akt-5.webp"
+  }
+ ],
+ "kapitel": [
+  {
+   "nr": 1,
+   "akt": 1,
+   "titel": "Das Dorf",
+   "stufe": "Gewohnte Welt",
+   "kategorien": [
+    "kultur",
+    "klassiker"
+   ],
+   "schwierigkeit": [
+    1
+   ],
+   "typen": [
+    "multiple_choice",
+    "true_false",
+    "emoji"
+   ],
+   "joker": [],
+   "stationen": [
+    {
+     "titel": "Erste Schritte",
+     "typen": [
+      "multiple_choice",
+      "true_false"
+     ]
+    },
+    {
+     "titel": "Der Marktplatz"
+    },
+    {
+     "titel": "Die Bibliothek"
+    },
+    {
+     "titel": "Der alte Fernseher"
+    }
+   ],
+   "boss": {
+    "name": "Der Cliffhanger",
+    "bild": "assets/reise/boss-01.webp",
+    "kategorien": [
+     "kultur",
+     "klassiker",
+     "shonen"
+    ],
+    "typen": [
+     "multiple_choice",
+     "true_false",
+     "emoji",
+     "who_am_i"
+    ],
+    "pflicht": [
+     "who_am_i"
+    ],
+    "auftritt": "Du willst wissen, wie es weitergeht? Dann beweise, dass du dich an den Anfang erinnerst."
+   }
+  },
+  {
+   "nr": 2,
+   "akt": 1,
+   "titel": "Der Brief",
+   "stufe": "Ruf des Abenteuers",
+   "kategorien": [
+    "shonen",
+    "neu"
+   ],
+   "schwierigkeit": [
+    1
+   ],
+   "typen": [
+    "multiple_choice",
+    "true_false",
+    "emoji",
+    "who_am_i"
+   ],
+   "joker": [
+    "fifty"
+   ],
+   "stationen": [
+    {
+     "titel": "Post vom Senpai"
+    },
+    {
+     "titel": "Der Trainingsplatz"
+    },
+    {
+     "titel": "Neue Gesichter",
+     "joker": [
+      "fifty",
+      "zeit"
+     ]
+    },
+    {
+     "titel": "Die Entscheidung",
+     "joker": [
+      "fifty",
+      "zeit"
+     ]
+    }
+   ],
+   "boss": {
+    "name": "Die Filler-Folge",
+    "bild": "assets/reise/boss-02.webp",
+    "pflicht": [
+     "who_am_i"
+    ],
+    "auftritt": "Nichts passiert. Niemand erinnert sich. Genau so mag ich es."
+   }
+  },
+  {
+   "nr": 3,
+   "akt": 2,
+   "titel": "Der Senpai",
+   "stufe": "Mentor",
+   "kategorien": [
+    "onepiece",
+    "dragonball",
+    "naruto"
+   ],
+   "schwierigkeit": [
+    1
+   ],
+   "typen": [
+    "multiple_choice",
+    "true_false",
+    "emoji",
+    "who_am_i"
+   ],
+   "joker": [
+    "fifty",
+    "zeit",
+    "skip"
+   ],
+   "stationen": [
+    {
+     "titel": "Lektion eins"
+    },
+    {
+     "titel": "Die Grand Line"
+    },
+    {
+     "titel": "Das Kame-Haus"
+    },
+    {
+     "titel": "Die Akademie"
+    }
+   ],
+   "boss": {
+    "name": "Der Fansub-Fehler",
+    "bild": "assets/reise/boss-03.webp",
+    "kategorien": [
+     "onepiece",
+     "dragonball",
+     "naruto",
+     "shonen"
+    ],
+    "pflicht": [
+     "who_am_i"
+    ],
+    "auftritt": "Alle Namen falsch, alle Sätze verdreht. Findest du trotzdem die Wahrheit?"
+   }
+  },
+  {
+   "nr": 4,
+   "akt": 2,
+   "titel": "Das Tor",
+   "stufe": "Überschreiten der Schwelle",
+   "kategorien": [],
+   "schwierigkeit": [
+    1,
+    2
+   ],
+   "joker": [
+    "fifty",
+    "zeit",
+    "skip"
+   ],
+   "stationen": [
+    {
+     "titel": "Vor dem Tor",
+     "typen": [
+      "multiple_choice",
+      "true_false",
+      "emoji",
+      "who_am_i",
+      "estimate"
+     ]
+    },
+    {
+     "titel": "Die Wächter"
+    },
+    {
+     "titel": "Der erste Schritt"
+    },
+    {
+     "titel": "Kein Zurück"
+    }
+   ],
+   "boss": {
+    "name": "Die Lizenz-Lücke",
+    "bild": "assets/reise/boss-04.webp",
+    "pflicht": [
+     "who_am_i",
+     "order"
+    ],
+    "auftritt": "Nicht lizenziert, nicht verfügbar, nicht erinnert. Stempel drauf."
+   }
+  },
+  {
+   "nr": 5,
+   "akt": 3,
+   "titel": "Die Arena",
+   "stufe": "Prüfungen, Verbündete, Feinde",
+   "kategorien": [
+    "onepiece",
+    "dragonball",
+    "naruto",
+    "shonen"
+   ],
+   "schwierigkeit": [
+    1,
+    2
+   ],
+   "joker": [
+    "fifty",
+    "zeit",
+    "skip"
+   ],
+   "stationen": [
+    {
+     "titel": "Vorrunde"
+    },
+    {
+     "titel": "Viertelfinale"
+    },
+    {
+     "titel": "Halbfinale"
+    },
+    {
+     "titel": "Finale"
+    }
+   ],
+   "boss": {
+    "name": "Der Recap-Film",
+    "bild": "assets/reise/boss-05.webp",
+    "pflicht": [
+     "who_am_i",
+     "estimate"
+    ],
+    "auftritt": "Alles schon gesehen! Ich zeige es dir trotzdem noch einmal. Und noch einmal."
+   }
+  },
+  {
+   "nr": 6,
+   "akt": 3,
+   "titel": "Der Turm",
+   "stufe": "Vordringen zur tiefsten Höhle",
+   "kategorien": [
+    "neu",
+    "isekai"
+   ],
+   "schwierigkeit": [
+    2
+   ],
+   "joker": [
+    "fifty",
+    "zeit",
+    "skip"
+   ],
+   "stationen": [
+    {
+     "titel": "Erdgeschoss"
+    },
+    {
+     "titel": "Die Wendeltreppe"
+    },
+    {
+     "titel": "Das Portal"
+    },
+    {
+     "titel": "Die Spitze"
+    }
+   ],
+   "boss": {
+    "name": "Das Hiatus-Gespenst",
+    "bild": "assets/reise/boss-06.webp",
+    "pflicht": [
+     "who_am_i",
+     "order"
+    ],
+    "auftritt": "Das nächste Kapitel kommt … irgendwann. Bis dahin vergisst du alles."
+   }
+  },
+  {
+   "nr": 7,
+   "akt": 4,
+   "titel": "Der Abgrund",
+   "stufe": "Entscheidende Prüfung",
+   "kategorien": [
+    "klassiker",
+    "shojo"
+   ],
+   "schwierigkeit": [
+    2
+   ],
+   "joker": [
+    "fifty",
+    "zeit",
+    "skip"
+   ],
+   "stationen": [
+    {
+     "titel": "Die Hängebrücke"
+    },
+    {
+     "titel": "Im Nebel"
+    },
+    {
+     "titel": "Leuchtende Augen"
+    },
+    {
+     "titel": "Der Sprung"
+    }
+   ],
+   "boss": {
+    "name": "Der Dub-Dämon",
+    "bild": "assets/reise/boss-07.webp",
+    "kategorien": [
+     "klassiker",
+     "shojo",
+     "filme"
+    ],
+    "pflicht": [
+     "who_am_i",
+     "estimate"
+    ],
+    "auftritt": "Die Lippen sagen das eine, die Stimme das andere. Wem glaubst du?"
+   }
+  },
+  {
+   "nr": 8,
+   "akt": 4,
+   "titel": "Der Schatz",
+   "stufe": "Belohnung",
+   "kategorien": [
+    "filme",
+    "kultur"
+   ],
+   "schwierigkeit": [
+    2,
+    3
+   ],
+   "joker": [
+    "fifty",
+    "zeit",
+    "skip"
+   ],
+   "stationen": [
+    {
+     "titel": "Die Schatzkammer"
+    },
+    {
+     "titel": "Das Kino"
+    },
+    {
+     "titel": "Das Archiv"
+    },
+    {
+     "titel": "Der Schlüssel"
+    }
+   ],
+   "boss": {
+    "name": "Die Raubkopie",
+    "bild": "assets/reise/boss-08.webp",
+    "pflicht": [
+     "who_am_i",
+     "order"
+    ],
+    "auftritt": "Verwackelt, verpixelt, verraten. Erkennst du das Original noch?"
+   }
+  },
+  {
+   "nr": 9,
+   "akt": 5,
+   "titel": "Die Verfolgung",
+   "stufe": "Rückweg",
+   "kategorien": [],
+   "schwierigkeit": [
+    2,
+    3
+   ],
+   "joker": [
+    "fifty",
+    "zeit",
+    "skip"
+   ],
+   "stationen": [
+    {
+     "titel": "Auf der Flucht"
+    },
+    {
+     "titel": "Der Hinterhalt"
+    },
+    {
+     "titel": "Die Abkürzung"
+    },
+    {
+     "titel": "Letzte Meile"
+    }
+   ],
+   "boss": {
+    "name": "Der Leak",
+    "bild": "assets/reise/boss-09.webp",
+    "pflicht": [
+     "who_am_i",
+     "estimate"
+    ],
+    "auftritt": "Ich weiß schon, was in Kapitel 1100 passiert. Soll ich es dir sagen?"
+   }
+  },
+  {
+   "nr": 10,
+   "akt": 5,
+   "titel": "Der Spoiler",
+   "stufe": "Auferstehung und Rückkehr",
+   "kategorien": [],
+   "schwierigkeit": [
+    3
+   ],
+   "joker": [
+    "fifty",
+    "zeit",
+    "skip"
+   ],
+   "stationen": [
+    {
+     "titel": "Vor dem Thron"
+    },
+    {
+     "titel": "Die Wahrheit"
+    },
+    {
+     "titel": "Der letzte Hinweis"
+    },
+    {
+     "titel": "Das Ende naht"
+    }
+   ],
+   "boss": {
+    "name": "Der Spoiler",
+    "bild": "assets/reise/boss-10.webp",
+    "fragen": 10,
+    "zeit": 12,
+    "pflicht": [
+     "who_am_i",
+     "estimate",
+     "order"
+    ],
+    "auftritt": "Ich kenne jedes Ende. Und wenn du verlierst, kennst du keins mehr."
+   }
+  }
+ ]
+}

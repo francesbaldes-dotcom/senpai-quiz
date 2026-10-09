@@ -23,6 +23,7 @@ In Claude Code startet `.claude/launch.json` denselben Server für die Browser-V
 | `js/app.js` | Spiellogik und alle Bildschirme |
 | `js/speicher.js` | Speichern des Profils: im Browser `localStorage`, in der Capacitor-App das Plugin Preferences (dieser native Pfad ist noch ungetestet, weil es noch kein Capacitor-Projekt gibt) |
 | `js/online.js` | Supabase-Client für Accounts und Duelle |
+| `js/teilen-bild.js` | Teilen-Bild fürs Tagesquiz (PNG per Canvas, 1080 × 1350, App-Schriften und Maskottchen) |
 | `js/grafik.js` | Inline-SVG-Grafiken im Manga-Look: Kategorie-Icons (`kategorieIcon`), Abzeichen-Embleme (`abzeichenEmblem`), Rang-Embleme (`rangEmblem`) und Bausteine für die Heldenreise-Karte (`stationsKnoten`, `bossKnoten`). Eigene Symbole, keine Markenzeichen |
 | `vendor/` | Supabase-JS (2.45.4), lokal eingebunden |
 | `css/style.css` | Gestaltung (Manga-Look) |
@@ -31,6 +32,8 @@ In Claude Code startet `.claude/launch.json` denselben Server für die Browser-V
 | `assets/icon-180.png`, `assets/icon-512.png` | App-Icons; das 512er ist aus `maskottchen.jpg` erzeugt (auf 256 Farben reduziert) |
 | `assets/favicon.ico`, `assets/favicon-32.png` | Favicons, aus `icon-180.png` erzeugt (Python mit Pillow) |
 | `data/fragen.json` | Fragenkatalog |
+| `data/reise.json` | Stationen der Heldenreise (Akte, Kapitel, Regeln je Station); Pool-Prüfung mit `python3 scripts/reise_check.py` |
+| `assets/reise/` | Bosse und Akt-Karten der Heldenreise (Higgsfield, siehe `heldenreise.md`) |
 | `fragen.md` | Lesbare Fragenliste zum Korrekturlesen, erzeugt mit `python3 scripts/fragen_liste.py` |
 
 ## Kategorien
@@ -57,9 +60,10 @@ Die richtige Antwort steht immer an erster Stelle (`"correct": 0`), die App misc
 ## Spielmodi
 
 - **Klassisch:** Kategorie (eine von zehn oder gemischt) und Schwierigkeit wählen, 10 Fragen, 15 Sekunden pro Frage, Joker (50:50, +10 s, Überspringen)
-- **Tagesquiz:** 5 Fragen pro Tag, für alle gleich (aus dem Datum berechnet), mit Streak. Das Ergebnis lässt sich teilen (Teilen-Menü des Geräts, sonst Zwischenablage): Datum, 🟩🟥-Kästchen je Frage, Stand, Serie ab 2 Tagen und der Link zur App. Beim ersten Teilen gibt es das Abzeichen „Teilgeist“.
+- **Tagesquiz:** 5 Fragen pro Tag, für alle gleich (aus dem Datum berechnet), mit Streak. Das Ergebnis lässt sich teilen (Teilen-Menü des Geräts, sonst Zwischenablage): Datum, 🟩🟥-Kästchen je Frage, Stand, Serie ab 2 Tagen und der Link zur App. Beim ersten Teilen gibt es das Abzeichen „Teilgeist“. Auf Geräten, die Dateien teilen können (iPhone), geht zusätzlich ein Bild im Manga-Look mit.
 - **Survival:** endlos, bis 3 Fehler gemacht sind
 - **Blitz:** 60 Sekunden, so viele Fragen wie möglich
+- **Heldenreise:** Story-Modus mit Karte, oberste Karte auf der Startseite. 5 Akte, 10 Kapitel, je 4 Stationen und ein Boss, insgesamt 50 Stationen, die sich der Reihe nach freischalten. Station: 5 Fragen, Boss: 7 (Endboss 10 mit 12 s), immer 3 Herzen; jeder Fehler kostet eins, bei 0 ist die Station gescheitert und sofort wiederholbar. Sterne = übrige Herzen, Wiederholen verbessert sie. Joker gibt es erst ab Kapitel 2 (50:50), 2.3 (+10 s) und 3 (Weiter), Bosse haben keine; die Zweite Chance per Video gilt überall außer beim Endboss. Erstes Bestehen: +50 XP, erster Boss-Sieg: +150 XP. Regeln, Kategorien und Stufen jeder Station stehen in `data/reise.json`, das Konzept in `heldenreise.md`. Abzeichen: Aufbruch, Schwellenhüter, Heimkehr, Sternenfänger.
 
 ## Belohnungswerbung
 

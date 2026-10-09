@@ -417,7 +417,7 @@ button { font: inherit; color: inherit; }
 .schaetzen input[type="range"] { flex: 1; accent-color: var(--red); height: 32px; }
 .schaetzen .grenzen { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; }
 
-.joker-leiste { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.joker-leiste { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 12px; }
 .joker { flex-direction: column; gap: 1px; min-height: 58px; }
 .joker b { font-family: var(--display); font-weight: 400; font-size: 17px; }
 .joker small { font-size: 11px; font-weight: 700; }
@@ -716,3 +716,120 @@ button.duell-zeile:active { transform: translate(4px, 4px); box-shadow: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ---------- Heldenreise ---------- */
+
+.reisekarte {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px 12px 12px;
+  background: var(--red);
+  color: var(--white);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: transform .08s, box-shadow .08s;
+}
+.reisekarte:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
+.reisekarte .maskottchen { width: 76px; height: 76px; flex-shrink: 0; filter: drop-shadow(2px 2px 0 var(--ink)); }
+.reisekarte .text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.reisekarte .label { color: var(--yellow); }
+.reisekarte .display { font-size: 20px; line-height: 1.1; }
+.reisekarte small { font-size: 13px; font-weight: 700; line-height: 1.3; }
+.reisekarte .sterne-zahl { display: flex; align-items: center; gap: 4px; color: var(--yellow); }
+.reisekarte .pfeil { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--white); color: var(--ink); border: 2px solid var(--ink); display: flex; align-items: center; justify-content: center; }
+
+.sterne { display: inline-flex; gap: 2px; }
+.sterne svg path { fill: var(--white); stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }
+.sterne svg.voll path { fill: var(--yellow); }
+.reisekarte .sterne svg path, .sterne-stand .sterne svg path { fill: var(--yellow); }
+.sterne-stand { margin-left: auto; display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 900; white-space: nowrap; }
+
+.screen.reise { gap: 12px; }
+.akt-karte {
+  position: relative;
+  height: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+  padding: 14px 16px;
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  overflow: hidden;
+  text-shadow: 2px 2px 0 var(--ink);
+}
+.akt-karte::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(20, 20, 20, .75), transparent 60%); }
+.akt-karte .label, .akt-karte b { position: relative; }
+.akt-karte .label { color: var(--yellow); }
+.akt-karte b { font-family: var(--display); font-weight: 400; font-size: 26px; line-height: 1; }
+
+.kapitel-kopf { display: flex; flex-direction: column; gap: 2px; padding: 10px 4px 2px; }
+.kapitel-kopf b { font-family: var(--display); font-weight: 400; font-size: 20px; }
+.kapitel-kopf small { font-size: 12px; font-weight: 700; }
+
+.pfad {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 6px 0 10px;
+}
+.pfad::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  border-left: 4px dashed var(--ink);
+  opacity: .35;
+}
+.station {
+  position: relative;
+  width: 132px;
+  border: 0;
+  background: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+.station.links { align-self: flex-start; margin-left: 12%; }
+.station.rechts { align-self: flex-end; margin-right: 12%; }
+.station.mitte { align-self: center; width: 160px; }
+.station .stations-knoten, .station .boss-knoten { filter: drop-shadow(3px 3px 0 var(--ink)); }
+.station.gesperrt .stations-knoten, .station.gesperrt .boss-knoten { filter: none; opacity: .8; }
+.station.aktuell .stations-knoten, .station.aktuell .boss-knoten { animation: pulsieren 1.6s ease-in-out infinite; }
+@keyframes pulsieren { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+.station .schild {
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--white);
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.station.boss .schild { background: var(--ink); color: var(--white); font-family: var(--display); font-weight: 400; }
+.station.gesperrt .schild { background: var(--muted); border-color: #B9B3A3; color: #6B665C; }
+.station.gesperrt.boss .schild { background: var(--muted); color: #6B665C; }
+.station:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 16px; }
+
+.dialog-station { gap: 12px; }
+.dialog-station .dialog-kopf > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.dialog-station .boss-bild { width: 84px; height: 84px; flex-shrink: 0; }
+.dialog-station.boss { background: var(--yellow); }
+.dialog-station .sterne { align-self: center; }
+.dialog-station p { margin: 0; font-size: 15px; font-weight: 700; line-height: 1.45; }
+.dialog-station.boss p { font-style: italic; }
+.kat-reihe { display: flex; flex-wrap: wrap; gap: 6px; }
+.kat-reihe span { display: inline-flex; align-items: center; gap: 4px; border: 2px solid var(--ink); border-radius: 999px; background: var(--white); padding: 3px 10px 3px 6px; font-size: 12px; font-weight: 900; }
+.kat-reihe .stufe { background: var(--ink); color: var(--white); padding: 3px 10px; }
+.screen.reise .kopfzeile h1 { flex: 1; min-width: 0; font-size: 24px; }
+.screen.reise .kopfzeile .sterne-stand { margin-left: 0; }

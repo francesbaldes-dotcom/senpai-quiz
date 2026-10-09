@@ -3,7 +3,8 @@
 import { belohnungsvideo, werbungOffen } from './werbung.js';
 import * as online from './online.js';
 import { speicherBereit, ladeProfil, speichereProfil } from './speicher.js';
-import { kategorieIcon, abzeichenEmblem, rangEmblem } from './grafik.js';
+import { kategorieIcon, abzeichenEmblem, rangEmblem, stationsKnoten, bossKnoten } from './grafik.js';
+import { tagesquizBild, kannBildTeilen } from './teilen-bild.js';
 
 const app = document.getElementById('app');
 
@@ -119,6 +120,10 @@ const ABZEICHEN = [
   { id: 'treue', name: 'Treue Seele', text: '7 Tage in Folge das Tagesquiz gespielt.', pruefe: () => profil.streak.tage >= 7 },
   { id: 'allrounder', name: 'Allrounder', text: 'In jeder Kategorie eine Runde gespielt.', pruefe: () => Object.keys(KATEGORIEN).every((k) => profil.gespielteKategorien.includes(k)) },
   { id: 'teilgeist', name: 'Teilgeist', text: 'Zum ersten Mal ein Ergebnis geteilt.', pruefe: () => false }, // wird beim Teilen vergeben
+  { id: 'aufbruch', name: 'Aufbruch', text: 'Kapitel 1 der Heldenreise geschafft.', pruefe: () => reiseStand().kapitelFertig >= 1 },
+  { id: 'schwellenhueter', name: 'Schwellenhüter', text: 'Den ersten Boss der Heldenreise besiegt.', pruefe: () => (profil.reise.sterne['k01-boss'] ?? 0) > 0 },
+  { id: 'heimkehr', name: 'Heimkehr', text: 'Die Heldenreise zu Ende gespielt.', pruefe: () => reiseStand().fertig },
+  { id: 'sternenfaenger', name: 'Sternenfänger', text: 'Alle Sterne der Heldenreise gesammelt.', pruefe: () => reiseStand().sterne >= reiseStand().sterneMax },
 ];
 
 // ---------- Daten & Zustand ----------
@@ -126,6 +131,8 @@ const ABZEICHEN = [
 let FRAGEN = [];
 let KATEGORIEN = {};
 let SCHWIERIGKEIT = {};
+let REISE = { akte: [], kapitel: [] }; // data/reise.json
+let STATIONEN = []; // alle Stationen der Heldenreise in Spielreihenfolge, siehe baueStationen()
 
 const PROFIL_START = {
   xp: 0,
@@ -139,6 +146,7 @@ const PROFIL_START = {
   streak: { tage: 0, letzter: null },
   tagesquiz: null,
   gespielteKategorien: [],
+  reise: { sterne: {} }, // Heldenreise: beste Sterne je Station, z. B. { 'k01-s1': 3 }
 };
 
 let profil = structuredClone(PROFIL_START); // wird in init() aus dem Speicher geladen
@@ -146,6 +154,7 @@ let profil = structuredClone(PROFIL_START); // wird in init() aus dem Speicher g
 const ui = {
   screen: 'start',
   wahl: { stufe: 'fan', kategorie: 'mix' },
+  station: null, // auf der Heldenreise-Karte angetippte Station (ID) für die Stationskarte
   runde: null,
   ergebnis: null,
   melden: null, // offener „Frage melden“-Dialog: { grund, text, fehler, sendet }
@@ -232,11 +241,14 @@ function appLink() {
 }
 
 // Text mit Link über das Teilen-Menü des Geräts, sonst in die Zwischenablage.
+// Wenn das Gerät Dateien teilen kann (iPhone), geht ein Bild mit.
 // Ergebnis: 'geteilt', 'kopiert', 'abgebrochen' oder 'fehler'.
-async function teilen(text, url) {
+async function teilen(text, url, datei = null) {
   if (navigator.share) {
     try {
-      await navigator.share({ title: 'Senpai Quiz', text, url });
+      const daten = { title: 'Senpai Quiz', text, url };
+      if (kannBildTeilen(datei)) daten.files = [datei];
+      await navigator.share(daten);
       return 'geteilt';
     } catch (fehler) {
       if (fehler.name === 'AbortError') return 'abgebrochen';
@@ -335,12 +347,100 @@ function tagesFragen() {
   return [...nachStufe(1, 2), ...nachStufe(2, 2), ...nachStufe(3, 1)];
 }
 
+// ---------- Heldenreise ----------
+
+const ALLE_TYPEN = ['multiple_choice', 'true_false', 'emoji', 'who_am_i', 'estimate', 'order'];
+const ALLE_JOKER = ['fifty', 'zeit', 'skip'];
+
+// Aus data/reise.json eine flache Liste aller Stationen bauen. Jede Station kennt
+// ihre Regeln (Kategorien, Stufen, Fragetypen, Joker, Fragenzahl, Zeit) komplett,
+// die Werte erben vom Kapitel. Bosse sind Stationen mit boss: true.
+function baueStationen() {
+  STATIONEN = [];
+  for (const k of REISE.kapitel) {
+    const id = `k${String(k.nr).padStart(2, '0')}`;
+    const basis = (s, boss) => ({
+      kapitel: k,
+      boss,
+      titel: boss ? s.name : s.titel,
+      bild: s.bild,
+      auftritt: s.auftritt,
+      kategorien: s.kategorien ?? k.kategorien ?? [],
+      schwierigkeit: s.schwierigkeit ?? k.schwierigkeit ?? [1, 2, 3],
+      typen: s.typen ?? k.typen ?? ALLE_TYPEN,
+      joker: boss ? [] : (s.joker ?? k.joker ?? ALLE_JOKER),
+      pflicht: s.pflicht ?? [],
+      fragen: s.fragen ?? (boss ? 7 : 5),
+      zeit: s.zeit ?? FRAGEZEIT,
+    });
+    k.stationen.forEach((s, i) => STATIONEN.push({ id: `${id}-s${i + 1}`, nr: `${k.nr}.${i + 1}`, ...basis(s, false) }));
+    STATIONEN.push({ id: `${id}-boss`, nr: `${k.nr}.Boss`, ...basis(k.boss, true) });
+  }
+}
+
+function station(id) {
+  return STATIONEN.find((s) => s.id === id);
+}
+
+function stationSterne(id) {
+  return profil.reise.sterne[id] ?? 0;
+}
+
+// Wo der Spieler steht: die nächste offene Station, Summen und ob alles geschafft ist
+function reiseStand() {
+  const index = STATIONEN.findIndex((s) => stationSterne(s.id) === 0);
+  const naechste = index >= 0 ? STATIONEN[index] : null;
+  const sterne = STATIONEN.reduce((summe, s) => summe + stationSterne(s.id), 0);
+  const letzteBossKapitel = STATIONEN.filter((s) => s.boss && stationSterne(s.id) > 0).length;
+  return {
+    naechste,
+    geschafft: index >= 0 ? index : STATIONEN.length,
+    sterne,
+    sterneMax: STATIONEN.length * 3,
+    kapitelFertig: letzteBossKapitel,
+    fertig: STATIONEN.length > 0 && !naechste,
+  };
+}
+
+// 'offen' (bestanden), 'aktuell' (als Nächstes dran) oder 'gesperrt'
+function stationZustand(s) {
+  if (stationSterne(s.id) > 0) return 'offen';
+  return reiseStand().naechste?.id === s.id ? 'aktuell' : 'gesperrt';
+}
+
+// Fragen für einen Versuch: Regeln der Station anwenden, Ungesehene bevorzugen,
+// Pflicht-Typen (Bosse) zuerst einbauen. Rest des Pools dient dem Joker „Weiter“.
+function stationFragen(s) {
+  const gesehen = new Set(profil.gesehen);
+  let pool = FRAGEN.filter((f) => (!s.kategorien.length || s.kategorien.includes(f.category))
+    && s.schwierigkeit.includes(f.difficulty) && s.typen.includes(f.type));
+  if (pool.length < s.fragen) pool = FRAGEN.filter((f) => s.schwierigkeit.includes(f.difficulty));
+  const sortiert = [...mischen(pool.filter((f) => !gesehen.has(f.id))), ...mischen(pool.filter((f) => gesehen.has(f.id)))];
+  const gewaehlt = [];
+  for (const typ of s.pflicht) {
+    const f = sortiert.find((x) => x.type === typ && !gewaehlt.includes(x));
+    if (f) gewaehlt.push(f);
+  }
+  for (const f of sortiert) {
+    if (gewaehlt.length >= s.fragen) break;
+    if (!gewaehlt.includes(f)) gewaehlt.push(f);
+  }
+  const reserve = sortiert.filter((f) => !gewaehlt.includes(f));
+  return { fragen: mischen(gewaehlt), reserve };
+}
+
 // ---------- Rundenablauf ----------
 
 function neueRunde(modus, opts = {}) {
   let fragen = [];
   let reserve = [];
-  if (modus === 'klassisch') {
+  let fragezeit = FRAGEZEIT;
+  if (modus === 'reise') {
+    const s = station(opts.stationId);
+    ({ fragen, reserve } = stationFragen(s));
+    fragezeit = s.zeit;
+    opts = { ...opts, station: s };
+  } else if (modus === 'klassisch') {
     const pool = poolFuer(opts.kategorie, opts.stufe);
     fragen = pool.slice(0, RUNDENLAENGE).sort((a, b) => a.difficulty - b.difficulty);
     reserve = pool.slice(RUNDENLAENGE);
@@ -359,6 +459,7 @@ function neueRunde(modus, opts = {}) {
     opts,
     fragen,
     reserve,
+    fragezeit,
     index: 0,
     punkte: 0,
     combo: 0,
@@ -400,10 +501,15 @@ function starteFrage() {
     ergebnis: null,
     hinweise: 1,
     start: Date.now(),
-    dauer: FRAGEZEIT,
-    ende: r.blitzEnde ? null : Date.now() + FRAGEZEIT * 1000,
+    dauer: r.fragezeit,
+    ende: r.blitzEnde ? null : Date.now() + r.fragezeit * 1000,
   };
   starteTimer();
+}
+
+// Survival und Heldenreise spielen mit Herzen: Jeder Fehler kostet eins.
+function mitLeben(r) {
+  return r.modus === 'survival' || r.modus === 'reise';
 }
 
 function starteTimer() {
@@ -480,7 +586,7 @@ function auswerten(korrekt, info = {}) {
     if (zeit < 5) r.schnelle++;
   } else {
     r.combo = 0;
-    if (r.modus === 'survival') r.leben--;
+    if (mitLeben(r)) r.leben--;
   }
   r.punkte += punkte;
   r.verlauf.push(korrekt);
@@ -511,7 +617,7 @@ function weiter() {
   const r = ui.runde;
   if (!r) return;
   ui.melden = null;
-  if (r.modus === 'survival' && r.leben <= 0) return beendeRunde();
+  if (mitLeben(r) && r.leben <= 0) return beendeRunde();
   if (r.modus === 'blitz' && Date.now() >= r.blitzEnde) return beendeRunde();
   r.index++;
   if (r.index >= r.fragen.length) return beendeRunde();
@@ -525,11 +631,25 @@ function beendeRunde() {
   const r = ui.runde;
   if (!r) return;
   if (r.modus === 'duell') return duellRundeFertig(r);
-  const feste = r.modus === 'klassisch' || r.modus === 'tages';
-  const gesamt = feste ? r.fragen.length : r.beantwortet;
+  const feste = r.modus === 'klassisch' || r.modus === 'tages' || r.modus === 'reise';
+  // Heldenreise: Nach dem dritten Fehler endet die Station vorzeitig, gezählt wird, was gespielt wurde
+  const gesamt = feste && r.modus !== 'reise' ? r.fragen.length : r.beantwortet;
   const perfekt = feste && r.richtig === r.fragen.length;
   const xpVorher = profil.xp;
-  const xp = Math.round(r.punkte / 10) + (perfekt ? 50 : 0);
+  let xp = Math.round(r.punkte / 10) + (perfekt ? 50 : 0);
+
+  // Heldenreise: bestanden, solange ein Herz übrig ist; Sterne = übrige Herzen
+  let reise = null;
+  if (r.modus === 'reise') {
+    const s = r.opts.station;
+    const bestanden = r.leben > 0;
+    const sterne = bestanden ? r.leben : 0;
+    const vorher = stationSterne(s.id);
+    const erstmals = bestanden && vorher === 0;
+    if (erstmals) xp += s.boss ? 150 : 50;
+    if (sterne > vorher) profil.reise.sterne[s.id] = sterne;
+    reise = { station: s, bestanden, sterne, vorher, erstmals, stand: null };
+  }
   profil.xp += xp;
   profil.spiele++;
 
@@ -553,11 +673,13 @@ function beendeRunde() {
   const neueAbzeichen = ABZEICHEN.filter((ab) => !profil.abzeichen.includes(ab.id) && ab.pruefe(r, perfekt));
   profil.abzeichen.push(...neueAbzeichen.map((ab) => ab.id));
   speichern();
+  if (reise) reise.stand = reiseStand();
 
   const schnitt = r.zeiten.length ? r.zeiten.reduce((s, z) => s + z, 0) / r.zeiten.length : 0;
   ui.ergebnis = {
     modus: r.modus,
     opts: r.opts,
+    reise,
     richtig: r.richtig,
     gesamt,
     punkte: r.punkte,
@@ -627,6 +749,7 @@ const aktionen = {
   nav(d) {
     ui.screen = d.ziel;
     ui.begriffe = false;
+    ui.station = null;
     ui.hinweis = null;
     ui.online.fehler = '';
     ui.online.meldung = '';
@@ -640,6 +763,36 @@ const aktionen = {
   },
   modus(d) {
     neueRunde(d.modus);
+  },
+  // Heldenreise: Station auf der Karte antippen → Stationskarte
+  station(d) {
+    const s = station(d.id);
+    if (!s || ui.dialog) return;
+    ui.station = s.id;
+    render();
+    document.getElementById('station-dialog')?.focus();
+  },
+  stationSchliessen() {
+    if (!ui.station) return;
+    const id = ui.station;
+    ui.station = null;
+    render();
+    document.querySelector(`[data-aktion="station"][data-id="${id}"]`)?.focus();
+  },
+  stationHintergrund(d, e) {
+    if (e.target.classList.contains('dialog-hintergrund')) aktionen.stationSchliessen();
+  },
+  stationLos() {
+    const s = station(ui.station);
+    if (!s || stationZustand(s) === 'gesperrt') return;
+    ui.station = null;
+    neueRunde('reise', { stationId: s.id });
+  },
+  // Vom Ergebnis zur nächsten Station der Reise
+  reiseWeiter() {
+    const naechste = reiseStand().naechste;
+    if (!naechste) return aktionen.nav({ ziel: 'reise' });
+    neueRunde('reise', { stationId: naechste.id });
   },
   stufe(d) {
     ui.wahl.stufe = d.stufe;
@@ -821,7 +974,7 @@ const aktionen = {
   },
   async zweiteChance() {
     const r = ui.runde;
-    if (!r || r.zweiteChance || r.leben > 0) return;
+    if (!r || r.zweiteChance || r.leben > 0 || !zweiteChanceMoeglich(r)) return;
     const ok = await belohnungsvideo('1 Leben, du spielst weiter');
     if (!ok || ui.runde !== r) return;
     r.leben = 1;
@@ -849,8 +1002,17 @@ const aktionen = {
     render();
   },
   async ergebnisTeilen() {
-    if (!profil.tagesquiz) return;
-    const ergebnis = await teilen(tagesquizText(), appLink());
+    const t = profil.tagesquiz;
+    if (!t) return;
+    const datei = await tagesquizBild({
+      datum: datumDeutsch(t.datum),
+      verlauf: t.verlauf || [],
+      richtig: t.richtig,
+      gesamt: t.gesamt,
+      streak: aktuelleStreak(),
+      link: appLink().replace(/^https?:\/\//, ''),
+    });
+    const ergebnis = await teilen(tagesquizText(), appLink(), datei);
     if (ergebnis === 'abgebrochen') return;
     ui.hinweis = null;
     if (ergebnis === 'fehler') {
@@ -927,6 +1089,10 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') aktionen.begriffeSchliessen();
     return;
   }
+  if (ui.station) {
+    if (e.key === 'Escape') aktionen.stationSchliessen();
+    return;
+  }
   if (ui.screen !== 'frage' || !ui.runde) return;
   if (ui.melden) {
     if (e.key === 'Escape') aktionen.meldeAbbrechen();
@@ -961,7 +1127,7 @@ function tabbar(aktiv) {
   </nav>`;
 }
 
-const STIMMUNGEN = ['entschlossen', 'jubelnd', 'traurig', 'panisch', 'nachdenklich', 'stolz', 'erledigt', 'schlafend'];
+const STIMMUNGEN = ['entschlossen', 'jubelnd', 'traurig', 'panisch', 'nachdenklich', 'stolz', 'erledigt', 'schlafend', 'mentor', 'kaempferisch', 'siegreich'];
 
 function maskottchen(stimmung = 'entschlossen', id = '') {
   return `<img class="maskottchen" ${id ? `id="${id}"` : ''} src="assets/stimmung/${stimmung}.webp" alt="">`;
@@ -976,6 +1142,11 @@ function frageStimmung(a, restMs) {
 }
 
 function ergebnisStimmung(e, aufgestiegen) {
+  if (e.reise) {
+    if (!e.reise.bestanden) return 'erledigt';
+    if (e.reise.station.boss) return 'siegreich';
+    return e.reise.sterne === 3 || aufgestiegen ? 'stolz' : 'jubelnd';
+  }
   const rekord = e.neuerRekord && e.richtig >= 10;
   if (e.modus === 'survival') return rekord ? 'stolz' : 'erledigt';
   if (e.modus === 'blitz') return rekord ? 'stolz' : e.richtig >= 5 ? 'jubelnd' : 'erledigt';
@@ -1010,6 +1181,8 @@ function startScreen() {
       <div class="sprechblase">${erledigt ? 'Gut gemacht!' : 'Bereit, Senpai?'}</div>
     </div>
     <button class="leise-knopf begriffe-link" data-aktion="begriffe">Was heißt eigentlich „Senpai“?</button>
+
+    ${reiseKarteStart()}
 
     <div class="tageskarte karte">
       <div class="text">
@@ -1089,10 +1262,17 @@ function kategorieScreen() {
   </section>`;
 }
 
+function herzen(r) {
+  return `<div class="leben" aria-label="${r.leben} Herzen übrig">${[0, 1, 2].map((i) => ICON.herz(i < r.leben)).join('')}</div>`;
+}
+
 function frageKopf(r) {
   let fortschritt;
   if (r.modus === 'survival') {
-    fortschritt = `<b>Frage ${r.index + 1}</b><div class="leben" aria-label="${r.leben} Leben übrig">${[0, 1, 2].map((i) => ICON.herz(i < r.leben)).join('')}</div>`;
+    fortschritt = `<b>Frage ${r.index + 1}</b>${herzen(r)}`;
+  } else if (r.modus === 'reise') {
+    const s = r.opts.station;
+    fortschritt = `<b>${s.boss ? esc(s.titel) : `Station ${s.nr}`} · Frage ${r.index + 1} von ${r.fragen.length}</b>${herzen(r)}`;
   } else if (r.modus === 'blitz') {
     fortschritt = `<b>Blitz · ${r.richtig} richtig</b>`;
   } else {
@@ -1186,13 +1366,16 @@ function unterBlock(r) {
   const a = r.aktuell;
   const f = a.frage;
   if (!a.ergebnis) {
-    if (r.modus !== 'klassisch' && r.modus !== 'survival') return '';
+    if (r.modus !== 'klassisch' && r.modus !== 'survival' && r.modus !== 'reise') return '';
     const fiftyMoeglich = ['multiple_choice', 'emoji', 'who_am_i'].includes(f.type);
+    // Auf der Heldenreise gibt es Joker erst, wenn die Station sie erlaubt; Bosse haben keine
+    const erlaubt = r.modus === 'reise' ? r.opts.station.joker : ALLE_JOKER;
+    if (!erlaubt.length) return '';
     const joker = [
       ['fifty', '50:50', 'zwei weg', !fiftyMoeglich || a.entfernt.length > 0],
       ['zeit', '+10 s', 'mehr Zeit', false],
       ['skip', 'Weiter', 'überspringen', false],
-    ];
+    ].filter(([id]) => erlaubt.includes(id));
     return `<span class="label">Joker</span>
       <div class="joker-leiste">${joker.map(([id, name, info, gesperrt]) => {
         const benutzt = r.joker[id];
@@ -1215,8 +1398,11 @@ function unterBlock(r) {
     titel = e.zeitAus ? 'ZEIT ABGELAUFEN' : 'LEIDER FALSCH';
     text = f.type === 'order' || f.type === 'estimate' ? 'Die Lösung steht oben.' : `Richtig: ${antwortText(f)}`;
   }
-  if (r.modus === 'survival' && !e.korrekt) text += r.leben > 0 ? ` · noch ${r.leben} ${r.leben === 1 ? 'Leben' : 'Leben'}` : ' · keine Leben mehr';
-  const letzte = r.modus === 'survival' ? r.leben <= 0 || r.index >= r.fragen.length - 1 : r.index >= r.fragen.length - 1;
+  if (mitLeben(r) && !e.korrekt) {
+    const wort = r.modus === 'reise' ? (r.leben === 1 ? 'Herz' : 'Herzen') : 'Leben';
+    text += r.leben > 0 ? ` · noch ${r.leben} ${wort}` : ` · ${r.modus === 'reise' ? 'keine Herzen' : 'keine Leben'} mehr`;
+  }
+  const letzte = mitLeben(r) ? r.leben <= 0 || r.index >= r.fragen.length - 1 : r.index >= r.fragen.length - 1;
   const knopf = r.modus === 'blitz' ? '' : `<button class="knopf" data-aktion="weiter">${letzte ? 'Ergebnis' : 'Weiter'} ${ICON.weiter}</button>`;
   let melden = '';
   if (r.modus !== 'blitz') {
@@ -1224,11 +1410,19 @@ function unterBlock(r) {
       ? '<span class="melde-dank">Danke! Wir prüfen das.</span>'
       : '<button class="melde-link" data-aktion="melden">Frage melden</button>';
   }
-  const zweiteChance = r.modus === 'survival' && r.leben <= 0 && !r.zweiteChance;
+  const zweiteChance = r.leben <= 0 && !r.zweiteChance && zweiteChanceMoeglich(r);
   return `<div class="karte banner ${e.korrekt ? 'gut' : 'schlecht'}" role="status">
     <div class="text"><span class="display">${titel}</span><small>${esc(text)}</small>${melden}</div>${knopf}
   </div>
-  ${zweiteChance ? `<button class="knopf knopf-video" data-aktion="zweiteChance">${ICON.video} Video ansehen: mit 1 Leben weiterspielen</button>` : ''}`;
+  ${zweiteChance ? `<button class="knopf knopf-video" data-aktion="zweiteChance">${ICON.video} Video ansehen: mit 1 ${r.modus === 'reise' ? 'Herz' : 'Leben'} weiterspielen</button>` : ''}`;
+}
+
+// Zweite Chance per Video: im Survival immer, auf der Heldenreise nicht beim Endboss
+function zweiteChanceMoeglich(r) {
+  if (r.modus === 'survival') return true;
+  if (r.modus !== 'reise') return false;
+  const s = r.opts.station;
+  return !(s.boss && s === STATIONEN[STATIONEN.length - 1]);
 }
 
 function meldeDialog() {
@@ -1303,10 +1497,20 @@ function frageScreen() {
   </section>`;
 }
 
+// Sternenreihe für Stationskarte und Ergebnis
+function sterneReihe(n, groesse = 28) {
+  return `<span class="sterne" aria-label="${n} von 3 Sternen">${[0, 1, 2].map((i) => `<svg width="${groesse}" height="${groesse}" viewBox="-9 -9 18 18" class="${i < n ? 'voll' : ''}"><path d="M0-7l2.1 4.5 4.9.5-3.7 3.3 1 4.9L0 3.8l-4.3 2.4 1-4.9-3.7-3.3 4.9-.5z"/></svg>`).join('')}</span>`;
+}
+
 function ergebnisScreen() {
   const e = ui.ergebnis;
-  const titel = e.modus === 'survival' ? 'GAME OVER' : e.modus === 'blitz' ? 'ZEIT UM!' : e.perfekt ? 'PERFEKT!' : 'RUNDE GESCHAFFT!';
-  const wertung = e.modus === 'survival' || e.modus === 'blitz' ? `${e.richtig} richtig` : `${e.richtig} / ${e.gesamt} richtig`;
+  let titel = e.modus === 'survival' ? 'GAME OVER' : e.modus === 'blitz' ? 'ZEIT UM!' : e.perfekt ? 'PERFEKT!' : 'RUNDE GESCHAFFT!';
+  let wertung = e.modus === 'survival' || e.modus === 'blitz' ? `${e.richtig} richtig` : `${e.richtig} / ${e.gesamt} richtig`;
+  if (e.reise) {
+    const s = e.reise.station;
+    titel = !e.reise.bestanden ? (s.boss ? 'BOSS GEWINNT' : 'GESCHEITERT') : s.boss ? 'BOSS BESIEGT!' : e.reise.sterne === 3 ? 'PERFEKT!' : 'STATION GESCHAFFT!';
+    wertung = e.reise.bestanden ? sterneReihe(e.reise.sterne) : `${e.richtig} / ${e.gesamt} richtig`;
+  }
   const vorher = rang(e.xpVorher);
   const nachher = rang(e.xpVorher + e.xp);
   const aufgestiegen = nachher.name !== vorher.name;
@@ -1317,6 +1521,21 @@ function ergebnisScreen() {
   const zweiterKnopf = e.modus === 'klassisch'
     ? '<button class="knopf" data-aktion="nav" data-ziel="kategorie">Andere Kategorie</button>'
     : '<button class="knopf" data-aktion="nav" data-ziel="statistik">Statistik</button>';
+  // Heldenreise: eigener Fuß mit Weg zur nächsten Station bzw. zur Karte
+  let fuss;
+  if (e.reise) {
+    const s = e.reise.station;
+    const naechste = e.reise.stand.naechste;
+    const zurKarte = '<button class="knopf" data-aktion="nav" data-ziel="reise">Zur Karte</button>';
+    if (!e.reise.bestanden) {
+      fuss = `<button class="knopf knopf-rot" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button><div class="zweier">${zurKarte}<button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button></div>`;
+    } else if (e.reise.stand.fertig) {
+      fuss = `<button class="knopf knopf-rot" data-aktion="nav" data-ziel="reise">Zur Karte</button><div class="zweier"><button class="knopf" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button><button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button></div>`;
+    } else {
+      const text = naechste.boss ? `Weiter: ${esc(naechste.titel)}` : `Weiter: Station ${naechste.nr}`;
+      fuss = `<button class="knopf knopf-rot" data-aktion="reiseWeiter">${text} ${ICON.weiter}</button><div class="zweier">${zurKarte}${e.reise.sterne < 3 && s ? `<button class="knopf" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button>` : '<button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button>'}</div>`;
+    }
+  }
   return `<section class="screen">
     <div class="ergebnis-held karte">
       <div class="speedlines"></div>
@@ -1344,15 +1563,101 @@ function ergebnisScreen() {
     <div class="fusszeile">
       ${!e.verdoppelt && e.xp > 0 ? `<button class="knopf knopf-video" data-aktion="xpVerdoppeln">${ICON.video} Video ansehen: XP verdoppeln</button>` : ''}
       ${hinweisBlock()}
-      ${e.modus === 'tages'
+      ${fuss ?? `${e.modus === 'tages'
         ? `<button class="knopf knopf-rot" data-aktion="ergebnisTeilen">${ICON.teilen} Ergebnis teilen</button>`
         : `<button class="knopf knopf-rot" data-aktion="nochmal">${ICON.nochmal} Nochmal</button>`}
       <div class="zweier">
         ${zweiterKnopf}
         <button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button>
-      </div>
+      </div>`}
     </div>
   </section>`;
+}
+
+// ---------- Heldenreise: Karte und Stationskarte ----------
+
+function reiseKarteStart() {
+  const stand = reiseStand();
+  const n = stand.naechste;
+  let text;
+  if (stand.fertig) text = 'Reise geschafft! Hol dir die restlichen Sterne.';
+  else if (stand.geschafft === 0) text = 'Vom Neuling zur Legende: 50 Stationen, 10 Bosse.';
+  else text = `Weiter bei ${n.boss ? n.titel : `Station ${n.nr}`} · Kapitel ${n.kapitel.nr}: ${n.kapitel.titel}`;
+  return `<button class="karte reisekarte" data-aktion="nav" data-ziel="reise">
+    <img src="assets/stimmung/mentor.webp" alt="" class="maskottchen">
+    <span class="text">
+      <span class="label">Heldenreise</span>
+      <span class="display">${stand.geschafft === 0 ? 'Dein Abenteuer beginnt' : `${stand.geschafft} von ${STATIONEN.length} Stationen`}</span>
+      <small>${esc(text)}</small>
+      ${stand.sterne ? `<small class="sterne-zahl">${sterneReihe(1, 14)} ${stand.sterne} / ${stand.sterneMax} Sterne</small>` : ''}
+    </span>
+    <span class="pfeil">${ICON.weiter}</span>
+  </button>`;
+}
+
+function reiseScreen() {
+  const stand = reiseStand();
+  let html = '';
+  let nr = 0;
+  for (const akt of REISE.akte) {
+    html += `<div class="akt-karte karte" style="background-image:url('${akt.bild}')"><span class="label">Akt ${akt.nr}</span><b>${esc(akt.name)}</b></div>`;
+    for (const k of REISE.kapitel.filter((x) => x.akt === akt.nr)) {
+      const stationen = STATIONEN.filter((s) => s.kapitel === k);
+      const sterne = stationen.reduce((summe, s) => summe + stationSterne(s.id), 0);
+      html += `<div class="kapitel-kopf"><span class="label">Kapitel ${k.nr} · ${esc(k.stufe)}</span><b>${esc(k.titel)}</b><small>${sterne} / ${stationen.length * 3} Sterne</small></div>`;
+      html += `<div class="pfad">${stationen.map((s) => {
+        const zustand = stationZustand(s);
+        const seite = s.boss ? 'mitte' : nr++ % 2 ? 'rechts' : 'links';
+        const knoten = s.boss ? bossKnoten(zustand, 80) : stationsKnoten(stationSterne(s.id), zustand, 64);
+        return `<button class="station ${seite} ${zustand} ${s.boss ? 'boss' : ''}" data-aktion="station" data-id="${s.id}" id="st-${s.id}" aria-label="${s.boss ? `Boss: ${esc(s.titel)}` : `Station ${s.nr}: ${esc(s.titel)}`}${zustand === 'gesperrt' ? ', gesperrt' : ''}">
+          ${knoten}<span class="schild">${s.boss ? esc(s.titel) : s.nr}</span></button>`;
+      }).join('')}</div>`;
+    }
+  }
+  return `<section class="screen reise">
+    <div class="kopfzeile">
+      <button class="icon-knopf" data-aktion="nav" data-ziel="start" aria-label="Zurück zum Start">${ICON.zurueck}</button>
+      <h1>Heldenreise</h1>
+      <span class="sterne-stand">${sterneReihe(1, 18)} ${stand.sterne} / ${stand.sterneMax}</span>
+    </div>
+    ${html}
+    ${stationDialog()}
+  </section>`;
+}
+
+function stationDialog() {
+  const s = station(ui.station);
+  if (!s) return '';
+  const zustand = stationZustand(s);
+  const sterne = stationSterne(s.id);
+  const kategorien = s.kategorien.length ? s.kategorien : Object.keys(KATEGORIEN);
+  const stufen = s.schwierigkeit.map((d) => SCHWIERIGKEIT[d]).join(', ');
+  const gesperrtText = () => {
+    const i = STATIONEN.indexOf(s);
+    const davor = STATIONEN[i - 1];
+    return davor ? `Erst ${davor.boss ? davor.titel : `Station ${davor.nr}`} bestehen.` : '';
+  };
+  let text;
+  if (zustand === 'gesperrt') text = gesperrtText();
+  else if (s.boss) text = s.auftritt;
+  else text = `${s.fragen} Fragen, 3 Herzen. ${s.joker.length ? 'Joker erlaubt.' : 'Noch ohne Joker.'}`;
+  return `<div class="dialog-hintergrund" data-aktion="stationHintergrund">
+    <div class="karte dialog dialog-station ${s.boss ? 'boss' : ''}" id="station-dialog" role="dialog" aria-modal="true" aria-labelledby="station-titel" tabindex="-1">
+      <div class="dialog-kopf">
+        ${s.boss ? `<img class="maskottchen boss-bild" src="${s.bild}" alt="">` : maskottchen(zustand === 'gesperrt' ? 'schlafend' : 'mentor')}
+        <div>
+          <span class="label">${s.boss ? `Boss · Kapitel ${s.kapitel.nr}` : `Station ${s.nr} · ${esc(s.kapitel.titel)}`}</span>
+          <h2 id="station-titel">${esc(s.titel)}</h2>
+        </div>
+      </div>
+      ${zustand !== 'gesperrt' ? sterneReihe(sterne, 32) : ''}
+      <p>${esc(text)}</p>
+      <div class="kat-reihe">${kategorien.length === Object.keys(KATEGORIEN).length ? '<span>Alle Kategorien</span>' : kategorien.map((k) => `<span>${kategorieIcon(k, 18)}${esc(KATEGORIEN[k])}</span>`).join('')}<span class="stufe">${esc(stufen)}</span></div>
+      ${zustand === 'gesperrt'
+        ? `<button class="knopf" data-aktion="stationSchliessen">${ICON.schloss} Noch gesperrt</button>`
+        : `<button class="knopf knopf-rot" data-aktion="stationLos">${ICON.play} ${sterne ? 'Noch einmal' : s.boss ? 'Kampf!' : 'Los'}</button>`}
+    </div>
+  </div>`;
 }
 
 function statistikScreen() {
@@ -1939,6 +2244,7 @@ function kontoBereich() {
 
 const SCREENS = {
   start: startScreen,
+  reise: reiseScreen,
   kategorie: kategorieScreen,
   frage: frageScreen,
   ergebnis: ergebnisScreen,
@@ -1960,6 +2266,12 @@ function render() {
   if (ui.screen !== letzterScreen) {
     window.scrollTo(0, 0);
     letzterScreen = ui.screen;
+    // Karte der Heldenreise: zur nächsten offenen Station rollen
+    if (ui.screen === 'reise') {
+      const ziel = reiseStand().naechste;
+      const el = ziel && document.getElementById(`st-${ziel.id}`);
+      if (el) el.scrollIntoView({ block: 'center' });
+    }
   }
   if (ui.dialog) {
     const karte = app.querySelector('.dialog-frage');
@@ -1984,12 +2296,15 @@ function uebernimmAlteKategorien() {
 
 async function init() {
   try {
-    const [antwort] = await Promise.all([fetch('data/fragen.json'), speicherBereit()]);
+    const [antwort, reiseAntwort] = await Promise.all([fetch('data/fragen.json'), fetch('data/reise.json'), speicherBereit()]);
     const daten = await antwort.json();
     FRAGEN = daten.fragen;
     KATEGORIEN = daten.kategorien;
     SCHWIERIGKEIT = daten.schwierigkeiten;
+    REISE = await reiseAntwort.json();
+    baueStationen();
     profil = ladeProfil(PROFIL_START);
+    profil.reise ||= { sterne: {} };
     uebernimmAlteKategorien();
     // Stimmungsbilder vorladen, damit beim Wechsel nichts flackert
     STIMMUNGEN.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });

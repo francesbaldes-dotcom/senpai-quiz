@@ -68,21 +68,20 @@ Streng linear: Station N+1 öffnet sich, wenn N bestanden ist. Das nächste Kapi
 
 ## Einführungskurve (Akt I und II)
 
-Die ersten Kapitel bringen Neulingen die App bei, ohne ein Tutorial zu sein:
+Die ersten Kapitel bringen Neulingen die App bei, ohne ein Tutorial zu sein. Schätz- und Reihenfolge-Fragen gibt es im Katalog erst ab Stufe 2, deshalb kommen sie erst in Kapitel 4 dazu:
 
 | Station | Neu dabei |
 |---|---|
 | 1.1 | nur Auswahl- und Wahr/Falsch-Fragen, Senpai erklärt Herzen |
 | 1.2 | Emoji-Fragen |
-| 1.3 | Schätzfragen |
-| 1.4 | Reihenfolge-Fragen |
-| Boss 1 | „Wer bin ich?“ zum ersten Mal, als Markenzeichen der Bosse |
-| 2.1 | Joker 50:50 |
+| Boss 1 | „Wer bin ich?“ zum ersten Mal, als Markenzeichen der Bosse (Pool um Shōnen erweitert) |
+| 2.1 | „Wer bin ich?“ auch in Stationen, Joker 50:50 |
 | 2.3 | Joker +10 s |
 | 3.1 | Joker Überspringen |
-| 3.4 | Senpai weist auf Tagesquiz und Duell hin (einmalig, Link in den Dialog) |
+| 4.1 | Schätzfragen |
+| 4.2 | Reihenfolge-Fragen, ab hier alle Fragetypen |
 
-Ab Kapitel 4 ist alles verfügbar und die Reise ist ein reines Spiel.
+Ab Kapitel 4 ist alles verfügbar und die Reise ist ein reines Spiel. Die Senpai-Hinweise auf Tagesquiz und Duell (Station 3.4) kommen mit den Dialogen in Ausbaustufe 2.
 
 ## Belohnungen und Verknüpfung mit dem Rest
 
@@ -151,8 +150,8 @@ Beispiele für den Ton:
 
 | Stufe | Inhalt | Aufwand |
 |---|---|---|
-| **1 (MVP)** | Karte, 50 Stationen aus `reise.json`, Herzen, Sterne, lineares Freischalten, Bosse ohne Sonderregeln, Fortschritt im Profil | 2 bis 3 Tage |
-| **2** | Senpai-Dialoge, Boss-Regeln (Fragetypen, keine Joker), Abzeichen, Titel, Teilen, Zweite Chance per Video, Prüfskript | 1 bis 2 Tage plus Texte |
+| **1 (MVP)** | **Fertig (9. Oktober 2026):** Karte, 50 Stationen aus `reise.json`, Herzen, Sterne, lineares Freischalten, Fortschritt im Profil; dazu schon Boss-Regeln (Fragetypen, keine Joker, Endboss 10 Fragen mit 12 s), Boss-Auftritt auf der Stationskarte, die vier Abzeichen, Zweite Chance per Video und das Prüfskript | erledigt |
+| **2** | Senpai-Dialoge zwischen den Stationen, Titel „Reisender“/„Heimkehrer“ am Spielernamen, Teilen von Boss-Siegen | 1 Tag plus Texte |
 | **3** | Geheimpfade, „Zweite Reise“ als New Game+ (alles auf Stufe 3, 2 Herzen), saisonale Kurz-Kapitel zu Neustarts | offen |
 
 ## Entscheidungen (9. Oktober 2026)
@@ -164,4 +163,4 @@ Beispiele für den Ton:
 | Erzählung | **Mit dem Spoiler** als Gegenspieler, Bosse sind seine Handlanger, Senpai-Sätze zwischen den Stationen, alle überspringbar. |
 | Platzierung | **Oberste Karte im Startbildschirm** mit „Weiter bei Station 4.2“, darunter die bisherigen Modi. |
 
-Damit ist das Konzept umsetzungsreif. Nächster Schritt ist Ausbaustufe 1: `data/reise.json` mit den 10 Kapiteln anlegen, den Modus `reise` in `js/app.js` einbauen und die Karte als Bildschirm ergänzen.
+Ausbaustufe 1 ist seit dem 9. Oktober 2026 in der App (Modus `reise` in `js/app.js`, Karte und Stationskarte, `data/reise.json`, `scripts/reise_check.py`). Nächster Schritt ist Ausbaustufe 2.
