@@ -1848,8 +1848,8 @@ function duellKategorieScreen() {
     ${hinweise()}
     <div class="abschnitt">
       ${d.kategorie_optionen.map((k) => `
-        <button class="knopf kat breit" style="background:${FARBEN[k][0]};color:${FARBEN[k][1]}" data-aktion="kategorieNehmen" data-kategorie="${k}">
-          <span style="display:flex;flex-direction:column;gap:2px"><b>${esc(KATEGORIEN[k])}</b><small>${esc(UNTERTITEL[k])}</small></span>
+        <button class="knopf kat breit" style="background:${(FARBEN[k] ?? FARBEN.kultur)[0]};color:${(FARBEN[k] ?? FARBEN.kultur)[1]}" data-aktion="kategorieNehmen" data-kategorie="${k}">
+          <span style="display:flex;flex-direction:column;gap:2px"><b>${esc(kategorieName(k))}</b><small>${esc(UNTERTITEL[k] ?? '')}</small></span>
         </button>`).join('')}
     </div>
   </section>`;
