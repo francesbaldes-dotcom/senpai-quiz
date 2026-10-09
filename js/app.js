@@ -1233,7 +1233,7 @@ function tabbar(aktiv) {
   </nav>`;
 }
 
-const STIMMUNGEN = ['entschlossen', 'jubelnd', 'traurig', 'panisch', 'nachdenklich', 'stolz', 'erledigt', 'schlafend', 'mentor', 'kaempferisch', 'siegreich'];
+const STIMMUNGEN = ['entschlossen', 'jubelnd', 'traurig', 'panisch', 'nachdenklich', 'stolz', 'erledigt', 'schlafend', 'mentor', 'kaempferisch', 'siegreich', 'winkend', 'daumenhoch', 'lesend', 'ueberrascht', 'verlegen', 'herausfordernd', 'feiernd', 'cool'];
 
 function maskottchen(stimmung = 'entschlossen', id = '') {
   return `<img class="maskottchen" ${id ? `id="${id}"` : ''} src="assets/stimmung/${stimmung}.webp" alt="">`;
