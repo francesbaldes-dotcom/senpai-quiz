@@ -66,7 +66,7 @@ Die richtige Antwort steht immer an erster Stelle (`"correct": 0`), die App misc
 
 ## Spielmodi
 
-Die Tab-Leiste unten hat fünf Tabs: Start (Tagesquiz, Klassisch, Survival, Blitz und zwei schmale Fortschrittskacheln für Reise und Dojo), Reise (Karte der Heldenreise), Dojo, Duelle und Profil (Rang, Statistik und Abzeichen als Segmente, Lexikon-Link, Info-Knopf oben rechts). Die alten Bildschirm-IDs `statistik` und `abzeichen` leiten auf den Profil-Tab weiter.
+Die Tab-Leiste unten hat fünf Tabs: Start (Tagesquiz, Klassisch, Survival, Blitz und zwei farbige Karten für Heldenreise und Dojo), Reise (Karte der Heldenreise), Dojo, Duelle und Profil (Rang, Statistik und Abzeichen als Segmente, Lexikon-Link, Info-Knopf oben rechts). Die alten Bildschirm-IDs `statistik` und `abzeichen` leiten auf den Profil-Tab weiter.
 
 - **Klassisch:** Kategorie (eine von zehn oder gemischt) und Schwierigkeit wählen, 10 Fragen, 15 Sekunden pro Frage, Joker (50:50, +10 s, Überspringen)
 - **Tagesquiz:** 5 Fragen pro Tag, für alle gleich (aus dem Datum berechnet), mit Streak. Das Ergebnis lässt sich teilen (Teilen-Menü des Geräts, sonst Zwischenablage): Datum, 🟩🟥-Kästchen je Frage, Stand, Serie ab 2 Tagen und der Link zur App. Beim ersten Teilen gibt es das Abzeichen „Teilgeist“. Auf Geräten, die Dateien teilen können (iPhone), geht zusätzlich ein Bild im Manga-Look mit.

@@ -191,28 +191,33 @@ button { font: inherit; color: inherit; }
 }
 .sprechblase small { font-size: 11px; font-weight: 700; white-space: nowrap; }
 
-/* Fortschrittszeile: Reise und Dojo als schmale Kacheln */
-.fortschritt-zeile { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+/* Fortschrittszeile: Reise und Dojo als farbige Karten */
+.fortschritt-zeile { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .fortschritt-kachel {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 52px;
-  padding: 6px 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 6px;
+  min-height: 96px;
+  padding: 10px 14px;
   border: 3px solid var(--ink);
-  border-radius: 14px;
-  background: var(--white);
-  box-shadow: 3px 3px 0 var(--ink);
+  border-radius: 18px;
+  color: var(--white);
+  box-shadow: 4px 4px 0 var(--ink);
   font-family: inherit;
-  color: inherit;
   text-align: left;
   cursor: pointer;
+  transition: transform .08s, box-shadow .08s;
 }
-.fortschritt-kachel:active { transform: translate(3px, 3px); box-shadow: none; }
-.fortschritt-kachel > svg { flex-shrink: 0; width: 22px; height: 22px; }
-.fortschritt-kachel > span { display: flex; flex-direction: column; min-width: 0; }
-.fortschritt-kachel b { font-family: var(--display); font-weight: 400; font-size: 15px; line-height: 1.1; }
-.fortschritt-kachel small { font-size: 11px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fortschritt-kachel.reise { background: var(--red); }
+.fortschritt-kachel.dojo { background: var(--blue); }
+.fortschritt-kachel:active { transform: translate(4px, 4px); box-shadow: none; }
+.fortschritt-kachel .symbol { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--white); color: var(--ink); border: 2px solid var(--ink); }
+.fortschritt-kachel .symbol svg { width: 24px; height: 24px; }
+.fortschritt-kachel > span:not(.symbol) { display: flex; flex-direction: column; gap: 2px; min-width: 0; max-width: 100%; }
+.fortschritt-kachel b { font-family: var(--display); font-weight: 400; font-size: 18px; line-height: 1.05; }
+.fortschritt-kachel small { font-size: 12px; font-weight: 700; color: var(--yellow); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .tageskarte {
   display: flex;

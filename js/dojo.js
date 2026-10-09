@@ -1108,8 +1108,8 @@ export function dojoKachelStart() {
   else if (faellig) text = `${faellig} fällig`;
   else if (heuteZahl() < profil().dojo.ziel) text = `Tagesziel ${heuteZahl()} / ${profil().dojo.ziel}`;
   else text = 'Tagesziel geschafft';
-  return `<button class="fortschritt-kachel" data-aktion="nav" data-ziel="dojo">
-    ${frei ? app.ICON.torii : app.ICON.schloss}
+  return `<button class="fortschritt-kachel dojo" data-aktion="nav" data-ziel="dojo">
+    <span class="symbol">${frei ? app.ICON.torii : app.ICON.schloss}</span>
     <span><b>Dojo</b><small>${app.esc(text)}</small></span>
   </button>`;
 }
