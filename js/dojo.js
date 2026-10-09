@@ -12,6 +12,7 @@
 // Ab Fach 3 „sitzt“ eine Karte und zählt für den Gürtel.
 
 import { ANGEBOTE, kaufen, kaufOffen, kaufMoeglich, kaeufeWiederherstellen } from './kauf.js';
+import * as online from './online.js';
 
 const INTERVALLE = [0, 1, 3, 7, 14, 30]; // Tage bis zur nächsten Wiederholung je Fach
 const SITZT_AB = 3; // ab diesem Fach zählt eine Karte als gelernt
@@ -36,7 +37,7 @@ export const STUFEN = [
 ];
 
 // Profil-Teil (profil.dojo). karten: { id: { f: Fach, bis: 'JJJJ-MM-TT' } }
-export const DOJO_PROFIL = { frei: null, karten: {}, lektionen: [], tage: {}, ziel: 10, fehler: { datum: null, ids: [] }, blitz: 0 };
+export const DOJO_PROFIL = { frei: null, karten: {}, lektionen: [], tage: {}, ziel: 10, fehler: { datum: null, ids: [] }, blitz: 0, wochen: {}, ligaOffen: 0 };
 
 let DATEN = null; // data/dojo.json
 let KARTEN = {}; // id → Karte
@@ -51,6 +52,7 @@ const dui = {
   blitz: null, // laufendes „Paare finden“
   ergebnis: null,
   zielErreicht: false, // Tagesziel in dieser Runde erreicht (für den Ergebnis-Bildschirm)
+  liga: { stand: null, vorige: null, geladen: 0, laedt: false, fehler: '' }, // Wochenliga vom Server
   eingabe: '',
   meldung: '',
   fehler: '',
@@ -92,6 +94,8 @@ export function dojoEinrichten(anbindung) {
   p.dojo.ziel ||= 10;
   p.dojo.fehler ||= { datum: null, ids: [] };
   p.dojo.blitz ||= 0;
+  p.dojo.wochen ||= {}; // Dojo-Punkte je ISO-Woche, lokal
+  p.dojo.ligaOffen ||= 0; // noch nicht an den Server gemeldete Punkte
   stimmenLaden();
   document.getElementById('app').addEventListener('input', (e) => {
     if (e.target.id === 'dojo-eingabe') dui.eingabe = e.target.value;
@@ -425,6 +429,7 @@ function beendeRunde() {
     r.xp += XP_LEKTION;
     lektionNeu = true;
   }
+  ligaPunkte(r.xp);
   app.speichern();
   const g = guertel();
   dui.ergebnis = { ...r, lektionNeu, guertel: g, aufgestiegen: g.ab > r.guertelVorher, zielErreicht: dui.zielErreicht };
@@ -447,6 +452,98 @@ function tastatur(e) {
   const n = Number(e.key);
   if (!a.ergebnis && a.optionen && n >= 1 && n <= a.optionen.length) aktionen.dojoAntwort({ i: n - 1 });
   if (!a.ergebnis && a.kacheln && e.key === 'Backspace') aktionen.dojoKachelZurueck();
+}
+
+// ---------- Wochenliga ----------
+
+// ISO-Woche wie auf dem Server (liga_woche), z. B. 2026-W41
+function isoWoche(d = new Date()) {
+  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  const tag = t.getUTCDay() || 7;
+  t.setUTCDate(t.getUTCDate() + 4 - tag);
+  const jahrStart = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  const woche = Math.ceil(((t - jahrStart) / 86400000 + 1) / 7);
+  return { jahr: t.getUTCFullYear(), woche, schluessel: `${t.getUTCFullYear()}-W${String(woche).padStart(2, '0')}` };
+}
+
+function wochenPunkte() {
+  return profil().dojo.wochen[isoWoche().schluessel] ?? 0;
+}
+
+// Im Dojo verdiente XP als Liga-Punkte verbuchen und, wenn möglich, melden
+function ligaPunkte(xp) {
+  if (!xp) return;
+  const p = profil();
+  const w = isoWoche().schluessel;
+  p.dojo.wochen[w] = (p.dojo.wochen[w] ?? 0) + xp;
+  for (const k of Object.keys(p.dojo.wochen)) if (k !== w && k !== isoWoche(new Date(Date.now() - 7 * 86400000)).schluessel) delete p.dojo.wochen[k];
+  p.dojo.ligaOffen += xp;
+  ligaSenden();
+}
+
+let ligaSendet = false;
+
+async function ligaSenden() {
+  const p = profil();
+  if (ligaSendet || !p.dojo.ligaOffen || !app.onlineProfil?.()) return;
+  ligaSendet = true;
+  const punkte = p.dojo.ligaOffen;
+  try {
+    await online.ligaMelden(punkte);
+    p.dojo.ligaOffen = Math.max(0, p.dojo.ligaOffen - punkte);
+    app.speichern();
+    dui.liga.geladen = 0; // Stand ist veraltet
+    if (app.ui.screen === 'dojo' && !dui.liga.laedt) setTimeout(ladeLiga, 0);
+  } catch (fehler) {
+    console.warn('Liga-Meldung fehlgeschlagen:', fehler.message);
+  }
+  ligaSendet = false;
+}
+
+async function ladeLiga() {
+  const l = dui.liga;
+  if (l.laedt || !app.onlineProfil?.()) return;
+  l.laedt = true;
+  l.fehler = '';
+  try {
+    await ligaSenden();
+    const [stand, vorige] = await Promise.all([online.ligaStand(false), online.ligaStand(true)]);
+    l.stand = stand;
+    l.vorige = vorige;
+    l.geladen = Date.now();
+  } catch (fehler) {
+    l.fehler = fehler.message;
+  }
+  l.laedt = false;
+  if (app.ui.screen === 'dojo') app.render();
+}
+
+function ligaKarte() {
+  const w = isoWoche();
+  const konto = app.onlineProfil?.();
+  const l = dui.liga;
+  const meine = wochenPunkte();
+  const kopf = `<div class="oben"><span class="label">Wochenliga · KW ${w.woche}</span><span class="stand">${meine} ${meine === 1 ? 'Punkt' : 'Punkte'}</span></div>`;
+  if (konto === undefined) return `<div class="karte liga">${kopf}<small>Verbinde mit dem Server …</small></div>`;
+  if (!konto) {
+    return `<div class="karte liga">${kopf}
+      <small>Dojo-Punkte sind die XP, die du hier verdienst. Mit einem Account trittst du jede Woche gegen deine Duell-Freunde an.</small>
+      <button class="knopf knopf-klein" data-aktion="nav" data-ziel="duelle">${app.ICON.schwerter} Account anlegen</button>
+    </div>`;
+  }
+  if (Date.now() - l.geladen > 60000 && !l.laedt) setTimeout(ladeLiga, 0);
+  const stand = l.stand ?? [];
+  const sieger = (l.vorige ?? []).filter((e) => e.punkte > 0)[0];
+  return `<div class="karte liga">${kopf}
+    ${l.fehler ? `<p class="fehler">${app.esc(l.fehler)}</p>` : ''}
+    ${!l.stand ? '<small>Lade die Liga …</small>' : stand.length <= 1
+      ? `<small>Du bist noch allein in deiner Liga. Fordere Freunde zum Duell heraus, dann seht ihr hier eure Wochenpunkte im Vergleich.</small>
+         <button class="knopf knopf-klein" data-aktion="nav" data-ziel="duelle">${app.ICON.schwerter} Freunde finden</button>`
+      : `<ol class="liga-liste">${stand.slice(0, 10).map((e, i) => `<li class="${e.ich ? 'ich' : ''} ${i === 0 && e.punkte > 0 ? 'spitze' : ''}">
+          <span class="platz">${i + 1}</span><span class="name">${app.esc(e.spielername)}${e.ich ? ' <small>(du)</small>' : ''}</span><span class="punkte">${e.punkte}</span>
+        </li>`).join('')}</ol>`}
+    <small class="liga-fuss">Endet Sonntag um Mitternacht.${sieger ? ` Letzte Woche vorn: ${app.esc(sieger.spielername)} mit ${sieger.punkte} Punkten.` : ''}</small>
+  </div>`;
 }
 
 // ---------- Paare finden (Blitz) ----------
@@ -538,6 +635,7 @@ function beendeBlitz() {
   const rekord = b.punkte > p.dojo.blitz;
   if (rekord) p.dojo.blitz = b.punkte;
   zaehleHeute(b.punkte);
+  ligaPunkte(xp);
   app.speichern();
   dui.blitz = null;
   dui.ergebnis = { art: 'blitz', punkte: b.punkte, fehler: b.fehler, xp, rekord, richtig: b.punkte, falsch: b.fehler, zielErreicht: dui.zielErreicht, guertel: guertel(), aufgestiegen: false };
@@ -801,6 +899,8 @@ function dojoScreen() {
       <button class="knopf" data-aktion="dojoBlitz" ${blitzPool().length < 4 ? 'disabled' : ''}>${app.ICON.blitz}<span><b>Paare finden</b><small>60 Sekunden${profil().dojo.blitz ? ` · Rekord ${profil().dojo.blitz}` : ''}</small></span></button>
       <button class="knopf" data-aktion="dojoFehler" ${fehler.length ? '' : 'disabled'}>${app.ICON.nochmal}<span><b>Fehler üben</b><small>${fehler.length ? `${fehler.length} von heute` : 'heute keine'}</small></span></button>
     </div>
+
+    ${ligaKarte()}
 
     ${frei ? '' : `<div class="karte dojo-hinweis">
       <span class="label">Probe</span>

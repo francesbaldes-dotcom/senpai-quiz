@@ -109,3 +109,13 @@ export async function kontoLoeschen() {
   await versuche(() => sb().rpc('konto_loeschen'));
   await sb().auth.signOut({ scope: 'local' });
 }
+
+// Wochenliga des Dojo: Punkte der laufenden Woche melden (Rückgabe: Wochenstand)
+export async function ligaMelden(punkte) {
+  return versuche(() => sb().rpc('liga_melden', { p_punkte: punkte }));
+}
+
+// Stand der Liga (ich und alle Duellpartner), laufende oder vorige Woche
+export async function ligaStand(vorige = false) {
+  return versuche(() => sb().rpc('liga_stand', { p_vorige: vorige }));
+}

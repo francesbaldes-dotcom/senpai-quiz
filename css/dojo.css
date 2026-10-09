@@ -206,3 +206,20 @@
 .paar.gewaehlt { background: var(--yellow); transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
 .paar.falsch { background: var(--red); color: var(--white); }
 .paar:disabled { cursor: default; }
+
+/* Wochenliga */
+.liga { padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+.liga .oben { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.liga .stand { font-family: var(--display); font-size: 16px; white-space: nowrap; }
+.liga small { font-size: 13px; font-weight: 700; line-height: 1.4; }
+.liga .knopf-klein { align-self: flex-start; }
+.liga-liste { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.liga-liste li { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 4px 10px; border: 2px solid var(--line); border-radius: 12px; background: var(--paper); font-weight: 700; }
+.liga-liste li.ich { border-color: var(--ink); background: var(--yellow); }
+.liga-liste li.spitze .platz { background: var(--yellow); }
+.liga-liste li.ich.spitze .platz { background: var(--white); }
+.liga-liste .platz { width: 26px; height: 26px; flex-shrink: 0; border: 2px solid var(--ink); border-radius: 50%; background: var(--white); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 12px; }
+.liga-liste .name { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.liga-liste .name small { font-size: 11px; }
+.liga-liste .punkte { font-family: var(--display); font-size: 16px; }
+.liga-fuss { color: #4A463F; }
