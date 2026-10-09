@@ -120,10 +120,12 @@ const ABZEICHEN = [
   { id: 'treue', name: 'Treue Seele', text: '7 Tage in Folge das Tagesquiz gespielt.', pruefe: () => profil.streak.tage >= 7 },
   { id: 'allrounder', name: 'Allrounder', text: 'In jeder Kategorie eine Runde gespielt.', pruefe: () => Object.keys(KATEGORIEN).every((k) => profil.gespielteKategorien.includes(k)) },
   { id: 'teilgeist', name: 'Teilgeist', text: 'Zum ersten Mal ein Ergebnis geteilt.', pruefe: () => false }, // wird beim Teilen vergeben
-  { id: 'aufbruch', name: 'Aufbruch', text: 'Kapitel 1 der Heldenreise geschafft.', pruefe: () => reiseStand().kapitelFertig >= 1 },
-  { id: 'schwellenhueter', name: 'Schwellenhüter', text: 'Den ersten Boss der Heldenreise besiegt.', pruefe: () => (profil.reise.sterne['k01-boss'] ?? 0) > 0 },
-  { id: 'heimkehr', name: 'Heimkehr', text: 'Die Heldenreise zu Ende gespielt.', pruefe: () => reiseStand().fertig },
-  { id: 'sternenfaenger', name: 'Sternenfänger', text: 'Alle Sterne der Heldenreise gesammelt.', pruefe: () => reiseStand().sterne >= reiseStand().sterneMax },
+  { id: 'aufbruch', name: 'Aufbruch', text: 'Kapitel 1 der Heldenreise geschafft.', pruefe: () => reiseStand(1).kapitelFertig >= 1 },
+  { id: 'schwellenhueter', name: 'Schwellenhüter', text: 'Den ersten Boss der Heldenreise besiegt.', pruefe: () => stationSterne('k01-boss', 1) > 0 },
+  { id: 'heimkehr', name: 'Heimkehr', text: 'Die Heldenreise zu Ende gespielt.', pruefe: () => reiseStand(1).fertig },
+  { id: 'sternenfaenger', name: 'Sternenfänger', text: 'Alle Sterne der Heldenreise gesammelt.', pruefe: () => reiseStand(1).sterne >= reiseStand(1).sterneMax },
+  { id: 'pfadfinder', name: 'Pfadfinder', text: 'Alle fünf Geheimpfade der Heldenreise geschafft.', pruefe: () => GEHEIM.length > 0 && GEHEIM.every((g) => stationSterne(g.id, 1) > 0) },
+  { id: 'zweitereise', name: 'Zweite Reise', text: 'Die Zweite Reise bis zum Ende gespielt.', pruefe: () => reiseStand(2).fertig },
 ];
 
 // ---------- Daten & Zustand ----------
@@ -133,6 +135,9 @@ let KATEGORIEN = {};
 let SCHWIERIGKEIT = {};
 let REISE = { akte: [], kapitel: [] }; // data/reise.json
 let STATIONEN = []; // alle Stationen der Heldenreise in Spielreihenfolge, siehe baueStationen()
+let GEHEIM = []; // Geheimpfade, eine Bonus-Station je Akt (nicht Teil des Hauptwegs)
+const GEHEIM_ANTEIL = 0.8; // Anteil der Akt-Sterne, ab dem der Geheimpfad offen ist
+const ZWEITE_REISE_LEBEN = 2; // Herzen pro Station in der Zweiten Reise
 
 const PROFIL_START = {
   xp: 0,
@@ -146,7 +151,9 @@ const PROFIL_START = {
   streak: { tage: 0, letzter: null },
   tagesquiz: null,
   gespielteKategorien: [],
-  reise: { sterne: {} }, // Heldenreise: beste Sterne je Station, z. B. { 'k01-s1': 3 }
+  // Heldenreise: beste Sterne je Station, z. B. { 'k01-s1': 3 }; Zweite Reise mit Suffix @2.
+  // durchgang = zuletzt gewählte Reise (1 oder 2)
+  reise: { sterne: {}, durchgang: 1 },
 };
 
 let profil = structuredClone(PROFIL_START); // wird in init() aus dem Speicher geladen
@@ -155,6 +162,7 @@ const ui = {
   screen: 'start',
   wahl: { stufe: 'fan', kategorie: 'mix' },
   station: null, // auf der Heldenreise-Karte angetippte Station (ID) für die Stationskarte
+  durchgang: 1, // Heldenreise: 1 = Erste Reise, 2 = Zweite Reise (nach dem Ende freigeschaltet)
   runde: null,
   ergebnis: null,
   melden: null, // offener „Frage melden“-Dialog: { grund, text, fehler, sendet }
@@ -378,35 +386,76 @@ function baueStationen() {
     k.stationen.forEach((s, i) => STATIONEN.push({ id: `${id}-s${i + 1}`, nr: `${k.nr}.${i + 1}`, ...basis(s, false) }));
     STATIONEN.push({ id: `${id}-boss`, nr: `${k.nr}.Boss`, ...basis(k.boss, true) });
   }
+  // Geheimpfade: eine Kategorie pur auf Stufe 3, mit allen Jokern
+  GEHEIM = REISE.akte.filter((a) => a.geheim).map((a) => ({
+    id: `a${a.nr}-geheim`,
+    nr: `Akt ${a.nr}`,
+    geheim: true,
+    boss: false,
+    akt: a,
+    titel: a.geheim.titel,
+    senpai: a.geheim.senpai,
+    kategorien: [a.geheim.kategorie],
+    schwierigkeit: [3],
+    typen: ALLE_TYPEN,
+    joker: ALLE_JOKER,
+    pflicht: [],
+    fragen: a.geheim.fragen ?? 5,
+    zeit: FRAGEZEIT,
+  }));
 }
 
 function station(id) {
-  return STATIONEN.find((s) => s.id === id);
+  return STATIONEN.find((s) => s.id === id) ?? GEHEIM.find((s) => s.id === id);
 }
 
-function stationSterne(id) {
-  return profil.reise.sterne[id] ?? 0;
+// Schlüssel im Profil: Erste Reise ohne, Zweite Reise mit Suffix
+function sterneSchluessel(id, durchgang) {
+  return durchgang === 2 ? `${id}@2` : id;
+}
+
+function stationSterne(id, durchgang = ui.durchgang) {
+  return profil.reise.sterne[sterneSchluessel(id, durchgang)] ?? 0;
+}
+
+// Herzen und damit höchste Sternzahl je Station in dieser Reise
+function maxSterne(durchgang = ui.durchgang) {
+  return durchgang === 2 ? ZWEITE_REISE_LEBEN : 3;
 }
 
 // Wo der Spieler steht: die nächste offene Station, Summen und ob alles geschafft ist
-function reiseStand() {
-  const index = STATIONEN.findIndex((s) => stationSterne(s.id) === 0);
+function reiseStand(durchgang = ui.durchgang) {
+  const index = STATIONEN.findIndex((s) => stationSterne(s.id, durchgang) === 0);
   const naechste = index >= 0 ? STATIONEN[index] : null;
-  const sterne = STATIONEN.reduce((summe, s) => summe + stationSterne(s.id), 0);
-  const letzteBossKapitel = STATIONEN.filter((s) => s.boss && stationSterne(s.id) > 0).length;
+  const sterne = STATIONEN.reduce((summe, s) => summe + stationSterne(s.id, durchgang), 0);
+  const letzteBossKapitel = STATIONEN.filter((s) => s.boss && stationSterne(s.id, durchgang) > 0).length;
   return {
+    durchgang,
     naechste,
     geschafft: index >= 0 ? index : STATIONEN.length,
     sterne,
-    sterneMax: STATIONEN.length * 3,
+    sterneMax: STATIONEN.length * maxSterne(durchgang),
+    geheimSterne: GEHEIM.reduce((summe, g) => summe + stationSterne(g.id, durchgang), 0),
     kapitelFertig: letzteBossKapitel,
     fertig: STATIONEN.length > 0 && !naechste,
   };
 }
 
+// Sterne eines Akts (Hauptweg) und die Schwelle für seinen Geheimpfad
+function aktSterne(akt, durchgang = ui.durchgang) {
+  const stationen = STATIONEN.filter((s) => s.kapitel.akt === akt.nr);
+  const sterne = stationen.reduce((summe, s) => summe + stationSterne(s.id, durchgang), 0);
+  return { sterne, max: stationen.length * maxSterne(durchgang), schwelle: Math.ceil(stationen.length * maxSterne(durchgang) * GEHEIM_ANTEIL) };
+}
+
+// Die Zweite Reise steht offen, sobald die erste zu Ende gespielt ist
+function zweiteReiseOffen() {
+  return reiseStand(1).fertig;
+}
+
 // Titel am Spielernamen: „Reisender“ ab Akt III (nach Boss 4), „Heimkehrer“ nach dem Ende
 function reiseTitel() {
-  const stand = reiseStand();
+  const stand = reiseStand(1);
   if (stand.fertig) return 'Heimkehrer';
   if (stand.kapitelFertig >= 4) return 'Reisender';
   return null;
@@ -421,19 +470,30 @@ function bossText(s) {
   return `Senpai Quiz · Heldenreise\n${kopf}\n⭐ ${stand.sterne} / ${stand.sterneMax} Sterne`;
 }
 
-// 'offen' (bestanden), 'aktuell' (als Nächstes dran) oder 'gesperrt'
-function stationZustand(s) {
-  if (stationSterne(s.id) > 0) return 'offen';
-  return reiseStand().naechste?.id === s.id ? 'aktuell' : 'gesperrt';
+// 'offen' (bestanden), 'aktuell' (als Nächstes dran bzw. Geheimpfad freigeschaltet) oder 'gesperrt'
+function stationZustand(s, durchgang = ui.durchgang) {
+  if (stationSterne(s.id, durchgang) > 0) return 'offen';
+  if (s.geheim) {
+    const a = aktSterne(s.akt, durchgang);
+    return a.sterne >= a.schwelle ? 'aktuell' : 'gesperrt';
+  }
+  return reiseStand(durchgang).naechste?.id === s.id ? 'aktuell' : 'gesperrt';
+}
+
+// Stufen einer Station in der gewählten Reise: die Zweite Reise spielt alles auf Fan und Otaku
+function stationStufen(s, durchgang) {
+  if (durchgang === 2 && !s.geheim) return s.schwierigkeit.includes(3) && s.schwierigkeit.length === 1 ? [3] : [2, 3];
+  return s.schwierigkeit;
 }
 
 // Fragen für einen Versuch: Regeln der Station anwenden, Ungesehene bevorzugen,
 // Pflicht-Typen (Bosse) zuerst einbauen. Rest des Pools dient dem Joker „Weiter“.
-function stationFragen(s) {
+function stationFragen(s, durchgang = 1) {
   const gesehen = new Set(profil.gesehen);
+  const stufen = stationStufen(s, durchgang);
   let pool = FRAGEN.filter((f) => (!s.kategorien.length || s.kategorien.includes(f.category))
-    && s.schwierigkeit.includes(f.difficulty) && s.typen.includes(f.type));
-  if (pool.length < s.fragen) pool = FRAGEN.filter((f) => s.schwierigkeit.includes(f.difficulty));
+    && stufen.includes(f.difficulty) && s.typen.includes(f.type));
+  if (pool.length < s.fragen) pool = FRAGEN.filter((f) => stufen.includes(f.difficulty));
   const sortiert = [...mischen(pool.filter((f) => !gesehen.has(f.id))), ...mischen(pool.filter((f) => gesehen.has(f.id)))];
   const gewaehlt = [];
   for (const typ of s.pflicht) {
@@ -454,11 +514,14 @@ function neueRunde(modus, opts = {}) {
   let fragen = [];
   let reserve = [];
   let fragezeit = FRAGEZEIT;
+  let maxLeben = 3;
   if (modus === 'reise') {
     const s = station(opts.stationId);
-    ({ fragen, reserve } = stationFragen(s));
+    const durchgang = s.geheim ? ui.durchgang : (opts.durchgang ?? ui.durchgang);
+    ({ fragen, reserve } = stationFragen(s, durchgang));
     fragezeit = s.zeit;
-    opts = { ...opts, station: s };
+    maxLeben = maxSterne(durchgang);
+    opts = { ...opts, station: s, durchgang };
   } else if (modus === 'klassisch') {
     const pool = poolFuer(opts.kategorie, opts.stufe);
     fragen = pool.slice(0, RUNDENLAENGE).sort((a, b) => a.difficulty - b.difficulty);
@@ -486,7 +549,8 @@ function neueRunde(modus, opts = {}) {
     richtig: 0,
     beantwortet: 0,
     schnelle: 0,
-    leben: 3,
+    leben: maxLeben,
+    maxLeben,
     zeiten: [],
     verlauf: [],
     joker: { fifty: false, zeit: false, skip: false },
@@ -661,15 +725,16 @@ function beendeRunde() {
   let reise = null;
   if (r.modus === 'reise') {
     const s = r.opts.station;
+    const durchgang = r.opts.durchgang;
     const bestanden = r.leben > 0;
     const sterne = bestanden ? r.leben : 0;
-    const vorher = stationSterne(s.id);
+    const vorher = stationSterne(s.id, durchgang);
     const erstmals = bestanden && vorher === 0;
     const titelVorher = reiseTitel();
-    if (erstmals) xp += s.boss ? 150 : 50;
-    if (sterne > vorher) profil.reise.sterne[s.id] = sterne;
+    if (erstmals) xp += s.boss ? 150 : s.geheim ? 100 : 50;
+    if (sterne > vorher) profil.reise.sterne[sterneSchluessel(s.id, durchgang)] = sterne;
     const titelNachher = reiseTitel();
-    reise = { station: s, bestanden, sterne, vorher, erstmals, stand: null, neuerTitel: titelNachher !== titelVorher ? titelNachher : null };
+    reise = { station: s, durchgang, bestanden, sterne, vorher, erstmals, stand: null, neuerTitel: titelNachher !== titelVorher ? titelNachher : null };
   }
   profil.xp += xp;
   profil.spiele++;
@@ -694,7 +759,7 @@ function beendeRunde() {
   const neueAbzeichen = ABZEICHEN.filter((ab) => !profil.abzeichen.includes(ab.id) && ab.pruefe(r, perfekt));
   profil.abzeichen.push(...neueAbzeichen.map((ab) => ab.id));
   speichern();
-  if (reise) reise.stand = reiseStand();
+  if (reise) reise.stand = reiseStand(reise.durchgang);
 
   const schnitt = r.zeiten.length ? r.zeiten.reduce((s, z) => s + z, 0) / r.zeiten.length : 0;
   ui.ergebnis = {
@@ -808,6 +873,18 @@ const aktionen = {
     if (!s || stationZustand(s) === 'gesperrt') return;
     ui.station = null;
     neueRunde('reise', { stationId: s.id });
+  },
+  // Erste oder Zweite Reise auf der Karte wählen
+  durchgang(d) {
+    const n = Number(d.durchgang);
+    if (n === 2 && !zweiteReiseOffen()) return;
+    ui.durchgang = n;
+    ui.station = null;
+    profil.reise.durchgang = n;
+    speichern();
+    render();
+    const ziel = reiseStand().naechste;
+    document.getElementById(`st-${ziel?.id}`)?.scrollIntoView({ block: 'center' });
   },
   // Vom Ergebnis zur nächsten Station der Reise
   reiseWeiter() {
@@ -1285,7 +1362,8 @@ function kategorieScreen() {
 }
 
 function herzen(r) {
-  return `<div class="leben" aria-label="${r.leben} Herzen übrig">${[0, 1, 2].map((i) => ICON.herz(i < r.leben)).join('')}</div>`;
+  const max = r.maxLeben ?? 3;
+  return `<div class="leben" aria-label="${r.leben} von ${max} Herzen übrig">${Array.from({ length: max }, (_, i) => ICON.herz(i < r.leben)).join('')}</div>`;
 }
 
 function frageKopf(r) {
@@ -1294,7 +1372,8 @@ function frageKopf(r) {
     fortschritt = `<b>Frage ${r.index + 1}</b>${herzen(r)}`;
   } else if (r.modus === 'reise') {
     const s = r.opts.station;
-    fortschritt = `<b>${s.boss ? esc(s.titel) : `Station ${s.nr}`} · Frage ${r.index + 1} von ${r.fragen.length}</b>${herzen(r)}`;
+    const name = s.boss || s.geheim ? esc(s.titel) : `Station ${s.nr}`;
+    fortschritt = `<b>${name} · Frage ${r.index + 1} von ${r.fragen.length}</b>${herzen(r)}`;
   } else if (r.modus === 'blitz') {
     fortschritt = `<b>Blitz · ${r.richtig} richtig</b>`;
   } else {
@@ -1520,8 +1599,8 @@ function frageScreen() {
 }
 
 // Sternenreihe für Stationskarte und Ergebnis
-function sterneReihe(n, groesse = 28) {
-  return `<span class="sterne" aria-label="${n} von 3 Sternen">${[0, 1, 2].map((i) => `<svg width="${groesse}" height="${groesse}" viewBox="-9 -9 18 18" class="${i < n ? 'voll' : ''}"><path d="M0-7l2.1 4.5 4.9.5-3.7 3.3 1 4.9L0 3.8l-4.3 2.4 1-4.9-3.7-3.3 4.9-.5z"/></svg>`).join('')}</span>`;
+function sterneReihe(n, groesse = 28, max = 3) {
+  return `<span class="sterne" aria-label="${n} von ${max} Sternen">${Array.from({ length: max }, (_, i) => `<svg width="${groesse}" height="${groesse}" viewBox="-9 -9 18 18" class="${i < n ? 'voll' : ''}"><path d="M0-7l2.1 4.5 4.9.5-3.7 3.3 1 4.9L0 3.8l-4.3 2.4 1-4.9-3.7-3.3 4.9-.5z"/></svg>`).join('')}</span>`;
 }
 
 function ergebnisScreen() {
@@ -1531,8 +1610,13 @@ function ergebnisScreen() {
   if (e.reise) {
     const s = e.reise.station;
     const ende = e.reise.bestanden && e.reise.stand.fertig && s === STATIONEN[STATIONEN.length - 1];
-    titel = !e.reise.bestanden ? (s.boss ? 'BOSS GEWINNT' : 'GESCHEITERT') : ende ? 'HEIMKEHR!' : s.boss ? 'BOSS BESIEGT!' : e.reise.sterne === 3 ? 'PERFEKT!' : 'STATION GESCHAFFT!';
-    wertung = e.reise.bestanden ? sterneReihe(e.reise.sterne) : `${e.richtig} / ${e.gesamt} richtig`;
+    const max = maxSterne(e.reise.durchgang);
+    if (!e.reise.bestanden) titel = s.boss ? 'BOSS GEWINNT' : 'GESCHEITERT';
+    else if (ende) titel = e.reise.durchgang === 2 ? 'ZWEITE HEIMKEHR!' : 'HEIMKEHR!';
+    else if (s.boss) titel = 'BOSS BESIEGT!';
+    else if (s.geheim) titel = 'GEHEIMPFAD GESCHAFFT!';
+    else titel = e.reise.sterne === max ? 'PERFEKT!' : 'STATION GESCHAFFT!';
+    wertung = e.reise.bestanden ? sterneReihe(e.reise.sterne, 28, max) : `${e.richtig} / ${e.gesamt} richtig`;
   }
   // Senpai-Zitat nach einem Boss-Sieg
   const zitat = e.reise?.bestanden && e.reise.station.boss && e.reise.station.nachBoss
@@ -1557,11 +1641,13 @@ function ergebnisScreen() {
     const teilenKnopf = s.boss && e.reise.bestanden ? `<button class="knopf" data-aktion="bossTeilen">${ICON.teilen} Teilen</button>` : '';
     if (!e.reise.bestanden) {
       fuss = `<button class="knopf knopf-rot" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button><div class="zweier">${zurKarte}<button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button></div>`;
+    } else if (s.geheim) {
+      fuss = `<button class="knopf knopf-rot" data-aktion="nav" data-ziel="reise">Zur Karte</button><div class="zweier"><button class="knopf" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button><button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button></div>`;
     } else if (e.reise.stand.fertig) {
       fuss = `<button class="knopf knopf-rot" data-aktion="nav" data-ziel="reise">Zur Karte</button><div class="zweier">${teilenKnopf || `<button class="knopf" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button>`}<button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button></div>`;
     } else {
       const text = naechste.boss ? `Weiter: ${esc(naechste.titel)}` : `Weiter: Station ${naechste.nr}`;
-      const zweiter = teilenKnopf || (e.reise.sterne < 3 ? `<button class="knopf" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button>` : '<button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button>');
+      const zweiter = teilenKnopf || (e.reise.sterne < max ? `<button class="knopf" data-aktion="nochmal">${ICON.nochmal} Noch einmal</button>` : '<button class="knopf" data-aktion="nav" data-ziel="start">Zum Start</button>');
       fuss = `<button class="knopf knopf-rot" data-aktion="reiseWeiter">${text} ${ICON.weiter}</button><div class="zweier">${zurKarte}${zweiter}</div>`;
     }
   }
@@ -1610,24 +1696,34 @@ function ergebnisScreen() {
 function reiseKarteStart() {
   const stand = reiseStand();
   const n = stand.naechste;
+  const zweite = stand.durchgang === 2;
   let text;
-  if (stand.fertig) text = 'Reise geschafft! Hol dir die restlichen Sterne.';
-  else if (stand.geschafft === 0) text = 'Vom Neuling zur Legende: 50 Stationen, 10 Bosse.';
+  if (stand.fertig) text = zweite ? 'Beide Reisen geschafft. Du bist eine Legende.' : 'Reise geschafft! Hol dir die restlichen Sterne oder starte die Zweite Reise.';
+  else if (stand.geschafft === 0) text = zweite ? 'Alles auf Fan und Otaku, nur zwei Herzen.' : 'Vom Neuling zur Legende: 50 Stationen, 10 Bosse.';
   else text = `Weiter bei ${n.boss ? n.titel : `Station ${n.nr}`} · Kapitel ${n.kapitel.nr}: ${n.kapitel.titel}`;
   return `<button class="karte reisekarte" data-aktion="nav" data-ziel="reise">
-    <img src="assets/stimmung/mentor.webp" alt="" class="maskottchen">
+    <img src="assets/stimmung/${zweite ? 'kaempferisch' : 'mentor'}.webp" alt="" class="maskottchen">
     <span class="text">
-      <span class="label">Heldenreise</span>
-      <span class="display">${stand.geschafft === 0 ? 'Dein Abenteuer beginnt' : `${stand.geschafft} von ${STATIONEN.length} Stationen`}</span>
+      <span class="label">${zweite ? 'Zweite Reise' : 'Heldenreise'}</span>
+      <span class="display">${stand.geschafft === 0 ? (zweite ? 'Noch einmal, nur härter' : 'Dein Abenteuer beginnt') : `${stand.geschafft} von ${STATIONEN.length} Stationen`}</span>
       <small>${esc(text)}</small>
-      ${stand.sterne ? `<small class="sterne-zahl">${sterneReihe(1, 14)} ${stand.sterne} / ${stand.sterneMax} Sterne</small>` : ''}
+      ${stand.sterne ? `<small class="sterne-zahl">${sterneReihe(1, 14, 1)} ${stand.sterne} / ${stand.sterneMax} Sterne${stand.geheimSterne ? ` · Geheimpfade ${stand.geheimSterne}` : ''}</small>` : ''}
     </span>
     <span class="pfeil">${ICON.weiter}</span>
   </button>`;
 }
 
+function geheimKnoten(g) {
+  const zustand = stationZustand(g);
+  const a = aktSterne(g.akt);
+  const label = zustand === 'gesperrt' ? `Geheimpfad, offen ab ${a.schwelle} Sternen in Akt ${g.akt.nr}` : `Geheimpfad: ${esc(g.titel)}`;
+  return `<div class="pfad geheim-pfad"><button class="station mitte geheim ${zustand}" data-aktion="station" data-id="${g.id}" id="st-${g.id}" aria-label="${label}">
+    ${stationsKnoten(stationSterne(g.id), zustand, 64)}<span class="schild">${zustand === 'gesperrt' ? `Geheimpfad · ${a.sterne} / ${a.schwelle} ★` : esc(g.titel)}</span></button></div>`;
+}
+
 function reiseScreen() {
   const stand = reiseStand();
+  const max = maxSterne();
   let html = '';
   let nr = 0;
   for (const akt of REISE.akte) {
@@ -1635,7 +1731,7 @@ function reiseScreen() {
     for (const k of REISE.kapitel.filter((x) => x.akt === akt.nr)) {
       const stationen = STATIONEN.filter((s) => s.kapitel === k);
       const sterne = stationen.reduce((summe, s) => summe + stationSterne(s.id), 0);
-      html += `<div class="kapitel-kopf"><span class="label">Kapitel ${k.nr} · ${esc(k.stufe)}</span><b>${esc(k.titel)}</b><small>${sterne} / ${stationen.length * 3} Sterne</small></div>`;
+      html += `<div class="kapitel-kopf"><span class="label">Kapitel ${k.nr} · ${esc(k.stufe)}</span><b>${esc(k.titel)}</b><small>${sterne} / ${stationen.length * max} Sterne</small></div>`;
       html += `<div class="pfad">${stationen.map((s) => {
         const zustand = stationZustand(s);
         const seite = s.boss ? 'mitte' : nr++ % 2 ? 'rechts' : 'links';
@@ -1644,13 +1740,22 @@ function reiseScreen() {
           ${knoten}<span class="schild">${s.boss ? esc(s.titel) : s.nr}</span></button>`;
       }).join('')}</div>`;
     }
+    const g = GEHEIM.find((x) => x.akt === akt);
+    if (g) html += geheimKnoten(g);
   }
+  const wahl = zweiteReiseOffen()
+    ? `<div class="segmente" role="group" aria-label="Reise wählen">
+        <button data-aktion="durchgang" data-durchgang="1" aria-pressed="${ui.durchgang === 1}">Erste Reise</button>
+        <button data-aktion="durchgang" data-durchgang="2" aria-pressed="${ui.durchgang === 2}">Zweite Reise</button>
+      </div>${ui.durchgang === 2 ? '<p class="reise-hinweis">Alle Stationen auf Fan und Otaku, nur zwei Herzen. Eigene Sterne, Geheimpfade bleiben auf Otaku.</p>' : ''}`
+    : '';
   return `<section class="screen reise">
     <div class="kopfzeile">
       <button class="icon-knopf" data-aktion="nav" data-ziel="start" aria-label="Zurück zum Start">${ICON.zurueck}</button>
-      <h1>Heldenreise</h1>
-      <span class="sterne-stand">${sterneReihe(1, 18)} ${stand.sterne} / ${stand.sterneMax}</span>
+      <h1>${ui.durchgang === 2 ? 'Zweite Reise' : 'Heldenreise'}</h1>
+      <span class="sterne-stand">${sterneReihe(1, 18, 1)} ${stand.sterne} / ${stand.sterneMax}</span>
     </div>
+    ${wahl}
     ${html}
     ${stationDialog()}
   </section>`;
@@ -1662,8 +1767,12 @@ function stationDialog() {
   const zustand = stationZustand(s);
   const sterne = stationSterne(s.id);
   const kategorien = s.kategorien.length ? s.kategorien : Object.keys(KATEGORIEN);
-  const stufen = s.schwierigkeit.map((d) => SCHWIERIGKEIT[d]).join(', ');
+  const stufen = stationStufen(s, ui.durchgang).map((d) => SCHWIERIGKEIT[d]).join(', ');
   const gesperrtText = () => {
+    if (s.geheim) {
+      const a = aktSterne(s.akt);
+      return `Ein versteckter Weg. Er öffnet sich mit ${a.schwelle} Sternen in Akt ${s.akt.nr}, du hast ${a.sterne}.`;
+    }
     const i = STATIONEN.indexOf(s);
     const davor = STATIONEN[i - 1];
     return davor ? `Erst ${davor.boss ? davor.titel : `Station ${davor.nr}`} bestehen.` : '';
@@ -1673,17 +1782,18 @@ function stationDialog() {
   else if (s.boss) text = s.auftritt;
   else text = s.senpai ?? '';
   const jokerNamen = { fifty: '50:50', zeit: '+10 s', skip: 'Weiter' };
-  const regeln = `${s.fragen} Fragen · 3 Herzen${s.zeit !== FRAGEZEIT ? ` · ${s.zeit} s pro Frage` : ''} · ${s.boss ? 'keine Joker' : s.joker.length ? `Joker: ${s.joker.map((j) => jokerNamen[j]).join(', ')}` : 'noch keine Joker'}`;
+  const herzenZahl = s.geheim ? 3 : maxSterne();
+  const regeln = `${s.fragen} Fragen · ${herzenZahl} Herzen${s.zeit !== FRAGEZEIT ? ` · ${s.zeit} s pro Frage` : ''} · ${s.boss ? 'keine Joker' : s.joker.length ? `Joker: ${s.joker.map((j) => jokerNamen[j]).join(', ')}` : 'noch keine Joker'}`;
   return `<div class="dialog-hintergrund" data-aktion="stationHintergrund">
     <div class="karte dialog dialog-station ${s.boss ? 'boss' : ''}" id="station-dialog" role="dialog" aria-modal="true" aria-labelledby="station-titel" tabindex="-1">
       <div class="dialog-kopf">
         ${s.boss ? `<img class="maskottchen boss-bild" src="${s.bild}" alt="">` : maskottchen(zustand === 'gesperrt' ? 'schlafend' : 'mentor')}
         <div>
-          <span class="label">${s.boss ? `Boss · Kapitel ${s.kapitel.nr}` : `Station ${s.nr} · ${esc(s.kapitel.titel)}`}</span>
+          <span class="label">${s.geheim ? `Geheimpfad · Akt ${s.akt.nr}` : s.boss ? `Boss · Kapitel ${s.kapitel.nr}` : `Station ${s.nr} · ${esc(s.kapitel.titel)}`}</span>
           <h2 id="station-titel">${esc(s.titel)}</h2>
         </div>
       </div>
-      ${zustand !== 'gesperrt' ? sterneReihe(sterne, 32) : ''}
+      ${zustand !== 'gesperrt' ? sterneReihe(sterne, 32, s.geheim ? 3 : maxSterne()) : ''}
       ${text ? `<p>${esc(text)}</p>` : ''}
       ${zustand !== 'gesperrt' ? `<small class="regeln">${esc(regeln)}</small>` : ''}
       <div class="kat-reihe">${kategorien.length === Object.keys(KATEGORIEN).length ? '<span>Alle Kategorien</span>' : kategorien.map((k) => `<span>${kategorieIcon(k, 18)}${esc(KATEGORIEN[k])}</span>`).join('')}<span class="stufe">${esc(stufen)}</span></div>
@@ -2358,7 +2468,8 @@ async function init() {
     REISE = await reiseAntwort.json();
     baueStationen();
     profil = ladeProfil(PROFIL_START);
-    profil.reise ||= { sterne: {} };
+    profil.reise ||= { sterne: {}, durchgang: 1 };
+    ui.durchgang = profil.reise.durchgang === 2 && zweiteReiseOffen() ? 2 : 1;
     uebernimmAlteKategorien();
     // Stimmungsbilder vorladen, damit beim Wechsel nichts flackert
     STIMMUNGEN.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });

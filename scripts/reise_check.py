@@ -1,7 +1,8 @@
 """Prüft, ob jede Station der Heldenreise (data/reise.json) genug Fragen in data/fragen.json findet.
 
 Regel: Der Pool einer Station soll mindestens doppelt so groß sein wie ihre Fragenzahl,
-damit Wiederholungen frische Fragen bekommen. Pflicht-Typen der Bosse werden einzeln geprüft.
+damit Wiederholungen frische Fragen bekommen. Pflicht-Typen der Bosse werden einzeln geprüft,
+ebenso die Geheimpfade (Stufe 3) und die Zweite Reise (alle Stationen auf Stufe 2 und 3).
 """
 import json
 from pathlib import Path
@@ -43,5 +44,26 @@ for k in reise["kapitel"]:
             if n == 0:
                 probleme += 1
                 print(f"         Pflichttyp {typ} fehlt im Pool")
+for a in reise["akte"]:
+    g = a.get("geheim")
+    if not g:
+        continue
+    p = pool([g["kategorie"]], [3], ALLE_TYPEN)
+    anzahl = g.get("fragen", 5)
+    gesamt += anzahl
+    status = "ok" if len(p) >= 2 * anzahl else "ZU WENIG"
+    if status != "ok":
+        probleme += 1
+    print(f"{'Akt ' + str(a['nr']):>8} {'Geheimpfad: ' + g['titel']:<30} {len(p):>4} Fragen für {anzahl:>2}  {status}")
+# Zweite Reise: alle Stationen auf Stufe 2 und 3
+for k in reise["kapitel"]:
+    for i, s in enumerate(k["stationen"] + [k["boss"]]):
+        kategorien = s.get("kategorien", k.get("kategorien", []))
+        typen = s.get("typen", k.get("typen", ALLE_TYPEN))
+        anzahl = s.get("fragen", 7 if i == len(k["stationen"]) else 5)
+        p = pool(kategorien, [2, 3], typen)
+        if len(p) < anzahl:
+            probleme += 1
+            print(f"Zweite Reise {k['nr']}.{i + 1}: nur {len(p)} Fragen für {anzahl}")
 print(f"\n{gesamt} Fragen für einen kompletten Durchlauf, {len(fragen)} im Katalog, {probleme} Problem(e)")
 raise SystemExit(1 if probleme else 0)

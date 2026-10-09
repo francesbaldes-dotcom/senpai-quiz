@@ -840,3 +840,10 @@ button.duell-zeile:active { transform: translate(4px, 4px); box-shadow: none; }
 .senpai-zitat { display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: var(--yellow); }
 .senpai-zitat .maskottchen { width: 72px; height: 72px; flex-shrink: 0; }
 .senpai-zitat p { margin: 0; font-size: 15px; font-weight: 700; line-height: 1.45; font-style: italic; }
+.geheim-pfad { padding-top: 0; }
+.geheim-pfad::before { display: none; }
+.station.geheim .schild { background: var(--yellow); }
+.station.geheim.gesperrt .schild { background: var(--muted); }
+.station.geheim .stations-knoten circle:first-of-type { fill: var(--yellow); }
+.screen.reise .segmente { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.reise-hinweis { margin: -4px 0 0; font-size: 13px; font-weight: 700; text-align: center; }

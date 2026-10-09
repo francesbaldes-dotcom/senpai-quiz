@@ -152,7 +152,7 @@ Beispiele für den Ton:
 |---|---|---|
 | **1 (MVP)** | **Fertig (9. Oktober 2026):** Karte, 50 Stationen aus `reise.json`, Herzen, Sterne, lineares Freischalten, Fortschritt im Profil; dazu schon Boss-Regeln (Fragetypen, keine Joker, Endboss 10 Fragen mit 12 s), Boss-Auftritt auf der Stationskarte, die vier Abzeichen, Zweite Chance per Video und das Prüfskript | erledigt |
 | **2** | **Fertig (9. Oktober 2026):** Senpai-Satz auf jeder Stationskarte, Boss-Auftritt, Senpai-Zitat nach jedem Boss-Sieg, Akt-Sätze auf den Trennkarten (alle Texte in `data/reise.json`), Titel „Reisender“ (ab Boss 4) und „Heimkehrer“ (nach dem Ende) neben dem Rang auf der Startseite, Teilen von Boss-Siegen und des Endes mit Text und Link | erledigt |
-| **3** | Geheimpfade, „Zweite Reise“ als New Game+ (alles auf Stufe 3, 2 Herzen), saisonale Kurz-Kapitel zu Neustarts | offen |
+| **3** | **Teilweise fertig (9. Oktober 2026):** fünf Geheimpfade (je Akt eine Kategorie pur auf Otaku, offen ab 80 % der Akt-Sterne, +100 XP, Abzeichen „Pfadfinder“) und die Zweite Reise (nach dem Ende wählbar, alle Stationen auf Fan und Otaku, 2 Herzen, eigene Sterne, Abzeichen „Zweite Reise“). **Offen:** saisonale Kurz-Kapitel zu Neustarts, dafür braucht es Inhalte und Termine |
 
 ## Entscheidungen (9. Oktober 2026)
 
@@ -163,4 +163,4 @@ Beispiele für den Ton:
 | Erzählung | **Mit dem Spoiler** als Gegenspieler, Bosse sind seine Handlanger, Senpai-Sätze zwischen den Stationen, alle überspringbar. |
 | Platzierung | **Oberste Karte im Startbildschirm** mit „Weiter bei Station 4.2“, darunter die bisherigen Modi. |
 
-Ausbaustufe 1 und 2 sind seit dem 9. Oktober 2026 in der App (Modus `reise` in `js/app.js`, Karte und Stationskarte, Dialoge, Titel und Teilen; Daten in `data/reise.json`, Prüfung mit `scripts/reise_check.py`). Die Titel stehen bisher nur lokal neben dem Rang; im Duell sichtbar werden sie erst mit einer Spalte in der Supabase-Tabelle `profile`. Nächster Schritt ist Ausbaustufe 3.
+Ausbaustufe 1 und 2 sind seit dem 9. Oktober 2026 in der App (Modus `reise` in `js/app.js`, Karte und Stationskarte, Dialoge, Titel und Teilen; Daten in `data/reise.json`, Prüfung mit `scripts/reise_check.py`). Die Titel stehen bisher nur lokal neben dem Rang; im Duell sichtbar werden sie erst mit einer Spalte in der Supabase-Tabelle `profile`. Aus Ausbaustufe 3 fehlen nur die saisonalen Kurz-Kapitel.

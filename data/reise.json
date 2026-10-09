@@ -1,35 +1,60 @@
 {
- "hinweis": "Heldenreise: 5 Akte, 10 Kapitel, je 4 Stationen und ein Boss. Stationen erben kategorien, schwierigkeit, typen und joker vom Kapitel; leere kategorien = alle. Station: 5 Fragen, Boss: 7 Fragen, immer 3 Herzen. pflicht = Fragetypen, die beim Boss möglichst vorkommen sollen. Siehe heldenreise.md. senpai = Satz des Mentors auf der Stationskarte, auftritt = Satz des Bosses, nachBoss = Senpai nach dem Sieg, einleitung = Satz auf der Akt-Karte.",
+ "hinweis": "Heldenreise: 5 Akte, 10 Kapitel, je 4 Stationen und ein Boss. Stationen erben kategorien, schwierigkeit, typen und joker vom Kapitel; leere kategorien = alle. Station: 5 Fragen, Boss: 7 Fragen, immer 3 Herzen. pflicht = Fragetypen, die beim Boss möglichst vorkommen sollen. Siehe heldenreise.md. senpai = Satz des Mentors auf der Stationskarte, auftritt = Satz des Bosses, nachBoss = Senpai nach dem Sieg, einleitung = Satz auf der Akt-Karte. geheim = Geheimpfad des Akts: eine Kategorie pur auf Stufe 3, 5 Fragen, offen ab 80 % der Sterne im Akt.",
  "akte": [
   {
    "nr": 1,
    "name": "Aufbruch",
    "bild": "assets/reise/akt-1.webp",
-   "einleitung": "Ein Dorf, ein Fernseher, ein Brief. So fangen Abenteuer an."
+   "einleitung": "Ein Dorf, ein Fernseher, ein Brief. So fangen Abenteuer an.",
+   "geheim": {
+    "titel": "Das Teehaus",
+    "kategorie": "kultur",
+    "senpai": "Ein Teehaus abseits des Wegs. Hier fragt man nach Verlagen, Magazinen und Wörtern, die kein Anfänger kennt."
+   }
   },
   {
    "nr": 2,
    "name": "Schwelle",
    "bild": "assets/reise/akt-2.webp",
-   "einleitung": "Der Senpai zeigt den Weg. Das Tor zeigt, ob du ihn gehen kannst."
+   "einleitung": "Der Senpai zeigt den Weg. Das Tor zeigt, ob du ihn gehen kannst.",
+   "geheim": {
+    "titel": "Der Hinterhof-Dojo",
+    "kategorie": "shonen",
+    "senpai": "Ein Dojo, von dem keine Karte weiß. Shōnen auf Otaku-Stufe, fünf Fragen, keine Gnade."
+   }
   },
   {
    "nr": 3,
    "name": "Prüfungen",
    "bild": "assets/reise/akt-3.webp",
-   "einleitung": "Arena und Turm. Hier werden aus Fans Reisende."
+   "einleitung": "Arena und Turm. Hier werden aus Fans Reisende.",
+   "geheim": {
+    "titel": "Die Dachterrasse",
+    "kategorie": "neu",
+    "senpai": "Über dem Turm liegt eine Terrasse mit Blick auf alles, was seit 2015 erschienen ist. Otaku-Wissen gefragt."
+   }
   },
   {
    "nr": 4,
    "name": "Abgrund",
    "bild": "assets/reise/akt-4.webp",
-   "einleitung": "Tief unten wartet die schwerste Prüfung. Und dahinter der Schatz."
+   "einleitung": "Tief unten wartet die schwerste Prüfung. Und dahinter der Schatz.",
+   "geheim": {
+    "titel": "Das Archiv der Klassiker",
+    "kategorie": "klassiker",
+    "senpai": "Tief unter dem Abgrund lagern die Klassiker. Nur wer sie wirklich kennt, findet hier heraus."
+   }
   },
   {
    "nr": 5,
    "name": "Rückkehr",
    "bild": "assets/reise/akt-5.webp",
-   "einleitung": "Der Weg nach Hause führt über den Thron des Spoilers."
+   "einleitung": "Der Weg nach Hause führt über den Thron des Spoilers.",
+   "geheim": {
+    "titel": "Das Nachtkino",
+    "kategorie": "filme",
+    "senpai": "Das Nachtkino zeigt nur Filme, die Otaku auswendig kennen. Du auch?"
+   }
   }
  ],
  "kapitel": [
