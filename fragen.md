@@ -1,8 +1,8 @@
-# Senpai Quiz – 600 Fragen
+# Senpai Quiz – 700 Fragen
 
 Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Antworten.
 
-## Einsteiger (207 Fragen)
+## Einsteiger (239 Fragen)
 
 ### One Piece
 
@@ -159,6 +159,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Krähe** · Katze · Eule · Adler
 - `e-199` *Auswahl* – Wie viele Stürmer werden zu Beginn in das Blue-Lock-Projekt gesteckt?  
   **300** · 50 · 100 · 1000
+- `e-227` *Auswahl* – Wie heißt Ichigos Schulfreundin mit Heilkräften und langen orangen Haaren?  
+  **Orihime Inoue** · Rukia Kuchiki · Yoruichi Shihoin · Rangiku Matsumoto
 
 ### Neue Hits
 
@@ -236,6 +238,26 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ein großer weißer Hund** · Eine Katze · Ein Pinguin · Ein Hamster
 - `e-200` *Auswahl* – Was wächst aus Denjis Kopf, wenn er sich verwandelt?  
   **Eine Kettensäge** · Ein Wolfskopf · Ein Totenschädel · Eine Flamme
+- `e-208` *Auswahl* – Wer ist Seiko Ayase in „Dandadan“?  
+  **Momos Großmutter, ein Medium** · Okaruns Mutter · Eine Alien-Anführerin · Momos Lehrerin
+- `e-209` *Wahr/Falsch* – Nach dem Fluch der Turbo-Oma kann Okarun selbst übernatürlich schnell werden.  
+  **Wahr** · Falsch
+- `e-216` *Auswahl* – Wie heißt Senkus bester Freund, der kurz nach ihm aus dem Stein erwacht?  
+  **Taiju Oki** · Chrome · Gen Asagiri · Tsukasa Shishio
+- `e-217` *Auswahl* – Wie nennt Senku sein Projekt zum Wiederaufbau der Zivilisation?  
+  **Königreich der Wissenschaft** · Imperium der Kraft · Dorf der Steine · Stadt des Lichts
+- `e-218` *Wahr/Falsch* – Senku hat während der Versteinerung die Sekunden gezählt, um zu wissen, wie viel Zeit vergangen ist.  
+  **Wahr** · Falsch
+- `e-222` *Auswahl* – Was betreibt Taro Sakamoto heute?  
+  **Einen kleinen Laden** · Ein Restaurant · Eine Bar · Eine Kampfschule
+- `e-223` *Auswahl* – Wie heißt Sakamotos Frau?  
+  **Aoi** · Hana · Lu · Mio
+- `e-224` *Auswahl* – Wie viele verzauberte Klingen schmiedete Chihiros Vater in „Kagurabachi“?  
+  **Sechs** · Drei · Zehn · Eine
+- `e-225` *Wahr/Falsch* – „Kagurabachi“ startete 2023 in der Weekly Shōnen Jump.  
+  **Wahr** · Falsch
+- `e-230` *Auswahl* – Wie heißt Saitamas Schüler, ein Cyborg?  
+  **Genos** · Mumen Rider · King · Bang
 
 ### Isekai & Fantasy
 
@@ -265,6 +287,24 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Er zieht sich unbewusst aus** · Er schläft überall ein · Er isst ständig · Er lügt ständig
 - `e-188` *Auswahl* – Wie heißt die rothaarige Magierin, die blitzschnell ihre Rüstungen wechselt?  
   **Erza Scarlet** · Juvia Lockser · Wendy Marvell · Mirajane Strauss
+- `e-215` *Auswahl* – Wie heißt der junge Krieger, der mit Frieren und Fern reist?  
+  **Stark** · Himmel · Heiter · Eisen
+- `e-219` *Auswahl* – Wie heißt die „Mama“ des Waisenhauses in „The Promised Neverland“?  
+  **Isabella** · Krone · Mujika · Emma
+- `e-220` *Auswahl* – Wie heißt das Waisenhaus?  
+  **Grace Field House** · Lambda · Goldy Pond · Eden House
+- `e-221` *Auswahl* – Bis zu welchem Alter werden die Kinder spätestens „adoptiert“?  
+  **12 Jahre** · 6 Jahre · 18 Jahre · 10 Jahre
+- `e-226` *Auswahl* – Was will Gon Freecss werden, so wie sein Vater?  
+  **Hunter** · Hokage · Pirat · Samurai
+- `e-228` *Auswahl* – Was ist das Besondere an Asta in „Black Clover“?  
+  **Er wurde ohne Magie geboren** · Er ist ein Dämon · Er ist unsterblich · Er kann fliegen
+- `e-229` *Auswahl* – Was wollen Asta und Yuno werden?  
+  **König der Magier** · Hokage · Pirat · Held Nummer eins
+- `e-231` *Auswahl* – Wer ist der Anführer der Seven Deadly Sins?  
+  **Meliodas** · Ban · King · Gowther
+- `e-232` *Auswahl* – Welches sprechende Tier begleitet Meliodas?  
+  **Das Schwein Hawk** · Ein Hund · Eine Katze · Ein Drache
 
 ### Klassiker & Kult
 
@@ -331,6 +371,16 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Artemis** · Luna · Diana · Jiji
 - `e-099` *Wahr/Falsch* – Chibiusa ist Bunnys Tochter aus der Zukunft.  
   **Wahr** · Falsch
+- `e-210` *Auswahl* – In welcher Welt spielt „Die Tagebücher der Apothekerin“?  
+  **In einem Reich nach dem Vorbild des kaiserlichen China** · Im alten Japan · Im viktorianischen England · Im alten Ägypten
+- `e-211` *Auswahl* – Wie heißt der auffallend schöne Palastbeamte, der Maomao fördert?  
+  **Jinshi** · Gaoshun · Lihaku · Lakan
+- `e-212` *Wahr/Falsch* – Maomao malt sich Sommersprossen ins Gesicht, um unscheinbar zu wirken.  
+  **Wahr** · Falsch
+- `e-213` *Auswahl* – Wo spielt „Black Butler“?  
+  **Im England des 19. Jahrhunderts** · Im Japan der Edo-Zeit · Im Frankreich der Revolution · Im heutigen London
+- `e-214` *Auswahl* – Welche Firma leitet der junge Ciel?  
+  **Funtom, einen Spielzeug- und Süßwarenkonzern** · Phantom Motors · Trancy Tea · Midford Arms
 
 ### Ghibli & Kinofilme
 
@@ -376,6 +426,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Yubaba** · Zeniba · Kamaji · Lin
 - `e-207` *Auswahl* – In welchem Dragon-Ball-Kinofilm von 2022 stehen Gohan und Piccolo im Mittelpunkt?  
   **Dragon Ball Super: Super Hero** · Dragon Ball Super: Broly · Resurrection F · Battle of Gods
+- `e-238` *Auswahl* – Wie heißt der Junge, den Ponyo liebt?  
+  **Sosuke** · Haku · Pazu · Seiji
+- `e-239` *Auswahl* – Wie heißt der Kinofilm zu „Spy x Family“?  
+  **Spy x Family Code: White** · Spy x Family: Operation Strix · Spy x Family: Anyas Abenteuer · Spy x Family: Red Mission
 
 ### Manga, Begriffe & Kultur
 
@@ -447,8 +501,18 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ein Manga, der sich vor allem an Mädchen richtet** · Ein Manga für Erwachsene · Ein Manga über Sport · Ein Manga ohne Text
 - `e-205` *Auswahl* – Wofür steht die Abkürzung „WSJ“ in Manga-Kreisen?  
   **Weekly Shōnen Jump** · World Shōjo Journal · Wöchentliches Sammel-Journal · Weekly Shōnen Sunday
+- `e-233` *Auswahl* – Was ist Tempura?  
+  **Frittiertes Gemüse oder Meeresfrüchte im Teigmantel** · Eine Nudelsuppe · Ein Reisdessert · Ein grüner Tee
+- `e-234` *Auswahl* – Was bedeutet „Oishii“?  
+  **Lecker** · Teuer · Heiß · Fertig
+- `e-235` *Auswahl* – Was ist Origami?  
+  **Die Kunst des Papierfaltens** · Eine Kampfsportart · Ein Nudelgericht · Ein Fest
+- `e-236` *Auswahl* – Was ist der Shinkansen?  
+  **Japans Hochgeschwindigkeitszug** · Ein Tempel in Kyoto · Ein Fischmarkt · Ein Berg
+- `e-237` *Auswahl* – Was bedeutet „Kampai“?  
+  **Prost** · Danke · Guten Appetit · Entschuldigung
 
-## Fan (246 Fragen)
+## Fan (289 Fragen)
 
 ### One Piece
 
@@ -611,6 +675,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Sein räumliches Wahrnehmungsvermögen** · Seine Schnelligkeit · Seine Kopfbälle · Seine Schusskraft
 - `f-233` *Auswahl* – Wer ist Rin Itoshis berühmter älterer Bruder?  
   **Sae Itoshi** · Noel Noa · Shoei Baro · Jinpachi Ego
+- `f-273` *Auswahl* – Wie heißt die Welt der Shinigami in „Bleach“?  
+  **Soul Society** · Hueco Mundo · Seireitei-Wald · Grand Line
+- `f-279` *Auswahl* – Welcher schnelle Spieler mit der Knieverletzung in der Vergangenheit wird „Prinzessin“ genannt?  
+  **Hyoma Chigiri** · Rensuke Kunigami · Wataru Kuon · Gin Gagamaru
+- `f-280` *Auswahl* – Welches Studio animiert „Blue Lock“?  
+  **8bit** · MAPPA · Bones · Madhouse
 
 ### Neue Hits
 
@@ -702,6 +772,32 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Kishibe** · Aki Hayakawa · Angel Devil · Himeno
 - `f-236` *Wer bin ich?* – Wer bin ich? Ich leite Denjis Einheit bei der öffentlichen Sicherheit. / Meine Augen haben ringförmige Muster. / Denji würde alles für mich tun.  
   **Makima** · Power · Himeno · Kobeni Higashiyama
+- `f-247` *Auswahl* – Welches Studio animiert „Dandadan“?  
+  **Science SARU** · MAPPA · Wit Studio · Bones
+- `f-248` *Auswahl* – Wie heißen die Aliens, die Momo zu Beginn entführen?  
+  **Serpo-Aliens** · Flatwoods-Monster · Greys · Zeta-Reticulaner
+- `f-249` *Auswahl* – Wie heißt das Mädchen mit den Haarschleifen, das in Okarun verliebt ist und Momo als Rivalin sieht?  
+  **Aira Shiratori** · Seiko Ayase · Vamola · Kinta
+- `f-259` *Auswahl* – Wer ist Senkus Gegenspieler, der „stärkste Primat der Oberschule“?  
+  **Tsukasa Shishio** · Hyoga · Taiju Oki · Ryusui Nanami
+- `f-260` *Auswahl* – Welches Getränk stellt Senku her, um den Mentalisten Gen auf seine Seite zu ziehen?  
+  **Cola** · Bier · Kaffee · Grüner Tee
+- `f-261` *Auswahl* – Wie heißt der Mentalist, der sich Senku anschließt?  
+  **Gen Asagiri** · Chrome · Kinro · Magma
+- `f-265` *Auswahl* – Welche Fähigkeit hat Sakamotos Angestellter Shin?  
+  **Er kann Gedanken lesen** · Er ist unsichtbar · Er kann fliegen · Er heilt Wunden
+- `f-266` *Auswahl* – Wie hoch ist das Kopfgeld auf Sakamoto?  
+  **Eine Milliarde Yen** · Eine Million Yen · 100 Millionen Yen · Zehn Milliarden Yen
+- `f-267` *Auswahl* – Welche Regel hat Sakamoto seiner Frau versprochen?  
+  **Niemanden mehr zu töten** · Nie wieder zu arbeiten · Keine Waffen anzufassen · Kein Essen zu verschwenden
+- `f-268` *Auswahl* – Wie heißt Chihiros Vater?  
+  **Kunishige Rokuhira** · Shiba · Sojo · Hakuri
+- `f-269` *Auswahl* – Wie heißt Chihiros Mentor, ein alter Freund seines Vaters?  
+  **Shiba** · Sojo · Hakuri · Char
+- `f-270` *Auswahl* – Wie heißt die Organisation, die die verzauberten Klingen an sich reißen will?  
+  **Hishaku** · Akatsuki · Kamunabi · Sazanami
+- `f-276` *Auswahl* – Welches Training hat Saitama nach eigener Aussage so stark gemacht?  
+  **100 Liegestütze, 100 Sit-ups, 100 Kniebeugen und 10 km Laufen, jeden Tag** · Meditation im Gebirge · Ein Teufelspakt · Ein geheimes Serum
 
 ### Isekai & Fantasy
 
@@ -745,6 +841,28 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Magnolia** · Crocus · Hargeon · Era
 - `f-217` *Wer bin ich?* – Wer bin ich? Ich bin eine Wassermagierin. / Früher regnete es immer dort, wo ich war. / Ich bin hoffnungslos in Gray verliebt und spreche von mir in der dritten Person.  
   **Juvia Lockser** · Erza Scarlet · Lucy Heartfilia · Levy McGarden
+- `f-257` *Auswahl* – Wer war der Zwergenkrieger in Himmels Heldengruppe?  
+  **Eisen** · Stark · Heiter · Flamme
+- `f-258` *Auswahl* – Wohin führt Frierens Reise?  
+  **Nach Aureole, wo man mit den Seelen der Toten sprechen kann** · Zum Schloss des Dämonenkönigs · Zur Quelle der Unsterblichkeit · In ihr Heimatdorf
+- `f-262` *Auswahl* – Wer von den drei Freunden ist das Genie mit den weißen Haaren?  
+  **Norman** · Ray · Emma · Don
+- `f-263` *Auswahl* – Wer von den Kindern ist in Wahrheit Isabellas leiblicher Sohn?  
+  **Ray** · Norman · Phil · Don
+- `f-264` *Auswahl* – Welches Studio animierte „The Promised Neverland“?  
+  **CloverWorks** · MAPPA · Madhouse · Bones
+- `f-271` *Auswahl* – Wer ist der clownhafte Magier, der von Gon fasziniert ist?  
+  **Hisoka** · Illumi · Chrollo · Leorio
+- `f-272` *Auswahl* – Welchen Beruf strebt Leorio an?  
+  **Arzt** · Anwalt · Koch · Lehrer
+- `f-274` *Auswahl* – In welche Truppe wird Asta aufgenommen?  
+  **Black Bulls (Schwarze Stiere)** · Golden Dawn (Goldene Morgendämmerung) · Silver Eagles (Silberne Adler) · Crimson Lions (Purpurne Löwen)
+- `f-275` *Auswahl* – Wie viele Blätter hat das Kleeblatt auf Astas Grimoire?  
+  **Fünf** · Drei · Vier · Sieben
+- `f-277` *Auswahl* – Wie heißt die Prinzessin, die die Seven Deadly Sins sucht?  
+  **Elizabeth** · Diane · Merlin · Elaine
+- `f-278` *Auswahl* – Welche Sünde verkörpert die Riesin Diane?  
+  **Neid** · Gier · Faulheit · Stolz
 
 ### Klassiker & Kult
 
@@ -831,6 +949,20 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Sebastian Michaelis** · Tamaki Suoh · Grell Sutcliff · Howl
 - `f-237` *Auswahl* – Wie lautet Bunnys Verwandlungsspruch in der deutschen Fassung?  
   **„Macht der Mondnebel, mach auf!“** · „Mondstein, flieg und sieg!“ · „Im Namen des Mondes!“ · „Mondlicht, erleuchte mich!“
+- `f-250` *Auswahl* – Wie kam Maomao in den Palast?  
+  **Sie wurde entführt und als Dienerin verkauft** · Sie bewarb sich als Ärztin · Sie ist die Tochter des Kaisers · Sie wurde als Konkubine ausgewählt
+- `f-251` *Auswahl* – Welcher Konkubine dient Maomao als Vorkosterin?  
+  **Gyokuyou** · Lihua · Ah-Duo · Lishu
+- `f-252` *Auswahl* – Wer hat Maomao großgezogen?  
+  **Der Apotheker Luomen** · Der Stratege Lakan · Jinshi · Gaoshun
+- `f-253` *Auswahl* – Als was gilt Jinshi offiziell am Hof?  
+  **Als Eunuch** · Als Kaiser · Als Leibarzt · Als General
+- `f-254` *Auswahl* – Wer ist Grell Sutcliff?  
+  **Ein Shinigami mit roten Haaren und Kettensäge** · Ein Vampir · Ein Polizist von Scotland Yard · Ciels Bruder
+- `f-255` *Auswahl* – Welche Aufgabe erfüllt Ciel für die Königin?  
+  **Er ist der „Wachhund der Königin“ und überwacht Londons Unterwelt** · Er ist ihr Hofnarr · Er ist ihr Leibarzt · Er ist ihr Botschafter
+- `f-256` *Auswahl* – Was bekommt Sebastian laut Pakt für seine Dienste?  
+  **Ciels Seele** · Gold · Das Anwesen der Phantomhives · Die Firma Funtom
 
 ### Ghibli & Kinofilme
 
@@ -890,6 +1022,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Itomori** · Hida · Shinjuku · Kamakura
 - `f-246` *Auswahl* – In welchem Film von Mamoru Hosoda zieht Hana zwei Kinder groß, die sich in Wölfe verwandeln können?  
   **Wolfskinder** · Mirai · Belle · Summer Wars
+- `f-287` *Auswahl* – Welcher Ghibli-Film basiert auf den Romanen von Ursula K. Le Guin?  
+  **Die Chroniken von Erdsee** · Arrietty · Das wandelnde Schloss · Erinnerungen an Marnie
+- `f-288` *Auswahl* – Wo arbeitet Taki in „Your Name.“ nebenbei?  
+  **Als Kellner in einem italienischen Restaurant** · In einer Bäckerei · In einem Buchladen · In einem Schrein
+- `f-289` *Auswahl* – Wie heißt das 3D-Remake des ersten Pokémon-Films von 2019?  
+  **Pokémon: Mewtu schlägt zurück – Evolution** · Pokémon: Die Macht in uns · Pokémon: Der Film – Geheimnisse des Dschungels · Pokémon: Lugia
 
 ### Manga, Begriffe & Kultur
 
@@ -971,8 +1109,20 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Nakayoshi** · Ribon · Weekly Shōnen Jump · Hana to Yume
 - `f-243` *Auswahl* – Wer schuf „Die Rosen von Versailles“ und prägte damit den Shōjo-Manga der 1970er?  
   **Riyoko Ikeda** · Naoko Takeuchi · Rumiko Takahashi · Moto Hagio
+- `f-281` *Auswahl* – Was ist ein Onsen?  
+  **Ein Bad an einer heißen Quelle** · Ein Reisfeld · Ein Schreinfest · Eine Teezeremonie
+- `f-282` *Auswahl* – Was meint man mit „Fanservice“?  
+  **Szenen, die vor allem den Fans gefallen sollen, oft freizügig oder mit Lieblingsfiguren** · Den Kundendienst eines Verlags · Fan-Treffen mit Synchronsprechern · Kostenlose Manga-Kapitel
+- `f-283` *Auswahl* – Was ist „Boys’ Love“ (BL)?  
+  **Ein Genre über Liebesbeziehungen zwischen Männern** · Ein Genre über Jungenfreundschaften im Sport · Ein Magazin für Jungen · Ein Anime-Studio
+- `f-284` *Auswahl* – Was ist eine „Filler“-Folge?  
+  **Eine Anime-Folge ohne Vorlage im Manga, die Zeit überbrückt** · Eine Folge in Spielfilmlänge · Eine Rückblende · Eine Folge nur mit Musik
+- `f-285` *Auswahl* – Was ist eine Light Novel?  
+  **Ein leicht lesbarer, illustrierter japanischer Roman, oft Vorlage für Anime** · Ein kurzer Manga · Ein Hörspiel · Ein Bilderbuch für Kinder
+- `f-286` *Auswahl* – Was ist Tokyopop?  
+  **Ein Manga-Verlag, der in Deutschland von Hamburg aus arbeitet** · Ein Musiklabel · Ein Anime-Studio · Eine Anime-Convention
 
-## Otaku (147 Fragen)
+## Otaku (172 Fragen)
 
 ### One Piece
 
@@ -1083,6 +1233,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **45** (Schieberegler 10–80, ±3 zählt als knapp)
 - `o-140` *Auswahl* – Wer zeichnet „Blue Lock“?  
   **Yusuke Nomura** · Haruichi Furudate · Takehiko Inoue · Muneyuki Kaneshiro
+- `o-164` *Auswahl* – Wer verrät die Soul Society und wird zum großen Gegner?  
+  **Sosuke Aizen** · Gin Ichimaru · Byakuya Kuchiki · Kenpachi Zaraki
 
 ### Neue Hits
 
@@ -1142,6 +1294,20 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Dornenprinzessin** · Schwarze Witwe · Rose · Nachtigall
 - `o-141` *Auswahl* – Wie heißt Tatsuki Fujimotos One-Shot von 2021, der 2024 als Kinofilm erschien?  
   **Look Back** · Fire Punch · Goodbye, Eri · Just Listen to the Song
+- `o-148` *Auswahl* – Wo erscheint „Dandadan“ in Japan?  
+  **Shōnen Jump+ (online)** · Weekly Shōnen Jump · Weekly Shōnen Magazine · Weekly Shōnen Sunday
+- `o-149` *Auswahl* – Wer hat „Dandadan“ erschaffen?  
+  **Yukinobu Tatsu** · Tatsuki Fujimoto · Gege Akutami · Yuto Suzuki
+- `o-156` *Auswahl* – Woraus stellt Senku das Mittel zum Entsteinern her?  
+  **Aus Salpetersäure und Alkohol** · Aus Kohle und Wasser · Aus Honig und Salz · Aus Eisen und Schwefel
+- `o-157` *Schätzfrage* – Wie viele Bände hat der Manga „Dr. Stone“?  
+  **26** (Schieberegler 10–50, ±2 zählt als knapp)
+- `o-160` *Auswahl* – Wie heißt die junge Chinesin aus einer Mafia-Familie, die in Sakamotos Laden arbeitet?  
+  **Lu Xiaotang** · Osaragi · Mafuyu Seba · Natsuki Seo
+- `o-161` *Auswahl* – Wer hat „Kagurabachi“ erschaffen?  
+  **Takeru Hokazono** · Yuto Suzuki · Yukinobu Tatsu · Gege Akutami
+- `o-166` *Auswahl* – Wer schuf den ursprünglichen Webcomic „One-Punch Man“?  
+  **ONE** · Yusuke Murata · Eiichirō Oda · Yoshihiro Togashi
 
 ### Isekai & Fantasy
 
@@ -1175,6 +1341,22 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **63** (Schieberegler 20–100, ±3 zählt als knapp)
 - `o-132` *Auswahl* – Welche Serie von Hiro Mashima erschien vor „Fairy Tail“?  
   **Rave** · Edens Zero · Fairy Tail: 100 Years Quest · Monster Hunter Orage
+- `o-154` *Auswahl* – Wer war Frierens Lehrmeisterin?  
+  **Flamme** · Serie · Heiter · Aura
+- `o-155` *Auswahl* – Welches Studio animierte „Frieren“?  
+  **Madhouse** · MAPPA · Bones · Kyoto Animation
+- `o-158` *Auswahl* – Wie heißt die Dämonin mit dem „bösen Blut“, die den Kindern auf der Flucht hilft?  
+  **Mujika** · Sonju · Isabella · Krone
+- `o-159` *Auswahl* – Wer schrieb die Geschichte von „The Promised Neverland“?  
+  **Kaiu Shirai** · Posuka Demizu · Gege Akutami · Yukinobu Tatsu
+- `o-162` *Auswahl* – Wer ist der Anführer der Phantom-Truppe?  
+  **Chrollo Lucilfer** · Feitan · Uvogin · Illumi Zoldyck
+- `o-163` *Auswahl* – Welchen Clan hat die Phantom-Truppe ausgelöscht, aus dem Kurapika stammt?  
+  **Den Kurta-Clan** · Den Zoldyck-Clan · Den Uchiha-Clan · Den Freecss-Clan
+- `o-165` *Auswahl* – Wer hat „Black Clover“ erschaffen?  
+  **Yuki Tabata** · Hiro Mashima · Kohei Horikoshi · Gege Akutami
+- `o-167` *Auswahl* – Wer hat „Seven Deadly Sins“ erschaffen?  
+  **Nakaba Suzuki** · Hiro Mashima · Yuki Tabata · Hajime Isayama
 
 ### Klassiker & Kult
 
@@ -1229,6 +1411,14 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **23** (Schieberegler 5–60, ±2 zählt als knapp)
 - `o-072` *Auswahl* – Was verbirgt Ciels Augenklappe in „Black Butler“?  
   **Das Siegel seines Pakts mit Sebastian** · Ein Glasauge · Eine Narbe aus einem Brand · Ein Sharingan
+- `o-150` *Auswahl* – Wer ist Maomaos leiblicher Vater?  
+  **Lakan, der Stratege** · Luomen · Jinshi · Der Kaiser
+- `o-151` *Auswahl* – Wie lautet der japanische Originaltitel von „Die Tagebücher der Apothekerin“?  
+  **Kusuriya no Hitorigoto** · Kusuriya no Yume · Kōkyū no Hana · Maomao Monogatari
+- `o-152` *Auswahl* – Wie heißt Ciels Verlobte?  
+  **Elizabeth Midford** · Sieglinde Sullivan · Rachel Phantomhive · Mey-Rin
+- `o-153` *Auswahl* – In welchem Magazin erscheint „Black Butler“ in Japan?  
+  **Monthly G Fantasy** · Weekly Shōnen Jump · Nakayoshi · Hana to Yume
 
 ### Ghibli & Kinofilme
 
@@ -1260,6 +1450,10 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Das wandelnde Schloss** · Die Chroniken von Erdsee · Arrietty · Erinnerungen an Marnie
 - `o-147` *Auswahl* – Wie heißt die Fortsetzung von „Ghost in the Shell“ aus dem Jahr 2004?  
   **Innocence** · Stand Alone Complex · Arise · Solid State Society
+- `o-171` *Auswahl* – Wer komponierte die Musik zu fast allen Filmen von Hayao Miyazaki?  
+  **Joe Hisaishi** · Yoko Kanno · Yuki Kajiura · Hiroyuki Sawano
+- `o-172` *Auswahl* – Welcher Film von Keiichi Hara erzählt von Hokusais Tochter im Edo-Japan?  
+  **Miss Hokusai** · Colorful · Summer Days with Coo · The Wonderland
 
 ### Manga, Begriffe & Kultur
 
@@ -1297,3 +1491,9 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Ein vierköpfiges Mangaka-Kollektiv (Cardcaptor Sakura, xxxHolic)** · Ein Verlag · Ein Magazin · Ein Anime-Studio
 - `o-145` *Auswahl* – Welcher Mangaka zeichnete „Vagabond“ und „Slam Dunk“?  
   **Takehiko Inoue** · Hiro Mashima · Kentaro Miura · Naoki Urasawa
+- `o-168` *Auswahl* – Welcher Verlag brachte 1991 mit „Akira“ einen der ersten großen Manga-Erfolge nach Deutschland?  
+  **Carlsen** · Egmont · Tokyopop · Panini
+- `o-169` *Auswahl* – Was ist ein „Kakioroshi“?  
+  **Neu gezeichnete Bonusseiten, die nur im Sammelband erscheinen** · Eine Farbseite im Magazin · Ein Vorab-Kapitel · Ein Fan-Manga
+- `o-170` *Auswahl* – Wie nennt man die lautmalerischen Schriftzeichen in Manga-Panels, etwa für Herzklopfen?  
+  **Onomatopoesie (Giongo und Gitaigo)** · Furigana · Kanji · Rubi

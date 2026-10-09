@@ -8566,6 +8566,1399 @@
     "Solid State Society"
    ],
    "correct": 0
+  },
+  {
+   "id": "e-208",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist Seiko Ayase in „Dandadan“?",
+   "answers": [
+    "Momos Großmutter, ein Medium",
+    "Okaruns Mutter",
+    "Eine Alien-Anführerin",
+    "Momos Lehrerin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-209",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Nach dem Fluch der Turbo-Oma kann Okarun selbst übernatürlich schnell werden.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-247",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches Studio animiert „Dandadan“?",
+   "answers": [
+    "Science SARU",
+    "MAPPA",
+    "Wit Studio",
+    "Bones"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-248",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißen die Aliens, die Momo zu Beginn entführen?",
+   "answers": [
+    "Serpo-Aliens",
+    "Flatwoods-Monster",
+    "Greys",
+    "Zeta-Reticulaner"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-249",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Mädchen mit den Haarschleifen, das in Okarun verliebt ist und Momo als Rivalin sieht?",
+   "answers": [
+    "Aira Shiratori",
+    "Seiko Ayase",
+    "Vamola",
+    "Kinta"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-148",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wo erscheint „Dandadan“ in Japan?",
+   "answers": [
+    "Shōnen Jump+ (online)",
+    "Weekly Shōnen Jump",
+    "Weekly Shōnen Magazine",
+    "Weekly Shōnen Sunday"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-149",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer hat „Dandadan“ erschaffen?",
+   "answers": [
+    "Yukinobu Tatsu",
+    "Tatsuki Fujimoto",
+    "Gege Akutami",
+    "Yuto Suzuki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-210",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "In welcher Welt spielt „Die Tagebücher der Apothekerin“?",
+   "answers": [
+    "In einem Reich nach dem Vorbild des kaiserlichen China",
+    "Im alten Japan",
+    "Im viktorianischen England",
+    "Im alten Ägypten"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-211",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt der auffallend schöne Palastbeamte, der Maomao fördert?",
+   "answers": [
+    "Jinshi",
+    "Gaoshun",
+    "Lihaku",
+    "Lakan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-212",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "true_false",
+   "question": "Maomao malt sich Sommersprossen ins Gesicht, um unscheinbar zu wirken.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-250",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie kam Maomao in den Palast?",
+   "answers": [
+    "Sie wurde entführt und als Dienerin verkauft",
+    "Sie bewarb sich als Ärztin",
+    "Sie ist die Tochter des Kaisers",
+    "Sie wurde als Konkubine ausgewählt"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-251",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Welcher Konkubine dient Maomao als Vorkosterin?",
+   "answers": [
+    "Gyokuyou",
+    "Lihua",
+    "Ah-Duo",
+    "Lishu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-252",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer hat Maomao großgezogen?",
+   "answers": [
+    "Der Apotheker Luomen",
+    "Der Stratege Lakan",
+    "Jinshi",
+    "Gaoshun"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-253",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Als was gilt Jinshi offiziell am Hof?",
+   "answers": [
+    "Als Eunuch",
+    "Als Kaiser",
+    "Als Leibarzt",
+    "Als General"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-150",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer ist Maomaos leiblicher Vater?",
+   "answers": [
+    "Lakan, der Stratege",
+    "Luomen",
+    "Jinshi",
+    "Der Kaiser"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-151",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie lautet der japanische Originaltitel von „Die Tagebücher der Apothekerin“?",
+   "answers": [
+    "Kusuriya no Hitorigoto",
+    "Kusuriya no Yume",
+    "Kōkyū no Hana",
+    "Maomao Monogatari"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-213",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wo spielt „Black Butler“?",
+   "answers": [
+    "Im England des 19. Jahrhunderts",
+    "Im Japan der Edo-Zeit",
+    "Im Frankreich der Revolution",
+    "Im heutigen London"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-214",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Welche Firma leitet der junge Ciel?",
+   "answers": [
+    "Funtom, einen Spielzeug- und Süßwarenkonzern",
+    "Phantom Motors",
+    "Trancy Tea",
+    "Midford Arms"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-254",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer ist Grell Sutcliff?",
+   "answers": [
+    "Ein Shinigami mit roten Haaren und Kettensäge",
+    "Ein Vampir",
+    "Ein Polizist von Scotland Yard",
+    "Ciels Bruder"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-255",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Welche Aufgabe erfüllt Ciel für die Königin?",
+   "answers": [
+    "Er ist der „Wachhund der Königin“ und überwacht Londons Unterwelt",
+    "Er ist ihr Hofnarr",
+    "Er ist ihr Leibarzt",
+    "Er ist ihr Botschafter"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-256",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was bekommt Sebastian laut Pakt für seine Dienste?",
+   "answers": [
+    "Ciels Seele",
+    "Gold",
+    "Das Anwesen der Phantomhives",
+    "Die Firma Funtom"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-152",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt Ciels Verlobte?",
+   "answers": [
+    "Elizabeth Midford",
+    "Sieglinde Sullivan",
+    "Rachel Phantomhive",
+    "Mey-Rin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-153",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "In welchem Magazin erscheint „Black Butler“ in Japan?",
+   "answers": [
+    "Monthly G Fantasy",
+    "Weekly Shōnen Jump",
+    "Nakayoshi",
+    "Hana to Yume"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-215",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt der junge Krieger, der mit Frieren und Fern reist?",
+   "answers": [
+    "Stark",
+    "Himmel",
+    "Heiter",
+    "Eisen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-257",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer war der Zwergenkrieger in Himmels Heldengruppe?",
+   "answers": [
+    "Eisen",
+    "Stark",
+    "Heiter",
+    "Flamme"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-258",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wohin führt Frierens Reise?",
+   "answers": [
+    "Nach Aureole, wo man mit den Seelen der Toten sprechen kann",
+    "Zum Schloss des Dämonenkönigs",
+    "Zur Quelle der Unsterblichkeit",
+    "In ihr Heimatdorf"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-154",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer war Frierens Lehrmeisterin?",
+   "answers": [
+    "Flamme",
+    "Serie",
+    "Heiter",
+    "Aura"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-155",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welches Studio animierte „Frieren“?",
+   "answers": [
+    "Madhouse",
+    "MAPPA",
+    "Bones",
+    "Kyoto Animation"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-216",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Senkus bester Freund, der kurz nach ihm aus dem Stein erwacht?",
+   "answers": [
+    "Taiju Oki",
+    "Chrome",
+    "Gen Asagiri",
+    "Tsukasa Shishio"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-217",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie nennt Senku sein Projekt zum Wiederaufbau der Zivilisation?",
+   "answers": [
+    "Königreich der Wissenschaft",
+    "Imperium der Kraft",
+    "Dorf der Steine",
+    "Stadt des Lichts"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-218",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "Senku hat während der Versteinerung die Sekunden gezählt, um zu wissen, wie viel Zeit vergangen ist.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-259",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist Senkus Gegenspieler, der „stärkste Primat der Oberschule“?",
+   "answers": [
+    "Tsukasa Shishio",
+    "Hyoga",
+    "Taiju Oki",
+    "Ryusui Nanami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-260",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches Getränk stellt Senku her, um den Mentalisten Gen auf seine Seite zu ziehen?",
+   "answers": [
+    "Cola",
+    "Bier",
+    "Kaffee",
+    "Grüner Tee"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-261",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Mentalist, der sich Senku anschließt?",
+   "answers": [
+    "Gen Asagiri",
+    "Chrome",
+    "Kinro",
+    "Magma"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-156",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Woraus stellt Senku das Mittel zum Entsteinern her?",
+   "answers": [
+    "Aus Salpetersäure und Alkohol",
+    "Aus Kohle und Wasser",
+    "Aus Honig und Salz",
+    "Aus Eisen und Schwefel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-157",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "estimate",
+   "question": "Wie viele Bände hat der Manga „Dr. Stone“?",
+   "answers": [
+    "26"
+   ],
+   "correct": 0,
+   "answer": 26,
+   "min": 10,
+   "max": 50,
+   "tolerance": 2
+  },
+  {
+   "id": "e-219",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt die „Mama“ des Waisenhauses in „The Promised Neverland“?",
+   "answers": [
+    "Isabella",
+    "Krone",
+    "Mujika",
+    "Emma"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-220",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Waisenhaus?",
+   "answers": [
+    "Grace Field House",
+    "Lambda",
+    "Goldy Pond",
+    "Eden House"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-221",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Bis zu welchem Alter werden die Kinder spätestens „adoptiert“?",
+   "answers": [
+    "12 Jahre",
+    "6 Jahre",
+    "18 Jahre",
+    "10 Jahre"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-262",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer von den drei Freunden ist das Genie mit den weißen Haaren?",
+   "answers": [
+    "Norman",
+    "Ray",
+    "Emma",
+    "Don"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-263",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer von den Kindern ist in Wahrheit Isabellas leiblicher Sohn?",
+   "answers": [
+    "Ray",
+    "Norman",
+    "Phil",
+    "Don"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-264",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welches Studio animierte „The Promised Neverland“?",
+   "answers": [
+    "CloverWorks",
+    "MAPPA",
+    "Madhouse",
+    "Bones"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-158",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Dämonin mit dem „bösen Blut“, die den Kindern auf der Flucht hilft?",
+   "answers": [
+    "Mujika",
+    "Sonju",
+    "Isabella",
+    "Krone"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-159",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer schrieb die Geschichte von „The Promised Neverland“?",
+   "answers": [
+    "Kaiu Shirai",
+    "Posuka Demizu",
+    "Gege Akutami",
+    "Yukinobu Tatsu"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-222",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was betreibt Taro Sakamoto heute?",
+   "answers": [
+    "Einen kleinen Laden",
+    "Ein Restaurant",
+    "Eine Bar",
+    "Eine Kampfschule"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-223",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Sakamotos Frau?",
+   "answers": [
+    "Aoi",
+    "Hana",
+    "Lu",
+    "Mio"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-265",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Fähigkeit hat Sakamotos Angestellter Shin?",
+   "answers": [
+    "Er kann Gedanken lesen",
+    "Er ist unsichtbar",
+    "Er kann fliegen",
+    "Er heilt Wunden"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-266",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie hoch ist das Kopfgeld auf Sakamoto?",
+   "answers": [
+    "Eine Milliarde Yen",
+    "Eine Million Yen",
+    "100 Millionen Yen",
+    "Zehn Milliarden Yen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-267",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Regel hat Sakamoto seiner Frau versprochen?",
+   "answers": [
+    "Niemanden mehr zu töten",
+    "Nie wieder zu arbeiten",
+    "Keine Waffen anzufassen",
+    "Kein Essen zu verschwenden"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-160",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die junge Chinesin aus einer Mafia-Familie, die in Sakamotos Laden arbeitet?",
+   "answers": [
+    "Lu Xiaotang",
+    "Osaragi",
+    "Mafuyu Seba",
+    "Natsuki Seo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-224",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie viele verzauberte Klingen schmiedete Chihiros Vater in „Kagurabachi“?",
+   "answers": [
+    "Sechs",
+    "Drei",
+    "Zehn",
+    "Eine"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-225",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "true_false",
+   "question": "„Kagurabachi“ startete 2023 in der Weekly Shōnen Jump.",
+   "answers": [
+    "Wahr",
+    "Falsch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-268",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Chihiros Vater?",
+   "answers": [
+    "Kunishige Rokuhira",
+    "Shiba",
+    "Sojo",
+    "Hakuri"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-269",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Chihiros Mentor, ein alter Freund seines Vaters?",
+   "answers": [
+    "Shiba",
+    "Sojo",
+    "Hakuri",
+    "Char"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-270",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Organisation, die die verzauberten Klingen an sich reißen will?",
+   "answers": [
+    "Hishaku",
+    "Akatsuki",
+    "Kamunabi",
+    "Sazanami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-161",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer hat „Kagurabachi“ erschaffen?",
+   "answers": [
+    "Takeru Hokazono",
+    "Yuto Suzuki",
+    "Yukinobu Tatsu",
+    "Gege Akutami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-226",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Was will Gon Freecss werden, so wie sein Vater?",
+   "answers": [
+    "Hunter",
+    "Hokage",
+    "Pirat",
+    "Samurai"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-271",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer ist der clownhafte Magier, der von Gon fasziniert ist?",
+   "answers": [
+    "Hisoka",
+    "Illumi",
+    "Chrollo",
+    "Leorio"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-272",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welchen Beruf strebt Leorio an?",
+   "answers": [
+    "Arzt",
+    "Anwalt",
+    "Koch",
+    "Lehrer"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-162",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer ist der Anführer der Phantom-Truppe?",
+   "answers": [
+    "Chrollo Lucilfer",
+    "Feitan",
+    "Uvogin",
+    "Illumi Zoldyck"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-163",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welchen Clan hat die Phantom-Truppe ausgelöscht, aus dem Kurapika stammt?",
+   "answers": [
+    "Den Kurta-Clan",
+    "Den Zoldyck-Clan",
+    "Den Uchiha-Clan",
+    "Den Freecss-Clan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-227",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Ichigos Schulfreundin mit Heilkräften und langen orangen Haaren?",
+   "answers": [
+    "Orihime Inoue",
+    "Rukia Kuchiki",
+    "Yoruichi Shihoin",
+    "Rangiku Matsumoto"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-273",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Welt der Shinigami in „Bleach“?",
+   "answers": [
+    "Soul Society",
+    "Hueco Mundo",
+    "Seireitei-Wald",
+    "Grand Line"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-164",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer verrät die Soul Society und wird zum großen Gegner?",
+   "answers": [
+    "Sosuke Aizen",
+    "Gin Ichimaru",
+    "Byakuya Kuchiki",
+    "Kenpachi Zaraki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-228",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Was ist das Besondere an Asta in „Black Clover“?",
+   "answers": [
+    "Er wurde ohne Magie geboren",
+    "Er ist ein Dämon",
+    "Er ist unsterblich",
+    "Er kann fliegen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-229",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Was wollen Asta und Yuno werden?",
+   "answers": [
+    "König der Magier",
+    "Hokage",
+    "Pirat",
+    "Held Nummer eins"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-274",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "In welche Truppe wird Asta aufgenommen?",
+   "answers": [
+    "Black Bulls (Schwarze Stiere)",
+    "Golden Dawn (Goldene Morgendämmerung)",
+    "Silver Eagles (Silberne Adler)",
+    "Crimson Lions (Purpurne Löwen)"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-275",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie viele Blätter hat das Kleeblatt auf Astas Grimoire?",
+   "answers": [
+    "Fünf",
+    "Drei",
+    "Vier",
+    "Sieben"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-165",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer hat „Black Clover“ erschaffen?",
+   "answers": [
+    "Yuki Tabata",
+    "Hiro Mashima",
+    "Kohei Horikoshi",
+    "Gege Akutami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-230",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Saitamas Schüler, ein Cyborg?",
+   "answers": [
+    "Genos",
+    "Mumen Rider",
+    "King",
+    "Bang"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-276",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches Training hat Saitama nach eigener Aussage so stark gemacht?",
+   "answers": [
+    "100 Liegestütze, 100 Sit-ups, 100 Kniebeugen und 10 km Laufen, jeden Tag",
+    "Meditation im Gebirge",
+    "Ein Teufelspakt",
+    "Ein geheimes Serum"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-166",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer schuf den ursprünglichen Webcomic „One-Punch Man“?",
+   "answers": [
+    "ONE",
+    "Yusuke Murata",
+    "Eiichirō Oda",
+    "Yoshihiro Togashi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-231",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer ist der Anführer der Seven Deadly Sins?",
+   "answers": [
+    "Meliodas",
+    "Ban",
+    "King",
+    "Gowther"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-232",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welches sprechende Tier begleitet Meliodas?",
+   "answers": [
+    "Das Schwein Hawk",
+    "Ein Hund",
+    "Eine Katze",
+    "Ein Drache"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-277",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Prinzessin, die die Seven Deadly Sins sucht?",
+   "answers": [
+    "Elizabeth",
+    "Diane",
+    "Merlin",
+    "Elaine"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-278",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welche Sünde verkörpert die Riesin Diane?",
+   "answers": [
+    "Neid",
+    "Gier",
+    "Faulheit",
+    "Stolz"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-167",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer hat „Seven Deadly Sins“ erschaffen?",
+   "answers": [
+    "Nakaba Suzuki",
+    "Hiro Mashima",
+    "Yuki Tabata",
+    "Hajime Isayama"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-279",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welcher schnelle Spieler mit der Knieverletzung in der Vergangenheit wird „Prinzessin“ genannt?",
+   "answers": [
+    "Hyoma Chigiri",
+    "Rensuke Kunigami",
+    "Wataru Kuon",
+    "Gin Gagamaru"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-280",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Studio animiert „Blue Lock“?",
+   "answers": [
+    "8bit",
+    "MAPPA",
+    "Bones",
+    "Madhouse"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-233",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Tempura?",
+   "answers": [
+    "Frittiertes Gemüse oder Meeresfrüchte im Teigmantel",
+    "Eine Nudelsuppe",
+    "Ein Reisdessert",
+    "Ein grüner Tee"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-234",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Oishii“?",
+   "answers": [
+    "Lecker",
+    "Teuer",
+    "Heiß",
+    "Fertig"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-235",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Origami?",
+   "answers": [
+    "Die Kunst des Papierfaltens",
+    "Eine Kampfsportart",
+    "Ein Nudelgericht",
+    "Ein Fest"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-236",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist der Shinkansen?",
+   "answers": [
+    "Japans Hochgeschwindigkeitszug",
+    "Ein Tempel in Kyoto",
+    "Ein Fischmarkt",
+    "Ein Berg"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-237",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Kampai“?",
+   "answers": [
+    "Prost",
+    "Danke",
+    "Guten Appetit",
+    "Entschuldigung"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-281",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein Onsen?",
+   "answers": [
+    "Ein Bad an einer heißen Quelle",
+    "Ein Reisfeld",
+    "Ein Schreinfest",
+    "Eine Teezeremonie"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-282",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was meint man mit „Fanservice“?",
+   "answers": [
+    "Szenen, die vor allem den Fans gefallen sollen, oft freizügig oder mit Lieblingsfiguren",
+    "Den Kundendienst eines Verlags",
+    "Fan-Treffen mit Synchronsprechern",
+    "Kostenlose Manga-Kapitel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-283",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist „Boys’ Love“ (BL)?",
+   "answers": [
+    "Ein Genre über Liebesbeziehungen zwischen Männern",
+    "Ein Genre über Jungenfreundschaften im Sport",
+    "Ein Magazin für Jungen",
+    "Ein Anime-Studio"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-284",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist eine „Filler“-Folge?",
+   "answers": [
+    "Eine Anime-Folge ohne Vorlage im Manga, die Zeit überbrückt",
+    "Eine Folge in Spielfilmlänge",
+    "Eine Rückblende",
+    "Eine Folge nur mit Musik"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-285",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist eine Light Novel?",
+   "answers": [
+    "Ein leicht lesbarer, illustrierter japanischer Roman, oft Vorlage für Anime",
+    "Ein kurzer Manga",
+    "Ein Hörspiel",
+    "Ein Bilderbuch für Kinder"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-286",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Tokyopop?",
+   "answers": [
+    "Ein Manga-Verlag, der in Deutschland von Hamburg aus arbeitet",
+    "Ein Musiklabel",
+    "Ein Anime-Studio",
+    "Eine Anime-Convention"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-168",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Welcher Verlag brachte 1991 mit „Akira“ einen der ersten großen Manga-Erfolge nach Deutschland?",
+   "answers": [
+    "Carlsen",
+    "Egmont",
+    "Tokyopop",
+    "Panini"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-169",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist ein „Kakioroshi“?",
+   "answers": [
+    "Neu gezeichnete Bonusseiten, die nur im Sammelband erscheinen",
+    "Eine Farbseite im Magazin",
+    "Ein Vorab-Kapitel",
+    "Ein Fan-Manga"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-170",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie nennt man die lautmalerischen Schriftzeichen in Manga-Panels, etwa für Herzklopfen?",
+   "answers": [
+    "Onomatopoesie (Giongo und Gitaigo)",
+    "Furigana",
+    "Kanji",
+    "Rubi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-238",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Junge, den Ponyo liebt?",
+   "answers": [
+    "Sosuke",
+    "Haku",
+    "Pazu",
+    "Seiji"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-287",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Ghibli-Film basiert auf den Romanen von Ursula K. Le Guin?",
+   "answers": [
+    "Die Chroniken von Erdsee",
+    "Arrietty",
+    "Das wandelnde Schloss",
+    "Erinnerungen an Marnie"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-171",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wer komponierte die Musik zu fast allen Filmen von Hayao Miyazaki?",
+   "answers": [
+    "Joe Hisaishi",
+    "Yoko Kanno",
+    "Yuki Kajiura",
+    "Hiroyuki Sawano"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-288",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wo arbeitet Taki in „Your Name.“ nebenbei?",
+   "answers": [
+    "Als Kellner in einem italienischen Restaurant",
+    "In einer Bäckerei",
+    "In einem Buchladen",
+    "In einem Schrein"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-239",
+   "difficulty": 1,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Kinofilm zu „Spy x Family“?",
+   "answers": [
+    "Spy x Family Code: White",
+    "Spy x Family: Operation Strix",
+    "Spy x Family: Anyas Abenteuer",
+    "Spy x Family: Red Mission"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-289",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt das 3D-Remake des ersten Pokémon-Films von 2019?",
+   "answers": [
+    "Pokémon: Mewtu schlägt zurück – Evolution",
+    "Pokémon: Die Macht in uns",
+    "Pokémon: Der Film – Geheimnisse des Dschungels",
+    "Pokémon: Lugia"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-172",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Film von Keiichi Hara erzählt von Hokusais Tochter im Edo-Japan?",
+   "answers": [
+    "Miss Hokusai",
+    "Colorful",
+    "Summer Days with Coo",
+    "The Wonderland"
+   ],
+   "correct": 0
   }
  ]
 }
