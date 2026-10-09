@@ -307,7 +307,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-283` *Auswahl* – Warum darf Yuji Itadori weiterleben, obwohl er Sukuna in sich trägt?  
   **Er soll alle Finger sammeln und erst danach hingerichtet werden** · Weil Gojo sein Vater ist · Weil er unsterblich ist · Weil Sukuna zu schwach ist
 - `e-284` *Auswahl* – Wie werden die Superkräfte in „My Hero Academia“ genannt?  
-  **Quirks** · Stands · Nen · Chakra
+  **Spezialitäten (Quirks)** · Stands · Nen · Chakra
 - `e-285` *Auswahl* – Was ist Power in „Chainsaw Man“?  
   **Ein Blutteufel in einem Menschenkörper** · Ein normaler Mensch · Ein Engel · Ein Roboter
 - `e-290` *Auswahl* – Was soll Anya an der Eden Academy sammeln, damit Loids Mission gelingt?  
@@ -317,7 +317,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-303` *Auswahl* – Was ist das Besondere an den Augen der Familie Hoshino?  
   **Sterne in den Pupillen** · Rote Augen · Blaue Augen · Keine Pupillen
 - `e-306` *Auswahl* – Was ist Koro-sensei in „Assassination Classroom“?  
-  **Ein gelber Tentakel-Lehrer, der den Mond zerstört hat** · Ein Roboter · Ein Alien-Hund · Ein Geist
+  **Ein gelber Tentakel-Lehrer, der angeblich den Mond zerstört hat** · Ein Roboter · Ein Alien-Hund · Ein Geist
 
 ### Isekai & Fantasy
 
@@ -845,7 +845,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Sonoko Suzuki** · Kazuha Toyama · Ayumi Yoshida · Eri Kisaki
 - `f-335` *Auswahl* – In welcher Stadt leitet Misty die Arena?  
   **Azuria City** · Vertania City · Marmoria City · Orania City
-- `f-336` *Auswahl* – Wer ist Hange Zoë?  
+- `f-336` *Auswahl* – Wer ist Hanji Zoë (Hange Zoë)?  
   **Eine Forscherin, die von Titanen besessen ist und später Kommandantin wird** · Erens Mutter · Eine Titanen-Wandlerin aus Marley · Die Königin der Mauern
 - `f-345` *Auswahl* – Welcher begabte, aber anfangs lustlose Spieler ist Reo Mikages Partner?  
   **Seishiro Nagi** · Yoichi Isagi · Shoei Baro · Rin Itoshi
@@ -989,7 +989,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-337` *Auswahl* – Welchen Rang hat der Dämon Akaza, der in „Mugen Train“ auftaucht?  
   **Oberer Mond 3** · Unterer Mond 1 · Oberer Mond 1 · Er ist Muzans Bruder
 - `f-338` *Auswahl* – Wie heißt Gojos Technik, die Angriffe vor ihm unendlich verlangsamt?  
-  **Unendlichkeit (Limitless)** · Sechs Augen · Blitz · Spiegelwelt
+  **Unendlichkeit (Infinity)** · Sechs Augen · Blitz · Spiegelwelt
 - `f-339` *Auswahl* – Wie groß ist der Anteil der Menschen mit Superkraft in „My Hero Academia“?  
   **Etwa 80 Prozent** · Etwa 20 Prozent · Etwa 50 Prozent · 100 Prozent
 - `f-340` *Auswahl* – Wie heißt der Hybrid mit dem Schwert, der Denji im Auftrag der Yakuza angreift?  
@@ -1650,7 +1650,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Bondman** · Twilight · Agent 007 · Blitzmann
 - `o-209` *Auswahl* – Woher kommt Okaruns Spitzname?  
   **Weil er das Okkulte liebt (Okaruto-kun)** · Von seinem Nachnamen · Von einer Band · Von einem Alien
-- `o-211` *Auswahl* – Wie heißt die Kinderschauspielerin, die mit Aqua und Ruby aufwächst?  
+- `o-211` *Auswahl* – Wie heißt die ehemalige Kinderschauspielerin, mit der Aqua als Kind vor der Kamera stand und die später seine Mitschülerin wird?  
   **Kana Arima** · Akane Kurokawa · Mem-cho · Miyako Saitou
 - `o-214` *Auswahl* – Wer hat „Assassination Classroom“ erschaffen?  
   **Yusei Matsui** · Kohei Horikoshi · Yuki Tabata · Haruichi Furudate
@@ -1798,7 +1798,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-190` *Auswahl* – Wer hat „Fullmoon wo Sagashite“ erschaffen?  
   **Arina Tanemura** · Ai Yazawa · Naoko Takeuchi · Natsuki Takaya
 - `o-207` *Auswahl* – Wie heißt die Hauptgegnerin der ersten Staffel von „Sailor Moon“ in der deutschen Fassung?  
-  **Königin Perilia** · Königin Metallia · Black Lady · Galaxia
+  **Königin Perilia** · Königin Nehelenia · Black Lady · Galaxia
 - `o-212` *Auswahl* – Wie heißt die Fortsetzung von „Cardcaptor Sakura“ ab 2016?  
   **Cardcaptor Sakura: Clear Card** · Tsubasa Chronicle · Sakura Wars · Clow Card Returns
 - `o-215` *Auswahl* – Wie lautet der japanische Titel von „Your Lie in April“?  

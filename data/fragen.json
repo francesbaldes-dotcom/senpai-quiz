@@ -11563,7 +11563,7 @@
    "difficulty": 2,
    "category": "shonen",
    "type": "multiple_choice",
-   "question": "Wer ist Hange Zoë?",
+   "question": "Wer ist Hanji Zoë (Hange Zoë)?",
    "answers": [
     "Eine Forscherin, die von Titanen besessen ist und später Kommandantin wird",
     "Erens Mutter",
@@ -11649,7 +11649,7 @@
    "type": "multiple_choice",
    "question": "Wie heißt Gojos Technik, die Angriffe vor ihm unendlich verlangsamt?",
    "answers": [
-    "Unendlichkeit (Limitless)",
+    "Unendlichkeit (Infinity)",
     "Sechs Augen",
     "Blitz",
     "Spiegelwelt"
@@ -11677,7 +11677,7 @@
    "type": "multiple_choice",
    "question": "Wie werden die Superkräfte in „My Hero Academia“ genannt?",
    "answers": [
-    "Quirks",
+    "Spezialitäten (Quirks)",
     "Stands",
     "Nen",
     "Chakra"
@@ -11930,7 +11930,7 @@
    "question": "Wie heißt die Hauptgegnerin der ersten Staffel von „Sailor Moon“ in der deutschen Fassung?",
    "answers": [
     "Königin Perilia",
-    "Königin Metallia",
+    "Königin Nehelenia",
     "Black Lady",
     "Galaxia"
    ],
@@ -12347,7 +12347,7 @@
    "difficulty": 3,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Wie heißt die Kinderschauspielerin, die mit Aqua und Ruby aufwächst?",
+   "question": "Wie heißt die ehemalige Kinderschauspielerin, mit der Aqua als Kind vor der Kamera stand und die später seine Mitschülerin wird?",
    "answers": [
     "Kana Arima",
     "Akane Kurokawa",
@@ -12447,7 +12447,7 @@
    "type": "multiple_choice",
    "question": "Was ist Koro-sensei in „Assassination Classroom“?",
    "answers": [
-    "Ein gelber Tentakel-Lehrer, der den Mond zerstört hat",
+    "Ein gelber Tentakel-Lehrer, der angeblich den Mond zerstört hat",
     "Ein Roboter",
     "Ein Alien-Hund",
     "Ein Geist"
