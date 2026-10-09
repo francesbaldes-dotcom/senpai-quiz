@@ -488,6 +488,16 @@ button { font: inherit; color: inherit; }
 .dialog-kopf .maskottchen { width: 64px; height: 64px; flex-shrink: 0; }
 .dialog-frage p { margin: 0; font-size: 15px; font-weight: 700; line-height: 1.45; }
 
+/* ---------- Lexikon (Startseite) ---------- */
+
+.begriffe-link { margin: -8px 0; }
+.dialog-begriffe { max-height: calc(100dvh - 40px); gap: 14px; }
+.begriffe { margin: 0; flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 4px; -webkit-overflow-scrolling: touch; }
+.begriffe > div { display: flex; flex-direction: column; gap: 2px; padding-bottom: 10px; border-bottom: 2px dashed var(--line); }
+.begriffe > div:last-child { border-bottom: 0; padding-bottom: 0; }
+.begriffe dt { font-family: var(--display); font-size: 15px; }
+.begriffe dd { margin: 0; font-size: 14px; line-height: 1.45; }
+
 .loesung { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; }
 .loesung ol { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 4px; font-weight: 900; }
 

@@ -19,6 +19,21 @@ const MELDE_GRUENDE = [
 ];
 const MELDE_TEXT_MAX = 200;
 
+// Kleines Lexikon für die Startseite: japanische Wörter, die in der App vorkommen
+const BEGRIFFE = [
+  ['Senpai', 'Jemand mit mehr Erfahrung, zu dem man aufschaut, etwa in Schule oder Verein. Im Quiz dein Rang ab 2.000 XP.'],
+  ['Kōhai', 'Das Gegenstück zum Senpai: der Jüngere, der noch lernt. Dein Rang ab 500 XP.'],
+  ['Sensei', 'Lehrer oder Meister. Dein Rang ab 5.000 XP.'],
+  ['Otaku', 'Jemand, der ganz in Anime, Manga oder Games aufgeht. Die schwerste Stufe im Quiz.'],
+  ['Sugoi', '„Wow!“ oder „Stark!“. Das ruft das Maskottchen bei richtigen Antworten.'],
+  ['Onigiri', 'Reisbällchen, oft in ein Nori-Blatt gewickelt. Unser Maskottchen ist eins.'],
+  ['Anime', 'Japanische Zeichentrickserien und -filme.'],
+  ['Manga', 'Japanische Comics, oft die Vorlage für einen Anime. Wer sie zeichnet, ist Mangaka.'],
+  ['Shōnen', 'Serien für ein junges männliches Publikum: Kämpfe, Freundschaft, Abenteuer. Etwa One Piece oder Naruto.'],
+  ['Shōjo', 'Serien für ein junges weibliches Publikum: Gefühle, Beziehungen, Alltag. Etwa Sailor Moon.'],
+  ['Isekai', '„Andere Welt“: Die Hauptfigur landet in einer fremden Welt, oft mit Magie oder Spielregeln.'],
+];
+
 const STUFEN_WAHL = [
   { id: 'easy', label: 'Einsteiger', stufen: [1] },
   { id: 'fan', label: 'Fan', stufen: [1, 2] },
@@ -133,6 +148,7 @@ const ui = {
   runde: null,
   ergebnis: null,
   melden: null, // offener „Frage melden“-Dialog: { grund, text, fehler, sendet }
+  begriffe: false, // Lexikon auf der Startseite geöffnet
   dialog: null, // offene Rückfrage von frage(): { titel, text, ja, nein, gefaehrlich, stimmung, loese }
   hinweis: null, // Meldung nach dem Teilen: { text, fehler }
   online: {
@@ -609,6 +625,7 @@ function schliesseDialog(antwort) {
 const aktionen = {
   nav(d) {
     ui.screen = d.ziel;
+    ui.begriffe = false;
     ui.hinweis = null;
     ui.online.fehler = '';
     ui.online.meldung = '';
@@ -694,6 +711,21 @@ const aktionen = {
   dialogHintergrund(d, e) {
     // nur ein Tipp neben die Karte schließt den Dialog
     if (e.target.classList.contains('dialog-hintergrund')) schliesseDialog(false);
+  },
+  begriffe() {
+    if (ui.begriffe || ui.dialog) return;
+    ui.begriffe = true;
+    render();
+    document.getElementById('begriffe-dialog')?.focus();
+  },
+  begriffeSchliessen() {
+    if (!ui.begriffe) return;
+    ui.begriffe = false;
+    render();
+    document.querySelector('[data-aktion="begriffe"]')?.focus();
+  },
+  begriffeHintergrund(d, e) {
+    if (e.target.classList.contains('dialog-hintergrund')) aktionen.begriffeSchliessen();
   },
   async abbrechen() {
     const r = ui.runde;
@@ -890,6 +922,10 @@ document.addEventListener('keydown', (e) => {
     }
     return;
   }
+  if (ui.begriffe) {
+    if (e.key === 'Escape') aktionen.begriffeSchliessen();
+    return;
+  }
   if (ui.screen !== 'frage' || !ui.runde) return;
   if (ui.melden) {
     if (e.key === 'Escape') aktionen.meldeAbbrechen();
@@ -971,6 +1007,7 @@ function startScreen() {
       ${maskottchen()}
       <div class="sprechblase">${erledigt ? 'Gut gemacht!' : 'Bereit, Senpai?'}</div>
     </div>
+    <button class="leise-knopf begriffe-link" data-aktion="begriffe">Was heißt eigentlich „Senpai“?</button>
 
     <div class="tageskarte karte">
       <div class="text">
@@ -995,8 +1032,23 @@ function startScreen() {
       <button class="knopf" data-aktion="modus" data-modus="blitz">${ICON.blitz}<span><b>Blitz</b><small>60 Sekunden${profil.highscore.blitz ? ` · Rekord ${profil.highscore.blitz}` : ''}</small></span></button>
     </div>
 
+    ${begriffeDialog()}
     ${tabbar('start')}
   </section>`;
+}
+
+function begriffeDialog() {
+  if (!ui.begriffe) return '';
+  return `<div class="dialog-hintergrund" data-aktion="begriffeHintergrund">
+    <div class="karte dialog dialog-begriffe" id="begriffe-dialog" role="dialog" aria-modal="true" aria-labelledby="begriffe-titel" tabindex="-1">
+      <div class="dialog-kopf">
+        ${maskottchen('nachdenklich')}
+        <h2 id="begriffe-titel">Kleines Anime-Lexikon</h2>
+      </div>
+      <dl class="begriffe">${BEGRIFFE.map(([wort, text]) => `<div><dt>${esc(wort)}</dt><dd>${esc(text)}</dd></div>`).join('')}</dl>
+      <button class="knopf knopf-rot" data-aktion="begriffeSchliessen">Alles klar</button>
+    </div>
+  </div>`;
 }
 
 function kategorieScreen() {
