@@ -1,4 +1,4 @@
-// Senpai Quiz – Prototyp. Reines JavaScript ohne Build-Schritt.
+// Senpai Quiz. Reines JavaScript ohne Build-Schritt.
 
 import { belohnungsvideo, werbungOffen } from './werbung.js';
 import * as online from './online.js';
@@ -169,6 +169,7 @@ const PROFIL_START = {
   streak: { tage: 0, letzter: null },
   tagesquiz: null,
   gespielteKategorien: [],
+  erstStart: null, // Datum des ersten Starts auf diesem Gerät (für die anonyme Zählung)
   // Heldenreise: beste Sterne je Station, z. B. { 'k01-s1': 3 }; Zweite Reise mit Suffix @2.
   // durchgang = zuletzt gewählte Reise (1 oder 2)
   reise: { sterne: {}, durchgang: 1 },
@@ -212,6 +213,20 @@ let timerId = null;
 
 function speichern() {
   speichereProfil(profil);
+}
+
+// Anonyme Zählung (Tabelle ereignisse): nur Art, Modus, Version und bei 'start' die Zahl
+// der Tage seit dem ersten Start auf diesem Gerät. Keine Nutzer- oder Geräte-ID.
+function ereignis(art, modus = null) {
+  let tagNr = null;
+  if (art === 'start') {
+    if (!profil.erstStart) {
+      profil.erstStart = heute();
+      speichern();
+    }
+    tagNr = Math.min(30, Math.max(0, Math.round((new Date(heute()) - new Date(profil.erstStart)) / 86400000)));
+  }
+  online.ereignisMelden({ art, modus, tagNr, version: VERSION }).catch(() => {});
 }
 
 function esc(text) {
@@ -766,6 +781,7 @@ function beendeRunde() {
   }
   profil.xp += xp;
   profil.spiele++;
+  ereignis('runde', r.modus);
 
   let neuerRekord = false;
   if ((r.modus === 'survival' || r.modus === 'blitz') && r.richtig > profil.highscore[r.modus]) {
@@ -1253,6 +1269,8 @@ function tabbar(aktiv) {
   </nav>`;
 }
 
+// Diese fünf wechseln mitten in einer Frage (Timer, richtig, falsch) und dürfen nicht flackern
+const STIMMUNGEN_FRAGE = ['entschlossen', 'jubelnd', 'traurig', 'panisch', 'nachdenklich'];
 const STIMMUNGEN = ['entschlossen', 'jubelnd', 'traurig', 'panisch', 'nachdenklich', 'stolz', 'erledigt', 'schlafend', 'mentor', 'kaempferisch', 'siegreich', 'winkend', 'daumenhoch', 'lesend', 'ueberrascht', 'verlegen', 'herausfordernd', 'feiernd', 'konfetti', 'cool'];
 
 function maskottchen(stimmung = 'entschlossen', id = '') {
@@ -1900,7 +1918,7 @@ function infoScreen() {
       <p><b>Senpai Quiz ist ein inoffizielles Fan-Quiz.</b> Es steht in keiner Verbindung zu den Rechteinhabern der genannten Serien, Filme und Manga. Alle Namen und Marken gehören ihren jeweiligen Eigentümern.</p>
       <p>Alle Fragen sind selbst geschrieben. Die App enthält keine Bilder, Musik oder Ausschnitte aus Anime oder Manga.</p>
       <p>Dein Fortschritt im Einzelspiel wird nur auf diesem Gerät gespeichert. Für Duelle gegen Freunde legst du einen Account an.</p>
-      <p style="font-size:13px;font-weight:700">Prototyp · ${FRAGEN.length} Fragen</p>
+      <p style="font-size:13px;font-weight:700">Version ${VERSION} · ${zahl(FRAGEN.length)} Fragen</p>
     </div>
     ${kontoBereich()}
     <div class="karte info-text">
@@ -2057,6 +2075,7 @@ async function duellRundeFertig(r) {
   const xp = Math.round(r.punkte / 10);
   profil.xp += xp;
   profil.spiele++;
+  ereignis('runde', r.modus);
   speichern();
   ui.runde = null;
   ui.online.duellId = r.opts.duellId;
@@ -2528,8 +2547,9 @@ async function init() {
     ui.durchgang = profil.reise.durchgang === 2 && zweiteReiseOffen() ? 2 : 1;
     uebernimmAlteKategorien();
     dojoEinrichten({ profil: () => profil, speichern, render, esc, maskottchen, tabbar, frage, ICON, ui, onlineProfil: () => ui.online.profil, serie: serieHeute, streak: aktuelleStreak, abzeichen: abzeichenVergeben, abzeichenEmblem });
-    // Stimmungsbilder vorladen, damit beim Wechsel nichts flackert
-    STIMMUNGEN.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });
+    // Nur die Stimmungen vorladen, die während einer Frage wechseln; der Rest lädt bei Bedarf
+    STIMMUNGEN_FRAGE.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });
+    ereignis('start');
     // Einladungslink? (…?einladung=CODE)
     const parameter = new URLSearchParams(location.search);
     if (parameter.get('einladung')) {

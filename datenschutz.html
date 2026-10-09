@@ -79,6 +79,9 @@ E-Mail: <a href="mailto:francesbaldes+senpai@gmail.com">francesbaldes+senpai@gma
 <p>Über „Frage melden“ kannst du eine Frage als falsch, unklar oder mit Tippfehler melden. Gespeichert werden: die Kennung der Frage, der Grund, dein optionaler Text (bis 200 Zeichen), die Antwort, die du angetippt hast, ob sie als richtig gewertet wurde, der Spielmodus und die Version der App. Nicht gespeichert werden deine Nutzer-ID, dein Spielername, deine IP-Adresse oder Gerätedaten; die Meldung lässt sich dir nicht zuordnen. Bitte schreibe in das Textfeld keine persönlichen Daten.</p>
 <p>Zweck ist die Qualität des Fragenkatalogs; Rechtsgrundlage ist das berechtigte Interesse an richtigen Quizfragen (Art. 6 Abs. 1 lit. f DSGVO). Die Meldungen liegen auf demselben Server wie die Duelle (Abschnitt 4) und werden gelöscht, sobald sie bearbeitet sind.</p>
 
+<h2>6a. Anonyme Zählung von Starts und Runden</h2>
+<p>Damit der Anbieter weiß, ob die App genutzt wird und ob Spieler wiederkommen, schickt die App bei jedem Start und nach jeder beendeten Runde einen Zähl-Eintrag an den Server (Supabase, Frankfurt, Abschnitt 4): die Art des Ereignisses (Start oder Runde), beim Start die Zahl der Tage seit dem ersten Start auf deinem Gerät (höchstens 30), bei einer Runde den Spielmodus, dazu die Versionsnummer der App und den Zeitpunkt. Es werden keine Nutzer-ID, keine Geräte-ID, kein Spielername und keine Kennung übertragen; der Anbieter kann die Einträge keiner Person und keinem Gerät zuordnen, auch nicht über mehrere Starts hinweg. Das Datum des ersten Starts merkt sich nur die App auf deinem Gerät. Rechtsgrundlage ist das berechtigte Interesse des Anbieters, die Nutzung seiner App zu verstehen (Art. 6 Abs. 1 lit. f DSGVO). Da die Einträge anonym sind, lassen sie sich nicht löschen oder auskunften; sie werden spätestens nach zwölf Monaten gelöscht.</p>
+
 <h2>7. Hosting der Web-Version</h2>
 <p>Die Web-Version und diese Seite werden über GitHub Pages bereitgestellt (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Beim Aufruf verarbeitet GitHub technisch notwendige Daten wie deine IP-Adresse, den Zeitpunkt, die aufgerufene Datei und den Browsertyp in Server-Protokollen, um die Seite auszuliefern und vor Angriffen zu schützen. Das ist zum Betrieb der Website nötig (Art. 6 Abs. 1 lit. f DSGVO). GitHub ist nach dem EU-US Data Privacy Framework zertifiziert. Details: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>. Der Anbieter erhält von GitHub keine Besucherdaten.</p>
 <p>Die iPhone-App lädt alle Inhalte, Schriften und Fragen aus der App selbst und kontaktiert nur den Server aus Abschnitt 4, und auch den nur für Duelle und Meldungen.</p>
@@ -101,7 +104,7 @@ E-Mail: <a href="mailto:francesbaldes+senpai@gmail.com">francesbaldes+senpai@gma
 
 <h2>10. Was die App nicht tut</h2>
 <ul>
-<li>keine Analyse- oder Tracking-Werkzeuge, keine Absturzberichte an Dritte</li>
+<li>keine Analyse- oder Tracking-Werkzeuge von Dritten, keine Absturzberichte an Dritte. Die App zählt lediglich selbst, wie oft sie gestartet wird und wie viele Runden je Spielmodus gespielt werden (Abschnitt 6a); dabei wird keine Kennung übertragen, die dich oder dein Gerät wiedererkennbar macht</li>
 <li>keine Cookies, keine Fingerabdrücke des Geräts</li>
 <li>keine Schriften, Skripte oder Bilder von fremden Servern; alles wird mit der App ausgeliefert</li>
 <li>keine Weitergabe oder Verkauf von Daten an Dritte, außer an die oben genannten Dienstleister für den Betrieb</li>
@@ -115,6 +118,7 @@ E-Mail: <a href="mailto:francesbaldes+senpai@gmail.com">francesbaldes+senpai@gma
 <tr><td>Spielstand, Statistik, Abzeichen, Heldenreise, Lernstand im Dojo</td><td>nur auf deinem Gerät</td><td>bis du die App oder die Website-Daten löschst</td></tr>
 <tr><td>Nutzer-ID, Spielername, Einladungscode, Duelle, Ablauf der Dojo-Freischaltung, Dojo-Punkte je Woche</td><td>Supabase, Server in Frankfurt</td><td>bis du den Account löschst</td></tr>
 <tr><td>Zahlung für das Dojo (nur iPhone-App)</td><td>Apple (In-App-Kauf)</td><td>nach den Regeln von Apple; der Anbieter erhält keine Zahlungsdaten</td></tr>
+<tr><td>Zähl-Einträge zu Starts und Runden (anonym, ohne Kennung)</td><td>Supabase, Server in Frankfurt</td><td>höchstens zwölf Monate</td></tr>
 <tr><td>Fragen-Meldungen (ohne Bezug zu dir)</td><td>Supabase, Server in Frankfurt</td><td>bis zur Bearbeitung</td></tr>
 <tr><td>Server-Protokolle (IP-Adresse)</td><td>GitHub Pages (Web-Version), Supabase</td><td>kurzzeitig, durch den jeweiligen Dienst</td></tr>
 <tr><td>Werbedaten (nur iPhone-App, nur bei Belohnungsvideos)</td><td>Google AdMob</td><td>nach den Regeln von Google</td></tr>

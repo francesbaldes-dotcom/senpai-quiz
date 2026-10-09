@@ -105,6 +105,17 @@ export async function frageMelden(daten) {
   }));
 }
 
+// Anonyme Zählung von Starts und Runden (Tabelle ereignisse, nur Einfügen erlaubt).
+// Fehler werden vom Aufrufer verschluckt: Zählen darf das Spiel nie stören.
+export async function ereignisMelden(daten) {
+  return versuche(() => sb().from('ereignisse').insert({
+    art: daten.art,
+    modus: daten.modus ?? null,
+    tag_nr: daten.tagNr ?? null,
+    version: daten.version ?? null,
+  }));
+}
+
 export async function kontoLoeschen() {
   await versuche(() => sb().rpc('konto_loeschen'));
   await sb().auth.signOut({ scope: 'local' });

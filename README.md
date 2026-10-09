@@ -125,3 +125,18 @@ from public.meldungen order by erstellt desc;
 ```
 
 Die Frage-ID findet man in `data/fragen.json` oder `fragen.md`. Erledigte Meldungen kann man dort löschen; aus der App heraus geht das nicht.
+
+## Anonyme Zählung
+
+Die App zählt Starts und beendete Runden in der Supabase-Tabelle `ereignisse` (`ereignis()` in `js/app.js`, `ereignisMelden()` in `js/online.js`, Migration `ereignisse`). Übertragen werden nur Art (`start` oder `runde`), bei Starts `tag_nr` (Tage seit dem ersten Start auf dem Gerät, höchstens 30, Datum in `profil.erstStart`), bei Runden der Modus, dazu Version und Zeitpunkt. Keine Nutzer- oder Geräte-ID; die Rolle `anon` darf nur einfügen. Fehler beim Zählen werden verschluckt.
+
+Wiederkehr-Quote im SQL-Editor (Anteil der Geräte, die am Tag 1 bzw. Tag 7 nach dem ersten Start wieder starten, über alle Tage summiert):
+
+```sql
+select tag_nr, sum(anzahl) as starts,
+       round(100.0 * sum(anzahl) / (select sum(anzahl) from public.ereignisse_tage where art = 'start' and tag_nr = 0), 1) as prozent_von_tag_0
+from public.ereignisse_tage where art = 'start' group by tag_nr order by tag_nr;
+```
+
+Runden je Modus und Tag: `select * from public.ereignisse_tage where art = 'runde' order by tag desc;`. Die Sicht `ereignisse_tage` ist nur mit der Service-Rolle lesbar. Einträge älter als zwölf Monate sollten gelöscht werden (steht so in der Datenschutzerklärung, Abschnitt 6a).
+
