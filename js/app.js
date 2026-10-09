@@ -1245,25 +1245,32 @@ function maskottchen(stimmung = 'entschlossen', id = '') {
 
 // Stimmung des Maskottchens während einer Frage
 function frageStimmung(a, restMs) {
-  if (a.ergebnis) return a.ergebnis.korrekt ? 'jubelnd' : 'traurig';
+  if (a.ergebnis) return a.ergebnis.korrekt ? (restMs >= 10000 ? 'daumenhoch' : 'jubelnd') : 'traurig';
   if (restMs <= 5000) return 'panisch';
   if (['who_am_i', 'estimate', 'order'].includes(a.frage.type)) return 'nachdenklich';
   return 'entschlossen';
 }
 
+const STREAK_MEILENSTEINE = [3, 7, 14, 30, 50, 100];
+
 function ergebnisStimmung(e, aufgestiegen) {
   if (e.reise) {
     if (!e.reise.bestanden) return 'erledigt';
+    if (e.reise.station.boss && e.reise.station === STATIONEN[STATIONEN.length - 1]) return 'konfetti';
     if (e.reise.station.boss) return 'siegreich';
-    return e.reise.sterne === 3 || aufgestiegen ? 'stolz' : 'jubelnd';
+    if (aufgestiegen) return 'konfetti';
+    return e.reise.sterne === maxSterne() ? 'stolz' : 'jubelnd';
   }
+  if (aufgestiegen) return 'konfetti';
   const rekord = e.neuerRekord && e.richtig >= 10;
-  if (e.modus === 'survival') return rekord ? 'stolz' : 'erledigt';
-  if (e.modus === 'blitz') return rekord ? 'stolz' : e.richtig >= 5 ? 'jubelnd' : 'erledigt';
-  if (e.perfekt || aufgestiegen) return 'stolz';
+  if (e.modus === 'survival') return rekord ? 'feiernd' : 'erledigt';
+  if (e.modus === 'blitz') return rekord ? 'feiernd' : e.richtig >= 5 ? 'daumenhoch' : 'erledigt';
+  if (e.modus === 'tages' && STREAK_MEILENSTEINE.includes(aktuelleStreak())) return 'feiernd';
+  if (e.perfekt) return e.opts?.stufe === 'otaku' ? 'cool' : 'stolz';
+  if (e.neueAbzeichen?.length) return 'ueberrascht';
   const quote = e.gesamt ? e.richtig / e.gesamt : 0;
   if (quote >= 0.7) return 'jubelnd';
-  if (quote >= 0.4) return 'entschlossen';
+  if (quote >= 0.4) return 'verlegen';
   return 'traurig';
 }
 
@@ -1287,7 +1294,7 @@ function startScreen() {
       <div class="speedlines"></div>
       <div class="logo"><span class="senpai">SENPAI</span><span class="quiz">QUIZ</span></div>
       <span class="fragen-zahl">${zahl(FRAGEN.length)} verschiedene Fragen</span>
-      ${maskottchen()}
+      ${maskottchen(erledigt ? 'daumenhoch' : 'entschlossen')}
       <div class="sprechblase">${erledigt ? 'Gut gemacht!' : 'Bereit, Senpai?'}</div>
     </div>
     <button class="leise-knopf begriffe-link" data-aktion="begriffe">Was heißt eigentlich „Senpai“?</button>
@@ -1328,7 +1335,7 @@ function begriffeDialog() {
   return `<div class="dialog-hintergrund" data-aktion="begriffeHintergrund">
     <div class="karte dialog dialog-begriffe" id="begriffe-dialog" role="dialog" aria-modal="true" aria-labelledby="begriffe-titel" tabindex="-1">
       <div class="dialog-kopf">
-        ${maskottchen('nachdenklich')}
+        ${maskottchen('lesend')}
         <h2 id="begriffe-titel">Kleines Anime-Lexikon</h2>
       </div>
       <dl class="begriffe">${BEGRIFFE.map(([wort, text]) => `<div><dt>${esc(wort)}</dt><dd>${esc(text)}</dd></div>`).join('')}</dl>
@@ -2025,7 +2032,7 @@ function duellStatusText(s) {
 function duellStimmung(s) {
   if (s.phase === 'warten') return 'schlafend';
   if (s.phase !== 'ende') return 'entschlossen';
-  return { sieg: 'stolz', niederlage: 'traurig', unentschieden: 'nachdenklich' }[s.ausgang];
+  return { sieg: 'feiernd', niederlage: 'traurig', unentschieden: 'verlegen' }[s.ausgang];
 }
 
 async function duellRundeFertig(r) {
@@ -2242,7 +2249,7 @@ function accountScreen() {
   return `<section class="screen mit-tabbar">
     <div class="kopfzeile"><h1>Duelle</h1></div>
     <div class="karte konto-karte">
-      ${maskottchen(o.einladung ? 'jubelnd' : 'entschlossen')}
+      ${maskottchen(o.einladung ? 'herausfordernd' : 'winkend')}
       <h2>${o.einladung ? 'Du wurdest herausgefordert!' : 'Spiel gegen deine Freunde'}</h2>
       <p>${o.einladung ? 'Erstelle zuerst deinen Account, dann geht’s los.' : 'Wie bei Quizduell: 6 Runden mit je 3 Fragen. Ihr spielt abwechselnd, wann es euch passt.'}</p>
       <form class="formular" data-aktion="accountErstellen">
@@ -2417,7 +2424,7 @@ function einladungScreen() {
   if (!gegner) return duelleScreen();
   return `<section class="screen">
     <div class="karte konto-karte">
-      ${maskottchen('jubelnd')}
+      ${maskottchen('herausfordernd')}
       <h2>${esc(gegner.spielername)} fordert dich heraus!</h2>
       <p>6 Runden mit je 3 Fragen. Wer am Ende mehr richtig hat, gewinnt.</p>
       ${hinweise()}
