@@ -6,7 +6,7 @@ import { speicherBereit, ladeProfil, speichereProfil } from './speicher.js';
 import { kategorieIcon, abzeichenEmblem, rangEmblem, stationsKnoten, bossKnoten } from './grafik.js';
 import { tagesquizBild, bossBild, kannBildTeilen } from './teilen-bild.js';
 import { spielernameErlaubt, SPIELERNAME_VERBOTEN } from './spielername.js';
-import { ladeDojo, dojoEinrichten, dojoAktionen, dojoKarteStart, DOJO_SCREENS } from './dojo.js';
+import { ladeDojo, dojoEinrichten, dojoAktionen, dojoKachelStart, DOJO_SCREENS } from './dojo.js';
 
 const app = document.getElementById('app');
 
@@ -191,7 +191,7 @@ const ui = {
   runde: null,
   ergebnis: null,
   melden: null, // offener „Frage melden“-Dialog: { grund, text, fehler, sendet }
-  begriffe: false, // Lexikon auf der Startseite geöffnet
+  begriffe: false, // Lexikon im Profil-Tab geöffnet
   profilTab: 'statistik', // Profil-Tab: 'statistik' oder 'abzeichen'
   dialog: null, // offene Rückfrage von frage(): { titel, text, ja, nein, gefaehrlich, stimmung, loese }
   hinweis: null, // Meldung nach dem Teilen: { text, fehler }
@@ -1329,27 +1329,14 @@ function startScreen() {
   const rg = rang(profil.xp);
   const erledigt = profil.tagesquiz?.datum === heute();
   const streak = aktuelleStreak();
-  return `<section class="screen mit-tabbar">
-    <div class="rangzeile">
-      ${rangEmblem(rg.name, 40)}
-      <div class="rang">
-        <div><span class="display">Rang: ${esc(rg.name)}${reiseTitel() ? ` <span class="titel-chip">${esc(reiseTitel())}</span>` : ''}</span><small>${rg.bis ? `${zahl(profil.xp)} / ${zahl(rg.bis)} XP` : `${zahl(profil.xp)} XP`}</small></div>
-        <div class="balken"><span style="width:${prozent(rg.anteil)}"></span></div>
-      </div>
-      <button class="icon-knopf" data-aktion="nav" data-ziel="info" aria-label="Info">${ICON.regler}</button>
-    </div>
-
+  return `<section class="screen mit-tabbar start">
     <div class="held karte">
       <div class="speedlines"></div>
       <div class="logo"><span class="senpai">SENPAI</span><span class="quiz">QUIZ</span></div>
       <span class="fragen-zahl">${zahl(FRAGEN.length)} verschiedene Fragen</span>
       ${maskottchen(erledigt ? 'daumenhoch' : 'entschlossen')}
-      <div class="sprechblase">${erledigt ? 'Gut gemacht!' : 'Bereit, Senpai?'}</div>
+      <button class="sprechblase" data-aktion="nav" data-ziel="profil" aria-label="Zum Profil">${erledigt ? 'Gut gemacht!' : 'Bereit, Senpai?'}<small>${esc(rg.name)}${reiseTitel() ? ` · ${esc(reiseTitel())}` : ''} · ${zahl(profil.xp)} XP</small></button>
     </div>
-    <button class="leise-knopf begriffe-link" data-aktion="begriffe">Was heißt eigentlich „Senpai“?</button>
-
-    ${reiseKarteStart()}
-    ${dojoKarteStart()}
 
     <div class="tageskarte karte">
       <div class="text">
@@ -1367,6 +1354,11 @@ function startScreen() {
     </div>
     ${hinweisBlock()}
 
+    <div class="fortschritt-zeile">
+      ${reiseKachelStart()}
+      ${dojoKachelStart()}
+    </div>
+
     <button class="knopf knopf-rot" data-aktion="nav" data-ziel="kategorie">${ICON.play} Klassisch spielen</button>
 
     <div class="modi">
@@ -1374,7 +1366,6 @@ function startScreen() {
       <button class="knopf" data-aktion="modus" data-modus="blitz">${ICON.blitz}<span><b>Blitz</b><small>60 Sekunden${profil.highscore.blitz ? ` · Rekord ${profil.highscore.blitz}` : ''}</small></span></button>
     </div>
 
-    ${begriffeDialog()}
     ${tabbar('start')}
   </section>`;
 }
@@ -1762,23 +1753,17 @@ function ergebnisScreen() {
 
 // ---------- Heldenreise: Karte und Stationskarte ----------
 
-function reiseKarteStart() {
+// Schmale Kachel auf der Startseite (führt zum Reise-Tab)
+function reiseKachelStart() {
   const stand = reiseStand();
   const n = stand.naechste;
   const zweite = stand.durchgang === 2;
   let text;
-  if (stand.fertig) text = zweite ? 'Beide Reisen geschafft. Du bist eine Legende.' : 'Reise geschafft! Hol dir die restlichen Sterne oder starte die Zweite Reise.';
-  else if (stand.geschafft === 0) text = zweite ? 'Alles auf Fan und Otaku, nur zwei Herzen.' : 'Vom Neuling zur Legende: 50 Stationen, 10 Bosse.';
-  else text = `Weiter bei ${n.boss ? n.titel : `Station ${n.nr}`} · Kapitel ${n.kapitel.nr}: ${n.kapitel.titel}`;
-  return `<button class="karte reisekarte" data-aktion="nav" data-ziel="reise">
-    <img src="assets/stimmung/${zweite ? 'kaempferisch' : 'mentor'}.webp" alt="" class="maskottchen">
-    <span class="text">
-      <span class="label">${zweite ? 'Zweite Reise' : 'Heldenreise'}</span>
-      <span class="display">${stand.geschafft === 0 ? (zweite ? 'Noch einmal, nur härter' : 'Dein Abenteuer beginnt') : `${stand.geschafft} von ${STATIONEN.length} Stationen`}</span>
-      <small>${esc(text)}</small>
-      ${stand.sterne ? `<small class="sterne-zahl">${sterneReihe(1, 14, 1)} ${stand.sterne} / ${stand.sterneMax} Sterne${stand.geheimSterne ? ` · Geheimpfade ${stand.geheimSterne}` : ''}</small>` : ''}
-    </span>
-    <span class="pfeil">${ICON.weiter}</span>
+  if (stand.fertig) text = zweite ? 'Beide Reisen geschafft' : 'Reise geschafft';
+  else text = `weiter bei ${n.boss ? `${n.kapitel.nr}.Boss` : n.nr}`;
+  return `<button class="fortschritt-kachel" data-aktion="nav" data-ziel="reise">
+    ${ICON.fahne}
+    <span><b>${zweite ? 'Zweite Reise' : 'Reise'}</b><small>${esc(text)}</small></span>
   </button>`;
 }
 
@@ -1932,7 +1917,9 @@ function profilScreen() {
       <button data-aktion="profilTab" data-tab="statistik" aria-pressed="${tab === 'statistik'}">Statistik</button>
       <button data-aktion="profilTab" data-tab="abzeichen" aria-pressed="${tab === 'abzeichen'}">Abzeichen</button>
     </div>
+    <button class="leise-knopf begriffe-link" data-aktion="begriffe">Was heißt eigentlich „Senpai“?</button>
     ${tab === 'abzeichen' ? abzeichenInhalt() : statistikInhalt()}
+    ${begriffeDialog()}
     ${tabbar('profil')}
   </section>`;
 }

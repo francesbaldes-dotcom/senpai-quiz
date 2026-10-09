@@ -146,20 +146,20 @@ button { font: inherit; color: inherit; }
 
 .held {
   position: relative;
-  height: 262px;
+  height: 204px;
   flex-shrink: 0;
   overflow: hidden;
 }
 .held .speedlines { position: absolute; inset: 0; }
-.logo { position: absolute; left: 18px; top: 18px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
-.logo span { font-family: var(--display); font-size: 48px; line-height: 1; }
+.logo { position: absolute; left: 16px; top: 14px; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+.logo span { font-family: var(--display); font-size: 38px; line-height: 1; }
 .logo .senpai { background: var(--white); padding: 2px 6px; letter-spacing: -1px; }
-.logo .quiz { color: var(--white); background: var(--red); border: 3px solid var(--ink); padding: 4px 12px; transform: rotate(-4deg); margin-left: 8px; }
-.held .maskottchen { position: absolute; right: 6px; bottom: 4px; width: 138px; height: 138px; }
+.logo .quiz { color: var(--white); background: var(--red); border: 3px solid var(--ink); padding: 3px 10px; transform: rotate(-4deg); margin-left: 8px; }
+.held .maskottchen { position: absolute; right: 8px; bottom: 6px; width: 120px; height: 120px; }
 .fragen-zahl {
   position: absolute;
-  left: 18px;
-  top: 156px;
+  left: 16px;
+  top: 112px;
   z-index: 1;
   border: 2px solid var(--ink);
   border-radius: 999px;
@@ -172,15 +172,47 @@ button { font: inherit; color: inherit; }
 }
 .sprechblase {
   position: absolute;
-  left: 18px;
-  bottom: 22px;
+  left: 16px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
   background: var(--white);
   border: 2px solid var(--ink);
   border-radius: 14px;
-  padding: 8px 14px;
+  padding: 7px 12px;
   font-size: 15px;
   font-weight: 900;
+  font-family: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
 }
+.sprechblase small { font-size: 11px; font-weight: 700; white-space: nowrap; }
+
+/* Fortschrittszeile: Reise und Dojo als schmale Kacheln */
+.fortschritt-zeile { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.fortschritt-kachel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 6px 12px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: var(--white);
+  box-shadow: 3px 3px 0 var(--ink);
+  font-family: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.fortschritt-kachel:active { transform: translate(3px, 3px); box-shadow: none; }
+.fortschritt-kachel > svg { flex-shrink: 0; width: 22px; height: 22px; }
+.fortschritt-kachel > span { display: flex; flex-direction: column; min-width: 0; }
+.fortschritt-kachel b { font-family: var(--display); font-weight: 400; font-size: 15px; line-height: 1.1; }
+.fortschritt-kachel small { font-size: 11px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .tageskarte {
   display: flex;
@@ -726,31 +758,10 @@ button.duell-zeile:active { transform: translate(4px, 4px); box-shadow: none; }
 
 /* ---------- Heldenreise ---------- */
 
-.reisekarte {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 14px 12px 12px;
-  background: var(--red);
-  color: var(--white);
-  text-align: left;
-  font: inherit;
-  cursor: pointer;
-  transition: transform .08s, box-shadow .08s;
-}
-.reisekarte:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
-.reisekarte .maskottchen { width: 76px; height: 76px; flex-shrink: 0; filter: drop-shadow(2px 2px 0 var(--ink)); }
-.reisekarte .text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
-.reisekarte .label { color: var(--yellow); }
-.reisekarte .display { font-size: 20px; line-height: 1.1; }
-.reisekarte small { font-size: 13px; font-weight: 700; line-height: 1.3; }
-.reisekarte .sterne-zahl { display: flex; align-items: center; gap: 4px; color: var(--yellow); }
-.reisekarte .pfeil { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--white); color: var(--ink); border: 2px solid var(--ink); display: flex; align-items: center; justify-content: center; }
-
 .sterne { display: inline-flex; gap: 2px; }
 .sterne svg path { fill: var(--white); stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }
 .sterne svg.voll path { fill: var(--yellow); }
-.reisekarte .sterne svg path, .sterne-stand .sterne svg path { fill: var(--yellow); }
+.sterne-stand .sterne svg path { fill: var(--yellow); }
 .sterne-stand { margin-left: auto; display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 900; white-space: nowrap; }
 
 .screen.reise { gap: 12px; }
