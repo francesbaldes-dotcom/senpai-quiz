@@ -27,6 +27,7 @@ In Claude Code startet `.claude/launch.json` denselben Server für die Browser-V
 | `js/grafik.js` | Inline-SVG-Grafiken im Manga-Look: Kategorie-Icons (`kategorieIcon`), Abzeichen-Embleme (`abzeichenEmblem`), Rang-Embleme (`rangEmblem`) und Bausteine für die Heldenreise-Karte (`stationsKnoten`, `bossKnoten`). Eigene Symbole, keine Markenzeichen |
 | `vendor/` | Supabase-JS (2.45.4), lokal eingebunden |
 | `css/style.css` | Gestaltung (Manga-Look) |
+| `impressum.html`, `datenschutz.html`, `nutzungsbedingungen.html` | Rechtstexte (Stand im Kopf jeder Seite), verlinkt unter Info und beim Anlegen des Accounts; Gestaltung in `css/rechtstext.css`. Die Datenschutz-URL für App Store Connect ist `…/senpai-quiz/datenschutz.html`. Abschnitte zu AdMob und App Store gelten erst mit der iPhone-App; der dort genannte Knopf „Werbe-Einwilligung“ muss mit AdMob in die App |
 | `css/fonts.css`, `fonts/` | Dela Gothic One und Rubik, lokal eingebunden (SIL Open Font License) |
 | `assets/maskottchen.jpg` | Onigiri-Maskottchen (Higgsfield), Original mit 512 × 512 Pixeln |
 | `assets/maskottchen-2160.webp` | dasselbe Maskottchen („entschlossen“) in 2160 × 2160, per Higgsfield-Upscale aus `stimmung/entschlossen.webp`, Transparenz vom Original übernommen; Quelle für Icon und Splash |

@@ -593,6 +593,8 @@ button { font: inherit; color: inherit; }
 
 .info-text { padding: 18px; display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.55; }
 .info-text p { margin: 0; }
+.info-text a, .kleingedruckt a { color: var(--blue); font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+.rechts-links { display: flex; flex-wrap: wrap; gap: 6px 18px; }
 
 /* ---------- Belohnungswerbung ---------- */
 
