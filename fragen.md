@@ -48,7 +48,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-115` *Emoji-Rätsel* – Welche Serie ist gemeint? 🐉🟠7️⃣  
   **Dragon Ball** · Fairy Tail · Yu-Gi-Oh! · Blue Exorcist
 - `e-116` *Auswahl* – Wie heißt die Wolke, auf der Son-Goku fliegt?  
-  **Jindujun** · Nimbus · Wolke Sieben · Kinto
+  **Jindujun** · Kumorin · Wolke Sieben · Flauschi
 
 ### Naruto
 
@@ -100,7 +100,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-074` *Wahr/Falsch* – Ashs Pikachu weigert sich, in seinem Pokéball zu bleiben.  
   **Wahr** · Falsch
 - `e-079` *Wer bin ich?* – Wer bin ich? Ich trage immer einen roten Schal. / Ich gehöre zu den besten Soldatinnen im Kampf gegen die Titanen. / Eren ist mir wichtiger als alles andere.  
-  **Mikasa Ackermann** · Annie Leonhart · Sasha Braus · Historia Reiss
+  **Mikasa Ackermann** · Annie Leonhardt · Sasha Braus · Historia Reiss
 - `e-080` *Wahr/Falsch* – Eren Jäger aus „Attack on Titan“ kann sich selbst in einen Titanen verwandeln.  
   **Wahr** · Falsch
 - `e-081` *Auswahl* – Welche Haarfarbe hat Ichigo Kurosaki aus „Bleach“?  
@@ -116,7 +116,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-126` *Auswahl* – Wer baut Conan seine Gadgets?  
   **Professor Agasa** · Kogoro Mori · Kommissar Megure · Heiji Hattori
 - `e-127` *Auswahl* – Womit schläfert Conan Kogoro Mori ein, um in dessen Namen Fälle zu lösen?  
-  **Mit seiner Betäubungs-Armbanduhr** · Mit seiner Fliege · Mit seinen Kraftschuhen · Mit seiner Brille
+  **Mit seiner Betäubungs-Armbanduhr (Narkosechronometer)** · Mit seiner Fliege · Mit seinen Kraftschuhen · Mit seiner Brille
 - `e-128` *Wahr/Falsch* – Conan ist in Wahrheit ein ganz normaler Grundschüler, der nur Detektiv spielt.  
   **Falsch** · Wahr
 - `e-129` *Auswahl* – Wie heißt die Kindertruppe, mit der Conan in der Grundschule Fälle löst?  
@@ -207,19 +207,19 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-156` *Wahr/Falsch* – Nezuko wird tagsüber in einer Holzkiste auf Tanjiros Rücken getragen, um sie vor der Sonne zu schützen.  
   **Wahr** · Falsch
 - `e-157` *Auswahl* – Wie heißt die Schule, an der Yuji Itadori zum Jujuzisten ausgebildet wird?  
-  **Tokyo Jujutsu High** · U.A. High · Konoha-Akademie · Eden Academy
+  **Jujutsu-Akademie Tokio** · U.A. High · Konoha-Akademie · Eden Academy
 - `e-158` *Auswahl* – Welche Haarfarbe hat Satoru Gojo?  
   **Weiß** · Schwarz · Blond · Blau
 - `e-159` *Auswahl* – Wie heißt das Mädchen in Yujis Team, das mit Hammer und Nägeln kämpft?  
   **Nobara Kugisaki** · Maki Zenin · Mai Zenin · Utahime Iori
 - `e-160` *Wahr/Falsch* – Yuji Itadori hatte schon vor Sukunas Finger übermenschliche Körperkraft.  
   **Wahr** · Falsch
-- `e-161` *Auswahl* – Wie heißt Dekus Freundin, die Dinge schwerelos machen kann?  
+- `e-161` *Auswahl* – Wie heißt Dekus Klassenkameradin, die Dinge schwerelos machen kann?  
   **Ochaco Uraraka** · Momo Yaoyorozu · Tsuyu Asui · Kyoka Jiro
 - `e-162` *Auswahl* – Welche Kräfte hat Shoto Todoroki?  
   **Eis und Feuer** · Explosionen · Schwerkraft · Unsichtbarkeit
 - `e-163` *Auswahl* – Wie heißt die Schurkenorganisation, die All Might stürzen will?  
-  **Die Liga der Schurken** · Akatsuki · Die Schwarze Organisation · Die Phantom-Truppe
+  **Die Schurkenliga (League of Villains)** · Akatsuki · Die Schwarze Organisation · Die Phantom-Truppe
 - `e-164` *Wahr/Falsch* – All Might wird als „Symbol des Friedens“ bezeichnet.  
   **Wahr** · Falsch
 - `e-165` *Auswahl* – Warum jagt Denji zu Beginn Teufel für die Yakuza?  
@@ -250,7 +250,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-175` *Auswahl* – Wie heißen in „Solo Leveling“ die Portale, aus denen Monster in unsere Welt kommen?  
   **Gates** · Risse · Höllenschlünde · Wurmlöcher
 - `e-176` *Auswahl* – Wie werden die Menschen genannt, die in „Solo Leveling“ Monster bekämpfen?  
-  **Jäger** · Jujuzisten · Helden · Shinigami
+  **Jäger (Hunter)** · Jujuzisten · Helden · Shinigami
 - `e-177` *Auswahl* – In welchem Rang startet Sung Jinwoo als Jäger?  
   **E-Rang** · S-Rang · A-Rang · C-Rang
 - `e-178` *Wahr/Falsch* – Jinwoo ist der einzige Mensch, der durch Kämpfe wie in einem Videospiel aufleveln kann.  
@@ -297,7 +297,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `e-191` *Auswahl* – Wie heißt die Behörde, die in „Tokyo Ghoul“ Ghoule jagt?  
   **CCG** · CIA · Marine · Aufklärungstrupp
 - `e-192` *Auswahl* – Wie heißt die Waffe, die aus dem Körper eines Ghouls wächst?  
-  **Kagune** · Zanpakuto · Kakugan · Quinque
+  **Kagune** · Zanpakuto · Kakugan · Quinke
 - `e-198` *Auswahl* – Wie heißt der Schüler, der das Death Note findet?  
   **Light Yagami** · L · Near · Mello
 
@@ -594,7 +594,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-171` *Auswahl* – Wie heißen die drei Mauern?  
   **Maria, Rose und Sina** · Maria, Anna und Eva · Rose, Lilie und Tulpe · Sina, Nina und Mina
 - `f-172` *Auswahl* – Welche Rekrutin isst ständig und wurde berühmt, weil sie beim Appell eine Kartoffel aß?  
-  **Sasha Braus** · Krista Lenz · Ymir · Annie Leonhart
+  **Sasha Braus** · Krista Lenz · Ymir · Annie Leonhardt
 - `f-173` *Auswahl* – Wer kommandiert den Aufklärungstrupp, als Eren ihm beitritt?  
   **Erwin Smith** · Dot Pixis · Levi Ackermann · Nile Dok
 - `f-174` *Wer bin ich?* – Wer bin ich? Ich bin klein, aber der stärkste Soldat der Menschheit. / Ich bin besessen von Sauberkeit. / Ich führe ein Sonderkommando im Aufklärungstrupp.  
@@ -625,7 +625,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-034` *Auswahl* – Wie heißt die Kraft, die All Might an Deku weitergibt?  
   **One For All** · All For One · Plus Ultra · Full Cowl
 - `f-073` *Auswahl* – Wie nennt man die stärksten Dämonenjäger in „Demon Slayer“?  
-  **Hashira** · Shinigami · Kage · Yonkō
+  **Hashira (Säulen)** · Shinigami · Kage · Yonkō
 - `f-074` *Wer bin ich?* – Wer bin ich? Ich trage einen Wildschweinkopf als Maske. / Ich kämpfe mit zwei gezackten Schwertern. / Ich bin bei Wildschweinen aufgewachsen.  
   **Inosuke Hashibira** · Zenitsu Agatsuma · Tanjiro Kamado · Kyojuro Rengoku
 - `f-075` *Reihenfolge* – Sortiere diese neueren Anime nach ihrem Start, den ältesten zuerst.  
@@ -662,7 +662,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Shinobu Kocho** · Mitsuri Kanroji · Kanao Tsuyuri · Tamayo
 - `f-179` *Auswahl* – Wer ist Megumi Fushiguros Vater?  
   **Toji Fushiguro** · Naoya Zenin · Satoru Gojo · Masamichi Yaga
-- `f-180` *Auswahl* – Was bewirkt eine „Domain Expansion“ (Gebietserweiterung)?  
+- `f-180` *Auswahl* – Was bewirkt eine „Sphärenentfaltung“ (Domain Expansion)?  
   **Sie erschafft einen eigenen Raum, in dem die Angriffe des Anwenders garantiert treffen** · Sie heilt alle Verbündeten · Sie lässt den Anwender fliehen · Sie verdoppelt die Fluchenergie
 - `f-181` *Auswahl* – Welches Tier ist ein Mitschüler an der Jujutsu-Schule und spricht wie ein Mensch?  
   **Ein Panda** · Ein Fuchs · Eine Katze · Ein Rabe
@@ -670,7 +670,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Yuta Okkotsu** · Yuji Itadori · Kento Nanami · Toge Inumaki
 - `f-183` *Wer bin ich?* – Wer bin ich? Ich war Büroangestellter, bevor ich zur Jujutsu-Welt zurückkehrte. / Ich hasse Überstunden. / Meine Technik teilt Gegner im Verhältnis 7 zu 3.  
   **Kento Nanami** · Satoru Gojo · Aoi Todo · Suguru Geto
-- `f-184` *Auswahl* – Wer führt die Liga der Schurken an?  
+- `f-184` *Auswahl* – Wer führt die Schurkenliga (League of Villains) an?  
   **Tomura Shigaraki** · Dabi · Himiko Toga · Stain
 - `f-185` *Auswahl* – Welche Schülerin mit Froschkräften sagt ständig „Kero“?  
   **Tsuyu Asui** · Mina Ashido · Toru Hagakure · Kyoka Jiro
@@ -683,12 +683,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-189` *Auswahl* – Welches Studio animiert „My Hero Academia“?  
   **Bones** · MAPPA · ufotable · Wit Studio
 - `f-190` *Auswahl* – Wie heißt Powers Katze?  
-  **Nyako** · Pochita · Tama · Meowth
+  **Miezi (jap. Nyako)** · Pochita · Tama · Meowth
 - `f-191` *Auswahl* – Welcher Teufel ist in „Chainsaw Man“ besonders mächtig, weil die Menschen ihn so sehr fürchten?  
-  **Der Waffen-Teufel** · Der Katzen-Teufel · Der Tomaten-Teufel · Der Fisch-Teufel
+  **Der Pistolenteufel** · Der Katzen-Teufel · Der Tomaten-Teufel · Der Fisch-Teufel
 - `f-192` *Auswahl* – Was ist Reze in Wahrheit?  
   **Ein Bomben-Teufel-Hybrid** · Ein normales Mädchen · Eine Teufelsjägerin · Ein Engel
-- `f-193` *Wer bin ich?* – Wer bin ich? Ich bin Teufelsjäger der öffentlichen Sicherheit. / Ich will den Waffen-Teufel töten, der meine Familie auslöschte. / Ich rauche und ertrage Denji und Power nur mit Mühe.  
+- `f-193` *Wer bin ich?* – Wer bin ich? Ich bin Teufelsjäger der öffentlichen Sicherheit. / Ich will den Pistolenteufel töten, der meine Familie auslöschte. / Ich rauche und ertrage Denji und Power nur mit Mühe.  
   **Aki Hayakawa** · Kishibe · Denji · Angel Devil
 - `f-223` *Auswahl* – Wie heißt Yors Bruder, der für die Geheimpolizei arbeitet?  
   **Yuri Briar** · Franky Franklin · Donovan Desmond · Henry Henderson
@@ -808,14 +808,14 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `f-047` *Auswahl* – Wie heißt Sakuras beste Freundin, die ihr Kostüme näht und sie beim Kämpfen filmt?  
   **Tomoyo Daidouji** · Meiling Li · Rika Sasaki · Naoko Yanagisawa
 - `f-048` *Auswahl* – Wer sammelt in „Cardcaptor Sakura“ ebenfalls die Clow-Karten und ist zunächst Sakuras Rivale?  
-  **Syaoran Li** · Yukito Tsukishiro · Touya Kinomoto · Eriol Hiiragizawa
+  **Shaolan Li** · Yukito Tsukishiro · Touya Kinomoto · Eriol Hiiragizawa
 - `f-049` *Wahr/Falsch* – In „Nana“ heißen beide Hauptfiguren Nana.  
   **Wahr** · Falsch
 - `f-050` *Auswahl* – Wie heißt die Punkband, in der Nana Osaki singt?  
   **Black Stones** · Trapnest · Crimson Stones · Silver Moon
 - `f-051` *Auswahl* – Was wollen Kaguya und Miyuki in „Kaguya-sama: Love is War“ um jeden Preis vermeiden?  
   **Als Erste ihre Liebe gestehen** · Die Schule wechseln · Bei einer Prüfung durchfallen · Dass sich ihre Eltern kennenlernen
-- `f-052` *Reihenfolge* – Sortiere diese Shōjo-Anime nach ihrem Start, den ältesten zuerst.  
+- `f-052` *Reihenfolge* – Sortiere diese Romance-Anime nach ihrem Start, den ältesten zuerst.  
   **Sailor Moon (1992) → Cardcaptor Sakura (1998) → Fruits Basket (2001) → Kaguya-sama: Love is War (2019)**
 - `f-053` *Emoji-Rätsel* – Welche Serie ist gemeint? 🍙🐱🐭  
   **Fruits Basket** · Ouran High School Host Club · Nana · Horimiya
@@ -1032,7 +1032,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 ### Shōnen
 
 - `o-007` *Auswahl* – Wer verwandelt sich in „Attack on Titan“ in den Kolossalen Titanen, der zu Beginn die Mauer durchbricht?  
-  **Bertholdt Hoover** · Reiner Braun · Annie Leonhart · Zeke Jäger
+  **Berthold Fubar** · Reiner Braun · Annie Leonhardt · Zeke Jäger
 - `o-008` *Auswahl* – Welches Pokémon hat im Pokédex die Nummer 001?  
   **Bisasam** · Pikachu · Mew · Glumanda
 - `o-051` *Auswahl* – Wie heißt das Gift, das Shinichi Kudo in „Detektiv Conan“ schrumpfen ließ?  
@@ -1067,7 +1067,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Raupy** · Taubsi · Glumanda · Schiggy
 - `o-103` *Auswahl* – Welche Folge wurde 1997 in Japan wegen Blitzlichteffekten berüchtigt und nie außerhalb Japans gezeigt?  
   **Die Porygon-Folge** · Die Mewtu-Folge · Die Pummeluff-Folge · Die Dratini-Folge
-- `o-104` *Auswahl* – Wie heißt Ashs Pokémon, das sich weigerte, sich zu entwickeln, und ihm später als Glurak nicht gehorchte?  
+- `o-104` *Auswahl* – Welches von Ashs Pokémon wurde von seinem Trainer Damian ausgesetzt und gehorchte Ash später als Glutexo und Glurak nicht?  
   **Glumanda** · Schiggy · Bisasam · Taubsi
 - `o-105` *Auswahl* – In welchen Titanen verwandelt sich Annie Leonhart?  
   **In den Weiblichen Titanen** · In den Kolossalen Titanen · In den Gepanzerten Titanen · In den Bestien-Titanen
@@ -1125,7 +1125,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-111` *Auswahl* – Wer war Gojos bester Freund in der Schulzeit und wandte sich später gegen die Jujutsu-Welt?  
   **Suguru Geto** · Kento Nanami · Toji Fushiguro · Masamichi Yaga
 - `o-112` *Auswahl* – Was geschieht mit Gojo beim Shibuya-Vorfall?  
-  **Er wird in der Gefängnis-Domäne versiegelt** · Er besiegt Sukuna endgültig · Er verliert seine Sechs Augen · Er wechselt die Seiten
+  **Er wird im Gefängnisreich (Prison Realm) versiegelt** · Er besiegt Sukuna endgültig · Er verliert seine Sechs Augen · Er wechselt die Seiten
 - `o-113` *Schätzfrage* – Wie viele Bände hat der Manga „Jujutsu Kaisen“?  
   **30** (Schieberegler 10–60, ±2 zählt als knapp)
 - `o-114` *Auswahl* – Wie lautet All Mights bürgerlicher Name?  
@@ -1166,7 +1166,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
 - `o-125` *Auswahl* – Wie heißt Jinwoos verschollener Vater?  
   **Sung Il-hwan** · Sung Jinho · Hwang Dongsoo · Thomas Andre
 - `o-126` *Auswahl* – Wer schrieb die Romanvorlage zu „Solo Leveling“?  
-  **Chugong** · Dubu · Jang Sung-rak · Kim Carnby
+  **Chugong** · Dubu · Sing-Shong · Kim Carnby
 - `o-127` *Auswahl* – Wie lautet der Untertitel der zweiten Anime-Staffel von „Solo Leveling“?  
   **Arise from the Shadow** · Shadow Monarch · Rise of the Hunter · The Final Gate
 - `o-130` *Auswahl* – Welcher schwarze Magier gilt als größter Feind von Fairy Tail?  
@@ -1200,7 +1200,7 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `o-133` *Auswahl* – Welcher CCG-Ermittler ist Mados Partner und wird zu Kanekis großem Gegenspieler?  
   **Koutarou Amon** · Juuzou Suzuya · Kishou Arima · Seidou Takizawa
-- `o-134` *Auswahl* – Was ist eine Quinque?  
+- `o-134` *Auswahl* – Was ist eine Quinke (engl. Quinque)?  
   **Eine Waffe der CCG, gefertigt aus dem Kagune eines Ghouls** · Eine Ghoul-Maske · Ein Kaffeehaus für Ghoule · Ein Rang bei der CCG
 - `o-138` *Auswahl* – Wer übernimmt nach L die Jagd auf Kira?  
   **Near und Mello** · Watari · Misa Amane · Rem

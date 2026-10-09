@@ -1246,7 +1246,7 @@
    "type": "multiple_choice",
    "question": "Wer sammelt in „Cardcaptor Sakura“ ebenfalls die Clow-Karten und ist zunächst Sakuras Rivale?",
    "answers": [
-    "Syaoran Li",
+    "Shaolan Li",
     "Yukito Tsukishiro",
     "Touya Kinomoto",
     "Eriol Hiiragizawa"
@@ -1298,7 +1298,7 @@
    "difficulty": 2,
    "category": "shojo",
    "type": "order",
-   "question": "Sortiere diese Shōjo-Anime nach ihrem Start, den ältesten zuerst.",
+   "question": "Sortiere diese Romance-Anime nach ihrem Start, den ältesten zuerst.",
    "answers": [
     "Sailor Moon",
     "Cardcaptor Sakura",
@@ -1895,7 +1895,7 @@
    "type": "multiple_choice",
    "question": "Wie nennt man die stärksten Dämonenjäger in „Demon Slayer“?",
    "answers": [
-    "Hashira",
+    "Hashira (Säulen)",
     "Shinigami",
     "Kage",
     "Yonkō"
@@ -2235,9 +2235,9 @@
    "type": "multiple_choice",
    "question": "Wer verwandelt sich in „Attack on Titan“ in den Kolossalen Titanen, der zu Beginn die Mauer durchbricht?",
    "answers": [
-    "Bertholdt Hoover",
+    "Berthold Fubar",
     "Reiner Braun",
-    "Annie Leonhart",
+    "Annie Leonhardt",
     "Zeke Jäger"
    ],
    "correct": 0
@@ -3003,7 +3003,7 @@
    "question": "Wer bin ich?",
    "answers": [
     "Mikasa Ackermann",
-    "Annie Leonhart",
+    "Annie Leonhardt",
     "Sasha Braus",
     "Historia Reiss"
    ],
@@ -4585,9 +4585,9 @@
    "question": "Wie heißt die Wolke, auf der Son-Goku fliegt?",
    "answers": [
     "Jindujun",
-    "Nimbus",
+    "Kumorin",
     "Wolke Sieben",
-    "Kinto"
+    "Flauschi"
    ],
    "correct": 0
   },
@@ -5114,7 +5114,7 @@
    "type": "multiple_choice",
    "question": "Womit schläfert Conan Kogoro Mori ein, um in dessen Namen Fälle zu lösen?",
    "answers": [
-    "Mit seiner Betäubungs-Armbanduhr",
+    "Mit seiner Betäubungs-Armbanduhr (Narkosechronometer)",
     "Mit seiner Fliege",
     "Mit seinen Kraftschuhen",
     "Mit seiner Brille"
@@ -6030,7 +6030,7 @@
    "difficulty": 3,
    "category": "shonen",
    "type": "multiple_choice",
-   "question": "Wie heißt Ashs Pokémon, das sich weigerte, sich zu entwickeln, und ihm später als Glurak nicht gehorchte?",
+   "question": "Welches von Ashs Pokémon wurde von seinem Trainer Damian ausgesetzt und gehorchte Ash später als Glutexo und Glurak nicht?",
    "answers": [
     "Glumanda",
     "Schiggy",
@@ -6131,7 +6131,7 @@
     "Sasha Braus",
     "Krista Lenz",
     "Ymir",
-    "Annie Leonhart"
+    "Annie Leonhardt"
    ],
    "correct": 0
   },
@@ -6362,7 +6362,7 @@
    "type": "multiple_choice",
    "question": "Wie heißt die Schule, an der Yuji Itadori zum Jujuzisten ausgebildet wird?",
    "answers": [
-    "Tokyo Jujutsu High",
+    "Jujutsu-Akademie Tokio",
     "U.A. High",
     "Konoha-Akademie",
     "Eden Academy"
@@ -6428,7 +6428,7 @@
    "difficulty": 2,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Was bewirkt eine „Domain Expansion“ (Gebietserweiterung)?",
+   "question": "Was bewirkt eine „Sphärenentfaltung“ (Domain Expansion)?",
    "answers": [
     "Sie erschafft einen eigenen Raum, in dem die Angriffe des Anwenders garantiert treffen",
     "Sie heilt alle Verbündeten",
@@ -6505,7 +6505,7 @@
    "type": "multiple_choice",
    "question": "Was geschieht mit Gojo beim Shibuya-Vorfall?",
    "answers": [
-    "Er wird in der Gefängnis-Domäne versiegelt",
+    "Er wird im Gefängnisreich (Prison Realm) versiegelt",
     "Er besiegt Sukuna endgültig",
     "Er verliert seine Sechs Augen",
     "Er wechselt die Seiten"
@@ -6532,7 +6532,7 @@
    "difficulty": 1,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Wie heißt Dekus Freundin, die Dinge schwerelos machen kann?",
+   "question": "Wie heißt Dekus Klassenkameradin, die Dinge schwerelos machen kann?",
    "answers": [
     "Ochaco Uraraka",
     "Momo Yaoyorozu",
@@ -6562,7 +6562,7 @@
    "type": "multiple_choice",
    "question": "Wie heißt die Schurkenorganisation, die All Might stürzen will?",
    "answers": [
-    "Die Liga der Schurken",
+    "Die Schurkenliga (League of Villains)",
     "Akatsuki",
     "Die Schwarze Organisation",
     "Die Phantom-Truppe"
@@ -6586,7 +6586,7 @@
    "difficulty": 2,
    "category": "neu",
    "type": "multiple_choice",
-   "question": "Wer führt die Liga der Schurken an?",
+   "question": "Wer führt die Schurkenliga (League of Villains) an?",
    "answers": [
     "Tomura Shigaraki",
     "Dabi",
@@ -6760,7 +6760,7 @@
    "type": "multiple_choice",
    "question": "Wie heißt Powers Katze?",
    "answers": [
-    "Nyako",
+    "Miezi (jap. Nyako)",
     "Pochita",
     "Tama",
     "Meowth"
@@ -6774,7 +6774,7 @@
    "type": "multiple_choice",
    "question": "Welcher Teufel ist in „Chainsaw Man“ besonders mächtig, weil die Menschen ihn so sehr fürchten?",
    "answers": [
-    "Der Waffen-Teufel",
+    "Der Pistolenteufel",
     "Der Katzen-Teufel",
     "Der Tomaten-Teufel",
     "Der Fisch-Teufel"
@@ -6810,7 +6810,7 @@
    "correct": 0,
    "hints": [
     "Ich bin Teufelsjäger der öffentlichen Sicherheit.",
-    "Ich will den Waffen-Teufel töten, der meine Familie auslöschte.",
+    "Ich will den Pistolenteufel töten, der meine Familie auslöschte.",
     "Ich rauche und ertrage Denji und Power nur mit Mühe."
    ]
   },
@@ -7169,7 +7169,7 @@
    "type": "multiple_choice",
    "question": "Wie werden die Menschen genannt, die in „Solo Leveling“ Monster bekämpfen?",
    "answers": [
-    "Jäger",
+    "Jäger (Hunter)",
     "Jujuzisten",
     "Helden",
     "Shinigami"
@@ -7328,7 +7328,7 @@
    "answers": [
     "Chugong",
     "Dubu",
-    "Jang Sung-rak",
+    "Sing-Shong",
     "Kim Carnby"
    ],
    "correct": 0
@@ -7728,7 +7728,7 @@
     "Kagune",
     "Zanpakuto",
     "Kakugan",
-    "Quinque"
+    "Quinke"
    ],
    "correct": 0
   },
@@ -7826,7 +7826,7 @@
    "difficulty": 3,
    "category": "klassiker",
    "type": "multiple_choice",
-   "question": "Was ist eine Quinque?",
+   "question": "Was ist eine Quinke (engl. Quinque)?",
    "answers": [
     "Eine Waffe der CCG, gefertigt aus dem Kagune eines Ghouls",
     "Eine Ghoul-Maske",
