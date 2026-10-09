@@ -14161,6 +14161,1408 @@
     "Monthly G Fantasy"
    ],
    "correct": 0
+  },
+  {
+   "id": "e-348",
+   "difficulty": 1,
+   "category": "onepiece",
+   "type": "multiple_choice",
+   "question": "Wie heißt Ruffys Teufelsfrucht in der deutschen Fassung?",
+   "answers": [
+    "Gum-Gum-Frucht",
+    "Feuer-Frucht",
+    "Flora-Frucht",
+    "Donner-Frucht"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-411",
+   "difficulty": 2,
+   "category": "onepiece",
+   "type": "multiple_choice",
+   "question": "Wie heißt das zweite Schiff der Strohhutbande?",
+   "answers": [
+    "Thousand Sunny",
+    "Flying Lamb",
+    "Moby Dick",
+    "Oro Jackson"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-244",
+   "difficulty": 3,
+   "category": "onepiece",
+   "type": "multiple_choice",
+   "question": "Welcher Pirat trägt den Beinamen „Chirurg des Todes“?",
+   "answers": [
+    "Trafalgar Law",
+    "Eustass Kid",
+    "Marco",
+    "Crocodile"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-349",
+   "difficulty": 1,
+   "category": "dragonball",
+   "type": "multiple_choice",
+   "question": "Welcher Bösewicht ist ein rosafarbenes, kindliches Wesen aus Magie?",
+   "answers": [
+    "Boo",
+    "Freezer",
+    "Cell",
+    "Beerus"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-412",
+   "difficulty": 2,
+   "category": "dragonball",
+   "type": "multiple_choice",
+   "question": "Wie heißt Son-Gohans Tochter?",
+   "answers": [
+    "Pan",
+    "Bra",
+    "Marron",
+    "Videl"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-245",
+   "difficulty": 3,
+   "category": "dragonball",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Technik, mit der sich Son-Goku sofort an einen anderen Ort teleportiert?",
+   "answers": [
+    "Momentane Teleportation",
+    "Kaioken",
+    "Genkidama",
+    "Taiyoken"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-350",
+   "difficulty": 1,
+   "category": "naruto",
+   "type": "multiple_choice",
+   "question": "Wie heißt Narutos Freund mit dem Hund Akamaru?",
+   "answers": [
+    "Kiba Inuzuka",
+    "Shino Aburame",
+    "Choji Akimichi",
+    "Shikamaru Nara"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-413",
+   "difficulty": 2,
+   "category": "naruto",
+   "type": "multiple_choice",
+   "question": "Welcher Spruch ist typisch für Shikamaru?",
+   "answers": [
+    "„Wie nervig“",
+    "„Glaub es!“",
+    "„Das ist mein Ninja-Weg“",
+    "„Dattebayo“"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-414",
+   "difficulty": 2,
+   "category": "naruto",
+   "type": "multiple_choice",
+   "question": "Welcher Clan beherrscht Schatten-Techniken?",
+   "answers": [
+    "Nara",
+    "Hyuga",
+    "Yamanaka",
+    "Akimichi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-246",
+   "difficulty": 3,
+   "category": "naruto",
+   "type": "multiple_choice",
+   "question": "Wie heißt Zabuzas riesiges Schwert?",
+   "answers": [
+    "Kubikiribōchō",
+    "Samehada",
+    "Kusanagi",
+    "Hiramekarei"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-351",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Farbe hat Conans Fliege mit dem Stimmenverzerrer?",
+   "answers": [
+    "Rot",
+    "Blau",
+    "Schwarz",
+    "Grün"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-415",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißen die drei Grundschulkinder der Detective Boys neben Conan und Ai?",
+   "answers": [
+    "Ayumi, Mitsuhiko und Genta",
+    "Ran, Sonoko und Kazuha",
+    "Heiji, Kaito und Shinichi",
+    "Yumi, Miwako und Sato"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-247",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wonach sucht Kaito Kid bei seinen Diebstählen?",
+   "answers": [
+    "Nach dem Edelstein Pandora",
+    "Nach Gold",
+    "Nach dem Gift APTX 4869",
+    "Nach Shinichis Identität"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-248",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Kogoro Moris Ex-Frau, eine Anwältin?",
+   "answers": [
+    "Eri Kisaki",
+    "Yukiko Kudo",
+    "Sonoko Suzuki",
+    "Jodie Starling"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-352",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Stein-Pokémon ist Rockos Partner?",
+   "answers": [
+    "Onix",
+    "Geodude",
+    "Rihorn",
+    "Kleinstein"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-416",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wer ist Ashs Rivale in Sinnoh, der seine Pokémon hart behandelt?",
+   "answers": [
+    "Paul",
+    "Gary",
+    "Trip",
+    "Alain"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-417",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welches Pokémon kann sich in jedes andere Pokémon verwandeln?",
+   "answers": [
+    "Ditto",
+    "Mew",
+    "Zoroark",
+    "Evoli"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-249",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "estimate",
+   "question": "In welchem Jahr erschienen die ersten Pokémon-Spiele (Rot und Grün) in Japan?",
+   "answers": [
+    "1996"
+   ],
+   "correct": 0,
+   "answer": 1996,
+   "min": 1985,
+   "max": 2005,
+   "tolerance": 1
+  },
+  {
+   "id": "e-353",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Erens Heimatstadt am Rand von Mauer Maria?",
+   "answers": [
+    "Shiganshina",
+    "Trost",
+    "Mitras",
+    "Stohess"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-418",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Was ist das „Große Erdrutschen“ (Rumbling)?",
+   "answers": [
+    "Der Marsch der Mauer-Titanen, der die Welt zerstören soll",
+    "Ein Erdbeben in Shiganshina",
+    "Die Belagerung von Trost",
+    "Ein Aufstand der Militärpolizei"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-250",
+   "difficulty": 3,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Begründerin der Eldianer, die vor 2000 Jahren die Titanenkraft erhielt?",
+   "answers": [
+    "Ymir Fritz",
+    "Historia Reiss",
+    "Dina Fritz",
+    "Frieda Reiss"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-354",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches Tier dient Tanjiro als Bote der Dämonenjäger?",
+   "answers": [
+    "Eine Krähe",
+    "Ein Falke",
+    "Eine Taube",
+    "Ein Fuchs"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-419",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Hashira hat rosa-grüne Haare und ist die „Liebes-Hashira“?",
+   "answers": [
+    "Mitsuri Kanroji",
+    "Shinobu Kocho",
+    "Kanao Tsuyuri",
+    "Nezuko Kamado"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-251",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welchen Rang haben die Geschwister Daki und Gyutaro?",
+   "answers": [
+    "Oberer Mond 6",
+    "Oberer Mond 4",
+    "Unterer Mond 1",
+    "Oberer Mond 2"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-355",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was sind Jujuzisten?",
+   "answers": [
+    "Menschen, die Flüche mit Fluchenergie bekämpfen",
+    "Dämonen",
+    "Shinigami",
+    "Priester"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-420",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welcher Fluch der Sondergrad hat einen Vulkan als Kopf?",
+   "answers": [
+    "Jogo",
+    "Hanami",
+    "Mahito",
+    "Dagon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-252",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist Kenjaku?",
+   "answers": [
+    "Ein uralter Fluchanwender, der Getos Körper übernahm",
+    "Gojos Bruder",
+    "Der Direktor der Jujutsu-Akademie",
+    "Ein Fluch in Yujis Körper"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-356",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "In welcher Klasse ist Deku an der U.A. High?",
+   "answers": [
+    "1-A",
+    "1-B",
+    "2-A",
+    "3-A"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-421",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist Mirio Togata, genannt Lemillion?",
+   "answers": [
+    "Ein Schüler der „Big Three“, der durch Wände gehen kann",
+    "Dekus Vater",
+    "Ein Schurke",
+    "Ein Lehrer"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-253",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Der wievielte Träger von One For All ist Deku?",
+   "answers": [
+    "Der neunte",
+    "Der siebte",
+    "Der dritte",
+    "Der zehnte"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-357",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Haarfarbe hat Denji?",
+   "answers": [
+    "Blond",
+    "Schwarz",
+    "Rot",
+    "Blau"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-422",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was passiert, wenn Chainsaw Man einen Teufel vollständig frisst?",
+   "answers": [
+    "Der Begriff, für den der Teufel steht, verschwindet aus der Welt",
+    "Er wird unsterblich",
+    "Der Teufel wird sein Schatten",
+    "Nichts Besonderes"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-254",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt Makimas Wiedergeburt, die Denji aufzieht?",
+   "answers": [
+    "Nayuta",
+    "Asa",
+    "Yoru",
+    "Fami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-358",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie erscheint Jinwoo das System?",
+   "answers": [
+    "Als Fenster wie in einem Videospiel",
+    "Als Stimme im Kopf",
+    "Als Buch",
+    "Als Geist"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-423",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer ist Woo Jinchul?",
+   "answers": [
+    "Der Leiter der Überwachungsabteilung der Jäger-Vereinigung",
+    "Jinwoos Vater",
+    "Ein S-Rang-Jäger aus Japan",
+    "Ein Monarch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-255",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Herrscher, dessen Macht Jinwoo als Schatten-Monarch erbt?",
+   "answers": [
+    "Ashborn",
+    "Antares",
+    "Baran",
+    "Legia"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-359",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Woran stirbt ein Mensch, wenn im Death Note keine Todesursache angegeben wird?",
+   "answers": [
+    "An einem Herzinfarkt",
+    "An einem Unfall",
+    "Im Schlaf",
+    "An einem Sturz"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-424",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Shinigami, der Misa Amane begleitet?",
+   "answers": [
+    "Rem",
+    "Ryuk",
+    "Sidoh",
+    "Gelus"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-360",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer ist der Eisen-Drachentöter in „Fairy Tail“?",
+   "answers": [
+    "Gajeel Redfox",
+    "Natsu Dragneel",
+    "Laxus Dreyar",
+    "Sting Eucliffe"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-425",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt Gajeels schwarze Katze?",
+   "answers": [
+    "Pantherlily",
+    "Happy",
+    "Carla",
+    "Frosch"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-426",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer ist Hinami in „Tokyo Ghoul“?",
+   "answers": [
+    "Ein Ghoul-Mädchen, das Kaneki und Touka beschützen",
+    "Eine CCG-Ermittlerin",
+    "Kanekis Schwester",
+    "Eine Kellnerin ohne Kräfte"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-256",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "estimate",
+   "question": "Wie viele Bände hat der erste Teil von „Tokyo Ghoul“?",
+   "answers": [
+    "14"
+   ],
+   "correct": 0,
+   "answer": 14,
+   "min": 5,
+   "max": 40,
+   "tolerance": 2
+  },
+  {
+   "id": "e-361",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welches riesige Plüschtier besitzt Anya?",
+   "answers": [
+    "Einen Pinguin",
+    "Einen Bären",
+    "Einen Hund",
+    "Einen Hasen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-427",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was bekommt man an der Eden Academy für schlechtes Verhalten?",
+   "answers": [
+    "Tonitrus-Blitze",
+    "Stella-Sterne",
+    "Schwarze Punkte",
+    "Nachsitzen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-362",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie viele Sailor-Kriegerinnen der inneren Planeten kämpfen neben Sailor Moon?",
+   "answers": [
+    "Vier",
+    "Zwei",
+    "Sechs",
+    "Acht"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-257",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt das alte Mondkönigreich, aus dem Bunny stammt?",
+   "answers": [
+    "Silberjahrtausend (Silver Millennium)",
+    "Mondlichtreich",
+    "Kristall-Tokio",
+    "Elysion"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-363",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt Seto Kaibas kleiner Bruder?",
+   "answers": [
+    "Mokuba",
+    "Noah",
+    "Gozaburo",
+    "Duke"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-428",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Turnier in Domino City, das Kaiba ausrichtet?",
+   "answers": [
+    "Battle City",
+    "Duelist Kingdom",
+    "Grand Championship",
+    "Waking the Dragons"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-429",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Position spielt Tobio Kageyama?",
+   "answers": [
+    "Zuspieler",
+    "Mittelblocker",
+    "Libero",
+    "Außenangreifer"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-430",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Als was bezeichnet sich Shoei Baro in „Blue Lock“?",
+   "answers": [
+    "Als König",
+    "Als Prinzessin",
+    "Als Monster",
+    "Als Genie"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-431",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist Vamola in „Dandadan“?",
+   "answers": [
+    "Ein Mädchen aus dem Weltraum, das einen Kaiju-Roboter steuert",
+    "Momos Schwester",
+    "Eine Geisteroma",
+    "Okaruns Mutter"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-432",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Was bedeutet der Name Maomao wörtlich?",
+   "answers": [
+    "Katze-Katze",
+    "Blume",
+    "Kleine Prinzessin",
+    "Giftmischerin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-433",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer ist Prinz Soma in „Black Butler“?",
+   "answers": [
+    "Ein indischer Prinz, der bei Ciel einzieht",
+    "Ciels Cousin",
+    "Ein Dämon",
+    "Ein Shinigami"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-434",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welche Fähigkeit hat die Magierin Übel in „Frieren“?",
+   "answers": [
+    "Sie kann alles zerschneiden, was sie sich zerschneidbar vorstellen kann",
+    "Sie kann fliegen",
+    "Sie kann die Zeit anhalten",
+    "Sie kann Tote erwecken"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-435",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer ist Chrome in „Dr. Stone“?",
+   "answers": [
+    "Ein Dorfbewohner, der sich für Wissenschaft begeistert und sich „Zauberer“ nennt",
+    "Senkus Bruder",
+    "Ein Krieger aus Tsukasas Reich",
+    "Ein Roboter"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-436",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Dämon, der kein Menschenfleisch isst und mit Mujika reist?",
+   "answers": [
+    "Sonju",
+    "Lewis",
+    "Leuvis",
+    "Bayon"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-437",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was ist die „Order“ in „Sakamoto Days“?",
+   "answers": [
+    "Eine Elite-Einheit der Killer-Vereinigung",
+    "Sakamotos Laden",
+    "Eine Polizeieinheit",
+    "Ein Kochwettbewerb"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-438",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Mädchen, das Chihiro in „Kagurabachi“ aus den Händen der Hishaku rettet?",
+   "answers": [
+    "Char",
+    "Hinao",
+    "Azami",
+    "Shiba"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-364",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt Gons Tante, die ihn großgezogen hat?",
+   "answers": [
+    "Mito",
+    "Kite",
+    "Biscuit",
+    "Palm"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-439",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt Killuas älterer Bruder, der mit Nadeln kämpft?",
+   "answers": [
+    "Illumi",
+    "Milluki",
+    "Kalluto",
+    "Silva"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-365",
+   "difficulty": 1,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Welche Farbe hat die Uniform der Shinigami in „Bleach“?",
+   "answers": [
+    "Schwarz",
+    "Weiß",
+    "Rot",
+    "Blau"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-440",
+   "difficulty": 2,
+   "category": "shonen",
+   "type": "multiple_choice",
+   "question": "Wie heißt Ichigos Vater, der eine Klinik führt?",
+   "answers": [
+    "Isshin Kurosaki",
+    "Ryuken Ishida",
+    "Kisuke Urahara",
+    "Jushiro Ukitake"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-366",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt das Königreich in „Seven Deadly Sins“?",
+   "answers": [
+    "Liones",
+    "Fiore",
+    "Camelot",
+    "Britannia-Stadt"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-441",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welche Sünde verkörpert Ban?",
+   "answers": [
+    "Gier",
+    "Zorn",
+    "Faulheit",
+    "Völlerei"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-442",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Taverne, die Meliodas betreibt?",
+   "answers": [
+    "Boar Hat",
+    "Fairy Tail",
+    "Rusty Nail",
+    "Blue Pegasus"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-258",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welche Sünde verkörpert Escanor?",
+   "answers": [
+    "Stolz",
+    "Neid",
+    "Gier",
+    "Zorn"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-367",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Mit wie vielen Schwertern kämpft Musashi in seinem berühmten Stil?",
+   "answers": [
+    "Zwei",
+    "Einem",
+    "Drei",
+    "Vier"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-443",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wer ist Otsu in „Vagabond“?",
+   "answers": [
+    "Musashis Jugendliebe aus seinem Heimatdorf",
+    "Eine Schwertkämpferin",
+    "Kojiros Schwester",
+    "Eine Nonne"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-444",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welcher deutsche Verlag veröffentlicht „Vagabond“ als Master Edition?",
+   "answers": [
+    "Egmont Manga",
+    "Carlsen",
+    "Tokyopop",
+    "Altraverse"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-259",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Insel, auf der das legendäre Duell Musashi gegen Kojiro stattfand?",
+   "answers": [
+    "Ganryūjima",
+    "Jeju",
+    "Okinawa",
+    "Sado"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-368",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Aus welcher Familie stammt Kaguya Shinomiya?",
+   "answers": [
+    "Aus dem reichen Shinomiya-Konzern",
+    "Aus einer Bauernfamilie",
+    "Aus einer Samurai-Familie",
+    "Aus einem Tempel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-445",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer ist Ai Hayasaka?",
+   "answers": [
+    "Kaguyas Dienerin und Vertraute",
+    "Die Schülerratspräsidentin",
+    "Miyukis Schwester",
+    "Eine Lehrerin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-446",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt der düstere Schatzmeister des Schülerrats?",
+   "answers": [
+    "Yu Ishigami",
+    "Miyuki Shirogane",
+    "Chika Fujiwara",
+    "Miko Iino"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-260",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "In welchem Magazin erschien „Kaguya-sama: Love is War“?",
+   "answers": [
+    "Weekly Young Jump",
+    "Weekly Shōnen Jump",
+    "Nakayoshi",
+    "Hana to Yume"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-369",
+   "difficulty": 1,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Vampir-Adlige, den Yuki in „Vampire Knight“ liebt?",
+   "answers": [
+    "Kaname Kuran",
+    "Zero Kiryu",
+    "Kaien Cross",
+    "Hanabusa Aido"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-447",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Hauptfigur von „Fullmoon wo Sagashite“?",
+   "answers": [
+    "Mitsuki Koyama",
+    "Momoko Hanasaki",
+    "Yuki Cross",
+    "Sakura Kinomoto"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-448",
+   "difficulty": 2,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wie heißen Momokos Freundinnen Yuri und Hinagiku als Engel in „Wedding Peach“?",
+   "answers": [
+    "Angel Lily und Angel Daisy",
+    "Angel Rose und Angel Tulip",
+    "Sailor Lily und Sailor Daisy",
+    "Angel Peach und Angel Plum"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-261",
+   "difficulty": 3,
+   "category": "shojo",
+   "type": "multiple_choice",
+   "question": "Wer hat „Vampire Knight“ erschaffen?",
+   "answers": [
+    "Matsuri Hino",
+    "Arina Tanemura",
+    "Ai Yazawa",
+    "Yana Toboso"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-370",
+   "difficulty": 1,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Welche Kraft hat Shinra in „Fire Force“?",
+   "answers": [
+    "Er erzeugt Feuer mit seinen Füßen",
+    "Er kann fliegen",
+    "Er friert Dinge ein",
+    "Er liest Gedanken"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-449",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Zu welcher Einheit gehört Shinra?",
+   "answers": [
+    "Special Fire Force Company 8",
+    "Company 1",
+    "Company 3",
+    "Company 5"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-450",
+   "difficulty": 2,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Was sind Infernals in „Fire Force“?",
+   "answers": [
+    "Menschen, die spontan zu Flammenwesen werden",
+    "Feuerwehrleute mit Kräften",
+    "Dämonen aus der Hölle",
+    "Roboter"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-262",
+   "difficulty": 3,
+   "category": "neu",
+   "type": "multiple_choice",
+   "question": "Wer hat „Fire Force“ erschaffen und zuvor „Soul Eater“?",
+   "answers": [
+    "Atsushi Ohkubo",
+    "Yuki Tabata",
+    "Kohei Horikoshi",
+    "Hiro Mashima"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-371",
+   "difficulty": 1,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Womit verschicken Okabe und seine Freunde in „Steins;Gate“ Nachrichten in die Vergangenheit?",
+   "answers": [
+    "Mit einer umgebauten Mikrowelle",
+    "Mit einem Zeitauto",
+    "Mit einem Telefon aus der Zukunft",
+    "Mit einem Fernseher"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-451",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie nennt sich Rintaro Okabe selbst?",
+   "answers": [
+    "Hououin Kyouma",
+    "Daru",
+    "Mad Scientist 42",
+    "Doktor Zeit"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-452",
+   "difficulty": 2,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Wissenschaftlerin, deren Tod Okabe verhindern will?",
+   "answers": [
+    "Kurisu Makise",
+    "Mayuri Shiina",
+    "Suzuha Amane",
+    "Faris NyanNyan"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-263",
+   "difficulty": 3,
+   "category": "klassiker",
+   "type": "multiple_choice",
+   "question": "Welche Organisation jagt das Labor in „Steins;Gate“?",
+   "answers": [
+    "SERN",
+    "NERV",
+    "SEELE",
+    "CCG"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-372",
+   "difficulty": 1,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Was kann Mash in „Mashle“ nicht, obwohl alle anderen es können?",
+   "answers": [
+    "Magie wirken",
+    "Laufen",
+    "Lesen",
+    "Kochen"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-453",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Welche Süßspeise liebt Mash über alles?",
+   "answers": [
+    "Windbeutel (Cream Puffs)",
+    "Mochi",
+    "Dango",
+    "Taiyaki"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-454",
+   "difficulty": 2,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wie heißt die Zauberschule in „Mashle“?",
+   "answers": [
+    "Easton Magic Academy",
+    "Hogwarts",
+    "Clover Academy",
+    "Shuchiin"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-264",
+   "difficulty": 3,
+   "category": "isekai",
+   "type": "multiple_choice",
+   "question": "Wer hat „Mashle“ erschaffen?",
+   "answers": [
+    "Hajime Komoto",
+    "Yuki Tabata",
+    "Gege Akutami",
+    "Kazue Kato"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-455",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Ghibli-Film erzählt im Comicstrip-Stil vom Alltag einer Familie?",
+   "answers": [
+    "Meine Nachbarn die Yamadas",
+    "Pom Poko",
+    "Tränen der Erinnerung",
+    "Flüstern des Meeres"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-265",
+   "difficulty": 3,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Welcher Film von 1984 gilt als Vorläufer von Studio Ghibli?",
+   "answers": [
+    "Nausicaä aus dem Tal der Winde",
+    "Das Schloss im Himmel",
+    "Mein Nachbar Totoro",
+    "Das Schloss des Cagliostro"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-456",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "In welchem Film von Satoshi Kon kann man mit einem Gerät in Träume eindringen?",
+   "answers": [
+    "Paprika",
+    "Perfect Blue",
+    "Millennium Actress",
+    "Tokyo Godfathers"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-457",
+   "difficulty": 2,
+   "category": "filme",
+   "type": "multiple_choice",
+   "question": "Wie heißt der Kinofilm von 2021 zu „Jujutsu Kaisen“?",
+   "answers": [
+    "Jujutsu Kaisen 0",
+    "Jujutsu Kaisen: Shibuya",
+    "Jujutsu Kaisen: Sukuna",
+    "Jujutsu Kaisen: Gojo"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-373",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Yamete“?",
+   "answers": [
+    "Hör auf",
+    "Komm her",
+    "Warte",
+    "Schau mal"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-374",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Onii-chan“?",
+   "answers": [
+    "Großer Bruder",
+    "Kleiner Bruder",
+    "Vater",
+    "Onkel"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "e-375",
+   "difficulty": 1,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was ist Dango?",
+   "answers": [
+    "Reisbällchen am Spieß",
+    "Gegrillter Fisch",
+    "Eine Nudelsuppe",
+    "Ein Reiswein"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-458",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Wie heißt die große Anime-Convention in Wien?",
+   "answers": [
+    "AniNite",
+    "AnimagiC",
+    "DoKomi",
+    "Connichi"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "f-459",
+   "difficulty": 2,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was sind Furigana?",
+   "answers": [
+    "Kleine Lesehilfen in Kana über schwierigen Kanji",
+    "Lautmalereien",
+    "Farbseiten",
+    "Ein Papierformat"
+   ],
+   "correct": 0
+  },
+  {
+   "id": "o-266",
+   "difficulty": 3,
+   "category": "kultur",
+   "type": "multiple_choice",
+   "question": "Was bedeutet „Moe“ in der Anime-Kultur?",
+   "answers": [
+    "Starke Zuneigung zu niedlichen Figuren",
+    "Ein Kampfstil",
+    "Ein Manga-Format",
+    "Eine Frisur"
+   ],
+   "correct": 0
   }
  ]
 }
