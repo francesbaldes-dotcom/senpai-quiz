@@ -18832,13 +18832,11 @@
    "id": "e-449",
    "difficulty": 1,
    "category": "klassiker",
-   "type": "emoji",
-   "question": "Welche Serie ist gemeint? 🍎📓💀",
+   "type": "true_false",
+   "question": "Light Yagami ist ein Musterschüler mit Bestnoten.",
    "answers": [
-    "Death Note",
-    "Tokyo Ghoul",
-    "Another",
-    "Mirai Nikki"
+    "Wahr",
+    "Falsch"
    ],
    "correct": 0
   },
@@ -18888,13 +18886,11 @@
    "id": "e-453",
    "difficulty": 1,
    "category": "shojo",
-   "type": "emoji",
-   "question": "Welche Serie ist gemeint? 🌙🐈‍⬛🌹🎀",
+   "type": "true_false",
+   "question": "„Sailor Moon“ spielt in Tokio.",
    "answers": [
-    "Sailor Moon",
-    "Cardcaptor Sakura",
-    "Wedding Peach",
-    "Tokyo Mew Mew"
+    "Wahr",
+    "Falsch"
    ],
    "correct": 0
   },
@@ -18944,13 +18940,11 @@
    "id": "e-457",
    "difficulty": 1,
    "category": "neu",
-   "type": "emoji",
-   "question": "Welche Serie ist gemeint? 👵💨👻🛸",
+   "type": "true_false",
+   "question": "In „Dandadan“ hat Momo zu Beginn an Aliens geglaubt und Okarun an Geister.",
    "answers": [
-    "Dandadan",
-    "Mob Psycho 100",
-    "Mein Schulgeist Hanako",
-    "Noragami"
+    "Falsch",
+    "Wahr"
    ],
    "correct": 0
   },
@@ -19028,13 +19022,11 @@
    "id": "e-463",
    "difficulty": 1,
    "category": "neu",
-   "type": "emoji",
-   "question": "Welche Serie ist gemeint? 🏪🔫🍙",
+   "type": "true_false",
+   "question": "Taro Sakamoto war in seiner Killerzeit schlank und wurde erst durch sein ruhiges Familienleben dick.",
    "answers": [
-    "Sakamoto Days",
-    "Spy x Family",
-    "Gintama",
-    "Hitman Reborn!"
+    "Wahr",
+    "Falsch"
    ],
    "correct": 0
   },

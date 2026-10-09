@@ -488,12 +488,12 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Wahr** · Falsch
 - `e-452` *Emoji-Rätsel* – Welche Serie ist gemeint? 🕵️👩‍👧🔪🐶  
   **Spy x Family** · Sakamoto Days · Detektiv Conan · Black Butler
-- `e-457` *Emoji-Rätsel* – Welche Serie ist gemeint? 👵💨👻🛸  
-  **Dandadan** · Mob Psycho 100 · Mein Schulgeist Hanako · Noragami
+- `e-457` *Wahr/Falsch* – In „Dandadan“ hat Momo zu Beginn an Aliens geglaubt und Okarun an Geister.  
+  **Falsch** · Wahr
 - `e-461` *Emoji-Rätsel* – Welche Serie ist gemeint? 🗿🧪🥤  
   **Dr. Stone** · Cells at Work! · Steins;Gate · Edens Zero
-- `e-463` *Emoji-Rätsel* – Welche Serie ist gemeint? 🏪🔫🍙  
-  **Sakamoto Days** · Spy x Family · Gintama · Hitman Reborn!
+- `e-463` *Wahr/Falsch* – Taro Sakamoto war in seiner Killerzeit schlank und wurde erst durch sein ruhiges Familienleben dick.  
+  **Wahr** · Falsch
 - `e-464` *Emoji-Rätsel* – Welche Serie ist gemeint? 🐟🗡️⚔️  
   **Kagurabachi** · Bleach · Demon Slayer · Samurai Champloo
 - `e-467` *Wahr/Falsch* – Hanako trägt ein Küchenmesser bei sich.  
@@ -698,8 +698,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Die Verbrechensneigung der Menschen** · Die Intelligenz · Die Gesundheit · Das Einkommen
 - `e-425` *Auswahl* – Wie heißt die junge Inspektorin, die neu zur Einheit 1 kommt?  
   **Akane Tsunemori** · Shion Karanomori · Yayoi Kunizuka · Mika Shimotsuki
-- `e-449` *Emoji-Rätsel* – Welche Serie ist gemeint? 🍎📓💀  
-  **Death Note** · Tokyo Ghoul · Another · Mirai Nikki
+- `e-449` *Wahr/Falsch* – Light Yagami ist ein Musterschüler mit Bestnoten.  
+  **Wahr** · Falsch
 - `e-451` *Emoji-Rätsel* – Welche Serie ist gemeint? 🎭☕🩸  
   **Tokyo Ghoul** · Vampire Knight · Hellsing · Seraph of the End
 - `e-454` *Emoji-Rätsel* – Welche Serie ist gemeint? 🃏🐉🧩  
@@ -789,8 +789,8 @@ Die richtige Antwort ist **fett** und steht immer zuerst; die App mischt die Ant
   **Eine Prinzessin, die nach dem Mord an ihrem Vater fliehen muss** · Eine Magierin · Eine Piratin · Eine Göttin
 - `e-401` *Auswahl* – Welche Haarfarbe hat Yona?  
   **Rot** · Schwarz · Blond · Blau
-- `e-453` *Emoji-Rätsel* – Welche Serie ist gemeint? 🌙🐈‍⬛🌹🎀  
-  **Sailor Moon** · Cardcaptor Sakura · Wedding Peach · Tokyo Mew Mew
+- `e-453` *Wahr/Falsch* – „Sailor Moon“ spielt in Tokio.  
+  **Wahr** · Falsch
 - `e-458` *Emoji-Rätsel* – Welche Serie ist gemeint? 💊🏯🐱  
   **Die Tagebücher der Apothekerin** · Akatsuki no Yona · Inu Yasha · Snow White with the Red Hair
 - `e-459` *Emoji-Rätsel* – Welche Serie ist gemeint? 🎩😈🫖🇬🇧  
