@@ -10,7 +10,7 @@ Die App lädt `data/fragen.json` per `fetch`, braucht also einen kleinen Webserv
 python3 -m http.server 5190
 ```
 
-Dann <http://localhost:5190> öffnen.
+Dann <http://localhost:5190> öffnen. Alle Pfade sind relativ, die App läuft deshalb auch unter einem Unterpfad wie `/senpai-quiz/` (z. B. GitHub Pages).
 
 In Claude Code startet `.claude/launch.json` denselben Server für die Browser-Vorschau (Eintrag `senpai-quiz`).
 
@@ -19,13 +19,16 @@ In Claude Code startet `.claude/launch.json` denselben Server für die Browser-V
 | Pfad | Inhalt |
 |---|---|
 | `index.html` | Einstieg |
+| `manifest.webmanifest` | Web-App-Manifest (Name, Farben, Icons) für „Zum Home-Bildschirm“ |
 | `js/app.js` | Spiellogik und alle Bildschirme |
 | `js/speicher.js` | Speichern des Profils: im Browser `localStorage`, in der Capacitor-App das Plugin Preferences (dieser native Pfad ist noch ungetestet, weil es noch kein Capacitor-Projekt gibt) |
 | `js/online.js` | Supabase-Client für Accounts und Duelle |
 | `vendor/` | Supabase-JS (2.45.4), lokal eingebunden |
 | `css/style.css` | Gestaltung (Manga-Look) |
 | `css/fonts.css`, `fonts/` | Dela Gothic One und Rubik, lokal eingebunden (SIL Open Font License) |
-| `assets/maskottchen.jpg` | Onigiri-Maskottchen (Higgsfield) |
+| `assets/maskottchen.jpg` | Onigiri-Maskottchen (Higgsfield), Original mit 512 × 512 Pixeln |
+| `assets/icon-180.png`, `assets/icon-512.png` | App-Icons; das 512er ist aus `maskottchen.jpg` erzeugt (auf 256 Farben reduziert) |
+| `assets/favicon.ico`, `assets/favicon-32.png` | Favicons, aus `icon-180.png` erzeugt (Python mit Pillow) |
 | `data/fragen.json` | Fragenkatalog |
 | `fragen.md` | Lesbare Fragenliste zum Korrekturlesen, erzeugt mit `python3 scripts/fragen_liste.py` |
 
@@ -36,7 +39,7 @@ Die richtige Antwort steht immer an erster Stelle (`"correct": 0`), die App misc
 ## Spielmodi
 
 - **Klassisch:** Kategorie und Schwierigkeit wählen, 10 Fragen, 15 Sekunden pro Frage, Joker (50:50, +10 s, Überspringen)
-- **Tagesquiz:** 5 Fragen pro Tag, für alle gleich (aus dem Datum berechnet), mit Streak
+- **Tagesquiz:** 5 Fragen pro Tag, für alle gleich (aus dem Datum berechnet), mit Streak. Das Ergebnis lässt sich teilen (Teilen-Menü des Geräts, sonst Zwischenablage): Datum, 🟩🟥-Kästchen je Frage, Stand, Serie ab 2 Tagen und der Link zur App. Beim ersten Teilen gibt es das Abzeichen „Teilgeist“.
 - **Survival:** endlos, bis 3 Fehler gemacht sind
 - **Blitz:** 60 Sekunden, so viele Fragen wie möglich
 
