@@ -32,13 +32,30 @@ In Claude Code startet `.claude/launch.json` denselben Server für die Browser-V
 | `data/fragen.json` | Fragenkatalog |
 | `fragen.md` | Lesbare Fragenliste zum Korrekturlesen, erzeugt mit `python3 scripts/fragen_liste.py` |
 
+## Kategorien
+
+Zehn Kategorien, die ID steht in `data/fragen.json` unter `kategorien` und in jeder Frage unter `category`:
+
+| ID | Name | Was hineingehört |
+|---|---|---|
+| `onepiece` | One Piece | alles zu One Piece, auch Oda, Bände, Verlag |
+| `dragonball` | Dragon Ball | alle Dragon-Ball-Serien, Toriyama |
+| `naruto` | Naruto | Naruto, Shippuden, Boruto, Kishimoto |
+| `shonen` | Shōnen | weitere Shōnen-Serien: Detektiv Conan, Pokémon, Attack on Titan, Bleach, Haikyu!!, Blue Lock, Yu-Gi-Oh! |
+| `neu` | Neue Hits | Serien ab etwa 2015: Demon Slayer, Jujutsu Kaisen, Spy x Family, My Hero Academia, Chainsaw Man, Dandadan, Oshi no Ko, Dr. Stone |
+| `isekai` | Isekai & Fantasy | andere Welten und Fantasy: Frieren, Solo Leveling, Fairy Tail, Hunter x Hunter, The Promised Neverland; später Re:Zero, Sword Art Online, KonoSuba |
+| `klassiker` | Klassiker & Kult | Death Note, Fullmetal Alchemist, Tokyo Ghoul, JoJo, Tezuka, Fernseh-Geschichte (Heidi, RTL II) |
+| `shojo` | Shōjo & Romance | Sailor Moon, Fruits Basket, Kaguya-sama, Black Butler, Die Tagebücher der Apothekerin |
+| `filme` | Ghibli & Kinofilme | Ghibli, Shinkai, Hosoda, Kon, Kinofilme zu Serien |
+| `kultur` | Manga, Begriffe & Kultur | Manga-Handwerk, Verlage, Magazine, Begriffe, Sprache, Japan |
+
 ## Fragenformat
 
 Die richtige Antwort steht immer an erster Stelle (`"correct": 0`), die App mischt beim Anzeigen. Typen: `multiple_choice`, `true_false`, `emoji`, `order` (Antworten in richtiger Reihenfolge, optional `years`), `estimate` (`answer`, `min`, `max`, `tolerance` = Abstand, der noch halbe Punkte gibt), `who_am_i` (drei `hints`, alle 5 Sekunden wird einer mehr sichtbar; früh richtig raten gibt +25 Punkte pro verdecktem Hinweis).
 
 ## Spielmodi
 
-- **Klassisch:** Kategorie und Schwierigkeit wählen, 10 Fragen, 15 Sekunden pro Frage, Joker (50:50, +10 s, Überspringen)
+- **Klassisch:** Kategorie (eine von zehn oder gemischt) und Schwierigkeit wählen, 10 Fragen, 15 Sekunden pro Frage, Joker (50:50, +10 s, Überspringen)
 - **Tagesquiz:** 5 Fragen pro Tag, für alle gleich (aus dem Datum berechnet), mit Streak. Das Ergebnis lässt sich teilen (Teilen-Menü des Geräts, sonst Zwischenablage): Datum, 🟩🟥-Kästchen je Frage, Stand, Serie ab 2 Tagen und der Link zur App. Beim ersten Teilen gibt es das Abzeichen „Teilgeist“.
 - **Survival:** endlos, bis 3 Fehler gemacht sind
 - **Blitz:** 60 Sekunden, so viele Fragen wie möglich
@@ -56,7 +73,7 @@ Punkte: 100 pro richtiger Antwort plus bis zu 75 Zeitbonus, mal Combo (×2 ab 3 
 
 ## Duelle
 
-Duelle gegen Freunde laufen wie bei Quizduell: **6 Runden mit je 3 Fragen**, abwechselnd und ohne gleichzeitig online sein zu müssen. Wer am Zug ist, wählt die Kategorie aus drei Vorschlägen und spielt zuerst, danach spielt der Gegner dieselben Fragen und wählt die nächste Kategorie. Die Ergebnisse des Gegners für eine Runde werden erst sichtbar, wenn man sie selbst gespielt hat.
+Duelle gegen Freunde laufen wie bei Quizduell: **6 Runden mit je 3 Fragen**, abwechselnd und ohne gleichzeitig online sein zu müssen. Wer am Zug ist, wählt die Kategorie aus vier Vorschlägen und spielt zuerst, danach spielt der Gegner dieselben Fragen und wählt die nächste Kategorie. Die Ergebnisse des Gegners für eine Runde werden erst sichtbar, wenn man sie selbst gespielt hat.
 
 - **Account:** anonym über Supabase Anonymous Sign-in, nur mit Spielername, ohne E-Mail. Er ist an das Gerät gebunden; wer die App löscht, verliert ihn. Löschen geht in der App unter Info.
 - **Einladen:** per Link `?einladung=CODE` oder über den 6-stelligen Einladungscode; außerdem Suche nach Spielernamen.

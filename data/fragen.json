@@ -3,12 +3,16 @@
  "sprache": "de",
  "hinweis": "Die richtige Antwort steht immer an erster Stelle (correct: 0). Die App mischt die Antworten beim Anzeigen. who_am_i: Hinweise in 'hints'. estimate: 'tolerance' = Abstand, der noch als richtig zählt. order: 'years' optional.",
  "kategorien": {
-  "shonen": "Shōnen-Klassiker",
+  "onepiece": "One Piece",
+  "dragonball": "Dragon Ball",
+  "naruto": "Naruto",
+  "shonen": "Shōnen",
+  "neu": "Neue Hits",
+  "isekai": "Isekai & Fantasy",
+  "klassiker": "Klassiker & Kult",
   "shojo": "Shōjo & Romance",
-  "filme": "Studio-Filme",
-  "manga": "Manga & Mangaka",
-  "neu": "Neue Serien",
-  "kultur": "Begriffe & Kultur"
+  "filme": "Ghibli & Kinofilme",
+  "kultur": "Manga, Begriffe & Kultur"
  },
  "schwierigkeiten": {
   "1": "Einsteiger",
@@ -19,7 +23,7 @@
   {
    "id": "e-001",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Wie heißt der Strohhut-Pirat mit dem Gummikörper?",
    "answers": [
@@ -33,7 +37,7 @@
   {
    "id": "e-002",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Was ist Naruto Uzumakis großes Ziel?",
    "answers": [
@@ -61,7 +65,7 @@
   {
    "id": "e-004",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie viele Dragonballs muss man sammeln, um den Drachen Shenlong zu rufen?",
    "answers": [
@@ -89,7 +93,7 @@
   {
    "id": "e-006",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Was passiert in „Death Note“ mit einem Menschen, dessen Name in das Notizbuch geschrieben wird?",
    "answers": [
@@ -117,7 +121,7 @@
   {
    "id": "e-008",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "true_false",
    "question": "Als Kind hat Son-Goku in „Dragon Ball“ einen Affenschwanz.",
    "answers": [
@@ -129,7 +133,7 @@
   {
    "id": "e-009",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "emoji",
    "question": "Welche Serie ist gemeint? 🏴‍☠️👒🍖",
    "answers": [
@@ -143,7 +147,7 @@
   {
    "id": "e-010",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Womit tragen die Figuren in „Yu-Gi-Oh!“ ihre Duelle aus?",
    "answers": [
@@ -157,7 +161,7 @@
   {
    "id": "e-068",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "naruto",
    "type": "who_am_i",
    "question": "Wer bin ich?",
    "answers": [
@@ -479,7 +483,7 @@
   {
    "id": "e-021",
    "difficulty": 1,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "In welche Richtung liest man einen japanischen Manga?",
    "answers": [
@@ -493,7 +497,7 @@
   {
    "id": "e-022",
    "difficulty": 1,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Wie nennt man eine Person, die Manga zeichnet?",
    "answers": [
@@ -507,7 +511,7 @@
   {
    "id": "e-023",
    "difficulty": 1,
-   "category": "manga",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Wer hat „One Piece“ erschaffen?",
    "answers": [
@@ -521,7 +525,7 @@
   {
    "id": "e-024",
    "difficulty": 1,
-   "category": "manga",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wer hat „Dragon Ball“ erschaffen?",
    "answers": [
@@ -535,7 +539,7 @@
   {
    "id": "e-025",
    "difficulty": 1,
-   "category": "manga",
+   "category": "kultur",
    "type": "true_false",
    "question": "In Japan erscheinen die meisten Manga zuerst als fertige Bücher und erst danach in Magazinen.",
    "answers": [
@@ -547,7 +551,7 @@
   {
    "id": "e-026",
    "difficulty": 1,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "In welchem Magazin erscheinen Serien wie „One Piece“ in Japan zuerst?",
    "answers": [
@@ -561,7 +565,7 @@
   {
    "id": "e-059",
    "difficulty": 1,
-   "category": "manga",
+   "category": "kultur",
    "type": "true_false",
    "question": "Die meisten Manga werden komplett in Farbe gedruckt.",
    "answers": [
@@ -573,7 +577,7 @@
   {
    "id": "e-060",
    "difficulty": 1,
-   "category": "manga",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wer hat „Naruto“ gezeichnet?",
    "answers": [
@@ -587,7 +591,7 @@
   {
    "id": "e-061",
    "difficulty": 1,
-   "category": "manga",
+   "category": "onepiece",
    "type": "true_false",
    "question": "Der Manga „One Piece“ startete in den 2000er-Jahren.",
    "answers": [
@@ -599,7 +603,7 @@
   {
    "id": "e-062",
    "difficulty": 1,
-   "category": "manga",
+   "category": "klassiker",
    "type": "emoji",
    "question": "Welcher Manga ist gemeint? 📓✍️💀",
    "answers": [
@@ -613,7 +617,7 @@
   {
    "id": "e-063",
    "difficulty": 1,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Aus welchem Land stammen Manga ursprünglich?",
    "answers": [
@@ -627,7 +631,7 @@
   {
    "id": "e-064",
    "difficulty": 1,
-   "category": "manga",
+   "category": "onepiece",
    "type": "who_am_i",
    "question": "Wer bin ich?",
    "answers": [
@@ -730,7 +734,7 @@
   {
    "id": "e-033",
    "difficulty": 1,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Was für ein Wesen ist die Magierin Frieren?",
    "answers": [
@@ -981,7 +985,7 @@
   {
    "id": "f-001",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Welches Mitglied der Strohhutbande kämpft mit drei Schwertern?",
    "answers": [
@@ -995,7 +999,7 @@
   {
    "id": "f-002",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Was ist Ruffys großer Traum?",
    "answers": [
@@ -1009,7 +1013,7 @@
   {
    "id": "f-003",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wie heißt der neunschwänzige Fuchs, der in Naruto versiegelt ist?",
    "answers": [
@@ -1023,7 +1027,7 @@
   {
    "id": "f-004",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wer ist Narutos Rivale und bester Freund aus Team 7?",
    "answers": [
@@ -1037,7 +1041,7 @@
   {
    "id": "f-005",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie heißt die Verwandlung, bei der Son-Gokus Haare golden werden?",
    "answers": [
@@ -1051,7 +1055,7 @@
   {
    "id": "f-006",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Wie heißt der Shinigami, der sein Death Note in die Menschenwelt fallen lässt?",
    "answers": [
@@ -1065,7 +1069,7 @@
   {
    "id": "f-007",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Welcher Meisterdetektiv nimmt in „Death Note“ als Erster die Jagd auf Kira auf?",
    "answers": [
@@ -1079,7 +1083,7 @@
   {
    "id": "f-008",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Worin wird in „Fullmetal Alchemist“ die Seele von Alphonse Elric gebunden?",
    "answers": [
@@ -1093,7 +1097,7 @@
   {
    "id": "f-009",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Wie heißt Gons bester Freund in „Hunter x Hunter“, der aus einer Familie von Auftragsmördern stammt?",
    "answers": [
@@ -1139,7 +1143,7 @@
   {
    "id": "f-081",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "estimate",
    "question": "Wie viele Bände hat der Manga „Naruto“?",
    "answers": [
@@ -1590,7 +1594,7 @@
   {
    "id": "f-024",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Wer hat „Sailor Moon“ gezeichnet?",
    "answers": [
@@ -1604,7 +1608,7 @@
   {
    "id": "f-025",
    "difficulty": 2,
-   "category": "manga",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Welcher Mangaka gilt als „Gott des Manga“ und schuf „Astro Boy“?",
    "answers": [
@@ -1618,7 +1622,7 @@
   {
    "id": "f-026",
    "difficulty": 2,
-   "category": "manga",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Welche Serie stammt von Rumiko Takahashi?",
    "answers": [
@@ -1632,7 +1636,7 @@
   {
    "id": "f-027",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Wie nennt man einen Sammelband, der mehrere Manga-Kapitel enthält?",
    "answers": [
@@ -1646,7 +1650,7 @@
   {
    "id": "f-028",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Was ist ein Dōjinshi?",
    "answers": [
@@ -1660,7 +1664,7 @@
   {
    "id": "f-064",
    "difficulty": 2,
-   "category": "manga",
+   "category": "dragonball",
    "type": "true_false",
    "question": "Akira Toriyama hat auch die Figuren für die Videospielreihe „Dragon Quest“ gestaltet.",
    "answers": [
@@ -1672,7 +1676,7 @@
   {
    "id": "f-065",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Wie heißen Comics aus Südkorea, die oft auf dem Handy gelesen werden?",
    "answers": [
@@ -1686,7 +1690,7 @@
   {
    "id": "f-066",
    "difficulty": 2,
-   "category": "manga",
+   "category": "shonen",
    "type": "multiple_choice",
    "question": "Wer hat „Bleach“ erschaffen?",
    "answers": [
@@ -1700,7 +1704,7 @@
   {
    "id": "f-067",
    "difficulty": 2,
-   "category": "manga",
+   "category": "shonen",
    "type": "multiple_choice",
    "question": "Wer hat „Attack on Titan“ erschaffen?",
    "answers": [
@@ -1714,7 +1718,7 @@
   {
    "id": "f-068",
    "difficulty": 2,
-   "category": "manga",
+   "category": "klassiker",
    "type": "true_false",
    "question": "„Death Note“ entstand im Team: Takeshi Obata schrieb die Geschichte, Tsugumi Ōba zeichnete.",
    "answers": [
@@ -1726,7 +1730,7 @@
   {
    "id": "f-069",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "order",
    "question": "Sortiere die Manga nach ihrem Start, den ältesten zuerst.",
    "answers": [
@@ -1746,7 +1750,7 @@
   {
    "id": "f-070",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Was ist ein „Yonkoma“?",
    "answers": [
@@ -1760,7 +1764,7 @@
   {
    "id": "f-071",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Wie nennt man Comics aus China?",
    "answers": [
@@ -1774,7 +1778,7 @@
   {
    "id": "f-072",
    "difficulty": 2,
-   "category": "manga",
+   "category": "klassiker",
    "type": "estimate",
    "question": "Wie viele Bände hat der Manga „Death Note“?",
    "answers": [
@@ -1831,7 +1835,7 @@
   {
    "id": "f-032",
    "difficulty": 2,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Wer führte die Heldengruppe an, mit der Frieren den Dämonenkönig besiegte?",
    "answers": [
@@ -1873,7 +1877,7 @@
   {
    "id": "f-035",
    "difficulty": 2,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Aus welchem Land stammt die Vorlage zu „Solo Leveling“?",
    "answers": [
@@ -1952,7 +1956,7 @@
   {
    "id": "f-077",
    "difficulty": 2,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Wie heißt Frierens Schülerin, die mit ihr reist?",
    "answers": [
@@ -1966,7 +1970,7 @@
   {
    "id": "f-078",
    "difficulty": 2,
-   "category": "neu",
+   "category": "isekai",
    "type": "emoji",
    "question": "Welche Serie ist gemeint? 🧝‍♀️💐⏳",
    "answers": [
@@ -2143,7 +2147,7 @@
   {
    "id": "o-001",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Wie lautet der wahre Name von Ruffys Teufelsfrucht?",
    "answers": [
@@ -2157,7 +2161,7 @@
   {
    "id": "o-002",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wie heißt Narutos Vater?",
    "answers": [
@@ -2171,7 +2175,7 @@
   {
    "id": "o-003",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie heißt der Heimatplanet der Saiyajins?",
    "answers": [
@@ -2185,7 +2189,7 @@
   {
    "id": "o-004",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Wer ist in „Death Note“ der zweite Kira?",
    "answers": [
@@ -2199,7 +2203,7 @@
   {
    "id": "o-005",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Wie heißt die Lebensenergie, die in „Hunter x Hunter“ für besondere Fähigkeiten genutzt wird?",
    "answers": [
@@ -2213,7 +2217,7 @@
   {
    "id": "o-006",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Welches Grundprinzip gilt für die Alchemie in „Fullmetal Alchemist“?",
    "answers": [
@@ -2255,7 +2259,7 @@
   {
    "id": "o-049",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "who_am_i",
    "question": "Wer bin ich?",
    "answers": [
@@ -2274,7 +2278,7 @@
   {
    "id": "o-050",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "order",
    "question": "In welcher Reihenfolge lernt Ruffy diese späteren Crewmitglieder kennen?",
    "answers": [
@@ -2527,7 +2531,7 @@
   {
    "id": "o-014",
    "difficulty": 3,
-   "category": "manga",
+   "category": "onepiece",
    "type": "estimate",
    "question": "In welchem Jahr erschien das erste Kapitel von „One Piece“?",
    "answer": 1997,
@@ -2541,7 +2545,7 @@
   {
    "id": "o-015",
    "difficulty": 3,
-   "category": "manga",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Welcher deutsche Verlag veröffentlicht den Manga „One Piece“?",
    "answers": [
@@ -2555,7 +2559,7 @@
   {
    "id": "o-039",
    "difficulty": 3,
-   "category": "manga",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Wer hat „JoJo’s Bizarre Adventure“ erschaffen?",
    "answers": [
@@ -2569,7 +2573,7 @@
   {
    "id": "o-040",
    "difficulty": 3,
-   "category": "manga",
+   "category": "dragonball",
    "type": "estimate",
    "question": "Wie viele Bände hat die ursprüngliche Mangareihe „Dragon Ball“?",
    "answers": [
@@ -2584,7 +2588,7 @@
   {
    "id": "o-041",
    "difficulty": 3,
-   "category": "manga",
+   "category": "klassiker",
    "type": "who_am_i",
    "question": "Wer bin ich?",
    "answers": [
@@ -2603,7 +2607,7 @@
   {
    "id": "o-042",
    "difficulty": 3,
-   "category": "manga",
+   "category": "kultur",
    "type": "true_false",
    "question": "Das Magazin „Weekly Shōnen Jump“ erscheint im Verlag Kōdansha.",
    "answers": [
@@ -2615,7 +2619,7 @@
   {
    "id": "o-043",
    "difficulty": 3,
-   "category": "manga",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Welcher Manga erschien 1997 bei Carlsen als erster in Deutschland in japanischer Leserichtung?",
    "answers": [
@@ -2685,7 +2689,7 @@
   {
    "id": "o-020",
    "difficulty": 3,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Wie viele Jahre dauerte die Reise von Frierens Heldengruppe?",
    "answers": [
@@ -2761,7 +2765,7 @@
   {
    "id": "o-048",
    "difficulty": 3,
-   "category": "neu",
+   "category": "isekai",
    "type": "true_false",
    "question": "Der Manga zu „Frieren“ erscheint im Magazin „Weekly Shōnen Sunday“.",
    "answers": [
@@ -2938,7 +2942,7 @@
   {
    "id": "e-075",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Welchen goldenen Gegenstand trägt Yugi in „Yu-Gi-Oh!“ um den Hals?",
    "answers": [
@@ -2952,7 +2956,7 @@
   {
    "id": "e-076",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Wer ist die Navigatorin der Strohhutbande in „One Piece“?",
    "answers": [
@@ -2966,7 +2970,7 @@
   {
    "id": "e-077",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie heißt Son-Gokus bekannteste Angriffstechnik?",
    "answers": [
@@ -2980,7 +2984,7 @@
   {
    "id": "e-078",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wie heißt der maskierte Lehrer von Team 7 in „Naruto“?",
    "answers": [
@@ -3039,7 +3043,7 @@
   {
    "id": "e-082",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Wovon ernähren sich die Ghoule in „Tokyo Ghoul“?",
    "answers": [
@@ -3095,7 +3099,7 @@
   {
    "id": "e-086",
    "difficulty": 1,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Wie heißt die Hauptfigur von „Solo Leveling“?",
    "answers": [
@@ -3109,7 +3113,7 @@
   {
    "id": "e-087",
    "difficulty": 1,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Als was galt Jinwoo zu Beginn von „Solo Leveling“?",
    "answers": [
@@ -3193,7 +3197,7 @@
   {
    "id": "e-093",
    "difficulty": 1,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Wo wachsen Emma, Norman und Ray in „The Promised Neverland“ auf?",
    "answers": [
@@ -3341,7 +3345,7 @@
   {
    "id": "e-104",
    "difficulty": 1,
-   "category": "kultur",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Welcher deutsche Sender zeigte ab 1999 „Pokémon“ und später „Naruto“ und „One Piece“?",
    "answers": [
@@ -3355,7 +3359,7 @@
   {
    "id": "e-105",
    "difficulty": 1,
-   "category": "manga",
+   "category": "shonen",
    "type": "multiple_choice",
    "question": "Wer hat „Detektiv Conan“ erschaffen?",
    "answers": [
@@ -3414,7 +3418,7 @@
   {
    "id": "f-084",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Welche Magie beherrscht Natsu in „Fairy Tail“?",
    "answers": [
@@ -3428,7 +3432,7 @@
   {
    "id": "f-085",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Wie heißt Natsus blaue, fliegende Katze in „Fairy Tail“?",
    "answers": [
@@ -3470,7 +3474,7 @@
   {
    "id": "f-088",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Wodurch wird Ken Kaneki in „Tokyo Ghoul“ zum Halb-Ghoul?",
    "answers": [
@@ -3498,7 +3502,7 @@
   {
    "id": "f-090",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "who_am_i",
    "question": "Wer bin ich?",
    "answers": [
@@ -3517,7 +3521,7 @@
   {
    "id": "f-091",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Wer hat Ruffy seinen Strohhut geschenkt?",
    "answers": [
@@ -3531,7 +3535,7 @@
   {
    "id": "f-092",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie lautet Son-Gokus Name als Saiyajin?",
    "answers": [
@@ -3634,7 +3638,7 @@
   {
    "id": "f-099",
    "difficulty": 2,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Woraus besteht Jinwoos Armee in „Solo Leveling“?",
    "answers": [
@@ -3648,7 +3652,7 @@
   {
    "id": "f-100",
    "difficulty": 2,
-   "category": "neu",
+   "category": "isekai",
    "type": "who_am_i",
    "question": "Wer bin ich?",
    "answers": [
@@ -3700,7 +3704,7 @@
   {
    "id": "f-103",
    "difficulty": 2,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Was ist das dunkle Geheimnis des Waisenhauses in „The Promised Neverland“?",
    "answers": [
@@ -3882,7 +3886,7 @@
   {
    "id": "f-115",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Wer hat „My Hero Academia“ erschaffen?",
    "answers": [
@@ -3896,7 +3900,7 @@
   {
    "id": "f-116",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Wer hat „Jujutsu Kaisen“ erschaffen?",
    "answers": [
@@ -3910,7 +3914,7 @@
   {
    "id": "f-117",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "true_false",
    "question": "Der Manga „Jujutsu Kaisen“ wurde 2024 abgeschlossen.",
    "answers": [
@@ -3993,7 +3997,7 @@
   {
    "id": "o-054",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Wie heißt das Café, in dem Kaneki in „Tokyo Ghoul“ arbeitet?",
    "answers": [
@@ -4007,7 +4011,7 @@
   {
    "id": "o-055",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "klassiker",
    "type": "who_am_i",
    "question": "Wer bin ich?",
    "answers": [
@@ -4026,7 +4030,7 @@
   {
    "id": "o-056",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "In welchem Königreich spielt „Fairy Tail“?",
    "answers": [
@@ -4082,7 +4086,7 @@
   {
    "id": "o-060",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Welches Tier zeigt das Tattoo der Phantom-Truppe in „Hunter x Hunter“?",
    "answers": [
@@ -4151,7 +4155,7 @@
   {
    "id": "o-065",
    "difficulty": 3,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Wie heißt Jinwoos erster Elite-Schatten, ein roter Ritter?",
    "answers": [
@@ -4221,7 +4225,7 @@
   {
    "id": "o-070",
    "difficulty": 3,
-   "category": "neu",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Welche Nummer trägt Emma in „The Promised Neverland“ am Hals?",
    "answers": [
@@ -4263,7 +4267,7 @@
   {
    "id": "o-073",
    "difficulty": 3,
-   "category": "manga",
+   "category": "kultur",
    "type": "order",
    "question": "Sortiere die Manga nach ihrem Start in Japan, den ältesten zuerst.",
    "answers": [
@@ -4283,7 +4287,7 @@
   {
    "id": "o-074",
    "difficulty": 3,
-   "category": "manga",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Wer hat den Webtoon zu „Solo Leveling“ gezeichnet?",
    "answers": [
@@ -4297,7 +4301,7 @@
   {
    "id": "o-075",
    "difficulty": 3,
-   "category": "kultur",
+   "category": "klassiker",
    "type": "true_false",
    "question": "Die Zeichentrickserie „Die Biene Maja“ von 1975 wurde in Japan produziert.",
    "answers": [
@@ -4309,7 +4313,7 @@
   {
    "id": "e-107",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Wer ist der Koch der Strohhutbande?",
    "answers": [
@@ -4323,7 +4327,7 @@
   {
    "id": "e-108",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Was ist das „One Piece“?",
    "answers": [
@@ -4337,7 +4341,7 @@
   {
    "id": "e-109",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "true_false",
    "question": "Lysop ist der Scharfschütze der Strohhutbande.",
    "answers": [
@@ -4349,7 +4353,7 @@
   {
    "id": "e-110",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "who_am_i",
    "question": "Wer bin ich?",
    "answers": [
@@ -4368,7 +4372,7 @@
   {
    "id": "f-120",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Wie heißt das erste Schiff der Strohhutbande in der deutschen Fassung?",
    "answers": [
@@ -4382,7 +4386,7 @@
   {
    "id": "f-121",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Welche Fähigkeit verleiht Nico Robin ihre Teufelsfrucht?",
    "answers": [
@@ -4396,7 +4400,7 @@
   {
    "id": "f-122",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Wer ist Ruffys Großvater?",
    "answers": [
@@ -4410,7 +4414,7 @@
   {
    "id": "f-123",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Was ist Franky, der Schiffszimmermann der Strohhüte?",
    "answers": [
@@ -4424,7 +4428,7 @@
   {
    "id": "f-124",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Wie heißt das gefährliche Meer, das zum One Piece führt?",
    "answers": [
@@ -4438,7 +4442,7 @@
   {
    "id": "f-125",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "estimate",
    "question": "Wie viele Mitglieder hat die Strohhutbande nach dem Beitritt von Jinbe, Ruffy mitgezählt?",
    "answers": [
@@ -4453,7 +4457,7 @@
   {
    "id": "f-126",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "true_false",
    "question": "Lorenor Zorro hat einen notorisch schlechten Orientierungssinn und verläuft sich ständig.",
    "answers": [
@@ -4465,7 +4469,7 @@
   {
    "id": "o-076",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Auf welcher Insel wuchs Ruffy auf?",
    "answers": [
@@ -4479,7 +4483,7 @@
   {
    "id": "o-077",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Welcher Admiral mit der Magma-Frucht tötet Portgas D. Ace in Marine Ford?",
    "answers": [
@@ -4493,7 +4497,7 @@
   {
    "id": "o-078",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "onepiece",
    "type": "estimate",
    "question": "In welchem Jahr lief „One Piece“ erstmals auf RTL II?",
    "answers": [
@@ -4508,7 +4512,7 @@
   {
    "id": "e-111",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wer ist Son-Gokus stolzer Rivale und Prinz der Saiyajins?",
    "answers": [
@@ -4522,7 +4526,7 @@
   {
    "id": "e-112",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie heißt Son-Gokus erster Sohn?",
    "answers": [
@@ -4536,7 +4540,7 @@
   {
    "id": "e-113",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie heißt das Mädchen, das Son-Goku zu Beginn mit einem Dragonball-Radar trifft?",
    "answers": [
@@ -4550,7 +4554,7 @@
   {
    "id": "e-114",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "true_false",
    "question": "Son-Goku ist ein ganz normaler Mensch von der Erde.",
    "answers": [
@@ -4562,7 +4566,7 @@
   {
    "id": "e-115",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "emoji",
    "question": "Welche Serie ist gemeint? 🐉🟠7️⃣",
    "answers": [
@@ -4576,7 +4580,7 @@
   {
    "id": "e-116",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie heißt die Wolke, auf der Son-Goku fliegt?",
    "answers": [
@@ -4590,7 +4594,7 @@
   {
    "id": "f-127",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie heißt Son-Gokus Lehrmeister mit dem Schildkrötenpanzer?",
    "answers": [
@@ -4604,7 +4608,7 @@
   {
    "id": "f-128",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Welche Nahrung heilt in „Dragon Ball“ jede Verletzung sofort?",
    "answers": [
@@ -4618,7 +4622,7 @@
   {
    "id": "f-129",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Welcher Bösewicht zerstört den Heimatplaneten der Saiyajins?",
    "answers": [
@@ -4632,7 +4636,7 @@
   {
    "id": "f-130",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "who_am_i",
    "question": "Wer bin ich?",
    "answers": [
@@ -4651,7 +4655,7 @@
   {
    "id": "f-131",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie heißt der Gott der Zerstörung in „Dragon Ball Super“?",
    "answers": [
@@ -4665,7 +4669,7 @@
   {
    "id": "f-132",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "order",
    "question": "Sortiere die großen Gegner nach ihrem Auftreten in „Dragon Ball Z“, den ersten zuerst.",
    "answers": [
@@ -4679,7 +4683,7 @@
   {
    "id": "f-133",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "true_false",
    "question": "„Dragon Ball GT“ basiert auf einem Manga von Akira Toriyama.",
    "answers": [
@@ -4691,7 +4695,7 @@
   {
    "id": "o-079",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie heißt die Fusion von Son-Goku und Vegeta mithilfe der Potara-Ohrringe?",
    "answers": [
@@ -4705,7 +4709,7 @@
   {
    "id": "o-080",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie heißt Son-Gokus Vater?",
    "answers": [
@@ -4719,7 +4723,7 @@
   {
    "id": "o-081",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "estimate",
    "question": "Wie viele Folgen hat „Dragon Ball Z“?",
    "answers": [
@@ -4734,7 +4738,7 @@
   {
    "id": "o-082",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "estimate",
    "question": "In welchem Jahr startete der Manga „Dragon Ball“ in der Weekly Shōnen Jump?",
    "answers": [
@@ -4749,7 +4753,7 @@
   {
    "id": "o-083",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "dragonball",
    "type": "multiple_choice",
    "question": "Wie heißt die 2024 gestartete Anime-Serie, an deren Geschichte Akira Toriyama zuletzt mitarbeitete?",
    "answers": [
@@ -4763,7 +4767,7 @@
   {
    "id": "e-117",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wie heißt Narutos Heimatdorf?",
    "answers": [
@@ -4777,7 +4781,7 @@
   {
    "id": "e-118",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wer ist das Mädchen in Team 7?",
    "answers": [
@@ -4791,7 +4795,7 @@
   {
    "id": "e-119",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Mit welcher Technik erzeugt Naruto viele Kopien von sich selbst?",
    "answers": [
@@ -4805,7 +4809,7 @@
   {
    "id": "e-120",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Welche Farbe hat Narutos Jacke?",
    "answers": [
@@ -4819,7 +4823,7 @@
   {
    "id": "e-121",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "naruto",
    "type": "who_am_i",
    "question": "Wer bin ich?",
    "answers": [
@@ -4838,7 +4842,7 @@
   {
    "id": "e-122",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wie heißt Narutos Sohn, der Held der Nachfolgeserie?",
    "answers": [
@@ -4852,7 +4856,7 @@
   {
    "id": "e-123",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "naruto",
    "type": "emoji",
    "question": "Welche Serie ist gemeint? 🍥🦊🍜",
    "answers": [
@@ -4866,7 +4870,7 @@
   {
    "id": "e-124",
    "difficulty": 1,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wie heißt die besondere Augen-Fähigkeit des Uchiha-Clans?",
    "answers": [
@@ -4880,7 +4884,7 @@
   {
    "id": "f-134",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "true_false",
    "question": "Naruto heiratet am Ende der Serie Hinata Hyuga.",
    "answers": [
@@ -4892,7 +4896,7 @@
   {
    "id": "f-135",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Welcher der drei legendären Sannin wird Narutos Lehrmeister?",
    "answers": [
@@ -4906,7 +4910,7 @@
   {
    "id": "f-136",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wer wird nach dem Tod des Dritten Hokage die Fünfte Hokage?",
    "answers": [
@@ -4920,7 +4924,7 @@
   {
    "id": "f-137",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wie heißt die Organisation in schwarzen Mänteln mit roten Wolken?",
    "answers": [
@@ -4934,7 +4938,7 @@
   {
    "id": "f-138",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Mit welchem Element kämpft Gaara?",
    "answers": [
@@ -4948,7 +4952,7 @@
   {
    "id": "f-139",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "who_am_i",
    "question": "Wer bin ich?",
    "answers": [
@@ -4967,7 +4971,7 @@
   {
    "id": "f-140",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Was ist das Rasengan?",
    "answers": [
@@ -4981,7 +4985,7 @@
   {
    "id": "f-141",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "order",
    "question": "Sortiere die Hokage nach ihrer Amtszeit, den ersten zuerst.",
    "answers": [
@@ -4995,7 +4999,7 @@
   {
    "id": "f-142",
    "difficulty": 2,
-   "category": "shonen",
+   "category": "naruto",
    "type": "estimate",
    "question": "Wie viele Folgen hat „Naruto Shippuden“?",
    "answers": [
@@ -5010,7 +5014,7 @@
   {
    "id": "o-084",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wie heißt Narutos Mutter?",
    "answers": [
@@ -5024,7 +5028,7 @@
   {
    "id": "o-085",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Welche Chakra-Natur hat Naruto von Geburt an?",
    "answers": [
@@ -5038,7 +5042,7 @@
   {
    "id": "o-086",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Wer verbirgt sich hinter der Maske von „Tobi“?",
    "answers": [
@@ -5052,7 +5056,7 @@
   {
    "id": "o-087",
    "difficulty": 3,
-   "category": "shonen",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Welches Bijū ist in Killer B versiegelt?",
    "answers": [
@@ -5066,7 +5070,7 @@
   {
    "id": "o-088",
    "difficulty": 3,
-   "category": "manga",
+   "category": "naruto",
    "type": "true_false",
    "question": "Masashi Kishimotos Zwillingsbruder Seishi ist ebenfalls Mangaka und schuf „666 Satan“.",
    "answers": [
@@ -5459,7 +5463,7 @@
   {
    "id": "f-154",
    "difficulty": 2,
-   "category": "kultur",
+   "category": "klassiker",
    "type": "true_false",
    "question": "Die Serie „Heidi“ von 1974 wurde in Japan produziert, Hayao Miyazaki arbeitete daran mit.",
    "answers": [
@@ -5471,7 +5475,7 @@
   {
    "id": "o-094",
    "difficulty": 3,
-   "category": "kultur",
+   "category": "klassiker",
    "type": "multiple_choice",
    "question": "Welcher deutsche Sender strahlte „Sailor Moon“ 1995 als Erster aus?",
    "answers": [
@@ -5499,7 +5503,7 @@
   {
    "id": "e-136",
    "difficulty": 1,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "In welchem Jahrzehnt begann der Manga-Boom in Deutschland mit „Dragon Ball“ und „Sailor Moon“?",
    "answers": [
@@ -5513,7 +5517,7 @@
   {
    "id": "e-137",
    "difficulty": 1,
-   "category": "manga",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Welcher deutsche Verlag veröffentlicht „Naruto“?",
    "answers": [
@@ -5527,7 +5531,7 @@
   {
    "id": "f-155",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Welcher japanische Verlag gibt die Weekly Shōnen Jump heraus?",
    "answers": [
@@ -5541,7 +5545,7 @@
   {
    "id": "f-156",
    "difficulty": 2,
-   "category": "manga",
+   "category": "naruto",
    "type": "multiple_choice",
    "question": "Was ist „Naruto Massiv“?",
    "answers": [
@@ -5555,7 +5559,7 @@
   {
    "id": "o-096",
    "difficulty": 3,
-   "category": "manga",
+   "category": "onepiece",
    "type": "multiple_choice",
    "question": "Bei welchem Mangaka arbeitete Eiichirō Oda als Assistent, bevor „One Piece“ startete?",
    "answers": [
@@ -5569,7 +5573,7 @@
   {
    "id": "o-097",
    "difficulty": 3,
-   "category": "manga",
+   "category": "shonen",
    "type": "multiple_choice",
    "question": "In welchem Magazin erscheint „Detektiv Conan“ in Japan?",
    "answers": [
@@ -6827,7 +6831,7 @@
   {
    "id": "o-118",
    "difficulty": 3,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "In welchem Magazin erscheint der zweite Teil von „Chainsaw Man“?",
    "answers": [
@@ -6965,7 +6969,7 @@
   {
    "id": "e-171",
    "difficulty": 1,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Was sind „Chibi“-Zeichnungen?",
    "answers": [
@@ -6979,7 +6983,7 @@
   {
    "id": "e-172",
    "difficulty": 1,
-   "category": "manga",
+   "category": "shonen",
    "type": "multiple_choice",
    "question": "Welcher deutsche Verlag veröffentlicht „Attack on Titan“?",
    "answers": [
@@ -6993,7 +6997,7 @@
   {
    "id": "f-198",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Was ist ein One-Shot?",
    "answers": [
@@ -7007,7 +7011,7 @@
   {
    "id": "f-199",
    "difficulty": 2,
-   "category": "manga",
+   "category": "kultur",
    "type": "multiple_choice",
    "question": "Womit erzeugen Mangaka traditionell Grautöne und Schattierungen?",
    "answers": [
@@ -7021,7 +7025,7 @@
   {
    "id": "o-121",
    "difficulty": 3,
-   "category": "manga",
+   "category": "isekai",
    "type": "multiple_choice",
    "question": "Welcher deutsche Verlag veröffentlicht „Solo Leveling“?",
    "answers": [
@@ -7035,7 +7039,7 @@
   {
    "id": "o-122",
    "difficulty": 3,
-   "category": "manga",
+   "category": "shonen",
    "type": "multiple_choice",
    "question": "In welchem Magazin erschien „Attack on Titan“ in Japan?",
    "answers": [

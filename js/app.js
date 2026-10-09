@@ -25,23 +25,39 @@ const STUFEN_WAHL = [
   { id: 'otaku', label: 'Otaku', stufen: [2, 3] },
 ];
 
+// Hintergrund- und Textfarbe je Kategorie (IDs wie in data/fragen.json)
 const FARBEN = {
-  shonen: ['#D7261E', '#FFFFFF'],
+  onepiece: ['#D7261E', '#FFFFFF'],
+  dragonball: ['#FF8A3D', '#141414'],
+  naruto: ['#F5B400', '#141414'],
+  shonen: ['#1F5FD1', '#FFFFFF'],
+  neu: ['#1C8C8C', '#FFFFFF'],
+  isekai: ['#6B3FA0', '#FFFFFF'],
+  klassiker: ['#141414', '#FFFFFF'],
   shojo: ['#FFB3CF', '#141414'],
-  filme: ['#1F5FD1', '#FFFFFF'],
-  manga: ['#141414', '#FFFFFF'],
-  neu: ['#FF8A3D', '#141414'],
-  kultur: ['#177A41', '#FFFFFF'],
+  filme: ['#177A41', '#FFFFFF'],
+  kultur: ['#8B5A2B', '#FFFFFF'],
 };
 
 const UNTERTITEL = {
-  shonen: 'Kämpfe, Freundschaft, große Ziele',
+  onepiece: 'Strohhutbande und Grand Line',
+  dragonball: 'Son-Goku bis Daima',
+  naruto: 'Konoha, Shippuden, Boruto',
+  shonen: 'Conan, Pokémon, AoT und mehr',
+  neu: 'Demon Slayer, JJK, Spy x Family\u00a0…',
+  isekai: 'Andere Welten, Magie, Dungeons',
+  klassiker: 'Death Note, Tokyo Ghoul, TV-Kult',
   shojo: 'Herzklopfen und Drama',
-  filme: 'Kino-Anime und ihre Macher',
-  manga: 'Zeichner, Verlage, Bände',
-  neu: 'Alles ab 2015',
-  kultur: 'Senpai, Bentō, Kotatsu\u00a0…',
+  filme: 'Ghibli, Shinkai, Kino-Hits',
+  kultur: 'Mangaka, Begriffe, Japan',
 };
+
+// Frühere Kategorie-IDs, die in alten Duell-Runden noch vorkommen können
+const ALTE_KATEGORIEN = { manga: 'Manga & Mangaka' };
+
+function kategorieName(id) {
+  return KATEGORIEN[id] ?? ALTE_KATEGORIEN[id] ?? id;
+}
 
 const RAENGE = [
   { name: 'Neuling', xp: 0 },
@@ -1807,7 +1823,7 @@ function duellScreen() {
     <div class="karte runden">
       ${s.zeilen.map((z) => `<div class="runden-zeile ${z.nr === d.runde && d.status === 'laeuft' ? 'aktiv' : ''}">
         <span class="punkte-reihe">${punktReihe(z.mein)}</span>
-        <span class="runden-kat">${z.kategorie ? esc(KATEGORIEN[z.kategorie]) : `Runde ${z.nr}`}</span>
+        <span class="runden-kat">${z.kategorie ? esc(kategorieName(z.kategorie)) : `Runde ${z.nr}`}</span>
         <span class="punkte-reihe">${punktReihe(z.sein, z.verdeckt)}</span>
       </div>`).join('')}
     </div>
@@ -1898,6 +1914,18 @@ function render() {
 
 // ---------- Start ----------
 
+// Statistik der früheren Kategorie „manga“ in „kultur“ überführen (Umstellung auf zehn Kategorien)
+function uebernimmAlteKategorien() {
+  const alt = profil.kategorien.manga;
+  if (!alt) return;
+  const ziel = (profil.kategorien.kultur ||= { richtig: 0, beantwortet: 0 });
+  ziel.richtig += alt.richtig;
+  ziel.beantwortet += alt.beantwortet;
+  delete profil.kategorien.manga;
+  profil.gespielteKategorien = profil.gespielteKategorien.map((k) => (k === 'manga' ? 'kultur' : k));
+  speichern();
+}
+
 async function init() {
   try {
     const [antwort] = await Promise.all([fetch('data/fragen.json'), speicherBereit()]);
@@ -1906,6 +1934,7 @@ async function init() {
     KATEGORIEN = daten.kategorien;
     SCHWIERIGKEIT = daten.schwierigkeiten;
     profil = ladeProfil(PROFIL_START);
+    uebernimmAlteKategorien();
     // Stimmungsbilder vorladen, damit beim Wechsel nichts flackert
     STIMMUNGEN.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });
     // Einladungslink? (…?einladung=CODE)

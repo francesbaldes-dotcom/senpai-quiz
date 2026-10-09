@@ -1,3 +1,12 @@
+-- Zehn Kategorien statt sechs, Duell-Wahl aus vier Vorschlägen.
+-- Die Fragen sind neu einsortiert (data/fragen.json, erzeugt mit scripts/fragen_sql.py);
+-- „manga“ ist in „kultur“ aufgegangen.
+
+create or replace function public.zufalls_kategorien() returns text[]
+language sql volatile set search_path = '' as $$
+  select array(select k from unnest(array['onepiece', 'dragonball', 'naruto', 'shonen', 'neu', 'isekai', 'klassiker', 'shojo', 'filme', 'kultur']) k order by random() limit 4)
+$$;
+
 insert into public.fragen (id, kategorie, schwierigkeit, typ) values
 ('e-001','onepiece',1,'multiple_choice'),
 ('e-002','naruto',1,'multiple_choice'),
@@ -462,3 +471,6 @@ insert into public.fragen (id, kategorie, schwierigkeit, typ) values
 ('f-202','filme',2,'multiple_choice'),
 ('o-124','filme',3,'multiple_choice')
 on conflict (id) do update set kategorie = excluded.kategorie, schwierigkeit = excluded.schwierigkeit, typ = excluded.typ;
+
+-- Laufende Duelle bekommen neue Vorschläge, damit keine alte Kategorie mehr zur Wahl steht.
+update public.duelle set kategorie_optionen = public.zufalls_kategorien() where status = 'laeuft';
