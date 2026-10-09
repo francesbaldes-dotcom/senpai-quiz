@@ -1607,10 +1607,11 @@ function ergebnisScreen() {
   const e = ui.ergebnis;
   let titel = e.modus === 'survival' ? 'GAME OVER' : e.modus === 'blitz' ? 'ZEIT UM!' : e.perfekt ? 'PERFEKT!' : 'RUNDE GESCHAFFT!';
   let wertung = e.modus === 'survival' || e.modus === 'blitz' ? `${e.richtig} richtig` : `${e.richtig} / ${e.gesamt} richtig`;
+  // Höchste Sternzahl der Reise, auch unten im Fuß gebraucht
+  const max = e.reise ? maxSterne(e.reise.durchgang) : 3;
   if (e.reise) {
     const s = e.reise.station;
     const ende = e.reise.bestanden && e.reise.stand.fertig && s === STATIONEN[STATIONEN.length - 1];
-    const max = maxSterne(e.reise.durchgang);
     if (!e.reise.bestanden) titel = s.boss ? 'BOSS GEWINNT' : 'GESCHEITERT';
     else if (ende) titel = e.reise.durchgang === 2 ? 'ZWEITE HEIMKEHR!' : 'HEIMKEHR!';
     else if (s.boss) titel = 'BOSS BESIEGT!';
@@ -1819,7 +1820,7 @@ function statistikScreen() {
     <div class="kennzahlen">
       <div class="kennzahl"><b>${zahl(profil.spiele)}</b><small>Runden</small></div>
       <div class="kennzahl"><b>${quote} %</b><small>Trefferquote</small></div>
-      <div class="kennzahl"><b>${aktuelleStreak()}</b><small>Tage in Folge</small></div>
+      <div class="kennzahl"><b>${aktuelleStreak()}</b><small>${aktuelleStreak() === 1 ? 'Tag' : 'Tage'} in Folge</small></div>
     </div>
     <div class="kennzahlen">
       <div class="kennzahl"><b>${zahl(profil.beantwortet)}</b><small>Antworten</small></div>
@@ -2092,6 +2093,7 @@ Object.assign(aktionen, {
       ui.online.fehler = 'Ein Einladungscode hat 6 Zeichen.';
       return render();
     }
+    ui.online.fehler = '';
     ui.online.einladung = code;
     zeigeEinladung();
   },
@@ -2131,6 +2133,7 @@ Object.assign(aktionen, {
     const duellId = ui.online.duellId;
     const ok = await frage({ titel: 'Duell aufgeben?', text: 'Dein Gegner gewinnt dann.', ja: 'Aufgeben', gefaehrlich: true, stimmung: 'traurig' });
     if (!ok || ui.online.duellId !== duellId) return;
+    ui.online.meldung = '';
     try {
       await online.aufgeben(duellId);
     } catch (fehler) {

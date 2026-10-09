@@ -83,7 +83,7 @@
       "multiple_choice",
       "true_false"
      ],
-     "senpai": "Jeder Held fängt irgendwo an. Meistens mit einer Frage, die er eigentlich wissen müsste. Drei Herzen hast du, pass gut auf sie auf."
+     "senpai": "Jeder Held fängt irgendwo an. Meistens mit einer Frage, die er eigentlich wissen müsste. Deine Herzen sind knapp, pass gut auf sie auf."
     },
     {
      "titel": "Der Marktplatz",
@@ -412,7 +412,7 @@
     },
     {
      "titel": "Der Sprung",
-     "senpai": "Jeder Held springt einmal. Du springst mit drei Herzen und ohne Fallschirm."
+     "senpai": "Jeder Held springt einmal. Du springst ohne Fallschirm, nur mit deinen Herzen."
     }
    ],
    "boss": {
