@@ -1735,7 +1735,7 @@ function reiseScreen() {
       html += `<div class="pfad">${stationen.map((s) => {
         const zustand = stationZustand(s);
         const seite = s.boss ? 'mitte' : nr++ % 2 ? 'rechts' : 'links';
-        const knoten = s.boss ? bossKnoten(zustand, 80) : stationsKnoten(stationSterne(s.id), zustand, 64);
+        const knoten = s.boss ? bossKnoten(zustand, 80) : stationsKnoten(stationSterne(s.id), zustand, 64, max);
         return `<button class="station ${seite} ${zustand} ${s.boss ? 'boss' : ''}" data-aktion="station" data-id="${s.id}" id="st-${s.id}" aria-label="${s.boss ? `Boss: ${esc(s.titel)}` : `Station ${s.nr}: ${esc(s.titel)}`}${zustand === 'gesperrt' ? ', gesperrt' : ''}">
           ${knoten}<span class="schild">${s.boss ? esc(s.titel) : s.nr}</span></button>`;
       }).join('')}</div>`;
