@@ -168,6 +168,17 @@ const ABZEICHEN_EMBLEME = {
     <path d="M30 4l2.7 6 6.3.7-4.7 4.3 1.3 6.4L30 18l-5.6 3.4 1.3-6.4L21 10.7l6.3-.7z" fill="${YELLOW}"/>
     <path d="M40 22l1.5 3.3 3.5.4-2.6 2.4.7 3.5-3.1-1.9-3.1 1.9.7-3.5-2.6-2.4 3.5-.4z" fill="${WHITE}"/>
     <path d="M16 26l1.5 3.3 3.5.4-2.6 2.4.7 3.5-3.1-1.9-3.1 1.9.7-3.5-2.6-2.4 3.5-.4z" fill="${WHITE}"/>`],
+  // Kompass: alle fünf Geheimpfade gefunden
+  pfadfinder: [TEAL, `
+    <circle cx="24" cy="24" r="20" fill="${WHITE}"/>
+    <path d="M24 4l7 20-7 20-7-20z" fill="${LIGHT}"/>
+    <path d="M24 4l7 20H17z" fill="${RED}"/>
+    <circle cx="24" cy="24" r="3.5" fill="${INK}" stroke="none"/>
+    <path d="M4 24h6M38 24h6"/>`],
+  // Zwei Sterne: die Zweite Reise beendet
+  zweitereise: [INK, `
+    <path d="M20 4l4.8 10.4 11.2 1.2-8.4 7.6 2.4 11.2L20 29.6l-10 5.8 2.4-11.2-8.4-7.6 11.2-1.2z" fill="${YELLOW}"/>
+    <path d="M35 24l3 6.5 7 .8-5.2 4.8 1.5 7-6.3-3.6-6.3 3.6 1.5-7-5.2-4.8 7-.8z" fill="${WHITE}"/>`],
 };
 
 export function abzeichenEmblem(id, groesse = 46) {
