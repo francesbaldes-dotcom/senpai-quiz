@@ -192,6 +192,7 @@ const ui = {
   ergebnis: null,
   melden: null, // offener „Frage melden“-Dialog: { grund, text, fehler, sendet }
   begriffe: false, // Lexikon auf der Startseite geöffnet
+  profilTab: 'statistik', // Profil-Tab: 'statistik' oder 'abzeichen'
   dialog: null, // offene Rückfrage von frage(): { titel, text, ja, nein, gefaehrlich, stimmung, loese }
   hinweis: null, // Meldung nach dem Teilen: { text, fehler }
   online: {
@@ -878,6 +879,10 @@ function schliesseDialog(antwort) {
 const aktionen = {
   nav(d) {
     ui.screen = d.ziel;
+    if (d.ziel === 'statistik' || d.ziel === 'abzeichen') {
+      ui.profilTab = d.ziel;
+      ui.screen = 'profil';
+    }
     ui.begriffe = false;
     ui.station = null;
     ui.hinweis = null;
@@ -886,6 +891,10 @@ const aktionen = {
     ui.online.linkZeigen = false;
     render();
     if (d.ziel === 'duelle' && ui.online.profil) ladeDuelle(true);
+  },
+  profilTab(d) {
+    ui.profilTab = d.tab;
+    render();
   },
   tagesquiz() {
     if (profil.tagesquiz?.datum === heute()) return;
@@ -1268,9 +1277,8 @@ function tabbar(aktiv) {
     ['reise', 'Reise', ICON.fahne, 'reise'],
     ['dojo', 'Dojo', ICON.torii, 'dojo'],
     ['duelle', 'Duelle', ICON.schwerter, 'duelle'],
-    ['profil', 'Profil', ICON.kopf, 'statistik'],
+    ['profil', 'Profil', ICON.kopf, 'profil'],
   ];
-  if (aktiv === 'statistik' || aktiv === 'abzeichen') aktiv = 'profil';
   return `<nav class="tabbar" aria-label="Hauptmenü">${tabs.map(([id, name, icon, ziel]) => `
     <button class="tab" data-aktion="nav" data-ziel="${ziel}" ${id === aktiv ? 'aria-current="page"' : ''}>${icon}${name}</button>`).join('')}
   </nav>`;
@@ -1865,7 +1873,7 @@ function stationDialog() {
   </div>`;
 }
 
-function statistikScreen() {
+function statistikInhalt() {
   const quote = profil.beantwortet ? Math.round((profil.richtig / profil.beantwortet) * 100) : 0;
   const zeilen = Object.entries(KATEGORIEN).map(([id, name]) => {
     const k = profil.kategorien[id] || { richtig: 0, beantwortet: 0 };
@@ -1875,9 +1883,7 @@ function statistikScreen() {
       <div class="balken"><span style="width:${prozent(anteil)};background:${FARBEN[id][0]}"></span></div>
     </div>`;
   }).join('');
-  return `<section class="screen mit-tabbar">
-    <div class="kopfzeile"><h1>Statistik</h1></div>
-    <div class="kennzahlen">
+  return `<div class="kennzahlen">
       <div class="kennzahl"><b>${zahl(profil.spiele)}</b><small>Runden</small></div>
       <div class="kennzahl"><b>${quote} %</b><small>Trefferquote</small></div>
       <div class="kennzahl"><b>${aktuelleStreak()}</b><small>${aktuelleStreak() === 1 ? 'Tag' : 'Tage'} in Folge</small></div>
@@ -1892,16 +1898,12 @@ function statistikScreen() {
       ${zeilen}
     </div>
     <p style="margin:0;font-size:13px;font-weight:700;text-align:center">${profil.gesehen.length} von ${FRAGEN.length} Fragen schon gesehen</p>
-    <button class="leise-knopf" data-aktion="zuruecksetzen">Fortschritt zurücksetzen</button>
-    ${tabbar('statistik')}
-  </section>`;
+    <button class="leise-knopf" data-aktion="zuruecksetzen">Fortschritt zurücksetzen</button>`;
 }
 
-function abzeichenScreen() {
+function abzeichenInhalt() {
   const anzahl = profil.abzeichen.length;
-  return `<section class="screen mit-tabbar">
-    <div class="kopfzeile"><h1>Abzeichen</h1></div>
-    <p style="margin:0;font-weight:700">${anzahl} von ${ABZEICHEN.length} freigeschaltet</p>
+  return `<p style="margin:0;font-weight:700">${anzahl} von ${ABZEICHEN.length} freigeschaltet</p>
     <div class="abzeichen-gitter">
       ${ABZEICHEN.map((ab) => {
         const offen = profil.abzeichen.includes(ab.id);
@@ -1910,15 +1912,35 @@ function abzeichenScreen() {
           <b>${esc(ab.name)}</b><small>${esc(ab.text)}</small>
         </div>`;
       }).join('')}
+    </div>`;
+}
+
+// Profil-Tab: Rang, dann Statistik oder Abzeichen per Segment-Umschaltung
+function profilScreen() {
+  const rg = rang(profil.xp);
+  const tab = ui.profilTab === 'abzeichen' ? 'abzeichen' : 'statistik';
+  return `<section class="screen mit-tabbar">
+    <div class="kopfzeile"><h1>Profil</h1><button class="icon-knopf" style="margin-left:auto" data-aktion="nav" data-ziel="info" aria-label="Info">${ICON.regler}</button></div>
+    <div class="rangzeile">
+      ${rangEmblem(rg.name, 40)}
+      <div class="rang">
+        <div><span class="display">Rang: ${esc(rg.name)}${reiseTitel() ? ` <span class="titel-chip">${esc(reiseTitel())}</span>` : ''}</span><small>${rg.bis ? `${zahl(profil.xp)} / ${zahl(rg.bis)} XP` : `${zahl(profil.xp)} XP`}</small></div>
+        <div class="balken"><span style="width:${prozent(rg.anteil)}"></span></div>
+      </div>
     </div>
-    ${tabbar('abzeichen')}
+    <div class="segmente profil-segmente" role="group" aria-label="Profil-Bereich">
+      <button data-aktion="profilTab" data-tab="statistik" aria-pressed="${tab === 'statistik'}">Statistik</button>
+      <button data-aktion="profilTab" data-tab="abzeichen" aria-pressed="${tab === 'abzeichen'}">Abzeichen</button>
+    </div>
+    ${tab === 'abzeichen' ? abzeichenInhalt() : statistikInhalt()}
+    ${tabbar('profil')}
   </section>`;
 }
 
 function infoScreen() {
   return `<section class="screen">
     <div class="kopfzeile">
-      <button class="icon-knopf" data-aktion="nav" data-ziel="start" aria-label="Zurück zum Start">${ICON.zurueck}</button>
+      <button class="icon-knopf" data-aktion="nav" data-ziel="profil" aria-label="Zurück zum Profil">${ICON.zurueck}</button>
       <h1>Über Senpai Quiz</h1>
     </div>
     <div class="karte info-text">
@@ -2493,8 +2515,10 @@ const SCREENS = {
   kategorie: kategorieScreen,
   frage: frageScreen,
   ergebnis: ergebnisScreen,
-  statistik: statistikScreen,
-  abzeichen: abzeichenScreen,
+  profil: profilScreen,
+  // Alte Bildschirm-IDs: Weiterleitung auf den Profil-Tab
+  statistik: () => { ui.profilTab = 'statistik'; ui.screen = 'profil'; return profilScreen(); },
+  abzeichen: () => { ui.profilTab = 'abzeichen'; ui.screen = 'profil'; return profilScreen(); },
   info: infoScreen,
   duelle: duelleScreen,
   suche: sucheScreen,
