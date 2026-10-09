@@ -337,6 +337,9 @@ export async function bossBild(d) {
     ctx.drawImage(boss, bx - bg / 2, by - bg / 2 - 10, bg, bg);
   }
 
+  // Senpai feuert neben dem Boss an
+  if (maskottchen) ctx.drawImage(maskottchen, W - 86 - 230, 500, 230, 230);
+
   // „BESIEGT“-Stempel schräg über dem Boss
   const stempel = d.heimkehr ? 'ERINNERUNG GERETTET' : 'BESIEGT';
   ctx.save();
@@ -379,8 +382,6 @@ export async function bossBild(d) {
   ctx.font = `900 26px ${BODY}`;
   ctx.fillText('STERNE', 202, 1156);
 
-  // Senpai klein rechts unten
-  if (maskottchen) ctx.drawImage(maskottchen, W - 100 - 215, 935, 215, 215);
 
   fussleiste(ctx, d.link);
   return alsDatei(leinwand, 'senpai-quiz-boss.png');
