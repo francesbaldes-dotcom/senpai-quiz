@@ -130,3 +130,13 @@ export async function ligaMelden(punkte) {
 export async function ligaStand(vorige = false) {
   return versuche(() => sb().rpc('liga_stand', { p_vorige: vorige }));
 }
+
+// Torii-Pfad: Wochenstand melden (der Server behält den höheren Stand)
+export async function toriiMelden(punkte) {
+  return versuche(() => sb().rpc('torii_melden', { p_punkte: punkte }));
+}
+
+// Bestenliste des Torii-Pfads (ich und alle Duellpartner), laufende oder vorige Woche
+export async function toriiStand(vorige = false) {
+  return versuche(() => sb().rpc('torii_stand', { p_vorige: vorige }));
+}

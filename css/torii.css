@@ -1,0 +1,114 @@
+/* ---------- Torii-Pfad (Wochen-Herausforderung, js/torii.js) ---------- */
+
+/* Kopfband wie die übrigen Bildschirme im Tusche-Look, in Rot */
+.screen.torii .kopfzeile {
+  min-height: 74px;
+  padding: 10px 14px;
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 var(--ink);
+  color: var(--white);
+  background: var(--red) url(../assets/start/karte-rot.webp) center / cover no-repeat;
+}
+.screen.torii .kopfzeile h1 { flex: 1; min-width: 0; font-size: 24px; line-height: 1.05; text-shadow: 2px 2px 0 var(--ink); }
+.screen.torii .kopfzeile .icon-knopf { color: var(--ink); }
+
+/* Laternen (Energie) */
+.ti-laternen { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; padding: 4px 8px; border: 2px solid var(--ink); border-radius: 12px; background: var(--white); color: var(--ink); }
+.ti-laternen .reihe { display: flex; gap: 1px; }
+.ti-laternen svg { width: 17px; height: 17px; }
+.ti-laternen small { font-size: 10px; font-weight: 900; white-space: nowrap; }
+
+/* Event-Karte */
+.ti-event { padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; background: var(--ink) url(../assets/start/karte-ink.webp) center / cover no-repeat; color: var(--white); }
+.ti-event .oben { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.ti-event .label { color: var(--yellow); }
+.ti-event .uhr { padding: 2px 10px; border: 2px solid var(--ink); border-radius: 999px; background: var(--white); color: var(--red); font-size: 12px; font-weight: 900; white-space: nowrap; }
+.ti-event .mitte { display: flex; align-items: center; gap: 12px; }
+.ti-event .maskottchen { width: 76px; height: 76px; flex-shrink: 0; filter: drop-shadow(2px 2px 0 var(--ink)); }
+.ti-event .werte { flex: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.ti-event .werte span { display: flex; flex-direction: column; align-items: center; padding: 6px 4px; border: 2px solid var(--white); border-radius: 14px; }
+.ti-event .werte b { font-family: var(--display); font-weight: 400; font-size: 24px; line-height: 1.1; color: var(--yellow); }
+.ti-event .werte small { font-size: 11px; font-weight: 700; }
+.ti-event .knopf-klein { align-self: stretch; }
+.ti-event.klein .gross { font-family: var(--display); font-weight: 400; font-size: 34px; color: var(--yellow); }
+
+/* Neun Tore als Raster */
+.ti-tore { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.ti-tor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-height: 140px;
+  padding: 8px 4px 8px;
+  border: 3px solid var(--ink);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 3px 3px 0 var(--ink);
+  font: inherit;
+  color: var(--ink);
+  text-align: center;
+  cursor: pointer;
+}
+.ti-tor:active:not([aria-disabled]) { transform: translate(3px, 3px); box-shadow: none; }
+.ti-tor .nr { position: absolute; left: 6px; top: 6px; width: 20px; height: 20px; border-radius: 50%; background: var(--ink); color: var(--white); font-size: 11px; font-weight: 900; display: flex; align-items: center; justify-content: center; }
+.ti-tor b { min-height: 28px; display: flex; align-items: center; padding: 0 8px 0 14px; font-size: 11px; font-weight: 900; line-height: 1.15; }
+.ti-tor .icon { position: relative; display: flex; }
+.ti-tor .schloss { position: absolute; right: -14px; top: -6px; width: 26px; height: 26px; border: 2px solid var(--ink); border-radius: 50%; background: var(--yellow); display: flex; align-items: center; justify-content: center; }
+.ti-tor .schloss svg { width: 15px; height: 15px; }
+.ti-tor .stand { font-size: 12px; font-weight: 900; display: flex; align-items: center; gap: 3px; }
+.ti-tor .stand svg { width: 12px; height: 12px; }
+.ti-tor .marken { display: flex; gap: 2px; }
+.ti-tor .marken span { display: flex; opacity: .25; filter: grayscale(1); }
+.ti-tor .marken span.an { opacity: 1; filter: none; }
+.ti-tor .marken svg { width: 15px; height: 15px; }
+.ti-tor.offen { background: var(--yellow); }
+.ti-tor.gemeistert { background: #E6F4EA; }
+.ti-tor.gesperrt { background: var(--muted); box-shadow: none; cursor: default; color: #6B665C; }
+.ti-tor.gesperrt .icon > svg { opacity: .45; filter: grayscale(1); }
+.ti-tor[aria-disabled]:not(.gesperrt) { cursor: default; }
+
+/* Schlüsselleiste: geöffnete Tore */
+.ti-schluesselleiste { display: flex; align-items: center; gap: 10px; padding: 8px 12px; }
+.ti-schluesselleiste .kreis { width: 36px; height: 36px; flex-shrink: 0; border: 2px solid var(--ink); border-radius: 50%; background: var(--yellow); display: flex; align-items: center; justify-content: center; }
+.ti-schluesselleiste .balken { flex: 1; }
+.ti-schluesselleiste .balken > span { background: var(--green); }
+.ti-schluesselleiste b { font-family: var(--display); font-weight: 400; font-size: 16px; white-space: nowrap; }
+.ti-schluesselleiste .ziel svg { width: 30px; height: 30px; }
+.ti-regeln { margin: 0; text-align: center; }
+
+/* Pfad mit 20 Feldern */
+.ti-pfad { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px; width: 100%; }
+.ti-feld { position: relative; aspect-ratio: 1; border: 2px solid var(--ink); border-radius: 50%; background: var(--white); display: flex; align-items: center; justify-content: center; }
+.ti-feld.voll { background: var(--green); }
+.ti-feld.voll.neu { background: #3FB56A; animation: ti-feld .5s ease-out both; }
+.ti-feld svg { width: 82%; height: 82%; }
+.ti-feld.belohnung:not(.voll) svg { opacity: .55; }
+.ti-pfad.klein { grid-template-columns: repeat(20, minmax(0, 1fr)); gap: 2px; margin-top: 4px; }
+.ti-pfad.klein .ti-feld { border-width: 1.5px; }
+.ti-pfad.klein .ti-feld.belohnung { transform: scale(1.25); z-index: 1; }
+@keyframes ti-feld { from { transform: scale(.4); } to { transform: scale(1); } }
+
+/* Startseite */
+.startkarte.torii { background-color: var(--ink); background-image: url(../assets/start/karte-ink.webp); }
+.startkarte.torii .titel { color: var(--white); }
+.ti-start-zeile { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.ti-start-zeile svg { width: 18px; height: 18px; }
+.ti-start-zeile b { font-family: var(--display); font-weight: 400; }
+.ti-start-zeile .uhr { margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: var(--white); color: var(--red); font-size: 11px; font-weight: 900; white-space: nowrap; }
+
+/* Ergebnis eines Laufs */
+.ti-ergebnis { padding: 18px 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.ti-ergebnis .maskottchen { width: 120px; height: 120px; }
+.ti-ergebnis h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 26px; line-height: 1.1; }
+.ti-ergebnis p { margin: 0; font-weight: 700; }
+.ti-ergebnis .xp { font-family: var(--display); font-size: 20px; color: var(--blue); }
+.ti-ergebnis-screen .erfolg > svg { width: 34px; height: 34px; flex-shrink: 0; }
+.ti-ergebnis-screen .unten .knopf svg.ti-laterne { width: 20px; height: 20px; }
+
+/* Bestenliste */
+.ti-liste { padding: 12px; }
+.ti-liste-leer { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.ti-liste-leer p { margin: 0; font-weight: 700; line-height: 1.4; }

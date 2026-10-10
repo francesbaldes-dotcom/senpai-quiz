@@ -8,6 +8,7 @@ import { kategorieIcon, abzeichenEmblem, rangEmblem, stationsKnoten, bossKnoten 
 import { tagesquizBild, bossBild, kannBildTeilen } from './teilen-bild.js';
 import { spielernameErlaubt, SPIELERNAME_VERBOTEN } from './spielername.js';
 import { ladeDojo, dojoEinrichten, dojoAktionen, dojoKarteStart, DOJO_SCREENS } from './dojo.js';
+import { toriiEinrichten, toriiAktionen, toriiKarteStart, toriiKopf, toriiRundeFertig, TORII_SCREENS } from './torii.js';
 
 const app = document.getElementById('app');
 
@@ -586,6 +587,9 @@ function neueRunde(modus, opts = {}) {
     fragen = mischen(FRAGEN.filter((f) => ['multiple_choice', 'emoji', 'true_false'].includes(f.type)));
   } else if (modus === 'duell') {
     fragen = opts.fragenIds.map((id) => FRAGEN.find((f) => f.id === id)).filter(Boolean);
+  } else if (modus === 'torii') {
+    fragen = opts.fragen;
+    reserve = opts.reserve ?? [];
   }
   ui.hinweis = null;
   ui.runde = {
@@ -766,6 +770,7 @@ function beendeRunde() {
   const r = ui.runde;
   if (!r) return;
   if (r.modus === 'duell') return duellRundeFertig(r);
+  if (r.modus === 'torii') return toriiRundeFertig(r);
   const feste = r.modus === 'klassisch' || r.modus === 'tages' || r.modus === 'reise';
   // Heldenreise: Nach dem dritten Fehler endet die Station vorzeitig, gezählt wird, was gespielt wurde
   const gesamt = feste && r.modus !== 'reise' ? r.fragen.length : r.beantwortet;
@@ -1079,6 +1084,13 @@ const aktionen = {
       if (!ok || ui.runde !== r) return;
       return duellRundeFertig(r);
     }
+    if (r.modus === 'torii') {
+      const ok = await frage({ titel: 'Lauf beenden?', text: 'Beantwortete Fragen zählen, die Laterne ist verbraucht.', ja: 'Beenden', nein: 'Weiterspielen', stimmung: 'panisch' });
+      if (!ok || ui.runde !== r) return;
+      stoppeTimer();
+      ui.melden = null;
+      return toriiRundeFertig(r);
+    }
     const ok = await frage({ titel: 'Runde beenden?', text: 'Der Fortschritt dieser Runde geht verloren.', ja: 'Beenden', nein: 'Weiterspielen', stimmung: 'panisch' });
     if (!ok || ui.runde !== r) return;
     stoppeTimer();
@@ -1231,7 +1243,7 @@ const aktionen = {
 };
 
 // Aktionen des Senpai Dojo (js/dojo.js), alle mit Vorsilbe „dojo“
-Object.assign(aktionen, dojoAktionen);
+Object.assign(aktionen, dojoAktionen, toriiAktionen);
 
 app.addEventListener('click', (e) => {
   const el = e.target.closest('[data-aktion]');
@@ -1419,6 +1431,8 @@ function startScreen() {
       <img class="maskottchen" src="assets/stimmung/jubelnd.webp" alt="">
     </button>
 
+    ${toriiKarteStart()}
+
     <div class="startkarten-reihe">
       <button class="karte startkarte halb duelle" data-aktion="nav" data-ziel="duelle">
         <span class="text">
@@ -1507,6 +1521,8 @@ function frageKopf(r) {
     fortschritt = `<b>${name} · Frage ${r.index + 1} von ${r.fragen.length}</b>${herzen(r)}`;
   } else if (r.modus === 'blitz') {
     fortschritt = `<b>Blitz · ${r.richtig} richtig</b>`;
+  } else if (r.modus === 'torii') {
+    fortschritt = toriiKopf(r);
   } else {
     const dots = r.fragen.map((_, i) => {
       const klasse = i < r.verlauf.length ? (r.verlauf[i] ? 'richtig' : 'falsch') : i === r.index ? 'jetzt' : '';
@@ -2592,6 +2608,7 @@ const SCREENS = {
   duellKategorie: duellKategorieScreen,
   einladung: einladungScreen,
   ...DOJO_SCREENS,
+  ...TORII_SCREENS,
 };
 
 let letzterScreen = null;
@@ -2643,6 +2660,7 @@ async function init() {
     profil.reise ||= { sterne: {}, durchgang: 1 };
     ui.durchgang = profil.reise.durchgang === 2 && zweiteReiseOffen() ? 2 : 1;
     uebernimmAlteKategorien();
+    toriiEinrichten({ profil: () => profil, speichern, render, esc, maskottchen, ICON, ui, frage, ereignis, mischen, seededZufall, neueRunde, onlineProfil: () => ui.online.profil, FRAGEN: () => FRAGEN, KATEGORIEN: () => KATEGORIEN });
     dojoEinrichten({ profil: () => profil, speichern, render, esc, maskottchen, tabbar, frage, ICON, ui, onlineProfil: () => ui.online.profil, serie: serieHeute, streak: aktuelleStreak, abzeichen: abzeichenVergeben, abzeichenEmblem });
     // Nur die Stimmungen vorladen, die während einer Frage wechseln; der Rest lädt bei Bedarf
     STIMMUNGEN_FRAGE.forEach((s) => { new Image().src = `assets/stimmung/${s}.webp`; });
