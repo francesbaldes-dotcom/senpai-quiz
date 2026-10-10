@@ -229,3 +229,8 @@
 .kette-karte .kette-frage { margin-top: 6px; font-size: 16px; font-weight: 700; }
 .kette-karte .kette-frage b { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 24px; padding: 0 8px; border: 2px solid var(--ink); border-radius: 10px; background: var(--yellow); }
 .dojo .modi { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* Anhören in der Abfrage */
+.dojo-frage .hoer-knopf.knopf-klein { align-self: center; margin-top: 4px; }
+.banner .banner-laut { display: inline-flex; vertical-align: middle; width: 30px; height: 30px; margin-left: 6px; box-shadow: none; }
+.banner .banner-laut svg { width: 16px; height: 16px; }

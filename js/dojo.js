@@ -251,7 +251,11 @@ function mischen(liste) {
 
 // ---------- Freischaltung ----------
 
+// Testphase: Dojo überall offen, ohne Kauf. Vor dem Store-Start auf false setzen!
+const TEST_FREI = true;
+
 export function dojoFrei() {
+  if (TEST_FREI) return true;
   const frei = profil().dojo?.frei;
   if (frei?.art === 'einmal') return true; // alte Kauf-Attrappe, gibt es im Store nicht
   if (frei?.bis && new Date(frei.bis) > new Date()) return true;
@@ -1426,9 +1430,9 @@ function dojoAbfrageScreen() {
         : a.art === 'bild'
           ? `<img class="vokabel-bild gross" src="${k.bild}" alt="">`
         : a.art === 'bauen'
-          ? `<span class="text">${app.esc(k.de)}</span><span class="romaji-klein">${app.esc(k.romaji)}</span>`
+          ? `<span class="text">${app.esc(k.de)}</span><span class="romaji-klein">${app.esc(k.romaji)}</span>${hoerKnopf()}`
         : vorne
-          ? `<span class="zeichen ${k.typ === 'kana' ? '' : 'wort'} ${k.typ === 'wort' ? 'romaji-gross' : ''}" ${k.typ === 'wort' ? '' : 'lang="ja"'}>${app.esc(vorderseite(k))}</span>`
+          ? `<span class="zeichen ${k.typ === 'kana' ? '' : 'wort'} ${k.typ === 'wort' ? 'romaji-gross' : ''}" ${k.typ === 'wort' ? '' : 'lang="ja"'}>${app.esc(vorderseite(k))}</span>${hoerKnopf()}`
           : `<span class="text">${app.esc(rueckseite(k))}</span>`}
     </div>
 
@@ -1486,6 +1490,11 @@ function tippForm(a) {
   </form>`;
 }
 
+// Kleiner Anhören-Knopf in der Abfrage (nur wo die japanische Seite ohnehin zu sehen ist)
+function hoerKnopf() {
+  return kannSprechen() ? `<button class="knopf hoer-knopf knopf-klein" data-aktion="dojoSprich">${ICON_LAUT} Anhören</button>` : '';
+}
+
 function ergebnisBanner(a) {
   const k = a.karte;
   const e = a.ergebnis;
@@ -1493,7 +1502,7 @@ function ergebnisBanner(a) {
   return `<div class="banner ${e.korrekt ? 'gut' : 'schlecht'}">
     <div class="text">
       <span class="display">${e.korrekt ? 'Richtig!' : 'Nicht ganz.'}</span>
-      <span>${JP(loesung)}</span>
+      <span>${JP(loesung)}${kannSprechen() && !k.nurLernen ? ` <button class="icon-knopf banner-laut" data-aktion="dojoSprich" aria-label="Noch einmal anhören">${ICON_LAUT}</button>` : ''}</span>
       ${e.korrekt && e.fach !== e.fachVorher ? `<span class="stufen-wechsel">${e.fachVorher >= 0 ? `${app.esc(STUFEN[e.fachVorher].name)} → ` : ''}<b>${app.esc(STUFEN[e.fach].name)}</b></span>` : ''}
       ${!e.korrekt || a.art === 'tippen' || k.typ === 'satz' ? `<p class="merk">${app.esc(k.typ === 'kana' ? k.merk : k.hinweis)}</p>` : ''}
     </div>
