@@ -531,6 +531,7 @@ function baueAufgabe(id, art) {
     const alle = mischen([k, ...andere]);
     a.optionen = alle.map((x) => (art === 'lesen' ? rueckseite(x) : art === 'schreiben' || art === 'bild' ? vorderseite(x) : k.typ === 'kana' ? vorderseite(x) : rueckseite(x)));
     a.loesung = alle.indexOf(k);
+    if (k.typ === 'wort' && (art === 'schreiben' || art === 'bild')) a.kanaOptionen = alle.map((x) => x.ja);
   }
   return a;
 }
@@ -1432,7 +1433,7 @@ function dojoAbfrageScreen() {
         : a.art === 'bauen'
           ? `<span class="text">${app.esc(k.de)}</span><span class="romaji-klein">${app.esc(k.romaji)}</span>${hoerKnopf()}`
         : vorne
-          ? `<span class="zeichen ${k.typ === 'kana' ? '' : 'wort'} ${k.typ === 'wort' ? 'romaji-gross' : ''}" ${k.typ === 'wort' ? '' : 'lang="ja"'}>${app.esc(vorderseite(k))}</span>${hoerKnopf()}`
+          ? `<span class="zeichen ${k.typ === 'kana' ? '' : 'wort'} ${k.typ === 'wort' ? 'romaji-gross' : ''}" ${k.typ === 'wort' ? '' : 'lang="ja"'}>${app.esc(vorderseite(k))}</span>${k.typ === 'wort' ? `<span class="kana-klein" lang="ja">${app.esc(k.ja)}</span>` : ''}${hoerKnopf()}`
           : `<span class="text">${app.esc(rueckseite(k))}</span>`}
     </div>
 
@@ -1454,7 +1455,7 @@ function antworten(a) {
       else zustand = 'blass';
     }
     return `<button class="antwort ${zustand}" data-aktion="dojoAntwort" data-i="${i}" ${a.ergebnis ? 'disabled' : ''}>
-      <span class="buchstabe">${i + 1}</span><span class="text ${japanisch ? 'jp' : ''}" ${japanisch ? 'lang="ja"' : ''}>${app.esc(o)}</span>
+      <span class="buchstabe">${i + 1}</span><span class="text ${japanisch ? 'jp' : ''}" ${japanisch ? 'lang="ja"' : ''}>${app.esc(o)}${a.kanaOptionen ? `<small class="kana-option" lang="ja">${app.esc(a.kanaOptionen[i])}</small>` : ''}</span>
     </button>`;
   }).join('')}</div>`;
 }
@@ -1498,7 +1499,7 @@ function hoerKnopf() {
 function ergebnisBanner(a) {
   const k = a.karte;
   const e = a.ergebnis;
-  const loesung = k.typ === 'kana' ? `${k.zeichen} = ${k.romaji}` : k.typ === 'wort' || k.typ === 'satz' ? `${k.romaji} · ${k.de}` : `${k.ja} · ${k.romaji} · ${k.de}`;
+  const loesung = k.typ === 'kana' ? `${k.zeichen} = ${k.romaji}` : `${k.ja} · ${k.romaji} · ${k.de}`;
   return `<div class="banner ${e.korrekt ? 'gut' : 'schlecht'}">
     <div class="text">
       <span class="display">${e.korrekt ? 'Richtig!' : 'Nicht ganz.'}</span>

@@ -232,5 +232,7 @@
 
 /* Anhören in der Abfrage */
 .dojo-frage .hoer-knopf.knopf-klein { align-self: center; margin-top: 4px; }
-.banner .banner-laut { display: inline-flex; vertical-align: middle; width: 30px; height: 30px; margin-left: 6px; box-shadow: none; }
+.banner .banner-laut { color: var(--ink); display: inline-flex; vertical-align: middle; width: 30px; height: 30px; margin-left: 6px; box-shadow: none; }
 .banner .banner-laut svg { width: 16px; height: 16px; }
+.dojo-antworten .kana-option { display: block; margin-top: 2px; font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 14px; font-weight: 700; opacity: .75; }
+.dojo-frage .zeichen.romaji-gross:not(.satz) + .kana-klein { font-size: 26px; color: var(--ink); }
