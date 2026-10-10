@@ -112,7 +112,7 @@ Voraussetzungen: Mac mit Xcode, Node.js 20 oder neuer, für den Store eine Mitgl
 
 Eingerichtet: App-Icon 1024 px (`assets/icon-1024.png`), Startbildschirm hell und dunkel (`assets/splash-2732*.png`), nur Hochformat, Sprache Deutsch, Export-Compliance (keine eigene Verschlüsselung), Privacy-Manifest `ios/App/App/PrivacyInfo.xcprivacy` (UserDefaults-Zugriff des Preferences-Plugins, Grund CA92.1).
 
-Noch offen für den Store: In-App-Kauf des Dojos (RevenueCat, siehe „Senpai Dojo“), AdMob für die Belohnungsvideos, Push-Benachrichtigungen für Duelle, Store-Texte und Screenshots.
+Noch offen für den Store: In App Store Connect die Abo-Produkte `de.senpaiquiz.dojo.monat` und `de.senpaiquiz.dojo.jahr` anlegen und mit einem Sandbox-Konto auf dem Gerät kaufen (lokal testet `ios/App/Products.storekit`); bei AdMob die echte App-ID (`GADApplicationIdentifier` in `Info.plist`) und die Anzeigen-ID (`WERBE_ID` in `js/werbung.js`) eintragen, bis dahin laufen Googles Test-IDs; Push-Benachrichtigungen für Duelle; Store-Texte, Screenshots und Vorschauvideo. Der Kaufstatus liegt auf dem Gerät (`profil.dojo.frei`) und wird über Apple wiederhergestellt; `profile.dojo_bis` auf dem Server bleibt für eine spätere Prüfung über App Store Server Notifications reserviert.
 
 ## Belohnungswerbung
 

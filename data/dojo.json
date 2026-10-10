@@ -126,7 +126,7 @@
       ["これはすしです。", "kore wa sushi desu", "Das hier ist Sushi.", "Sushi ist der Reis mit Essig, nicht der rohe Fisch."],
       ["みずをください。", "mizu o kudasai", "Wasser, bitte.", "o markiert das Objekt, kudasai = bitte geben. Damit bestellst du alles."],
       ["おちゃをください。", "ocha o kudasai", "Tee, bitte.", "ocha ist grüner Tee; schwarzer Tee heißt kōcha."],
-      ["らーめんはおいしい！", "rāmen wa oishii", "Ramen ist lecker!", "Ohne desu klingt es wie ein Ausruf unter Freunden."],
+      ["ラーメンはおいしい！", "rāmen wa oishii", "Ramen ist lecker!", "Ohne desu klingt es wie ein Ausruf unter Freunden."],
       ["さかなとにくです。", "sakana to niku desu", "Fisch und Fleisch.", "to = und, nur zwischen Dingen, nicht zwischen Sätzen."],
       ["いただきます。おいしいです。", "itadakimasu oishii desu", "Guten Appetit. Es ist lecker.", "Erst itadakimasu, dann essen, dann loben."]
     ] },
@@ -145,7 +145,7 @@
       ["わたしはせいとです。", "watashi wa seito desu", "Ich bin Schülerin.", "seito gilt für Schüler und Schülerin."],
       ["しゅくだいはなにですか。", "shukudai wa nani desu ka", "Was ist die Hausaufgabe?", "Die Frage, die in jedem Schul-Anime fällt."],
       ["これはけんのかばんです。", "kore wa ken no kaban desu", "Das hier ist Kens Tasche.", "no hängt den Besitzer vor das Ding: ken no kaban."],
-      ["ほんとでんわ。", "hon to denwa", "Ein Buch und ein Telefon.", "Zwei Dinge, mit to verbunden, fertig ist der Satz."],
+      ["かばんとほん。", "kaban to hon", "Eine Tasche und ein Buch.", "Zwei Dinge, mit to verbunden, fertig ist der Satz."],
       ["ぶかつはなにですか。", "bukatsu wa nani desu ka", "Was ist dein Club?", "Fast jeder Schüler ist in einem bukatsu, vom Sport bis zum Manga-Zirkel."],
       ["わたしのいえです。", "watashi no ie desu", "Das ist mein Zuhause.", "Das Thema (kore wa) darf wegfallen, wenn es klar ist."],
       ["ゆきはせいとですか。", "yuki wa seito desu ka", "Ist Yuki Schülerin?", "Frage = Aussage plus ka."]
@@ -165,7 +165,7 @@
       ["いまはあさです。", "ima wa asa desu", "Jetzt ist Morgen.", "asa = die Tageszeit, ohayō = der Gruß."],
       ["きょうはがっこうです。", "kyō wa gakkō desu", "Heute ist Schule.", "Zeitwort plus wa: kyō wa, ashita wa, kinō wa."],
       ["あしたはぶかつです。", "ashita wa bukatsu desu", "Morgen ist Club.", "ashita = morgen (der Tag), asa = der Morgen (Tageszeit)."],
-      ["きのうはらーめんでした。", "kinō wa rāmen deshita", "Gestern gab es Ramen.", "deshita ist die Vergangenheit von desu: war, gab es."],
+      ["きのうはラーメンでした。", "kinō wa rāmen deshita", "Gestern gab es Ramen.", "deshita ist die Vergangenheit von desu: war, gab es."],
       ["はやく、けん！", "hayaku ken", "Schnell, Ken!", "hayaku! ruft man, wenn jemand trödelt."],
       ["まいにちべんきょうです。", "mainichi benkyō desu", "Jeden Tag Lernen.", "mainichi steht einfach vorne, ohne Partikel."],
       ["よるはしゅくだいです。", "yoru wa shukudai desu", "Nachts gibt es Hausaufgaben.", "yoru = Nacht, abends auch ban."]
@@ -185,7 +185,7 @@
       ["わたしはうれしいです。", "watashi wa ureshii desu", "Ich bin froh.", "Adjektive auf -i brauchen kein „bin“, desu macht es nur höflich."],
       ["けんはかなしいです。", "ken wa kanashii desu", "Ken ist traurig.", "kanashii: traurig. Ohne desu wird es zum Ausruf."],
       ["ゆきはすしがすきです。", "yuki wa sushi ga suki desu", "Yuki mag Sushi.", "ga suki desu = mag. Das Gemochte bekommt ga, nicht o."],
-      ["ぼくはらーめんがだいすきです。", "boku wa rāmen ga daisuki desu", "Ich liebe Ramen.", "daisuki = sehr mögen, lieben. Auch für Menschen."],
+      ["ぼくはラーメンがだいすきです。", "boku wa rāmen ga daisuki desu", "Ich liebe Ramen.", "daisuki = sehr mögen, lieben. Auch für Menschen."],
       ["ぶかつはたのしいです。", "bukatsu wa tanoshii desu", "Der Club macht Spaß.", "tanoshii: lustig, macht Spaß."],
       ["それはこわいです。", "sore wa kowai desu", "Das da ist unheimlich.", "kowai heißt unheimlich und Angst haben zugleich."],
       ["わたしはにくがきらいです。", "watashi wa niku ga kirai desu", "Ich mag kein Fleisch.", "kirai ist stark, eher „hassen“. Höflicher: amari suki ja nai."],
@@ -208,7 +208,7 @@
       ["これはあたらしいほんです。", "kore wa atarashii hon desu", "Das hier ist ein neues Buch.", "Adjektive auf -i stehen direkt vor dem Nomen: atarashii hon."],
       ["あれはふるいいえです。", "are wa furui ie desu", "Das dort ist ein altes Haus.", "furui nur für Dinge; alte Menschen sind toshiyori."],
       ["すしはたかいです。", "sushi wa takai desu", "Sushi ist teuer.", "takai heißt hoch und teuer."],
-      ["らーめんはやすいです。", "rāmen wa yasui desu", "Ramen ist billig.", "yasui: billig, günstig."],
+      ["ラーメンはやすいです。", "rāmen wa yasui desu", "Ramen ist billig.", "yasui: billig, günstig."],
       ["きょうはあついです。", "kyō wa atsui desu", "Heute ist es heiß.", "atsui für Wetter und Dinge; samui nur fürs Wetter."],
       ["けんははやいです。", "ken wa hayai desu", "Ken ist schnell.", "hayai (schnell) und hayaku (schnell!) sind Verwandte."]
     ] },
