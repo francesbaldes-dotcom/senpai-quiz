@@ -6,12 +6,12 @@
 // Produkt-IDs unten sind die Kennungen, die in App Store Connect angelegt werden;
 // zum Testen im Simulator liegen sie in ios/App/Products.storekit.
 //
-// Rückgabe von kaufen(): { art, bis } bei Erfolg (bis = Ablauf als ISO-Datum,
-// null beim Einmalkauf), sonst null (abgebrochen oder fehlgeschlagen).
+// Rückgabe von kaufen(): { art, bis } bei Erfolg (bis = Ablauf der bezahlten
+// Periode als ISO-Datum), sonst null (abgebrochen oder fehlgeschlagen).
 
 export const ANGEBOTE = [
   { id: 'abo', produkt: 'de.senpaiquiz.dojo.monat', name: 'Monatsabo', preis: '2,99 €', je: 'pro Monat', text: 'Jederzeit kündbar, verlängert sich automatisch.', tage: 30 },
-  { id: 'einmal', produkt: 'de.senpaiquiz.dojo.lebenslang', name: 'Für immer', preis: '19,99 €', je: 'einmalig', text: 'Alle Lektionen, auch alle kommenden. Kein Abo.', tage: null },
+  { id: 'jahr', produkt: 'de.senpaiquiz.dojo.jahr', name: 'Jahresabo', preis: '19,99 €', je: 'pro Jahr', text: 'Fast die Hälfte günstiger als monatlich. Jederzeit kündbar.', tage: 365 },
 ];
 
 const ATTRAPPE_DAUER = 1.5; // Sekunden „Verbindung zum Store“
@@ -61,19 +61,18 @@ export async function preiseLaden() {
 function ausTransaktion(t) {
   const angebot = ANGEBOTE.find((a) => a.produkt === t.productIdentifier);
   if (!angebot || t.revocationDate) return null;
-  if (!angebot.tage) return { art: 'einmal', bis: null };
   const bis = t.expirationDate ?? ablauf(angebot);
-  return new Date(bis) > new Date() ? { art: 'abo', bis } : null;
+  return new Date(bis) > new Date() ? { art: angebot.id, bis } : null;
 }
 
-// Was gilt laut App Store gerade? (Einmalkauf vor Abo; null ohne gültigen Kauf)
+// Was gilt laut App Store gerade? (das Abo mit dem spätesten Ablauf; null ohne gültigen Kauf)
 export async function aktuelleKaeufe() {
   const s = store();
   if (!s) return null;
   try {
     const { purchases } = await s.getPurchases({ onlyCurrentEntitlements: true });
     const gueltig = purchases.map(ausTransaktion).filter(Boolean);
-    return gueltig.find((k) => k.art === 'einmal') ?? gueltig[0] ?? null;
+    return gueltig.sort((a, b) => new Date(b.bis) - new Date(a.bis))[0] ?? null;
   } catch (fehler) {
     console.warn('Store-Käufe:', fehler);
     return null;

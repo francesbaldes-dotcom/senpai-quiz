@@ -1,23 +1,7 @@
 {
   "identifier": "08207FD5-294C-44A7-85AB-A5620846AD86",
   "nonRenewingSubscriptions": [],
-  "products": [
-    {
-      "displayPrice": "19.99",
-      "familyShareable": false,
-      "internalID": "E2F45D46-B489-41FF-B556-805B2DFE3397",
-      "localizations": [
-        {
-          "description": "Alle Lektionen des Senpai Dojo, dauerhaft.",
-          "displayName": "Dojo für immer",
-          "locale": "de_DE"
-        }
-      ],
-      "productID": "de.senpaiquiz.dojo.lebenslang",
-      "referenceName": "Dojo für immer",
-      "type": "NonConsumable"
-    }
-  ],
+  "products": [],
   "settings": {
     "_applicationInternalID": "",
     "_developerTeamID": "",
@@ -38,7 +22,7 @@
           "codeOffers": [],
           "displayPrice": "2.99",
           "familyShareable": false,
-          "groupNumber": 1,
+          "groupNumber": 2,
           "internalID": "F09B8A5A-DCC8-4A9F-8FD3-521F497DB27A",
           "introductoryOffer": null,
           "localizations": [
@@ -51,6 +35,27 @@
           "productID": "de.senpaiquiz.dojo.monat",
           "recurringSubscriptionPeriod": "P1M",
           "referenceName": "Dojo Monatsabo",
+          "subscriptionGroupID": "15AA1515-F877-4BF5-8A39-9E6ECBDDB092",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "19.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "5EE41804-A718-4EC3-8493-50B9AE83EED1",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Alle Lektionen des Senpai Dojo, jährlich kündbar.",
+              "displayName": "Dojo Jahresabo",
+              "locale": "de_DE"
+            }
+          ],
+          "productID": "de.senpaiquiz.dojo.jahr",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "Dojo Jahresabo",
           "subscriptionGroupID": "15AA1515-F877-4BF5-8A39-9E6ECBDDB092",
           "type": "RecurringSubscription"
         }

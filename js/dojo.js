@@ -3,7 +3,7 @@
 // Eigenes Modul mit eigenen Bildschirmen und Aktionen; app.js bindet es über
 // dojoEinrichten() an (Profil, Speichern, Render, Bausteine). Die Inhalte
 // stehen in data/dojo.json. Das Dojo ist eine Kauf-Funktion: Die ersten
-// Lektionen sind frei, der Rest braucht Abo oder Einmalkauf (js/kauf.js).
+// Lektionen sind frei, der Rest braucht ein Monats- oder Jahresabo (js/kauf.js).
 //
 // Wiederholung nach FSRS (Free Spaced Repetition Scheduler, wie in Anki ab 23.10):
 // Jede Karte trägt Stabilität s (Tage, bis die Erinnerung auf 90 % fällt) und
@@ -253,7 +253,7 @@ function mischen(liste) {
 
 export function dojoFrei() {
   const frei = profil().dojo?.frei;
-  if (frei?.art === 'einmal') return true;
+  if (frei?.art === 'einmal') return true; // alte Kauf-Attrappe, gibt es im Store nicht
   if (frei?.bis && new Date(frei.bis) > new Date()) return true;
   const bis = app.onlineProfil?.()?.dojo_bis;
   return !!bis && new Date(bis) > new Date();
@@ -262,7 +262,7 @@ export function dojoFrei() {
 function freiText() {
   const frei = profil().dojo?.frei;
   if (frei?.art === 'einmal') return 'Für immer freigeschaltet';
-  if (frei?.bis && new Date(frei.bis) > new Date()) return `Abo läuft bis ${new Date(frei.bis).toLocaleDateString('de-DE')}`;
+  if (frei?.bis && new Date(frei.bis) > new Date()) return `${frei.art === 'jahr' ? 'Jahresabo' : 'Monatsabo'} läuft bis ${new Date(frei.bis).toLocaleDateString('de-DE')}`;
   if (dojoFrei()) return 'Freigeschaltet';
   return '';
 }
@@ -1184,7 +1184,7 @@ const aktionen = {
       if (ergebnis) {
         profil().dojo.frei = { ...ergebnis, seit: new Date().toISOString() };
         app.speichern();
-        dui.meldung = ergebnis.art === 'einmal' ? 'Das Dojo gehört dir. Für immer.' : 'Abo aktiv. Willkommen im Dojo!';
+        dui.meldung = ergebnis.art === 'jahr' ? 'Jahresabo aktiv. Ein ganzes Jahr Dojo, willkommen!' : 'Monatsabo aktiv. Willkommen im Dojo!';
         app.ui.screen = 'dojo';
       }
     } catch (fehler) {
@@ -1307,7 +1307,7 @@ function dojoScreen() {
 
     ${frei ? '' : `<div class="karte dojo-hinweis">
       <span class="label">Probe</span>
-      <p>Kapitel 1 und die Hiragana-Reihe A sind gratis. Alles andere schaltest du mit Abo oder Einmalkauf frei.</p>
+      <p>Kapitel 1 und die Hiragana-Reihe A sind gratis. Alles andere schaltest du mit einem Monats- oder Jahresabo frei.</p>
       <button class="knopf knopf-klein" data-aktion="dojoKauf">${app.ICON.schloss} Dojo freischalten</button>
     </div>`}
 
@@ -1591,12 +1591,12 @@ function dojoKaufScreen() {
       </ul>
       ${dui.fehler ? `<p class="fehler">${app.esc(dui.fehler)}</p>` : ''}
       ${kaufMoeglich() ? '' : '<p class="meldung">Kaufen geht nur in der iPhone-App. In der Web-Version kannst du die kostenlosen Lektionen spielen.</p>'}
-      ${ANGEBOTE.map((a) => `<button class="angebot ${a.id === 'einmal' ? 'empfohlen' : ''}" data-aktion="dojoKaufen" data-angebot="${a.id}" ${dui.kauft || !kaufMoeglich() ? 'disabled' : ''}>
+      ${ANGEBOTE.map((a) => `<button class="angebot ${a.id === 'jahr' ? 'empfohlen' : ''}" data-aktion="dojoKaufen" data-angebot="${a.id}" ${dui.kauft || !kaufMoeglich() ? 'disabled' : ''}>
         <span class="text"><b>${app.esc(a.name)}</b><small>${app.esc(a.text)}</small></span>
         <span class="preis"><b>${app.esc(a.preis)}</b><small>${app.esc(a.je)}</small></span>
       </button>`).join('')}
       <button class="leise-knopf" data-aktion="dojoWiederherstellen" ${dui.kauft ? 'disabled' : ''}>Käufe wiederherstellen</button>
-      <p class="kleingedruckt" style="margin:0;text-align:center">Das Monatsabo kostet 2,99 € pro Monat, wird über deine Apple-ID abgerechnet und verlängert sich automatisch, wenn du es nicht spätestens 24 Stunden vor Ablauf kündigst. Kündigen kannst du jederzeit in den iOS-Einstellungen unter Abonnements. Der Einmalkauf gilt dauerhaft. Es gelten die <a href="nutzungsbedingungen.html#dojo" target="_blank" rel="noopener">Nutzungsbedingungen</a> und die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
+      <p class="kleingedruckt" style="margin:0;text-align:center">Das Monatsabo kostet 2,99 € pro Monat, das Jahresabo 19,99 € pro Jahr. Beide werden über deine Apple-ID abgerechnet und verlängern sich automatisch, wenn du sie nicht spätestens 24 Stunden vor Ablauf kündigst. Kündigen kannst du jederzeit in den iOS-Einstellungen unter Abonnements. Es gelten die <a href="nutzungsbedingungen.html#dojo" target="_blank" rel="noopener">Nutzungsbedingungen</a> und die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
     </div>
   </section>`;
 }

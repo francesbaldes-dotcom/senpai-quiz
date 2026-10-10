@@ -2666,7 +2666,7 @@ async function init() {
 // Neuinstallation). Im Browser tun beide Funktionen nichts.
 async function storeAbgleichen() {
   const [preise, kauf] = await Promise.all([preiseLaden(), aktuelleKaeufe()]);
-  if (kauf && !(profil.dojo?.frei?.art === 'einmal')) {
+  if (kauf) {
     profil.dojo ||= {};
     profil.dojo.frei = { ...kauf, seit: profil.dojo.frei?.seit ?? new Date().toISOString() };
     speichern();
