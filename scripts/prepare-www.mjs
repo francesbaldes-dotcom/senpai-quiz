@@ -24,7 +24,7 @@ mkdirSync(www);
 for (const item of items) cpSync(join(root, item), join(www, item), { recursive: true });
 
 // Nicht in die App: Quelldateien, die nur fürs Repo gedacht sind
-for (const extra of ['assets/maskottchen-2160.webp', 'assets/splash-2732.png', 'assets/splash-2732-dark.png', 'assets/icon-1024.png']) {
+for (const extra of ['assets/maskottchen-2160.webp', 'assets/maskottchen-verwandlung.mp4', 'assets/maskottchen-bandana.mp4', 'assets/splash-2732.png', 'assets/splash-2732-dark.png', 'assets/icon-1024.png']) {
   rmSync(join(www, extra), { force: true });
 }
 

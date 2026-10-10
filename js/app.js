@@ -112,6 +112,7 @@ const ICON = {
   // Tab-Leiste: Fahne (Heldenreise), Torii (Dojo), Kopf (Profil)
   fahne: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V3M6 4h12l-3 4.5 3 4.5H6"/></svg>',
   torii: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5c3-1.4 15-1.4 18 0M6 5v16M18 5v16M5 10.5h14M12 6v4.5"/></svg>',
+  zahnrad: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg>',
   kopf: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4.2"/><path d="M4.5 20.5c.6-4.2 3.8-6.5 7.5-6.5s6.9 2.3 7.5 6.5"/></svg>',
 };
 
@@ -879,6 +880,33 @@ function schliesseDialog(antwort) {
 // ---------- Aktionen ----------
 
 const aktionen = {
+  // Easter Egg auf der Startseite: Senpai antippen, er verwandelt sich. Abwechselnd
+  // Goldform (aufladen, Blitz, goldene Haare) und Schwertkämpfer (Bandana binden, Schnitt,
+  // Narbe). Läuft nur über Klassen und Bildwechsel, ohne neues Rendern.
+  verwandlung() {
+    const held = document.querySelector('.held');
+    const bild = document.getElementById('held-bild');
+    if (!held || !bild || held.dataset.verwandlung) return;
+    ui.verwandlungen = (ui.verwandlungen || 0) + 1;
+    const a = ui.verwandlungen % 2
+      ? { phase1: 'laedt', bild1: 'aufladend', effekt: 'blitzt', phase2: 'gold', bild2: 'goldform' }
+      : { phase1: 'bindet', bild1: 'bandana-binden', effekt: 'schnitt', phase2: 'bandana', bild2: 'bandana' };
+    const vorher = bild.src;
+    held.dataset.verwandlung = a.phase2;
+    new Image().src = `assets/stimmung/${a.bild2}.webp`;
+    held.classList.add(a.phase1);
+    bild.src = `assets/stimmung/${a.bild1}.webp`;
+    setTimeout(() => held.classList.add(a.effekt), 1300);
+    setTimeout(() => {
+      held.classList.replace(a.phase1, a.phase2);
+      bild.src = `assets/stimmung/${a.bild2}.webp`;
+    }, 1450);
+    setTimeout(() => {
+      held.classList.remove(a.phase2, a.effekt);
+      bild.src = vorher;
+      delete held.dataset.verwandlung;
+    }, 5600);
+  },
   nav(d) {
     ui.screen = d.ziel;
     if (d.ziel === 'statistik' || d.ziel === 'abzeichen') {
@@ -1334,10 +1362,27 @@ function startScreen() {
   return `<section class="screen mit-tabbar start">
     <div class="held karte">
       <div class="speedlines"></div>
-      <div class="logo"><span class="senpai">SENPAI</span><span class="quiz">QUIZ</span></div>
-      <span class="fragen-zahl">${zahl(FRAGEN.length)} verschiedene Fragen</span>
-      ${maskottchen(erledigt ? 'daumenhoch' : 'entschlossen')}
-      <button class="sprechblase" data-aktion="nav" data-ziel="profil" aria-label="Zum Profil">${erledigt ? 'Gut gemacht!' : 'Bereit, Senpai?'}<small>${esc(rg.name)}${reiseTitel() ? ` · ${esc(reiseTitel())}` : ''} · ${zahl(profil.xp)} XP</small></button>
+      <div class="logo">
+        <span class="senpai">SENPAI</span>
+        <span class="quiz">QUIZ</span>
+        <span class="slogan">Teste dein Anime-Wissen!</span>
+      </div>
+      <button class="held-figur" data-aktion="verwandlung" aria-label="Senpai antippen">
+        ${maskottchen(erledigt ? 'daumenhoch' : 'katana', 'held-bild')}
+        ${'<i class="funke"></i>'.repeat(6)}
+      </button>
+      <div class="blitz"></div>
+    </div>
+
+    <div class="statusleiste karte">
+      <img class="avatar" src="assets/stimmung/cool.webp" alt="">
+      <button class="xp" data-aktion="nav" data-ziel="profil" aria-label="Zum Profil">
+        <span class="rang-schild">${esc(rg.name)}</span>
+        <span class="balken"><span style="width:${prozent(rg.anteil)}"></span></span>
+        <small>${rg.bis ? `${zahl(profil.xp)} / ${zahl(rg.bis)} XP` : `${zahl(profil.xp)} XP · höchster Rang`}</small>
+      </button>
+      <div class="serie" aria-label="Tägliche Serie">${ICON.flamme}<span><small>Serie</small><b>${streak === 1 ? '1 Tag' : `${streak} Tage`}</b></span></div>
+      <button class="zahnrad" data-aktion="nav" data-ziel="info" aria-label="Info und Einstellungen">${ICON.zahnrad}</button>
     </div>
 
     <div class="tageskarte karte">
@@ -1356,10 +1401,28 @@ function startScreen() {
     </div>
     ${hinweisBlock()}
 
-    <button class="knopf knopf-rot" data-aktion="nav" data-ziel="kategorie">${ICON.play} Klassisch spielen</button>
+    <button class="karte startkarte gross klassisch" data-aktion="nav" data-ziel="kategorie">
+      <span class="text">
+        <span class="titel">${ICON.torii}Klassisch spielen</span>
+        <small>Beweise dein Wissen und sammle XP!</small>
+      </span>
+      <span class="pfeil gelb">${ICON.weiter}</span>
+      <img class="maskottchen" src="assets/stimmung/jubelnd.webp" alt="">
+    </button>
+
+    <div class="startkarten-reihe">
+      <button class="karte startkarte halb duelle" data-aktion="nav" data-ziel="duelle">
+        <span class="text">
+          <span class="titel">${ICON.schwerter}Duelle</span>
+          <small>Fordere andere Spieler heraus!</small>
+        </span>
+        <span class="pfeil">${ICON.weiter}</span>
+        <img class="maskottchen" src="assets/stimmung/herausfordernd.webp" alt="">
+      </button>
+      ${reiseKarteStart()}
+    </div>
 
     ${dojoKarteStart()}
-    ${reiseKarteStart()}
 
     <div class="modi modi-klein">
       <button class="knopf" data-aktion="modus" data-modus="survival">${ICON.herzRosa}<span><b>Survival</b><small>3 Leben${profil.highscore.survival ? ` · Rekord ${profil.highscore.survival}` : ''}</small></span></button>
@@ -1762,14 +1825,13 @@ function reiseKarteStart() {
   if (stand.fertig) text = zweite ? 'Beide Reisen geschafft. Du bist eine Legende.' : 'Geschafft! Restliche Sterne holen oder Zweite Reise starten.';
   else if (stand.geschafft === 0) text = zweite ? 'Alles auf Fan und Otaku, nur zwei Herzen.' : '50 Stationen, 10 Bosse. Vom Neuling zur Legende.';
   else text = `Weiter bei ${n.boss ? `Boss ${n.kapitel.nr}` : n.nr} · ${n.kapitel.titel}${stand.sterne ? ` · ${stand.sterne} / ${stand.sterneMax} ★` : ''}`;
-  return `<button class="karte startkarte reise" data-aktion="nav" data-ziel="reise">
-    <img src="assets/stimmung/${zweite ? 'kaempferisch' : 'mentor'}.webp" alt="" class="maskottchen">
+  return `<button class="karte startkarte halb reise" data-aktion="nav" data-ziel="reise">
     <span class="text">
-      <span class="label">${zweite ? 'Zweite Reise' : 'Heldenreise'}</span>
-      <span class="display">${stand.geschafft === 0 ? (zweite ? 'Noch einmal, nur härter' : 'Dein Abenteuer beginnt') : `${stand.geschafft} von ${STATIONEN.length} Stationen`}</span>
-      <small>${esc(text)}</small>
+      <span class="titel">${ICON.fahne}${zweite ? 'Zweite Reise' : 'Heldenreise'}</span>
+      <small>${stand.geschafft === 0 ? (zweite ? 'Noch einmal, nur härter. ' : 'Dein Abenteuer beginnt. ') : `${stand.geschafft} von ${STATIONEN.length} Stationen · `}${esc(text)}</small>
     </span>
     <span class="pfeil">${ICON.weiter}</span>
+    <img src="assets/stimmung/${zweite ? 'kaempferisch' : 'mentor'}.webp" alt="" class="maskottchen">
   </button>`;
 }
 

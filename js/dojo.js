@@ -1230,14 +1230,13 @@ export function dojoKarteStart() {
   else if (faellig) text = `${faellig} ${faellig === 1 ? 'Karte' : 'Karten'} zum Wiederholen fällig`;
   else if (heuteZahl() < profil().dojo.ziel) text = `Tagesziel ${heuteZahl()} / ${profil().dojo.ziel}${empfohleneLektion() ? ` · weiter mit ${empfohleneLektion().titel}` : ''}`;
   else text = `Tagesziel geschafft · ${g.name}er Gürtel`;
-  return `<button class="karte startkarte dojo" data-aktion="nav" data-ziel="dojo">
-    ${guertelBild(g)}
+  return `<button class="karte startkarte gross dojo" data-aktion="nav" data-ziel="dojo">
     <span class="text">
-      <span class="label">Senpai Dojo</span>
-      <span class="display">Japanisch lernen</span>
-      <small>${app.esc(text)}</small>
+      <span class="titel">${app.ICON.torii}Dojo</span>
+      <small>Japanisch lernen. ${app.esc(text)}</small>
     </span>
     <span class="pfeil ${frei ? '' : 'schloss'}">${frei ? app.ICON.weiter : app.ICON.schloss}</span>
+    ${guertelBild(g)}
   </button>`;
 }
 
