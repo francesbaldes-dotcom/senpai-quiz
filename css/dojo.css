@@ -8,6 +8,7 @@
   border: 2px solid var(--ink);
   border-radius: 999px;
   background: var(--white);
+  color: var(--ink);
   font-size: 12px;
   font-weight: 900;
   white-space: nowrap;
