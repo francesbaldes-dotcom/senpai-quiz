@@ -412,11 +412,37 @@ function stimmenLaden() {
   speechSynthesis.addEventListener?.('voiceschanged', suche);
 }
 
+// Tonspuren: assets/dojo/ton/<slug>.m4a, erzeugt mit scripts/dojo_ton.py (Stimme Kyoko). Slug = Rōmaji, Makron → Doppelvokal
+const TON_PFAD = 'assets/dojo/ton/';
+let tonSpieler = null;
+
+function tonSlug(romaji) {
+  return String(romaji).toLowerCase()
+    .replace(/ā/g, 'aa').replace(/ī/g, 'ii').replace(/ū/g, 'uu').replace(/ē/g, 'ee').replace(/ō/g, 'oo')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function tonDatei(karte) {
+  if (karte.nurLernen) return null;
+  const slug = tonSlug(karte.romaji);
+  return slug ? `${TON_PFAD}${slug}.m4a` : null;
+}
+
+// Jede Karte mit Lesung hat eine Tonspur; die Sprachausgabe des Geräts ist nur noch Ersatz
 function kannSprechen() {
-  return !!stimme;
+  return true;
 }
 
 function sprich(karte) {
+  const url = tonDatei(karte);
+  if (!url) return sprichSynthese(karte);
+  tonSpieler?.pause();
+  tonSpieler = new Audio(url);
+  tonSpieler.onerror = () => sprichSynthese(karte);
+  tonSpieler.play().catch(() => sprichSynthese(karte));
+}
+
+function sprichSynthese(karte) {
   if (!stimme) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(karte.typ === 'kana' ? karte.zeichen : karte.ja);
