@@ -77,6 +77,21 @@
 .lernkarte .zeichen.wort { font-size: 44px; line-height: 1.15; overflow-wrap: anywhere; }
 .lernkarte .romaji { font-family: var(--display); font-size: 28px; line-height: 1; }
 .lernkarte .zeichen.romaji-gross, .dojo-frage .zeichen.romaji-gross { font-family: var(--display); font-weight: 400; font-size: 40px; letter-spacing: .01em; }
+/* Satzbau aus Wortkacheln */
+.lernkarte .zeichen.romaji-gross.satz, .dojo-frage .zeichen.romaji-gross.satz { font-size: 26px; line-height: 1.25; }
+.dojo-frage .kana-klein { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 16px; font-weight: 700; color: #4A463F; }
+.dojo-frage .hoer-knopf.knopf-klein { align-self: center; }
+.satzbau { display: flex; flex-direction: column; gap: 14px; }
+.satz-feld { display: flex; flex-wrap: wrap; gap: 8px; min-height: 64px; padding: 10px; border: 3px dashed var(--ink); border-radius: 16px; background: var(--paper); }
+.satz-feld.richtig { border-style: solid; background: #E6F4EA; }
+.satz-feld.falsch { border-style: solid; background: #FCE4E4; }
+.satz-feld .platzhalter { align-self: center; font-size: 13px; font-weight: 700; color: #6B665C; }
+.wortbank { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.wort-kachel { padding: 8px 14px; border: 3px solid var(--ink); border-radius: 14px; background: var(--white); box-shadow: 3px 3px 0 var(--ink); font: inherit; font-size: 16px; font-weight: 700; cursor: pointer; }
+.wort-kachel.jp { font-family: var(--display); font-weight: 400; font-size: 17px; }
+.wort-kachel:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
+.wort-kachel.leer { visibility: hidden; }
+.wort-kachel:disabled:not(.leer) { cursor: default; }
 .lernkarte .kana-klein { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 20px; font-weight: 700; color: #4A463F; }
 .lernkarte .bedeutung { font-size: 22px; font-weight: 900; line-height: 1.2; }
 .lernkarte .merk { margin: 0; padding: 12px 14px; border: 2px dashed var(--ink); border-radius: 14px; background: var(--paper); font-size: 15px; font-weight: 700; line-height: 1.4; }

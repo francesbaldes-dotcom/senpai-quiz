@@ -1,5 +1,5 @@
 {
-  "hinweis": "Senpai Dojo wie ein Sprachlehrbuch: Jedes Kapitel hat drei Schritte, die js/dojo.js aus den Wörtern baut: 1. Wörter (Rōmaji ↔ Deutsch, Karten w:romaji), 2. Zeichen (die neuen Kana dieser Wörter, höchstens 8 je Schritt, Karten h:ka / k:ka, dazu Wörter zusammensetzen), 3. Lesen (Kana → Deutsch, Karten v:romaji). Kapitel-Reihenfolge = Reihenfolge der Einführung der Zeichen. Wörter: [Japanisch, Rōmaji, Deutsch, Hinweis, optional Bildname in assets/dojo/]. gruppen = Kana-Reihen zum Nachschlagen: [Zeichen, Rōmaji, Eselsbrücke, optional true = nur lernen].",
+  "hinweis": "Senpai Dojo wie ein Sprachlehrbuch: Jedes Kapitel hat drei Schritte, die js/dojo.js aus den Daten baut: 1. Wörter (Rōmaji ↔ Deutsch, Karten w:romaji), 2. Sätze (aus Wortkacheln zusammensetzen, Japanisch → Deutsch und zurück, Karten s:romaji), 3. Lesen (Kana → Deutsch, Karten v:romaji). Wörter: [Japanisch, Rōmaji, Deutsch, Hinweis, optional Bildname in assets/dojo/]. Sätze: [Japanisch, Rōmaji mit Leerzeichen zwischen den Kacheln, Deutsch, Grammatik-Hinweis]. gruppen = Kana-Reihen als eigene Strecke: [Zeichen, Rōmaji, Eselsbrücke, optional true = nur lernen].",
   "guertel": [
     { "name": "Weiß", "ab": 0, "farbe": "#FFFFFF" },
     { "name": "Gelb", "ab": 20, "farbe": "#FFD23F" },
@@ -21,6 +21,14 @@
       ["さようなら", "sayōnara", "Auf Wiedersehen", "Klingt endgültig, unter Freunden sagt man ja ne."],
       ["いただきます", "itadakimasu", "Guten Appetit", "Wörtlich „ich empfange“, vor jedem Essen."],
       ["ごめん", "gomen", "Tut mir leid", "Höflich: gomen nasai. Sumimasen ist förmlicher."]
+    ], "saetze": [
+      ["こんにちは、ゆき。", "konnichiwa yuki", "Guten Tag, Yuki.", "Komma und Punkt stehen nicht auf den Kacheln. Yuki und Ken begleiten dich durch alle Kapitel."],
+      ["おはよう、けん。", "ohayō ken", "Guten Morgen, Ken.", "Unter Freunden reicht ohayō, höflich wäre ohayō gozaimasu."],
+      ["ありがとう、ゆき。", "arigatō yuki", "Danke, Yuki.", "Der Name kommt im Japanischen gern ans Ende."],
+      ["はい、すみません。", "hai sumimasen", "Ja, Entschuldigung.", "sumimasen passt fast immer: Entschuldigung, Verzeihung, hallo mal kurz."],
+      ["いいえ、ごめん。", "iie gomen", "Nein, tut mir leid.", "gomen ist locker, gomen nasai höflicher."],
+      ["おやすみ、けん。さようなら。", "oyasumi ken sayōnara", "Gute Nacht, Ken. Auf Wiedersehen.", "sayōnara klingt nach langem Abschied; unter Freunden sagt man eher ja ne."],
+      ["けん、いただきます！", "ken itadakimasu", "Ken, guten Appetit!", "itadakimasu sagt man selbst, bevor man isst."]
     ] },
     { "id": "v2", "titel": "Anrede & Anime-Begriffe", "text": "Senpai, Sensei, -chan und -kun: wer wen wie anspricht, und was ein Otaku ist.", "woerter": [
       ["せんぱい", "senpai", "Älterer Mitschüler, Mentor", "Jemand, der vor dir angefangen hat: Schule, Club, Firma."],
@@ -33,6 +41,14 @@
       ["なかま", "nakama", "Gefährten, Crew", "Das One-Piece-Wort schlechthin."],
       ["おたく", "otaku", "Fan, Nerd", "In Japan eher abwertend, im Westen stolz getragen."],
       ["ばか", "baka", "Dummkopf", "Das meistgehörte Schimpfwort im Anime."]
+    ], "saetze": [
+      ["ゆきはせんぱいです。", "yuki wa senpai desu", "Yuki ist eine Senpai.", "desu heißt „ist“ oder „bin“ und steht immer am Satzende. wa markiert, worum es geht."],
+      ["けんはこうはいです。", "ken wa kōhai desu", "Ken ist ein Kōhai.", "Kein Artikel im Japanischen: „ein“ oder „eine“ denkst du dir dazu."],
+      ["たなかせんせい、おはよう。", "tanaka-sensei ohayō", "Guten Morgen, Tanaka-sensei.", "sensei hängt wie -san direkt an den Namen."],
+      ["ゆきちゃん、ありがとう。", "yuki-chan arigatō", "Danke, Yuki-chan.", "-chan ist zärtlich, für Freundinnen, Kinder, Haustiere."],
+      ["けんくんはおたくです。", "ken-kun wa otaku desu", "Ken-kun ist ein Otaku.", "-kun ist die lockere Anrede für Jungen."],
+      ["ゆきとけんはなかまです。", "yuki to ken wa nakama desu", "Yuki und Ken sind Gefährten.", "to heißt „und“ zwischen zwei Dingen oder Namen."],
+      ["ばか！ごめん。", "baka gomen", "Dummkopf! Tut mir leid.", "baka ist je nach Ton Beleidigung oder Neckerei."]
     ] },
     { "id": "v14", "titel": "Ich, du, das", "text": "Watashi, boku, ore: schon das Wort für „ich“ verrät, wer spricht. Dazu Zeigewörter und Fragen.", "woerter": [
       ["わたし", "watashi", "ich (neutral)", "Höflich und für alle."],
@@ -45,6 +61,14 @@
       ["あれ", "are", "das dort", "Weit weg von beiden."],
       ["なに", "nani", "was", "Nani?! ist der Meme-Klassiker."],
       ["だれ", "dare", "wer", "Dare desu ka: wer ist das?"]
+    ], "saetze": [
+      ["わたしはゆきです。", "watashi wa yuki desu", "Ich bin Yuki.", "watashi wa … desu: so stellst du dich vor."],
+      ["ぼくはけんです。", "boku wa ken desu", "Ich bin Ken.", "boku sagt ein Junge, bescheiden und freundlich."],
+      ["あなたはせんぱいですか。", "anata wa senpai desu ka", "Bist du Senpai?", "ka am Satzende macht aus jedem Satz eine Frage, ganz ohne Umstellung."],
+      ["これはなにですか。", "kore wa nani desu ka", "Was ist das hier?", "kore = das hier (bei mir), sore = das da (bei dir), are = das dort (weit weg)."],
+      ["あれはだれですか。", "are wa dare desu ka", "Wer ist das dort?", "dare fragt nach Personen, nani nach Dingen."],
+      ["それはなに？", "sore wa nani", "Was ist das da?", "Ohne desu ka klingt die Frage locker, wie unter Freunden."],
+      ["きみはおたくですか。", "kimi wa otaku desu ka", "Bist du ein Otaku?", "kimi ist vertraulich; Fremde sprichst du lieber mit Namen an."]
     ] },
     { "id": "v8", "titel": "Zahlen 1 bis 10", "text": "Zählen auf Japanisch, von ichi bis jū. Praktisch bei jedem Kampf-Countdown.", "woerter": [
       ["いち", "ichi", "eins", "Ichiban: Nummer eins, das Beste."],
@@ -57,6 +81,14 @@
       ["はち", "hachi", "acht", "Hachikō, der treue Hund."],
       ["きゅう", "kyū", "neun", "Auch ku."],
       ["じゅう", "jū", "zehn", "Jūichi: elf (zehn-eins)."]
+    ], "saetze": [
+      ["いち、に、さん！", "ichi ni san", "Eins, zwei, drei!", "Der Countdown vor jedem Sprung."],
+      ["なな、はち、きゅう、じゅう。", "nana hachi kyū jū", "Sieben, acht, neun, zehn.", "nana und shichi heißen beide sieben; nana ist eindeutiger."],
+      ["さん、に、いち、ごー！", "san ni ichi gō", "Drei, zwei, eins, los!", "gō (go!) ist englisch, klingt aber wie die Fünf: ein beliebter Wortwitz."],
+      ["わたしはじゅうさいです。", "watashi wa jū sai desu", "Ich bin zehn Jahre alt.", "sai = Jahre alt. Zahl plus sai plus desu."],
+      ["けんはじゅうろくさいです。", "ken wa jū roku sai desu", "Ken ist sechzehn Jahre alt.", "Sechzehn = zehn sechs (jū roku). Zwanzig wäre ni jū."],
+      ["ゆきはじゅうごさいです。", "yuki wa jū go sai desu", "Yuki ist fünfzehn Jahre alt.", "Fünfzehn = zehn fünf. So baust du alle Zahlen bis 99."],
+      ["これはよんですか。", "kore wa yon desu ka", "Ist das hier eine Vier?", "yon und shi heißen beide vier; shi klingt wie „Tod“, deshalb meist yon."]
     ] },
     { "id": "v3", "titel": "Familie & Leute", "text": "Mutter, Vater, großer Bruder, Freunde: die Menschen um die Helden herum.", "woerter": [
       ["おかあさん", "okāsan", "Mutter", "So spricht man die eigene oder fremde Mutter an."],
@@ -69,6 +101,14 @@
       ["ひと", "hito", "Mensch, Person", "Auch in ano hito, „diese Person“."],
       ["こども", "kodomo", "Kind", "Mehrzahl: kodomotachi.", "kodomo"],
       ["かぞく", "kazoku", "Familie", "Watashi no kazoku: meine Familie.", "kazoku"]
+    ], "saetze": [
+      ["これはわたしのかぞくです。", "kore wa watashi no kazoku desu", "Das hier ist meine Familie.", "no verbindet: watashi no = mein, ken no = Kens."],
+      ["おかあさん、おはよう。", "okāsan ohayō", "Guten Morgen, Mama.", "okāsan sagt man zur eigenen Mutter und über die von anderen."],
+      ["おとうさんはせんせいです。", "otōsan wa sensei desu", "Mein Vater ist Lehrer.", "Japanisch lässt „mein“ oft weg, wenn es klar ist."],
+      ["ゆきはわたしのともだちです。", "yuki wa watashi no tomodachi desu", "Yuki ist meine Freundin.", "tomodachi gilt für Freund und Freundin."],
+      ["おにいちゃん、ありがとう。", "onīchan arigatō", "Danke, großer Bruder.", "onīchan ist die liebevolle Form, onīsan die höfliche."],
+      ["いもうとはこどもです。", "imōto wa kodomo desu", "Meine kleine Schwester ist ein Kind.", "imōto = kleine Schwester, otōto = kleiner Bruder."],
+      ["あれはおとうとです。", "are wa otōto desu", "Das dort ist mein kleiner Bruder.", "Auf Menschen zeigt man mit are nur aus der Ferne."]
     ] },
     { "id": "v6", "titel": "Essen", "text": "Reis, Ramen, Onigiri und „lecker!“. Dazu die ersten Katakana, weil Rāmen eckig geschrieben wird.", "woerter": [
       ["ごはん", "gohan", "Reis, Essen", "Heißt beides: Reis und Mahlzeit.", "gohan"],
@@ -81,6 +121,14 @@
       ["たべもの", "tabemono", "Essen, Lebensmittel", "Von taberu, essen."],
       ["にく", "niku", "Fleisch", "Yakiniku: gegrilltes Fleisch.", "niku"],
       ["さかな", "sakana", "Fisch", "Auch als Beilage zum Trinken.", "sakana"]
+    ], "saetze": [
+      ["おにぎりはおいしいです。", "onigiri wa oishii desu", "Onigiri sind lecker.", "oishii desu: so lobst du jedes Essen."],
+      ["これはすしです。", "kore wa sushi desu", "Das hier ist Sushi.", "Sushi ist der Reis mit Essig, nicht der rohe Fisch."],
+      ["みずをください。", "mizu o kudasai", "Wasser, bitte.", "o markiert das Objekt, kudasai = bitte geben. Damit bestellst du alles."],
+      ["おちゃをください。", "ocha o kudasai", "Tee, bitte.", "ocha ist grüner Tee; schwarzer Tee heißt kōcha."],
+      ["らーめんはおいしい！", "rāmen wa oishii", "Ramen ist lecker!", "Ohne desu klingt es wie ein Ausruf unter Freunden."],
+      ["さかなとにくです。", "sakana to niku desu", "Fisch und Fleisch.", "to = und, nur zwischen Dingen, nicht zwischen Sätzen."],
+      ["いただきます。おいしいです。", "itadakimasu oishii desu", "Guten Appetit. Es ist lecker.", "Erst itadakimasu, dann essen, dann loben."]
     ] },
     { "id": "v7", "titel": "Schule & Alltag", "text": "Schule, Club, Hausaufgaben: der Alltag, in dem die meisten Anime spielen.", "woerter": [
       ["がっこう", "gakkō", "Schule", "Der Schauplatz der meisten Anime.", "gakko"],
@@ -93,6 +141,14 @@
       ["ほん", "hon", "Buch", "Auch in Nihon, Japan: Ursprung der Sonne.", "hon"],
       ["でんわ", "denwa", "Telefon", "Denwa suru: anrufen.", "denwa"],
       ["かばん", "kaban", "Tasche", "Die Schultasche heißt randoseru.", "kaban"]
+    ], "saetze": [
+      ["わたしはせいとです。", "watashi wa seito desu", "Ich bin Schülerin.", "seito gilt für Schüler und Schülerin."],
+      ["しゅくだいはなにですか。", "shukudai wa nani desu ka", "Was ist die Hausaufgabe?", "Die Frage, die in jedem Schul-Anime fällt."],
+      ["これはけんのかばんです。", "kore wa ken no kaban desu", "Das hier ist Kens Tasche.", "no hängt den Besitzer vor das Ding: ken no kaban."],
+      ["ほんとでんわ。", "hon to denwa", "Ein Buch und ein Telefon.", "Zwei Dinge, mit to verbunden, fertig ist der Satz."],
+      ["ぶかつはなにですか。", "bukatsu wa nani desu ka", "Was ist dein Club?", "Fast jeder Schüler ist in einem bukatsu, vom Sport bis zum Manga-Zirkel."],
+      ["わたしのいえです。", "watashi no ie desu", "Das ist mein Zuhause.", "Das Thema (kore wa) darf wegfallen, wenn es klar ist."],
+      ["ゆきはせいとですか。", "yuki wa seito desu ka", "Ist Yuki Schülerin?", "Frage = Aussage plus ka."]
     ] },
     { "id": "v9", "titel": "Zeit", "text": "Jetzt, heute, morgen, gestern. Und „hayaku!“, wenn es mal wieder eilig ist.", "woerter": [
       ["いま", "ima", "jetzt", "Ima desu ka: jetzt?"],
@@ -105,6 +161,14 @@
       ["じかん", "jikan", "Zeit, Stunde", "Jikan ga nai: keine Zeit."],
       ["まつ", "matsu", "warten", "Matte! heißt warte!"],
       ["はやく", "hayaku", "schnell, beeil dich", "Der Klassiker vor dem Schulweg."]
+    ], "saetze": [
+      ["いまはあさです。", "ima wa asa desu", "Jetzt ist Morgen.", "asa = die Tageszeit, ohayō = der Gruß."],
+      ["きょうはがっこうです。", "kyō wa gakkō desu", "Heute ist Schule.", "Zeitwort plus wa: kyō wa, ashita wa, kinō wa."],
+      ["あしたはぶかつです。", "ashita wa bukatsu desu", "Morgen ist Club.", "ashita = morgen (der Tag), asa = der Morgen (Tageszeit)."],
+      ["きのうはらーめんでした。", "kinō wa rāmen deshita", "Gestern gab es Ramen.", "deshita ist die Vergangenheit von desu: war, gab es."],
+      ["はやく、けん！", "hayaku ken", "Schnell, Ken!", "hayaku! ruft man, wenn jemand trödelt."],
+      ["まいにちべんきょうです。", "mainichi benkyō desu", "Jeden Tag Lernen.", "mainichi steht einfach vorne, ohne Partikel."],
+      ["よるはしゅくだいです。", "yoru wa shukudai desu", "Nachts gibt es Hausaufgaben.", "yoru = Nacht, abends auch ban."]
     ] },
     { "id": "v5", "titel": "Gefühle", "text": "Froh, traurig, peinlich: so sagt man, was man fühlt, vom Blush bis zum Wutanfall.", "woerter": [
       ["うれしい", "ureshii", "froh, glücklich", "Spontane Freude."],
@@ -117,6 +181,15 @@
       ["さびしい", "sabishii", "einsam", "Auch samishii ausgesprochen."],
       ["はずかしい", "hazukashii", "peinlich", "Mit rotem Kopf im Anime."],
       ["おこる", "okoru", "wütend werden", "Okotta: ist wütend."]
+    ], "saetze": [
+      ["わたしはうれしいです。", "watashi wa ureshii desu", "Ich bin froh.", "Adjektive auf -i brauchen kein „bin“, desu macht es nur höflich."],
+      ["けんはかなしいです。", "ken wa kanashii desu", "Ken ist traurig.", "kanashii: traurig. Ohne desu wird es zum Ausruf."],
+      ["ゆきはすしがすきです。", "yuki wa sushi ga suki desu", "Yuki mag Sushi.", "ga suki desu = mag. Das Gemochte bekommt ga, nicht o."],
+      ["ぼくはらーめんがだいすきです。", "boku wa rāmen ga daisuki desu", "Ich liebe Ramen.", "daisuki = sehr mögen, lieben. Auch für Menschen."],
+      ["ぶかつはたのしいです。", "bukatsu wa tanoshii desu", "Der Club macht Spaß.", "tanoshii: lustig, macht Spaß."],
+      ["それはこわいです。", "sore wa kowai desu", "Das da ist unheimlich.", "kowai heißt unheimlich und Angst haben zugleich."],
+      ["わたしはにくがきらいです。", "watashi wa niku ga kirai desu", "Ich mag kein Fleisch.", "kirai ist stark, eher „hassen“. Höflicher: amari suki ja nai."],
+      ["ごめん、はずかしい。", "gomen hazukashii", "Tut mir leid, das ist peinlich.", "hazukashii: peinlich oder schüchtern, je nach Szene."]
     ] },
     { "id": "v13", "titel": "Eigenschaften", "text": "Groß und klein, neu und alt, heiß und kalt: Gegensatzpaare zum Beschreiben.", "woerter": [
       ["おおきい", "ōkii", "groß", "Ōkii inu: großer Hund."],
@@ -129,6 +202,15 @@
       ["おそい", "osoi", "langsam, spät", "Osoi yo: du bist spät dran."],
       ["あつい", "atsui", "heiß", "Atsui!: heiß!"],
       ["さむい", "samui", "kalt (Wetter)", "Kaltes Wasser ist tsumetai."]
+    ], "saetze": [
+      ["がっこうはおおきいです。", "gakkō wa ōkii desu", "Die Schule ist groß.", "Adjektiv plus desu, wie bei den Gefühlen."],
+      ["おにぎりはちいさいです。", "onigiri wa chiisai desu", "Das Onigiri ist klein.", "ōkii und chiisai: das erste Gegensatzpaar."],
+      ["これはあたらしいほんです。", "kore wa atarashii hon desu", "Das hier ist ein neues Buch.", "Adjektive auf -i stehen direkt vor dem Nomen: atarashii hon."],
+      ["あれはふるいいえです。", "are wa furui ie desu", "Das dort ist ein altes Haus.", "furui nur für Dinge; alte Menschen sind toshiyori."],
+      ["すしはたかいです。", "sushi wa takai desu", "Sushi ist teuer.", "takai heißt hoch und teuer."],
+      ["らーめんはやすいです。", "rāmen wa yasui desu", "Ramen ist billig.", "yasui: billig, günstig."],
+      ["きょうはあついです。", "kyō wa atsui desu", "Heute ist es heiß.", "atsui für Wetter und Dinge; samui nur fürs Wetter."],
+      ["けんははやいです。", "ken wa hayai desu", "Ken ist schnell.", "hayai (schnell) und hayaku (schnell!) sind Verwandte."]
     ] },
     { "id": "v12", "titel": "Verben", "text": "Gehen, kommen, sehen, essen: die zehn wichtigsten Tätigkeiten in der Grundform.", "woerter": [
       ["いく", "iku", "gehen", "Ikuzo! heißt: Los geht’s!"],
@@ -141,6 +223,15 @@
       ["わかる", "wakaru", "verstehen", "Wakatta: verstanden."],
       ["しる", "shiru", "wissen, kennen", "Shiranai: weiß ich nicht."],
       ["ある", "aru", "da sein, haben (Dinge)", "Für Lebewesen sagt man iru."]
+    ], "saetze": [
+      ["わたしはがっこうにいきます。", "watashi wa gakkō ni ikimasu", "Ich gehe zur Schule.", "-masu macht das Verb höflich: iku → ikimasu. ni = nach, zu."],
+      ["けんはすしをたべます。", "ken wa sushi o tabemasu", "Ken isst Sushi.", "taberu → tabemasu. o markiert, was gegessen wird."],
+      ["ゆきはおちゃをのみます。", "yuki wa ocha o nomimasu", "Yuki trinkt Tee.", "nomu → nomimasu."],
+      ["はい、わかります。", "hai wakarimasu", "Ja, ich verstehe.", "wakaru → wakarimasu. Das „ich“ fällt weg, wenn es klar ist."],
+      ["わたしはほんをみます。", "watashi wa hon o mimasu", "Ich schaue ein Buch an.", "miru → mimasu: sehen, schauen."],
+      ["おかあさんはきます。", "okāsan wa kimasu", "Mama kommt.", "kuru → kimasu ist unregelmäßig."],
+      ["わたしはせんせいにききます。", "watashi wa sensei ni kikimasu", "Ich frage den Lehrer.", "kiku heißt hören und fragen; ni zeigt, wen."],
+      ["かばんがあります。", "kaban ga arimasu", "Da ist eine Tasche.", "aru → arimasu: etwas ist da. Für Lebewesen sagt man imasu."]
     ] },
     { "id": "v11", "titel": "Natur & Welt", "text": "Himmel, Meer, Mond und Kirschblüte: die Bilder, die in jedem Opening vorkommen.", "woerter": [
       ["そら", "sora", "Himmel", "Auch ein beliebter Name.", "sora"],
@@ -153,6 +244,15 @@
       ["ひ", "hi", "Sonne, Tag, Feuer", "Je nach Kanji Sonne (日) oder Feuer (火).", "hi"],
       ["あめ", "ame", "Regen", "Mit anderer Betonung auch Bonbon.", "ame"],
       ["かぜ", "kaze", "Wind", "Kamikaze: Götterwind.", "kaze"]
+    ], "saetze": [
+      ["そらはおおきいです。", "sora wa ōkii desu", "Der Himmel ist groß.", "sora: Himmel. Blauer Himmel = aoi sora."],
+      ["さくらはちいさいはなです。", "sakura wa chiisai hana desu", "Die Kirschblüte ist eine kleine Blume.", "hana heißt Blume und Nase, der Ton unterscheidet sie."],
+      ["きょうはあめです。", "kyō wa ame desu", "Heute regnet es.", "Wörtlich: Heute ist Regen. ame heißt auch Bonbon."],
+      ["よるはつきとほしです。", "yoru wa tsuki to hoshi desu", "Nachts gibt es Mond und Sterne.", "tsuki: Mond, auch Monat."],
+      ["うみにいきます。", "umi ni ikimasu", "Ich gehe ans Meer.", "ni = Richtung oder Ziel."],
+      ["やまはたかいです。", "yama wa takai desu", "Der Berg ist hoch.", "takai: hoch, hier nicht teuer."],
+      ["かぜがきます。", "kaze ga kimasu", "Wind kommt auf.", "kaze heißt auch Erkältung."],
+      ["ひはあついです。", "hi wa atsui desu", "Die Sonne ist heiß.", "hi: Sonne, Tag, Feuer. Die Schrift unterscheidet sie."]
     ] },
     { "id": "v4", "titel": "Kampf & Abenteuer", "text": "Kraft, Schwert, Magie und Feind: der Wortschatz für Shōnen-Schlachten.", "woerter": [
       ["たたかう", "tatakau", "kämpfen", "Tatakai ist der Kampf."],
@@ -165,6 +265,14 @@
       ["つよい", "tsuyoi", "stark", "Gegenteil: yowai."],
       ["てき", "teki", "Feind, Gegner", "Auch im Sport."],
       ["まもる", "mamoru", "beschützen", "„Ich beschütze dich“: mamoru!"]
+    ], "saetze": [
+      ["わたしはゆうしゃです。", "watashi wa yūsha desu", "Ich bin ein Held.", "yūsha: der Held, die Heldin, in jedem Isekai."],
+      ["けんはつよいです。", "ken wa tsuyoi desu", "Ken ist stark.", "tsuyoi: stark, auch für Gegner und Getränke."],
+      ["これはかたなです。", "kore wa katana desu", "Das hier ist ein Katana.", "katana: das gebogene Schwert der Samurai."],
+      ["にんじゃはさむらいとたたかいます。", "ninja wa samurai to tatakaimasu", "Der Ninja kämpft gegen den Samurai.", "tatakau → tatakaimasu. to heißt hier „gegen“, „mit“."],
+      ["てきがきます！", "teki ga kimasu", "Der Feind kommt!", "Neue Dinge, die auftauchen, bekommen ga."],
+      ["まほうのちからです。", "mahō no chikara desu", "Das ist die Kraft der Magie.", "no verbindet: mahō no chikara, die Kraft der Magie."],
+      ["なかまをまもります。", "nakama o mamorimasu", "Ich beschütze meine Gefährten.", "mamoru → mamorimasu. Der Shōnen-Satz schlechthin."]
     ] },
     { "id": "v10", "titel": "Sätze aus dem Anime", "text": "Ganbatte, yatta, tadaima: ganze Ausdrücke, die du schon mitsprechen kannst.", "woerter": [
       ["がんばって", "ganbatte", "Gib dein Bestes!", "Ganbaru: sich anstrengen."],
@@ -177,6 +285,15 @@
       ["ただいま", "tadaima", "Ich bin wieder da", "Beim Heimkommen."],
       ["おかえり", "okaeri", "Willkommen zurück", "Die Antwort auf tadaima."],
       ["よかった", "yokatta", "Zum Glück! Gut so!", "Erleichterung."]
+    ], "saetze": [
+      ["けん、がんばって！", "ken ganbatte", "Ken, gib dein Bestes!", "ganbatte feuert an, ganbarimasu sagst du über dich selbst."],
+      ["だいじょうぶですか。", "daijōbu desu ka", "Alles in Ordnung?", "Antwort: daijōbu desu, alles gut."],
+      ["やった！すごい！", "yatta sugoi", "Geschafft! Großartig!", "yatta: ich hab es geschafft, sugoi: wow."],
+      ["いもうとはかわいいです。", "imōto wa kawaii desu", "Meine kleine Schwester ist süß.", "kawaii: süß, niedlich, das Wort, das jeder kennt."],
+      ["おかあさん、いってきます。", "okāsan ittekimasu", "Mama, ich gehe los.", "Antwort der Mutter: itterasshai."],
+      ["ただいま。おかえり。", "tadaima okaeri", "Ich bin wieder da. Willkommen zurück.", "Ein festes Paar: tadaima und okaeri."],
+      ["よかった、だいじょうぶ。", "yokatta daijōbu", "Zum Glück, alles in Ordnung.", "yokatta: Erleichterung, „gut so“."],
+      ["しかたがない。", "shikata ga nai", "Da kann man nichts machen.", "Der Satz der Gelassenheit, drei Kacheln lang."]
     ] },
     { "id": "v15", "titel": "Höflich & Herzlich", "text": "Dōzo, yoroshiku, otsukaresama: die kleinen Formeln, die Japanisch so freundlich machen.", "woerter": [
       ["どうぞ", "dōzo", "bitte (hier, nimm)", "Beim Anbieten."],
@@ -189,6 +306,15 @@
       ["おつかれさま", "otsukaresama", "Danke für die Mühe", "Nach Arbeit oder Training."],
       ["おめでとう", "omedetō", "Glückwunsch", "Tanjōbi omedetō: alles Gute zum Geburtstag."],
       ["きをつけて", "ki o tsukete", "Pass auf dich auf", "Beim Abschied."]
+    ], "saetze": [
+      ["おちゃをどうぞ。", "ocha o dōzo", "Bitte, nimm Tee.", "dōzo: bitte, wenn du etwas anbietest."],
+      ["どうも、せんぱい。", "dōmo senpai", "Danke, Senpai.", "dōmo ist ein lockeres Danke, auch ein kurzes Hallo."],
+      ["みずをおねがいします。", "mizu o onegaishimasu", "Wasser, bitte.", "onegaishimasu ist höflicher als kudasai."],
+      ["よろしくおねがいします。", "yoroshiku onegaishimasu", "Freut mich, auf gute Zusammenarbeit.", "Beim Kennenlernen und am Anfang jeder Zusammenarbeit."],
+      ["じゃね、ゆき。またね。", "ja ne yuki mata ne", "Bis dann, Yuki. Bis später.", "ja ne und mata ne: lockere Abschiede unter Freunden."],
+      ["いってらっしゃい、けん。", "itterasshai ken", "Komm gut wieder, Ken.", "Die Antwort auf ittekimasu."],
+      ["おつかれさま、せんせい。", "otsukaresama sensei", "Danke für die Mühe, Sensei.", "Nach der Arbeit, dem Training, der Prüfung."],
+      ["おめでとう！きをつけて。", "omedetō ki o tsukete", "Glückwunsch! Pass auf dich auf.", "omedetō gozaimasu ist die höfliche Form."]
     ] }
   ],
   "gruppen": [
