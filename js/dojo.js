@@ -54,6 +54,8 @@ export const STUFEN = [
 // Profil-Teil (profil.dojo). karten: { id: { f: Fach, bis: 'JJJJ-MM-TT' } }
 export const DOJO_PROFIL = { frei: null, karten: {}, lektionen: [], tage: {}, ziel: 10, fehler: { datum: null, ids: [] }, blitz: 0, wochen: {}, ligaOffen: 0, pruefungen: [], kette: 0 };
 
+const SCHRITT_KANA = 8; // höchstens so viele neue Zeichen je Zeichen-Schritt eines Kapitels
+
 let DATEN = null; // data/dojo.json
 let KARTEN = {}; // id → Karte
 let LEKTIONEN = []; // alle Lektionen in Reihenfolge, mit .gruppe und .karten (IDs)
@@ -77,27 +79,73 @@ const dui = {
 
 // ---------- Daten ----------
 
+// Lehrbuch-Aufbau: Jedes Kapitel wird zu drei Schritten, die aufeinander aufbauen.
+// 1. Wörter (Rōmaji ↔ Deutsch), 2. Zeichen (die neuen Kana dieser Wörter, dazu Wörter zusammensetzen),
+// 3. Lesen (Kana → Deutsch). Danach folgen die Kana-Reihen zum Nachschlagen; ihre Karten teilen sie sich mit den Kapiteln.
 export async function ladeDojo() {
   const antwort = await fetch('data/dojo.json');
   DATEN = await antwort.json();
   KARTEN = {};
   LEKTIONEN = [];
+  // Kana-Tabellen: Zeichen → Eintrag der Reihe
+  const info = {};
+  for (const g of DATEN.gruppen) for (const l of g.lektionen) for (const z of l.zeichen ?? []) info[z[0]] = { gruppe: g, eintrag: z };
+  const kanaKarte = (z, g, lektion) => {
+    const id = `${g.id === 'hiragana' ? 'h' : 'k'}:${z[0]}`;
+    KARTEN[id] ||= { id, typ: 'kana', schrift: g.titel.replace('-Reihen', ''), lektion, zeichen: z[0], romaji: z[1], merk: z[2], nurLernen: !!z[3] };
+    return id;
+  };
+  const bekannt = new Set(); // Zeichen, die ein früheres Kapitel eingeführt hat
+  const gruppen = [];
+  (DATEN.kapitel ?? []).forEach((kap, nr) => {
+    const gruppe = { id: kap.id, titel: `Kapitel ${nr + 1}: ${kap.titel}`, text: kap.text, lektionen: [] };
+    const basis = { kapitel: kap, gruppe, frei: !!kap.frei };
+    const schritt = (l) => { gruppe.lektionen.push(l); LEKTIONEN.push(l); return l; };
+    // 1. Wörter: Rōmaji ↔ Deutsch
+    const woerter = schritt({ ...basis, id: `${kap.id}-w`, art: 'woerter', schritt: 'Wörter lernen', titel: `${kap.titel} · Wörter`, woerter: kap.woerter, karten: [] });
+    for (const w of kap.woerter) {
+      const id = `w:${w[1]}`;
+      KARTEN[id] = { id, typ: 'wort', lektion: woerter, ja: w[0], romaji: w[1], de: w[2], hinweis: w[3], bild: w[4] ? `assets/dojo/${w[4]}.webp` : null };
+      woerter.karten.push(id);
+    }
+    let vorher = woerter;
+    // 2. Zeichen: die neuen Kana dieser Wörter, in Schritten von höchstens SCHRITT_KANA
+    const neu = [];
+    for (const w of kap.woerter) for (const c of Array.from(w[0])) if (info[c] && !bekannt.has(c) && !neu.includes(c)) neu.push(c);
+    const anzahl = Math.ceil(neu.length / SCHRITT_KANA);
+    const groesse = anzahl ? Math.ceil(neu.length / anzahl) : 0;
+    const gelernt = new Set(bekannt);
+    for (let i = 0; i < anzahl; i++) {
+      const teil = neu.slice(i * groesse, (i + 1) * groesse);
+      const l = schritt({ ...basis, id: `${kap.id}-z${i + 1}`, art: 'zeichen', schritt: anzahl > 1 ? `Zeichen ${i + 1} von ${anzahl}` : 'Zeichen lernen', titel: `${kap.titel} · Zeichen${anzahl > 1 ? ` ${i + 1}` : ''}`, braucht: vorher.id, zeichen: teil.map((c) => info[c].eintrag), karten: [], bauWoerter: [] });
+      for (const c of teil) {
+        l.karten.push(kanaKarte(info[c].eintrag, info[c].gruppe, l));
+        gelernt.add(c);
+      }
+      // Wörter des Kapitels, deren Zeichen jetzt alle bekannt sind, zum Zusammensetzen
+      l.bauWoerter = kap.woerter.filter((w) => Array.from(w[0]).every((c) => gelernt.has(c) || !info[c])).map((w) => `v:${w[1]}`);
+      vorher = l;
+    }
+    neu.forEach((c) => bekannt.add(c));
+    // 3. Lesen: Kana → Deutsch (die bisherigen Vokabelkarten, ID = Kapitel-ID, damit alter Fortschritt zählt)
+    const lesen = schritt({ ...basis, id: kap.id, art: 'lesen', schritt: 'Lesen & verstehen', titel: `${kap.titel} · Lesen`, braucht: vorher.id, woerter: kap.woerter, karten: [] });
+    for (const w of kap.woerter) {
+      const id = `v:${w[1]}`;
+      KARTEN[id] = { id, typ: 'vokabel', lektion: lesen, ja: w[0], romaji: w[1], de: w[2], hinweis: w[3], bild: w[4] ? `assets/dojo/${w[4]}.webp` : null };
+      lesen.karten.push(id);
+    }
+    gruppen.push(gruppe);
+  });
+  // Kana-Reihen zum Nachschlagen und Üben (Karten bleiben dem Kapitel zugeordnet, das sie eingeführt hat)
   for (const g of DATEN.gruppen) {
     for (const l of g.lektionen) {
-      const lektion = { ...l, gruppe: g, karten: [] };
-      for (const z of l.zeichen ?? []) {
-        const id = `${g.id === 'hiragana' ? 'h' : 'k'}:${z[0]}`;
-        KARTEN[id] = { id, typ: 'kana', schrift: g.titel, lektion, zeichen: z[0], romaji: z[1], merk: z[2], nurLernen: !!z[3] };
-        lektion.karten.push(id);
-      }
-      for (const w of l.woerter ?? []) {
-        const id = `v:${w[1]}`;
-        KARTEN[id] = { id, typ: 'vokabel', lektion, ja: w[0], romaji: w[1], de: w[2], hinweis: w[3], bild: w[4] ? `assets/dojo/${w[4]}.webp` : null };
-        lektion.karten.push(id);
-      }
+      const lektion = { ...l, gruppe: g, art: 'reihe', karten: [] };
+      for (const z of l.zeichen ?? []) lektion.karten.push(kanaKarte(z, g, lektion));
+      g.lektionen[g.lektionen.indexOf(l)] = lektion;
       LEKTIONEN.push(lektion);
     }
   }
+  DATEN.gruppen = [...gruppen, ...DATEN.gruppen];
 }
 
 export function dojoEinrichten(anbindung) {
@@ -235,8 +283,22 @@ function freiText() {
   return '';
 }
 
-function lektionOffen(l) {
+// Gekauft oder Probe-Kapitel
+function lektionGekauft(l) {
   return l.frei || dojoFrei();
+}
+
+// Spielbar: gekauft und der vorige Schritt des Kapitels ist abgeschlossen (schon fertige Schritte bleiben offen)
+function lektionOffen(l) {
+  if (!lektionGekauft(l)) return false;
+  if (!l.braucht) return true;
+  const fertig = profil().dojo.lektionen;
+  return fertig.includes(l.id) || fertig.includes(l.braucht);
+}
+
+// Der Schritt, der vor diesem kommt (für Sperrhinweise)
+function vorigerSchritt(l) {
+  return l.braucht ? LEKTIONEN.find((x) => x.id === l.braucht) ?? null : null;
 }
 
 // ---------- Lernstand ----------
@@ -385,8 +447,9 @@ const ICON_LAUT = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" s
 // ---------- Abfrage ----------
 
 // Anzeige-Texte einer Karte
+// Wort-Karten (Schritt 1) zeigen Rōmaji statt Kana
 function vorderseite(k) {
-  return k.typ === 'kana' ? k.zeichen : k.ja;
+  return k.typ === 'kana' ? k.zeichen : k.typ === 'wort' ? k.romaji : k.ja;
 }
 function rueckseite(k) {
   return k.typ === 'kana' ? k.romaji : k.de;
@@ -454,6 +517,8 @@ function starteRunde(art, ids, lektion = null) {
       if (kannSprechen() && Math.random() < HOEREN_ANTEIL) art = 'hoeren';
       aufgaben.push(baueAufgabe(id, art));
     });
+    // Zeichen-Schritt: zum Schluss die Kapitelwörter aus den gelernten Zeichen zusammensetzen
+    if (lektion?.bauWoerter?.length) mischen(lektion.bauWoerter).forEach((id) => aufgaben.push(baueAufgabe(id, 'bauen')));
   } else {
     ids.forEach((id) => aufgaben.push(baueAufgabe(id, aufgabenArt(id))));
   }
@@ -518,7 +583,7 @@ function werte(a, korrekt) {
     } else if (!r.gesehen.has(a.id)) {
       // falsche Karte noch einmal ans Ende der Runde, aber höchstens einmal
       r.gesehen.add(a.id);
-      r.aufgaben.push(baueAufgabe(a.id, a.art === 'tippen' ? 'tippen' : 'lesen'));
+      r.aufgaben.push(baueAufgabe(a.id, a.art === 'tippen' || a.art === 'bauen' ? a.art : 'lesen'));
     }
   }
   zaehleHeute(1);
@@ -909,7 +974,12 @@ const aktionen = {
   dojoLektion(d) {
     const l = LEKTIONEN.find((x) => x.id === d.id);
     if (!l) return;
-    if (!lektionOffen(l)) return aktionen.dojoKauf();
+    if (!lektionGekauft(l)) return aktionen.dojoKauf();
+    if (!lektionOffen(l)) {
+      dui.meldung = `Erst „${vorigerSchritt(l)?.schritt ?? 'den vorigen Schritt'}“ abschließen.`;
+      app.render();
+      return;
+    }
     dui.lektion = l;
     dui.schritt = 0;
     dui.meldung = '';
@@ -1186,7 +1256,7 @@ function dojoScreen() {
 
     ${frei ? '' : `<div class="karte dojo-hinweis">
       <span class="label">Probe</span>
-      <p>Reihe A und die ersten zehn Wörter sind gratis. Alles andere schaltest du mit Abo oder Einmalkauf frei.</p>
+      <p>Kapitel 1 mit Wörtern, Zeichen und Lesen ist gratis. Alles andere schaltest du mit Abo oder Einmalkauf frei.</p>
       <button class="knopf knopf-klein" data-aktion="dojoKauf">${app.ICON.schloss} Dojo freischalten</button>
     </div>`}
 
@@ -1211,13 +1281,17 @@ function lektionZeile(l) {
   const offen = lektionOffen(l);
   const empfohlen = empfohleneLektion() === l;
   const status = !offen ? 'gesperrt' : s.fertig ? 'fertig' : s.gelernt ? 'offen' : '';
-  const statusInhalt = !offen ? app.ICON.schloss : s.fertig ? app.ICON.haken : app.esc(String(LEKTIONEN.indexOf(l) + 1));
-  const vorschau = l.zeichen ? l.zeichen.slice(0, 5).map((z) => z[0]).join(' ') : `${l.woerter.length} Wörter`;
+  const nr = l.gruppe.lektionen.indexOf(l) + 1;
+  const statusInhalt = !offen ? app.ICON.schloss : s.fertig ? app.ICON.haken : app.esc(String(nr));
+  const vorschau = l.art === 'woerter' ? l.woerter.slice(0, 3).map((w) => w[1]).join(', ') + ' …'
+    : l.zeichen ? JP(l.zeichen.slice(0, 6).map((z) => z[0]).join(' '))
+    : JP(l.woerter.slice(0, 3).map((w) => w[0]).join(' '));
+  const wartet = lektionGekauft(l) && !offen ? `Erst „${vorigerSchritt(l)?.schritt ?? ''}“ abschließen` : '';
   return `<button class="lektion ${status}" data-aktion="dojoLektion" data-id="${l.id}" aria-label="${app.esc(l.titel)}${offen ? '' : ', gesperrt'}">
     <span class="status ${status}">${statusInhalt}</span>
     <span class="text">
-      <b>${app.esc(l.titel)}</b>
-      <small>${JP(vorschau)} · ${s.sitzt} / ${s.gesamt} ${s.gesamt === 1 ? 'sitzt' : 'sitzen'}</small>
+      <b>${app.esc(l.schritt ?? l.titel)}</b>
+      <small>${vorschau} · ${wartet ? app.esc(wartet) : `${s.sitzt} / ${s.gesamt} ${s.gesamt === 1 ? 'sitzt' : 'sitzen'}`}</small>
       ${stufenLeiste(l)}
       ${empfohlen ? '<span class="probe empfohlen">Empfohlen</span>' : l.frei && !dojoFrei() ? '<span class="probe">Gratis</span>' : ''}
     </span>
@@ -1236,11 +1310,15 @@ function dojoLernenScreen() {
 
     <div class="karte lernkarte">
       ${app.maskottchen('lesend')}
-      <span class="schrift">${app.esc(k.typ === 'kana' ? k.schrift : 'Vokabel')}${fach(k.id) >= 0 ? ` · <span class="stufe" style="--stufe:${STUFEN[fach(k.id)].farbe}">${app.esc(STUFEN[fach(k.id)].name)}</span>` : ''}</span>
+      <span class="schrift">${app.esc(k.typ === 'kana' ? k.schrift : k.typ === 'wort' ? 'Wort' : 'Lesen')}${fach(k.id) >= 0 ? ` · <span class="stufe" style="--stufe:${STUFEN[fach(k.id)].farbe}">${app.esc(STUFEN[fach(k.id)].name)}</span>` : ''}</span>
       ${k.bild ? `<img class="vokabel-bild" src="${k.bild}" alt="">` : ''}
-      <span class="zeichen ${k.typ === 'kana' ? '' : 'wort'}" lang="ja">${app.esc(vorderseite(k))}</span>
-      <span class="romaji">${app.esc(k.romaji)}</span>
-      ${k.typ === 'vokabel' ? `<span class="bedeutung">${app.esc(k.de)}</span>` : ''}
+      ${k.typ === 'wort'
+        ? `<span class="zeichen wort romaji-gross">${app.esc(k.romaji)}</span>
+           <span class="bedeutung">${app.esc(k.de)}</span>
+           <span class="kana-klein" lang="ja">${app.esc(k.ja)}</span>`
+        : `<span class="zeichen ${k.typ === 'kana' ? '' : 'wort'}" lang="ja">${app.esc(vorderseite(k))}</span>
+           <span class="romaji">${app.esc(k.romaji)}</span>
+           ${k.typ === 'vokabel' ? `<span class="bedeutung">${app.esc(k.de)}</span>` : ''}`}
       <p class="merk">${app.esc(k.typ === 'kana' ? k.merk : k.hinweis)}</p>
       ${kannSprechen() ? `<button class="knopf hoer-knopf" data-aktion="dojoSprich" data-id="${k.id}">${ICON_LAUT} Anhören</button>` : ''}
     </div>
@@ -1258,12 +1336,12 @@ function dojoLernenScreen() {
 }
 
 const AUFGABEN_TEXT = {
-  lesen: { kana: 'Welche Silbe ist das?', vokabel: 'Was heißt das?' },
-  schreiben: { kana: 'Welches Zeichen ist das?', vokabel: 'Wie schreibt man das?' },
-  tippen: { kana: 'Tippe die Lesung', vokabel: 'Tippe die Lesung (Rōmaji)' },
-  hoeren: { kana: 'Was hörst du?', vokabel: 'Was hörst du?' },
-  bauen: { kana: 'Setze zusammen', vokabel: 'Setze das Wort zusammen' },
-  bild: { kana: 'Was zeigt das Bild?', vokabel: 'Was zeigt das Bild?' },
+  lesen: { kana: 'Welche Silbe ist das?', vokabel: 'Was heißt das?', wort: 'Was heißt das?' },
+  schreiben: { kana: 'Welches Zeichen ist das?', vokabel: 'Wie schreibt man das?', wort: 'Wie sagt man das?' },
+  tippen: { kana: 'Tippe die Lesung', vokabel: 'Tippe die Lesung (Rōmaji)', wort: 'Tippe das Wort (Rōmaji)' },
+  hoeren: { kana: 'Was hörst du?', vokabel: 'Was hörst du?', wort: 'Was hörst du?' },
+  bauen: { kana: 'Setze zusammen', vokabel: 'Setze das Wort zusammen', wort: 'Setze das Wort zusammen' },
+  bild: { kana: 'Was zeigt das Bild?', vokabel: 'Was zeigt das Bild?', wort: 'Was zeigt das Bild?' },
 };
 
 function dojoAbfrageScreen() {
@@ -1271,7 +1349,7 @@ function dojoAbfrageScreen() {
   const a = aktuelleAufgabe();
   if (!r || !a) return dojoScreen();
   const k = a.karte;
-  const vorne = a.art === 'lesen' || a.art === 'tippen';
+  const vorne = a.art === 'lesen' || (a.art === 'tippen' && k.typ !== 'wort');
   const titel = r.art === 'lektion' ? r.lektion.titel : r.art === 'fehler' ? 'Fehler üben' : r.art === 'pruefung' ? `Prüfung: ${r.guertelZiel}` : 'Wiederholen';
   return `<section class="screen dojo">
     <div class="kopfzeile">
@@ -1292,7 +1370,7 @@ function dojoAbfrageScreen() {
         : a.art === 'bauen'
           ? `<span class="text">${app.esc(k.de)}</span><span class="romaji-klein">${app.esc(k.romaji)}</span>`
         : vorne
-          ? `<span class="zeichen ${k.typ === 'kana' ? '' : 'wort'}" lang="ja">${app.esc(vorderseite(k))}</span>`
+          ? `<span class="zeichen ${k.typ === 'kana' ? '' : 'wort'} ${k.typ === 'wort' ? 'romaji-gross' : ''}" ${k.typ === 'wort' ? '' : 'lang="ja"'}>${app.esc(vorderseite(k))}</span>`
           : `<span class="text">${app.esc(rueckseite(k))}</span>`}
     </div>
 
@@ -1304,8 +1382,8 @@ function dojoAbfrageScreen() {
 
 function antworten(a) {
   const k = a.karte;
-  const japanisch = a.art === 'schreiben' || a.art === 'bild' || (a.art === 'hoeren' && k.typ === 'kana');
-  const kurz = k.typ === 'kana' || japanisch;
+  const japanisch = k.typ !== 'wort' && (a.art === 'schreiben' || a.art === 'bild' || (a.art === 'hoeren' && k.typ === 'kana'));
+  const kurz = k.typ === 'kana' || japanisch || (k.typ === 'wort' && (a.art === 'schreiben' || a.art === 'bild'));
   return `<div class="antworten dojo-antworten ${kurz ? 'gitter' : ''}">${a.optionen.map((o, i) => {
     let zustand = '';
     if (a.ergebnis) {
@@ -1340,7 +1418,7 @@ function tippForm(a) {
 function ergebnisBanner(a) {
   const k = a.karte;
   const e = a.ergebnis;
-  const loesung = k.typ === 'kana' ? `${k.zeichen} = ${k.romaji}` : `${k.ja} · ${k.romaji} · ${k.de}`;
+  const loesung = k.typ === 'kana' ? `${k.zeichen} = ${k.romaji}` : k.typ === 'wort' ? `${k.romaji} · ${k.de}` : `${k.ja} · ${k.romaji} · ${k.de}`;
   return `<div class="banner ${e.korrekt ? 'gut' : 'schlecht'}">
     <div class="text">
       <span class="display">${e.korrekt ? 'Richtig!' : 'Nicht ganz.'}</span>

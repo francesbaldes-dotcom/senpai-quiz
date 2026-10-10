@@ -76,6 +76,8 @@
 .lernkarte .zeichen { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 96px; line-height: 1; font-weight: 700; }
 .lernkarte .zeichen.wort { font-size: 44px; line-height: 1.15; overflow-wrap: anywhere; }
 .lernkarte .romaji { font-family: var(--display); font-size: 28px; line-height: 1; }
+.lernkarte .zeichen.romaji-gross, .dojo-frage .zeichen.romaji-gross { font-family: var(--display); font-weight: 400; font-size: 40px; letter-spacing: .01em; }
+.lernkarte .kana-klein { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif; font-size: 20px; font-weight: 700; color: #4A463F; }
 .lernkarte .bedeutung { font-size: 22px; font-weight: 900; line-height: 1.2; }
 .lernkarte .merk { margin: 0; padding: 12px 14px; border: 2px dashed var(--ink); border-radius: 14px; background: var(--paper); font-size: 15px; font-weight: 700; line-height: 1.4; }
 .lernkarte .schrift { font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: #4A463F; }
