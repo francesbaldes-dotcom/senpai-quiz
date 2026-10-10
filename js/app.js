@@ -1457,7 +1457,7 @@ function kategorieScreen() {
       ${breit ? `<span class="kat-text"><b>${esc(name)}</b><small>${esc(unter)}</small></span>` : `<b>${esc(name)}</b><small>${esc(unter)}</small>`}
       ${kategorie === id ? `<span class="haken">${ICON.haken}</span>` : ''}
     </button>`;
-  return `<section class="screen">
+  return `<section class="screen kategorie">
     <div class="kopfzeile">
       <button class="icon-knopf" data-aktion="nav" data-ziel="start" aria-label="Zurück zum Start">${ICON.zurueck}</button>
       <h1>Kategorie wählen</h1>
@@ -1774,7 +1774,7 @@ function ergebnisScreen() {
       fuss = `<button class="knopf knopf-rot" data-aktion="reiseWeiter">${text} ${ICON.weiter}</button><div class="zweier">${zurKarte}${zweiter}</div>`;
     }
   }
-  return `<section class="screen">
+  return `<section class="screen ergebnis">
     <div class="ergebnis-held karte">
       <div class="speedlines"></div>
       <div class="titel"><span>${titel}</span></div>
@@ -1972,7 +1972,7 @@ function abzeichenInhalt() {
 function profilScreen() {
   const rg = rang(profil.xp);
   const tab = ui.profilTab === 'abzeichen' ? 'abzeichen' : 'statistik';
-  return `<section class="screen mit-tabbar">
+  return `<section class="screen mit-tabbar profil">
     <div class="kopfzeile"><h1>Profil</h1><button class="icon-knopf" style="margin-left:auto" data-aktion="nav" data-ziel="info" aria-label="Info">${ICON.regler}</button></div>
     <div class="rangzeile">
       ${rangEmblem(rg.name, 40)}
@@ -1993,7 +1993,7 @@ function profilScreen() {
 }
 
 function infoScreen() {
-  return `<section class="screen">
+  return `<section class="screen info">
     <div class="kopfzeile">
       <button class="icon-knopf" data-aktion="nav" data-ziel="profil" aria-label="Zurück zum Profil">${ICON.zurueck}</button>
       <h1>Über Senpai Quiz</h1>
@@ -2365,7 +2365,7 @@ function hinweise() {
 
 function accountScreen() {
   const o = ui.online;
-  return `<section class="screen mit-tabbar">
+  return `<section class="screen mit-tabbar duelle">
     <div class="kopfzeile"><h1>Duelle</h1></div>
     <div class="karte konto-karte">
       ${maskottchen(o.einladung ? 'herausfordernd' : 'winkend')}
@@ -2397,7 +2397,7 @@ function duellZeile(d) {
 function duelleScreen() {
   const o = ui.online;
   if (o.profil === undefined) {
-    return `<section class="screen mit-tabbar">
+    return `<section class="screen mit-tabbar duelle">
       <div class="kopfzeile"><h1>Duelle</h1></div>
       ${o.fehler
         ? `${hinweise()}<button class="knopf" data-aktion="onlineNeu">${ICON.nochmal} Nochmal versuchen</button>`
@@ -2416,7 +2416,7 @@ function duelleScreen() {
     : '');
   const link = `${appLink()}?einladung=${o.profil.einladungscode}`;
 
-  return `<section class="screen mit-tabbar">
+  return `<section class="screen mit-tabbar duelle">
     <div class="kopfzeile">
       <h1 style="flex:1">Duelle</h1>
       <button class="icon-knopf" data-aktion="aktualisieren" aria-label="Aktualisieren">${ICON.nochmal}</button>
@@ -2448,7 +2448,7 @@ function sucheScreen() {
           <button class="knopf knopf-klein" data-aktion="herausfordern" data-id="${p.id}">${ICON.schwerter} Herausfordern</button>
         </div>`).join('')}</div>`
     : '<p class="leer">Niemand gefunden. Stimmt der Spielername?</p>';
-  return `<section class="screen">
+  return `<section class="screen duelle">
     <div class="kopfzeile">
       <button class="icon-knopf" data-aktion="nav" data-ziel="duelle" aria-label="Zurück zu den Duellen">${ICON.zurueck}</button>
       <h1>Spieler suchen</h1>
@@ -2483,7 +2483,7 @@ function duellScreen() {
   const d = o.duelle.find((x) => x.id === o.duellId);
   const zurueck = `<button class="icon-knopf" data-aktion="nav" data-ziel="duelle" aria-label="Zurück zu den Duellen">${ICON.zurueck}</button>`;
   if (!d) {
-    return `<section class="screen"><div class="kopfzeile">${zurueck}<h1>Duell</h1></div>
+    return `<section class="screen duelle"><div class="kopfzeile">${zurueck}<h1>Duell</h1></div>
       ${hinweise()}<p class="leer">${o.laedt ? 'Lade Duell …' : 'Duell nicht gefunden.'}</p></section>`;
   }
   const s = duellSicht(d);
@@ -2493,7 +2493,7 @@ function duellScreen() {
   if (s.phase === 'warten') aktion = `<button class="knopf" data-aktion="aktualisieren">${ICON.nochmal} Aktualisieren</button>`;
   if (s.phase === 'ende') aktion = `<button class="knopf knopf-rot" data-aktion="herausfordern" data-id="${s.gegnerId}">${ICON.schwerter} Revanche</button>`;
 
-  return `<section class="screen">
+  return `<section class="screen duelle">
     <div class="kopfzeile">${zurueck}<h1>Duell</h1></div>
     <div class="karte duell-kopf">
       <div class="seite"><span class="label">Du</span><b>${esc(o.profil.spielername)}</b></div>
@@ -2521,7 +2521,7 @@ function duellKategorieScreen() {
   const d = o.duelle.find((x) => x.id === o.duellId);
   if (!d) return duellScreen();
   const s = duellSicht(d);
-  return `<section class="screen">
+  return `<section class="screen duelle">
     <div class="kopfzeile">
       <button class="icon-knopf" data-aktion="nav" data-ziel="duell" aria-label="Zurück zum Duell">${ICON.zurueck}</button>
       <h1>Kategorie wählen</h1>
@@ -2541,7 +2541,7 @@ function duellKategorieScreen() {
 function einladungScreen() {
   const gegner = ui.online.einladungProfil;
   if (!gegner) return duelleScreen();
-  return `<section class="screen">
+  return `<section class="screen duelle">
     <div class="karte konto-karte">
       ${maskottchen('herausfordernd')}
       <h2>${esc(gegner.spielername)} fordert dich heraus!</h2>

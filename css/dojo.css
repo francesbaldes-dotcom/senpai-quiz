@@ -159,7 +159,8 @@
 /* Tagesziel */
 .tagesziel { padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
 .tagesziel .oben { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-.tagesziel .stand { display: inline-flex; align-items: center; gap: 4px; font-family: var(--display); font-size: 16px; }
+.tagesziel .stand { display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0; white-space: nowrap; font-family: var(--display); font-size: 15px; }
+.tagesziel .oben .label { min-width: 0; }
 .tagesziel .balken { height: 12px; }
 .tagesziel .balken span { background: var(--red); }
 .tagesziel .unten-zeile { display: flex; justify-content: space-between; align-items: center; gap: 10px; }

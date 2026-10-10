@@ -22,8 +22,10 @@ body {
   margin: 0;
   min-height: 100dvh;
   background-color: var(--paper);
-  background-image: radial-gradient(rgba(20, 20, 20, .10) 1.2px, transparent 1.5px);
-  background-size: 9px 9px;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cg fill='%23F4A6C1' fill-opacity='.4'%3E%3Cellipse cx='40' cy='60' rx='9' ry='5' transform='rotate(-30 40 60)'/%3E%3Cellipse cx='250' cy='30' rx='8' ry='4.5' transform='rotate(20 250 30)'/%3E%3Cellipse cx='300' cy='180' rx='9' ry='5' transform='rotate(-50 300 180)'/%3E%3Cellipse cx='120' cy='230' rx='8' ry='4.5' transform='rotate(35 120 230)'/%3E%3Cellipse cx='200' cy='300' rx='9' ry='5' transform='rotate(-15 200 300)'/%3E%3Cellipse cx='30' cy='290' rx='7' ry='4' transform='rotate(60 30 290)'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(rgba(20, 20, 20, .10) 1.2px, transparent 1.5px);
+  background-size: 320px 320px, 9px 9px;
   color: var(--ink);
   font-family: var(--body);
   font-weight: 500;
@@ -112,6 +114,23 @@ button { font: inherit; color: inherit; }
 
 .kopfzeile { display: flex; align-items: center; gap: 14px; }
 .kopfzeile h1 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 26px; }
+/* Bemalte Kopfzeilen: jeder Bereich hat seine Farbe wie die Karten der Startseite */
+.screen.kategorie .kopfzeile, .screen.profil .kopfzeile, .screen.info .kopfzeile, .screen.duelle .kopfzeile, .screen.reise .kopfzeile, .screen.dojo .kopfzeile {
+  min-height: 74px;
+  padding: 10px 14px;
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 var(--ink);
+  color: var(--white);
+  background: var(--ink) url(../assets/start/karte-ink.webp) center / cover no-repeat;
+}
+.screen.kategorie .kopfzeile h1, .screen.profil .kopfzeile h1, .screen.info .kopfzeile h1, .screen.reise .kopfzeile h1, .screen.dojo .kopfzeile h1 { text-shadow: 2px 2px 0 var(--ink); }
+.screen.kategorie .kopfzeile h1, .screen.profil .kopfzeile h1, .screen.info .kopfzeile h1, .screen.duelle .kopfzeile h1, .screen.reise .kopfzeile h1, .screen.dojo .kopfzeile h1 { font-size: 24px; line-height: 1.05; }
+.screen.kategorie .kopfzeile { background-color: var(--red); background-image: url(../assets/start/karte-rot.webp); }
+.screen.reise .kopfzeile { background-color: #1C8C8C; background-image: url(../assets/start/karte-tuerkis.webp); }
+.screen.dojo .kopfzeile { background-color: #6B3FA0; background-image: url(../assets/start/karte-lila.webp); }
+.screen.duelle .kopfzeile { background-color: var(--yellow); background-image: url(../assets/start/karte-gelb.webp); color: var(--ink); }
+.screen.kategorie .kopfzeile .icon-knopf, .screen.profil .kopfzeile .icon-knopf, .screen.info .kopfzeile .icon-knopf, .screen.duelle .kopfzeile .icon-knopf, .screen.reise .kopfzeile .icon-knopf, .screen.dojo .kopfzeile .icon-knopf { color: var(--ink); }
 
 .balken {
   height: 12px;
@@ -146,15 +165,20 @@ button { font: inherit; color: inherit; }
 
 .held {
   position: relative;
-  height: 252px;
+  height: calc(276px + env(safe-area-inset-top));
+  margin: calc(-16px - env(safe-area-inset-top)) -20px 0;
   flex-shrink: 0;
   overflow: hidden;
+  border: 0;
+  border-bottom: 3px solid var(--ink);
+  border-radius: 0;
+  box-shadow: none;
   background: var(--paper) url(../assets/start/held.webp) center / cover no-repeat;
 }
 .held .speedlines { position: absolute; inset: 0; opacity: 0; transition: opacity .3s; }
 .held.gold .speedlines, .held.bindet .speedlines, .held.bandana .speedlines { opacity: .85; }
 /* Pinsel-Logo: SENPAI in Tusche, QUIZ auf rotem Pinselstrich, Slogan auf schwarzem Streifen */
-.logo { position: absolute; left: 14px; top: 14px; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.logo { position: absolute; left: 20px; top: calc(16px + env(safe-area-inset-top)); z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
 .logo span { font-family: var(--display); font-size: 38px; line-height: 1; }
 .logo .senpai { font-size: 46px; letter-spacing: -2px; transform: rotate(-3deg); text-shadow: 0 0 10px var(--paper), 0 0 3px var(--paper), 0 0 3px var(--paper); }
 .logo .quiz {
@@ -167,7 +191,7 @@ button { font: inherit; color: inherit; }
   text-shadow: 2px 2px 0 var(--ink);
 }
 .logo .slogan { font-family: var(--body); font-size: 13px; font-weight: 900; color: var(--white); background: var(--ink); padding: 4px 10px; margin: 8px 0 0 4px; transform: skew(-10deg) rotate(-3deg); }
-.held .held-figur { position: absolute; right: 6px; bottom: 0; z-index: 1; width: 136px; height: 136px; padding: 0; border: 0; background: none; cursor: pointer; }
+.held .held-figur { position: absolute; right: 14px; bottom: 0; z-index: 1; width: 156px; height: 156px; padding: 0; border: 0; background: none; cursor: pointer; }
 .held .held-figur .maskottchen { width: 100%; height: 100%; }
 
 /* Verwandlung: antippen → aufladen (zittern, Funken) → Blitz → Goldform mit Aura */
@@ -351,7 +375,7 @@ button { font: inherit; color: inherit; }
   margin: auto -20px 0;
   padding-bottom: env(safe-area-inset-bottom);
   border-top: 3px solid var(--ink);
-  background: var(--white);
+  background: var(--paper);
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
@@ -372,6 +396,8 @@ button { font: inherit; color: inherit; }
 }
 .tab svg { width: 22px; height: 22px; flex-shrink: 0; }
 .tab[aria-current="page"] { color: var(--red); font-weight: 900; }
+.tab::after { content: ''; width: 30px; height: 4px; border-radius: 2px; background: transparent; }
+.tab[aria-current="page"]::after { background: var(--red); transform: rotate(-2deg); }
 
 /* ---------- Kategorie ---------- */
 
@@ -644,8 +670,8 @@ button { font: inherit; color: inherit; }
 
 /* ---------- Ergebnis ---------- */
 
-.ergebnis-held { position: relative; height: 262px; flex-shrink: 0; overflow: hidden; background: var(--yellow); --sx: 50%; --sy: 56%; }
-.ergebnis-held .speedlines { position: absolute; inset: 0; }
+.ergebnis-held { position: relative; height: 262px; flex-shrink: 0; overflow: hidden; background: var(--paper) url(../assets/start/held.webp) center / cover no-repeat; --sx: 50%; --sy: 56%; }
+.ergebnis-held .speedlines { position: absolute; inset: 0; opacity: .25; }
 .ergebnis-held .titel { position: absolute; left: 0; right: 0; top: 18px; display: flex; justify-content: center; }
 .ergebnis-held .titel span { white-space: nowrap; font-family: var(--display); font-size: 23px; line-height: 1; color: var(--white); background: var(--red); border: 3px solid var(--ink); padding: 8px 14px; transform: rotate(-3deg); }
 .ergebnis-held .maskottchen { position: absolute; left: 50%; top: 62px; width: 148px; height: 148px; margin-left: -74px; }
@@ -861,7 +887,7 @@ button.duell-zeile:active { transform: translate(4px, 4px); box-shadow: none; }
 .sterne svg path { fill: var(--white); stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }
 .sterne svg.voll path { fill: var(--yellow); }
 .sterne-stand .sterne svg path { fill: var(--yellow); }
-.sterne-stand { margin-left: auto; display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 900; white-space: nowrap; }
+.sterne-stand { margin-left: auto; display: flex; align-items: center; gap: 4px; padding: 4px 10px; border: 2px solid var(--ink); border-radius: 999px; background: var(--white); color: var(--ink); font-size: 14px; font-weight: 900; white-space: nowrap; }
 
 .screen.reise { gap: 12px; }
 .akt-karte {
