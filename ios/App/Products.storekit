@@ -1,0 +1,64 @@
+{
+  "identifier": "08207FD5-294C-44A7-85AB-A5620846AD86",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "19.99",
+      "familyShareable": false,
+      "internalID": "E2F45D46-B489-41FF-B556-805B2DFE3397",
+      "localizations": [
+        {
+          "description": "Alle Lektionen des Senpai Dojo, dauerhaft.",
+          "displayName": "Dojo für immer",
+          "locale": "de_DE"
+        }
+      ],
+      "productID": "de.senpaiquiz.dojo.lebenslang",
+      "referenceName": "Dojo für immer",
+      "type": "NonConsumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_lastSynchronizedDate": 0,
+    "_locale": "de_DE",
+    "_storefront": "DEU",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [
+    {
+      "id": "15AA1515-F877-4BF5-8A39-9E6ECBDDB092",
+      "localizations": [],
+      "name": "Senpai Dojo",
+      "subscriptions": [
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "2.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "F09B8A5A-DCC8-4A9F-8FD3-521F497DB27A",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Alle Lektionen des Senpai Dojo, monatlich kündbar.",
+              "displayName": "Dojo Monatsabo",
+              "locale": "de_DE"
+            }
+          ],
+          "productID": "de.senpaiquiz.dojo.monat",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "Dojo Monatsabo",
+          "subscriptionGroupID": "15AA1515-F877-4BF5-8A39-9E6ECBDDB092",
+          "type": "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

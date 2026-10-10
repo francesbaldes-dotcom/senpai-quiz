@@ -24,7 +24,8 @@ In Claude Code startet `.claude/launch.json` denselben Server für die Browser-V
 | `js/speicher.js` | Speichern des Profils: im Browser `localStorage`, in der Capacitor-App das Plugin Preferences (dieser native Pfad ist noch ungetestet, weil es noch kein Capacitor-Projekt gibt) |
 | `js/online.js` | Supabase-Client für Accounts und Duelle |
 | `js/dojo.js` | Senpai Dojo (Japanisch lernen): Übersicht, Lernkarten, Abfrage, Leitner-Wiederholung, Gürtel, Kaufbildschirm; Anbindung über `dojoEinrichten()` aus `app.js` |
-| `js/kauf.js` | In-App-Kauf fürs Dojo: im Browser eine Kauf-Attrappe, in der iPhone-App später RevenueCat/StoreKit |
+| `js/kauf.js` | In-App-Kauf fürs Dojo: im Browser (nur localhost) eine Kauf-Attrappe, in der iPhone-App StoreKit 2 direkt über `@capgo/native-purchases` (Kauf, Preise aus dem Store, Käufe wiederherstellen, Abgleich beim Start). Produkt-IDs `de.senpaiquiz.dojo.monat` und `de.senpaiquiz.dojo.lebenslang`; zum Testen im Simulator `ios/App/Products.storekit` (im Schema `App` eingetragen, gilt nur beim Start aus Xcode) |
+| `js/werbung.js` | Belohnungsvideos: im Browser ein Platzhalter mit Countdown, in der iPhone-App Google AdMob über `@capacitor-community/admob` mit Einwilligungsfenster (UMP) und Tracking-Abfrage vor dem ersten Video; „Werbe-Einwilligung ändern“ unter „Über Senpai Quiz“. Bis zum Store-Start Googles Test-Kennungen (`TESTMODUS`, `WERBE_ID` in der Datei, `GADApplicationIdentifier` in `ios/App/App/Info.plist`) |
 | `data/dojo.json` | Inhalte des Dojo: Hiragana und Katakana mit Eselsbrücken, Anime-Vokabeln, Gürtel-Stufen |
 | `css/dojo.css` | Gestaltung des Dojo |
 | `js/teilen-bild.js` | Teilen-Bild fürs Tagesquiz (PNG per Canvas, 1080 × 1350, App-Schriften und Maskottchen) |

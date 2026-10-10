@@ -1,6 +1,7 @@
 // Senpai Quiz. Reines JavaScript ohne Build-Schritt.
 
-import { belohnungsvideo, werbungOffen } from './werbung.js';
+import { belohnungsvideo, werbungOffen, werbeEinwilligungMoeglich, werbeEinwilligungAendern } from './werbung.js';
+import { preiseLaden, aktuelleKaeufe } from './kauf.js';
 import * as online from './online.js';
 import { speicherBereit, ladeProfil, speichereProfil } from './speicher.js';
 import { kategorieIcon, abzeichenEmblem, rangEmblem, stationsKnoten, bossKnoten } from './grafik.js';
@@ -906,6 +907,14 @@ const aktionen = {
       bild.src = vorher;
       delete held.dataset.verwandlung;
     }, 5600);
+  },
+  // iPhone-App: Googles Einwilligungsfenster für Werbung erneut öffnen (datenschutz.html, Abschnitt 8)
+  async werbeEinwilligung() {
+    ui.hinweis = { text: 'Werbe-Einstellungen werden geladen …' };
+    render();
+    const text = await werbeEinwilligungAendern();
+    ui.hinweis = { text };
+    render();
   },
   nav(d) {
     ui.screen = d.ziel;
@@ -2005,6 +2014,7 @@ function infoScreen() {
       <p style="font-size:13px;font-weight:700">Version ${VERSION} · ${zahl(FRAGEN.length)} Fragen</p>
     </div>
     ${kontoBereich()}
+    ${hinweisBlock()}
     <div class="karte info-text">
       <p><b>Rechtliches</b></p>
       <p class="rechts-links">
@@ -2013,6 +2023,7 @@ function infoScreen() {
         <a href="nutzungsbedingungen.html" target="_blank" rel="noopener">Nutzungsbedingungen</a>
       </p>
       <p class="kleingedruckt">Kontakt: <a href="mailto:francesbaldes+senpai@gmail.com">francesbaldes+senpai@gmail.com</a></p>
+      ${werbeEinwilligungMoeglich() ? '<button class="knopf" data-aktion="werbeEinwilligung">Werbe-Einwilligung ändern</button>' : ''}
     </div>
   </section>`;
 }
@@ -2644,10 +2655,23 @@ async function init() {
     }
     render();
     ladeOnlineProfil();
+    storeAbgleichen();
   } catch (fehler) {
     app.innerHTML = '<p class="laden">Die Fragen konnten nicht geladen werden.</p>';
     console.error(fehler);
   }
+}
+
+// iPhone-App: Preise aus dem App Store holen und frühere Käufe übernehmen (etwa nach einer
+// Neuinstallation). Im Browser tun beide Funktionen nichts.
+async function storeAbgleichen() {
+  const [preise, kauf] = await Promise.all([preiseLaden(), aktuelleKaeufe()]);
+  if (kauf && !(profil.dojo?.frei?.art === 'einmal')) {
+    profil.dojo ||= {};
+    profil.dojo.frei = { ...kauf, seit: profil.dojo.frei?.seit ?? new Date().toISOString() };
+    speichern();
+  }
+  if ((preise || kauf) && ['dojoKauf', 'dojo'].includes(ui.screen)) render();
 }
 
 init();

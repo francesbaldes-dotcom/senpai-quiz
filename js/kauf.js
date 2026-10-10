@@ -1,10 +1,10 @@
 // In-App-Käufe für das Senpai Dojo. Im Browser läuft eine Kauf-Attrappe.
 //
-// In der iPhone-App muss hier der App Store hinein (Apple verlangt für
-// Lerninhalte In-App-Käufe, keine Web-Zahlung): am einfachsten RevenueCat
-// (@revenuecat/purchases-capacitor), das Abo-Status, Quittungen und
-// „Käufe wiederherstellen“ übernimmt. Die Produkt-IDs unten sind die
-// Kennungen, die in App Store Connect angelegt werden müssen.
+// In der iPhone-App läuft der Kauf über den App Store (Apple verlangt für
+// Lerninhalte In-App-Käufe, keine Web-Zahlung), direkt mit StoreKit 2 über das
+// Plugin @capgo/native-purchases, ohne Drittanbieter wie RevenueCat. Die
+// Produkt-IDs unten sind die Kennungen, die in App Store Connect angelegt werden;
+// zum Testen im Simulator liegen sie in ios/App/Products.storekit.
 //
 // Rückgabe von kaufen(): { art, bis } bei Erfolg (bis = Ablauf als ISO-Datum,
 // null beim Einmalkauf), sonst null (abgebrochen oder fehlgeschlagen).
@@ -36,8 +36,60 @@ export function kaufMoeglich() {
 }
 
 function store() {
-  // Platz für das native Plugin; im Browser gibt es keinen Store.
-  return window.Capacitor?.isNativePlatform?.() ? window.Capacitor.Plugins?.Purchases ?? null : null;
+  // Natives Plugin (StoreKit 2); im Browser gibt es keinen Store.
+  return NATIV ? window.Capacitor.Plugins?.NativePurchases ?? null : null;
+}
+
+// Preise aus dem App Store holen (Landeswährung, Steuern), ersetzt die festen Texte in ANGEBOTE.
+export async function preiseLaden() {
+  const s = store();
+  if (!s) return false;
+  try {
+    const { products } = await s.getProducts({ productIdentifiers: ANGEBOTE.map((a) => a.produkt) });
+    for (const produkt of products) {
+      const angebot = ANGEBOTE.find((a) => a.produkt === produkt.identifier);
+      if (angebot && produkt.priceString) angebot.preis = produkt.priceString;
+    }
+    return products.length > 0;
+  } catch (fehler) {
+    console.warn('Store-Preise:', fehler);
+    return false;
+  }
+}
+
+// Aus einer Store-Transaktion den Freischalt-Stand ableiten; null, wenn nichts (mehr) gilt.
+function ausTransaktion(t) {
+  const angebot = ANGEBOTE.find((a) => a.produkt === t.productIdentifier);
+  if (!angebot || t.revocationDate) return null;
+  if (!angebot.tage) return { art: 'einmal', bis: null };
+  const bis = t.expirationDate ?? ablauf(angebot);
+  return new Date(bis) > new Date() ? { art: 'abo', bis } : null;
+}
+
+// Was gilt laut App Store gerade? (Einmalkauf vor Abo; null ohne gültigen Kauf)
+export async function aktuelleKaeufe() {
+  const s = store();
+  if (!s) return null;
+  try {
+    const { purchases } = await s.getPurchases({ onlyCurrentEntitlements: true });
+    const gueltig = purchases.map(ausTransaktion).filter(Boolean);
+    return gueltig.find((k) => k.art === 'einmal') ?? gueltig[0] ?? null;
+  } catch (fehler) {
+    console.warn('Store-Käufe:', fehler);
+    return null;
+  }
+}
+
+async function nativKaufen(angebot) {
+  const s = store();
+  try {
+    const t = await s.purchaseProduct({ productIdentifier: angebot.produkt, productType: angebot.tage ? 'subs' : 'inapp', quantity: 1 });
+    return ausTransaktion({ ...t, productIdentifier: t.productIdentifier ?? angebot.produkt }) ?? { art: angebot.id, bis: ablauf(angebot) };
+  } catch (fehler) {
+    // Abbruch im Apple-Fenster ist kein Fehler
+    if (/cancel|abgebrochen/i.test(String(fehler?.message ?? fehler))) return null;
+    throw fehler;
+  }
 }
 
 function ablauf(angebot) {
@@ -50,11 +102,7 @@ function ablauf(angebot) {
 export function kaufen(angebotId) {
   const angebot = ANGEBOTE.find((a) => a.id === angebotId);
   if (!angebot || offen) return Promise.resolve(null);
-  if (store()) {
-    // Nativer Pfad, noch nicht angebunden: erst mit RevenueCat ausfüllen.
-    console.warn('In-App-Kauf: Store-Plugin noch nicht angebunden.');
-    return Promise.resolve(null);
-  }
+  if (store()) return nativKaufen(angebot);
   if (!LOKAL) return Promise.resolve(null);
   offen = true;
   return new Promise((fertig) => {
@@ -111,8 +159,8 @@ export function kaufen(angebotId) {
 // „Käufe wiederherstellen“: fragt den Store nach früheren Käufen dieser Apple-ID.
 // Im Browser gibt es nichts wiederherzustellen.
 export async function kaeufeWiederherstellen() {
-  if (store()) {
-    console.warn('In-App-Kauf: Wiederherstellen noch nicht angebunden.');
-  }
-  return null;
+  const s = store();
+  if (!s) return null;
+  await s.restorePurchases();
+  return aktuelleKaeufe();
 }
